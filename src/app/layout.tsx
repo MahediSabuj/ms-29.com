@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import Header from "@/component/header/header";
-import Footer from "@/component/footer/footer";
+import Header from "@/components/header/header";
+import Footer from "@/components/footer/footer";
 
 import styles from "./page.module.css";
+
+import "./globals.css";
 
 const adobeCleanFont = localFont({ src: "./AdobeClean-Regular.otf" });
 

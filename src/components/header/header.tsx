@@ -1,5 +1,5 @@
-import Navigation from "@/component/navigation/navigation";
-import IconBar from "@/component/icon-bar/icon-bar";
+import Navigation from "@/components/navigation/navigation";
+import IconBar from "@/components/icon-bar/icon-bar";
 
 import styles from "./header.module.css";
 
