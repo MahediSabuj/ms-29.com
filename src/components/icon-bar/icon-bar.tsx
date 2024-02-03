@@ -12,7 +12,8 @@ export default function IconBar({ socialProfiles } : HeaderConfig) {
           <Link
             className={`${styles.iconItem} ${item.name}`}
             key={item.name} href={item.url}
-            aria-label={item.ariaLabel}
+            title={item.title}
+            aria-label={item.title}
             dangerouslySetInnerHTML={{__html: item.icon}}/>
         );
       })}

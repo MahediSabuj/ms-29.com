@@ -13,7 +13,7 @@ export interface IconItem {
   name: string;  
   url: string;
   icon: string;
-  ariaLabel: string;
+  title: string;
 }
 
 export interface HeaderConfig {
