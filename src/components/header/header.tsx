@@ -1,13 +1,10 @@
 import Navigation from "@/components/navigation/navigation";
-import IconBar from "@/components/icon-bar/icon-bar";
+import { HeaderConfig } from "@/types/header";
 
-import styles from "./header.module.css";
-
-export default function Header() {
+export default function Header(config: HeaderConfig) {
   return (
-    <header className={styles.header}>
-      <Navigation/>
-      <IconBar/>
+    <header>
+      <Navigation {...config}/>
     </header>
   );
 }

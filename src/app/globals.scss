@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.linkedIn {
+  svg {
+    fill: #0077B5;
+  }
+}
+.stackOverflow {
+  svg {
+    fill: #F48024;
+  }
+}
+.salesforce {
+  svg {
+    fill: #0D9DDA;
+  }
+}

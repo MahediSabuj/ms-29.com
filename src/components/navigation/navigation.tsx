@@ -1,11 +1,17 @@
 import Link from "next/link";
 
-export default function Navigation() {
+import { HeaderConfig } from "@/types/header";
+import IconBar from "../icon-bar/icon-bar";
+
+export default function Navigation(config: HeaderConfig) {
+  const { brand } = config;
+
   return (
-    <nav>
+    <nav className="flex items-center justify-between">
       <div>
-        <Link href="/">MS-29</Link>
+        <Link href={brand.url}>{brand.title}</Link>
       </div>
+      <IconBar {...config}/>
     </nav>
   )
 }
