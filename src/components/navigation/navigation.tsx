@@ -7,11 +7,13 @@ export default function Navigation(config: HeaderConfig) {
   const { brand } = config;
 
   return (
-    <nav className="flex items-center justify-between">
-      <div>
-        <Link href={brand.url}>{brand.title}</Link>
+    <nav>
+      <div className="max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div className="relative flex items-center justify-between">
+          <Link href={brand.url}>{brand.title}</Link>
+          <IconBar {...config}/>
+        </div>
       </div>
-      <IconBar {...config}/>
     </nav>
   )
 }

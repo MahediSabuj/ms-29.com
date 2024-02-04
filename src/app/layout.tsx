@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import localFont from "next/font/local";
 
 import "./globals.scss";
@@ -85,11 +86,23 @@ export default function RootLayout({
     <html lang="en">
       <body className={adobeCleanFont.className}>
         <Header {...headerConfig}/>
-        <div className="container mx-auto flex pt-4 min-h-screen">
-          <main className="w-2/3">
-            {children}
-          </main>
-          <aside className="w-1/3"></aside>
+        <div className="container mx-auto pt-4 min-h-screen">
+          <div className="max-w-7xl px-2 sm:px-6 lg:px-8 md:flex">
+            <main className="md:w-2/3 w-full">
+              {children}
+            </main>
+            <aside className="md:w-1/3 w-full">
+              <div className="block border-b">
+                About Me
+              </div>
+              <div>
+                <Link href="/profile/mahedi-sabuj" className="text-blue-600">
+                  Abdullah &ndash; Al &ndash; Mahedi <strong>Sabuj</strong><br/>
+                </Link>  
+                Principal Engineer @ <Link href="https://brainstation-23.com" >Brain Station 23 Ltd</Link>
+              </div>
+            </aside>
+          </div>
         </div>
         <Footer/>
       </body>
