@@ -12,8 +12,7 @@ const adobeCleanFont = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "MS-29",
-  description: "Blog"
+  title: "MS-29"
 };
 
 const headerConfig: HeaderConfig = {
@@ -86,11 +85,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={adobeCleanFont.className}>
         <Header {...headerConfig}/>
-        <div className="flex flex-col justify-between items-center min-h-screen">
-          <main>
+        <div className="container mx-auto flex pt-4 min-h-screen">
+          <main className="w-2/3">
             {children}
           </main>
-          <aside></aside>
+          <aside className="w-1/3"></aside>
         </div>
         <Footer/>
       </body>
