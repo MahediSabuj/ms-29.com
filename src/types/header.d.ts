@@ -1,5 +1,3 @@
-import { ReactNode, SVGProps } from "react";
-
 interface Brand {
   title: string;
   url: string;

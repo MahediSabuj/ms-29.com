@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import localFont from "next/font/local";
 
 import "./globals.scss";
@@ -7,6 +6,7 @@ import "./globals.scss";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import { HeaderConfig } from "@/types/header";
+import Sidebar from "./sidebar";
 
 const adobeCleanFont = localFont({
   src: "./AdobeClean-Regular.otf" 
@@ -92,15 +92,7 @@ export default function RootLayout({
               {children}
             </main>
             <aside className="md:w-1/3 w-full">
-              <div className="block border-b">
-                About Me
-              </div>
-              <div>
-                <Link href="/profile/mahedi-sabuj" className="text-blue-600">
-                  Abdullah &ndash; Al &ndash; Mahedi <strong>Sabuj</strong><br/>
-                </Link>  
-                Principal Engineer @ <Link href="https://brainstation-23.com" >Brain Station 23 Ltd</Link>
-              </div>
+              <Sidebar/>
             </aside>
           </div>
         </div>
