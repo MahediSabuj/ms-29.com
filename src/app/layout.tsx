@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import hljs from 'highlight.js/lib/core';
+import xml from 'highlight.js/lib/languages/xml';
 
 import "./globals.scss";
+import 'highlight.js/styles/default.css';
 
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
@@ -77,6 +80,8 @@ const headerConfig: HeaderConfig = {
   }]
 }
 
+hljs.registerLanguage('xml', xml);
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -89,9 +94,9 @@ export default function RootLayout({
         <div className="container mx-auto pt-4 min-h-screen">
           <div className="max-w-7xl px-2 sm:px-6 lg:px-8 md:flex">
             <main className="md:w-2/3 w-full">
-              {children}
+              <div className="md:mr-8">{children}</div>
             </main>
-            <aside className="md:w-1/3 w-full">
+            <aside className="md:w-1/3 w-full md:pt-0 pt-4">
               <Sidebar/>
             </aside>
           </div>
