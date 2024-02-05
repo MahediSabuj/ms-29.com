@@ -1,4 +1,12 @@
 import hljs from "highlight.js/lib/core";
+import {Metadata} from "next";
+
+export const metadata: Metadata = {
+    title: "Setting Default Values in AEM Component Dialog",
+    description: `In AEM components, it&apos;s often necessary to establish default values. 
+    This ensures that when components are dragged onto the page, they display predefined initial values.
+    This functionality is achievable through the utilization of cq:template and cq:templatePath`
+};
 
 export default function Article() {
     const highlightedCode = hljs.highlight(
@@ -37,7 +45,7 @@ export default function Article() {
       </section>
       <section className="pt-1">
         <div className="text-white p-2 bg-aem">_cq_template / .content.xml</div>
-        <div className="p-4 bg-neutral-300">
+        <div className="p-4 bg-neutral-100">
           <code className="language-xml whitespace-pre"
             dangerouslySetInnerHTML={{ __html: highlightedCode }}/>
         </div>

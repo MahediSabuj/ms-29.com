@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Mahedi Sabuj"
-  };
+  title: "Mahedi Sabuj"
+};
 
 export default function Resume() {
   return (
