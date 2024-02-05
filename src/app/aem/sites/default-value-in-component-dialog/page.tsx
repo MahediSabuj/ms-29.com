@@ -31,8 +31,8 @@ export default function Article() {
         dragged onto the page, they display predefined initial values. Subsequently, authors can configure the
         components based on specific requirements. <br/> <br/>
         Utilizing <strong>cq:template</strong> is effective in this scenario. Need to verify how the values are stored
-        in the content node and then duplicate the identical structure in <em>cq:template</em>. This ensures that the
-        values will be stored to the content node as soon as component is added to the page. <br/><br/>
+        in the content node upon saving the component dialog and then duplicate the identical structure in <em>cq:template</em>.
+        This ensures that the values will be stored to the content node as soon as component is added to the page. <br/><br/>
         In the example below, a new item will be added to the multifield once the component is dragged on the page.
       </section>
       <section className="pt-1">
