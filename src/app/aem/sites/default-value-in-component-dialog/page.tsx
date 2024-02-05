@@ -27,7 +27,7 @@ export default function Article() {
         </div>
       </div>
       <section className="pt-4">
-        In AEM components, it's often necessary to establish default values. This ensures that when components are
+        In AEM components, it&apos;s often necessary to establish default values. This ensures that when components are
         dragged onto the page, they display predefined initial values. Subsequently, authors can configure the
         components based on specific requirements. <br/> <br/>
         Utilizing <strong>cq:template</strong> is effective in this scenario. Need to verify how the values are stored
