@@ -63,7 +63,7 @@ export default function Article() {
                 dangerouslySetInnerHTML={{ __html: _cq_template }}/>
             </div>
           </section>
-          <section className="pt-4">
+          <section className="pt-8">
             If there&apos;s a need for the same cq:template across various components, the <strong>cq:templatePath</strong> properties
             can be utilized. As an illustration, duplicate the _cq_template node and place it in a common place like
             project/datasource, naming it, for instance, &quot;navigation&quot;. Subsequently, within the component properties,
