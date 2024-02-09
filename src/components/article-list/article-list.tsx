@@ -9,7 +9,7 @@ export default function ArticleList({ articleItems } : IArticleList) {
         return (
           <article key={index}>
             <Link href={item.url}>
-              <h2 className="text-xl">{item.title}</h2>
+              <h2 className="text-2xl">{item.title}</h2>
             </Link>
           </article>  
         )

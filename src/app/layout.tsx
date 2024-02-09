@@ -17,6 +17,7 @@ const adobeCleanFont = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ms-29.com"),
   title: "MS-29"
 };
 
@@ -91,19 +92,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={adobeCleanFont.className}>
-        <Header {...headerConfig}/>
-        <div className="container mx-auto py-4 min-h-screen">
-          <div className="max-w-7xl px-2 sm:px-6 lg:px-8 md:flex">
-            <main className="md:w-2/3 w-full">
-              <div className="md:mr-8">{children}</div>
-            </main>
-            <aside className="md:w-1/3 w-full md:pt-0 pt-4">
-              <Sidebar/>
-            </aside>
+        <div className="flex flex-col h-screen">
+          <Header {...headerConfig}/>
+          <div className="container mx-auto py-4 grow">
+            <div className="max-w-7xl px-2 sm:px-6 lg:px-8 md:flex">
+              <main className="md:w-2/3 w-full">
+                <div className="md:mr-8">{children}</div>
+              </main>
+              <aside className="md:w-1/3 w-full md:pt-0 pt-4">
+                <Sidebar/>
+              </aside>
+            </div>
           </div>
+          <Footer/>
+          <GoogleTagManager gtmId={process.env.GTM_ID || ""}/>
         </div>
-        <Footer/>
-        <GoogleTagManager gtmId={process.env.GTM_ID || ""}/>
       </body>
     </html>
   );
