@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import hljs from 'highlight.js/lib/core';
 import xml from 'highlight.js/lib/languages/xml';
+import { GoogleTagManager } from '@next/third-parties/google';
 
 import "./globals.scss";
 import 'highlight.js/styles/default.css';
@@ -91,7 +92,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={adobeCleanFont.className}>
         <Header {...headerConfig}/>
-        <div className="container mx-auto pt-4 min-h-screen">
+        <div className="container mx-auto py-4 min-h-screen">
           <div className="max-w-7xl px-2 sm:px-6 lg:px-8 md:flex">
             <main className="md:w-2/3 w-full">
               <div className="md:mr-8">{children}</div>
@@ -102,6 +103,7 @@ export default function RootLayout({
           </div>
         </div>
         <Footer/>
+        <GoogleTagManager gtmId={process.env.GTM_ID || ""}/>
       </body>
     </html>
   );

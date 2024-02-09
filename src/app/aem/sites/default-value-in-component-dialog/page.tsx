@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 export default function Article() {
-    const highlightedCode = hljs.highlight(
+    const _cq_template = hljs.highlight(
         `<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="nt:unstructured">
   <navItems jcr:primaryType="nt:unstructured">
@@ -47,7 +47,7 @@ export default function Article() {
         <div className="text-white p-2 bg-aem">_cq_template / .content.xml</div>
         <div className="p-4 bg-neutral-100">
           <code className="language-xml whitespace-pre"
-            dangerouslySetInnerHTML={{ __html: highlightedCode }}/>
+            dangerouslySetInnerHTML={{ __html: _cq_template }}/>
         </div>
       </section>
     </article>
