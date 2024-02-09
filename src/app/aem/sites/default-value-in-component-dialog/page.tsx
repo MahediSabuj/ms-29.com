@@ -64,9 +64,9 @@ export default function Article() {
             </div>
           </section>
           <section className="pt-4">
-            If there's a need for the same cq:template across various components, the <strong>cq:templatePath</strong> properties
+            If there&apos;s a need for the same cq:template across various components, the <strong>cq:templatePath</strong> properties
             can be utilized. As an illustration, duplicate the _cq_template node and place it in a common place like
-            project/datasource, naming it, for instance, "navigation". Subsequently, within the component properties,
+            project/datasource, naming it, for instance, &quot;navigation&quot;. Subsequently, within the component properties,
             add the property like below:
           </section>
           <section className="pt-1">
@@ -85,10 +85,10 @@ export default function Article() {
             <em>Difference between setting default value for each node and cq:template?</em></h3>
           <div className="" itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
             <div itemProp="text">
-              The value of each node won't be displayed or stored in the JCR node until authors open and save the dialog.
+              The value of each node won&apos;t be displayed or stored in the JCR node until authors open and save the dialog.
               Conversely, the value of cq:template will be immediately applied once the component is added to the page.
               Additionally, utilizing cq:template allows for adding default item or setting a default value for a multifield,
-              which isn't supported by the value property of each node.
+              which isn&apos;t supported by the value property of each node.
             </div>
           </div>
         </div>
