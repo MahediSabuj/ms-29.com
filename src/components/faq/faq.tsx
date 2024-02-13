@@ -1,0 +1,21 @@
+import { FAQ } from "@/types/faq";
+
+export default function FAQ({ items } : FAQ ) {
+  return (
+    <div className="pt-6" itemScope itemType="https://schema.org/FAQPage">
+      <h2 className="text-2xl border-b-2 border-[#3A2A1D] mb-3">Frequently Asked Questions (FAQ)</h2>
+        {items.map((item, index) => {
+          return (
+            <div key={index} itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+              <h3 className="text-xl" itemProp="name">
+                <em>{item.question}</em>
+              </h3>
+              <div className="" itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                <div itemProp="text">{item.answer}</div>
+              </div>
+            </div>
+          )
+        })}
+      </div>
+  );
+}

@@ -8,7 +8,7 @@ const aem : IListGroup = {
   listItems: [{
     title: "AEM Sites",
     url: "/aem/sites",
-    count: 1
+    count: 2
   }]
 }
 

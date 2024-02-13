@@ -1,17 +1,17 @@
-import Link from "next/link";
-
 import { IArticleList } from "@/types/article";
+import Article from "@/components/article/article";
 
 export default function ArticleList({ articleItems } : IArticleList) {
   return (
     <div className="article-list">
       {articleItems.map((item, index) => {
         return (
-          <article key={index}>
-            <Link href={item.url}>
-              <h2 className="text-2xl">{item.title}</h2>
-            </Link>
-          </article>  
+          <Article key={index}
+            title={item.title}
+            url={item.url}
+            description={item.description}
+            publishDate={item.publishDate}
+            modifiedDate={item.modifiedDate}/>
         )
       })}
     </div>
