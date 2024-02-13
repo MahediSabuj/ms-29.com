@@ -18,18 +18,26 @@ const GRANITE_UI = "https://developer.adobe.com/experience-manager/reference-mat
 const textField =
 `<firstName jcr:primaryType="nt:unstructured"
   sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-  fieldDescription="Enter your First Name"
   fieldLabel="First Name"
-  name="./firstName"/>`
+  fieldDescription="First Name"
+  required="{Boolean}true"
+  emptyText="Enter your First Name"
+  name="./firstName"
+  value="Mahedi"
+  maxlengthlong="{Long}25"/>`
 
 const datePicker =
 `<dateOfBirth jcr:primaryType="nt:unstructured"
   sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
   displayTimezoneMessage="{Boolean}false"
   fieldLabel="Date of Birth"
-  fieldDescription="Enter your Date of Birth"
+  fieldDescription="Date of Birth"
+  emptyText="Enter your Date of Birth"
   name="./dateOfBirth"
-  type="date"/>`
+  type="date"
+  valueFormat="YYYY-MM-DD"
+  displayedFormatstring="YYYY-MM-DD"
+  required="{Boolean}true"/>`
 
 export default function DialogCheatSheet() {
   return (
