@@ -9,6 +9,10 @@ const aem : IListGroup = {
     title: "AEM Sites",
     url: "/aem/sites",
     count: 2
+  }, {
+    title: "Content Fragment",
+    url: "/aem/content-fragment",
+    count: 1
   }]
 }
 
