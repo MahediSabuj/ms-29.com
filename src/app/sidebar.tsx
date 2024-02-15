@@ -13,6 +13,10 @@ const aem : IListGroup = {
     title: "Content Fragment",
     url: "/aem/content-fragment",
     count: 1
+  }, {
+    title: "AEM Forms",
+    url: "/aem/forms",
+    count: 1
   }]
 }
 

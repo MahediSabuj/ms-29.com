@@ -9,6 +9,7 @@ export default function ArticleList({ articleItems } : IArticleList) {
           <Article key={index}
             title={item.title}
             url={item.url}
+            topics={item.topics}
             description={item.description}
             publishDate={item.publishDate}
             modifiedDate={item.modifiedDate}/>

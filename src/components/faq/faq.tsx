@@ -1,8 +1,10 @@
 import { FAQ } from "@/types/faq";
 
+import styles from "./faq.module.scss";
+
 export default function FAQ({ items } : FAQ ) {
   return (
-    <div className="pt-6" itemScope itemType="https://schema.org/FAQPage">
+    <div className={`${styles.faq} pt-6`} itemScope itemType="https://schema.org/FAQPage">
       <h2 className="text-2xl border-b-2 border-[#3A2A1D] mb-3">Frequently Asked Questions (FAQ)</h2>
         {items.map((item, index) => {
           return (
@@ -11,7 +13,7 @@ export default function FAQ({ items } : FAQ ) {
                 <em>{item.question}</em>
               </h3>
               <div className="" itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                <div itemProp="text">{item.answer}</div>
+                <div itemProp="text" dangerouslySetInnerHTML={{ __html: item.answer || "" }}></div>
               </div>
             </div>
           )

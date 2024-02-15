@@ -2,7 +2,7 @@ import Link from "next/link";
 import {IArticleItem} from "@/types/article";
 
 export default function Article({
-  title, url, publishDate, modifiedDate, description } : IArticleItem
+  title, topics, url, publishDate, modifiedDate, description } : IArticleItem
 ) {
 
   const fillZero = (date: number) => {
@@ -17,7 +17,7 @@ export default function Article({
   }
 
   return (
-    <div className="pb-4">
+    <div className="mb-4">
       <h1 className="text-2xl" itemProp="name">
         <Link href={url}>{title}</Link>
       </h1>
@@ -35,10 +35,24 @@ export default function Article({
           </time>
         </div>
       </div>
-       {description && <div className="pt-2">
-        <span dangerouslySetInnerHTML={{ __html: description || "" }}></span>
-        <Link className="text-blue-600" href={url}> See More... </Link>
-      </div>}
+      {description &&
+        <div className="pt-2">
+          <span dangerouslySetInnerHTML={{ __html: description || "" }}></span>
+          <Link className="text-blue-600" href={url}> See More... </Link>
+        </div>
+      }
+      {topics &&
+        <div className="mt-1">
+          {topics.map((item, index) => {
+            return (
+              <Link key={index} href={item.url}
+                  className="bg-topics text-white text-sm font-medium me-2 px-2.5 py-0.5 rounded border inline-flex items-center justify-center">
+                {item.topic}
+              </Link>
+            )
+          })}
+        </div>
+      }
     </div>
   )
 }
