@@ -32,4 +32,4 @@ export const AEM_DISPATCHER: IArticleItem[] = [
   BASIC_HTTP_AUTHENTICATION,
   CACHE_AEM_GATED_PAGES,
   CACHE_AEM_DYNAMIC_CONTENT
-]
+].filter(m => m.active);

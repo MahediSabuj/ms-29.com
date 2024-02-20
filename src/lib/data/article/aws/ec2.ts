@@ -12,4 +12,4 @@ export const INSTALL_SSL_CERTIFICATE_FROM_PFX_FILE: IArticleItem = {
 
 export const AWS_EC2: IArticleItem[] = [
   INSTALL_SSL_CERTIFICATE_FROM_PFX_FILE
-]
+].filter(m => m.active);

@@ -12,4 +12,4 @@ export const CODE_COVERAGE_OSGI_CONFIGURATION: IArticleItem = {
 
 export const CODE_COVERAGE: IArticleItem[] = [
   CODE_COVERAGE_OSGI_CONFIGURATION
-]
+].filter(m => m.active);

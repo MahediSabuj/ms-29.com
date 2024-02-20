@@ -9,7 +9,7 @@ export default function Highlight({ code, language, path }: Highlight) {
   return (
     <section className="pt-1">
       <div className="text-white p-2 bg-aem">{path}</div>
-      <div className="p-4 bg-neutral-100">
+      <div className="p-4 bg-neutral-100 overflow-x-auto">
         <code className="language-xml whitespace-pre text-[14px]"
           dangerouslySetInnerHTML={{ __html: highlighted_code }}/>
       </div>

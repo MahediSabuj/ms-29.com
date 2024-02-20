@@ -59,10 +59,11 @@ export const AEM_COMPONENT_DIALOG_CHEATSHEET: IArticleItem = {
   title: "AEM Component Dialog CheatSheet",
   url: "/aem/sites/component-dialog-cheatsheet",
   publishDate: "February 13, 2024",
-  modifiedDate: "February 13, 2024",
+  modifiedDate: "February 20, 2024",
   description: `Granite UI provides a large range of the basic components needed to create component 
       dialog on the authoring environment. These components are constructed using Coral UI-based elements.`,
-  topics: [ TOPICS.AEM_SITES ]
+  topics: [ TOPICS.AEM_SITES ],
+  active: true
 }
 
 export const DEFAULT_VALUES_IN_AEM_COMPONENT_DIALOG: IArticleItem = {
@@ -73,7 +74,8 @@ export const DEFAULT_VALUES_IN_AEM_COMPONENT_DIALOG: IArticleItem = {
   description: `In AEM components, it&apos;s often necessary to establish default values. 
       This ensures that when components are dragged onto the page, they display predefined initial values.
       This functionality is achievable through the utilization of cq:template and cq:templatePath.`,
-  topics: [ TOPICS.AEM_SITES ]
+  topics: [ TOPICS.AEM_SITES ],
+  active: true
 }
 
 export const AEM_SITES : IArticleItem[] = [
@@ -85,4 +87,4 @@ export const AEM_SITES : IArticleItem[] = [
   CUSTOM_OSGI_CONFIGURATION,
   AEM_COMPONENT_DIALOG_CHEATSHEET,
   DEFAULT_VALUES_IN_AEM_COMPONENT_DIALOG
-]
+].filter(m => m.active);

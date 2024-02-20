@@ -10,9 +10,10 @@ export const CONTENT_FRAGMENT_PROGRAMMATICALLY: IArticleItem = {
   url: "/aem/content-fragment/create-content-fragment-programmatically",
   publishDate: "February 16, 2024",
   modifiedDate: "February 16, 2024",
-  topics: [ TOPICS.CONTENT_FRAGMENT ]
+  topics: [ TOPICS.CONTENT_FRAGMENT ],
+  active: true
 }
 
 export const CONTENT_FRAGMENT: IArticleItem[] = [
   CONTENT_FRAGMENT_PROGRAMMATICALLY
-]
+].filter(m => m.active);

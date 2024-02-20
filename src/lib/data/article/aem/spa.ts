@@ -12,4 +12,4 @@ export const CUSTOM_AEM_SPA_COMPONENT: IArticleItem = {
 
 export const AEM_SPA: IArticleItem[] = [
   CUSTOM_AEM_SPA_COMPONENT
-]
+].filter(m => m.active);

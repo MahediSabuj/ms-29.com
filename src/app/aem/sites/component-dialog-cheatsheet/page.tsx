@@ -26,6 +26,25 @@ const textField =
   value="Mahedi"
   maxlengthlong="{Long}25"/>`
 
+const select =
+`<continent jcr:primaryType="nt:unstructured"
+  sling:resourceType="granite/ui/components/coral/foundation/form/select"
+  fieldLabel="Continent"
+  emptyText="Select a Continent"
+  name="./continent"
+  multiple="{Boolean}false"
+  required="{Boolean}true">
+  <items jcr:primaryType="nt:unstructured">
+    <asia jcr:primaryType="nt:unstructured"
+      text="Asia"
+      value="asia"/>
+    <europe jcr:primaryType="nt:unstructured"
+      selected="{Boolean}true"
+      text="Europe"
+      value="europe"/>
+  </items>
+</continent>`;
+
 const datePicker =
 `<dateOfBirth jcr:primaryType="nt:unstructured"
   sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
@@ -57,9 +76,19 @@ export default function DialogCheatSheet() {
               <Highlight code={textField} language="xml" path="TextField"/>
               <div>
                 <strong>Reference: </strong>
-                <Link className="text-blue-600"
+                <Link className="text-blue-600 break-all"
                     href={`${GRANITE_UI}/textfield/index.html`}>
                   {GRANITE_UI}/textfield/index.html
+                </Link>
+              </div>
+            </div>
+            <div className="pt-4">
+              <Highlight code={select} language="xml" path="Select"/>
+              <div>
+                <strong>Reference: </strong>
+                <Link className="text-blue-600 break-all"
+                      href={`${GRANITE_UI}/select/index.html`}>
+                  {GRANITE_UI}/select/index.html
                 </Link>
               </div>
             </div>
@@ -67,7 +96,7 @@ export default function DialogCheatSheet() {
               <Highlight code={datePicker} language="xml" path="Date Picker"/>
               <div>
                 <strong>Reference: </strong>
-                <Link className="text-blue-600"
+                <Link className="text-blue-600 break-all"
                     href={`${GRANITE_UI}/datepicker/index.html`}>
                   {GRANITE_UI}/datepicker/index.html
                 </Link>

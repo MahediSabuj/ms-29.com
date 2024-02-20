@@ -12,6 +12,7 @@ export interface IArticleItem {
   url: string;
   publishDate: string;
   modifiedDate: string;
+  active?: boolean;
 }
 
 export interface Topics {

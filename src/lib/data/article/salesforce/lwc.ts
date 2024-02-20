@@ -12,4 +12,4 @@ export const CUSTOM_LIGHTNING_WEB_COMPONENT: IArticleItem = {
 
 export const SF_LWC: IArticleItem[] = [
   CUSTOM_LIGHTNING_WEB_COMPONENT
-]
+].filter(m => m.active);
