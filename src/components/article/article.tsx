@@ -1,5 +1,5 @@
 import Link from "next/link";
-import {IArticleItem} from "@/types/article";
+import { IArticleItem } from "@/types/article";
 
 export default function Article({
   title, topics, url, publishDate, modifiedDate, description } : IArticleItem
@@ -47,7 +47,7 @@ export default function Article({
             return (
               <Link key={index} href={item.url}
                   className="bg-topics text-white text-sm font-medium me-2 px-2.5 py-0.5 rounded border inline-flex items-center justify-center">
-                {item.topic}
+                {item.title}
               </Link>
             )
           })}

@@ -1,6 +1,7 @@
+import { ITopic } from "@/types/article";
+
 interface IListItem {
-  title: string;
-  url: string;
+  topic: ITopic;
   count: number;
 }
 

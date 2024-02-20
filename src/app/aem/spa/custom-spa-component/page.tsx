@@ -1,8 +1,7 @@
 import Article from "@/components/article/article";
-import { FORM_SUBMISSION_AUTHOR_INSTANCE as ARTICLE } from "@/lib/data/article/aem/forms";
+import { CUSTOM_AEM_SPA_COMPONENT as ARTICLE } from "@/lib/data/article/aem/spa";
 
-
-export default function SubmitFormIntoAuthor() {
+export default function SpaComponent() {
   return (
     <div>
       <article itemScope itemType="https://schema.org/Article">

@@ -1,8 +1,7 @@
 import Article from "@/components/article/article";
-import { FORM_SUBMISSION_AUTHOR_INSTANCE as ARTICLE } from "@/lib/data/article/aem/forms";
+import { INVOKE_AEM_WORKFLOW_FROM_SUBMISSION as ARTICLE } from "@/lib/data/article/aem/forms";
 
-
-export default function SubmitFormIntoAuthor() {
+export default function InvokeWorkflow() {
   return (
     <div>
       <article itemScope itemType="https://schema.org/Article">

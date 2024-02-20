@@ -3,14 +3,13 @@ import {Metadata} from "next";
 import Highlight from "@/components/highlight/highlight";
 import FAQ from "@/components/faq/faq";
 import Article from "@/components/article/article";
+import { DEFAULT_VALUES_IN_AEM_COMPONENT_DIALOG as ARTICLE } from "@/lib/data/article/aem/sites";
 
 export const metadata: Metadata = {
-  title: "Setting Default Values in AEM Component Dialog",
-  description: `In AEM components, it&apos;s often necessary to establish default values. 
-  This ensures that when components are dragged onto the page, they display predefined initial values.
-  This functionality is achievable through the utilization of cq:template and cq:templatePath`,
+  title: ARTICLE.title,
+  description: ARTICLE.description,
   alternates: {
-    canonical: "/aem/sites/default-value-in-component-dialog"
+    canonical: ARTICLE.url
   }
 };
 
@@ -35,10 +34,10 @@ export default function DefaultValueComponentDialog() {
     <div>
       <article itemScope itemType="https://schema.org/Article">
         <Article
-          title="Setting Default Values in AEM Component Dialog"
-          url="/aem/sites/default-value-in-component-dialog"
-          publishDate="February 04, 2024"
-          modifiedDate="February 10, 2024"/>
+          title={ARTICLE.title}
+          url={ARTICLE.url}
+          publishDate={ARTICLE.publishDate}
+          modifiedDate={ARTICLE.modifiedDate}/>
         <div>
           <section className="pt-4">
             In AEM components, it&apos;s often necessary to establish default values. This ensures that when components are

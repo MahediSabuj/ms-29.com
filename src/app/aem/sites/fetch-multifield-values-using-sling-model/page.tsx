@@ -1,8 +1,7 @@
 import Article from "@/components/article/article";
-import { FORM_SUBMISSION_AUTHOR_INSTANCE as ARTICLE } from "@/lib/data/article/aem/forms";
+import { FETCH_MULTIFIELD_SLING_MODEL as ARTICLE } from "@/lib/data/article/aem/sites";
 
-
-export default function SubmitFormIntoAuthor() {
+export default function FetchMultiField() {
   return (
     <div>
       <article itemScope itemType="https://schema.org/Article">

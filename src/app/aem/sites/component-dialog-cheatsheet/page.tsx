@@ -3,13 +3,13 @@ import { Metadata } from "next";
 
 import Article from "@/components/article/article";
 import Highlight from "@/components/highlight/highlight";
+import { AEM_COMPONENT_DIALOG_CHEATSHEET as ARTICLE } from "@/lib/data/article/aem/sites";
 
 export const metadata: Metadata = {
-  title: "AEM Component Dialog CheatSheet",
-  description: `Granite UI provides a large range of the basic components needed to create component dialog on the
-    authoring environment. These components are constructed using Coral UI-based elements.`,
+  title: ARTICLE.title,
+  description: ARTICLE.description,
   alternates: {
-    canonical: "/aem/sites/component-dialog-cheatsheet"
+    canonical: ARTICLE.url
   }
 };
 
@@ -44,10 +44,10 @@ export default function DialogCheatSheet() {
     <div>
       <article itemScope itemType="https://schema.org/Article">
         <Article
-          title="AEM Component Dialog CheatSheet"
-          url="/aem/sites/component-dialog-cheatsheet"
-          publishDate="February 13, 2024"
-          modifiedDate="February 13, 2024"/>
+          title={ARTICLE.title}
+          url={ARTICLE.url}
+          publishDate={ARTICLE.publishDate}
+          modifiedDate={ARTICLE.modifiedDate}/>
           <div>
             <section className="pt-4 pb-3">
               Granite UI provides a large range of the basic components needed to create component dialog on the

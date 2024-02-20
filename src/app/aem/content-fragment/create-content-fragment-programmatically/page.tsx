@@ -1,7 +1,17 @@
+import { Metadata } from "next";
+
 import Article from "@/components/article/article";
 import Highlight from "@/components/highlight/highlight";
 import FAQ from "@/components/faq/faq";
-import Link from "next/link";
+import { CONTENT_FRAGMENT_PROGRAMMATICALLY as ARTICLE } from "@/lib/data/article/aem/content-fragment";
+
+export const metadata: Metadata = {
+  title: ARTICLE.title,
+  description: ARTICLE.description,
+  alternates: {
+    canonical: ARTICLE.url
+  }
+};
 
 const _content_fragment =
 `//Get Resource Resolver using System User
@@ -32,10 +42,10 @@ export default function ContentFragmentProgrammatically() {
      <div>
        <article itemScope itemType="https://schema.org/Article">
          <Article
-           title="Create Content Fragment Programmatically"
-           url="/aem/content-fragment/create-content-fragment-programmatically"
-           publishDate="February 16, 2024"
-           modifiedDate="February 16, 2024"/>
+           title={ARTICLE.title}
+           url={ARTICLE.url}
+           publishDate={ARTICLE.publishDate}
+           modifiedDate={ARTICLE.modifiedDate}/>
          <div>
            <section className="pt-4 pb-2">
              Creating a content fragment programmatically requires setting up a <strong>system user</strong> with

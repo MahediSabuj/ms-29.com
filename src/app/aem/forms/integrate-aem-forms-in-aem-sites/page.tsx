@@ -1,8 +1,7 @@
 import Article from "@/components/article/article";
-import { FORM_SUBMISSION_AUTHOR_INSTANCE as ARTICLE } from "@/lib/data/article/aem/forms";
+import { INTEGRATE_AEM_FORMS_IN_AEM_SITES as ARTICLE } from "@/lib/data/article/aem/forms";
 
-
-export default function SubmitFormIntoAuthor() {
+export default function FormsInSite() {
   return (
     <div>
       <article itemScope itemType="https://schema.org/Article">

@@ -1,8 +1,7 @@
 import Article from "@/components/article/article";
-import { FORM_SUBMISSION_AUTHOR_INSTANCE as ARTICLE } from "@/lib/data/article/aem/forms";
+import { INSTALL_SSL_CERTIFICATE_FROM_PFX_FILE as ARTICLE } from "@/lib/data/article/aws/ec2";
 
-
-export default function SubmitFormIntoAuthor() {
+export default function InstallCertificate() {
   return (
     <div>
       <article itemScope itemType="https://schema.org/Article">

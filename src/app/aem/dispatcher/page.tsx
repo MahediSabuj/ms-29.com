@@ -1,17 +1,18 @@
 import ArticleList from "@/components/article-list/article-list";
-import { IArticleList } from "@/types/article";
-import { CONTENT_FRAGMENT } from "@/lib/data/article/aem/content-fragment";
+
 import { PAGE_TYPE } from "@/types/enum/page-type";
+import { IArticleList } from "@/types/article";
+import { AEM_DISPATCHER } from "@/lib/data/article/aem/dispatcher";
 
 const articles : IArticleList = {
-  articleItems: CONTENT_FRAGMENT,
+  articleItems: AEM_DISPATCHER,
   pageType: PAGE_TYPE.APP_PAGE
 }
 
-export default function ContentFragment() {
+export default function Dispatcher() {
   return (
     <div>
       <ArticleList {...articles}/>
     </div>
-  )
+  )  
 }

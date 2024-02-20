@@ -1,9 +1,11 @@
-interface ITopic {
-  topic: string;
+import { PAGE_TYPE } from "@/types/enum/page-type";
+
+export interface ITopic {
+  title: string;
   url: string;
 }
 
-interface IArticleItem {
+export interface IArticleItem {
   title: string;
   description?: string;
   topics?: ITopic[];
@@ -12,6 +14,13 @@ interface IArticleItem {
   modifiedDate: string;
 }
 
-export interface IArticleList {
-  articleItems: IArticleItem[]  
+export interface Topics {
+  [key: string]: ITopic
 }
+
+export interface IArticleList {
+  articleItems: IArticleItem[];
+  pageType?: PAGE_TYPE
+}
+
+export default PAGE_TYPE;

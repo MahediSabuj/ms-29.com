@@ -1,8 +1,7 @@
 import Article from "@/components/article/article";
-import { FORM_SUBMISSION_AUTHOR_INSTANCE as ARTICLE } from "@/lib/data/article/aem/forms";
+import { CUSTOM_LIGHTNING_WEB_COMPONENT as ARTICLE } from "@/lib/data/article/salesforce/lwc";
 
-
-export default function SubmitFormIntoAuthor() {
+export default function LightningWebComponent() {
   return (
     <div>
       <article itemScope itemType="https://schema.org/Article">

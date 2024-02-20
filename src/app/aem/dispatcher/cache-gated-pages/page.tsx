@@ -1,8 +1,7 @@
 import Article from "@/components/article/article";
-import { FORM_SUBMISSION_AUTHOR_INSTANCE as ARTICLE } from "@/lib/data/article/aem/forms";
+import { CACHE_AEM_GATED_PAGES as ARTICLE } from "@/lib/data/article/aem/dispatcher";
 
-
-export default function SubmitFormIntoAuthor() {
+export default function CacheGatedPages() {
   return (
     <div>
       <article itemScope itemType="https://schema.org/Article">

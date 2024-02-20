@@ -2,21 +2,52 @@ import Link from "next/link";
 
 import { IListGroup } from "@/types/list";
 import ListGroup from "@/components/list-group/list-group";
+import TOPICS from "@/lib/data/article/topics";
+import { AEM_SITES } from "@/lib/data/article/aem/sites";
+import { CONTENT_FRAGMENT } from "@/lib/data/article/aem/content-fragment";
+import { AEM_FORMS } from "@/lib/data/article/aem/forms";
+import { AEM_SPA } from "@/lib/data/article/aem/spa";
+import { CODE_COVERAGE } from "@/lib/data/article/aem/code-coverage";
+import { AEM_DISPATCHER } from "@/lib/data/article/aem/dispatcher";
+import { AWS_EC2 } from "@/lib/data/article/aws/ec2";
+import { SF_LWC } from "@/lib/data/article/salesforce/lwc";
 
 const aem : IListGroup = {
   title: "Adobe Experience Manager",
   listItems: [{
-    title: "AEM Sites",
-    url: "/aem/sites",
-    count: 2
+    topic: TOPICS.AEM_SITES,
+    count: AEM_SITES.length
   }, {
-    title: "Content Fragment",
-    url: "/aem/content-fragment",
-    count: 1
+    topic: TOPICS.CONTENT_FRAGMENT,
+    count: CONTENT_FRAGMENT.length
   }, {
-    title: "AEM Forms",
-    url: "/aem/forms",
-    count: 1
+    topic: TOPICS.AEM_FORMS,
+    count: AEM_FORMS.length
+  }, {
+    topic: TOPICS.AEM_SPA,
+    count: AEM_SPA.length
+  }, {
+    topic: TOPICS.AEM_CODE_COVERAGE,
+    count: CODE_COVERAGE.length
+  }, {
+    topic: TOPICS.AEM_DISPATCHER,
+    count: AEM_DISPATCHER.length
+  }]
+}
+
+const aws: IListGroup = {
+  title: "Amazon Web Service",
+  listItems: [{
+    topic: TOPICS.AWS_EC2,
+    count: AWS_EC2.length
+  }]
+}
+
+const salesforce: IListGroup = {
+  title: "Salesforce",
+  listItems: [{
+    topic: TOPICS.SF_LWC,
+    count: SF_LWC.length
   }]
 }
 
@@ -36,6 +67,12 @@ export default function Sidebar() {
       </section>
       <section className="mt-4">
         <ListGroup {...aem}/>
+      </section>
+      <section className="mt-4">
+        <ListGroup {...aws}/>
+      </section>
+      <section className="mt-4">
+        <ListGroup {...salesforce}/>
       </section>
     </div>
   ); 
