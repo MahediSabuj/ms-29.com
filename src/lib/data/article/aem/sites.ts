@@ -39,11 +39,15 @@ export const SLING_MODEL_INJECTORS_ANNOTATIONS: IArticleItem = {
 
 export const QUERY_BUILDER_CHEATSHEET: IArticleItem = {
   title: "Query Builder CheatSheet",
-  description: ``,
+  description: `Query Builder offers an easy way of querying the content repository of AEM. The API is
+  built using the JCR API. AEM includes a Query Debugger tool that allows you to execute  search queries 
+  on the JCR (Java Content Repository). Utilize this tool to perform a dry run of the AEM queries, optimize 
+  them, and then implement them into your code.`,
   url: "/aem/sites/query-builder-cheatsheet",
-  publishDate: "February 20, 2024",
-  modifiedDate: "February 20, 2024",
-  topics: [ TOPICS.AEM_SITES ]
+  publishDate: "February 21, 2024",
+  modifiedDate: "February 21, 2024",
+  topics: [ TOPICS.AEM_SITES ],
+  active: true
 }
 
 export const CUSTOM_OSGI_CONFIGURATION: IArticleItem = {

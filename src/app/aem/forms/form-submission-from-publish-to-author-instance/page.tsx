@@ -1,7 +1,6 @@
 import Article from "@/components/article/article";
 import { FORM_SUBMISSION_AUTHOR_INSTANCE as ARTICLE } from "@/lib/data/article/aem/forms";
 
-
 export default function SubmitFormIntoAuthor() {
   return (
     <div>
