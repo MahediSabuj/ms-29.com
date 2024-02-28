@@ -58,6 +58,78 @@ const datePicker =
   displayedFormatstring="YYYY-MM-DD"
   required="{Boolean}true"/>`
 
+const numberField =
+`<age jcr:primaryType="nt:unstructured"
+  sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+  min="18"
+  max="35"
+  step="1"
+  name="./age"
+  value="28"
+  fieldLabel="Age"
+  required="{Boolean}true"/>`
+
+const _switch =
+`<watchFootball jcr:primaryType="nt:unstructured"
+  sling:resourceType="granite/ui/components/coral/foundation/form/switch"
+  value="{Boolean}true"
+  uncheckedValue="{Boolean}false"
+  checked="{Boolean}true"
+  fieldLabel="Watch Football?"
+  name="./watchFootball"/>`;
+
+const multifield =
+`<articles jcr:primaryType="nt:unstructured"
+  sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+  fieldLabel="Article List"
+  composite="{Boolean}true"
+  required="{Boolean}true">
+  <field jcr:primaryType="nt:unstructured"
+    sling:resourceType = "granite/ui/components/coral/foundation/container"
+    name="./articles">
+    <items jcr:primaryType="nt:unstructured">
+      <articleTitle jcr:primaryType="nt:unstructured"
+        sling:resourceType = "granite/ui/components/coral/foundation/form/textfield"
+        fieldLabel="Article Title"
+        name="./articleTitle"/>
+      <articleDetailsPage jcr:primaryType="nt:unstructured"
+        sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+        fieldLabel="Article Details Page"
+        name="./articleDetailsPage"
+        rootPath="/content/aem-demo"/>
+    </items>
+  </field>
+</articles>`;
+
+const checkbox =
+`<removeBottomSpacing jcr:primaryType="nt:unstructured"
+  sling:resourceType="/libs/granite/ui/components/coral/foundation/form/checkbox"
+  text="Remove Bottom Spacing?"
+  fieldDescription="Remove Default Bottom Spacing of the Component"
+  tooltipPosition="right"
+  name="./removeBottomSpacing"
+  checked="{Boolean}false"
+  value="mb-0"
+  uncheckedValue=""/>`;
+
+const fieldset =
+`<userInformation jcr:primaryType="nt:unstructured"
+  sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
+  jcr:title="User Information">
+  <items jcr:primaryType="nt:unstructured">
+    <firstName jcr:primaryType="nt:unstructured"
+      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+      fieldLabel="First Name"
+      name="./firstName"
+      required="{Boolean}true"/>
+    <lastName jcr:primaryType="nt:unstructured"
+      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+      fieldLabel="Last Name"
+      name="./lastName"
+      required="{Boolean}true"/>
+  </items>
+</userInformation>`
+
 export default function DialogCheatSheet() {
   return (
     <div>
@@ -73,22 +145,12 @@ export default function DialogCheatSheet() {
               authoring environment. These components are constructed using Coral UI-based elements.
             </section>
             <div>
-              <Highlight code={textField} language="xml" path="TextField"/>
+              <Highlight code={checkbox} language="xml" path="Check Box"/>
               <div>
                 <strong>Reference: </strong>
-                <Link className="text-blue-600 break-all"
-                    href={`${GRANITE_UI}/textfield/index.html`}>
-                  {GRANITE_UI}/textfield/index.html
-                </Link>
-              </div>
-            </div>
-            <div className="pt-4">
-              <Highlight code={select} language="xml" path="Select"/>
-              <div>
-                <strong>Reference: </strong>
-                <Link className="text-blue-600 break-all"
-                      href={`${GRANITE_UI}/select/index.html`}>
-                  {GRANITE_UI}/select/index.html
+                <Link className="text-blue-600 break-all" target="_blank"
+                      href={`${GRANITE_UI}/checkbox/index.html`}>
+                  {GRANITE_UI}/checkbox/index.html
                 </Link>
               </div>
             </div>
@@ -96,9 +158,69 @@ export default function DialogCheatSheet() {
               <Highlight code={datePicker} language="xml" path="Date Picker"/>
               <div>
                 <strong>Reference: </strong>
-                <Link className="text-blue-600 break-all"
-                    href={`${GRANITE_UI}/datepicker/index.html`}>
+                <Link className="text-blue-600 break-all" target="_blank"
+                      href={`${GRANITE_UI}/datepicker/index.html`}>
                   {GRANITE_UI}/datepicker/index.html
+                </Link>
+              </div>
+            </div>
+            <div className="pt-4">
+              <Highlight code={fieldset} language="xml" path="Field Set"/>
+              <div>
+                <strong>Reference: </strong>
+                <Link className="text-blue-600 break-all" target="_blank"
+                      href={`${GRANITE_UI}/fieldset/index.html`}>
+                  {GRANITE_UI}/fieldset/index.html
+                </Link>
+              </div>
+            </div>
+            <div className="pt-4">
+              <Highlight code={multifield} language="xml" path="Multi Field"/>
+              <div>
+                <strong>Reference: </strong>
+                <Link className="text-blue-600 break-all" target="_blank"
+                      href={`${GRANITE_UI}/multifield/index.html`}>
+                  {GRANITE_UI}/multifield/index.html
+                </Link>
+              </div>
+            </div>
+            <div className="pt-4">
+              <Highlight code={numberField} language="xml" path="Number Field"/>
+              <div>
+                <strong>Reference: </strong>
+                <Link className="text-blue-600 break-all" target="_blank"
+                      href={`${GRANITE_UI}/numberfield/index.html`}>
+                  {GRANITE_UI}/numberfield/index.html
+                </Link>
+              </div>
+            </div>
+            <div className="pt-4">
+              <Highlight code={select} language="xml" path="Select"/>
+              <div>
+                <strong>Reference: </strong>
+                <Link className="text-blue-600 break-all" target="_blank"
+                      href={`${GRANITE_UI}/select/index.html`}>
+                  {GRANITE_UI}/select/index.html
+                </Link>
+              </div>
+            </div>
+            <div className="pt-4">
+              <Highlight code={_switch} language="xml" path="Switch"/>
+              <div>
+                <strong>Reference: </strong>
+                <Link className="text-blue-600 break-all" target="_blank"
+                      href={`${GRANITE_UI}/switch/index.html`}>
+                  {GRANITE_UI}/switch/index.html
+                </Link>
+              </div>
+            </div>
+            <div className="pt-4">
+              <Highlight code={textField} language="xml" path="Text Field"/>
+              <div>
+                <strong>Reference: </strong>
+                <Link className="text-blue-600 break-all" target="_blank"
+                      href={`${GRANITE_UI}/textfield/index.html`}>
+                  {GRANITE_UI}/textfield/index.html
                 </Link>
               </div>
             </div>

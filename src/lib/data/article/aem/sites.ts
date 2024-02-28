@@ -63,7 +63,7 @@ export const AEM_COMPONENT_DIALOG_CHEATSHEET: IArticleItem = {
   title: "AEM Component Dialog CheatSheet",
   url: "/aem/sites/component-dialog-cheatsheet",
   publishDate: "February 13, 2024",
-  modifiedDate: "February 20, 2024",
+  modifiedDate: "February 28, 2024",
   description: `Granite UI provides a large range of the basic components needed to create component 
       dialog on the authoring environment. These components are constructed using Coral UI-based elements.`,
   topics: [ TOPICS.AEM_SITES ],

@@ -1,9 +1,9 @@
+import { Metadata } from "next";
 import Link from "next/link";
 
 import Article from "@/components/article/article";
 import { QUERY_BUILDER_CHEATSHEET as ARTICLE } from "@/lib/data/article/aem/sites";
 import Highlight from "@/components/highlight/highlight";
-import {Metadata} from "next";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,

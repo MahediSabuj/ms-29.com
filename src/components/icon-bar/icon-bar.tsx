@@ -9,7 +9,7 @@ export default function IconBar({ socialProfiles } : HeaderConfig) {
     <div className="flex">
       {socialProfiles.map((item) => {
         return (
-          <Link
+          <Link target="_blank"
             className={`${styles.iconItem} ${item.name}`}
             key={item.name} href={item.url}
             title={item.title}
