@@ -97,7 +97,7 @@ export default function RootLayout({
         <div className="flex flex-col h-screen">
           <Header {...headerConfig}/>
           <div className="container mx-auto py-4 grow">
-            <div className="max-w-7xl px-2 sm:px-6 lg:px-8 md:flex">
+            <div className="max-w-7xl px-4 sm:px-6 lg:px-8 md:flex">
               <main className="md:w-2/3 w-full">
                 <div className="md:mr-8">{children}</div>
               </main>
