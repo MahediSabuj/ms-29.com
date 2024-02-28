@@ -3,10 +3,15 @@ import TOPICS from "@/lib/data/article/topics";
 
 export const FORM_SUBMISSION_AUTHOR_INSTANCE: IArticleItem = {
   title: "Form Submission from Publish to Author Instance",
-  description: ``,
+  description: `In General, when an end user submits a form, the request is routed to the publish 
+    environment. Any modifications made at the CRX/DE during the execution of the post request are 
+    stored in the publish environment. However, a request may arise where upon form submission, 
+    certain data such as a content fragment needs to be created on the author instance. Following approval 
+    from business-level users, the content will be published to the publish environment, making it publicly
+    accessible on the internet.`,
   url: "/aem/forms/form-submission-from-publish-to-author-instance",
-  publishDate: "February 16, 2024",
-  modifiedDate: "February 16, 2024",
+  publishDate: "February 29, 2024",
+  modifiedDate: "February 29, 2024",
   topics: [ TOPICS.AEM_FORMS ]
 }
 
