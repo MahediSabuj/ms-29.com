@@ -36,7 +36,7 @@ export const INVOKE_AEM_WORKFLOW_FROM_SUBMISSION: IArticleItem = {
 
 export const INTEGRATE_AEM_FORMS_IN_AEM_SITES: IArticleItem = {
   title: "Integrate AEM Forms in AEM Sites",
-  description: `There are two potential approaches for integrating AEM forms into AEM Sites: one for new projects
+  description: `There are two potential scenarios for integrating AEM forms into AEM Sites: one for new projects
     and another for existing projects. Adobe has developed the aem-core-forms-components which can be used to 
     incorporate forms standard components into AEM Sites.`,
   url: "/aem/forms/integrate-aem-forms-in-aem-sites",
