@@ -12,7 +12,8 @@ export const FORM_SUBMISSION_AUTHOR_INSTANCE: IArticleItem = {
   url: "/aem/forms/form-submission-from-publish-to-author-instance",
   publishDate: "March 01, 2024",
   modifiedDate: "March 01, 2024",
-  topics: [ TOPICS.AEM_FORMS ]
+  topics: [ TOPICS.AEM_FORMS ],
+  active: true
 }
 
 export const GOOGLE_RECAPTCHA_AEM_FORMS: IArticleItem = {
@@ -41,7 +42,8 @@ export const INTEGRATE_AEM_FORMS_IN_AEM_SITES: IArticleItem = {
   url: "/aem/forms/integrate-aem-forms-in-aem-sites",
   publishDate: "February 29, 2024",
   modifiedDate: "February 29, 2024",
-  topics: [ TOPICS.AEM_FORMS ]
+  topics: [ TOPICS.AEM_FORMS ],
+  active: true
 }
 
 export const AEM_FORMS: IArticleItem[] = [

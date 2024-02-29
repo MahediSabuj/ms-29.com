@@ -5,6 +5,8 @@ import Article from "@/components/article/article";
 import Highlight from "@/components/highlight/highlight";
 import { AEM_COMPONENT_DIALOG_CHEATSHEET as ARTICLE } from "@/lib/data/article/aem/sites";
 
+import PathFieldImage from "./aem-component-dialog__pathfield.png";
+
 export const metadata: Metadata = {
   title: ARTICLE.title,
   description: ARTICLE.description,
@@ -206,7 +208,8 @@ export default function DialogCheatSheet() {
               </div>
             </div>
             <div className="pt-4">
-              <Highlight code={pathfield} language="xml" path="Path Field"/>
+              <Highlight code={pathfield} language="xml" path="Path Field"
+                image={{ src: PathFieldImage, alt: "AEM Component Dialog (Pathfield)" }}/>
               <div>
                 <strong>Reference: </strong>
                 <Link className="text-blue-600 break-all" target="_blank"
