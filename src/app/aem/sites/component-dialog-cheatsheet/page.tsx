@@ -130,6 +130,17 @@ const fieldset =
   </items>
 </userInformation>`
 
+const pathfield =
+`<linkUrl jcr:primaryType="nt:unstructured"
+  sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+  fieldLabel="Link URL"
+  emptyText="Page URL"
+  name="./linkURL"
+  multiple="{Boolean}false"
+  forceSelection="{Boolean}true"
+  required="{Boolean}true"
+  rootPath="/content/aem-demo"/>`;
+
 export default function DialogCheatSheet() {
   return (
     <div>
@@ -174,7 +185,7 @@ export default function DialogCheatSheet() {
                 </Link>
               </div>
             </div>
-            <div className="pt-4">
+            <div id="multifield" className="pt-4">
               <Highlight code={multifield} language="xml" path="Multi Field"/>
               <div>
                 <strong>Reference: </strong>
@@ -191,6 +202,16 @@ export default function DialogCheatSheet() {
                 <Link className="text-blue-600 break-all" target="_blank"
                       href={`${GRANITE_UI}/numberfield/index.html`}>
                   {GRANITE_UI}/numberfield/index.html
+                </Link>
+              </div>
+            </div>
+            <div className="pt-4">
+              <Highlight code={pathfield} language="xml" path="Path Field"/>
+              <div>
+                <strong>Reference: </strong>
+                <Link className="text-blue-600 break-all" target="_blank"
+                      href={`${GRANITE_UI}/pathfield/index.html`}>
+                  {GRANITE_UI}/pathfield/index.html
                 </Link>
               </div>
             </div>
