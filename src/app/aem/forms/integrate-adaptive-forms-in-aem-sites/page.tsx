@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Article from "@/components/article/article";
 import Highlight from "@/components/highlight/highlight";
-import { INTEGRATE_AEM_FORMS_IN_AEM_SITES as ARTICLE } from "@/lib/data/article/aem/forms";
+import { INTEGRATE_ADAPTIVE_FORMS_IN_AEM_SITES as ARTICLE } from "@/lib/data/article/aem/forms";
 
 const aem_project_archetype =
 `mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate \\
@@ -153,7 +153,7 @@ export default function FormsInSite() {
           modifiedDate={ARTICLE.modifiedDate}/>
           <div>
             <section className="pt-4 pb-3">
-              There are two potential scenarios for integrating AEM forms into AEM Sites: one for new projects
+              There are two potential scenarios for integrating Adaptive forms into AEM Sites: one for new projects
               and another for existing projects. Adobe has developed the <Link className="text-blue-600" href="https://github.com/adobe/aem-core-forms-components">aem-core-forms-components</Link> (Forms Core Components) which
               can be used to incorporate forms standard components into AEM Sites.
             </section>
