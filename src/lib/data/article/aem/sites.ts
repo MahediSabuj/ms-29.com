@@ -59,6 +59,18 @@ export const CUSTOM_OSGI_CONFIGURATION: IArticleItem = {
   topics: [ TOPICS.AEM_SITES ]
 }
 
+export const INTEGRATE_ADAPTIVE_FORMS_IN_AEM_SITES: IArticleItem = {
+  title: "Integrate Adaptive Forms in AEM Sites",
+  description: `There are two potential scenarios for integrating Adaptive forms into AEM Sites: one for new projects
+    and another for existing projects. Adobe has developed the aem-core-forms-components which can be used to 
+    incorporate forms standard components into AEM Sites.`,
+  url: "/aem/sites/integrate-adaptive-forms-in-aem-sites",
+  publishDate: "February 29, 2024",
+  modifiedDate: "March 01, 2024",
+  topics: [ TOPICS.AEM_SITES ],
+  active: true
+}
+
 export const AEM_COMPONENT_DIALOG_CHEATSHEET: IArticleItem = {
   title: "AEM Component Dialog CheatSheet",
   url: "/aem/sites/component-dialog-cheatsheet",
@@ -89,6 +101,7 @@ export const AEM_SITES : IArticleItem[] = [
   SLING_MODEL_INJECTORS_ANNOTATIONS,
   QUERY_BUILDER_CHEATSHEET,
   CUSTOM_OSGI_CONFIGURATION,
+  INTEGRATE_ADAPTIVE_FORMS_IN_AEM_SITES,
   AEM_COMPONENT_DIALOG_CHEATSHEET,
   DEFAULT_VALUES_IN_AEM_COMPONENT_DIALOG
 ].filter(m => m.active);

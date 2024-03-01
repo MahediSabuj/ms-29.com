@@ -18,6 +18,15 @@ export default function Article({
 
   return (
     <div className="mb-4">
+      {topics &&
+        topics.map((item, index) => {
+          return (
+            <Link key={index} href={item.url}
+                className="bg-topics text-sm font-medium me-2 px-2.5 py-0.5 rounded-full border inline-flex items-center justify-center">
+              {item.title}
+            </Link>
+          )
+        })}
       <h1 className="text-2xl" itemProp="name">
         <Link href={url}>{title}</Link>
       </h1>
@@ -38,19 +47,6 @@ export default function Article({
       {description &&
         <div className="pt-2">
           <span dangerouslySetInnerHTML={{ __html: description || "" }}></span>
-          <Link className="text-blue-600" href={url}> See More... </Link>
-        </div>
-      }
-      {topics &&
-        <div className="mt-1">
-          {topics.map((item, index) => {
-            return (
-              <Link key={index} href={item.url}
-                  className="bg-topics text-white text-sm font-medium me-2 px-2.5 py-0.5 rounded border inline-flex items-center justify-center">
-                {item.title}
-              </Link>
-            )
-          })}
         </div>
       }
     </div>
