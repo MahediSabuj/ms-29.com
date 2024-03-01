@@ -18,27 +18,18 @@ export default function Article({
 
   return (
     <div className="mb-4">
-      {topics &&
-        topics.map((item, index) => {
-          return (
-            <Link key={index} href={item.url}
-                className="bg-topics text-sm font-medium me-2 px-2.5 py-0.5 rounded-full border inline-flex items-center justify-center">
-              {item.title}
-            </Link>
-          )
-        })}
       <h1 className="text-2xl" itemProp="name">
         <Link href={url}>{title}</Link>
       </h1>
       <div>
         <div className="md:inline">
-          <span className="text-gray-400 mr-2">Published</span>
+          <span className="text-[#636B74] mr-2">Published</span>
           <time itemProp="datePublished" dateTime={formattedDate(publishDate)}>
             {publishDate}
           </time>
         </div>
         <div className="md:inline md:ml-4">
-          <span className="text-gray-400 mr-2">Modified</span>
+          <span className="text-[#636B74] mr-2">Modified</span>
           <time itemProp="dateModified" dateTime={formattedDate(modifiedDate)}>
             {modifiedDate}
           </time>
