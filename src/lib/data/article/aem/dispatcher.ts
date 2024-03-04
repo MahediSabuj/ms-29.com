@@ -2,12 +2,15 @@ import { IArticleItem } from "@/types/article";
 import TOPICS from "@/lib/data/article/topics";
 
 export const BASIC_HTTP_AUTHENTICATION: IArticleItem = {
-  title: "Basic HTTP Authentication in AEM Dispatcher",
-  description: ``,
-  url: "/aem/dispatcher/basic-http-authentication-in-aem-dispatcher",
-  publishDate: "February 20, 2024",
-  modifiedDate: "February 20, 2024",
-  topics: [ TOPICS.AEM_DISPATCHER ]
+  title: "Restricting AEM Dispatcher Access in Lower Environments",
+  description: `AEM&apos;s dispatcher  is not restricted and is publicly accessible by default. While unrestricted access is
+    suitable for production environments, it&apos;s recommended to restrict access in lower environments such as
+    dev and stage to your organization or specific users. This can be achieved through IP Allow Lists or Basic Authentication.`,
+  url: "/aem/dispatcher/restrict-aem-dispatcher-access-in-lower-environments",
+  publishDate: "March 02, 2024",
+  modifiedDate: "March 02, 2024",
+  topics: [ TOPICS.AEM_DISPATCHER ],
+  active: true
 }
 
 export const CACHE_AEM_GATED_PAGES: IArticleItem = {
