@@ -122,7 +122,7 @@ export default function BasicAuthentication() {
         <Highlight code={user_group} language="makefile" path="etc / httpd / groups"></Highlight>
         <div className="pt-1">
           After creating the group file, you&apos;ll need to update the vhost configuration to specify the group name
-          to allow access. With this configuration, anyone listed in the group "GroupName" and with an entry in the password
+          to allow access. With this configuration, anyone listed in the group &quot;GroupName&quot; and with an entry in the password
           file will be granted access if they enter the correct password.
         </div>
         <Highlight code={basic_auth_group} language="apache" path="conf.d / available_vhosts / domain.vhost"></Highlight>
