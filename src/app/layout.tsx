@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import hljs from 'highlight.js/lib/core';
 import apache from 'highlight.js/lib/languages/apache';
 import java from 'highlight.js/lib/languages/java';
+import makefile from 'highlight.js/lib/languages/makefile';
 import xml from 'highlight.js/lib/languages/xml';
 import { GoogleTagManager } from '@next/third-parties/google';
 
@@ -85,8 +86,9 @@ const headerConfig: HeaderConfig = {
 }
 
 hljs.registerLanguage('apache', apache);
-hljs.registerLanguage('xml', xml);
 hljs.registerLanguage('java', java);
+hljs.registerLanguage('makefile', makefile);
+hljs.registerLanguage('xml', xml);
 
 export default function RootLayout({
   children,
