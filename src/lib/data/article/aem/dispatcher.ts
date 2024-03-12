@@ -7,8 +7,8 @@ export const BASIC_HTTP_AUTHENTICATION: IArticleItem = {
     suitable for production environments, it&apos;s recommended to restrict access in lower environments such as
     dev and stage to your organization or specific users. This can be achieved through IP Allow Lists or Basic Authentication.`,
   url: "/aem/dispatcher/restrict-aem-dispatcher-access-in-lower-environments",
-  publishDate: "March 02, 2024",
-  modifiedDate: "March 02, 2024",
+  publishDate: "March 05, 2024",
+  modifiedDate: "March 05, 2024",
   topics: [ TOPICS.AEM_DISPATCHER ],
   active: true
 }

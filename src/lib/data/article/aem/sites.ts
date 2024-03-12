@@ -23,9 +23,10 @@ export const FETCH_MULTIFIELD_SLING_MODEL: IArticleItem = {
   title: "Fetch Multifield Values using Sling Model",
   description: ``,
   url: "/aem/sites/fetch-multifield-values-using-sling-model",
-  publishDate: "February 20, 2024",
-  modifiedDate: "February 20, 2024",
-  topics: [ TOPICS.AEM_SITES ]
+  publishDate: "March 13, 2024",
+  modifiedDate: "March 13, 2024",
+  topics: [ TOPICS.AEM_SITES ],
+  active: true
 }
 
 export const SLING_MODEL_INJECTORS_ANNOTATIONS: IArticleItem = {

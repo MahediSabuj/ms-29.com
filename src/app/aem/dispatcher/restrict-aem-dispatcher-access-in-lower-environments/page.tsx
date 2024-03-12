@@ -53,7 +53,7 @@ const basic_auth_group =
   AuthUserFile /etc/httpd/.htpasswd 
   AuthGroupFile /etc/httpd/groups
   Require group GroupName
-</Directory>\``;
+</Directory>`;
 
 export default function BasicAuthentication() {
   return (
