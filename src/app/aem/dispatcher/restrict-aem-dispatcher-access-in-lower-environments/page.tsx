@@ -70,7 +70,7 @@ export default function BasicAuthentication() {
           dev and stage to your organization or specific users. This can be achieved through <Link className="text-blue-600"
           href="#ip-allowlists">IP Allow Lists</Link> or <Link className="text-blue-600" href="#basic-authentication">Basic Authentication</Link>.
         </div>
-        <h2 id="ip-allowlists" className="text-xl mt-3 mb-1">
+        <h2 id="ip-allowlists" className="text-xl mt-6 mb-1">
           <strong>Restricting through IP Allow Lists</strong>
         </h2>
         <div className="pb-1">
@@ -78,13 +78,13 @@ export default function BasicAuthentication() {
           to allow access based on either individual IP addresses or CIDR blocks.
         </div>
         <Highlight code={ip_allowlist} language="apache" path="conf.d / allowlists / 001_client_allowlist.rules"></Highlight>
-        <div className="pt-3">
+        <div className="pt-6">
           After configuring the IP allow list, it&apos;s necessary to include the allowlist rules into the site vhost file
           to restrict access. This can be toggled on or off using a variable such as PUBLISH_ALLOWLIST_ENABLED. In lower
           environments, ensure that value is set to 1, while in production environments, it should be set to 0.
         </div>
         <Highlight code={ip_restriction} language="apache" path="conf.d / aem-demo.vhost"></Highlight>
-        <h2 id="basic-authentication" className="text-xl mt-3 mb-1">
+        <h2 id="basic-authentication" className="text-xl mt-6 mb-1">
           <strong>Restricting through Basic Authentication</strong>
         </h2>
         <div className="pb-1">
@@ -106,7 +106,7 @@ export default function BasicAuthentication() {
           the hashed password will be saved in the file, formatted as username:hashpassword.
         </div>
         <Highlight code={credentials} language="apache" path="etc / httpd / .htpasswd"></Highlight>
-        <div className="pt-3">
+        <div className="pt-6">
           Next, configure the virtual host to configure password file and specify which user are allowed access.
         </div>
         <Highlight code={basic_auth_user} language="apache" path="conf.d / available_vhosts / domain.vhost"></Highlight>
@@ -115,7 +115,7 @@ export default function BasicAuthentication() {
           to access by using <code className="code-inline">Require valid-user</code>. This directive allows access to any user who correctly
           enters their password.
         </div>
-        <div className="pt-3">
+        <div className="pt-6">
           To allow multiple users, you must create a group file associating group names with the list of users in that group.
           The format of this file is straightforward and can be created using any text editor.
         </div>

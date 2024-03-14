@@ -21,10 +21,11 @@ export const AEM_USER_PERMISSION: IArticleItem = {
 
 export const FETCH_MULTIFIELD_SLING_MODEL: IArticleItem = {
   title: "Fetch Multifield Values using Sling Model",
-  description: ``,
+  description: `In accordance with specific project requirements, there might be a need to incorporate Multifield within the
+    component dialog. Let&apos;s explore how to retrieve Multifield data and effectively utilize it in HTL.`,
   url: "/aem/sites/fetch-multifield-values-using-sling-model",
-  publishDate: "March 13, 2024",
-  modifiedDate: "March 13, 2024",
+  publishDate: "March 14, 2024",
+  modifiedDate: "March 14, 2024",
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
