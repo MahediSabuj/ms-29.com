@@ -153,7 +153,7 @@ export default function DialogCheatSheet() {
           publishDate={ARTICLE.publishDate}
           modifiedDate={ARTICLE.modifiedDate}/>
           <div>
-            <section className="pt-4 pb-3">
+            <section className="pt-6 pb-3">
               Granite UI provides a large range of the basic components needed to create component dialog on the
               authoring environment. These components are constructed using Coral UI-based elements.
             </section>

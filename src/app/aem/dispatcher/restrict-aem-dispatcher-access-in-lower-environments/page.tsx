@@ -64,7 +64,7 @@ export default function BasicAuthentication() {
           url={ARTICLE.url}
           publishDate={ARTICLE.publishDate}
           modifiedDate={ARTICLE.modifiedDate}/>
-        <div className="pt-3">
+        <div className="pt-6">
           AEM&apos;s dispatcher  is not restricted and is publicly accessible by default. While unrestricted access is
           suitable for production environments, it&apos;s recommended to restrict access in lower environments such as
           dev and stage to your organization or specific users. This can be achieved through <Link className="text-blue-600"

@@ -47,7 +47,7 @@ export default function ContentFragmentProgrammatically() {
            publishDate={ARTICLE.publishDate}
            modifiedDate={ARTICLE.modifiedDate}/>
          <div>
-           <section className="pt-4 pb-2">
+           <section className="pt-6 pb-2">
              Creating a content fragment programmatically requires setting up a <strong>system user</strong> with
              Read permission for the content fragment model and Read, Modify, Create permissions for the asset folder where
              the content fragment will be stored. Additionally, ensure the content fragment model and asset folder are

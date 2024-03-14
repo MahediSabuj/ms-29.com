@@ -39,7 +39,7 @@ export default function DefaultValueComponentDialog() {
           publishDate={ARTICLE.publishDate}
           modifiedDate={ARTICLE.modifiedDate}/>
         <div>
-          <section className="pt-4">
+          <section className="pt-6">
             In AEM components, it&apos;s often necessary to establish default values. This ensures that when components are
             dragged onto the page, they display predefined initial values. Subsequently, authors can configure the
             components based on specific requirements. <br/> <br/>

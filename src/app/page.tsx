@@ -27,8 +27,6 @@ const articles : IArticleList = {
 
 export default function Home() {
   return (
-    <div>
       <ArticleList {...articles}/>
-    </div>
   );
 }

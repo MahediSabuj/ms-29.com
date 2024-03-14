@@ -152,7 +152,7 @@ export default function FormsInSite() {
           publishDate={ARTICLE.publishDate}
           modifiedDate={ARTICLE.modifiedDate}/>
           <div>
-            <section className="pt-4 pb-3">
+            <section className="pt-6 pb-3">
               There are two potential scenarios for integrating Adaptive forms into AEM Sites: one for new projects
               and another for existing projects. Adobe has developed the <Link className="text-blue-600" href="https://github.com/adobe/aem-core-forms-components">aem-core-forms-components</Link> (Forms Core Components) which
               can be used to incorporate forms standard components into AEM Sites.

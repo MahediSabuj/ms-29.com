@@ -102,7 +102,7 @@ export default function FetchMultiField() {
           url={ARTICLE.url}
           publishDate={ARTICLE.publishDate}
           modifiedDate={ARTICLE.modifiedDate}/>
-        <div className="pt-3">
+        <div className="pt-6">
           In accordance with specific project requirements, there might be a need to incorporate Multifield within the
           component dialog. Let&apos;s explore how to retrieve Multifield data and effectively utilize it in HTL.
         </div>

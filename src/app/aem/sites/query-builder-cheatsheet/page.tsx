@@ -56,7 +56,7 @@ export default function QueryBuilder() {
           publishDate={ARTICLE.publishDate}
           modifiedDate={ARTICLE.modifiedDate}/>
           <div>
-            <section className="pt-4 pb-3">
+            <section className="pt-6 pb-3">
               Query Builder offers an easy way of querying the content repository of AEM. The API is
               built using the JCR API. AEM includes a <Link className="text-blue-600" target="_blank"
               href="http://localhost:4502/libs/cq/search/content/querydebug.html">Query Debugger</Link> tool
