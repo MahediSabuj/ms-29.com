@@ -10,8 +10,8 @@ export const FORM_SUBMISSION_AUTHOR_INSTANCE: IArticleItem = {
     from business-level users, the content will be published to the publish environment, making it publicly
     accessible on the internet.`,
   url: "/aem/forms/form-submission-from-publish-to-author-instance",
-  publishDate: "March 01, 2024",
-  modifiedDate: "March 01, 2024",
+  publishDate: "March 15, 2024",
+  modifiedDate: "March 15, 2024",
   topics: [ TOPICS.AEM_FORMS ]
 }
 

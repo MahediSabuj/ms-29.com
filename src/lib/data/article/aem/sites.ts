@@ -1,6 +1,15 @@
 import { IArticleItem } from "@/types/article";
 import TOPICS from "@/lib/data/article/topics";
 
+export const PROJECT_LOMBOK_IN_AEM_SLING_MODELS: IArticleItem = {
+  title: "Project Lombok in AEM Sling Models",
+  description: ``,
+  url: "/aem/sites/project-lombok-in-aem-sling-models",
+  publishDate: "March 16, 2024",
+  modifiedDate: "March 16, 2024",
+  topics: [ TOPICS.AEM_SITES ]
+}
+
 export const MULTI_SITE_MANAGER: IArticleItem = {
   title: "Multi Site Manager (MSM) in AEM",
   description: ``,
@@ -97,6 +106,7 @@ export const DEFAULT_VALUES_IN_AEM_COMPONENT_DIALOG: IArticleItem = {
 }
 
 export const AEM_SITES : IArticleItem[] = [
+  PROJECT_LOMBOK_IN_AEM_SLING_MODELS,
   MULTI_SITE_MANAGER,
   AEM_USER_PERMISSION,
   FETCH_MULTIFIELD_SLING_MODEL,
