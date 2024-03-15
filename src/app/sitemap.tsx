@@ -23,8 +23,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if(articles.length < 1)
       return;
 
-    const lastModifiedDate: Date = articles.reduce((current, value) => {
-      return current > new Date(value.modifiedDate) ? current : new Date(value.modifiedDate);
+    const lastModifiedDate: Date = articles.reduce((prev, current) => {
+      return prev > new Date(current.modifiedDate) ? prev : new Date(current.modifiedDate);
     }, new Date(1, 1, 1970));
 
     sitemap.push({
