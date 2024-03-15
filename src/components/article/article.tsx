@@ -1,20 +1,11 @@
 import Link from "next/link";
 import { IArticleItem } from "@/types/article";
+import DateFormatter from "@/lib/util/date-formatter";
 
 export default function Article({
   title, topics, url, publishDate, modifiedDate, description } : IArticleItem
 ) {
-
-  const fillZero = (date: number) => {
-    return date.toString().padStart(2, '0');
-  }
-
-  const formattedDate = (date: string) => {
-    const _date = new Date(date);
-    const _day = fillZero(_date.getDate());
-    const _month = fillZero(_date.getMonth() + 1);
-    return `${_date.getFullYear()}-${_month}-${_day}`;
-  }
+  const dateFormatter = new DateFormatter();
 
   return (
     <div className="mb-0">
@@ -24,13 +15,13 @@ export default function Article({
       <div>
         <div className="md:inline">
           <span className="text-[#636B74] mr-2">Published</span>
-          <time itemProp="datePublished" dateTime={formattedDate(publishDate)}>
+          <time itemProp="datePublished" dateTime={dateFormatter.formatDate(publishDate)}>
             {publishDate}
           </time>
         </div>
         <div className="md:inline md:ml-4">
           <span className="text-[#636B74] mr-2">Modified</span>
-          <time itemProp="dateModified" dateTime={formattedDate(modifiedDate)}>
+          <time itemProp="dateModified" dateTime={dateFormatter.formatDate(modifiedDate)}>
             {modifiedDate}
           </time>
         </div>
