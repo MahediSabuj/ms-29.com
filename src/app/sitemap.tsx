@@ -13,7 +13,7 @@ import { IArticleItem } from "@/types/article";
 const domain: string = "https://ms-29.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const dateFormatter = new DateFormatter();
+  const dateFormatter = new (DateFormatter as any)();
 
   const withDomain = (path: string) => {
     return `${domain}${path}`;

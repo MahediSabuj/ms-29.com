@@ -2,12 +2,18 @@ import { IArticleItem } from "@/types/article";
 import TOPICS from "@/lib/data/article/topics";
 
 export const PROJECT_LOMBOK_IN_AEM_SLING_MODELS: IArticleItem = {
-  title: "Project Lombok in AEM Sling Models",
-  description: ``,
-  url: "/aem/sites/project-lombok-in-aem-sling-models",
+  title: "Project Lombok in AEM Projects",
+  description: `In AEM backend Java development, Sling Models are utilized for retrieving dialog values through various 
+    annotations. However, within the Sling Model, need to write boilerplate code such as getter and setter methods to pass 
+    these values to HTL. Furthermore, in Java Concrete Classes, need to create an empty constructor or constructor with all 
+    or specific properties to facilitate the conversion of Json String to a Java Object (and vice versa) using Jackson. 
+    To streamline this process, Project Lombok can be utilized. By incorporating appropriate annotations, Lombok automatically 
+    generates the necessary boilerplate code, simplifying development tasks.`,
+  url: "/aem/sites/project-lombok-in-aem-projects",
   publishDate: "March 16, 2024",
   modifiedDate: "March 16, 2024",
-  topics: [ TOPICS.AEM_SITES ]
+  topics: [ TOPICS.AEM_SITES ],
+  active: true
 }
 
 export const MULTI_SITE_MANAGER: IArticleItem = {
@@ -56,7 +62,7 @@ export const QUERY_BUILDER_CHEATSHEET: IArticleItem = {
   them, and then implement them into your code.`,
   url: "/aem/sites/query-builder-cheatsheet",
   publishDate: "February 21, 2024",
-  modifiedDate: "February 21, 2024",
+  modifiedDate: "March 17, 2024",
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }

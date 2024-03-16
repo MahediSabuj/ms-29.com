@@ -12,7 +12,8 @@ export const FORM_SUBMISSION_AUTHOR_INSTANCE: IArticleItem = {
   url: "/aem/forms/form-submission-from-publish-to-author-instance",
   publishDate: "March 15, 2024",
   modifiedDate: "March 15, 2024",
-  topics: [ TOPICS.AEM_FORMS ]
+  topics: [ TOPICS.AEM_FORMS ],
+  active: true
 }
 
 export const GOOGLE_RECAPTCHA_AEM_FORMS: IArticleItem = {

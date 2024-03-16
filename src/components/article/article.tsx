@@ -5,7 +5,7 @@ import DateFormatter from "@/lib/util/date-formatter";
 export default function Article({
   title, topics, url, publishDate, modifiedDate, description } : IArticleItem
 ) {
-  const dateFormatter = new DateFormatter();
+  const dateFormatter = new (DateFormatter as any)();
 
   return (
     <div className="mb-0">
