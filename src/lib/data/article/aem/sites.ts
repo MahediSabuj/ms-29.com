@@ -1,7 +1,7 @@
 import { IArticleItem } from "@/types/article";
 import TOPICS from "@/lib/data/article/topics";
 
-export const PROJECT_LOMBOK_IN_AEM_SLING_MODELS: IArticleItem = {
+export const PROJECT_LOMBOK_IN_AEM_PROJECTS: IArticleItem = {
   title: "Project Lombok in AEM Projects",
   description: `In AEM backend Java development, Sling Models are utilized for retrieving dialog values through various 
     annotations. However, within the Sling Model, need to write boilerplate code such as getter and setter methods to pass 
@@ -112,7 +112,7 @@ export const DEFAULT_VALUES_IN_AEM_COMPONENT_DIALOG: IArticleItem = {
 }
 
 export const AEM_SITES : IArticleItem[] = [
-  PROJECT_LOMBOK_IN_AEM_SLING_MODELS,
+  PROJECT_LOMBOK_IN_AEM_PROJECTS,
   MULTI_SITE_MANAGER,
   AEM_USER_PERMISSION,
   FETCH_MULTIFIELD_SLING_MODEL,
