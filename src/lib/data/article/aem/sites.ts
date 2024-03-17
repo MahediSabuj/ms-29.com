@@ -8,8 +8,8 @@ export const PROJECT_LOMBOK_IN_AEM_PROJECTS: IArticleItem = {
     these values to HTL. To streamline this process, Project Lombok can be utilized. By incorporating appropriate annotations, 
     Lombok automatically generates the necessary boilerplate code, simplifying development tasks.`,
   url: "/aem/sites/project-lombok-in-aem-projects",
-  publishDate: "March 16, 2024",
-  modifiedDate: "March 16, 2024",
+  publishDate: "March 17, 2024",
+  modifiedDate: "March 17, 2024",
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
