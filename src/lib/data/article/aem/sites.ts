@@ -5,10 +5,8 @@ export const PROJECT_LOMBOK_IN_AEM_PROJECTS: IArticleItem = {
   title: "Project Lombok in AEM Projects",
   description: `In AEM backend Java development, Sling Models are utilized for retrieving dialog values through various 
     annotations. However, within the Sling Model, need to write boilerplate code such as getter and setter methods to pass 
-    these values to HTL. Furthermore, in Java Concrete Classes, need to create an empty constructor or constructor with all 
-    or specific properties to facilitate the conversion of Json String to a Java Object (and vice versa) using Jackson. 
-    To streamline this process, Project Lombok can be utilized. By incorporating appropriate annotations, Lombok automatically 
-    generates the necessary boilerplate code, simplifying development tasks.`,
+    these values to HTL. To streamline this process, Project Lombok can be utilized. By incorporating appropriate annotations, 
+    Lombok automatically generates the necessary boilerplate code, simplifying development tasks.`,
   url: "/aem/sites/project-lombok-in-aem-projects",
   publishDate: "March 16, 2024",
   modifiedDate: "March 16, 2024",
