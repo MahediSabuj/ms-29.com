@@ -94,8 +94,8 @@ export default function ProjectLombok() {
           <Highlight code={core_pom_xml} language="xml" path="core / pom.xml"/>
         </div>
         <div className="pt-6 pb-1">
-          For the demonstration purpose, let's consider a component with a dialog comprising a textfield (title), tagfield (tags),
-          datepicker (publishDate), and select (category) field.  In a Sling Model, the typical approach involves creating
+          For the demonstration purpose, let&apos;s consider a component with a dialog comprising a textfield (title), tagfield (tags),
+          datepicker (publishDate), and select (category) field. In a Sling Model, the typical approach involves creating
           getter methods for each variable needed for access from HTL
         </div>
         <Highlight code={sling_model} language="java" path="Article.java"/>
