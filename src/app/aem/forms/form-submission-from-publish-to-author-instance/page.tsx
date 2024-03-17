@@ -12,7 +12,7 @@ export default function SubmitFormIntoAuthor() {
           modifiedDate={ARTICLE.modifiedDate}/>
       </article>
         <div>
-          <section className="pt-4 pb-3">
+          <section className="pt-6 pb-3">
             In General, when an end user submits a form, the request is routed to the publish environment.
             Any modifications made at the CRX/DE during the execution of the post request are stored in
             the publish environment. However, a request may arise where upon form submission, certain data

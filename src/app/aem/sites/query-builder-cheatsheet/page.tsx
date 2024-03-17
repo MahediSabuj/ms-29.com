@@ -39,12 +39,27 @@ property.operation = like
 property.value = %aem-demo/components%
 p.guessTotal = true`;
 
-const pages_filter_by_component_property =
+const search_by_multiple_properties =
 `path = /content/aem-demo/de
 1_property = sling:resourceType
 1_property.value = aem-demo/components/container
 2_property = layout
 2_property.value = simple`;
+
+const search_by_multiple_property_values =
+`path = /content/aem-demo/de
+1_property = sling:resourceType
+1_property.value = aem-demo/components/container
+2_property = layout
+2_property.1_value = simple
+2_property.2_value = responsiveGrid`;
+
+const search_under_multiple_paths =
+`group.p.or = true
+group.1_path = /content/aem-demo/de
+group.2_path = /content/aem-demo/it
+1_property = sling:resourceType
+1_property.value = aem-demo/components/container`;
 
 export default function QueryBuilder() {
   return (
@@ -78,7 +93,13 @@ export default function QueryBuilder() {
               <Highlight code={number_of_components_in_page} language="xml" path="Total Components within a Page"/>
             </div>
             <div className="pt-3">
-              <Highlight code={pages_filter_by_component_property} language="xml" path="Pages filtered by Component Property"/>
+              <Highlight code={search_by_multiple_properties} language="xml" path="Search by Multiple Properties"/>
+            </div>
+            <div className="pt-3">
+              <Highlight code={search_by_multiple_property_values} language="xml" path="Search by Multiple Property Values"/>
+            </div>
+            <div className="pt-3">
+              <Highlight code={search_under_multiple_paths} language="xml" path="Search under Multiple Paths"/>
             </div>
             <div className="pt-3">
               <Highlight code={return_selective_properties} language="xml" path="Return Selective Properties"/>
