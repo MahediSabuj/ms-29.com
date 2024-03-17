@@ -11,6 +11,37 @@ const pom_xml =
 </dependency>`;
 
 const sling_model =
+`public class Article {
+  @ValueMapValue
+  String title;
+
+  @ValueMapValue
+  String[] tags;
+
+  @ValueMapValue
+  Date publishDate;
+
+  @ValueMapValue
+  String category;
+  
+  public String getTitle() {
+    return title;
+  }
+  
+  public String[] getTags() {
+    return tags;
+  }
+  
+  public Date getPublishDate() {
+    return publishDate;
+  }
+  
+  public String getCategory() {
+    return category;
+  }
+}`;
+
+const sling_model_lombok =
 `import lombok.Getter;
 
 public class Article {
@@ -47,30 +78,32 @@ export default function ProjectLombok() {
           publishDate={ARTICLE.publishDate}
           modifiedDate={ARTICLE.modifiedDate}/>
         <div className="pt-6">
-          In AEM backend Java development, Sling Models are utilized for retrieving dialog values through various annotations.
-          However, within the Sling Model, need to write boilerplate code such as getter and setter methods to pass these values to HTL.
-          To streamline this process, <strong>Project Lombok</strong> can be utilized. By incorporating appropriate annotations,
-          Lombok automatically generates the necessary boilerplate code, simplifying development tasks.
+          In AEM backend Java development, Sling Models are utilized to retrieve dialog values using annotations. However,
+          writing boilerplate code such as getter methods for passing these values to HTL can be tedious. To simplify this
+          process, <strong>Project Lombok</strong> can be integrated, automatically generating the necessary boilerplate code
+          with annotations like <code className="code-inline">@Getter</code>. This streamlines development tasks by eliminating the need for manual getter method creation.
         </div>
         <div className="pt-3 pb-1">
-          To incorporate Lombok into the AEM project, you&apos;ll need to include the Maven dependency in both the root and core pom.xml files.
+          Lombok is a Java library designed to minimize boilerplate code by providing annotations to generate getters, setters,
+          constructors, and other repetitive code structures. By leveraging Lombok, developers can produce cleaner and more concise
+          code without sacrificing functionality. To incorporate Lombok into the AEM project, you&apos;ll need to include the Maven
+          dependency in both the root and core pom.xml files.
         </div>
         <Highlight code={pom_xml} language="xml" path="pom.xml"/>
         <div className="pt-3">
           <Highlight code={core_pom_xml} language="xml" path="core / pom.xml"/>
         </div>
         <div className="pt-6 pb-1">
-          Let&apos;s explore how we can implement Lombok into Sling Models. For this demonstration, consider a component with a
-          dialog containing textfield (title), tagfield (tags), datepicker (publishDate), and select (category) field. In the
-          example below, we&apos;ll illustrate how to retrieve these component values and utilize Lombok to automatically generate
-          boilerplate getter functions.
+          For the demonstration purpose, let's consider a component with a dialog comprising a textfield (title), tagfield (tags),
+          datepicker (publishDate), and select (category) field.  In a Sling Model, the typical approach involves creating
+          getter methods for each variable needed for access from HTL
         </div>
         <Highlight code={sling_model} language="java" path="Article.java"/>
-        <div className="pt-1">
-          Generally, we&apos;d have to create a getter method for each variable required for access from HTL. However,
-          by leveraging Lombok, we can streamline this process with the <code className="code-inline">@Getter</code> annotation,
-          which automatically generates the getter method.
+        <div className="pt-6 pb-1">
+          By leveraging Lombok, we can enhance the Article Sling Model as follows. <code className="code-inline">@Getter</code> annotation
+          instructs Lombok to automatically generate getter methods for the fields within the class.
         </div>
+        <Highlight code={sling_model_lombok} language="java" path="Article.java"/>
       </article>
     </div>
   );
