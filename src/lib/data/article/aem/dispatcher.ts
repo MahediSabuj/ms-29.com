@@ -23,7 +23,7 @@ export const CACHE_AEM_GATED_PAGES: IArticleItem = {
   publishDate: "March 20, 2024",
   modifiedDate: "March 20, 2024",
   topics: [ TOPICS.AEM_DISPATCHER ],
-  active: false
+  active: true
 }
 
 export const CACHE_AEM_DYNAMIC_CONTENT: IArticleItem = {
