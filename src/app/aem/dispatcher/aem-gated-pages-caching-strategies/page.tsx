@@ -3,7 +3,7 @@ import Article from "@/components/article/article";
 import { CACHE_AEM_GATED_PAGES as ARTICLE } from "@/lib/data/article/aem/dispatcher";
 import Highlight from "@/components/highlight/highlight";
 
-import gatedPageFlow from './assets/cache-aem-gated-pages.svg';
+import gatedPageFlow from './assets/aem-gated-pages-caching-workflow.svg';
 
 const allow_authorized =
 `/cache {
@@ -147,7 +147,7 @@ export default function CacheGatedPages() {
         </div>
         <div className="my-3">
           <Image src={gatedPageFlow}
-              alt="AEM Gated Page Flow">
+              alt="AEM Gated Page Caching Workflow">
           </Image>
         </div>
         <div>  

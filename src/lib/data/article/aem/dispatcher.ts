@@ -14,12 +14,12 @@ export const BASIC_HTTP_AUTHENTICATION: IArticleItem = {
 }
 
 export const CACHE_AEM_GATED_PAGES: IArticleItem = {
-  title: "Cache AEM Gated Pages",
+  title: "AEM Gated Pages Caching Strategies",
   description: `In General, requests containing authentication information are not cached because the cached document is 
     served to the client without authentication. However, if the requirements permit the caching of authenticated documents, 
     this can be activated by setting the /allowAuthorized property to "1". Additionally, need to implement the AuthChecker module, 
     which verifies users access permissions for a page before delivering the cached content.`,
-  url: "/aem/dispatcher/cache-aem-gated-pages",
+  url: "/aem/dispatcher/aem-gated-pages-caching-strategies",
   publishDate: "March 21, 2024",
   modifiedDate: "March 21, 2024",
   topics: [ TOPICS.AEM_DISPATCHER ],
