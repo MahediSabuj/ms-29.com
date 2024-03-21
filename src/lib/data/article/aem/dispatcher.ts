@@ -20,8 +20,8 @@ export const CACHE_AEM_GATED_PAGES: IArticleItem = {
     this can be activated by setting the /allowAuthorized property to "1". Additionally, need to implement the AuthChecker module, 
     which verifies users access permissions for a page before delivering the cached content.`,
   url: "/aem/dispatcher/cache-aem-gated-pages",
-  publishDate: "March 20, 2024",
-  modifiedDate: "March 20, 2024",
+  publishDate: "March 21, 2024",
+  modifiedDate: "March 21, 2024",
   topics: [ TOPICS.AEM_DISPATCHER ],
   active: true
 }

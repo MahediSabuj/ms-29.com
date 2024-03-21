@@ -7,6 +7,14 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   plugins: [],
+  theme: {
+    listStyleType: {
+      none: 'none',
+      disc: 'disc',
+      decimal: 'decimal',
+      alpha: 'lower-alpha'
+    }
+  }
 };
 
 export default config;

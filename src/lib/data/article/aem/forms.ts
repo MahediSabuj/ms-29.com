@@ -13,7 +13,7 @@ export const FORM_SUBMISSION_AUTHOR_INSTANCE: IArticleItem = {
   publishDate: "March 18, 2024",
   modifiedDate: "March 18, 2024",
   topics: [ TOPICS.AEM_FORMS ],
-  active: true
+  active: false
 }
 
 export const GOOGLE_RECAPTCHA_AEM_FORMS: IArticleItem = {
