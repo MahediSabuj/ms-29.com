@@ -1,9 +1,19 @@
+import { Metadata } from "next";
 import Image from "next/image";
+
 import Article from "@/components/article/article";
 import { CACHE_AEM_GATED_PAGES as ARTICLE } from "@/lib/data/article/aem/dispatcher";
 import Highlight from "@/components/highlight/highlight";
 
 import gatedPageFlow from './assets/aem-gated-pages-caching-workflow.svg';
+
+export const metadata: Metadata = {
+  title: ARTICLE.title,
+  description: ARTICLE.description,
+  alternates: {
+    canonical: ARTICLE.url
+  }
+};
 
 const allow_authorized =
 `/cache {

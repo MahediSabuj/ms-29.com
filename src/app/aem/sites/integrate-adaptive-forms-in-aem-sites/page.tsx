@@ -1,7 +1,17 @@
+import { Metadata } from "next";
 import Link from "next/link";
+
 import Article from "@/components/article/article";
 import Highlight from "@/components/highlight/highlight";
 import { INTEGRATE_ADAPTIVE_FORMS_IN_AEM_SITES as ARTICLE } from "@/lib/data/article/aem/sites";
+
+export const metadata: Metadata = {
+  title: ARTICLE.title,
+  description: ARTICLE.description,
+  alternates: {
+    canonical: ARTICLE.url
+  }
+};
 
 const aem_project_archetype =
 `mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate \\

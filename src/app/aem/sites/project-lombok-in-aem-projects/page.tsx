@@ -1,6 +1,16 @@
+import { Metadata } from "next";
+
 import Article from "@/components/article/article";
 import { PROJECT_LOMBOK_IN_AEM_PROJECTS as ARTICLE} from "@/lib/data/article/aem/sites";
 import Highlight from "@/components/highlight/highlight";
+
+export const metadata: Metadata = {
+  title: ARTICLE.title,
+  description: ARTICLE.description,
+  alternates: {
+    canonical: ARTICLE.url
+  }
+};
 
 const pom_xml =
 `<dependency>

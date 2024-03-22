@@ -9,7 +9,8 @@ export default function ArticleList({ articleItems, pageType } : IArticleList) {
   const showDescription = pageType != PAGE_TYPE.RECORD_PAGE;
 
   articleItems.sort((a,b) =>
-      (a.modifiedDate < b.modifiedDate) ? 1 : ((b.modifiedDate < a.modifiedDate) ? -1 : 0));
+      (new Date(a.modifiedDate) < new Date(b.modifiedDate)) ? 1 :
+      ((new Date(b.modifiedDate) < new Date(a.modifiedDate)) ? -1 : 0));
 
   return (
     <div className={styles.articleList}>

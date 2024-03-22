@@ -1,4 +1,4 @@
-import {Metadata} from "next";
+import { Metadata } from "next";
 
 import Highlight from "@/components/highlight/highlight";
 import FAQ from "@/components/faq/faq";
