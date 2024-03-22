@@ -9,10 +9,10 @@ export default function Highlight({ code, language, path, image }: Highlight) {
 
   return (
     <section className="pt-1">
-      <div className="text-white p-2 bg-aem">{path}</div>
+      <div className="text-white px-2 py-1 bg-aem">{path}</div>
       <div className="border-neutral-300 border-2 border-solid border-t-0">
-        <div className="p-4 bg-neutral-100 overflow-x-auto">
-          <code className="language-xml whitespace-pre text-[14px]"
+        <div className="p-2 bg-neutral-100 overflow-x-auto">
+          <code className="whitespace-pre text-[14px]"
             dangerouslySetInnerHTML={{ __html: highlighted_code }}/>
         </div>
         {image &&

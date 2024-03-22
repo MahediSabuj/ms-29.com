@@ -5,7 +5,7 @@ import Article from "@/components/article/article";
 import Highlight from "@/components/highlight/highlight";
 import { AEM_COMPONENT_DIALOG_CHEATSHEET as ARTICLE } from "@/lib/data/article/aem/sites";
 
-import PathFieldImage from "./aem-component-dialog__pathfield.png";
+import PathFieldImage from "./assets/aem-component-dialog__pathfield.png";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,

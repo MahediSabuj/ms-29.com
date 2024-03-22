@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import hljs from 'highlight.js/lib/core';
 import apache from 'highlight.js/lib/languages/apache';
+import shell from 'highlight.js/lib/languages/shell';
 import java from 'highlight.js/lib/languages/java';
 import makefile from 'highlight.js/lib/languages/makefile';
+import nginx from 'highlight.js/lib/languages/nginx';
 import xml from 'highlight.js/lib/languages/xml';
 import { GoogleTagManager } from '@next/third-parties/google';
 
@@ -14,6 +16,13 @@ import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import { HeaderConfig } from "@/types/header";
 import Sidebar from "./sidebar";
+
+hljs.registerLanguage('apache', apache);
+hljs.registerLanguage('java', java);
+hljs.registerLanguage('makefile', makefile);
+hljs.registerLanguage('nginx', nginx);
+hljs.registerLanguage('shell', shell);
+hljs.registerLanguage('xml', xml);
 
 const adobeCleanFont = localFont({
   src: "./AdobeClean-Regular.otf" 
@@ -84,11 +93,6 @@ const headerConfig: HeaderConfig = {
       </svg>`
   }]
 }
-
-hljs.registerLanguage('apache', apache);
-hljs.registerLanguage('java', java);
-hljs.registerLanguage('makefile', makefile);
-hljs.registerLanguage('xml', xml);
 
 export default function RootLayout({
   children,
