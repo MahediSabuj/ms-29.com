@@ -5,7 +5,7 @@ import Article from "@/components/article/article";
 import { CACHE_AEM_GATED_PAGES as ARTICLE } from "@/lib/data/article/aem/dispatcher";
 import Highlight from "@/components/highlight/highlight";
 
-import gatedPageFlow from './assets/aem-gated-pages-caching-workflow.svg';
+import aem_gated_pages_caching_workflow from './assets/aem-gated-pages-caching-workflow.svg';
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -156,8 +156,8 @@ export default function CacheGatedPages() {
           The following diagrams illustrate the sequence of events that take place when a web browser requests a page utilizing permission-sensitive caching.
         </div>
         <div className="my-3">
-          <Image src={gatedPageFlow}
-              alt="AEM Gated Page Caching Workflow">
+          <Image src={aem_gated_pages_caching_workflow}
+            alt="AEM Gated Page Caching Workflow">
           </Image>
         </div>
         <div>  
