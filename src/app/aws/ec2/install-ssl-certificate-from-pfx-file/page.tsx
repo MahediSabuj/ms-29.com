@@ -7,6 +7,12 @@ import { INSTALL_SSL_CERTIFICATE_FROM_PFX_FILE as ARTICLE } from "@/lib/data/art
 
 import import_ssl_certificate from './assets/aws-certificate-manager_import-certificate.png';
 import certificates_list from './assets/aws-certificate-manager_certificates-list.png';
+import default_certificate from './assets/aws-application-load-balancer_default-certificate.png';
+import https_listener_certificate from './assets/aws-elb-https-listener-certificates.png';
+import sni_add_certificate from './assets/aws-elb-sni-add-certificate.png';
+import sni_available_certificates from './assets/aws-elb-sni-available-certificates.png';
+import sni_pending_certificates from './assets/aws-elb-sni-pending-certificates.png';
+import sni_certificates from './assets/aws-elb-sni-certificates.png';
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -90,6 +96,51 @@ export default function InstallCertificate() {
         <Image src={certificates_list} className="border"
           alt="AWS Certificate Manager Certificates List">
         </Image>
+        <div className="pt-4 pb-2">
+          When creating a new Application Load Balancer, you can set up the Default Certificate by selecting the certificate
+          imported in the previous step under the "Default SSL/TLS server certificate" section.
+        </div>
+        <Image src={default_certificate} className="border"
+          alt="AWS Elastic Load Balancer Default Certificate Setup">
+        </Image>
+        <div className="py-2">
+          After confirming other details, proceed to create the new load balancer. Once the ELB is created, you can verify
+          its configuration by accessing HTTPS:443 from the Listeners and Rules tab. Then, navigate to the &quot;Certificates&quot;
+          tab on the details page to confirm the setup.
+        </div>
+        <Image src={https_listener_certificate} className="border"
+          alt="AWS ELB HTTPS Listener Certificate">
+        </Image>
+        <div className="pt-2">
+          You can utilize the &quot;Change Default&quot; feature to change the default certificate if the current one expires or for any existing HTTPS listener.
+        </div>
+        <div className="pt-4 py-2">
+          If you&apos;re maintaining the same load balancer to support multiple domains on the same port, you can assign different certificate for each domain using the &quot;Add SSL Certificates for SNI&quot; feature.
+        </div>
+        <Image src={sni_add_certificate} className="border"
+          alt="Add SSL Certificate for SNI">
+        </Image>
+        <div className="py-2">
+          Select the certificate you want to add from the list of available certificates and choose &quot;Include as Pending below&quot;.
+        </div>
+        <Image src={sni_available_certificates} className="border"
+          alt="Available Certificate for SNI">
+        </Image>
+        <div className="py-2">
+          After confirming the selection, you need to proceed by clicking on &quot;Add Pending Certificates&quot;.
+        </div>
+        <Image src={sni_pending_certificates} className="border"
+          alt="Add Pending Certificate for SNI">
+        </Image>
+        <div className="py-2">
+          The certificate will now be available in the list of &quot;Listener Certificates for SNI&quot;.
+        </div>
+        <Image src={sni_certificates} className="border"
+          alt="Listener Certificates for SNI">
+        </Image>
+        <div className="pt-4">
+          If you&apos;ve followed along, you can now verify the SSL certificate and its expiry date from your preferred web browser by visiting your website.
+        </div>
       </article>
     </div>
   );
