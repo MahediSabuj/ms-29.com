@@ -7,8 +7,8 @@ export const INSTALL_SSL_CERTIFICATE_FROM_PFX_FILE: IArticleItem = {
     users browser and the site to protect sensitive information. Let's explore the process of installing SSL certificate from
     PFX file, providing step-by-step instructions for a seamless setup.`,
   url: "/aws/ec2/install-ssl-certificate-from-pfx-file",
-  publishDate: "March 23, 2024",
-  modifiedDate: "March 23, 2024",
+  publishDate: "March 24, 2024",
+  modifiedDate: "March 24, 2024",
   topics: [ TOPICS.AWS_EC2 ],
   active: true
 }

@@ -5,9 +5,10 @@ export const CODE_COVERAGE_OSGI_CONFIGURATION: IArticleItem = {
   title: "Code Coverage for OSGI Configuration",
   description: ``,
   url: "/aem/code-coverage/osgi-configuration",
-  publishDate: "February 20, 2024",
-  modifiedDate: "February 20, 2024",
-  topics: [ TOPICS.AEM_CODE_COVERAGE ]
+  publishDate: "April 02, 2024",
+  modifiedDate: "April 02, 2024",
+  topics: [ TOPICS.AEM_CODE_COVERAGE ],
+  active: false
 }
 
 export const CODE_COVERAGE: IArticleItem[] = [

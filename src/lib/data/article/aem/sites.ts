@@ -69,9 +69,10 @@ export const CUSTOM_OSGI_CONFIGURATION: IArticleItem = {
   title: "Custom OSGI Configuration in AEM",
   description: ``,
   url: "/aem/sites/custom-osgi-configuration-in-aem",
-  publishDate: "February 20, 2024",
-  modifiedDate: "February 20, 2024",
-  topics: [ TOPICS.AEM_SITES ]
+  publishDate: "March 30, 2024",
+  modifiedDate: "March 30, 2024",
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
 }
 
 export const INTEGRATE_ADAPTIVE_FORMS_IN_AEM_SITES: IArticleItem = {
