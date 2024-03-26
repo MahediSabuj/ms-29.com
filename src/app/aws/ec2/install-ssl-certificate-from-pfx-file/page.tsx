@@ -98,7 +98,7 @@ export default function InstallCertificate() {
         </Image>
         <div className="pt-4 pb-2">
           When creating a new Application Load Balancer, you can set up the Default Certificate by selecting the certificate
-          imported in the previous step under the "Default SSL/TLS server certificate" section.
+          imported in the previous step under the &quot;Default SSL/TLS server certificate&quot; section.
         </div>
         <Image src={default_certificate} className="border"
           alt="AWS Elastic Load Balancer Default Certificate Setup">
