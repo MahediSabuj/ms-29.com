@@ -25,6 +25,14 @@ const TOPICS: Topics = {
     title: "Code Coverage",
     url: "/aem/code-coverage"
   },
+  AEM_ASSETS: {
+    title: "AEM Assets",
+    url: "/aem/assets"
+  },
+  AEM_WORKFLOW: {
+    title: "AEM Workflow",
+    url: "/aem/workflow"
+  },
   AWS_EC2: {
     title: "AWS EC2",
     url: "/aws/ec2"

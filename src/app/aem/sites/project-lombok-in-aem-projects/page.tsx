@@ -84,7 +84,6 @@ export default function ProjectLombok() {
       <article itemScope itemType="https://schema.org/Article">
         <Article
           title={ARTICLE.title}
-          url={ARTICLE.url}
           publishDate={ARTICLE.publishDate}
           modifiedDate={ARTICLE.modifiedDate}/>
         <div className="pt-6">

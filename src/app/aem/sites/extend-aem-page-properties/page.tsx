@@ -1,7 +1,7 @@
 import Article from "@/components/article/article";
-import { BEST_PRACTICE_ANALYSIS_FOR_AEMAACS_MIGRATION as ARTICLE } from "@/lib/data/article/aem/sites";
+import { EXTEND_AEM_PAGE_PROPERTIES as ARTICLE } from "@/lib/data/article/aem/sites";
 
-export default function BestPracticeAnalysis() {
+export default function ExtendPageProperties() {
   return (
     <div>
       <article itemScope itemType="https://schema.org/Article">

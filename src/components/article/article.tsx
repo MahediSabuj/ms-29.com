@@ -1,17 +1,19 @@
 import Link from "next/link";
 import { IArticleItem } from "@/types/article";
 import DateFormatter from "@/lib/util/date-formatter";
+import LinkText from "../link-text/link-text";
 
 export default function Article({
   title, topics, url, publishDate, modifiedDate, description } : IArticleItem
 ) {
   const dateFormatter = new (DateFormatter as any)();
+  const Heading: keyof JSX.IntrinsicElements = description ? 'h2' : 'h1'; /* Description available only on Listing Page */
 
   return (
     <div className="mb-0">
-      <h1 className="text-2xl text-[#3273dc]" itemProp="name">
-        <Link href={url}>{title}</Link>
-      </h1>
+      <Heading className="text-2xl" itemProp="name">
+        <LinkText url={url || ""} text={title}/>
+      </Heading>
       <div>
         <div className="md:inline">
           <span className="text-[#636B74] mr-2">Published</span>

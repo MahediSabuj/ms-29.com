@@ -9,7 +9,7 @@ export interface IArticleItem {
   title: string;
   description?: string;
   topics?: ITopic[];
-  url: string;
+  url?: string;
   publishDate: string;
   modifiedDate: string;
   active?: boolean;

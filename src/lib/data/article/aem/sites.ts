@@ -110,6 +110,96 @@ export const DEFAULT_VALUES_IN_AEM_COMPONENT_DIALOG: IArticleItem = {
   active: true
 }
 
+export const ADAPTIVE_IMAGE_SERVLET_FOR_CUSTOM_COMPONENTS: IArticleItem = {
+  title: "Adaptive Image Servlet for Custom Components",
+  url: "/aem/sites/adaptive-image-servlet-for-custom-components",
+  publishDate: "May 04, 2024",
+  modifiedDate: "May 10, 2024",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
+}
+
+export const BEST_PRACTICE_ANALYSIS_FOR_AEMAACS_MIGRATION: IArticleItem = {
+  title: "Best Practice Analysis for AEMaaCS Migration",
+  url: "/aem/sites/best-practice-analysis-for-aemaacs-migration",
+  publishDate: "May 14, 2024",
+  modifiedDate: "May 14, 2024",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
+}
+
+export const CONTEXT_AWARE_CONFIGURATION : IArticleItem = {
+  title: "Context Aware Configuration",
+  url: "/aem/sites/context-aware-configuration",
+  publishDate: "May 18, 2024",
+  modifiedDate: "May 18, 2024",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
+}
+
+export const EXPAND_CORE_SEARCH_COMPONENT_SCOPE : IArticleItem = {
+  title: "Expand AEM Core Search Component Scope",
+  url: "/aem/sites/expand-aem-core-search-component-scope",
+  publishDate: "May 02, 2024",
+  modifiedDate: "May 02, 2024",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
+}
+
+export const HTL_SPECIFICATION_CHEATSHEET : IArticleItem = {
+  title: "HTL Specification CheatSheet",
+  url: "/aem/sites/htl-specification-cheatsheet",
+  publishDate: "April 28, 2024",
+  modifiedDate: "April 28, 2024",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
+}
+
+export const SLING_MODEL_DELEGATION_PATTERN : IArticleItem = {
+  title: "Sling Model Delegation Pattern",
+  url: "/aem/sites/sling-model-delegation-pattern",
+  publishDate: "April 24, 2024",
+  modifiedDate: "April 24, 2024",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
+}
+
+export const SONARQUBE_SETUP_FOR_AEM_DEVELOPMENT : IArticleItem = {
+  title: "SonarQube Setup for AEM Development",
+  url: "/aem/sites/sonarqube-setup-for-aem-development",
+  publishDate: "April 24, 2024",
+  modifiedDate: "April 24, 2024",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
+}
+
+export const WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS : IArticleItem = {
+  title: "Web Optimized Image Delivery for Custom Components",
+  url: "/aem/sites/web-optimized-image-delivery-for-custom-component",
+  publishDate: "April 24, 2024",
+  modifiedDate: "April 24, 2024",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
+}
+
+export const EXTEND_AEM_PAGE_PROPERTIES : IArticleItem = {
+  title: "Extend AEM Page Properties",
+  url: "/aem/sites/extend-aem-page-properties",
+  publishDate: "April 24, 2024",
+  modifiedDate: "April 24, 2024",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
+}
+
 export const AEM_SITES : IArticleItem[] = [
   PROJECT_LOMBOK_IN_AEM_PROJECTS,
   MULTI_SITE_MANAGER,
@@ -120,5 +210,14 @@ export const AEM_SITES : IArticleItem[] = [
   CUSTOM_OSGI_CONFIGURATION,
   INTEGRATE_ADAPTIVE_FORMS_IN_AEM_SITES,
   AEM_COMPONENT_DIALOG_CHEATSHEET,
-  DEFAULT_VALUES_IN_AEM_COMPONENT_DIALOG
+  DEFAULT_VALUES_IN_AEM_COMPONENT_DIALOG,
+  ADAPTIVE_IMAGE_SERVLET_FOR_CUSTOM_COMPONENTS,
+  BEST_PRACTICE_ANALYSIS_FOR_AEMAACS_MIGRATION,
+  CONTEXT_AWARE_CONFIGURATION,
+  EXPAND_CORE_SEARCH_COMPONENT_SCOPE,
+  HTL_SPECIFICATION_CHEATSHEET,
+  SLING_MODEL_DELEGATION_PATTERN,
+  SONARQUBE_SETUP_FOR_AEM_DEVELOPMENT,
+  WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS,
+  EXTEND_AEM_PAGE_PROPERTIES
 ].filter(m => m.active);

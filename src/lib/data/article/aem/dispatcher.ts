@@ -27,9 +27,9 @@ export const CACHE_AEM_GATED_PAGES: IArticleItem = {
 }
 
 export const CACHE_AEM_DYNAMIC_CONTENT: IArticleItem = {
-  title: "Cache AEM Dynamic Content",
+  title: "Cache AEM Pages with Dynamic Content",
   description: ``,
-  url: "/aem/dispatcher/cache-dynamic-content",
+  url: "/aem/dispatcher/cache-aem-pages-with-dynamic-content",
   publishDate: "February 20, 2024",
   modifiedDate: "February 20, 2024",
   topics: [ TOPICS.AEM_DISPATCHER ]

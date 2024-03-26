@@ -16,7 +16,6 @@ export default function OsgiConfiguration() {
       <article itemScope itemType="https://schema.org/Article">
         <Article
           title={ARTICLE.title}
-          url={ARTICLE.url}
           publishDate={ARTICLE.publishDate}
           modifiedDate={ARTICLE.modifiedDate}/>
       </article>

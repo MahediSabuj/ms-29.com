@@ -14,6 +14,17 @@ export const CONTENT_FRAGMENT_PROGRAMMATICALLY: IArticleItem = {
   active: true
 }
 
+export const CROSS_CHANNEL_CONTENT_DELIVERY: IArticleItem = {
+  title: "Cross Channel Content Delivery using Content Fragment",
+  description: ``,
+  url: "/aem/content-fragment/cross-channel-content-delivery-using-content-fragments",
+  publishDate: "April 16, 2024",
+  modifiedDate: "April 16, 2024",
+  topics: [ TOPICS.CONTENT_FRAGMENT ],
+  active: false
+}
+
 export const CONTENT_FRAGMENT: IArticleItem[] = [
-  CONTENT_FRAGMENT_PROGRAMMATICALLY
+  CONTENT_FRAGMENT_PROGRAMMATICALLY,
+  CROSS_CHANNEL_CONTENT_DELIVERY
 ].filter(m => m.active);

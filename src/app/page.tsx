@@ -2,22 +2,26 @@ import ArticleList from "@/components/article-list/article-list";
 import { IArticleList } from "@/types/article";
 import { PAGE_TYPE } from "@/types/enum/page-type";
 import { AEM_SITES } from "@/lib/data/article/aem/sites";
+import { AEM_ASSETS } from "@/lib/data/article/aem/assets";
 import { AEM_FORMS } from "@/lib/data/article/aem/forms";
 import { CONTENT_FRAGMENT } from "@/lib/data/article/aem/content-fragment";
 import { AEM_SPA } from "@/lib/data/article/aem/spa";
 import { CODE_COVERAGE } from "@/lib/data/article/aem/code-coverage";
 import { AEM_DISPATCHER } from "@/lib/data/article/aem/dispatcher";
+import { AEM_WORKFLOW } from "@/lib/data/article/aem/workflow";
 import { AWS_EC2 } from "@/lib/data/article/aws/ec2";
 import { SF_LWC } from "@/lib/data/article/salesforce/lwc";
 
 const articles : IArticleList = {
   articleItems: [
     ...AEM_SITES,
+    ...AEM_ASSETS,
     ...AEM_FORMS,
     ...CONTENT_FRAGMENT,
     ...AEM_SPA,
     ...CODE_COVERAGE,
     ...AEM_DISPATCHER,
+    ...AEM_WORKFLOW,
     ...AWS_EC2,
     ...SF_LWC
   ],
