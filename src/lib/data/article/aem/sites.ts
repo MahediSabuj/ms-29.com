@@ -200,6 +200,16 @@ export const EXTEND_AEM_PAGE_PROPERTIES : IArticleItem = {
   active: false
 }
 
+export const APACHE_SLING_SITEMAP_GENERATOR: IArticleItem = {
+  title: "Apache Sling Site Generator for AEM",
+  url: "/aem/sites/apache-sling-sitemap-generator",
+    publishDate: "April 24, 2024",
+    modifiedDate: "April 24, 2024",
+    description: ``,
+    topics: [ TOPICS.AEM_SITES ],
+    active: false
+}
+
 export const AEM_SITES : IArticleItem[] = [
   PROJECT_LOMBOK_IN_AEM_PROJECTS,
   MULTI_SITE_MANAGER,
@@ -219,5 +229,6 @@ export const AEM_SITES : IArticleItem[] = [
   SLING_MODEL_DELEGATION_PATTERN,
   SONARQUBE_SETUP_FOR_AEM_DEVELOPMENT,
   WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS,
-  EXTEND_AEM_PAGE_PROPERTIES
+  EXTEND_AEM_PAGE_PROPERTIES,
+  APACHE_SLING_SITEMAP_GENERATOR
 ].filter(m => m.active);
