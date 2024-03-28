@@ -5,14 +5,14 @@ import Article from "@/components/article/article";
 import Highlight from "@/components/highlight/highlight";
 import { INSTALL_SSL_CERTIFICATE_FROM_PFX_FILE as ARTICLE } from "@/lib/data/article/aws/ec2";
 
-import import_ssl_certificate from './assets/aws-certificate-manager_import-certificate.png';
-import certificates_list from './assets/aws-certificate-manager_certificates-list.png';
-import default_certificate from './assets/aws-application-load-balancer_default-certificate.png';
-import https_listener_certificate from './assets/aws-elb-https-listener-certificates.png';
-import sni_add_certificate from './assets/aws-elb-sni-add-certificate.png';
-import sni_available_certificates from './assets/aws-elb-sni-available-certificates.png';
-import sni_pending_certificates from './assets/aws-elb-sni-pending-certificates.png';
-import sni_certificates from './assets/aws-elb-sni-certificates.png';
+import import_ssl_certificate from './assets/aws-certificate-manager_import-certificate.webp';
+import certificates_list from './assets/aws-certificate-manager_certificates-list.webp';
+import default_certificate from './assets/aws-application-load-balancer_default-certificate.webp';
+import https_listener_certificate from './assets/aws-elb-https-listener-certificates.webp';
+import sni_add_certificate from './assets/aws-elb-sni-add-certificate.webp';
+import sni_available_certificates from './assets/aws-elb-sni-available-certificates.webp';
+import sni_pending_certificates from './assets/aws-elb-sni-pending-certificates.webp';
+import sni_certificates from './assets/aws-elb-sni-certificates.webp';
 
 export const metadata: Metadata = {
   title: ARTICLE.title,

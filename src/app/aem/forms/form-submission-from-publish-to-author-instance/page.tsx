@@ -3,7 +3,7 @@ import Image from "next/image";
 import Article from "@/components/article/article";
 import { FORM_SUBMISSION_AUTHOR_INSTANCE as ARTICLE } from "@/lib/data/article/aem/forms";
 
-import aem_ds_settings_service from './assets/aem-ds-settings-service.png';
+import aem_ds_settings_service from './assets/aem-ds-settings-service.webp';
 
 export default function SubmitFormIntoAuthor() {
   return (
