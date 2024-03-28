@@ -1,9 +1,18 @@
 import Image from "next/image";
+import { Metadata } from "next";
 
 import Article from "@/components/article/article";
 import { FORM_SUBMISSION_AUTHOR_INSTANCE as ARTICLE } from "@/lib/data/article/aem/forms";
 
 import aem_ds_settings_service from './assets/aem-ds-settings-service.webp';
+
+export const metadata: Metadata = {
+  title: ARTICLE.title,
+  description: ARTICLE.description,
+  alternates: {
+    canonical: ARTICLE.url
+  }
+};
 
 export default function SubmitFormIntoAuthor() {
   return (
