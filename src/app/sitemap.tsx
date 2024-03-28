@@ -49,7 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const sitemap: MetadataRoute.Sitemap = [
     {
       url: domain,
-      lastModified: "2024-03-14",
+      lastModified: "2024-03-28",
       changeFrequency: 'weekly',
       priority: 1,
     },
