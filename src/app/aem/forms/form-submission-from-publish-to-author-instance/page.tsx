@@ -1,5 +1,9 @@
+import Image from "next/image";
+
 import Article from "@/components/article/article";
 import { FORM_SUBMISSION_AUTHOR_INSTANCE as ARTICLE } from "@/lib/data/article/aem/forms";
+
+import aem_ds_settings_service from './assets/aem-ds-settings-service.png';
 
 export default function SubmitFormIntoAuthor() {
   return (
@@ -19,6 +23,28 @@ export default function SubmitFormIntoAuthor() {
             business-level users, the content will be published to the publish environment, making it publicly
             accessible on the internet.
           </section>
+          <section className="pb-3">
+            <strong>AEM Forms</strong> offers the capability to send requests from the publisher to the author. <strong>AEM
+            DS Settings Service</strong> OSGi Configuration must be updated before any adaptive form submission from the publish
+            server. Otherwise, the Form submission shall fail.
+          </section>
+          <section className="pb-2">
+            The following details need to be updated in their respective fields:
+            <ul className="list-disc ml-6 pt-1 pl-2.5">
+              <li>
+                <strong>Processing Server URL: </strong> URL of the AEM author instance (e.g., https://localhost:4502).
+              </li>
+              <li>
+                <strong>Processing Server User Name: </strong> Author instance Login User Name.
+              </li>
+              <li>
+                <strong>Processing Server Password: </strong> Author instance Login Password.
+              </li>
+            </ul>
+          </section>
+          <Image className="border" src={aem_ds_settings_service}
+            alt="AEM DS Settings Service">
+          </Image>
         </div>
     </div>
   );
