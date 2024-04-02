@@ -240,6 +240,16 @@ export const SETTING_UP_ERROR_PAGES_IN_AEM : IArticleItem = {
   active: false
 }
 
+export const START_AEM_AS_DEBUG_MODE : IArticleItem = {
+  title: "Start AEM as Debug Mode",
+  url: "/aem/sites/start-aem-as-debug-mode",
+  publishDate: "April 24, 2024",
+  modifiedDate: "April 24, 2024",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
+}
+
 export const AEM_SITES : IArticleItem[] = [
   PROJECT_LOMBOK_IN_AEM_PROJECTS,
   MULTI_SITE_MANAGER,
@@ -263,5 +273,6 @@ export const AEM_SITES : IArticleItem[] = [
   APACHE_SLING_SITEMAP_GENERATOR,
   SAML_AUTHENTICATION,
   SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION,
-  SETTING_UP_ERROR_PAGES_IN_AEM
+  SETTING_UP_ERROR_PAGES_IN_AEM,
+  START_AEM_AS_DEBUG_MODE
 ].filter(m => m.active);
