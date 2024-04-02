@@ -141,8 +141,8 @@ export const CONTEXT_AWARE_CONFIGURATION : IArticleItem = {
 }
 
 export const EXPAND_CORE_SEARCH_COMPONENT_SCOPE : IArticleItem = {
-  title: "Expand AEM Core Search Component Scope",
-  url: "/aem/sites/expand-aem-core-search-component-scope",
+  title: "Expanding Search Depth for AEM Core Quick Search Component",
+  url: "/aem/sites/expand-search-depth-for-aem-core-quick-search-component",
   publishDate: "May 02, 2024",
   modifiedDate: "May 02, 2024",
   description: ``,
