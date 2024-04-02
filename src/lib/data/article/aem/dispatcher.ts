@@ -35,8 +35,28 @@ export const CACHE_AEM_DYNAMIC_CONTENT: IArticleItem = {
   topics: [ TOPICS.AEM_DISPATCHER ]
 }
 
+export const DISPATCHER_CACHE_FLUSH_STRATEGIES: IArticleItem = {
+  title: "AEM Dispatcher Cache Flush Strategies",
+  description: ``,
+  url: "/aem/dispatcher/aem-dispatcher-cache-flush-strategies",
+  publishDate: "February 20, 2024",
+  modifiedDate: "February 20, 2024",
+  topics: [ TOPICS.AEM_DISPATCHER ]
+}
+
+export const AEM_LOG_INVESTIGATION : IArticleItem = {
+  title: "AEM Log Investigation",
+  description: ``,
+  url: "/aem/dispatcher/aem-log-investigation",
+  publishDate: "February 20, 2024",
+  modifiedDate: "February 20, 2024",
+  topics: [ TOPICS.AEM_DISPATCHER ]
+}
+
 export const AEM_DISPATCHER: IArticleItem[] = [
   BASIC_HTTP_AUTHENTICATION,
   CACHE_AEM_GATED_PAGES,
-  CACHE_AEM_DYNAMIC_CONTENT
+  CACHE_AEM_DYNAMIC_CONTENT,
+  DISPATCHER_CACHE_FLUSH_STRATEGIES,
+  AEM_LOG_INVESTIGATION
 ].filter(m => m.active);

@@ -203,11 +203,41 @@ export const EXTEND_AEM_PAGE_PROPERTIES : IArticleItem = {
 export const APACHE_SLING_SITEMAP_GENERATOR: IArticleItem = {
   title: "Apache Sling Site Generator for AEM",
   url: "/aem/sites/apache-sling-sitemap-generator",
-    publishDate: "April 24, 2024",
-    modifiedDate: "April 24, 2024",
-    description: ``,
-    topics: [ TOPICS.AEM_SITES ],
-    active: false
+  publishDate: "April 24, 2024",
+  modifiedDate: "April 24, 2024",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
+}
+
+export const SAML_AUTHENTICATION : IArticleItem = {
+  title: "SAML SSO Authentication between AEM and Salesforce",
+  url: "/aem/sites/saml-sso-authentication-aem-salesforce",
+  publishDate: "April 24, 2024",
+  modifiedDate: "April 24, 2024",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
+}
+
+export const SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION : IArticleItem = {
+  title: "Show/Hide AEM Dialog Fields on Dropdown Selection in AEM",
+  url: "/aem/sites/show-hide-aem-dialog-fields-on-dropdown-selection",
+  publishDate: "April 24, 2024",
+  modifiedDate: "April 24, 2024",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
+}
+
+export const SETTING_UP_ERROR_PAGES_IN_AEM : IArticleItem = {
+  title: "Setting Up Error Pages in AEM",
+  url: "/aem/sites/setup-error-page-in-aem",
+  publishDate: "April 24, 2024",
+  modifiedDate: "April 24, 2024",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
 }
 
 export const AEM_SITES : IArticleItem[] = [
@@ -230,5 +260,8 @@ export const AEM_SITES : IArticleItem[] = [
   SONARQUBE_SETUP_FOR_AEM_DEVELOPMENT,
   WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS,
   EXTEND_AEM_PAGE_PROPERTIES,
-  APACHE_SLING_SITEMAP_GENERATOR
+  APACHE_SLING_SITEMAP_GENERATOR,
+  SAML_AUTHENTICATION,
+  SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION,
+  SETTING_UP_ERROR_PAGES_IN_AEM
 ].filter(m => m.active);

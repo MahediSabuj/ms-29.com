@@ -13,6 +13,7 @@ import { AEM_DISPATCHER } from "@/lib/data/article/aem/dispatcher";
 import { AEM_WORKFLOW } from "@/lib/data/article/aem/workflow";
 import { AWS_EC2 } from "@/lib/data/article/aws/ec2";
 import { SF_LWC } from "@/lib/data/article/salesforce/lwc";
+import { SF_IAM } from "@/lib/data/article/salesforce/iam";
 
 const aem : IListGroup = {
   title: "Adobe Experience Manager",
@@ -56,6 +57,9 @@ const salesforce: IListGroup = {
   listItems: [{
     topic: TOPICS.SF_LWC,
     count: SF_LWC.length
+  }, {
+    topic: TOPICS.SF_IAM,
+    count: SF_IAM.length
   }]
 }
 

@@ -11,6 +11,7 @@ import { AEM_DISPATCHER } from "@/lib/data/article/aem/dispatcher";
 import { AEM_WORKFLOW } from "@/lib/data/article/aem/workflow";
 import { AWS_EC2 } from "@/lib/data/article/aws/ec2";
 import { SF_LWC } from "@/lib/data/article/salesforce/lwc";
+import { SF_IAM } from "@/lib/data/article/salesforce/iam";
 
 const articles : IArticleList = {
   articleItems: [
@@ -23,7 +24,8 @@ const articles : IArticleList = {
     ...AEM_DISPATCHER,
     ...AEM_WORKFLOW,
     ...AWS_EC2,
-    ...SF_LWC
+    ...SF_LWC,
+    ...SF_IAM
   ],
   pageType: PAGE_TYPE.HOME_PAGE
 }

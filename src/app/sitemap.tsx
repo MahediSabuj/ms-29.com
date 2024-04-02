@@ -10,6 +10,7 @@ import { AEM_DISPATCHER } from "@/lib/data/article/aem/dispatcher";
 import { AEM_WORKFLOW } from "@/lib/data/article/aem/workflow";
 import { AWS_EC2 } from "@/lib/data/article/aws/ec2";
 import { SF_LWC } from "@/lib/data/article/salesforce/lwc";
+import { SF_IAM } from "@/lib/data/article/salesforce/iam";
 import { IArticleItem } from "@/types/article";
 
 const domain: string = "https://ms-29.com";
@@ -73,6 +74,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   loadArticles("/aws/ec2", AWS_EC2);
 
   loadArticles("/salesforce/lwc", SF_LWC);
+  loadArticles("/salesforce/iam", SF_IAM);
 
   return sitemap;
 }
