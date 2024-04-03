@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import Article from "@/components/article/article";
 import Highlight from "@/components/highlight/highlight";
 import FAQ from "@/components/faq/faq";
+import { IBreadCrumb } from "@/types/breadcrumb";
+import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import { CONTENT_FRAGMENT_PROGRAMMATICALLY as ARTICLE } from "@/lib/data/article/aem/content-fragment";
 
 export const metadata: Metadata = {
@@ -37,28 +39,37 @@ while (elementIterator.hasNext()) {
   element.setValue(fragmentData);
 }`;
 
+const breadcrumbs : IBreadCrumb = {
+  items: [{
+    title: "Content Fragment",
+    url: "/aem/content-fragment"
+  }],
+  current: ARTICLE.title
+}
+
 export default function ContentFragmentProgrammatically() {
-   return (
-     <div>
+  return (
+    <div>
+      <BreadCrumb {...breadcrumbs}/>    
        <article itemScope itemType="https://schema.org/Article">
-         <Article
-           title={ARTICLE.title}
-           publishDate={ARTICLE.publishDate}
-           modifiedDate={ARTICLE.modifiedDate}/>
-         <div>
-           <section className="pt-6 pb-2">
-             Creating a content fragment programmatically requires setting up a <strong>system user</strong> with
-             Read permission for the content fragment model and Read, Modify, Create permissions for the asset folder where
-             the content fragment will be stored. Additionally, ensure the content fragment model and asset folder are
-             created for saving the content fragment.
-           </section>
-           <Highlight code={_content_fragment} language="java" path=""/>
-         </div>
-       </article>
-       <FAQ items={[{
-         question: "No exceptions but content fragment wasn't created at the specified path.",
-         answer: `Ensure to use <code>session.save()</code> to save the changes in the repository.`
-       }]}/>
-     </div>
-   )
+        <Article
+          title={ARTICLE.title}
+          publishDate={ARTICLE.publishDate}
+          modifiedDate={ARTICLE.modifiedDate}/>
+        <div>
+          <section className="pt-6 pb-2">
+            Creating a content fragment programmatically requires setting up a <strong>system user</strong> with
+            Read permission for the content fragment model and Read, Modify, Create permissions for the asset folder where
+            the content fragment will be stored. Additionally, ensure the content fragment model and asset folder are
+            created for saving the content fragment.
+          </section>
+          <Highlight code={_content_fragment} language="java" path=""/>
+        </div>
+      </article>
+      <FAQ items={[{
+        question: "No exceptions but content fragment wasn't created at the specified path.",
+        answer: `Ensure to use <code>session.save()</code> to save the changes in the repository.`
+      }]}/>
+    </div>
+  )
 }

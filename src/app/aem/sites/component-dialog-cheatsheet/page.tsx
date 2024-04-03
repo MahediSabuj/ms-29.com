@@ -3,6 +3,8 @@ import { Metadata } from "next";
 
 import Article from "@/components/article/article";
 import Highlight from "@/components/highlight/highlight";
+import { IBreadCrumb } from "@/types/breadcrumb";
+import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import { AEM_COMPONENT_DIALOG_CHEATSHEET as ARTICLE } from "@/lib/data/article/aem/sites";
 
 import PathFieldImage from "./assets/aem-component-dialog__pathfield.webp";
@@ -143,9 +145,18 @@ const pathfield =
   required="{Boolean}true"
   rootPath="/content/aem-demo"/>`;
 
+const breadcrumbs : IBreadCrumb = {
+  items: [{
+    title: "AEM Sites",
+    url: "/aem/sites"
+  }],
+  current: ARTICLE.title
+}
+
 export default function DialogCheatSheet() {
   return (
     <div>
+      <BreadCrumb {...breadcrumbs}/>
       <article itemScope itemType="https://schema.org/Article">
         <Article
           title={ARTICLE.title}

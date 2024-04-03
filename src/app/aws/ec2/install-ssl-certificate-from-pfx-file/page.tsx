@@ -3,6 +3,8 @@ import Image from "next/image";
 
 import Article from "@/components/article/article";
 import Highlight from "@/components/highlight/highlight";
+import { IBreadCrumb } from "@/types/breadcrumb";
+import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import { INSTALL_SSL_CERTIFICATE_FROM_PFX_FILE as ARTICLE } from "@/lib/data/article/aws/ec2";
 
 import import_ssl_certificate from './assets/aws-certificate-manager_import-certificate.webp';
@@ -38,9 +40,18 @@ const nginx_conf =
   ssl_prefer_server_ciphers off;
 }`;
 
+const breadcrumbs : IBreadCrumb = {
+  items: [{
+    title: "AWS EC2",
+    url: "/aws/ec2"
+  }],
+  current: ARTICLE.title
+}
+
 export default function InstallCertificate() {
   return (
     <div>
+      <BreadCrumb {...breadcrumbs}/>
       <article itemScope itemType="https://schema.org/Article">
         <Article
           title={ARTICLE.title}

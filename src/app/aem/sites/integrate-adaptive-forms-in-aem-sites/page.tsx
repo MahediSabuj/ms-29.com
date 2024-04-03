@@ -3,6 +3,8 @@ import Link from "next/link";
 
 import Article from "@/components/article/article";
 import Highlight from "@/components/highlight/highlight";
+import { IBreadCrumb } from "@/types/breadcrumb";
+import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import { INTEGRATE_ADAPTIVE_FORMS_IN_AEM_SITES as ARTICLE } from "@/lib/data/article/aem/sites";
 
 export const metadata: Metadata = {
@@ -152,9 +154,18 @@ const adaptive_form_text_cq_template =
   fieldType="plain-text"/>
 `;
 
+const breadcrumbs : IBreadCrumb = {
+  items: [{
+    title: "AEM Sites",
+    url: "/aem/sites"
+  }],
+  current: ARTICLE.title
+}
+
 export default function FormsInSite() {
   return (
     <div>
+      <BreadCrumb {...breadcrumbs}/>
       <article itemScope itemType="https://schema.org/Article">
         <Article
           title={ARTICLE.title}

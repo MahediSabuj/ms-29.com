@@ -2,6 +2,8 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 import Article from "@/components/article/article";
+import { IBreadCrumb } from "@/types/breadcrumb";
+import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import { FORM_SUBMISSION_AUTHOR_INSTANCE as ARTICLE } from "@/lib/data/article/aem/forms";
 
 import aem_ds_settings_service from './assets/aem-ds-settings-service.webp';
@@ -14,9 +16,18 @@ export const metadata: Metadata = {
   }
 };
 
+const breadcrumbs : IBreadCrumb = {
+  items: [{
+    title: "AEM Forms",
+    url: "/aem/forms"
+  }],
+  current: ARTICLE.title
+}
+
 export default function SubmitFormIntoAuthor() {
   return (
     <div>
+      <BreadCrumb {...breadcrumbs}/>
       <article itemScope itemType="https://schema.org/Article">
         <Article
           title={ARTICLE.title}

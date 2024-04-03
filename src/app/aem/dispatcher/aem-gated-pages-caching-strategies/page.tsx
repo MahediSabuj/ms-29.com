@@ -2,8 +2,10 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 import Article from "@/components/article/article";
-import { CACHE_AEM_GATED_PAGES as ARTICLE } from "@/lib/data/article/aem/dispatcher";
 import Highlight from "@/components/highlight/highlight";
+import { IBreadCrumb } from "@/types/breadcrumb";
+import BreadCrumb from "@/components/breadcrumb/breadcrumb";
+import { CACHE_AEM_GATED_PAGES as ARTICLE } from "@/lib/data/article/aem/dispatcher";
 
 import aem_gated_pages_caching_workflow from './assets/aem-gated-pages-caching-workflow.svg';
 
@@ -82,9 +84,18 @@ public class AuthServlet extends SlingSafeMethodsServlet {
   }
 }`;
 
+const breadcrumbs : IBreadCrumb = {
+  items: [{
+    title: "AEM Dispatcher",
+    url: "/aem/dispatcher"
+  }],
+  current: ARTICLE.title
+}
+
 export default function CacheGatedPages() {
   return (
     <div>
+      <BreadCrumb {...breadcrumbs}/>
       <article itemScope itemType="https://schema.org/Article">
         <Article
           title={ARTICLE.title}

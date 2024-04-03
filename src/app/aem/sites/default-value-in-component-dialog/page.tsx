@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import Highlight from "@/components/highlight/highlight";
 import FAQ from "@/components/faq/faq";
 import Article from "@/components/article/article";
+import { IBreadCrumb } from "@/types/breadcrumb";
+import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import { DEFAULT_VALUES_IN_AEM_COMPONENT_DIALOG as ARTICLE } from "@/lib/data/article/aem/sites";
 
 export const metadata: Metadata = {
@@ -29,9 +31,18 @@ const _cq_templatePath =
   jcr:primaryType="cq:Component"
   cq:templatePath="project/datasource/navigation"/>`;
 
+const breadcrumbs : IBreadCrumb = {
+  items: [{
+    title: "AEM Sites",
+    url: "/aem/sites"
+  }],
+  current: ARTICLE.title
+}
+
 export default function DefaultValueComponentDialog() {
   return (
     <div>
+      <BreadCrumb {...breadcrumbs}/>
       <article itemScope itemType="https://schema.org/Article">
         <Article
           title={ARTICLE.title}

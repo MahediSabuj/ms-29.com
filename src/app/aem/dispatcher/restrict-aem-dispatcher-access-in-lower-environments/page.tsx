@@ -1,7 +1,10 @@
 import Link from "next/link";
 import { Metadata } from "next";
+
 import Article from "@/components/article/article";
 import Highlight from "@/components/highlight/highlight";
+import { IBreadCrumb } from "@/types/breadcrumb";
+import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import { BASIC_HTTP_AUTHENTICATION as ARTICLE } from "@/lib/data/article/aem/dispatcher";
 
 export const metadata: Metadata = {
@@ -55,9 +58,18 @@ const basic_auth_group =
   Require group GroupName
 </Directory>`;
 
+const breadcrumbs : IBreadCrumb = {
+  items: [{
+    title: "AEM Dispatcher",
+    url: "/aem/dispatcher"
+  }],
+  current: ARTICLE.title
+}
+
 export default function BasicAuthentication() {
   return (
     <div>
+      <BreadCrumb {...breadcrumbs}/>
       <article itemScope itemType="https://schema.org/Article">
         <Article
           title={ARTICLE.title}

@@ -1,8 +1,10 @@
 import { Metadata } from "next";
 
 import Article from "@/components/article/article";
-import { PROJECT_LOMBOK_IN_AEM_PROJECTS as ARTICLE} from "@/lib/data/article/aem/sites";
+import { IBreadCrumb } from "@/types/breadcrumb";
+import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Highlight from "@/components/highlight/highlight";
+import { PROJECT_LOMBOK_IN_AEM_PROJECTS as ARTICLE} from "@/lib/data/article/aem/sites";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -78,9 +80,18 @@ const core_pom_xml =
   <artifactId>lombok</artifactId>
 </dependency>`;
 
+const breadcrumbs : IBreadCrumb = {
+  items: [{
+    title: "AEM Sites",
+    url: "/aem/sites"
+  }],
+  current: ARTICLE.title
+}
+
 export default function ProjectLombok() {
   return (
     <div>
+      <BreadCrumb {...breadcrumbs}/>
       <article itemScope itemType="https://schema.org/Article">
         <Article
           title={ARTICLE.title}

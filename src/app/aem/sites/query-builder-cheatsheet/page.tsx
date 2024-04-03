@@ -3,6 +3,8 @@ import Link from "next/link";
 
 import Article from "@/components/article/article";
 import Highlight from "@/components/highlight/highlight";
+import { IBreadCrumb } from "@/types/breadcrumb";
+import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import { QUERY_BUILDER_CHEATSHEET as ARTICLE } from "@/lib/data/article/aem/sites";
 
 export const metadata: Metadata = {
@@ -61,9 +63,18 @@ group.2_path = /content/aem-demo/it
 1_property = sling:resourceType
 1_property.value = aem-demo/components/container`;
 
+const breadcrumbs : IBreadCrumb = {
+  items: [{
+    title: "AEM Sites",
+    url: "/aem/sites"
+  }],
+  current: ARTICLE.title
+}
+
 export default function QueryBuilder() {
   return (
     <div>
+      <BreadCrumb {...breadcrumbs}/>
       <article itemScope itemType="https://schema.org/Article">
         <Article
           title={ARTICLE.title}
