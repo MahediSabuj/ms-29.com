@@ -54,6 +54,10 @@ export default function SubmitFormIntoAuthor() {
           <Image className="border" src={aem_ds_settings_service}
             alt="AEM DS Settings Service">
           </Image>
+          <section className="pt-1">
+            After updating the configuration, you can verify by submitting a form from the publish instance. If you configure
+            the submit action to &quot;Invoke an AEM workflow&quot;, the workflow will be triggered on the Author environment.
+          </section>
         </div>
     </div>
   );

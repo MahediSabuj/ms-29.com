@@ -11,7 +11,7 @@ export const FORM_SUBMISSION_AUTHOR_INSTANCE: IArticleItem = {
     accessible on the internet.`,
   url: "/aem/forms/form-submission-from-publish-to-author-instance",
   publishDate: "March 28, 2024",
-  modifiedDate: "March 28, 2024",
+  modifiedDate: "April 04, 2024",
   topics: [ TOPICS.AEM_FORMS ],
   active: true
 }
