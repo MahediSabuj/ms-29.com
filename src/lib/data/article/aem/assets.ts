@@ -15,8 +15,8 @@ export const UNUSED_ASSET_CLEANUP : IArticleItem = {
   title: "Unused AEM Assets Cleanup",
   description: ``,
   url: "/aem/assets/unused-aem-assets-cleanup",
-  publishDate: "April 02, 2024",
-  modifiedDate: "April 02, 2024",
+  publishDate: "April 15, 2024",
+  modifiedDate: "April 15, 2024",
   topics: [ TOPICS.AEM_ASSETS ],
   active: false
 }

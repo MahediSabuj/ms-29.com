@@ -30,18 +30,20 @@ export const CACHE_AEM_DYNAMIC_CONTENT: IArticleItem = {
   title: "Cache AEM Pages with Dynamic Content",
   description: ``,
   url: "/aem/dispatcher/cache-aem-pages-with-dynamic-content",
-  publishDate: "February 20, 2024",
-  modifiedDate: "February 20, 2024",
-  topics: [ TOPICS.AEM_DISPATCHER ]
+  publishDate: "April 28, 2024",
+  modifiedDate: "April 28, 2024",
+  topics: [ TOPICS.AEM_DISPATCHER ],
+  active: false
 }
 
 export const DISPATCHER_CACHE_FLUSH_STRATEGIES: IArticleItem = {
   title: "AEM Dispatcher Cache Flush Strategies",
   description: ``,
   url: "/aem/dispatcher/aem-dispatcher-cache-flush-strategies",
-  publishDate: "February 20, 2024",
-  modifiedDate: "February 20, 2024",
-  topics: [ TOPICS.AEM_DISPATCHER ]
+  publishDate: "May 02, 2024",
+  modifiedDate: "May 02, 2024",
+  topics: [ TOPICS.AEM_DISPATCHER ],
+  active: false
 }
 
 export const AEM_LOG_INVESTIGATION : IArticleItem = {

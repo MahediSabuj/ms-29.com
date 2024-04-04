@@ -38,9 +38,10 @@ export const ADAPTIVE_FORMS_USING_JSON_SCHEMA : IArticleItem = {
   title: "Adaptive Forms using JSON Schema",
   description: ``,
   url: "/aem/forms/adaptive-forms-using-json-schema",
-  publishDate: "April 20, 2024",
-  modifiedDate: "April 20, 2024",
-  topics: [ TOPICS.AEM_FORMS ]
+  publishDate: "May 06, 2024",
+  modifiedDate: "May 06, 2024",
+  topics: [ TOPICS.AEM_FORMS ],
+  active: false
 }
 
 export const AEM_FORMS: IArticleItem[] = [

@@ -15,8 +15,8 @@ export const CUSTOM_RENDITIONS_FOR_IMAGES: IArticleItem = {
   title: "Custom Renditions for Images in AEM",
   description: ``,
   url: "/aem/workflow/custom-renditions-for-images-in-aem",
-  publishDate: "June 05, 2024",
-  modifiedDate: "June 05, 2024",
+  publishDate: "April 21, 2024",
+  modifiedDate: "April 21, 2024",
   topics: [ TOPICS.AEM_WORKFLOW ],
   active: false
 }

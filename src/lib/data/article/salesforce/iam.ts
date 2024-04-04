@@ -5,9 +5,10 @@ export const SALESFORCE_HEADLESS_AUTHENTICATION: IArticleItem = {
     title: "Setting Up Headless Authentication with Salesforce",
     description: ``,
     url: "/salesforce/iam/salesforce-headless-authentication",
-    publishDate: "February 20, 2024",
-    modifiedDate: "February 20, 2024",
-    topics: [ TOPICS.SF_IAM ]
+    publishDate: "April 18, 2024",
+    modifiedDate: "April 18, 2024",
+    topics: [ TOPICS.SF_IAM ],
+    active: false
 }
 
 export const SF_IAM: IArticleItem[] = [

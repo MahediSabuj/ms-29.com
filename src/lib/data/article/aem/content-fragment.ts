@@ -24,7 +24,20 @@ export const CROSS_CHANNEL_CONTENT_DELIVERY: IArticleItem = {
   active: false
 }
 
+export const CONTENT_FRAGMENTS_VS_EXPERIENCE_FRAGMENTS : IArticleItem = {
+  title: "Content Fragments vs Experience Fragments",
+  description: `Adobe Experience Manager (AEM) provides powerful tools for managing and delivering content efficiently. Two essential 
+    components in AEM are Content Fragments (CF) and Experience Fragments (XF). While both are used to create reusable content, 
+    each serves a distinct purpose and offers unique capabilities.`,
+  url: "/aem/content-fragment/content-fragments-vs-experience-fragments",
+  publishDate: "April 06, 2024",
+  modifiedDate: "April 06, 2024",
+  topics: [ TOPICS.CONTENT_FRAGMENT ],
+  active: true
+}
+
 export const CONTENT_FRAGMENT: IArticleItem[] = [
   CONTENT_FRAGMENT_PROGRAMMATICALLY,
-  CROSS_CHANNEL_CONTENT_DELIVERY
+  CROSS_CHANNEL_CONTENT_DELIVERY,
+  CONTENT_FRAGMENTS_VS_EXPERIENCE_FRAGMENTS
 ].filter(m => m.active);

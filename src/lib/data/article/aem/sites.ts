@@ -183,8 +183,8 @@ export const SONARQUBE_SETUP_FOR_AEM_DEVELOPMENT : IArticleItem = {
 export const WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS : IArticleItem = {
   title: "Web Optimized Image Delivery for Custom Components",
   url: "/aem/sites/web-optimized-image-delivery-for-custom-component",
-  publishDate: "April 24, 2024",
-  modifiedDate: "April 24, 2024",
+  publishDate: "April 10, 2024",
+  modifiedDate: "April 10, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
   active: false
@@ -223,8 +223,8 @@ export const SAML_AUTHENTICATION : IArticleItem = {
 export const SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION : IArticleItem = {
   title: "Show/Hide AEM Dialog Fields on Dropdown Selection in AEM",
   url: "/aem/sites/show-hide-aem-dialog-fields-on-dropdown-selection",
-  publishDate: "April 24, 2024",
-  modifiedDate: "April 24, 2024",
+  publishDate: "April 25, 2024",
+  modifiedDate: "April 25, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
   active: false
@@ -243,8 +243,8 @@ export const SETTING_UP_ERROR_PAGES_IN_AEM : IArticleItem = {
 export const START_AEM_AS_DEBUG_MODE : IArticleItem = {
   title: "Start AEM as Debug Mode",
   url: "/aem/sites/start-aem-as-debug-mode",
-  publishDate: "April 24, 2024",
-  modifiedDate: "April 24, 2024",
+  publishDate: "April 23, 2024",
+  modifiedDate: "April 23, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
   active: false

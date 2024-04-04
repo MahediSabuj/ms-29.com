@@ -5,7 +5,7 @@ import { IBreadCrumb } from "@/types/breadcrumb";
 export default function BreadCrumb({ items, current } : IBreadCrumb) {
   return (
     <nav className="flex py-3 hidden md:flex" aria-label="Breadcrumb">
-      <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+      <ol className="inline-flex items-center space-x-1 md:space-x-2">
         <li className="inline-flex items-center">
           <Link href="/" className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600">
             <svg className="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
