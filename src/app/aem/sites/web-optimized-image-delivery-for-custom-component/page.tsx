@@ -24,7 +24,7 @@ const breadcrumbs : IBreadCrumb = {
 export default function WebOptimizedImageDelivery() {
   return (
     <div>
-      <BreadCrumb {...breadcrumbs}/>  
+      <BreadCrumb {...breadcrumbs}/>
       <article itemScope itemType="https://schema.org/Article">
         <Article
           title={ARTICLE.title}

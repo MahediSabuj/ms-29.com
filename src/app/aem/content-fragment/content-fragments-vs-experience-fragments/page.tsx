@@ -51,7 +51,6 @@ export default function CFvsXF() {
           </div>
         </div>
       </article>
-
     </div>
   );
 }
