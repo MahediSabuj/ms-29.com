@@ -183,11 +183,13 @@ export const SONARQUBE_SETUP_FOR_AEM_DEVELOPMENT : IArticleItem = {
 export const WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS : IArticleItem = {
   title: "Web Optimized Image Delivery for Custom Components",
   url: "/aem/sites/web-optimized-image-delivery-for-custom-component",
-  publishDate: "April 10, 2024",
-  modifiedDate: "April 10, 2024",
-  description: ``,
+  publishDate: "April 09, 2024",
+  modifiedDate: "April 09, 2024",
+  description: `Web Optimized Image Delivery feature of AEM as a Cloud service delivers image assets from
+    the DAM in WebP format. WebP can reduce the download size of an image by about 25% on average, which
+    results in faster page loading.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const EXTEND_AEM_PAGE_PROPERTIES : IArticleItem = {
@@ -228,7 +230,7 @@ export const SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION : IArticleItem = {
   description: `Enabling Show/Hide functionality for AEM dialog fields improves user experience by allowing content authors to 
     focus on relevant fields, thereby making the authoring process more efficient and less error-prone.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const SETTING_UP_ERROR_PAGES_IN_AEM : IArticleItem = {

@@ -33,7 +33,7 @@ export const CONTENT_FRAGMENTS_VS_EXPERIENCE_FRAGMENTS : IArticleItem = {
   publishDate: "April 06, 2024",
   modifiedDate: "April 06, 2024",
   topics: [ TOPICS.CONTENT_FRAGMENT ],
-  active: true
+  active: false
 }
 
 export const CONTENT_FRAGMENT: IArticleItem[] = [

@@ -8,7 +8,7 @@ export default function FAQ({ items } : FAQ ) {
       <h2 className="text-2xl border-b-2 border-[#3A2A1D] mb-3">Frequently Asked Questions (FAQ)</h2>
         {items.map((item, index) => {
           return (
-            <div key={index} itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+            <div key={index} className="mb-2" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
               <h3 className="text-xl" itemProp="name">
                 <em>{item.question}</em>
               </h3>
