@@ -6,7 +6,10 @@ import salesforce_platform_developer_certification from './assets/Salesforce_Cer
 import salesforce_javascript_developer_certification from './assets/Salesforce_Certified_JavaScript_Developer_I.webp';
 
 export const metadata: Metadata = {
-  title: "Mahedi Sabuj"
+  title: "Mahedi Sabuj",
+  alternates: {
+    canonical: "/profile/mahedi-sabuj"
+  }
 };
 
 interface Certification {
