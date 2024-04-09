@@ -15,10 +15,10 @@ export const metadata: Metadata = {
 };
 
 const show_hide_dialog = 
-`<backgroundConfiguration jcr:primaryType="nt:unstructured"
+`<backgroundConfig jcr:primaryType="nt:unstructured"
   sling:resourceType="granite/ui/components/coral/foundation/form/select"
-  fieldLabel="Background Configuration"
-  name="./backgroundConfiguration"
+  fieldLabel="Background Config"
+  name="./backgroundConfig"
   granite:class="cq-dialog-dropdown-showhide">
   <items jcr:primaryType="nt:unstructured">
     <backgroundColor jcr:primaryType="nt:unstructured"
@@ -29,11 +29,11 @@ const show_hide_dialog =
       value="backgroundImage"/>
   </items>
   <granite:data jcr:primaryType="nt:unstructured"
-    cq-dialog-dropdown-showhide-target=".background-configuration-show-hide"/>
-</backgroundConfiguration>
+    cq-dialog-dropdown-showhide-target=".background-config-show-hide"/>
+</backgroundConfig>
 <backgroundColorContainer jcr:primaryType="nt:unstructured"
   sling:resourceType="granite/ui/components/coral/foundation/container"
-  granite:class="hide background-configuration-show-hide">
+  granite:class="hide background-config-show-hide">
   <items jcr:primaryType="nt:unstructured">
     <colorCode jcr:primaryType="nt:unstructured"
       sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
@@ -74,10 +74,16 @@ export default function ShowHideDialogFields() {
             To achieve the functionality, need to proceed with the following steps:
             <ul className="list-disc ml-6 pt-1 pl-2.5">
               <li>Apply <code className="code-inline">granite:class=&quot;cq-dialog-dropdown-showhide&quot;</code> to the select/dropdown field.</li>
-              <li>Add a data attribute <code className="code-inline">cq-dialog-dropdown-showhide-target</code> to the select field using <code className="code-inline">granite:data</code> typically configured with a class selector as the value such as <code className="code-inline">.background-configuration-show-hide</code></li>
+              <li>Add a data attribute <code className="code-inline">cq-dialog-dropdown-showhide-target</code> to the select field using <code className="code-inline">granite:data</code> typically configured with a class selector as the value such as <code className="code-inline">.background-config-show-hide</code></li>
+              <li>Add a container field with <code className="code-inline">granite:class</code> attribute, incorporating the <code className="code-inline">hide</code> class to keep it hidden upon initial loading, along with the target value set in the preceding step, without employing the class selector &quot;.&quot; such as <code className="code-inline">granite:class=&quot;hide background-config-show-hide&quot;</code></li>
+              <li>Add <code className="code-inline">showhidetargetvalue</code> data attribute to the container field using <code className="code-inline">granite:data</code> to set up the display or hiding of items beneath the container according to a specified value.</li>
             </ul>
           </section>
           <Highlight code={show_hide_dialog} language="xml" path="_cq_dialog / .content.xml"/>
+          <div className="pt-2">
+            According to the <code className="code-inline">_cq_dialog</code> configuration provided above, the Color Code option will be displayed 
+            only when Background Color is selected in the Background Config. Otherwise, the Color Code field will remain hidden in the dialog.
+          </div>
         </div>  
       </article>
     </div>
