@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import { CODE_COVERAGE_OSGI_CONFIGURATION as ARTICLE } from "@/lib/data/article/aem/code-coverage";
+import { MOCK_STATIC_METHODS_MOCKITO as ARTICLE } from "@/lib/data/article/aem/code-coverage";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -21,7 +21,7 @@ const breadcrumbs : IBreadCrumb = {
   current: ARTICLE.title
 }
 
-export default function OsgiConfiguration() {
+export default function MockStaticMethod() {
   return (
     <div>
       <BreadCrumb {...breadcrumbs}/> 
@@ -30,6 +30,13 @@ export default function OsgiConfiguration() {
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
           modifiedDate={ARTICLE.modifiedDate}/>
+        <div>
+          <section className="pt-6">
+            In the pursuit of clean object-oriented code, the need to mock static methods may suggest design flaws or code smells, 
+            prompting consideration for refactoring. Nevertheless, there are situations where mocking static methods remains crucial 
+            despite refactoring efforts.
+          </section>
+        </div>
       </article>
     </div>
   );

@@ -30,10 +30,10 @@ export const CONTENT_FRAGMENTS_VS_EXPERIENCE_FRAGMENTS : IArticleItem = {
     components in AEM are Content Fragments (CF) and Experience Fragments (XF). While both are used to create reusable content, 
     each serves a distinct purpose and offers unique capabilities.`,
   url: "/aem/content-fragment/content-fragments-vs-experience-fragments",
-  publishDate: "April 06, 2024",
-  modifiedDate: "April 06, 2024",
+  publishDate: "April 11, 2024",
+  modifiedDate: "April 11, 2024",
   topics: [ TOPICS.CONTENT_FRAGMENT ],
-  active: false
+  active: true
 }
 
 export const CONTENT_FRAGMENT: IArticleItem[] = [
