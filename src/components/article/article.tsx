@@ -21,12 +21,14 @@ export default function Article({
             {publishDate}
           </time>
         </div>
-        <div className="md:inline md:ml-4">
-          <span className="text-[#636B74] mr-2">Modified</span>
-          <time itemProp="dateModified" dateTime={dateFormatter.formatDate(modifiedDate)}>
-            {modifiedDate}
-          </time>
-        </div>
+        {publishDate !== modifiedDate && 
+          <div className="md:inline md:ml-4">
+            <span className="text-[#636B74] mr-2">Modified</span>
+            <time itemProp="dateModified" dateTime={dateFormatter.formatDate(modifiedDate)}>
+              {modifiedDate}
+            </time>
+          </div>
+        }
       </div>
       {description &&
         <div className="pt-2">

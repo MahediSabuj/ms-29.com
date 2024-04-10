@@ -190,7 +190,7 @@ export default function FormsInSite() {
               utilize these components on your pages.
             </div>
             <div className="py-3">
-              However, for Existing Pages, you&apos;ll have to manually add several dependencies to the pom.xml files. Moreover, incorporating Adaptive Form
+              However, for Existing Projects, you&apos;ll have to manually add several dependencies to the pom.xml files. Moreover, incorporating Adaptive Form
               components into the project will also require manual intervention.
             </div>
             <Highlight code={pom_xml} language="xml" path="pom.xml"/>

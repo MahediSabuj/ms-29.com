@@ -107,7 +107,7 @@ export default function WebOptimizedImageDelivery() {
             <strong>Using Core Components</strong>
           </h2>
           <section className="pb-2">
-            The AEM Core Image and Teaser components offer the functionality for delivering web-optimized images. To activate 
+            The AEM Core Image and Teaser components offer the functionality for delivering web optimized images. To activate 
             this feature, you only need to enable the &quot;Enable Web Optimized Images&quot; option within the component&apos;s 
             design dialog.
           </section>
@@ -123,13 +123,13 @@ export default function WebOptimizedImageDelivery() {
           </h2>
           <div className="pb-1">
             For Custom Components, AEM provides the <code className="code-inline">AssetDelivery</code> Java API, which acts as an OSGi 
-            service that generates web-optimized delivery URLs for image assets. The AssetDelivery OSGi Service functions in AEM as a 
-            Cloud Service but returns null in the AEM SDK. It is best to conditionally use web-optimized URLs selectively for Cloud 
+            service that generates web optimized delivery URLs for image assets. The AssetDelivery OSGi Service functions in AEM as a 
+            Cloud Service but returns null in the AEM SDK. It is best to conditionally use web optimized URLs selectively for Cloud 
             Service and fallback URLs for the SDK.
           </div>
           <Highlight code={web_optimized_image_service_impl} language="java" path="WebOptimizedImageServiceImpl.java"/>
           <div className="pt-2 pb-1">
-            The Sling Model uses the custom WebOptimizeImageImage OSGi service to obtain the web-optimized image URL.
+            The Sling Model uses the custom WebOptimizedImageService OSGi service to obtain the web optimized image URL.
           </div>
           <Highlight code={article_sling_model} language="java" path="ArticleImpl.java"/>
           <div className="pt-1">
@@ -140,10 +140,10 @@ export default function WebOptimizedImageDelivery() {
       </article>
       <FAQ items={[{
         question: "No option to Enable Web Optimized Images in my environment",
-        answer: `Running AEM locally or on-premise, the image service isn’t available. To leverage the web-optimized image 
+        answer: `Running AEM locally or on-premise, the image service isn’t available. To leverage the web optimized image 
           delivery service, need to deploy the project to an AEM as a Cloud Service (AEMaaCS) development environment.`
       }, {
-        question: "Web-Optimized Image Delivery works correctly in one custom component but not in others",
+        question: "Web Optimized Image Delivery works correctly in one custom component but not in others",
         answer: `Consider creating an OSGi service that acts as a proxy for the AssetDelivery OSGi Service, then utilize this 
           proxy OSGi service for all Sling Models instead of directly accessing the AssetDelivery API from each Sling Model.`
       }]}/>
