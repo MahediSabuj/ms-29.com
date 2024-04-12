@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import { UNUSED_ASSET_CLEANUP as ARTICLE } from "@/lib/data/article/aem/assets";
+import { DATA_SLY_RESOURCE_IN_AEM_SPA as ARTICLE } from "@/lib/data/article/aem/spa";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -15,13 +15,13 @@ export const metadata: Metadata = {
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
-    title: "AEM Assets",
-    url: "/aem/assets"
+    title: "AEM SPA",
+    url: "/aem/spa"
   }],
   current: ARTICLE.title
 }
 
-export default function UnusedAssetCleanup() {
+export default function DataSlyResourceInSPA() {
   return (
     <div>
       <BreadCrumb {...breadcrumbs}/>
@@ -32,9 +32,10 @@ export default function UnusedAssetCleanup() {
           modifiedDate={ARTICLE.modifiedDate}/>
         <div>
           <section className="pt-6">
-            In asset management, it becomes apparent that certain assets are no longer referenced with any pages. It&apos;s recommended 
-            to delete these unused images from the asset repository. This not only decreases the size of the AEM instance but also 
-            improves search/query performance.
+            In traditional AEM development, composite components are built by combining several atomic components 
+            through the data-sly-resource statement. For instance, Teaser component is built using image, text, and 
+            button components. However, in the SPA paradigm, neither React nor Angular implementations offer direct 
+            alternatives for this approach.
           </section>
         </div>  
       </article>

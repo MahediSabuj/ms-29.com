@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import { UNUSED_ASSET_CLEANUP as ARTICLE } from "@/lib/data/article/aem/assets";
+import { SALESFORCE_HEADLESS_AUTHENTICATION as ARTICLE } from "@/lib/data/article/salesforce/identity";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -15,13 +15,13 @@ export const metadata: Metadata = {
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
-    title: "AEM Assets",
-    url: "/aem/assets"
+    title: "Salesforce Identity",
+    url: "/salesforce/identity"
   }],
   current: ARTICLE.title
 }
 
-export default function UnusedAssetCleanup() {
+export default function HeadlessAuthentication() {
   return (
     <div>
       <BreadCrumb {...breadcrumbs}/>
@@ -32,11 +32,10 @@ export default function UnusedAssetCleanup() {
           modifiedDate={ARTICLE.modifiedDate}/>
         <div>
           <section className="pt-6">
-            In asset management, it becomes apparent that certain assets are no longer referenced with any pages. It&apos;s recommended 
-            to delete these unused images from the asset repository. This not only decreases the size of the AEM instance but also 
-            improves search/query performance.
+            With headless authentication setup, backend authentication can be segregated from frontend identity experiences, 
+            enhancing faster login experience. It enables each channel to provide unique UI experiences according to their brand guidelines.
           </section>
-        </div>  
+        </div>
       </article>
     </div>
   );

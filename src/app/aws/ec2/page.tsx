@@ -1,9 +1,18 @@
+import { Metadata } from "next";
+
 import ArticleList from "@/components/article-list/article-list";
 import { PAGE_TYPE } from "@/types/enum/page-type";
 import { IArticleList } from "@/types/article";
-import { AWS_EC2 } from "@/lib/data/article/aws/ec2";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
+import { AWS_EC2 } from "@/lib/data/article/aws/ec2";
+
+export const metadata: Metadata = {
+  title: "AWS EC2",
+  alternates: {
+    canonical: "/aws/ec2"
+  }
+};
 
 const articles : IArticleList = {
   articleItems: AWS_EC2,

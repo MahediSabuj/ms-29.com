@@ -41,9 +41,9 @@ const TOPICS: Topics = {
     title: "Lightning Web Component",
     url: "/salesforce/lwc"
   },
-  SF_IAM: {
-    title: "Identity & Access Management",
-    url: "/salesforce/iam"
+  SF_IDENTITY: {
+    title: "Salesforce Identity",
+    url: "/salesforce/identity"
   }
 }
 

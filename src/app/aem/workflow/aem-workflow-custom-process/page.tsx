@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import { UNUSED_ASSET_CLEANUP as ARTICLE } from "@/lib/data/article/aem/assets";
+import { CUSTOM_AEM_WORKFLOW_PROCESS as ARTICLE } from "@/lib/data/article/aem/workflow";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -15,13 +15,13 @@ export const metadata: Metadata = {
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
-    title: "AEM Assets",
-    url: "/aem/assets"
+    title: "AEM Workflow",
+    url: "/aem/workflow"
   }],
   current: ARTICLE.title
 }
 
-export default function UnusedAssetCleanup() {
+export default function CustomWorkflowProcess() {
   return (
     <div>
       <BreadCrumb {...breadcrumbs}/>
@@ -32,9 +32,9 @@ export default function UnusedAssetCleanup() {
           modifiedDate={ARTICLE.modifiedDate}/>
         <div>
           <section className="pt-6">
-            In asset management, it becomes apparent that certain assets are no longer referenced with any pages. It&apos;s recommended 
-            to delete these unused images from the asset repository. This not only decreases the size of the AEM instance but also 
-            improves search/query performance.
+            AEM provides a set of pre-defined workflow process that cover common scenarios, but sometimes 
+            these built-in features may not fully handle the complexities of specific workflows. In such cases, AEM allows 
+            developers to create custom processes, enhancing the functionality of standard workflows to meet unique requirements.
           </section>
         </div>  
       </article>
