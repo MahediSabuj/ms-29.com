@@ -18,18 +18,20 @@ export const MULTI_SITE_MANAGER: IArticleItem = {
   title: "Multi Site Manager (MSM) in AEM",
   description: ``,
   url: "/aem/sites/multi-site-manager-in-aem",
-  publishDate: "February 20, 2024",
-  modifiedDate: "February 20, 2024",
-  topics: [ TOPICS.AEM_SITES ]
+  publishDate: "May 20, 2024",
+  modifiedDate: "May 20, 2024",
+  topics: [ TOPICS.AEM_SITES ],
+  active: true
 }
 
 export const AEM_USER_PERMISSION: IArticleItem = {
   title: "AEM User Permission",
   description: ``,
   url: "/aem/sites/aem-user-permission",
-  publishDate: "February 20, 2024",
-  modifiedDate: "February 20, 2024",
-  topics: [ TOPICS.AEM_SITES ]
+  publishDate: "May 20, 2024",
+  modifiedDate: "May 20, 2024",
+  topics: [ TOPICS.AEM_SITES ],
+  active: true
 }
 
 export const FETCH_MULTIFIELD_SLING_MODEL: IArticleItem = {
@@ -47,9 +49,10 @@ export const SLING_MODEL_INJECTORS_ANNOTATIONS: IArticleItem = {
   title: "Sling Model Injectors Annotations",
   description: ``,
   url: "/aem/sites/sling-model-injectors-annotations",
-  publishDate: "February 20, 2024",
-  modifiedDate: "February 20, 2024",
-  topics: [ TOPICS.AEM_SITES ]
+  publishDate: "May 20, 2024",
+  modifiedDate: "May 20, 2024",
+  topics: [ TOPICS.AEM_SITES ],
+  active: true
 }
 
 export const QUERY_BUILDER_CHEATSHEET: IArticleItem = {
@@ -69,10 +72,10 @@ export const CUSTOM_OSGI_CONFIGURATION: IArticleItem = {
   title: "Custom OSGI Configuration in AEM",
   description: ``,
   url: "/aem/sites/custom-osgi-configuration-in-aem",
-  publishDate: "March 30, 2024",
-  modifiedDate: "March 30, 2024",
+  publishDate: "May 30, 2024",
+  modifiedDate: "May 30, 2024",
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const INTEGRATE_ADAPTIVE_FORMS_IN_AEM_SITES: IArticleItem = {
@@ -113,11 +116,11 @@ export const DEFAULT_VALUES_IN_AEM_COMPONENT_DIALOG: IArticleItem = {
 export const ADAPTIVE_IMAGE_SERVLET_FOR_CUSTOM_COMPONENTS: IArticleItem = {
   title: "Adaptive Image Servlet for Custom Components",
   url: "/aem/sites/adaptive-image-servlet-for-custom-components",
-  publishDate: "May 04, 2024",
+  publishDate: "May 10, 2024",
   modifiedDate: "May 10, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const BEST_PRACTICE_ANALYSIS_FOR_AEMAACS_MIGRATION: IArticleItem = {
@@ -127,7 +130,7 @@ export const BEST_PRACTICE_ANALYSIS_FOR_AEMAACS_MIGRATION: IArticleItem = {
   modifiedDate: "May 14, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const CONTEXT_AWARE_CONFIGURATION : IArticleItem = {
@@ -137,7 +140,7 @@ export const CONTEXT_AWARE_CONFIGURATION : IArticleItem = {
   modifiedDate: "May 18, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const EXPAND_CORE_SEARCH_COMPONENT_SCOPE : IArticleItem = {
@@ -153,31 +156,31 @@ export const EXPAND_CORE_SEARCH_COMPONENT_SCOPE : IArticleItem = {
 export const HTL_SPECIFICATION_CHEATSHEET : IArticleItem = {
   title: "HTL Specification CheatSheet",
   url: "/aem/sites/htl-specification-cheatsheet",
-  publishDate: "April 28, 2024",
-  modifiedDate: "April 28, 2024",
+  publishDate: "May 28, 2024",
+  modifiedDate: "May 28, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const SLING_MODEL_DELEGATION_PATTERN : IArticleItem = {
   title: "Sling Model Delegation Pattern",
   url: "/aem/sites/sling-model-delegation-pattern",
-  publishDate: "April 24, 2024",
-  modifiedDate: "April 24, 2024",
+  publishDate: "May 24, 2024",
+  modifiedDate: "May 24, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const SONARQUBE_SETUP_FOR_AEM_DEVELOPMENT : IArticleItem = {
   title: "SonarQube Setup for AEM Development",
   url: "/aem/sites/sonarqube-setup-for-aem-development",
-  publishDate: "April 24, 2024",
-  modifiedDate: "April 24, 2024",
+  publishDate: "May 24, 2024",
+  modifiedDate: "May 24, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS : IArticleItem = {
@@ -195,31 +198,33 @@ export const WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS : IArticleItem =
 export const EXTEND_AEM_PAGE_PROPERTIES : IArticleItem = {
   title: "Extend AEM Page Properties",
   url: "/aem/sites/extend-aem-page-properties",
-  publishDate: "April 24, 2024",
-  modifiedDate: "April 24, 2024",
-  description: ``,
+  publishDate: "April 30, 2024",
+  modifiedDate: "April 30, 2024",
+  description: `Page properties in AEM serve as metadata that provide essential information about a webpage. While AEM 
+    provides a standard set of properties to meet basic web project needs, organizations often enhance them with extra 
+    functionalities or custom data fields to effectively address more complex or unique requirements in content management.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const APACHE_SLING_SITEMAP_GENERATOR: IArticleItem = {
   title: "Apache Sling Site Generator for AEM",
   url: "/aem/sites/apache-sling-sitemap-generator",
-  publishDate: "April 24, 2024",
-  modifiedDate: "April 24, 2024",
+  publishDate: "May 24, 2024",
+  modifiedDate: "May 24, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const SAML_AUTHENTICATION : IArticleItem = {
   title: "SAML SSO Authentication between AEM and Salesforce",
   url: "/aem/sites/saml-sso-authentication-aem-salesforce",
-  publishDate: "April 24, 2024",
-  modifiedDate: "April 24, 2024",
+  publishDate: "May 24, 2024",
+  modifiedDate: "May 24, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION : IArticleItem = {
@@ -236,11 +241,11 @@ export const SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION : IArticleItem = {
 export const SETTING_UP_ERROR_PAGES_IN_AEM : IArticleItem = {
   title: "Setting Up Error Pages in AEM",
   url: "/aem/sites/setup-error-page-in-aem",
-  publishDate: "April 24, 2024",
-  modifiedDate: "April 24, 2024",
+  publishDate: "May 24, 2024",
+  modifiedDate: "May 24, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const START_AEM_AS_DEBUG_MODE : IArticleItem = {

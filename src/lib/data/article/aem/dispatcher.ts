@@ -28,22 +28,28 @@ export const CACHE_AEM_GATED_PAGES: IArticleItem = {
 
 export const CACHE_AEM_DYNAMIC_CONTENT: IArticleItem = {
   title: "Cache AEM Pages with Dynamic Content",
-  description: ``,
+  description: `In general, when a page is retrieved from cache, all users view identical content. However, websites with gated 
+    or authenticated pages, certain sections — such as displaying a logged-in user's name or a login button for anonymous 
+    users — must remain dynamic and not be cached. Considering this scenario, Sling Dynamic Include (SDI) in AEM supports the 
+    dynamic generation of specific components, while also enabling the retrieval of others from cache.`,
   url: "/aem/dispatcher/cache-aem-pages-with-dynamic-content",
   publishDate: "April 28, 2024",
   modifiedDate: "April 28, 2024",
   topics: [ TOPICS.AEM_DISPATCHER ],
-  active: false
+  active: true
 }
 
 export const DISPATCHER_CACHE_FLUSH_STRATEGIES: IArticleItem = {
   title: "AEM Dispatcher Cache Flush Strategies",
-  description: ``,
+  description: `When caching is implemented for your website, it's essential to clear the dispatcher cache after publishing pages 
+    to ensure the most recent content is displayed to end users. Once the cache is cleared, the dispatcher forwards the next request 
+    to the publisher to generate recent content, which is then added to the dispatcher cache. Subsequent requests are delivered 
+    from the dispatcher cache.`,
   url: "/aem/dispatcher/aem-dispatcher-cache-flush-strategies",
   publishDate: "May 02, 2024",
   modifiedDate: "May 02, 2024",
   topics: [ TOPICS.AEM_DISPATCHER ],
-  active: false
+  active: true
 }
 
 export const AEM_LOG_INVESTIGATION : IArticleItem = {

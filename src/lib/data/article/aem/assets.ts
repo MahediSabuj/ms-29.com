@@ -3,12 +3,16 @@ import TOPICS from "@/lib/data/article/topics";
 
 export const CUSTOM_METADATA_AEM_ASSETS: IArticleItem = {
   title: "Custom Metadata in AEM Assets",
-  description: ``,
+  description: `Custom metadata that allows authors to define additional properties for digital assets beyond the 
+    standard metadata fields. These custom metadata fields in AEM Assets enhance asset management by allowing 
+    organizations to tailor information to their specific needs. They facilitate the inclusion of project 
+    specific details, campaign tags, and other relevant data, streamlining more effective asset categorization 
+    and management.`,
   url: "/aem/assets/custom-metadata-in-aem-assets",
-  publishDate: "April 02, 2024",
-  modifiedDate: "April 02, 2024",
+  publishDate: "May 06, 2024",
+  modifiedDate: "May 06, 2024",
   topics: [ TOPICS.AEM_ASSETS ],
-  active: false
+  active: true
 }
 
 export const UNUSED_ASSET_CLEANUP : IArticleItem = {

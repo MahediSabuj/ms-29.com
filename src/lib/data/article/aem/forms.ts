@@ -36,12 +36,13 @@ export const INVOKE_AEM_WORKFLOW_FROM_SUBMISSION: IArticleItem = {
 
 export const ADAPTIVE_FORMS_USING_JSON_SCHEMA : IArticleItem = {
   title: "Adaptive Forms using JSON Schema",
-  description: ``,
+  description: `Adobe Experience Manager Forms supports creation of an adaptive form by using an existing JSON Schema 
+    as the form model. This JSON Schema reflects how data is produced or consumed by the back-end system in your organization.`,
   url: "/aem/forms/adaptive-forms-using-json-schema",
-  publishDate: "May 06, 2024",
-  modifiedDate: "May 06, 2024",
+  publishDate: "May 04, 2024",
+  modifiedDate: "May 04, 2024",
   topics: [ TOPICS.AEM_FORMS ],
-  active: false
+  active: true
 }
 
 export const AEM_FORMS: IArticleItem[] = [

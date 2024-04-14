@@ -18,10 +18,10 @@ export const CROSS_CHANNEL_CONTENT_DELIVERY: IArticleItem = {
   title: "Cross Channel Content Delivery using Content Fragment",
   description: ``,
   url: "/aem/content-fragment/cross-channel-content-delivery-using-content-fragments",
-  publishDate: "April 16, 2024",
-  modifiedDate: "April 16, 2024",
+  publishDate: "May 16, 2024",
+  modifiedDate: "May 16, 2024",
   topics: [ TOPICS.CONTENT_FRAGMENT ],
-  active: false
+  active: true
 }
 
 export const CONTENT_FRAGMENTS_VS_EXPERIENCE_FRAGMENTS : IArticleItem = {
