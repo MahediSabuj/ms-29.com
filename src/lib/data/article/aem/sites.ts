@@ -58,9 +58,9 @@ export const SLING_MODEL_INJECTORS_ANNOTATIONS: IArticleItem = {
 export const QUERY_BUILDER_CHEATSHEET: IArticleItem = {
   title: "Query Builder CheatSheet",
   description: `Query Builder offers an easy way of querying the content repository of AEM. The API is
-  built using the JCR API. AEM includes a Query Debugger tool that allows you to execute  search queries 
-  on the JCR (Java Content Repository). Utilize this tool to perform a dry run of the AEM queries, optimize 
-  them, and then implement them into your code.`,
+    built using the JCR API. AEM includes a Query Debugger tool that allows you to execute  search queries 
+    on the JCR (Java Content Repository). Utilize this tool to perform a dry run of the AEM queries, optimize 
+    them, and then implement them into your code.`,
   url: "/aem/sites/query-builder-cheatsheet",
   publishDate: "February 21, 2024",
   modifiedDate: "March 17, 2024",
@@ -96,7 +96,7 @@ export const AEM_COMPONENT_DIALOG_CHEATSHEET: IArticleItem = {
   publishDate: "February 13, 2024",
   modifiedDate: "February 28, 2024",
   description: `Granite UI provides a large range of the basic components needed to create component 
-      dialog on the authoring environment. These components are constructed using Coral UI-based elements.`,
+    dialog on the authoring environment. These components are constructed using Coral UI-based elements.`,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
@@ -107,8 +107,8 @@ export const DEFAULT_VALUES_IN_AEM_COMPONENT_DIALOG: IArticleItem = {
   publishDate: "February 04, 2024",
   modifiedDate: "February 10, 2024",
   description: `In AEM components, it&apos;s often necessary to establish default values. 
-      This ensures that when components are dragged onto the page, they display predefined initial values.
-      This functionality is achievable through the utilization of cq:template and cq:templatePath.`,
+    This ensures that when components are dragged onto the page, they display predefined initial values.
+    This functionality is achievable through the utilization of cq:template and cq:templatePath.`,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
@@ -118,7 +118,10 @@ export const ADAPTIVE_IMAGE_SERVLET_FOR_CUSTOM_COMPONENTS: IArticleItem = {
   url: "/aem/sites/adaptive-image-servlet-for-custom-components",
   publishDate: "May 10, 2024",
   modifiedDate: "May 10, 2024",
-  description: ``,
+  description: `Adaptive Image identifies the end user's screen size and dynamically serves the 
+    appropriate version of the image, delivering smaller sizes for small screens and larger ones 
+    for larger screens. This optimization significantly improves website performance and user 
+    experience by minimizing bandwidth consumption and reducing load times.`,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
