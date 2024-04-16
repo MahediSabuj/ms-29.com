@@ -16,7 +16,10 @@ export const CONTENT_FRAGMENT_PROGRAMMATICALLY: IArticleItem = {
 
 export const CROSS_CHANNEL_CONTENT_DELIVERY: IArticleItem = {
   title: "Cross Channel Content Delivery using Content Fragment",
-  description: ``,
+  description: `In the modern era,  users often interact across multiple channels, spanning from websites to mobile apps. 
+    Streamlining content management and delivery from a centralized platform can simplify this process. Content Fragments, 
+    independent of layout, have the capability to deliver content to AEM Sites using Core Component or distribute it to 
+    downstream channels in a headless manner through GraphQL.`,
   url: "/aem/content-fragment/cross-channel-content-delivery-using-content-fragments",
   publishDate: "May 16, 2024",
   modifiedDate: "May 16, 2024",
