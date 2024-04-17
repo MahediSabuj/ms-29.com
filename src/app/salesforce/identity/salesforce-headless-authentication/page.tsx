@@ -32,7 +32,7 @@ export default function HeadlessAuthentication() {
           modifiedDate={ARTICLE.modifiedDate}/>
         <div>
           <section className="pt-6">
-            With headless authentication setup, backend authentication can be segregated from frontend identity experiences, 
+            With headless authentication, backend authentication can be segregated from frontend identity experiences, 
             enhancing faster login experience. It enables each channel to provide unique UI experiences according to their brand guidelines.
           </section>
         </div>

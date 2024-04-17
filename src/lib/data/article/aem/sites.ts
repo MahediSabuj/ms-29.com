@@ -141,11 +141,14 @@ export const BEST_PRACTICE_ANALYSIS_FOR_AEMAACS_MIGRATION: IArticleItem = {
 }
 
 export const CONTEXT_AWARE_CONFIGURATION : IArticleItem = {
-  title: "Context Aware Configuration",
+  title: "Apache Sling Context Aware Configuration in AEM",
   url: "/aem/sites/context-aware-configuration",
   publishDate: "May 18, 2024",
   modifiedDate: "May 18, 2024",
-  description: ``,
+  description: `Context-aware configurations  are related to a content resource, allows different configs for 
+    different content resources. Parameters within nested contexts allow hierarchical based inheritance and 
+    global fallback values when required. Leveraging the Context-Aware Configuration Java API, one can retrieve 
+    the appropriate configuration for each content resource without concerning  where it is stored or how the inheritance works.`,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
