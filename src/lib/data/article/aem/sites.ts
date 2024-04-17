@@ -18,18 +18,20 @@ export const MULTI_SITE_MANAGER: IArticleItem = {
   title: "Multi Site Manager (MSM) in AEM",
   description: ``,
   url: "/aem/sites/multi-site-manager-in-aem",
-  publishDate: "May 20, 2024",
-  modifiedDate: "May 20, 2024",
+  publishDate: "May 24, 2024",
+  modifiedDate: "May 24, 2024",
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
 
 export const AEM_USER_PERMISSION: IArticleItem = {
-  title: "AEM User Permission",
-  description: ``,
+  title: "Managing User Permissions and Access Control in AEM",
+  description: `Adobe Experience Manager (AEM) is a content management system managing content authoring across multiple 
+    sites with multiple content creators. User Permissions enforces strict governance over user actions like read, create, 
+    modify, delete, publish contents. This mechanism ensures that only authorized users can perform these specific actions.`,
   url: "/aem/sites/aem-user-permission",
-  publishDate: "May 20, 2024",
-  modifiedDate: "May 20, 2024",
+  publishDate: "May 22, 2024",
+  modifiedDate: "May 22, 2024",
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
@@ -46,8 +48,10 @@ export const FETCH_MULTIFIELD_SLING_MODEL: IArticleItem = {
 }
 
 export const SLING_MODEL_INJECTORS_ANNOTATIONS: IArticleItem = {
-  title: "Sling Model Injectors Annotations",
-  description: ``,
+  title: "AEM Sling Model Injectors Annotations",
+  description: `In AEM, various annotations are provide for use in Java Sling Models. Sling Model enables 
+    injector-specific annotations, used to inject values. For each injector there is a specialized annotation 
+    available.`,
   url: "/aem/sites/sling-model-injectors-annotations",
   publishDate: "May 20, 2024",
   modifiedDate: "May 20, 2024",
@@ -72,8 +76,8 @@ export const CUSTOM_OSGI_CONFIGURATION: IArticleItem = {
   title: "Custom OSGI Configuration in AEM",
   description: ``,
   url: "/aem/sites/custom-osgi-configuration-in-aem",
-  publishDate: "May 30, 2024",
-  modifiedDate: "May 30, 2024",
+  publishDate: "June 10, 2024",
+  modifiedDate: "June 10, 2024",
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
@@ -176,8 +180,8 @@ export const HTL_SPECIFICATION_CHEATSHEET : IArticleItem = {
 export const SLING_MODEL_DELEGATION_PATTERN : IArticleItem = {
   title: "Sling Model Delegation Pattern",
   url: "/aem/sites/sling-model-delegation-pattern",
-  publishDate: "May 24, 2024",
-  modifiedDate: "May 24, 2024",
+  publishDate: "June 01, 2024",
+  modifiedDate: "June 01, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
   active: true
@@ -186,8 +190,8 @@ export const SLING_MODEL_DELEGATION_PATTERN : IArticleItem = {
 export const SONARQUBE_SETUP_FOR_AEM_DEVELOPMENT : IArticleItem = {
   title: "SonarQube Setup for AEM Development",
   url: "/aem/sites/sonarqube-setup-for-aem-development",
-  publishDate: "May 24, 2024",
-  modifiedDate: "May 24, 2024",
+  publishDate: "May 30, 2024",
+  modifiedDate: "May 30, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
   active: true
@@ -220,8 +224,8 @@ export const EXTEND_AEM_PAGE_PROPERTIES : IArticleItem = {
 export const APACHE_SLING_SITEMAP_GENERATOR: IArticleItem = {
   title: "Apache Sling Site Generator for AEM",
   url: "/aem/sites/apache-sling-sitemap-generator",
-  publishDate: "May 24, 2024",
-  modifiedDate: "May 24, 2024",
+  publishDate: "June 04, 2024",
+  modifiedDate: "June 04, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
   active: true
@@ -230,8 +234,8 @@ export const APACHE_SLING_SITEMAP_GENERATOR: IArticleItem = {
 export const SAML_AUTHENTICATION : IArticleItem = {
   title: "SAML SSO Authentication between AEM and Salesforce",
   url: "/aem/sites/saml-sso-authentication-aem-salesforce",
-  publishDate: "May 24, 2024",
-  modifiedDate: "May 24, 2024",
+  publishDate: "May 26, 2024",
+  modifiedDate: "May 26, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
   active: true
@@ -251,8 +255,8 @@ export const SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION : IArticleItem = {
 export const SETTING_UP_ERROR_PAGES_IN_AEM : IArticleItem = {
   title: "Setting Up Error Pages in AEM",
   url: "/aem/sites/setup-error-page-in-aem",
-  publishDate: "May 24, 2024",
-  modifiedDate: "May 24, 2024",
+  publishDate: "June 07, 2024",
+  modifiedDate: "June 07, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
   active: true
