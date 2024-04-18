@@ -175,7 +175,9 @@ export const HTL_SPECIFICATION_CHEATSHEET : IArticleItem = {
   url: "/aem/sites/htl-specification-cheatsheet",
   publishDate: "May 28, 2024",
   modifiedDate: "May 28, 2024",
-  description: ``,
+  description: `HTML Template Language (HTL), formerly known as Sightly, is the preferred and recommended server-side 
+    template system for HTML in AEM, preferred over JSP (JavaServer Pages) for new projects. However, moving to HTL is not 
+    necessarily an all-or-nothing choice, as HTL components can harmoniously coexist with JSP within the same project.`,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
@@ -239,7 +241,9 @@ export const SAML_AUTHENTICATION : IArticleItem = {
   url: "/aem/sites/saml-sso-authentication-aem-salesforce",
   publishDate: "May 26, 2024",
   modifiedDate: "May 26, 2024",
-  description: ``,
+  description: `Single Sign-On (SSO) simplifies the login experience by requiring users to manage credentials once for access to multiple 
+    websites, reducing the need of managing multiple passwords and security questions. Moreover, SAML enables secure exchanges of authentication 
+    and authorization data between parties: Identity Provider (IdP) and Service Provider (SP).`,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }

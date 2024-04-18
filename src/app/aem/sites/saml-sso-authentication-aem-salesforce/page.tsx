@@ -21,7 +21,6 @@ const breadcrumbs : IBreadCrumb = {
   current: ARTICLE.title
 }
 
-
 export default function SamlAuthentication() {
   return (
     <div>
@@ -31,6 +30,13 @@ export default function SamlAuthentication() {
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
           modifiedDate={ARTICLE.modifiedDate}/>
+        <div>
+          <section className="pt-6">
+            Single Sign-On (SSO) simplifies the login experience by requiring users to manage credentials once for access to multiple 
+            websites, reducing the need of managing multiple passwords and security questions. Moreover, SAML enables secure exchanges 
+            of authentication and authorization data between parties: Identity Provider (IdP) and Service Provider (SP).
+          </section>
+        </div>  
       </article>
     </div>
   );
