@@ -222,7 +222,7 @@ export const EXTEND_AEM_PAGE_PROPERTIES : IArticleItem = {
 }
 
 export const APACHE_SLING_SITEMAP_GENERATOR: IArticleItem = {
-  title: "Apache Sling Site Generator for AEM",
+  title: "Apache Sling Sitemap Generator for AEM",
   url: "/aem/sites/apache-sling-sitemap-generator",
   publishDate: "June 04, 2024",
   modifiedDate: "June 04, 2024",
