@@ -16,7 +16,10 @@ export const PROJECT_LOMBOK_IN_AEM_PROJECTS: IArticleItem = {
 
 export const MULTI_SITE_MANAGER: IArticleItem = {
   title: "Multi Site Manager (MSM) in AEM",
-  description: ``,
+  description: `Multi Site Manager and its Live Copy features allow to use the same site content in multiple locations. MSM maintains 
+    the live relationship between the source and its live copies, ensuring that changes made to the source are also reflected in the live 
+    copies. Aditionally, You can adjust the content of the live copies by disconnecting the live relationship for individual subpages, or components, 
+    or both. By doing this, changes to the source are no longer applied to the live copy.`,
   url: "/aem/sites/multi-site-manager-in-aem",
   publishDate: "May 24, 2024",
   modifiedDate: "May 24, 2024",

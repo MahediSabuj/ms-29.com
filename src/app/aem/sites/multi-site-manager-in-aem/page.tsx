@@ -30,6 +30,14 @@ export default function MultiSiteManager() {
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
           modifiedDate={ARTICLE.modifiedDate}/>
+        <div>
+          <section className="pt-6">
+            Multi Site Manager and its Live Copy features allow to use the same site content in multiple locations. MSM maintains 
+            the live relationship between the source and its live copies, ensuring that changes made to the source are also reflected 
+            in the live copies. Aditionally, You can adjust the content of the live copies by disconnecting the live relationship for 
+            individual subpages, or components, or both. By doing this, changes to the source are no longer applied to the live copy.
+          </section>
+        </div>  
       </article>
     </div>
   );
