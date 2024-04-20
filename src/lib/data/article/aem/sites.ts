@@ -197,7 +197,10 @@ export const SONARQUBE_SETUP_FOR_AEM_DEVELOPMENT : IArticleItem = {
   url: "/aem/sites/sonarqube-setup-for-aem-development",
   publishDate: "May 30, 2024",
   modifiedDate: "May 30, 2024",
-  description: ``,
+  description: `In AEM development, prioritizing code quality is essential. Even during deployment via Cloud Manager, it's 
+    crucial to meet specific metrics for security, reliability, maintainability, and code coverage. SonarQube enables continuous 
+    code inspections, identifying issues early in the development lifecycle that could affect these metrics. Though integration, 
+    developers can ensure the maintenance of clean, efficient, and secure code throughout the AEM development process.`,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }

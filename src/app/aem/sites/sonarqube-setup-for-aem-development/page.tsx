@@ -30,6 +30,14 @@ export default function SonarQubeSetup() {
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
           modifiedDate={ARTICLE.modifiedDate}/>
+        <div>
+          <section className="pt-6">
+            In AEM development, prioritizing code quality is essential. Even during deployment via Cloud Manager, it&apos;s crucial to 
+            meet specific metrics for security, reliability, maintainability, and code coverage. SonarQube enables continuous code inspections, 
+            identifying issues early in the development lifecycle that could affect these metrics. Though integration, developers can ensure the 
+            maintenance of clean, efficient, and secure code throughout the AEM development process.
+          </section>
+        </div>  
       </article>
     </div>
   );
