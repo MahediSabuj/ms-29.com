@@ -30,6 +30,14 @@ export default function SlingModelDelegationPattern() {
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
           modifiedDate={ARTICLE.modifiedDate}/>
+        <div>
+          <section className="pt-6">
+            AEM Core Components are a standard set components to be used with AEM. Built with Adobe&apos;s best practices and 
+            standards, Core Components provide a baseline set of functionality for any Sites implementation. However, it&apos;s 
+            often necessary to customize the functionality of core components to address project-specific requirements. The business 
+            logic for the core components is implemented in Sling Models, which can be customized using the delegation pattern.
+          </section>
+        </div>  
       </article>
     </div>
   );

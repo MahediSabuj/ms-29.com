@@ -183,11 +183,14 @@ export const HTL_SPECIFICATION_CHEATSHEET : IArticleItem = {
 }
 
 export const SLING_MODEL_DELEGATION_PATTERN : IArticleItem = {
-  title: "Sling Model Delegation Pattern",
+  title: "Sling Model Delegation Pattern with Lombok",
   url: "/aem/sites/sling-model-delegation-pattern",
   publishDate: "June 01, 2024",
   modifiedDate: "June 01, 2024",
-  description: ``,
+  description: `AEM Core Components are a standard set components to be used with AEM. Built with Adobe's best practices and 
+    standards, Core Components provide a baseline set of functionality for any Sites implementation. However, it's often necessary 
+    to customize the functionality of core components to address project-specific requirements. The business logic for the core components 
+    is implemented in Sling Models, which can be customized using the delegation pattern.`,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
