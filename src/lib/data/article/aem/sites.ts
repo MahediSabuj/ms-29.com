@@ -237,7 +237,9 @@ export const APACHE_SLING_SITEMAP_GENERATOR: IArticleItem = {
   url: "/aem/sites/apache-sling-sitemap-generator",
   publishDate: "June 04, 2024",
   modifiedDate: "June 04, 2024",
-  description: ``,
+  description: `Sitemap is essential for any website, an XML file that provides the pages of the website, allowing search engines 
+    like Google to efficiently crawl and index web pages. AEM offers Apache Sling Sitemap Generator, dynamically generating XML 
+    sitemap based on the content structure and updating them with any page creation, deletion, or modification.`,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
