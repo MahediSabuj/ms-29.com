@@ -21,7 +21,7 @@ const breadcrumbs : IBreadCrumb = {
   current: ARTICLE.title
 }
 
-export default function SamlAuthentication() {
+export default function ErrorPageSetup() {
   return (
     <div>
       <BreadCrumb {...breadcrumbs}/>
@@ -30,6 +30,13 @@ export default function SamlAuthentication() {
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
           modifiedDate={ARTICLE.modifiedDate}/>
+        <div>
+          <section className="pt-6">
+            Customizing error pages in AEM is crucial for ensuring seamless user experience and brand consistency. Error pages act as backups 
+            when requested resources cannot be found or unexpected errors occur, such as the commonly encountered 404 and 500 HTTP status codes. 
+            By tailoring these pages with informative and user-friendly content, you can ensure users able to navigate smoothly and continue browsing the website.
+          </section>
+        </div>  
       </article>
     </div>
   );

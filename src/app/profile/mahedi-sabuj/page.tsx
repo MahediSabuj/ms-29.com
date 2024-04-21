@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image, { StaticImageData } from "next/image";
 
+import aem_architect_certification from './assets/Adobe_Certified_Master_Experience_Cloud_products_Digital_Badge.webp';
 import adobe_developer_certification from './assets/Adobe_Certified_Expert_Experience_Cloud_products_Digital_Badge.webp';
 import salesforce_platform_developer_certification from './assets/Salesforce_Certified_Platform_Developer_I.webp';
 import salesforce_javascript_developer_certification from './assets/Salesforce_Certified_JavaScript_Developer_I.webp';

@@ -272,7 +272,10 @@ export const SETTING_UP_ERROR_PAGES_IN_AEM : IArticleItem = {
   url: "/aem/sites/setup-error-page-in-aem",
   publishDate: "June 07, 2024",
   modifiedDate: "June 07, 2024",
-  description: ``,
+  description: `Customizing error pages in AEM is crucial for ensuring seamless user experience and brand consistency. Error pages 
+    act as backups when requested resources cannot be found or unexpected errors occur, such as the commonly encountered 404 and 500
+    HTTP status codes. By tailoring these pages with informative and user-friendly content, you can ensure users able to navigate smoothly
+    and continue browsing the website.`,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
