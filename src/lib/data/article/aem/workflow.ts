@@ -10,7 +10,7 @@ export const CUSTOM_AEM_WORKFLOW_PROCESS: IArticleItem = {
   publishDate: "April 24, 2024",
   modifiedDate: "April 24, 2024",
   topics: [ TOPICS.AEM_WORKFLOW ],
-  active: true
+  active: false
 }
 
 export const CUSTOM_RENDITIONS_FOR_IMAGES: IArticleItem = {

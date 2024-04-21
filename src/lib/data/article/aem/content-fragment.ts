@@ -24,7 +24,7 @@ export const CROSS_CHANNEL_CONTENT_DELIVERY: IArticleItem = {
   publishDate: "May 16, 2024",
   modifiedDate: "May 16, 2024",
   topics: [ TOPICS.CONTENT_FRAGMENT ],
-  active: true
+  active: false
 }
 
 export const CONTENT_FRAGMENTS_VS_EXPERIENCE_FRAGMENTS : IArticleItem = {
@@ -36,7 +36,7 @@ export const CONTENT_FRAGMENTS_VS_EXPERIENCE_FRAGMENTS : IArticleItem = {
   publishDate: "April 11, 2024",
   modifiedDate: "April 11, 2024",
   topics: [ TOPICS.CONTENT_FRAGMENT ],
-  active: true
+  active: false
 }
 
 export const CONTENT_FRAGMENT: IArticleItem[] = [

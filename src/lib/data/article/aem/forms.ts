@@ -22,7 +22,8 @@ export const GOOGLE_RECAPTCHA_AEM_FORMS: IArticleItem = {
   url: "/aem/forms/google-recaptcha-in-aem-forms",
   publishDate: "February 20, 2024",
   modifiedDate: "February 20, 2024",
-  topics: [ TOPICS.AEM_FORMS ]
+  topics: [ TOPICS.AEM_FORMS ],
+  active: false
 }
 
 export const INVOKE_AEM_WORKFLOW_FROM_SUBMISSION: IArticleItem = {
@@ -31,7 +32,8 @@ export const INVOKE_AEM_WORKFLOW_FROM_SUBMISSION: IArticleItem = {
   url: "/aem/forms/invoke-aem-workflow-on-aem-forms-submission",
   publishDate: "February 20, 2024",
   modifiedDate: "February 20, 2024",
-  topics: [ TOPICS.AEM_FORMS ]
+  topics: [ TOPICS.AEM_FORMS ],
+  active: false
 }
 
 export const ADAPTIVE_FORMS_USING_JSON_SCHEMA : IArticleItem = {
@@ -42,7 +44,7 @@ export const ADAPTIVE_FORMS_USING_JSON_SCHEMA : IArticleItem = {
   publishDate: "May 04, 2024",
   modifiedDate: "May 04, 2024",
   topics: [ TOPICS.AEM_FORMS ],
-  active: true
+  active: false
 }
 
 export const AEM_FORMS: IArticleItem[] = [

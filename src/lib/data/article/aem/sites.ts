@@ -24,7 +24,7 @@ export const MULTI_SITE_MANAGER: IArticleItem = {
   publishDate: "May 24, 2024",
   modifiedDate: "May 24, 2024",
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const AEM_USER_PERMISSION: IArticleItem = {
@@ -36,7 +36,7 @@ export const AEM_USER_PERMISSION: IArticleItem = {
   publishDate: "May 22, 2024",
   modifiedDate: "May 22, 2024",
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const FETCH_MULTIFIELD_SLING_MODEL: IArticleItem = {
@@ -59,7 +59,7 @@ export const SLING_MODEL_INJECTORS_ANNOTATIONS: IArticleItem = {
   publishDate: "May 20, 2024",
   modifiedDate: "May 20, 2024",
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const QUERY_BUILDER_CHEATSHEET: IArticleItem = {
@@ -83,7 +83,7 @@ export const CUSTOM_OSGI_CONFIGURATION: IArticleItem = {
   publishDate: "June 10, 2024",
   modifiedDate: "June 10, 2024",
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const INTEGRATE_ADAPTIVE_FORMS_IN_AEM_SITES: IArticleItem = {
@@ -131,7 +131,7 @@ export const ADAPTIVE_IMAGE_SERVLET_FOR_CUSTOM_COMPONENTS: IArticleItem = {
     for larger screens. This optimization significantly improves website performance and user 
     experience by minimizing bandwidth consumption and reducing load times.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const BEST_PRACTICE_ANALYSIS_FOR_AEMAACS_MIGRATION: IArticleItem = {
@@ -145,7 +145,7 @@ export const BEST_PRACTICE_ANALYSIS_FOR_AEMAACS_MIGRATION: IArticleItem = {
     (AEM) deployment to AEM as a Cloud Service. This tool generates a report pinpointing potential 
     areas for refactoring, marking the initial phase of migrating to AEM as a Cloud Service.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const CONTEXT_AWARE_CONFIGURATION : IArticleItem = {
@@ -158,7 +158,7 @@ export const CONTEXT_AWARE_CONFIGURATION : IArticleItem = {
     global fallback values when required. Leveraging the Context-Aware Configuration Java API, one can retrieve 
     the appropriate configuration for each content resource without concerning  where it is stored or how the inheritance works.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const EXPAND_CORE_SEARCH_COMPONENT_SCOPE : IArticleItem = {
@@ -180,7 +180,7 @@ export const HTL_SPECIFICATION_CHEATSHEET : IArticleItem = {
     template system for HTML in AEM, preferred over JSP (JavaServer Pages) for new projects. However, moving to HTL is not 
     necessarily an all-or-nothing choice, as HTL components can harmoniously coexist with JSP within the same project.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const SLING_MODEL_DELEGATION_PATTERN : IArticleItem = {
@@ -193,7 +193,7 @@ export const SLING_MODEL_DELEGATION_PATTERN : IArticleItem = {
     to customize the functionality of core components to address project-specific requirements. The business logic for the core components 
     is implemented in Sling Models, which can be customized using the delegation pattern.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const SONARQUBE_SETUP_FOR_AEM_DEVELOPMENT : IArticleItem = {
@@ -206,7 +206,7 @@ export const SONARQUBE_SETUP_FOR_AEM_DEVELOPMENT : IArticleItem = {
     code inspections, identifying issues early in the development lifecycle that could affect these metrics. Though integration, 
     developers can ensure the maintenance of clean, efficient, and secure code throughout the AEM development process.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS : IArticleItem = {
@@ -230,7 +230,7 @@ export const EXTEND_AEM_PAGE_PROPERTIES : IArticleItem = {
     provides a standard set of properties to meet basic web project needs, organizations often enhance them with extra 
     functionalities or custom data fields to effectively address more complex or unique requirements in content management.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const APACHE_SLING_SITEMAP_GENERATOR: IArticleItem = {
@@ -242,7 +242,7 @@ export const APACHE_SLING_SITEMAP_GENERATOR: IArticleItem = {
     like Google to efficiently crawl and index web pages. AEM offers Apache Sling Sitemap Generator, dynamically generating XML 
     sitemap based on the content structure and updating them with any page creation, deletion, or modification.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const SAML_AUTHENTICATION : IArticleItem = {
@@ -254,7 +254,7 @@ export const SAML_AUTHENTICATION : IArticleItem = {
     websites, reducing the need of managing multiple passwords and security questions. Moreover, SAML enables secure exchanges of authentication 
     and authorization data between parties: Identity Provider (IdP) and Service Provider (SP).`,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION : IArticleItem = {
@@ -278,7 +278,7 @@ export const SETTING_UP_ERROR_PAGES_IN_AEM : IArticleItem = {
     HTTP status codes. By tailoring these pages with informative and user-friendly content, you can ensure users able to navigate smoothly
     and continue browsing the website.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const START_AEM_AS_DEBUG_MODE : IArticleItem = {

@@ -21,7 +21,7 @@ export const DATA_SLY_RESOURCE_IN_AEM_SPA : IArticleItem = {
   publishDate: "April 20, 2024",
   modifiedDate: "April 20, 2024",
   topics: [ TOPICS.AEM_SPA ],
-  active: true
+  active: false
 }
 
 export const AEM_SPA: IArticleItem[] = [

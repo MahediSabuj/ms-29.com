@@ -12,7 +12,7 @@ export const CUSTOM_METADATA_AEM_ASSETS: IArticleItem = {
   publishDate: "May 06, 2024",
   modifiedDate: "May 06, 2024",
   topics: [ TOPICS.AEM_ASSETS ],
-  active: true
+  active: false
 }
 
 export const UNUSED_ASSET_CLEANUP : IArticleItem = {
@@ -24,7 +24,7 @@ export const UNUSED_ASSET_CLEANUP : IArticleItem = {
   publishDate: "April 15, 2024",
   modifiedDate: "April 15, 2024",
   topics: [ TOPICS.AEM_ASSETS ],
-  active: true
+  active: false
 }
 
 export const CUSTOM_SEARCH_FACETS_AEM_ASSETS: IArticleItem = {

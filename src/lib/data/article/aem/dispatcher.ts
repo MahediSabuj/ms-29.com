@@ -36,7 +36,7 @@ export const CACHE_AEM_DYNAMIC_CONTENT: IArticleItem = {
   publishDate: "April 28, 2024",
   modifiedDate: "April 28, 2024",
   topics: [ TOPICS.AEM_DISPATCHER ],
-  active: true
+  active: false
 }
 
 export const DISPATCHER_CACHE_FLUSH_STRATEGIES: IArticleItem = {
@@ -49,7 +49,7 @@ export const DISPATCHER_CACHE_FLUSH_STRATEGIES: IArticleItem = {
   publishDate: "May 02, 2024",
   modifiedDate: "May 02, 2024",
   topics: [ TOPICS.AEM_DISPATCHER ],
-  active: true
+  active: false
 }
 
 export const AEM_LOG_INVESTIGATION : IArticleItem = {
