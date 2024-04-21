@@ -76,8 +76,9 @@ export const QUERY_BUILDER_CHEATSHEET: IArticleItem = {
 }
 
 export const CUSTOM_OSGI_CONFIGURATION: IArticleItem = {
-  title: "Custom OSGI Configuration in AEM",
-  description: ``,
+  title: "Custom OSGi Configuration in AEM",
+  description: `OSGi Configuration allow us to configure run-mode specific properties. All the out-of-the-box OSGi configurations
+    are available at /system/console/configMgr while custom configurations can be created as per business requirements.`,
   url: "/aem/sites/custom-osgi-configuration-in-aem",
   publishDate: "June 10, 2024",
   modifiedDate: "June 10, 2024",

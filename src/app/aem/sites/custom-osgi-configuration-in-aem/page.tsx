@@ -30,6 +30,13 @@ export default function CustomOsgiConfig() {
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
           modifiedDate={ARTICLE.modifiedDate}/>
+        <div>
+          <section className="pt-6">
+            OSGi Configuration allow us to configure run-mode specific properties. All the out-of-the-box OSGi configurations 
+            are available at <code className="code-inline">/system/console/configMgr</code> while custom configurations can be 
+            created as per business requirements.
+          </section>
+        </div>  
       </article>
     </div>
   );
