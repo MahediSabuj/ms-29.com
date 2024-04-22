@@ -17,8 +17,8 @@ export const MOCK_STATIC_METHODS_MOCKITO: IArticleItem = {
     prompting consideration for refactoring. Nevertheless, there are situations where mocking static methods remains crucial 
     despite refactoring efforts.`,
   url: "/aem/code-coverage/mock-static-methods-with-mockito",
-  publishDate: "April 13, 2024",
-  modifiedDate: "April 13, 2024",
+  publishDate: "April 24, 2024",
+  modifiedDate: "April 24, 2024",
   topics: [ TOPICS.AEM_CODE_COVERAGE ],
   active: true
 }

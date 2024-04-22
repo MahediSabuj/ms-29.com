@@ -36,6 +36,10 @@ export default function MockStaticMethod() {
             prompting consideration for refactoring. Nevertheless, there are situations where mocking static methods remains crucial 
             despite refactoring efforts.
           </section>
+          <section className="pt-3">
+            Over the years, different approaches have been adopted for mocking static methods. Prior to Mockito v3.4.0, PowerMockito was 
+            utilized to mock static methods and it was compatible with JUnit 4.
+          </section>
         </div>
       </article>
     </div>
