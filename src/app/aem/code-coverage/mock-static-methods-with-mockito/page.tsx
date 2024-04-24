@@ -57,8 +57,14 @@ export default function MockStaticMethod() {
             despite refactoring efforts.
           </section>
           <section className="pt-3">
-            Over the years, different approaches have been adopted for mocking static methods. Prior to Mockito v3.4.0, PowerMockito was 
-            utilized to mock static methods and was compatible with JUnit 4 which you can integrate by adding the following dependency to the pom.xml file.
+            Over the years, different approaches have been adopted for mocking static methods. Let&apos;s delve into these approaches in detail.
+          </section>
+          <h2 id="power-mockito" className="text-xl mt-4">
+            <strong>Utilizing PowerMockito with Mockito Prior to v3.4.0</strong>
+          </h2>
+          <section>
+            Prior to Mockito v3.4.0, PowerMockito was utilized to mock static methods and was compatible with JUnit 4 which you can integrate by 
+            adding the following dependency to the pom.xml file.
           </section>
           <Highlight code={power_mockito} language="xml" path="pom.xml"/>
         </div>
