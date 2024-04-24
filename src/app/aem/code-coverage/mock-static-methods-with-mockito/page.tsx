@@ -33,6 +33,52 @@ const power_mockito =
   </dependency>
 </dependencies>`;
 
+const apache_http_client = 
+`public HttpClient getHttpClient(int... timeout) {
+  HttpClientBuilder httpClientBuilder = HttpClientBuilder.create();
+
+  int connectionTimeout = Arrays.stream(timeout).findFirst()
+        .orElse(CONNECTION_TIMEOUT);
+  
+  RequestConfig config = RequestConfig.custom()
+        .setConnectTimeout(connectionTimeout * 1000)
+        .setConnectionRequestTimeout(connectionTimeout * 1000)
+        .setSocketTimeout(connectionTimeout * 1000).build();
+
+  httpClientBuilder.setDefaultRequestConfig(config);
+  return httpClientBuilder.build();
+}`;
+
+const apache_http_client_code_coverage = 
+`@RunWith(PowerMockRunner.class)
+@PrepareForTest({ HttpClientBuilder.class })
+public class RestClientServieimplTest {
+  @Mock
+  CloseableHttpClient httpClient;
+
+  @Mock
+  HttpClientBuilder httpClientBuilder;
+
+  @InjectMocks
+  RestClientServieImpl restClient;
+
+  @Before
+  public void setup() {
+    MockitoAnnotations.initMocks(this);
+
+    PowerMockito.mockStatic(HttpClientBuilder.class);
+    Mockito.when(HttpClientBuilder.create()).thenReturn(httpClientBuilder);
+    Mockito.when(httpClientBuilder.build()).thenReturn(httpClient);
+  }
+
+  @Test
+  public void getHttpClientTest() {
+    Assert.assertNotNull(restClient);
+    HttpClient httpClient = restClient.getHttpClient();
+    Assert.assertNotNull(httpClient);
+  }
+}`;
+
 const breadcrumbs : IBreadCrumb = {
   items: [{
     title: "Code Coverage",
@@ -67,6 +113,11 @@ export default function MockStaticMethod() {
             adding the following dependency to the pom.xml file.
           </section>
           <Highlight code={power_mockito} language="xml" path="pom.xml"/>
+          <section className="pt-3">
+            In AEM projects, there&apos;s often a need to interact with third-party APIs.
+          </section>
+          <Highlight code={apache_http_client} language="java" path="RestClientServieimpl.java"/>
+          <Highlight code={apache_http_client_code_coverage} language="java" path="RestClientServieimplTest.java"/>
         </div>
       </article>
     </div>
