@@ -114,7 +114,8 @@ export default function MockStaticMethod() {
           </section>
           <Highlight code={power_mockito} language="xml" path="pom.xml"/>
           <section className="pt-3">
-            In AEM projects, there&apos;s often a need to interact with third-party APIs.
+            In AEM projects, there&apos;s often a need to interact with third-party APIs. Let&apos;s use Apache <code className="code-inline">HttpClient</code>, commonly 
+            used for invoking external APIs, as an example to write unit test using PowerMockito.
           </section>
           <Highlight code={apache_http_client} language="java" path="RestClientServieimpl.java"/>
           <Highlight code={apache_http_client_code_coverage} language="java" path="RestClientServieimplTest.java"/>
