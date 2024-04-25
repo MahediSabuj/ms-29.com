@@ -27,7 +27,7 @@ export const CACHE_AEM_GATED_PAGES: IArticleItem = {
 }
 
 export const CACHE_AEM_DYNAMIC_CONTENT: IArticleItem = {
-  title: "Cache AEM Pages with Dynamic Content",
+  title: "Caching AEM Pages with Dynamic Content",
   description: `In general, when a page is retrieved from cache, all users view identical content. However, websites with gated 
     or authenticated pages, certain sections — such as displaying a logged-in user's name or a login button for anonymous 
     users — must remain dynamic and not be cached. Considering this scenario, Sling Dynamic Include (SDI) in AEM supports the 
@@ -36,7 +36,7 @@ export const CACHE_AEM_DYNAMIC_CONTENT: IArticleItem = {
   publishDate: "April 28, 2024",
   modifiedDate: "April 28, 2024",
   topics: [ TOPICS.AEM_DISPATCHER ],
-  active: false
+  active: true
 }
 
 export const DISPATCHER_CACHE_FLUSH_STRATEGIES: IArticleItem = {

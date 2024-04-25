@@ -18,8 +18,8 @@ export const DATA_SLY_RESOURCE_IN_AEM_SPA : IArticleItem = {
     button components. However, in the SPA paradigm, neither React nor Angular implementations offer direct 
     alternatives for this approach.`,
   url: "/aem/spa/data-sly-resource-aem-spa",
-  publishDate: "April 20, 2024",
-  modifiedDate: "April 20, 2024",
+  publishDate: "April 30, 2024",
+  modifiedDate: "April 30, 2024",
   topics: [ TOPICS.AEM_SPA ],
   active: false
 }
