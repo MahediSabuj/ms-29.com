@@ -14,14 +14,14 @@ export const metadata: Metadata = {
   }
 };
 
-const sling_dynamic_include = 
+const SLING_DYNAMIC_INCLUDE = 
 `<dependency>
   <groupId>org.apache.sling</groupId>
   <artifactId>org.apache.sling.dynamic-include</artifactId>
   <version>3.3.0</version>
 </dependency>`;
 
-const all_pom_xml = 
+const ALL_POM_XML = 
 `<embedded>
   <groupId>org.apache.sling</groupId>
   <artifactId>org.apache.sling.dynamic-include</artifactId>
@@ -33,6 +33,26 @@ const all_pom_xml =
   <groupId>org.apache.sling</groupId>
   <artifactId>org.apache.sling.dynamic-include</artifactId>
 </dependency>`;
+
+const SDI_OSGI_CONFIGURATION = 
+`{
+  "include-filter.config.enabled": true,
+  "include-filter.config.appendSuffix": true,
+  "include-filter.config.add_comment": true,
+  "include-filter.config.disableIgnoreUrlParams": false,
+  "include-filter.config.extension": "html",
+  "include-filter.config.ignoreUrlParams": [""],
+  "include-filter.config.include-type": "SSI",
+  "include-filter.config.resource-types": [
+    "aem-demo/components/usernavigation",
+    "aem-demo/components/megamenu"
+  ],
+  "include-filter.config.rewrite": false,
+  "include-filter.config.path": "/content/experience-fragments/aem-demo",
+  "include-filter.config.selector": "nocache",
+  "include-filter.config.required_header": "Server-Agent=Communique-Dispatcher",
+  "include-filter.config.ttl": ""
+}`;
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
@@ -62,8 +82,13 @@ export default function CacheDynamicContent() {
             As AEM transitions to the cloud, the immutable nature of the Publish instance prompts bundle installation through code 
             deployment. To install Sling Dynamic Include, make the following updates to the pom.xml files.
           </section>
-          <Highlight code={sling_dynamic_include} language="xml" path="pom.xml"/>
-          <Highlight code={all_pom_xml} language="xml" path="all / pom.xml"/>
+          <Highlight code={SLING_DYNAMIC_INCLUDE} language="xml" path="pom.xml"/>
+          <Highlight code={ALL_POM_XML} language="xml" path="all / pom.xml"/>
+          <section className="pt-2">
+            Upon deploying your code with the mentioned modifications, you can verify the installation through System Console. 
+            Subsequently, proceed to configure the SDI OSGi Configuration with the components you want to load dynamically.
+          </section>
+          <Highlight code={SDI_OSGI_CONFIGURATION} language="json" path="config.publish / org.apache.sling.dynamicinclude.Configuration~aem-demo.cfg.json"/>
         </div>  
       </article>
     </div>

@@ -4,6 +4,7 @@ import hljs from 'highlight.js/lib/core';
 import apache from 'highlight.js/lib/languages/apache';
 import shell from 'highlight.js/lib/languages/shell';
 import java from 'highlight.js/lib/languages/java';
+import json from 'highlight.js/lib/languages/json';
 import makefile from 'highlight.js/lib/languages/makefile';
 import nginx from 'highlight.js/lib/languages/nginx';
 import xml from 'highlight.js/lib/languages/xml';
@@ -19,6 +20,7 @@ import Sidebar from "./sidebar";
 
 hljs.registerLanguage('apache', apache);
 hljs.registerLanguage('java', java);
+hljs.registerLanguage('json', json);
 hljs.registerLanguage('makefile', makefile);
 hljs.registerLanguage('nginx', nginx);
 hljs.registerLanguage('shell', shell);
