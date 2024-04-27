@@ -57,6 +57,21 @@ const SDI_OSGI_CONFIGURATION =
   "include-filter.config.ttl": ""
 }`;
 
+const SSI_DISPATCHER_CONFIGURATION = 
+`<Directory "\${PUBLISH_DOCROOT}">
+  Options Indexes FollowSymLinks Includes
+  AddOutputFilter INCLUDES .html
+  AllowOverride None
+  Require all granted
+</Directory>`;
+
+const DISPATCHER_NO_CACHE =
+`/disable-nocache
+{
+  /glob "*.nocache.html*"
+  /type "deny"
+}`;
+
 const breadcrumbs : IBreadCrumb = {
   items: [{
     title: "AEM Dispatcher",
@@ -98,6 +113,22 @@ export default function CacheDynamicContent() {
           <Image src={SLING_DYNAMIC_INCLUDE_HTML_IMAGE} className="border py-1 my-1"
             alt="HTML View of Sling Dynamic Include Implementation">
           </Image>
+          <section className="pt-1">
+            If you closely review the HTML above, you&apos;ll notice a comment that provides details about the content path and component resource type. Additionally, 
+            there&apos;s an include tag with a virtual attribute, using the content path as its value. The next step is to ensure the dispatcher retrieves actual content 
+            from the publisher which requires configuring the Includes module in the vhost file and disabling caching for requests containing <code className="code-inline">*nocache.html*</code>.
+            This involves adding the <code className="code-inline">Includes</code> option to the <code className="code-inline">Options</code> directive and <code className="code-inline">AddOutputFilter 
+            INCLUDES .html</code> in your virtual configuration host. 
+          </section>
+          <Highlight code={SSI_DISPATCHER_CONFIGURATION} language="apache" path="conf.d / available_vhosts / aemdemo.com.vhost"/>
+          <section className="pt-2">
+            Additionally, disable the caching for <code className="code-inline">.nocache.html</code> files in the cache rules.
+          </section>
+          <Highlight code={DISPATCHER_NO_CACHE} language="apache" path="conf.dispatcher.d / cache / client_publish_cache.any"/>
+          <section className="pt-4">
+            With the above setup, usernavigation and megamenu component within AEM-Demo Experience Fragments will be dynamically loaded, while other sections of the page will 
+            be served from the cache. After successfully implementing the Sling Dynamic Include, you can expect a significant improvement in performance.
+          </section>
         </div>  
       </article>
     </div>
