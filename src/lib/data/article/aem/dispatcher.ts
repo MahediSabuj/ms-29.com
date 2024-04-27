@@ -14,7 +14,7 @@ export const BASIC_HTTP_AUTHENTICATION: IArticleItem = {
 }
 
 export const CACHE_AEM_GATED_PAGES: IArticleItem = {
-  title: "AEM Gated Pages Caching Strategies",
+  title: "AEM Gated Pages Caching Strategies using Auth Checker",
   description: `In General, requests containing authentication information are not cached because the cached document is 
     served to the client without authentication. However, if the requirements permit the caching of authenticated documents, 
     this can be activated by setting the /allowAuthorized property to "1". Additionally, need to implement the AuthChecker module, 
@@ -27,12 +27,12 @@ export const CACHE_AEM_GATED_PAGES: IArticleItem = {
 }
 
 export const CACHE_AEM_DYNAMIC_CONTENT: IArticleItem = {
-  title: "Caching AEM Pages with Dynamic Content",
+  title: "Caching AEM Pages with Dynamic Content using Sling Dynamic Include",
   description: `In general, when a page is retrieved from cache, all users view identical content. However, websites with gated 
     or authenticated pages, certain sections — such as displaying a logged-in user's name or a login button for anonymous 
     users — must remain dynamic and not be cached. Considering this scenario, Sling Dynamic Include (SDI) in AEM supports the 
     dynamic generation of specific components, while also enabling the retrieval of others from cache.`,
-  url: "/aem/dispatcher/cache-aem-pages-with-dynamic-content",
+  url: "/aem/dispatcher/cache-aem-pages-with-dynamic-content-using-sdi",
   publishDate: "April 28, 2024",
   modifiedDate: "April 28, 2024",
   topics: [ TOPICS.AEM_DISPATCHER ],

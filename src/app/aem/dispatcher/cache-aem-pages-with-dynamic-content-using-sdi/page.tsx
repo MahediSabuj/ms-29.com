@@ -1,10 +1,13 @@
 import { Metadata } from "next";
+import Image from "next/image";
 
 import Article from "@/components/article/article";
 import Highlight from "@/components/highlight/highlight";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import { CACHE_AEM_DYNAMIC_CONTENT as ARTICLE } from "@/lib/data/article/aem/dispatcher";
+
+import SLING_DYNAMIC_INCLUDE_HTML_IMAGE from './assets/Sling-Dynamic-Include-HTML.webp';
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -89,6 +92,12 @@ export default function CacheDynamicContent() {
             Subsequently, proceed to configure the SDI OSGi Configuration with the components you want to load dynamically.
           </section>
           <Highlight code={SDI_OSGI_CONFIGURATION} language="json" path="config.publish / org.apache.sling.dynamicinclude.Configuration~aem-demo.cfg.json"/>
+          <section className="pt-2">
+            If you inspect the cached file from the dispatcher or inspect the HTML, you&apos;ll find something similar as shown below. 
+          </section>
+          <Image src={SLING_DYNAMIC_INCLUDE_HTML_IMAGE} className="border py-1 my-1"
+            alt="HTML View of Sling Dynamic Include Implementation">
+          </Image>
         </div>  
       </article>
     </div>
