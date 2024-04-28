@@ -6,8 +6,8 @@ export const SALESFORCE_HEADLESS_AUTHENTICATION: IArticleItem = {
     description: `With headless authentication, backend authentication can be segregated from frontend identity experiences, 
       enhancing faster login experience. It enables each channel to provide unique UI experiences according to their brand guidelines.`,
     url: "/salesforce/identity/salesforce-headless-authentication",
-    publishDate: "May 10, 2024",
-    modifiedDate: "May 10, 2024",
+    publishDate: "May 03, 2024",
+    modifiedDate: "May 03, 2024",
     topics: [ TOPICS.SF_IDENTITY ],
     active: false
 }

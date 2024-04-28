@@ -137,8 +137,8 @@ export const ADAPTIVE_IMAGE_SERVLET_FOR_CUSTOM_COMPONENTS: IArticleItem = {
 export const BEST_PRACTICE_ANALYSIS_FOR_AEMAACS_MIGRATION: IArticleItem = {
   title: "Best Practice Analyzer for AEMaaCS Migration",
   url: "/aem/sites/best-practice-analyzer-for-aemaacs-migration",
-  publishDate: "May 14, 2024",
-  modifiedDate: "May 14, 2024",
+  publishDate: "May 10, 2024",
+  modifiedDate: "May 10, 2024",
   description: `Best Practices Analyzer (BPA) evaluates the current AEM implementation, identifying 
     areas not in alignment with AEM best practices and offering guidance on how to improve. It also 
     expedites the assessment of readiness for transitioning from an existing Adobe Experience Manager 
