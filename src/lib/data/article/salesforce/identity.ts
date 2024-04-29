@@ -9,7 +9,7 @@ export const SALESFORCE_HEADLESS_AUTHENTICATION: IArticleItem = {
     publishDate: "May 03, 2024",
     modifiedDate: "May 03, 2024",
     topics: [ TOPICS.SF_IDENTITY ],
-    active: false
+    active: true
 }
 
 export const SF_IDENTITY: IArticleItem[] = [
