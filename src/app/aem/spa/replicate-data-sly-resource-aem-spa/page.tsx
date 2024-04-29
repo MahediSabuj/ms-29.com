@@ -68,17 +68,23 @@ public class Teaser implements LayoutContainer {
 }`;
 
 const TEASER_HTML = 
-`<div className='cmp-teaser'>
-  <div className='cmp-teaser__text'>
-    {this.childComponents[0]}
-  </div>
-  <div className='cmp-teaser__action'>
-    {this.childComponents[1]}
-  </div>
-  <div className='cmp-teaser__image'>
-    {this.childComponents[2]}
-  </div>
-</div>`;
+`class Teaser extends Container<ContainerProperties, ContainerState> {
+  render() {
+    return (
+      <div className='cmp-teaser'>
+        <div className='cmp-teaser__text'>
+          {this.childComponents[0]}
+        </div>
+        <div className='cmp-teaser__action'>
+          {this.childComponents[1]}
+        </div>
+        <div className='cmp-teaser__image'>
+          {this.childComponents[2]}
+        </div>
+      </div>
+    );
+  }
+}`;
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
@@ -106,12 +112,32 @@ export default function DataSlyResourceInSPA() {
           </section>
           <section className="pt-3">
             To implement a feature similar to <code className="code-inline">data-sly-resource</code> in a Single 
-            Page Application (SPA), we can utilize the Container core component.
+            Page Application (SPA), we can utilize the Container core component. Here are the steps that need to 
+            be followed.
           </section>
-          <Highlight code={TEASER_COMPONENT} language="xml" path="teaser / .content.xml"/>
-          <Highlight code={TEASER_CQ_TEMPLATE} language="xml" path="teaser / _cq_template / .content.xml"/>
-          <Highlight code={TEASER_SLING_MODEL} language="java" path="Teaser.java"/>
-          <Highlight code={TEASER_HTML} language="html" path="Teaser.html"/>
+          <ul className="list-decimal ml-6 pt-1 pl-2.5">
+            <li>
+              Create a proxy component by extending Container core component.
+              <Highlight code={TEASER_COMPONENT} language="xml" path="teaser / .content.xml"/>
+            </li>
+            <li className="mt-2">
+              Included the components you want to embed, which will be added to the JCR as soon as the component is dropped in the parsys.
+              <Highlight code={TEASER_CQ_TEMPLATE} language="xml" path="teaser / _cq_template / .content.xml"/>
+            </li>
+            <li className="mt-2">
+              Fetch embedded components in Sling Model using the Sling Model Delegation Pattern.
+              <Highlight code={TEASER_SLING_MODEL} language="java" path="Teaser.java"/>
+            </li>
+            <li className="mt-2">
+              In the last step, add the embedded components into the React Component, where <code className="code-inline">this.childComponents</code> containing 
+              all embedded elements, aligning with the order specified in the <code className="code-inline">_cq_template</code>. For instance, index 0 represents 
+              text, index 1 represents a button, and so forth.
+              <Highlight code={TEASER_HTML} language="javascript" path="Teaser.tsx"/>
+            </li>
+          </ul>
+          <section className="pt-3 pb-1">
+            If you&apos;ve been following along with us thus far, in your Author, you should observe something similar to the following.
+          </section>
           <Image src={TEASER_AUTHOR_VIEW} className="border py-1 my-1"
             alt="Teaser Author View">
           </Image>
