@@ -6,7 +6,9 @@ import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import { SALESFORCE_HEADLESS_AUTHENTICATION as ARTICLE } from "@/lib/data/article/salesforce/identity";
 
-import HEADLESS_ALLOW_CODE_CREDENTIALS from './assets/headless_allow_code_credentials.png';
+import HEADLESS_ALLOW_CODE_CREDENTIALS from './assets/Headless_Allow_Code_Credentials.png';
+import CONNECTED_APP_SETUP from './assets/Connected_App_Setup.png';
+import CONNECTED_APP_AUTH_POLICIES from './assets/Connected_App_Auth_Policies.png';
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -45,6 +47,21 @@ export default function HeadlessAuthentication() {
           </section>
           <Image src={HEADLESS_ALLOW_CODE_CREDENTIALS} className="border mt-2"
             alt="Allow Headless Code Credentilas">
+          </Image>
+          <section className="pt-3">
+            Create a connected app for headless identity and enable the Authorization Code and Credentials flow at the app level.
+          </section>
+          <Image src={CONNECTED_APP_SETUP} className="border mt-2"
+            alt="Connected App for Headless Setup">
+          </Image>
+          <section className="pt-2">
+            In a standard OAuth flow, users often see an approval screen where they confirm that an app is allowed to access their Salesforce 
+            data. With headless identity flows, you don&apos;t want to show users a Salesforce approval screen. To preapprove access, configure 
+            OAuth policies on your connected app. From <strong>Edit Policies</strong>, under <strong>OAuth Policies</strong>, set the Permitted 
+            Users policy to <strong>Admin approved users are pre-authorized</strong>.
+          </section>
+          <Image src={CONNECTED_APP_AUTH_POLICIES} className="border mt-2"
+            alt="Connected App Auth Policies">
           </Image>
         </div>
       </article>
