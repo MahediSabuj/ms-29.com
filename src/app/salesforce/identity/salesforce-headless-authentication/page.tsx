@@ -6,9 +6,9 @@ import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import { SALESFORCE_HEADLESS_AUTHENTICATION as ARTICLE } from "@/lib/data/article/salesforce/identity";
 
-import HEADLESS_ALLOW_CODE_CREDENTIALS from './assets/Headless_Allow_Code_Credentials.png';
-import CONNECTED_APP_SETUP from './assets/Connected_App_Setup.png';
-import CONNECTED_APP_AUTH_POLICIES from './assets/Connected_App_Auth_Policies.png';
+import HEADLESS_ALLOW_CODE_CREDENTIALS from './assets/Headless_Allow_Code_Credentials.webp';
+import CONNECTED_APP_SETUP from './assets/Connected_App_Setup.webp';
+import CONNECTED_APP_AUTH_POLICIES from './assets/Connected_App_Auth_Policies.webp';
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -48,13 +48,15 @@ export default function HeadlessAuthentication() {
           <Image src={HEADLESS_ALLOW_CODE_CREDENTIALS} className="border mt-2"
             alt="Allow Headless Code Credentilas">
           </Image>
-          <section className="pt-3">
-            Create a connected app for headless identity and enable the Authorization Code and Credentials flow at the app level.
+          <section className="pt-4">
+            To establish a connecttion between an external application and Salesforce, it&apos;s essential to setup a Connected App.
+            During configuring the Connected App for headless authentication, ensure to activate the Authorization Code and Credentials 
+            Flow at the app level. To begin, navigate to <strong>App Manager</strong> and select <strong>New Connected App</strong>.
           </section>
           <Image src={CONNECTED_APP_SETUP} className="border mt-2"
             alt="Connected App for Headless Setup">
           </Image>
-          <section className="pt-2">
+          <section className="pt-4">
             In a standard OAuth flow, users often see an approval screen where they confirm that an app is allowed to access their Salesforce 
             data. With headless identity flows, you don&apos;t want to show users a Salesforce approval screen. To preapprove access, configure 
             OAuth policies on your connected app. From <strong>Edit Policies</strong>, under <strong>OAuth Policies</strong>, set the Permitted 
