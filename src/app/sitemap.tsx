@@ -50,7 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const sitemap: MetadataRoute.Sitemap = [
     {
       url: domain,
-      lastModified: "2024-04-12",
+      lastModified: "2024-04-30",
       changeFrequency: 'weekly',
       priority: 1,
     },
@@ -59,6 +59,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: "2024-04-04",
       changeFrequency: 'monthly',
       priority: 0.8,
+    }, {
+      url: withDomain("/about-us"),
+      lastModified: "2024-04-30",
+      changeFrequency: 'monthly',
+      priority: 0.8
+    }, {
+      url: withDomain("/contact-us"),
+      lastModified: "2024-04-30",
+      changeFrequency: 'monthly',
+      priority: 0.8
+    }, {
+      url: withDomain("/cookie-policy"),
+      lastModified: "2024-04-30",
+      changeFrequency: 'monthly',
+      priority: 0.8
+    }, {
+      url: withDomain("/privacy-policy"),
+      lastModified: "2024-04-30",
+      changeFrequency: 'monthly',
+      priority: 0.8
+    }, {
+      url: withDomain("/terms-of-use"),
+      lastModified: "2024-04-30",
+      changeFrequency: 'monthly',
+      priority: 0.8
     }
   ];
 
