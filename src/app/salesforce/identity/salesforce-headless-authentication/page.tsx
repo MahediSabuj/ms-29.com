@@ -107,15 +107,33 @@ export default function HeadlessAuthentication() {
           <h2 className="text-xl mt-4">
             <strong>Set Up and Configure Experience Cloud Site</strong>
           </h2>
+          <section className="pt-1">
+            All orgs get a My Domain with enhanced domains by default. If you don&apos;t like your org&apos;s My Domain name or circumstances demand 
+            a change, you can rename it. From <strong>My Domain</strong>, edit <strong>My Domain Details</strong>.
+          </section>
           <Image src={SALESFORCE_MY_DOMAIN_SETUP} className="border mt-2"
             alt="Salesforce My Domain Setup">
           </Image>
+          <section className="pt-2">
+            Enabling digital experiences is the first step to creating your Experience Cloud site. From <strong>Digital Experiences | Settings</strong>,
+            Select <strong>Enable Digital Experiences</strong>. If enhanced domains are enabled in your org, you see your digital experiences domain name.
+          </section>
           <Image src={ENABLE_DIGITAL_EXPERIENCE} className="border mt-2"
             alt="Enable Digital Experience">
           </Image>
+          <section className="pt-2">
+           From <strong>All Sites</strong>, Click <strong>New</strong> and Select a site template, e.g., <strong>Build Your Own (LWR)</strong> to create your 
+           Experience Cloud site. It is recommend that you don&apos;t provide a URL suffix for your site. That way, you&apos;re not required to remember it every 
+           time you need the Experience Cloud domain.
+          </section>
           <Image src={NEW_EXPERIENCE_CLOUD_SITE} className="border mt-2"
             alt="Create Experience Cloud Site">
           </Image>
+          <section className="pt-2">
+            Because your Experience Cloud site stores all your user information, you must add your end-user profile to the site&apos;s membership. From Experience
+            Workspaces, select <strong>Administration</strong>. From the Administration page, select <strong>Members</strong> and add &quot;AEM Headless Profile&quot; 
+            that you created earlier to the <strong>Selected Profiles</strong>.
+          </section>
           <Image src={SETUP_PROFILE_FOR_EXPERIENCE_CLOUD_SITE} className="border mt-2"
             alt="Setup Profile for Experience Cloud Site">
           </Image>
@@ -130,7 +148,7 @@ export default function HeadlessAuthentication() {
           <Image src={CONNECTED_APP_SETUP} className="border mt-2"
             alt="Connected App for Headless Setup">
           </Image>
-          <section className="pt-4">
+          <section className="pt-2">
             In a standard OAuth flow, users often see an approval screen where they confirm that an app is allowed to access their Salesforce 
             data. With headless identity flows, you don&apos;t want to show users a Salesforce approval screen. To preapprove access, configure 
             OAuth policies on your connected app. From <strong>Edit Policies</strong>, under <strong>OAuth Policies</strong>, set the Permitted 
@@ -139,6 +157,9 @@ export default function HeadlessAuthentication() {
           <Image src={CONNECTED_APP_AUTH_POLICIES} className="border mt-2"
             alt="Connected App Auth Policies">
           </Image>
+          <section className="pt-2">
+            On the Connected App <strong>Manage</strong> page, select <strong>Manage Profiles</strong> and add &quot;AEM Headless Profile&quot; that you created earlier.
+          </section>
           <Image src={CONNECTED_APP_MANAGE_PROFILES} className="border mt-2"
             alt="Connected App Manage Profiles">
           </Image>
