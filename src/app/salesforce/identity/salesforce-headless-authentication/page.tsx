@@ -18,9 +18,9 @@ import SETUP_PROFILE_FOR_EXPERIENCE_CLOUD_SITE from './assets/Setup_Profile_Expe
 import CONNECTED_APP_SETUP from './assets/Connected_App_Setup.webp';
 import CONNECTED_APP_AUTH_POLICIES from './assets/Connected_App_Auth_Policies.webp';
 import CONNECTED_APP_MANAGE_PROFILES from './assets/Connected_App_Manage_Profiles.webp';
+import CONNECTED_APP_MANAGE_CONSUMER_DETAILS from './assets/Connected_App_Manage_Consumer_Details.webp';
 import EXPERIENCE_CLOUD_SITE_REGISTER_USER_CONFIGURATION from './assets/Experience_Site_Register_User_Configuration.webp';
-import REGISTER_NEW_HEADLESS_USER from './assets/Register_New_Headless_User.webp';
-import HEADLESS_LOGIN_AUTHENCATION_REQUEST from './assets/Headless_Login_Authentication_Request.webp';
+import HEADLESS_LOGIN_AUTHORIZATION_REQUEST from './assets/Headless_Login_Authorization_Request.webp';
 import HEADLESS_LOGIN_ACCESS_TOKEN_REQUEST from './assets/Headless_Login_Access_Token_Request.webp';
 import HEADLESS_LOGIN_USERPROFILE_INFO from './assets/Headless_Login_UserProfile_Info.webp';
 
@@ -112,7 +112,7 @@ export default function HeadlessAuthentication() {
             a change, you can rename it. From <strong>My Domain</strong>, edit <strong>My Domain Details</strong>.
           </section>
           <Image src={SALESFORCE_MY_DOMAIN_SETUP} className="border mt-2"
-            alt="Salesforce My Domain Setup">
+            alt="Setup Salesforce My Domain">
           </Image>
           <section className="pt-2">
             Enabling digital experiences is the first step to creating your Experience Cloud site. From <strong>Digital Experiences | Settings</strong>,
@@ -163,27 +163,93 @@ export default function HeadlessAuthentication() {
           <Image src={CONNECTED_APP_MANAGE_PROFILES} className="border mt-2"
             alt="Connected App Manage Profiles">
           </Image>
+          <section className="pt-2">
+            When you create a Connected App, it generates a Consumer Key, also known as Client ID. This value allows Salesforce to identify your 
+            third-party app during headless identity flows. To access the Consumer Key, navigate to the <strong>App Manager</strong>, select <strong>View</strong> next 
+            to your app, then on the Connected App detail page, click <strong>Manage Consumer Details</strong>.
+          </section>
+          <Image src={CONNECTED_APP_MANAGE_CONSUMER_DETAILS} className="border mt-2"
+            alt="Connected App Manage Consumer Details">
+          </Image>
           <h2 className="text-xl mt-4">
             <strong>Create a User to Verify Headless Identity Setup</strong>
           </h2>
+          <section className="pt-1">
+            Enable self-registration on the Experience Cloud site to create a test user. Assign these users to the &quot;AEM Headless Profile&quot; profile 
+            and &quot;AEM Headless Account&quot; business account created earlier. If person accounts are enabled, refrain from populating the Account field. 
+            From <strong>All Sites</strong>, next to your Site, click <strong>Workspaces</strong>, select <strong>Administration</strong>, and then select 
+            <strong>Login & Registration</strong>.
+          </section>
           <Image src={EXPERIENCE_CLOUD_SITE_REGISTER_USER_CONFIGURATION} className="border mt-2"
             alt="Experience Cloud Site Register User Configuration">
           </Image>
-          <Image src={REGISTER_NEW_HEADLESS_USER} className="border mt-2"
-            alt="Register new Headless User">
-          </Image>
+          <section className="pt-2">
+            Within your Experience Cloud site&apos;s registration page, proceed to create a new end user. According to the settings configured for 
+            the registration page, the end user will be automatically included in the &quot;AEM Headless Profile&quot; and added as a contact to the 
+            &quot;AEM Headless User&quot; account.
+          </section>
           <h2 className="text-xl mt-4">
             <strong>Headless Login Postman Request</strong>
           </h2>
-          <Image src={HEADLESS_LOGIN_AUTHENCATION_REQUEST} className="border mt-2"
-            alt="Headless Login Authentication Request">
-          </Image>
-          <Image src={HEADLESS_LOGIN_ACCESS_TOKEN_REQUEST} className="border mt-2"
-            alt="Headless Login Access Token Request">
-          </Image>
-          <Image src={HEADLESS_LOGIN_USERPROFILE_INFO} className="border mt-2"
-            alt="Headless Login UserProfile Info">
-          </Image>
+          <section className="pt-1">
+            Now that you configured org-wide settings, Experience Cloud settings, and a connected app, you can test out the headless identity flows.
+            <ul className="list-decimal ml-6 pt-1 pl-2.5">
+              <li>
+                POST Authorization Request - /services/oauth2/authorize<br/>
+                <dl>
+                  <dt><strong>Authorization</strong></dt>
+                  <dd className="m-[revert]">
+                    Basic Auth [Username &amp; Password] will add <strong>Authorization</strong> header with the value Basic &lt;username:password&gt;, 
+                    which contains the Base64-encoded username and password value.
+                  </dd>
+                  <dt><strong>Headers</strong></dt>
+                  <dd className="m-[revert]">
+                    Auth-Request-Type: Named-User
+                  </dd>
+                  <dt><strong>Body</strong></dt>
+                  <dd className="m-[revert]">
+                    response_type: code_credentials<br/>
+                    client_id: [Connected App Consumer Key]<br/>
+                    redirect_uri: [Connected App Callback URL]
+                  </dd>
+                </dl>
+                <Image src={HEADLESS_LOGIN_AUTHORIZATION_REQUEST} className="border mt-2"
+                  alt="Headless Login Authorization Request">
+                </Image>
+              </li>
+              <li className="mt-2">
+                POST Token Request - /services/oauth2/token<br/>
+                <dl>
+                  <dt><strong>Body</strong></dt>
+                  <dd className="m-[revert]">
+                    code: Received in response during Authorization Request<br/>
+                    grant_type: authorization_code<br/>
+                    client_id: [Connected App Consumer Key]<br/>
+                    redirect_uri: [Connected App Callback URL]
+                  </dd>
+                </dl>
+                <Image src={HEADLESS_LOGIN_ACCESS_TOKEN_REQUEST} className="border mt-2"
+                  alt="Headless Login Access Token Request">
+                </Image>
+              </li>
+              <li className="mt-2">
+                POST User Info - /services/oauth2/userinfo<br/>
+                <dl>
+                  <dt><strong>Headers</strong></dt>
+                  <dd className="m-[revert]">
+                    Authorization: Bearer [access_token], received in response during Token Request<br/>
+                    Content-Type: application/json
+                  </dd>
+                </dl>
+                <Image src={HEADLESS_LOGIN_USERPROFILE_INFO} className="border mt-2"
+                  alt="Headless Login UserProfile Info">
+                </Image>
+                <span className="mt-1 inline-block">
+                  If the login was successful, you get a response containing information about the user.
+                </span>
+              </li>
+            </ul>
+          </section>
         </div>
       </article>
     </div>

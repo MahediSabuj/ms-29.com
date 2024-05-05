@@ -7,7 +7,7 @@ export const SALESFORCE_HEADLESS_AUTHENTICATION: IArticleItem = {
       enhancing faster login experience. It enables each channel to provide unique UI experiences according to their brand guidelines.`,
     url: "/salesforce/identity/salesforce-headless-authentication",
     publishDate: "May 03, 2024",
-    modifiedDate: "May 03, 2024",
+    modifiedDate: "May 05, 2024",
     topics: [ TOPICS.SF_IDENTITY ],
     active: true
 }

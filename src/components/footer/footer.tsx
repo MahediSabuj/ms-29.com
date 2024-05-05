@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-aem">
       <div className="py-2">
-        <ul className="flex flex-row justify-center text-[#0D9DDA]">
+        <ul className="flex flex-row justify-center text-[#CCC]">
           <li className="inline-flex items-center px-4">
             <Link href="/about-us">About Us</Link>
           </li>
