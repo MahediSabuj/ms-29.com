@@ -74,7 +74,7 @@ export default function Sidebar() {
           <Link href="/profile/mahedi-sabuj" className="text-blue-600">
             Abdullah &ndash; Al &ndash; Mahedi <strong>Sabuj</strong><br/>
           </Link>  
-          Principal Engineer @ <Link href="https://brainstation-23.com" >Brain Station 23 Ltd</Link>
+          Principal Engineer @ <Link target="_blank" href="https://brainstation-23.com" className="text-blue-600">Brain Station 23</Link>
         </div>
       </section>
       <section className="mt-4">

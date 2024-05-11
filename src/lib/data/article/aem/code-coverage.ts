@@ -15,7 +15,7 @@ export const MOCK_STATIC_METHODS_MOCKITO: IArticleItem = {
   title: "Mock Static Methods with Mockito",
   description: `In the pursuit of clean object-oriented code, the need to mock static methods may suggest design flaws or code smells, 
     prompting consideration for refactoring. Nevertheless, there are situations where mocking static methods remains crucial 
-    despite refactoring efforts.`,
+    despite refactoring.`,
   url: "/aem/code-coverage/mock-static-methods-with-mockito",
   publishDate: "April 25, 2024",
   modifiedDate: "April 25, 2024",

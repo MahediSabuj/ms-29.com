@@ -7,8 +7,8 @@ export const CUSTOM_AEM_WORKFLOW_PROCESS: IArticleItem = {
     these built-in features may not fully handle the complexities of specific workflows. In such cases, AEM allows 
     developers to create custom processes, enhancing the functionality of standard workflows to meet unique requirements.`,
   url: "/aem/workflow/aem-workflow-custom-process",
-  publishDate: "May 06, 2024",
-  modifiedDate: "May 06, 2024",
+  publishDate: "May 11, 2024",
+  modifiedDate: "May 11, 2024",
   topics: [ TOPICS.AEM_WORKFLOW ],
   active: true
 }

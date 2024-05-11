@@ -172,12 +172,12 @@ export default function FormsInSite() {
           publishDate={ARTICLE.publishDate}
           modifiedDate={ARTICLE.modifiedDate}/>
           <div>
-            <section className="pt-6 pb-3">
+            <section className="pt-6">
               There are two potential scenarios for integrating Adaptive forms into AEM Sites: one for new projects
               and another for existing projects. Adobe has developed the <Link className="text-blue-600" href="https://github.com/adobe/aem-core-forms-components">aem-core-forms-components</Link> (Forms Core Components) which
               can be used to incorporate forms standard components into AEM Sites.
             </section>
-            <section className="py-3">
+            <section className="pt-3">
               During project creation using the <Link className="text-blue-600" href="https://github.com/adobe/aem-project-archetype">aem-project-archetype</Link>, you
               can enable Forms Core Components for New Projects. The <em>includeFormsenrollment</em> option is solely responsible
               for integrating Forms Core Components dependencies and generating associated artifacts in a new AEM project. Customize
@@ -185,11 +185,11 @@ export default function FormsInSite() {
               project with Forms Core Components.
             </section>
             <Highlight code={aem_project_archetype} language="xml" path="AEM 6.5.X"/>
-            <div className="py-3">
+            <div className="pt-3">
               After generating the project, the AdaptiveForm components will be automatically included in your project, allowing you to immediately
               utilize these components on your pages.
             </div>
-            <div className="py-3">
+            <div className="pt-3">
               However, for Existing Projects, you&apos;ll have to manually add several dependencies to the pom.xml files. Moreover, incorporating Adaptive Form
               components into the project will also require manual intervention.
             </div>
@@ -203,7 +203,7 @@ export default function FormsInSite() {
             <div className="pt-3">
               <Highlight code={all_pom_xml} language="xml" path="all / pom.xml"/>
             </div>
-            <div className="py-3">
+            <div className="pt-3">
               After updating the pom.xml files, the subsequent step involves creating proxy components within the project&apos;s codebase. Here&apos;s an example
               demonstrating how to incorporate the Adaptive Form text component by extending the Forms Core Components.
             </div>

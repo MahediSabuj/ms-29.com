@@ -134,11 +134,11 @@ export default function FetchMultiField() {
           For demonstration purposes, we&apos;ve included an option for the article title. However, you can also fetch the title
           directly from the page itself, depending on your project requirements.
         </div>
-        <div className="pt-6">
+        <div className="pt-3">
           After authoring the component dialog, multifield data is stored in the content repository as shown below.
         </div>
         <Highlight code={content} language="xml" path="content / aem-demo / home"/>
-        <div className="pt-6">
+        <div className="pt-3">
           To retrieve this data, Sling Model can be utilized. Using <code className="code-inline">@ChildResource</code> annotation injectors, we can adapt them
           to the target type (e.g., <code className="code-inline">ArticleItem</code>) and populate them with all child resources of the resource identified by
           the specified name.
@@ -146,7 +146,7 @@ export default function FetchMultiField() {
         <Highlight code={article} language="java" path="components / model / Article.java"/>
         <div className="py-1.5"></div>
         <Highlight code={article_item} language="java" path="components / model / ArticleItem.java"/>
-        <div className="pt-6">
+        <div className="pt-3">
           To showcase related articles in the component&apos;s HTML, you can iterate through the list of articles using <code className="code-inline">data-sly-list</code> and
           display their information accordingly.
         </div>

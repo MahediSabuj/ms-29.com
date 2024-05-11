@@ -110,10 +110,10 @@ export default function RootLayout({
           <Header {...headerConfig}/>
           <div className="container mx-auto py-4 grow">
             <div className="max-w-7xl px-4 sm:px-6 lg:px-8 md:flex">
-              <main className="md:w-2/3 w-full">
+              <main className="md:w-3/4 w-full">
                 <div className="md:mr-8">{children}</div>
               </main>
-              <aside className="md:w-1/3 w-full md:pt-0 pt-4">
+              <aside className="md:w-1/4 w-full md:pt-0 pt-4">
                 <Sidebar/>
               </aside>
             </div>

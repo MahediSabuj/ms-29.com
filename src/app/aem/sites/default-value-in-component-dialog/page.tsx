@@ -52,14 +52,18 @@ export default function DefaultValueComponentDialog() {
           <section className="pt-6">
             In AEM components, it&apos;s often necessary to establish default values. This ensures that when components are
             dragged onto the page, they display predefined initial values. Subsequently, authors can configure the
-            components based on specific requirements. <br/> <br/>
+            components based on specific requirements.
+          </section>
+          <section className="pt-3">  
             Utilizing <strong>cq:template</strong> is effective in this scenario. Need to verify how the values are stored
             in the content node upon saving the component dialog and then duplicate the identical structure in <em>cq:template</em>.
-            This ensures that the values will be stored to the content node as soon as component is added to the page. <br/><br/>
+            This ensures that the values will be stored to the content node as soon as component is added to the page.
+          </section>
+          <section className="pt-3">  
             In the example below, a new item will be added to the multifield once the component is dragged on the page.
           </section>
           <Highlight code={_cq_template} language="xml" path="_cq_template / .content.xml"/>
-          <section className="pt-8">
+          <section className="pt-3">
             If there&apos;s a need for the same cq:template across various components, the <strong>cq:templatePath</strong> properties
             can be utilized. As an illustration, duplicate the _cq_template node and place it in a common place like
             project/datasource, naming it, for instance, &quot;navigation&quot;. Subsequently, within the component properties,
