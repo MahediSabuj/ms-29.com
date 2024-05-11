@@ -106,7 +106,7 @@ export const AEM_COMPONENT_DIALOG_CHEATSHEET: IArticleItem = {
   description: `Granite UI provides a large range of the basic components needed to create component 
     dialog on the authoring environment. These components are constructed using Coral UI-based elements.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+    active: true
 }
 
 export const DEFAULT_VALUES_IN_AEM_COMPONENT_DIALOG: IArticleItem = {
@@ -224,13 +224,13 @@ export const WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS : IArticleItem =
 export const EXTEND_AEM_PAGE_PROPERTIES : IArticleItem = {
   title: "Extend AEM Page Properties",
   url: "/aem/sites/extend-aem-page-properties",
-  publishDate: "April 30, 2024",
-  modifiedDate: "April 30, 2024",
+  publishDate: "May 14, 2024",
+  modifiedDate: "May 14, 2024",
   description: `Page properties in AEM serve as metadata that provide essential information about a webpage. While AEM 
     provides a standard set of properties to meet basic web project needs, organizations often enhance them with extra 
     functionalities or custom data fields to effectively address more complex or unique requirements in content management.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const APACHE_SLING_SITEMAP_GENERATOR: IArticleItem = {

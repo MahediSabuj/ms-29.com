@@ -161,7 +161,8 @@ export default function DialogCheatSheet() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
           <div>
             <section className="pt-6 pb-3">
               Granite UI provides a large range of the basic components needed to create component dialog on the

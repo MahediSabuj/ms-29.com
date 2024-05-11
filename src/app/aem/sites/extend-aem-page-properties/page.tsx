@@ -36,6 +36,10 @@ export default function ExtendPageProperties() {
             provides a standard set of properties to meet basic web project needs, organizations often enhance them with extra 
             functionalities or custom data fields to effectively address more complex or unique requirements in content management.
           </section>  
+          <section className="pt-3">
+            We&apos;ll look at three ways in which we can extend page properties: adding custom tab with custom text field, 
+            inserting new field into an existing tab, and hiding any tabs or fields that aren&apos;t relevant to the implementation.
+          </section>
         </div>  
       </article>
     </div>
