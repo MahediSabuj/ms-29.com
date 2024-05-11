@@ -258,7 +258,7 @@ export const SAML_AUTHENTICATION : IArticleItem = {
 }
 
 export const SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION : IArticleItem = {
-  title: "Show/Hide AEM Dialog Fields on Dropdown Selection in AEM",
+  title: "Show/Hide AEM Dialog Fields on Dropdown Selection",
   url: "/aem/sites/show-hide-aem-dialog-fields-on-dropdown-selection",
   publishDate: "April 10, 2024",
   modifiedDate: "April 10, 2024",
