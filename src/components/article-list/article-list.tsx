@@ -22,7 +22,8 @@ export default function ArticleList({ articleItems, pageType } : IArticleList) {
               topics={showTopics ? item.topics : []}
               description={showDescription ? item.description : ""}
               publishDate={item.publishDate}
-              modifiedDate={item.modifiedDate}/>
+              modifiedDate={item.modifiedDate}
+              views={item.views}/>
           </div>
         )
       })}

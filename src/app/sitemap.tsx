@@ -76,7 +76,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8
     }, {
       url: withDomain("/privacy-policy"),
-      lastModified: "2024-04-30",
+      lastModified: "2024-05-12",
       changeFrequency: 'monthly',
       priority: 0.8
     }, {

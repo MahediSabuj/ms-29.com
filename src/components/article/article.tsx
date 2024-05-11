@@ -4,7 +4,7 @@ import DateFormatter from "@/lib/util/date-formatter";
 import LinkText from "../link-text/link-text";
 
 export default function Article({
-  title, topics, url, publishDate, modifiedDate, description } : IArticleItem
+  title, topics, url, publishDate, modifiedDate, description, views } : IArticleItem
 ) {
   const dateFormatter = new (DateFormatter as any)();
   const Heading: keyof JSX.IntrinsicElements = description ? 'h2' : 'h1'; /* Description available only on Listing Page */
@@ -27,6 +27,12 @@ export default function Article({
             <time itemProp="dateModified" dateTime={dateFormatter.formatDate(modifiedDate)}>
               {modifiedDate}
             </time>
+          </div>
+        }
+        {views && 
+          <div className="md:inline md:ml-4">
+            <span className="text-[#636B74] mr-2">Viewed</span>
+            <span>{views} times</span>
           </div>
         }
       </div>
