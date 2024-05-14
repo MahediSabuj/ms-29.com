@@ -40,22 +40,33 @@ const INSERT_NEW_FIELD_ON_EXISTING_TAB =
         <title jcr:primaryType="nt:unstructured"
           sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
           <items jcr:primaryType="nt:unstructured">
-            <hideSubPagesInNav jcr:primaryType="nt:unstructured"
-              allowBulkEdit="{Boolean}true"
-              sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
-              name="./hideSubPagesInNav"
-              renderReadOnly="{Boolean}true"
-              text="Hide all subpage in Navigation"
-              value="true">
-              <granite:data jcr:primaryType="nt:unstructured"
-                cq-msm-lockable="hideSubPagesInNav"/>
-            </hideSubPagesInNav>
           </items>
         </title>
       </items>
     </column>
   </items>
 </basic>`;
+
+const HIDE_TAB = 
+`<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" 
+  xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+  xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+  jcr:primaryType="nt:unstructured"
+  jcr:title="Page"
+  sling:resourceType="cq/gui/components/authoring/dialog"
+  mode="edit">
+  <content jcr:primaryType="nt:unstructured"
+    sling:resourceType="granite/ui/components/coral/foundation/container">
+    <items jcr:primaryType="nt:unstructured">
+      <tabs jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/tabs">
+        <items jcr:primaryType="nt:unstructured"
+          sling:hideChildren="[personalization,cloudservices]>
+        </items>
+      </tabs>
+    </items>
+  </content>
+</jcr:root>`;
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
@@ -86,6 +97,8 @@ export default function ExtendPageProperties() {
           </section>
           <Highlight code={ADD_NEW_TAB} language="xml" path="page / _cq_dialog / .content.xml"/>
           <Highlight code={INSERT_NEW_FIELD_ON_EXISTING_TAB} language="xml" path="page / _cq_dialog / .content.xml"/>
+          <Highlight code={HIDE_TAB} language="xml" path="page / _cq_dialog / .content.xml"/>
+
         </div>
       </article>
     </div>
