@@ -26,7 +26,7 @@ const ADD_NEW_TAB =
       </items>
     </column>
   </items>
-</contentApproval>"`;
+</contentApproval>`;
 
 const INSERT_NEW_FIELD_ON_EXISTING_TAB = 
 `<basic jcr:primaryType="nt:unstructured"
@@ -92,11 +92,23 @@ export default function ExtendPageProperties() {
             functionalities or custom data fields to effectively address more complex or unique requirements in content management.
           </section>  
           <section className="pt-3">
-            We&apos;ll look at three ways in which we can extend page properties: adding custom tab with custom text field, 
-            inserting new field into an existing tab, and hiding any tabs or fields that aren&apos;t relevant to the implementation.
+            We&apos;ll look at three ways in which we can extend page properties: adding new tab with text field, inserting 
+            new field into an existing tab, and hiding any tabs or fields that aren&apos;t relevant to the implementation.
           </section>
+          <section className="pt-3">
+            We will be extending the page properties for AEM sites which uses Core Components.
+          </section>
+          <h2 className="text-xl mt-4">
+            <strong>Adding new Tab with Text Field</strong>
+          </h2>
           <Highlight code={ADD_NEW_TAB} language="xml" path="page / _cq_dialog / .content.xml"/>
+          <h2 className="text-xl mt-4">
+            <strong>Inserting new Field within an Existing Tab</strong>
+          </h2>
           <Highlight code={INSERT_NEW_FIELD_ON_EXISTING_TAB} language="xml" path="page / _cq_dialog / .content.xml"/>
+          <h2 className="text-xl mt-4">
+            <strong>Hiding Existing Tabs or Fields</strong>
+          </h2>
           <Highlight code={HIDE_TAB} language="xml" path="page / _cq_dialog / .content.xml"/>
 
         </div>
