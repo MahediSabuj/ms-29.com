@@ -224,8 +224,8 @@ export const WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS : IArticleItem =
 export const EXTEND_AEM_PAGE_PROPERTIES : IArticleItem = {
   title: "Extend AEM Page Properties",
   url: "/aem/sites/extend-aem-page-properties",
-  publishDate: "May 16, 2024",
-  modifiedDate: "May 16, 2024",
+  publishDate: "May 18, 2024",
+  modifiedDate: "May 18, 2024",
   description: `Page properties in AEM serve as metadata that provide essential information about a webpage. While AEM 
     provides a standard set of properties to meet basic web project needs, organizations often enhance them with extra 
     functionalities or custom data fields to effectively address more complex or unique requirements in content management.`,
