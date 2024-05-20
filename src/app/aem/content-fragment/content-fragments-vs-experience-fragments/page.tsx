@@ -40,7 +40,12 @@ export default function CFvsXF() {
             <strong>Content Fragments</strong>
           </h2>
           <div>
-            Content Fragments are structured content based on a Content Fragment Model. 
+            Content Fragments are structured content based on a Content Fragment Model (CFM). In the database paradigm, CFM acts as a 
+            table, while CFs play the role of rows.
+          </div>
+          <div className="pt-3">
+            Content Fragments can be delivered across channels using the AEM Headless GraphQL API. It is content-centric, allowing AEM 
+            itself and third-party channels to adjust the design and layout according on their requirements.
           </div>
           <h2 id="experience-fragments" className="text-xl mt-4">
             <strong>Experience Fragments</strong>
