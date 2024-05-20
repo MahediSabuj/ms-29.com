@@ -33,6 +33,10 @@ const TOPICS: Topics = {
     title: "AEM Workflow",
     url: "/aem/workflow"
   },
+  EXPERIENCE_FRAGMENT: {
+    title: "Experience Fragment",
+    url: "/aem/experience-fragment"
+  },
   AWS_EC2: {
     title: "AWS EC2",
     url: "/aws/ec2"

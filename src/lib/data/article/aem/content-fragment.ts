@@ -4,9 +4,9 @@ import TOPICS from "@/lib/data/article/topics";
 export const CONTENT_FRAGMENT_PROGRAMMATICALLY: IArticleItem = {
   title: "Create Content Fragment Programmatically",
   description: `Creating a content fragment programmatically requires setting up a system user with Read 
-      permission for the content fragment model and Read, Modify, Create permissions for the asset folder where
-      the content fragment will be stored. Additionally, ensure the content fragment model and asset folder are
-      created for saving the content fragment.`,
+    permission for the content fragment model and Read, Modify, Create permissions for the asset folder where
+    the content fragment will be stored. Additionally, ensure the content fragment model and asset folder are
+    created for saving the content fragment.`,
   url: "/aem/content-fragment/create-content-fragment-programmatically",
   publishDate: "February 16, 2024",
   modifiedDate: "February 16, 2024",
@@ -33,10 +33,10 @@ export const CONTENT_FRAGMENTS_VS_EXPERIENCE_FRAGMENTS : IArticleItem = {
     components in AEM are Content Fragments (CF) and Experience Fragments (XF). While both are used to create reusable content, 
     each serves a distinct purpose and offers unique capabilities.`,
   url: "/aem/content-fragment/content-fragments-vs-experience-fragments",
-  publishDate: "May 25, 2024",
-  modifiedDate: "May 25, 2024",
+  publishDate: "May 22, 2024",
+  modifiedDate: "May 22, 2024",
   topics: [ TOPICS.CONTENT_FRAGMENT ],
-  active: false
+  active: true
 }
 
 export const CONTENT_FRAGMENT: IArticleItem[] = [

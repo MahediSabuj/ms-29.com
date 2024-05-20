@@ -11,6 +11,7 @@ import { AEM_SPA } from "@/lib/data/article/aem/spa";
 import { CODE_COVERAGE } from "@/lib/data/article/aem/code-coverage";
 import { AEM_DISPATCHER } from "@/lib/data/article/aem/dispatcher";
 import { AEM_WORKFLOW } from "@/lib/data/article/aem/workflow";
+import { EXPERIENCE_FRAGMENT } from "@/lib/data/article/aem/experience-fragment";
 import { AWS_EC2 } from "@/lib/data/article/aws/ec2";
 import { SF_LWC } from "@/lib/data/article/salesforce/lwc";
 import { SF_IDENTITY } from "@/lib/data/article/salesforce/identity";
@@ -31,6 +32,7 @@ const articles : IArticleList = {
     ...CODE_COVERAGE,
     ...AEM_DISPATCHER,
     ...AEM_WORKFLOW,
+    ...EXPERIENCE_FRAGMENT,
     ...AWS_EC2,
     ...SF_LWC,
     ...SF_IDENTITY

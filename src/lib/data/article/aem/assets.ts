@@ -9,10 +9,10 @@ export const CUSTOM_METADATA_AEM_ASSETS: IArticleItem = {
     specific details, campaign tags, and other relevant data, streamlining more effective asset categorization 
     and management.`,
   url: "/aem/assets/custom-metadata-in-aem-assets",
-  publishDate: "May 15, 2024",
-  modifiedDate: "May 15, 2024",
+  publishDate: "May 25, 2024",
+  modifiedDate: "May 25, 2024",
   topics: [ TOPICS.AEM_ASSETS ],
-  active: false
+  active: true
 }
 
 export const UNUSED_ASSET_CLEANUP : IArticleItem = {
