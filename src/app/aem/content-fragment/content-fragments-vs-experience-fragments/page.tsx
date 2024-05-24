@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
@@ -40,12 +41,17 @@ export default function CFvsXF() {
             <strong>Content Fragments</strong>
           </h2>
           <div>
-            Content Fragments are structured content based on a Content Fragment Model (CFM). In the database paradigm, CFM acts as a 
-            table, while CFs play the role of rows.
+            Content Fragments are structured content based on a Content Fragment Model (CFM) and implemented as <strong className="text-sm">dam:Asset</strong>. 
+            In the database paradigm, CFM acts as a table, while CFs play the role of rows.
           </div>
           <div className="pt-3">
-            Content Fragments can be delivered across channels using the AEM Headless GraphQL API. It is content-centric, allowing AEM 
-            itself and third-party channels to adjust the design and layout according on their requirements.
+            Content Fragments can be delivered across channels using the AEM Headless GraphQL API and can also be used in AEM Sites 
+            or Experience Fragments through the <Link className="text-blue-600" target="_blank" href="https://github.com/adobe/aem-core-wcm-components/tree/main/content/src/content/jcr_root/apps/core/wcm/components/contentfragment/v1/contentfragment">AEM Core Content Fragment Component</Link>. It is content-centric, allowing AEM itself and 
+            third-party channels to adjust the design and layout according on their requirements.
+          </div>
+          <div className="pt-3">
+            MSM&apos;s standard rollout config does not update Content Fragment references to match the locale-specific paths in the live copy, 
+            resulting in references still pointing to the original source.
           </div>
           <h2 id="experience-fragments" className="text-xl mt-4">
             <strong>Experience Fragments</strong>
