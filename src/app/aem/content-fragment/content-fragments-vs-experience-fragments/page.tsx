@@ -58,7 +58,12 @@ export default function CFvsXF() {
           </h2>
           <div>
             Experience Fragments are comprised of one or more AEM Components, enabling content authors to reuse the same content across 
-            multiple pages within AEM Sites.
+            multiple pages within AEM Sites or other Experience Fragments.
+          </div>
+          <div className="pt-3">
+            Using the <Link className="text-blue-600" target="_blank" href="https://github.com/adobe/aem-core-wcm-components/tree/main/content/src/content/jcr_root/apps/core/wcm/components/experiencefragment/v1/experiencefragment">AEM Core Experience Fragment Component</Link>, localized experience fragments can be rendered according to the current page&apos;s 
+            localization if component is configured in template and experience fragments are created following the specified <strong className="text-sm">fragmentVariationPath</strong> pattern.
+            This is particularly useful for managing the headers and footers of AEM pages.
           </div>
         </div>
       </article>
