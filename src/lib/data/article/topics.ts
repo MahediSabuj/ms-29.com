@@ -60,8 +60,11 @@ const TOPICS: Topics = {
   DIVIDE_CONQUER: {
     title: "Divide and Conquer",
     url: "/cp/divide-conquer"
-  } 
-
+  },
+  POSTGRESQL: {
+    title: "PostgreSQL",
+    url: "/db/postgresql"
+  }
 }
 
 export default TOPICS;

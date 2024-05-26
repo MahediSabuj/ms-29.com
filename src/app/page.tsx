@@ -18,6 +18,7 @@ import { SF_IDENTITY } from "@/lib/data/article/salesforce/identity";
 import { DYNAMIC_PROGRAMMING } from "@/lib/data/article/cp/dynamic-programming";
 import { GRAPH } from "@/lib/data/article/cp/graph";
 import { DIVIDE_CONQUER } from "@/lib/data/article/cp/divide-conquer";
+import { POSTGRESQL } from "@/lib/data/article/db/postgresql";
 
 export const metadata: Metadata = {
   alternates: {
@@ -41,7 +42,8 @@ const articles : IArticleList = {
     ...SF_IDENTITY,
     ...DYNAMIC_PROGRAMMING,
     ...GRAPH,
-    ...DIVIDE_CONQUER
+    ...DIVIDE_CONQUER,
+    ...POSTGRESQL
   ],
   pageType: PAGE_TYPE.HOME_PAGE
 }

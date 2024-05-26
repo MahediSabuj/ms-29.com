@@ -15,6 +15,7 @@ import { SF_IDENTITY } from "@/lib/data/article/salesforce/identity";
 import { DYNAMIC_PROGRAMMING } from "@/lib/data/article/cp/dynamic-programming";
 import { GRAPH } from "@/lib/data/article/cp/graph";
 import { DIVIDE_CONQUER } from "@/lib/data/article/cp/divide-conquer";
+import { POSTGRESQL } from "@/lib/data/article/db/postgresql";
 import { IArticleItem } from "@/types/article";
 import TOPICS from '@/lib/data/article/topics';
 
@@ -110,6 +111,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   loadArticles(TOPICS.DYNAMIC_PROGRAMMING.url, DYNAMIC_PROGRAMMING);
   loadArticles(TOPICS.GRAPH.url, GRAPH);
   loadArticles(TOPICS.DIVIDE_CONQUER.url, DIVIDE_CONQUER);
+
+  loadArticles(TOPICS.POSTGRESQL.url, POSTGRESQL);
 
   return sitemap;
 }

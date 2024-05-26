@@ -18,6 +18,7 @@ import { SF_IDENTITY } from "@/lib/data/article/salesforce/identity";
 import { DYNAMIC_PROGRAMMING } from "@/lib/data/article/cp/dynamic-programming";
 import { GRAPH } from "@/lib/data/article/cp/graph";
 import { DIVIDE_CONQUER } from "@/lib/data/article/cp/divide-conquer";
+import { POSTGRESQL } from "@/lib/data/article/db/postgresql";
 
 const aem : IListGroup = {
   title: "Adobe Experience Manager",
@@ -84,6 +85,14 @@ const competitiveProgramming : IListGroup = {
   }]
 }
 
+const database: IListGroup = {
+  title: "Database",
+  listItems: [{
+    topic: TOPICS.POSTGRESQL,
+    count: POSTGRESQL.length
+  }]
+}
+
 export default function Sidebar() {
   return (
     <div>
@@ -109,6 +118,9 @@ export default function Sidebar() {
       </section>
       <section className="mt-4">
         <ListGroup {...competitiveProgramming}/>
+      </section>
+      <section className="mt-4">
+        <ListGroup {...database}/>
       </section>
     </div>
   ); 
