@@ -65,6 +65,9 @@ export default function CFvsXF() {
             localization if component is configured in template and experience fragments are created following the specified <strong className="text-sm">fragmentVariationPath</strong> pattern.
             This is particularly useful for managing the headers and footers of AEM pages.
           </div>
+          <div className="pt-3">
+            Experience Fragments have the capability to be exported to Adobe Target. Subsequently, they can used as offers in Target activities, and personalize experiences at scale.
+          </div>
         </div>
       </article>
     </div>
