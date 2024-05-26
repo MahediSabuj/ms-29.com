@@ -12,7 +12,11 @@ import { EXPERIENCE_FRAGMENT } from "@/lib/data/article/aem/experience-fragment"
 import { AWS_EC2 } from "@/lib/data/article/aws/ec2";
 import { SF_LWC } from "@/lib/data/article/salesforce/lwc";
 import { SF_IDENTITY } from "@/lib/data/article/salesforce/identity";
+import { DYNAMIC_PROGRAMMING } from "@/lib/data/article/cp/dynamic-programming";
+import { GRAPH } from "@/lib/data/article/cp/graph";
+import { DIVIDE_CONQUER } from "@/lib/data/article/cp/divide-conquer";
 import { IArticleItem } from "@/types/article";
+import TOPICS from '@/lib/data/article/topics';
 
 const domain: string = "https://ms-29.com";
 
@@ -102,6 +106,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   loadArticles("/salesforce/lwc", SF_LWC);
   loadArticles("/salesforce/identity", SF_IDENTITY);
+
+  loadArticles(TOPICS.DYNAMIC_PROGRAMMING.url, DYNAMIC_PROGRAMMING);
+  loadArticles(TOPICS.GRAPH.url, GRAPH);
+  loadArticles(TOPICS.DIVIDE_CONQUER.url, DIVIDE_CONQUER);
 
   return sitemap;
 }

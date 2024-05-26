@@ -48,7 +48,20 @@ const TOPICS: Topics = {
   SF_IDENTITY: {
     title: "Salesforce Identity",
     url: "/salesforce/identity"
-  }
+  },
+  DYNAMIC_PROGRAMMING: {
+    title: "Dynamic Programming",
+    url: "/cp/dynamic-programming"
+  },
+  GRAPH: {
+    title: "Graph",
+    url: "/cp/graph"
+  },
+  DIVIDE_CONQUER: {
+    title: "Divide and Conquer",
+    url: "/cp/divide-conquer"
+  } 
+
 }
 
 export default TOPICS;

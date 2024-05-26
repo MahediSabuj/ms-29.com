@@ -15,6 +15,9 @@ import { EXPERIENCE_FRAGMENT } from "@/lib/data/article/aem/experience-fragment"
 import { AWS_EC2 } from "@/lib/data/article/aws/ec2";
 import { SF_LWC } from "@/lib/data/article/salesforce/lwc";
 import { SF_IDENTITY } from "@/lib/data/article/salesforce/identity";
+import { DYNAMIC_PROGRAMMING } from "@/lib/data/article/cp/dynamic-programming";
+import { GRAPH } from "@/lib/data/article/cp/graph";
+import { DIVIDE_CONQUER } from "@/lib/data/article/cp/divide-conquer";
 
 const aem : IListGroup = {
   title: "Adobe Experience Manager",
@@ -67,6 +70,20 @@ const salesforce: IListGroup = {
   }]
 }
 
+const competitiveProgramming : IListGroup = {
+  title: "Competitive Programming",
+  listItems: [{
+    topic: TOPICS.DYNAMIC_PROGRAMMING,
+    count: DYNAMIC_PROGRAMMING.length
+  }, {
+    topic: TOPICS.GRAPH,
+    count: GRAPH.length
+  }, {
+    topic: TOPICS.DIVIDE_CONQUER,
+    count: DIVIDE_CONQUER.length
+  }]
+}
+
 export default function Sidebar() {
   return (
     <div>
@@ -89,6 +106,9 @@ export default function Sidebar() {
       </section>
       <section className="mt-4">
         <ListGroup {...salesforce}/>
+      </section>
+      <section className="mt-4">
+        <ListGroup {...competitiveProgramming}/>
       </section>
     </div>
   ); 
