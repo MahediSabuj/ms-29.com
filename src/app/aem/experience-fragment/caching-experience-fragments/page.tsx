@@ -36,6 +36,10 @@ export default function CachingExperienceFragment() {
             the pages referencing it because the XF content is cached within each individual page rather than a shared repository. 
             As a result, authors have to manually activate or invalidate each page to see the updated XF content, making the process tedious and impractical.
           </section>
+          <section className="pt-3">
+            Experience Fragments can be added into pages using two ways: embedding as part of template or inserting specific variation
+            through the experience fragment component.
+          </section>
         </div>
       </article>
     </div>
