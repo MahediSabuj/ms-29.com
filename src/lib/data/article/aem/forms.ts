@@ -2,7 +2,7 @@ import { IArticleItem } from "@/types/article";
 import TOPICS from "@/lib/data/article/topics";
 
 export const FORM_SUBMISSION_AUTHOR_INSTANCE: IArticleItem = {
-  title: "Form Submission from Publish to Author Instance",
+  title: "Form Submission from Publisher to Author Instance",
   description: `In General, when an end user submits a form, the request is routed to the publish 
     environment. Any modifications made at the CRX/DE during the execution of the post request are 
     stored in the publish environment. However, a request may arise where upon form submission, 
@@ -11,7 +11,7 @@ export const FORM_SUBMISSION_AUTHOR_INSTANCE: IArticleItem = {
     accessible on the internet.`,
   url: "/aem/forms/form-submission-from-publish-to-author-instance",
   publishDate: "March 28, 2024",
-  modifiedDate: "April 04, 2024",
+  modifiedDate: "July 24, 2024",
   topics: [ TOPICS.AEM_FORMS ],
   active: true
 }
@@ -41,8 +41,8 @@ export const ADAPTIVE_FORMS_USING_JSON_SCHEMA : IArticleItem = {
   description: `Adobe Experience Manager Forms supports creation of an adaptive form by using an existing JSON Schema 
     as the form model. This JSON Schema reflects how data is produced or consumed by the back-end system in your organization.`,
   url: "/aem/forms/adaptive-forms-using-json-schema",
-  publishDate: "May 04, 2024",
-  modifiedDate: "May 04, 2024",
+  publishDate: "June 25, 2024",
+  modifiedDate: "June 25, 2024",
   topics: [ TOPICS.AEM_FORMS ],
   active: false
 }

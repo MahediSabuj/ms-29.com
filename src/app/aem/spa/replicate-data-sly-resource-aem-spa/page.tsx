@@ -125,7 +125,7 @@ export default function DataSlyResourceInSPA() {
               <Highlight code={TEASER_CQ_TEMPLATE} language="xml" path="teaser / _cq_template / .content.xml"/>
             </li>
             <li className="mt-2">
-              Fetch embedded components in Sling Model using the Sling Model Delegation Pattern.
+              Fetch embedded components in Sling Model using Delegation Pattern.
               <Highlight code={TEASER_SLING_MODEL} language="java" path="Teaser.java"/>
             </li>
             <li className="mt-2">

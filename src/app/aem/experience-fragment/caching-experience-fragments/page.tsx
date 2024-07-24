@@ -7,7 +7,6 @@ import Highlight from "@/components/highlight/highlight";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import { CACHING_EXPERIENCE_FRAGMENTS as ARTICLE } from "@/lib/data/article/aem/experience-fragment";
-import Experience_Fragments_Cache from "./assets/Experience-Fragments-Cache.webp";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -67,20 +66,16 @@ export default function CachingExperienceFragment() {
           </section>
           <section className="pt-3">
             This article outlines <Link target="_blank" className="text-blue-600" href="/aem/dispatcher/cache-aem-pages-with-dynamic-content">setup
-            process for SDI to serve dynamic content</Link>. With slight adjustments to the OSGi configuration, we can ensure that XF is cached in the dispatcher.
+            process for SDI to serve dynamic content</Link>. To ensure that XF is cached in the dispatcher, add the following SDI configuration on the Publisher instance.
           </section>
-          <Highlight code={SDI_OSGI_CONFIGURATION} language="json" path="config.publish / org.apache.sling.dynamicinclude.Configuration~aem-demo.cfg.json"/>
-          <section className="pt-6">
-            Once SDI is set up and the vhost file is configured correctly as described in the <Link target="_blank" className="text-blue-600" href="/aem/dispatcher/cache-aem-pages-with-dynamic-content">article</Link>,
-            you should observe SDI comments and include tags in the dispatcher cache file. This ensures that the contents of experience fragments
-            are not included in the pages and are instead served from <code className="code-inline">/content/experience-fragments/aem-demo</code>.
-          </section>
-          <Image src={Experience_Fragments_Cache} className="border py-1 my-1"
-               alt="Experience Fragments Cache">
-          </Image>
+          <Highlight code={SDI_OSGI_CONFIGURATION} language="json" path="config.publish / org.apache.sling.dynamicinclude.Configuration~aem-demo-xf.cfg.json"/>
           <section className="pt-3">
-            It is crucial to avoid adding rules that disable caching, as this would prevent the XF contents from being cached, resulting in responses
-            being fetched from the publisher for every request.
+            Now, you should observe SDI comments and include tags in the dispatcher cache file where experience fragments are added to the page.
+            Additionally, you can verify that <code className="code-inline">/content/experience-fragments/aem-demo</code> is included in the dispatcher cache.
+            With this setup, any changes published in XF will automatically update the pages, ensuring end users see the latest content without additional hiccup from the author.
+          </section>
+          <section className="pt-3">
+            Be careful not to add rules that disable caching, as this would prevent the XF contents from being cached, resulting in responses being fetched from the publisher for every request.
           </section>
         </div>
       </article>
