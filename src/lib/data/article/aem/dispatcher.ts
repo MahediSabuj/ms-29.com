@@ -40,16 +40,16 @@ export const CACHE_AEM_DYNAMIC_CONTENT: IArticleItem = {
 }
 
 export const DISPATCHER_CACHE_FLUSH_STRATEGIES: IArticleItem = {
-  title: "AEM Dispatcher Cache Flush Strategies",
+  title: "AEM Dispatcher Caching Flush Strategies",
   description: `When caching is implemented for your website, it's essential to clear the dispatcher cache after publishing pages 
     to ensure the most recent content is displayed to end users. Once the cache is cleared, the dispatcher forwards the next request 
     to the publisher to generate recent content, which is then added to the dispatcher cache. Subsequent requests are delivered 
     from the dispatcher cache.`,
-  url: "/aem/dispatcher/aem-dispatcher-cache-flush-strategies",
-  publishDate: "May 02, 2024",
-  modifiedDate: "May 02, 2024",
+  url: "/aem/dispatcher/aem-dispatcher-caching-flush-strategies",
+  publishDate: "July 23, 2024",
+  modifiedDate: "July 23, 2024",
   topics: [ TOPICS.AEM_DISPATCHER ],
-  active: false
+  active: true
 }
 
 export const AEM_LOG_INVESTIGATION : IArticleItem = {
@@ -61,10 +61,23 @@ export const AEM_LOG_INVESTIGATION : IArticleItem = {
   topics: [ TOPICS.AEM_DISPATCHER ]
 }
 
+export const AEM_DISPATCHER_CACHING_STRATEGIES: IArticleItem = {
+  title: "AEM Dispatcher Caching Strategies",
+  description: `When caching is implemented for your website, it's essential to ensure the most recent content is displayed to end users.
+    To reflect the changes done by author to the end users, we need to configure Replication Agent on Author instance and Dispatcher Flush 
+    Agent on Publisher instance to invalidate the Dispatcher cache.`,
+  url: "/aem/dispatcher/aem-dispatcher-caching-strategies",
+  publishDate: "July 27, 2024",
+  modifiedDate: "July 27, 2024",
+  topics: [ TOPICS.AEM_DISPATCHER ],
+  active: true
+}
+
 export const AEM_DISPATCHER: IArticleItem[] = [
   BASIC_HTTP_AUTHENTICATION,
   CACHE_AEM_GATED_PAGES,
   CACHE_AEM_DYNAMIC_CONTENT,
   DISPATCHER_CACHE_FLUSH_STRATEGIES,
-  AEM_LOG_INVESTIGATION
+  AEM_LOG_INVESTIGATION,
+  AEM_DISPATCHER_CACHING_STRATEGIES
 ].filter(m => m.active);

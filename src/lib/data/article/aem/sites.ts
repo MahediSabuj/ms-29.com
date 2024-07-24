@@ -261,7 +261,7 @@ export const SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION : IArticleItem = {
   title: "Show/Hide AEM Dialog Fields on Dropdown Selection",
   url: "/aem/sites/show-hide-aem-dialog-fields-on-dropdown-selection",
   publishDate: "April 10, 2024",
-  modifiedDate: "April 10, 2024",
+  modifiedDate: "August 01, 2024",
   description: `Enabling Show/Hide functionality for AEM dialog fields improves user experience by allowing content authors to 
     focus on relevant fields, thereby making the authoring process more efficient and less error-prone.`,
   topics: [ TOPICS.AEM_SITES ],
