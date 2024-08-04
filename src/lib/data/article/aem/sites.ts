@@ -291,6 +291,16 @@ export const START_AEM_AS_DEBUG_MODE : IArticleItem = {
   active: false
 }
 
+export const AMS_TO_AEMAACS_MIGRATION: IArticleItem = {
+  title: "AMS to AEMaaCS Migration",
+  url: "/aem/sites/ams-to-aemaacs-migration",
+  publishDate: "August 15, 2024",
+  modifiedDate: "August 15, 2024",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: true
+}
+
 export const AEM_SITES : IArticleItem[] = [
   PROJECT_LOMBOK_IN_AEM_PROJECTS,
   MULTI_SITE_MANAGER,
@@ -315,5 +325,6 @@ export const AEM_SITES : IArticleItem[] = [
   SAML_AUTHENTICATION,
   SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION,
   SETTING_UP_ERROR_PAGES_IN_AEM,
-  START_AEM_AS_DEBUG_MODE
+  START_AEM_AS_DEBUG_MODE,
+  AMS_TO_AEMAACS_MIGRATION
 ].filter(m => m.active);
