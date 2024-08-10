@@ -299,8 +299,8 @@ export const REPOSITORY_MODERNIZER: IArticleItem = {
     immutable content. To align existing projects with AEM’s Cloud Service structure, the Repository Modernizer tool can be used to refactor and 
     reorganize project packages, separating content and code into the appropriate packages.`,
   url: "/aem/sites/repository-modernizer-update-archetype",
-  publishDate: "August 12, 2024",
-  modifiedDate: "August 12, 2024",
+  publishDate: "August 11, 2024",
+  modifiedDate: "August 11, 2024",
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
