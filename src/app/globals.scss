@@ -30,9 +30,12 @@
   &-inline {
     margin: 0;
     font-size: 85%;
-    padding: .2em .4em;
-    border-radius: 6px;
     white-space: break-spaces;
-    background-color: rgba(175, 184, 193, 0.2);;
+
+    &.background {
+      padding: .2em .4em;
+      border-radius: 6px;
+      background-color: rgba(175, 184, 193, 0.2);
+    }
   }
 }

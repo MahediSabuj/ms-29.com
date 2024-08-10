@@ -21,10 +21,20 @@ export const CROSS_CHANNEL_CONTENT_DELIVERY: IArticleItem = {
     independent of layout, have the capability to deliver content to AEM Sites using Core Component or distribute it to 
     downstream channels in a headless manner through GraphQL.`,
   url: "/aem/content-fragment/cross-channel-content-delivery-using-content-fragments",
-  publishDate: "May 16, 2024",
-  modifiedDate: "May 16, 2024",
+  publishDate: "August 28, 2024",
+  modifiedDate: "August 28, 2024",
   topics: [ TOPICS.CONTENT_FRAGMENT ],
-  active: false
+  active: true
+}
+
+export const COMPOSITE_MULTIFIELD_FOR_CONTENT_FRAGMENT: IArticleItem = {
+  title: "Composite Multifield for Content Fragment",
+  description: ``,
+  url: "/aem/content-fragment/composite-multifield-for-content-fragment",
+  publishDate: "August 20, 2024",
+  modifiedDate: "August 20, 2024",
+  topics: [ TOPICS.CONTENT_FRAGMENT ],
+  active: true
 }
 
 export const CONTENT_FRAGMENTS_VS_EXPERIENCE_FRAGMENTS : IArticleItem = {
@@ -42,5 +52,6 @@ export const CONTENT_FRAGMENTS_VS_EXPERIENCE_FRAGMENTS : IArticleItem = {
 export const CONTENT_FRAGMENT: IArticleItem[] = [
   CONTENT_FRAGMENT_PROGRAMMATICALLY,
   CROSS_CHANNEL_CONTENT_DELIVERY,
-  CONTENT_FRAGMENTS_VS_EXPERIENCE_FRAGMENTS
+  CONTENT_FRAGMENTS_VS_EXPERIENCE_FRAGMENTS,
+  COMPOSITE_MULTIFIELD_FOR_CONTENT_FRAGMENT
 ].filter(m => m.active);

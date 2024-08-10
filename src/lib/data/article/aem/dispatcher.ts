@@ -46,8 +46,8 @@ export const DISPATCHER_CACHE_FLUSH_STRATEGIES: IArticleItem = {
     to the publisher to generate recent content, which is then added to the dispatcher cache. Subsequent requests are delivered 
     from the dispatcher cache.`,
   url: "/aem/dispatcher/aem-dispatcher-caching-flush-strategies",
-  publishDate: "July 23, 2024",
-  modifiedDate: "July 23, 2024",
+  publishDate: "August 05, 2024",
+  modifiedDate: "August 05, 2024",
   topics: [ TOPICS.AEM_DISPATCHER ],
   active: true
 }
@@ -67,8 +67,8 @@ export const AEM_DISPATCHER_CACHING_STRATEGIES: IArticleItem = {
     To reflect the changes done by author to the end users, we need to configure Replication Agent on Author instance and Dispatcher Flush 
     Agent on Publisher instance to invalidate the Dispatcher cache.`,
   url: "/aem/dispatcher/aem-dispatcher-caching-strategies",
-  publishDate: "July 27, 2024",
-  modifiedDate: "July 27, 2024",
+  publishDate: "August 15, 2024",
+  modifiedDate: "August 15, 2024",
   topics: [ TOPICS.AEM_DISPATCHER ],
   active: true
 }

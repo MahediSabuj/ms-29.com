@@ -21,10 +21,10 @@ export const UNUSED_ASSET_CLEANUP : IArticleItem = {
     to delete these unused images from the asset repository. This not only decreases the size of the AEM instance but also 
     improves search/query performance.`,
   url: "/aem/assets/unused-aem-assets-cleanup",
-  publishDate: "April 15, 2024",
-  modifiedDate: "April 15, 2024",
+  publishDate: "September 15, 2024",
+  modifiedDate: "September 15, 2024",
   topics: [ TOPICS.AEM_ASSETS ],
-  active: false
+  active: true
 }
 
 export const CUSTOM_SEARCH_FACETS_AEM_ASSETS: IArticleItem = {

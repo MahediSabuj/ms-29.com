@@ -9,6 +9,7 @@ import json from 'highlight.js/lib/languages/json';
 import makefile from 'highlight.js/lib/languages/makefile';
 import nginx from 'highlight.js/lib/languages/nginx';
 import xml from 'highlight.js/lib/languages/xml';
+import yaml from 'highlight.js/lib/languages/yaml';
 import { GoogleTagManager } from '@next/third-parties/google';
 
 import "./globals.scss";
@@ -27,6 +28,7 @@ hljs.registerLanguage('makefile', makefile);
 hljs.registerLanguage('nginx', nginx);
 hljs.registerLanguage('shell', shell);
 hljs.registerLanguage('xml', xml);
+hljs.registerLanguage('yaml', yaml);
 
 const adobeCleanFont = localFont({
   src: "./AdobeClean-Regular.otf" 

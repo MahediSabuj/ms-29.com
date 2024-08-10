@@ -3,6 +3,9 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 import Article from "@/components/article/article";
+import Highlight from "@/components/highlight/highlight";
+import BreadCrumb from "@/components/breadcrumb/breadcrumb";
+import { IBreadCrumb } from "@/types/breadcrumb";
 import { AEM_DISPATCHER_CACHING_STRATEGIES as ARTICLE } from "@/lib/data/article/aem/dispatcher";
 
 import aem_dispatcher_cache_strategies from "./assets/aem-dispatcher-cache-strategy.png";
@@ -19,9 +22,32 @@ export const metadata: Metadata = {
   }
 };
 
+const publish_flush_farm =
+    `/virtualhosts {
+  "flush"
+}`;
+
+const aem_flush_vhost =
+    `ServerAlias  flush`;
+
+const publish_invalidate_allowed =
+    `/01 {
+  /glob "\${PUBLISH_IP}"
+  /type "allow"
+}`;
+
+const breadcrumbs : IBreadCrumb = {
+  items: [{
+    title: "AEM Dispatcher",
+    url: "/aem/dispatcher"
+  }],
+  current: ARTICLE.title
+}
+
 export default function DispatcherCachingStrategies() {
   return (
     <div>
+      <BreadCrumb {...breadcrumbs}/>
       <article itemScope itemType="https://schema.org/Article">
         <Article
           title={ARTICLE.title}
@@ -62,6 +88,12 @@ export default function DispatcherCachingStrategies() {
         <h2 className="text-xl mt-4">
           <strong>Configure Dispatcher Flush Agent on Publisher instance</strong>
         </h2>
+        <section>
+          From <Link className="text-blue-600" href="http://localhost:4503/etc/replication.html" target="_blank">Replication</Link> page, click on <strong>Agents on
+          publish</strong>. Configure the Dispatcher Flush (flush) by updating the URI in the Transport tab according to the dispatcher configuration and add <code
+          className="code-inline">Host: flush</code> to the HTTP Headers of the Extended tab. After updating the values, use the <strong>Test Connection</strong> option
+          to ensure the Dispatcher Flush is working correctly.
+        </section>
         <div className="md:flex">
           <div className="md:w-1/2 w-full">
             <Image className="py-3" src={aem_dispatcher_invalidate_cache_flush_agent}
@@ -74,6 +106,21 @@ export default function DispatcherCachingStrategies() {
             </Image>
           </div>
         </div>
+        <section className="pt-3">
+          In case the dispatcher flush is failed, you need to make sure <code className="code-inline">flush</code> added as host in the dispatcher like below.
+        </section>
+        <div className="md:flex">
+          <div className="md:w-1/2 w-full">
+            <Highlight code={publish_flush_farm} language="apache" path="available_farms / publish_flush_farm.any"/>
+          </div>
+          <div className="md:w-1/2 w-full md:pt-0 pt-4 mx-4">
+            <Highlight code={aem_flush_vhost} language="apache" path="available_vhosts / aem_flush.vhost"/>
+          </div>
+        </div>
+        <section className="pt-3">
+          Additionally, make sure the publish IP address is allowed to invalidate cache.
+        </section>
+        <Highlight code={publish_invalidate_allowed} language="apache" path="cache / publish_invalidate_allowed.any"/>
         <h2 className="text-xl mt-4">
           <strong>Setup Gated Pages and Permission</strong>
         </h2>

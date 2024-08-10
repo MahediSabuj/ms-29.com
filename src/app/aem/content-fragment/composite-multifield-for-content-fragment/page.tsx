@@ -1,0 +1,44 @@
+import { Metadata } from "next";
+
+import Article from "@/components/article/article";
+import { IBreadCrumb } from "@/types/breadcrumb";
+import BreadCrumb from "@/components/breadcrumb/breadcrumb";
+import { CROSS_CHANNEL_CONTENT_DELIVERY as ARTICLE } from "@/lib/data/article/aem/content-fragment";
+
+export const metadata: Metadata = {
+  title: ARTICLE.title,
+  description: ARTICLE.description,
+  alternates: {
+    canonical: ARTICLE.url
+  }
+};
+
+const breadcrumbs : IBreadCrumb = {
+  items: [{
+    title: "Content Fragment",
+    url: "/aem/content-fragment"
+  }],
+  current: ARTICLE.title
+}
+
+export default function CompositeMultifield() {
+  return (
+    <div>
+      <BreadCrumb {...breadcrumbs}/> 
+      <article itemScope itemType="https://schema.org/Article">
+        <Article
+          title={ARTICLE.title}
+          publishDate={ARTICLE.publishDate}
+          modifiedDate={ARTICLE.modifiedDate}/>
+        <div>
+          <section className="pt-6">
+            In the modern era,  users often interact across multiple channels, spanning from websites to mobile apps. 
+            Streamlining content management and delivery from a centralized platform can simplify this process. Content Fragments, 
+            independent of layout, have the capability to deliver content to AEM Sites using Core Component or distribute it to 
+            downstream channels in a headless manner through GraphQL.
+          </section>
+        </div>
+      </article>
+    </div>
+  );
+}

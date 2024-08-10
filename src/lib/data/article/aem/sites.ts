@@ -33,10 +33,10 @@ export const AEM_USER_PERMISSION: IArticleItem = {
     sites with multiple content creators. User Permissions enforces strict governance over user actions like read, create, 
     modify, delete, publish contents. This mechanism ensures that only authorized users can perform these specific actions.`,
   url: "/aem/sites/aem-user-permission",
-  publishDate: "May 22, 2024",
-  modifiedDate: "May 22, 2024",
+  publishDate: "September 30, 2024",
+  modifiedDate: "September 30, 2024",
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const FETCH_MULTIFIELD_SLING_MODEL: IArticleItem = {
@@ -80,10 +80,10 @@ export const CUSTOM_OSGI_CONFIGURATION: IArticleItem = {
   description: `OSGi Configuration allow us to configure run-mode specific properties. All the out-of-the-box OSGi configurations
     are available at /system/console/configMgr while custom configurations can be created as per business requirements.`,
   url: "/aem/sites/custom-osgi-configuration-in-aem",
-  publishDate: "June 28, 2024",
-  modifiedDate: "June 28, 2024",
+  publishDate: "September 22, 2024",
+  modifiedDate: "September 22, 2024",
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const INTEGRATE_ADAPTIVE_FORMS_IN_AEM_SITES: IArticleItem = {
@@ -169,6 +169,16 @@ export const EXPAND_CORE_SEARCH_COMPONENT_SCOPE : IArticleItem = {
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
   active: false
+}
+
+export const DYNAMICALLY_POPULATE_SELECT_OPTIONS_IN_AEM_COMPONENT_DIALOG : IArticleItem = {
+  title: "Dynamically Populate Select Options in AEM Component Dialog",
+  url: "/aem/sites/dynamically-populate-select-options-in-aem-component-dialog",
+  publishDate: "September 05, 2024",
+  modifiedDate: "September 05, 2024",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: true
 }
 
 export const HTL_SPECIFICATION_CHEATSHEET : IArticleItem = {
@@ -261,7 +271,7 @@ export const SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION : IArticleItem = {
   title: "Show/Hide AEM Dialog Fields on Dropdown Selection",
   url: "/aem/sites/show-hide-aem-dialog-fields-on-dropdown-selection",
   publishDate: "April 10, 2024",
-  modifiedDate: "August 01, 2024",
+  modifiedDate: "August 10, 2024",
   description: `Enabling Show/Hide functionality for AEM dialog fields improves user experience by allowing content authors to 
     focus on relevant fields, thereby making the authoring process more efficient and less error-prone.`,
   topics: [ TOPICS.AEM_SITES ],
@@ -284,19 +294,33 @@ export const SETTING_UP_ERROR_PAGES_IN_AEM : IArticleItem = {
 export const START_AEM_AS_DEBUG_MODE : IArticleItem = {
   title: "Start AEM as Debug Mode",
   url: "/aem/sites/start-aem-as-debug-mode",
-  publishDate: "April 23, 2024",
-  modifiedDate: "April 23, 2024",
+  publishDate: "September 01, 2024",
+  modifiedDate: "September 01, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const AMS_TO_AEMAACS_MIGRATION: IArticleItem = {
   title: "AMS to AEMaaCS Migration",
   url: "/aem/sites/ams-to-aemaacs-migration",
-  publishDate: "August 15, 2024",
-  modifiedDate: "August 15, 2024",
+  publishDate: "September 18, 2024",
+  modifiedDate: "September 18, 2024",
   description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: true
+}
+
+export const REPOSITORY_MODERNIZER: IArticleItem = {
+  title: "Update AEM Archetype using Repository Modernizer",
+  description: `AEM Project Archetype is a Maven template creates a minimal, best-practices-based AEM project. Over the years, AEM Project 
+    Archetype has been revolutionized with significant advancements, introducing many new features and possibilities into AEM projects. The 
+    latest Archetype emphasizing the separation of content and code into discrete subpackages to maintain the distinction between mutable and 
+    immutable content. To align existing projects with AEM’s Cloud Service structure, the Repository Modernizer tool can be used to refactor and 
+    reorganize project packages, separating content and code into the appropriate packages.`,
+  url: "/aem/sites/repository-modernizer-update-archetype",
+  publishDate: "August 12, 2024",
+  modifiedDate: "August 12, 2024",
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
@@ -326,5 +350,7 @@ export const AEM_SITES : IArticleItem[] = [
   SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION,
   SETTING_UP_ERROR_PAGES_IN_AEM,
   START_AEM_AS_DEBUG_MODE,
-  AMS_TO_AEMAACS_MIGRATION
+  AMS_TO_AEMAACS_MIGRATION,
+  DYNAMICALLY_POPULATE_SELECT_OPTIONS_IN_AEM_COMPONENT_DIALOG,
+  REPOSITORY_MODERNIZER
 ].filter(m => m.active);
