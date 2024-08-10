@@ -40,7 +40,7 @@ export const CACHE_AEM_DYNAMIC_CONTENT: IArticleItem = {
 }
 
 export const DISPATCHER_CACHE_FLUSH_STRATEGIES: IArticleItem = {
-  title: "AEM Dispatcher Cache Flush Strategies",
+  title: "AEM Dispatcher Caching Flush Strategies",
   description: `When caching is implemented for your website, it's essential to clear the dispatcher cache after publishing pages 
     to ensure the most recent content is displayed to end users. Once the cache is cleared, the dispatcher forwards the next request 
     to the publisher to generate recent content, which is then added to the dispatcher cache. Subsequent requests are delivered 

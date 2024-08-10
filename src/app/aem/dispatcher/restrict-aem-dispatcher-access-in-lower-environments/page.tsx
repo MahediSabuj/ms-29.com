@@ -123,7 +123,7 @@ export default function BasicAuthentication() {
         <Highlight code={basic_auth_user} language="apache" path="conf.d / available_vhosts / domain.vhost"></Highlight>
         <div className="pt-2">
           Instead of specifying a specific user like &quot;sabuj&quot; you can allow anyone listed in the password file
-          to access by using <code className="code-inline">Require valid-user</code>. This directive allows access to any user who correctly
+          to access by using <code className="code-inline background">Require valid-user</code>. This directive allows access to any user who correctly
           enters their password.
         </div>
         <div className="pt-6">

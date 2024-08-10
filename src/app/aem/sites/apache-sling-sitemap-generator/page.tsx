@@ -21,7 +21,7 @@ const breadcrumbs : IBreadCrumb = {
   current: ARTICLE.title
 }
 
-export default function UserPermission() {
+export default function SitemapGenerator() {
   return (
     <div>
       <BreadCrumb {...breadcrumbs}/>
@@ -32,8 +32,8 @@ export default function UserPermission() {
           modifiedDate={ARTICLE.modifiedDate}/>
         <div>
           <section className="pt-6">
-            Sitemap is essential for any website, an XML file that provides the pages of the website, allowing search engines 
-            like Google to efficiently crawl and index web pages. AEM offers Apache Sling Sitemap Generator, dynamically 
+            Sitemap is essential for any website, an XML file that provides the pages of the website, allowing search engines
+            like Google to efficiently crawl and index web pages. AEM offers Apache Sling Sitemap Generator, dynamically
             generating XML sitemap based on the content structure and updating them with any page creation, deletion, or modification.
           </section>
         </div>  

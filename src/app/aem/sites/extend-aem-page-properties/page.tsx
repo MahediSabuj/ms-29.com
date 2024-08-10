@@ -127,8 +127,8 @@ export default function ExtendPageProperties() {
           </h2>
           <section>
             The child nodes of the items node represent tabs in the page properties. Let&apos;s incorporate <strong>Content Approval</strong> as
-            a new tab. Typically, it&apos;s added at the end of the tab list, but you can adjust its position using <code className="code-inline">sling:orderBefore</code> or 
-            <code className="code-inline">sling:orderAfter</code> to place it before or after a designated tab, respectively.
+            a new tab. Typically, it&apos;s added at the end of the tab list, but you can adjust its position using <code className="code-inline">sling:orderBefore</code> or <code className="code-inline">sling:orderAfter</code> to
+            place it before or after a designated tab, respectively.
           </section>
           <Highlight code={ADD_NEW_TAB} language="xml" path="page / _cq_dialog / .content.xml"/>
           <h2 className="text-xl mt-4">

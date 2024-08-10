@@ -291,6 +291,20 @@ export const START_AEM_AS_DEBUG_MODE : IArticleItem = {
   active: false
 }
 
+export const REPOSITORY_MODERNIZER: IArticleItem = {
+  title: "Update AEM Archetype using Repository Modernizer",
+  description: `AEM Project Archetype is a Maven template creates a minimal, best-practices-based AEM project. Over the years, AEM Project 
+    Archetype has been revolutionized with significant advancements, introducing many new features and possibilities into AEM projects. The 
+    latest Archetype emphasizing the separation of content and code into discrete subpackages to maintain the distinction between mutable and 
+    immutable content. To align existing projects with AEM’s Cloud Service structure, the Repository Modernizer tool can be used to refactor and 
+    reorganize project packages, separating content and code into the appropriate packages.`,
+  url: "/aem/sites/repository-modernizer-update-archetype",
+  publishDate: "August 12, 2024",
+  modifiedDate: "August 12, 2024",
+  topics: [ TOPICS.AEM_SITES ],
+  active: true
+}
+
 export const AEM_SITES : IArticleItem[] = [
   PROJECT_LOMBOK_IN_AEM_PROJECTS,
   MULTI_SITE_MANAGER,
@@ -315,5 +329,6 @@ export const AEM_SITES : IArticleItem[] = [
   SAML_AUTHENTICATION,
   SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION,
   SETTING_UP_ERROR_PAGES_IN_AEM,
-  START_AEM_AS_DEBUG_MODE
+  START_AEM_AS_DEBUG_MODE,
+  REPOSITORY_MODERNIZER
 ].filter(m => m.active);
