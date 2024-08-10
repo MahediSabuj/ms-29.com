@@ -7,6 +7,7 @@ import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import { FORM_SUBMISSION_AUTHOR_INSTANCE as ARTICLE } from "@/lib/data/article/aem/forms";
 
 import aem_ds_settings_service from './assets/aem-ds-settings-service.webp';
+import form_submission_from_publisher_to_author_instance from './assets/form-submission-from-publisher-to-author-instance.png';
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -35,7 +36,7 @@ export default function SubmitFormIntoAuthor() {
           modifiedDate={ARTICLE.modifiedDate}/>
       </article>
         <div>
-          <section className="pt-6 pb-3">
+          <section className="pt-6">
             In General, when an end user submits a form, the request is routed to the publish environment.
             Any modifications made at the CRX/DE during the execution of the post request are stored in
             the publish environment. However, a request may arise where upon form submission, certain data
@@ -43,6 +44,9 @@ export default function SubmitFormIntoAuthor() {
             business-level users, the content will be published to the publish environment, making it publicly
             accessible on the internet.
           </section>
+          <Image className="py-3" src={form_submission_from_publisher_to_author_instance}
+             alt="Form Submission from Publish to Author instance">
+          </Image>
           <section className="pb-3">
             <strong>AEM Forms</strong> offers the capability to send requests from the publisher to the author. <strong>AEM
             DS Settings Service</strong> OSGi Configuration must be updated before any adaptive form submission from the publish

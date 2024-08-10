@@ -80,8 +80,8 @@ export const CUSTOM_OSGI_CONFIGURATION: IArticleItem = {
   description: `OSGi Configuration allow us to configure run-mode specific properties. All the out-of-the-box OSGi configurations
     are available at /system/console/configMgr while custom configurations can be created as per business requirements.`,
   url: "/aem/sites/custom-osgi-configuration-in-aem",
-  publishDate: "June 10, 2024",
-  modifiedDate: "June 10, 2024",
+  publishDate: "June 28, 2024",
+  modifiedDate: "June 28, 2024",
   topics: [ TOPICS.AEM_SITES ],
   active: false
 }
@@ -186,8 +186,8 @@ export const HTL_SPECIFICATION_CHEATSHEET : IArticleItem = {
 export const SLING_MODEL_DELEGATION_PATTERN : IArticleItem = {
   title: "Sling Model Delegation Pattern with Lombok",
   url: "/aem/sites/sling-model-delegation-pattern",
-  publishDate: "June 01, 2024",
-  modifiedDate: "June 01, 2024",
+  publishDate: "June 30, 2024",
+  modifiedDate: "June 30, 2024",
   description: `AEM Core Components are a standard set components to be used with AEM. Built with Adobe's best practices and 
     standards, Core Components provide a baseline set of functionality for any Sites implementation. However, it's often necessary 
     to customize the functionality of core components to address project-specific requirements. The business logic for the core components 
@@ -199,14 +199,14 @@ export const SLING_MODEL_DELEGATION_PATTERN : IArticleItem = {
 export const SONARQUBE_SETUP_FOR_AEM_DEVELOPMENT : IArticleItem = {
   title: "SonarQube Setup for AEM Development",
   url: "/aem/sites/sonarqube-setup-for-aem-development",
-  publishDate: "May 30, 2024",
-  modifiedDate: "May 30, 2024",
+  publishDate: "June 21, 2024",
+  modifiedDate: "June 21, 2024",
   description: `In AEM development, prioritizing code quality is essential. Even during deployment via Cloud Manager, it's 
     crucial to meet specific metrics for security, reliability, maintainability, and code coverage. SonarQube enables continuous 
     code inspections, identifying issues early in the development lifecycle that could affect these metrics. Though integration, 
     developers can ensure the maintenance of clean, efficient, and secure code throughout the AEM development process.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS : IArticleItem = {
@@ -271,8 +271,8 @@ export const SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION : IArticleItem = {
 export const SETTING_UP_ERROR_PAGES_IN_AEM : IArticleItem = {
   title: "Setting Up Error Pages in AEM",
   url: "/aem/sites/setup-error-page-in-aem",
-  publishDate: "June 07, 2024",
-  modifiedDate: "June 07, 2024",
+  publishDate: "July 03, 2024",
+  modifiedDate: "July 03, 2024",
   description: `Customizing error pages in AEM is crucial for ensuring seamless user experience and brand consistency. Error pages 
     act as backups when requested resources cannot be found or unexpected errors occur, such as the commonly encountered 404 and 500
     HTTP status codes. By tailoring these pages with informative and user-friendly content, you can ensure users able to navigate smoothly

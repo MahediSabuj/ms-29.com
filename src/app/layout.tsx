@@ -105,7 +105,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={adobeCleanFont.className}>
+      <body className={`${adobeCleanFont.className} text-lg`}>
         <div className="flex flex-col h-screen">
           <Header {...headerConfig}/>
           <div className="container mx-auto py-4 grow">

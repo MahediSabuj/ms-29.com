@@ -177,8 +177,7 @@ export default function HeadlessAuthentication() {
           <section className="pt-1">
             Enable self-registration on the Experience Cloud site to create a test user. Assign these users to the &quot;AEM Headless Profile&quot; profile 
             and &quot;AEM Headless Account&quot; business account created earlier. If person accounts are enabled, refrain from populating the Account field. 
-            From <strong>All Sites</strong>, next to your Site, click <strong>Workspaces</strong>, select <strong>Administration</strong>, and then select 
-            <strong>Login & Registration</strong>.
+            From <strong>All Sites</strong>, next to your Site, click <strong>Workspaces</strong>, select <strong>Administration</strong>, and then select <strong>Login & Registration</strong>.
           </section>
           <Image src={EXPERIENCE_CLOUD_SITE_REGISTER_USER_CONFIGURATION} className="border mt-2"
             alt="Experience Cloud Site Register User Configuration">

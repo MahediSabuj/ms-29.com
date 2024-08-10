@@ -63,7 +63,7 @@ export default function DefaultValueComponentDialog() {
             In the example below, a new item will be added to the multifield once the component is dragged on the page.
           </section>
           <Highlight code={_cq_template} language="xml" path="_cq_template / .content.xml"/>
-          <section className="pt-3">
+          <section className="pt-6">
             If there&apos;s a need for the same cq:template across various components, the <strong>cq:templatePath</strong> properties
             can be utilized. As an illustration, duplicate the _cq_template node and place it in a common place like
             project/datasource, naming it, for instance, &quot;navigation&quot;. Subsequently, within the component properties,
