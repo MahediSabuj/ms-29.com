@@ -5,6 +5,7 @@ import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Highlight from "@/components/highlight/highlight";
+import FAQ from "@/components/faq/faq";
 import { REPOSITORY_MODERNIZER as ARTICLE } from "@/lib/data/article/aem/sites";
 
 import AEM_CLOUD_COMPATIBLE_ARCHETYPE from './assets/aem-cloud-compatible-archetype.png';
@@ -149,13 +150,17 @@ export default function RepositoryModernizer() {
               <li>
                 The Core dependency is missing in the <code className="code-inline">ui.apps/pom.xml</code>; it needs to be added to the dependencies section.
               </li>
-              <li>
-                <code className="code-inline">data-sly-test</code>: avoid redundant constant value comparisons — Use <code className="code-inline">data-sly-set</code> when it&apos;s only needed to define a variable for later use.
-              </li>
             </ul>
           </section>
         </div>
       </article>
+      <FAQ items={[{
+        question: `<code className="code-inline">data-sly-test</code>: avoid redundant constant value comparisons`,
+        answer: `Use <code className="code-inline">data-sly-set</code> when it&apos;s only needed to define a variable for later use.`
+      }, {
+        question: `Failed to execute goal <code className="code-inline">com.adobe.aem:aemanalyser-maven-plugin0.0.12:analyse</code> (default-analyse) on project: Unable to build resource for null: Importing java.* packages not allowed: java.io`,
+        answer: `Update <code className="code-inline">aemanalyser.version</code> to v1.6.4`
+      }]}/>
     </div>
   );
 }

@@ -10,7 +10,7 @@ export default function FAQ({ items } : FAQ ) {
           return (
             <div key={index} className="mb-2" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
               <h3 className="text-xl" itemProp="name">
-                <em>{item.question}</em>
+                <em dangerouslySetInnerHTML={{ __html: item.question || "" }}></em>
               </h3>
               <div className="" itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                 <div itemProp="text" dangerouslySetInnerHTML={{ __html: item.answer || "" }}></div>
