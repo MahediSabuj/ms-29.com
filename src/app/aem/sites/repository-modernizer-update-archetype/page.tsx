@@ -159,7 +159,10 @@ export default function RepositoryModernizer() {
         answer: `Use <code className="code-inline">data-sly-set</code> when it&apos;s only needed to define a variable for later use.`
       }, {
         question: `Failed to execute goal <code className="code-inline">com.adobe.aem:aemanalyser-maven-plugin0.0.12:analyse</code> (default-analyse) on project: Unable to build resource for null: Importing java.* packages not allowed: java.io`,
-        answer: `Update <code className="code-inline">aemanalyser.version</code> to v1.6.4`
+        answer: `Update <code className="code-inline">aemanalyser.version</code>  to the latest version, e.g., v1.6.4`
+      }, {
+        question: `Bundle <code className="code-inline">aem-demo.core:4.7.9-SNAPSHOT</code> is importing package(s) in start level 20 but no bundle is exporting these for that start level`,
+        answer: `Ensure that these bundles are embedded in the container (all) project. If they aren&apos;t, the Cloud instance won&apos;t have access to them during runtime, leading to the errors you're encountering.`
       }]}/>
     </div>
   );
