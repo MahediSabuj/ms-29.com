@@ -123,7 +123,7 @@ export default function RepositoryModernizer() {
             </ul>
           </section>
           <section className="pt-3 pb-2">
-            In order to restructure an existing project&apos;s packages for compatibility with AEM as a Cloud Service, execute the <code className="code-inline">aio aem-migration:repository-modernizer</code> command. You&apos;ll need
+            In order to restructure an existing project&apos;s packages for compatibility with AEM as a Cloud Service, execute the <code className="code-inline background ">aio aem-migration:repository-modernizer</code> command. You&apos;ll need
             to create an <strong>aem-migration-config.yaml</strong> file, which can be stored either in your local file system or within the CLI configuration directory.
             <ul className="list-disc ml-6 pt-1 pl-2.5">
               <li>
