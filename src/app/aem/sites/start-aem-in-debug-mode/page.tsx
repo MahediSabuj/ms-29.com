@@ -56,7 +56,7 @@ export default function AEMinDebugMode() {
               </Image>
             </li>
           </ul>
-          Open the AEM page with the component using the Java class where you&apos;ve set breakpoints. For example, if you've set breakpoints in <code className="code-inline">Article.java</code>, access or refresh the page with the Article component. <code className="code-inline">IntelliJ IDEA</code> will then notify you, and the program will pause at the breakpoint.
+          Open the AEM page with the component using the Java class where you&apos;ve set breakpoints. For example, if you&apos;ve set breakpoints in <code className="code-inline">Article.java</code>, access or refresh the page with the Article component. <code className="code-inline">IntelliJ IDEA</code> will then notify you, and the program will pause at the breakpoint.
         </section>
       </article>
     </div>
