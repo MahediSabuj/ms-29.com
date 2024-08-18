@@ -5,6 +5,7 @@ import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Highlight from "@/components/highlight/highlight";
+import FAQ from "@/components/faq/faq";
 import { REPOSITORY_MODERNIZER as ARTICLE } from "@/lib/data/article/aem/sites";
 
 import AEM_CLOUD_COMPATIBLE_ARCHETYPE from './assets/aem-cloud-compatible-archetype.png';
@@ -122,7 +123,7 @@ export default function RepositoryModernizer() {
             </ul>
           </section>
           <section className="pt-3 pb-2">
-            In order to restructure an existing project&apos;s packages for compatibility with AEM as a Cloud Service, execute the <code className="code-inline">aio aem-migration:repository-modernizer</code> command. You&apos;ll need
+            In order to restructure an existing project&apos;s packages for compatibility with AEM as a Cloud Service, execute the <code className="code-inline background ">aio aem-migration:repository-modernizer</code> command. You&apos;ll need
             to create an <strong>aem-migration-config.yaml</strong> file, which can be stored either in your local file system or within the CLI configuration directory.
             <ul className="list-disc ml-6 pt-1 pl-2.5">
               <li>
@@ -149,13 +150,20 @@ export default function RepositoryModernizer() {
               <li>
                 The Core dependency is missing in the <code className="code-inline">ui.apps/pom.xml</code>; it needs to be added to the dependencies section.
               </li>
-              <li>
-                <code className="code-inline">data-sly-test</code>: avoid redundant constant value comparisons — Use <code className="code-inline">data-sly-set</code> when it&apos;s only needed to define a variable for later use.
-              </li>
             </ul>
           </section>
         </div>
       </article>
+      <FAQ items={[{
+        question: `<code className="code-inline">data-sly-test</code>: avoid redundant constant value comparisons`,
+        answer: `Use <code className="code-inline">data-sly-set</code> when it&apos;s only needed to define a variable for later use.`
+      }, {
+        question: `Failed to execute goal <code className="code-inline">com.adobe.aem:aemanalyser-maven-plugin0.0.12:analyse</code> (default-analyse) on project: Unable to build resource for null: Importing java.* packages not allowed: java.io`,
+        answer: `Update <code className="code-inline">aemanalyser.version</code>  to the latest version, e.g., v1.6.4`
+      }, {
+        question: `Bundle <code className="code-inline">aem-demo.core:4.7.9-SNAPSHOT</code> is importing package(s) in start level 20 but no bundle is exporting these for that start level`,
+        answer: `Ensure that these bundles are embedded in the container (all) project. If they aren&apos;t, the Cloud instance won&apos;t have access to them during runtime, leading to the errors you're encountering.`
+      }]}/>
     </div>
   );
 }
