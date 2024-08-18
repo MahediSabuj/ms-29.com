@@ -42,12 +42,13 @@ export const CACHE_AEM_DYNAMIC_CONTENT: IArticleItem = {
 export const DISPATCHER_CACHE_FLUSH_STRATEGIES: IArticleItem = {
   title: "AEM Dispatcher Caching Flush Strategies",
   description: `When caching is implemented for your website, it's essential to clear the dispatcher cache after publishing pages 
-    to ensure the most recent content is displayed to end users. Once the cache is cleared, the dispatcher forwards the next request 
-    to the publisher to generate recent content, which is then added to the dispatcher cache. Subsequent requests are delivered 
-    from the dispatcher cache.`,
-  url: "/aem/dispatcher/aem-dispatcher-cache-flush-strategies",
-  publishDate: "May 02, 2024",
-  modifiedDate: "May 02, 2024",
+    to ensure the most recent content is displayed to end users. To reflect changes made by authors, we need to configure Replication 
+    Agent on Author instance and Dispatcher Flush Agent on Publisher instance to invalidate the Dispatcher cache. The next request 
+    will be served from the publisher, and the response will be added to the cache; subsequent requests will be served from the cache 
+    without interacting with the publisher.`,
+  url: "/aem/dispatcher/aem-dispatcher-caching-flush-strategies",
+  publishDate: "August 21, 2024",
+  modifiedDate: "August 21, 2024",
   topics: [ TOPICS.AEM_DISPATCHER ],
   active: false
 }

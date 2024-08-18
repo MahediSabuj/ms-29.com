@@ -281,11 +281,23 @@ export const SETTING_UP_ERROR_PAGES_IN_AEM : IArticleItem = {
   active: false
 }
 
-export const START_AEM_AS_DEBUG_MODE : IArticleItem = {
-  title: "Start AEM as Debug Mode",
-  url: "/aem/sites/start-aem-as-debug-mode",
-  publishDate: "April 23, 2024",
-  modifiedDate: "April 23, 2024",
+export const START_AEM_IN_DEBUG_MODE : IArticleItem = {
+  title: "Start AEM in Debug Mode",
+  url: "/aem/sites/start-aem-in-debug-mode",
+  publishDate: "August 18, 2024",
+  modifiedDate: "August 18, 2024",
+  description: `Troubleshooting and debugging are crucial aspects of working with AEM, allowing developers to identify, analyze, and fix issues 
+    in their code. Since AEM projects often involve extensive custom code for Models, Services, Servlets, and Schedulers, debugging allows real-time 
+    inspection and provides valuable insights into the root cause, enabling effective fixes. To debug an AEM application, you can use Java Remote Debugging.`,
+  topics: [ TOPICS.AEM_SITES ],
+  active: true
+}
+
+export const UPDATE_JAVA_JDK_V11_FOR_AEM_CLOUD : IArticleItem = {
+  title: "Update Java JDK to v11 for AEM Cloud",
+  url: "/aem/sites/update-java-jdk-v11-for-aem-cloud",
+  publishDate: "August 25, 2024",
+  modifiedDate: "August 25, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
   active: false
@@ -303,6 +315,16 @@ export const REPOSITORY_MODERNIZER: IArticleItem = {
   modifiedDate: "August 11, 2024",
   topics: [ TOPICS.AEM_SITES ],
   active: true
+}
+
+export const SETUP_LOCAL_AEM_DEVELOPMENT_ENVIRONMENT : IArticleItem = {
+  title: "Setup Local AEM Development Environment",
+  url: "/aem/sites/set-up-local-aem-development-environment",
+  publishDate: "August 28, 2024",
+  modifiedDate: "August 28, 2024",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
 }
 
 export const AEM_SITES : IArticleItem[] = [
@@ -329,6 +351,8 @@ export const AEM_SITES : IArticleItem[] = [
   SAML_AUTHENTICATION,
   SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION,
   SETTING_UP_ERROR_PAGES_IN_AEM,
-  START_AEM_AS_DEBUG_MODE,
-  REPOSITORY_MODERNIZER
+  START_AEM_IN_DEBUG_MODE,
+  REPOSITORY_MODERNIZER,
+  UPDATE_JAVA_JDK_V11_FOR_AEM_CLOUD,
+  SETUP_LOCAL_AEM_DEVELOPMENT_ENVIRONMENT
 ].filter(m => m.active);
