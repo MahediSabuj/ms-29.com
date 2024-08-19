@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Metadata } from "next";
 
 import Article from "@/components/article/article";
@@ -11,7 +12,7 @@ import aem_content_publish_replication_agent from "./assets/aem-content-publish-
 import aem_content_publish_replication_agent_settings from './assets/aem-content-publish-replication-agent-settings.png';
 import aem_dispatcher_invalidate_cache_flush_agent from "./assets/aem-dispatcher-invalidate-cache-flush-agent.png";
 import aem_dispatcher_invalidate_cache_flush_headers from "./assets/aem-dispatcher-invalidate-cache-flush-headers.png";
-import Link from "next/link";
+import aem_dispatcher_caching_strategies from './assets/aem-dispatcher-caching-strategies.png';
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -72,12 +73,12 @@ export default function DispatcherCache() {
           <div className="md:flex">
             <div className="md:w-1/2 w-full">
               <Image className="py-3" src={aem_content_publish_replication_agent_settings}
-                     alt="AEM Dispatcher Invalidate Cache FLush Agent">
+                 alt="AEM Dispatcher Invalidate Cache FLush Agent">
               </Image>
             </div>
             <div className="md:w-1/2 w-full md:pt-0 pt-4 mx-4">
               <Image className="py-3" src={aem_content_publish_replication_agent}
-                     alt="AEM Dispatcher Invalidate Cache Flush Headers">
+                 alt="AEM Dispatcher Invalidate Cache Flush Headers">
               </Image>
             </div>
           </div>
@@ -101,7 +102,7 @@ export default function DispatcherCache() {
               </Image>
             </div>
           </div>
-          <section className="pt-3">
+          <section>
             In case the dispatcher flush fails, ensure that <code className="code-inline">flush</code> is added as a host in the dispatcher configuration, as shown below.
           </section>
           <div className="md:flex mt-2">
@@ -116,6 +117,12 @@ export default function DispatcherCache() {
             Additionally, allow the publish IP address to trigger cache invalidation.
           </section>
           <Highlight code={publish_invalidate_allowed} language="apache" path="cache / publish_invalidate_allowed.any"/>
+          <section className="pt-3">
+            With this configuration, any time the author publishes new changes, the end user will see the latest content. However, you can adjust the Dispatcher Cache settings based on your specific requirements to achieve optimal results.
+          </section>
+          <Image className="py-3" src={aem_dispatcher_caching_strategies} height="500"
+             alt="AEM Dispatcher Caching Strategies">
+          </Image>
         </div>
       </article>
     </div>
