@@ -55,11 +55,11 @@ export default function DispatcherCache() {
           modifiedDate={ARTICLE.modifiedDate}/>
         <div>
           <section className="pt-6">
-            When caching is implemented for your website, it&apos;s essential to clear the dispatcher cache after publishing pages 
+            When caching is implemented for your website, it&apos;s essential to clear the dispatcher cache after publishing pages
             to ensure the most recent content is displayed to end users. To reflect changes made by authors, we need to configure
-            Replication Agent on Author instance and Dispatcher Flush Agent on Publisher instance to invalidate the Dispatcher cache.
-            The next request will be served from the publisher, and the response will be added to the cache; subsequent requests will
-            be served from the cache without interacting with the publisher.
+            Replication Agent on Author instance to push changes to the Publish instance and Dispatcher Flush Agent on Publisher
+            instance to invalidate the Dispatcher cache. Once the cache is invalidated, next request will be served from the publisher,
+            and the response will be added to the cache; subsequent requests will be served from the cache without interacting with the publisher.
           </section>
           <h2 className="text-xl mt-4">
             <strong>Configure Replication Agent on Author instance</strong>
@@ -118,7 +118,16 @@ export default function DispatcherCache() {
           </section>
           <Highlight code={publish_invalidate_allowed} language="apache" path="cache / publish_invalidate_allowed.any"/>
           <section className="pt-3">
-            With this configuration, any time the author publishes new changes, the end user will see the latest content. However, you can adjust the Dispatcher Cache settings based on your specific requirements to achieve optimal results.
+            With this configuration, any time the author publishes new changes, the end user will see the latest content. However, you can adjust the Dispatcher
+            Cache settings based on your specific requirements to achieve optimal results.
+          </section>
+          <h2 className="text-xl mt-4">
+            <strong>Dispatcher Cache Configuration</strong>
+          </h2>
+          <section>
+            The Dispatcher has two primary methods for updating the cache content when changes are made to the website: Content Updates and Auto-Invalidation.
+            Content Updates remove the pages that have changed, and files that are directly associated with them, while Auto-Invalidation automatically flags sections
+            of the cache that might be outdated following an update.
           </section>
           <Image className="py-3" src={aem_dispatcher_caching_strategies} height="500"
              alt="AEM Dispatcher Caching Strategies">

@@ -163,6 +163,9 @@ export default function RepositoryModernizer() {
       }, {
         question: `Bundle <code className="code-inline">aem-demo.core:4.7.9-SNAPSHOT</code> is importing package(s) in start level 20 but no bundle is exporting these for that start level`,
         answer: `Ensure that these bundles are embedded in the container (all) project. If they aren&apos;t, the Cloud instance won&apos;t have access to them during runtime, leading to the errors you're encountering.`
+      }, {
+        question: `The POM for com.aem.demo:aem-demo.ui.apps.structure:zip:4.7.9-SNAPSHOT is missing, no dependency information available`,
+        answer: 'Add <code className="code-inline">&lt;module&gt;ui.apps.structure&lt;/module&gt;</code> to the <code class="code-inline">pom.xml</code>'
       }]}/>
     </div>
   );
