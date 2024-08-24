@@ -47,8 +47,8 @@ export const DISPATCHER_CACHE_FLUSH_STRATEGIES: IArticleItem = {
   the Dispatcher cache. Once the cache is invalidated, next request will be served from the publisher, and the response will be added 
   to the cache; subsequent requests will be served from the cache without interacting with the publisher.`,
   url: "/aem/dispatcher/aem-dispatcher-caching-flush-strategies",
-  publishDate: "August 21, 2024",
-  modifiedDate: "August 21, 2024",
+  publishDate: "August 25, 2024",
+  modifiedDate: "August 25, 2024",
   topics: [ TOPICS.AEM_DISPATCHER ],
   active: true
 }

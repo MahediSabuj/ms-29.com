@@ -33,10 +33,10 @@ export const AEM_USER_PERMISSION: IArticleItem = {
     sites with multiple content creators. User Permissions enforces strict governance over user actions like read, create, 
     modify, delete, publish contents. This mechanism ensures that only authorized users can perform these specific actions.`,
   url: "/aem/sites/aem-user-permission",
-  publishDate: "May 22, 2024",
-  modifiedDate: "May 22, 2024",
+  publishDate: "September 01, 2024",
+  modifiedDate: "September 01, 2024",
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const FETCH_MULTIFIELD_SLING_MODEL: IArticleItem = {
@@ -296,11 +296,12 @@ export const START_AEM_IN_DEBUG_MODE : IArticleItem = {
 export const UPDATE_JAVA_JDK_V11_FOR_AEM_CLOUD : IArticleItem = {
   title: "Update Java JDK to v11 for AEM Cloud",
   url: "/aem/sites/update-java-jdk-v11-for-aem-cloud",
-  publishDate: "August 25, 2024",
-  modifiedDate: "August 25, 2024",
-  description: ``,
+  publishDate: "August 28, 2024",
+  modifiedDate: "August 28, 2024",
+  description: `By default, projects are built by the Cloud Manager build process using the Oracle 8 JDK, but AEM Cloud Service customers are strongly advised 
+  to set the JDK version used to execute Maven to 11 for improved performance, security, and support over earlier versions.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const REPOSITORY_MODERNIZER: IArticleItem = {
