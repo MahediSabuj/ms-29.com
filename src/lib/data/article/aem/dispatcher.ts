@@ -50,7 +50,7 @@ export const DISPATCHER_CACHE_FLUSH_STRATEGIES: IArticleItem = {
   publishDate: "August 25, 2024",
   modifiedDate: "August 25, 2024",
   topics: [ TOPICS.AEM_DISPATCHER ],
-  active: true
+  active: false
 }
 
 export const AEM_LOG_INVESTIGATION : IArticleItem = {

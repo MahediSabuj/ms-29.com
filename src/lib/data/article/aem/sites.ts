@@ -33,10 +33,10 @@ export const AEM_USER_PERMISSION: IArticleItem = {
     sites with multiple content creators. User Permissions enforces strict governance over user actions like read, create, 
     modify, delete, publish contents. This mechanism ensures that only authorized users can perform these specific actions.`,
   url: "/aem/sites/aem-user-permission",
-  publishDate: "September 01, 2024",
-  modifiedDate: "September 01, 2024",
+  publishDate: "September 05, 2024",
+  modifiedDate: "September 05, 2024",
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const FETCH_MULTIFIELD_SLING_MODEL: IArticleItem = {
@@ -171,6 +171,16 @@ export const EXPAND_CORE_SEARCH_COMPONENT_SCOPE : IArticleItem = {
   active: false
 }
 
+export const DYNAMICALLY_POPULATE_SELECT_OPTIONS_IN_AEM_COMPONENT_DIALOG : IArticleItem = {
+  title: "Dynamically Populate Select Options in AEM Component Dialog",
+  url: "/aem/sites/dynamically-populate-select-options-in-aem-component-dialog",
+  publishDate: "August 30, 2024",
+  modifiedDate: "August 30, 2024",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
+}
+
 export const HTL_SPECIFICATION_CHEATSHEET : IArticleItem = {
   title: "HTL Specification CheatSheet",
   url: "/aem/sites/htl-specification-cheatsheet",
@@ -210,7 +220,7 @@ export const SONARQUBE_SETUP_FOR_AEM_DEVELOPMENT : IArticleItem = {
 }
 
 export const WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS : IArticleItem = {
-  title: "Web Optimized Image Delivery for Custom Components",
+  title: "Web Optimized Image Delivery for AEM Custom Components",
   url: "/aem/sites/web-optimized-image-delivery-for-custom-component",
   publishDate: "April 09, 2024",
   modifiedDate: "April 09, 2024",
@@ -296,8 +306,8 @@ export const START_AEM_IN_DEBUG_MODE : IArticleItem = {
 export const UPDATE_JAVA_JDK_V11_FOR_AEM_CLOUD : IArticleItem = {
   title: "Update Java JDK to v11 for AEM Cloud",
   url: "/aem/sites/update-java-jdk-v11-for-aem-cloud",
-  publishDate: "August 28, 2024",
-  modifiedDate: "August 28, 2024",
+  publishDate: "August 25, 2024",
+  modifiedDate: "August 25, 2024",
   description: `By default, projects are built by the Cloud Manager build process using the Oracle 8 JDK, but AEM Cloud Service customers are strongly advised 
   to set the JDK version used to execute Maven to 11 for improved performance, security, and support over earlier versions.`,
   topics: [ TOPICS.AEM_SITES ],
@@ -321,6 +331,16 @@ export const REPOSITORY_MODERNIZER: IArticleItem = {
 export const SETUP_LOCAL_AEM_DEVELOPMENT_ENVIRONMENT : IArticleItem = {
   title: "Setup Local AEM Development Environment",
   url: "/aem/sites/set-up-local-aem-development-environment",
+  publishDate: "August 28, 2024",
+  modifiedDate: "August 28, 2024",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
+}
+
+export const SLING_RESOURCE_MERGER : IArticleItem = {
+  title: "Sling Resource Merger in AEM",
+  url: "/aem/sites/sling-resource-merger",
   publishDate: "August 28, 2024",
   modifiedDate: "August 28, 2024",
   description: ``,
@@ -355,5 +375,7 @@ export const AEM_SITES : IArticleItem[] = [
   START_AEM_IN_DEBUG_MODE,
   REPOSITORY_MODERNIZER,
   UPDATE_JAVA_JDK_V11_FOR_AEM_CLOUD,
-  SETUP_LOCAL_AEM_DEVELOPMENT_ENVIRONMENT
+  SETUP_LOCAL_AEM_DEVELOPMENT_ENVIRONMENT,
+  SLING_RESOURCE_MERGER,
+  DYNAMICALLY_POPULATE_SELECT_OPTIONS_IN_AEM_COMPONENT_DIALOG
 ].filter(m => m.active);

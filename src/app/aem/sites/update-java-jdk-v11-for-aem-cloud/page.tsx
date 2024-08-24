@@ -87,7 +87,7 @@ export default function JdkVersionUpdate() {
       </article>
       <FAQ items={[{
         question: `Cannot access <code>org.apache.jackrabbit.api.security.user.Group</code> bad class file: <code class="code-inline background break-all">/root/.m2/repository/com/adobe/aem/aem-sdk-api/2024.7.17258.20240726T172406Z-240700/aem-sdk-api-2024.7.17258.20240726T172406Z-240700.jar(org/apache/jackrabbit/api/security/user/Group.class)</code> class file has wrong version 55.0, should be 52.0`,
-        answer: `Ensure Cloud Manager uses Java JDK 11.`
+        answer: `Ensure Cloud Manager uses Java JDK v11.`
       }]}/>
     </div>
   );
