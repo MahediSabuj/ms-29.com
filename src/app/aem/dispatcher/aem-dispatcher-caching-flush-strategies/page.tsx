@@ -31,9 +31,21 @@ const aem_flush_vhost =
 `ServerAlias  flush`;
 
 const publish_invalidate_allowed =
-`/01 {
+`/0001 {
   /glob "\${PUBLISH_IP}"
   /type "allow"
+}`;
+
+const cache_rules =
+`/rules {
+  /0000 { /glob "*" /type "allow" }
+  /0001 { /glob "*/private/*" /type "deny" }
+}`;
+
+const invalidate_files =
+`/cache {
+  /docroot "/mnt/var/www/html"
+  /statfileslevel "6"
 }`;
 
 const breadcrumbs : IBreadCrumb = {
@@ -76,7 +88,7 @@ export default function DispatcherCache() {
                  alt="AEM Dispatcher Invalidate Cache FLush Agent">
               </Image>
             </div>
-            <div className="md:w-1/2 w-full md:pt-0 pt-4 mx-4">
+            <div className="md:w-1/2 w-full md:pt-0 pt-4 ml-4">
               <Image className="py-3" src={aem_content_publish_replication_agent}
                  alt="AEM Dispatcher Invalidate Cache Flush Headers">
               </Image>
@@ -96,7 +108,7 @@ export default function DispatcherCache() {
                  alt="AEM Dispatcher Invalidate Cache FLush Agent">
               </Image>
             </div>
-            <div className="md:w-1/2 w-full md:pt-0 pt-4 mx-4">
+            <div className="md:w-1/2 w-full md:pt-0 pt-4 ml-4">
               <Image className="py-3" src={aem_dispatcher_invalidate_cache_flush_headers}
                  alt="AEM Dispatcher Invalidate Cache Flush Headers">
               </Image>
@@ -109,7 +121,7 @@ export default function DispatcherCache() {
             <div className="md:w-1/2 w-full">
               <Highlight code={publish_flush_farm} language="apache" path="available_farms / publish_flush_farm.any"/>
             </div>
-            <div className="md:w-1/2 w-full md:pt-0 pt-4 mx-4">
+            <div className="md:w-1/2 w-full md:pt-0 pt-4 ml-4">
               <Highlight code={aem_flush_vhost} language="apache" path="available_vhosts / aem_flush.vhost"/>
             </div>
           </div>
@@ -132,6 +144,17 @@ export default function DispatcherCache() {
           <Image className="py-3" src={aem_dispatcher_caching_strategies} height="500"
              alt="AEM Dispatcher Caching Strategies">
           </Image>
+          <section>
+            During content updates via page publish by Author, the dispatcher first checks the <code className="code-inline">/cache</code> rules to determine if the content is cacheable.
+          </section>
+          <div className="md:flex">
+            <div className="md:w-1/2 w-full">
+              <Highlight code={cache_rules} language="apache" path="cache / publish_cache.any"/>
+            </div>
+            <div className="md:w-1/2 w-full md:pt-0 pt-4 ml-4">
+              <Highlight code={invalidate_files} language="apache" path="available_vhosts / aem_flush.vhost"/>
+            </div>
+          </div>
         </div>
       </article>
     </div>

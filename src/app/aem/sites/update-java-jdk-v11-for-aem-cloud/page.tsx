@@ -71,7 +71,7 @@ export default function JdkVersionUpdate() {
           publishDate={ARTICLE.publishDate}
           modifiedDate={ARTICLE.modifiedDate}/>
         <section className="pt-6">
-          By default, AEM projects are built by the Cloud Manager build process using the Oracle 8 JDK, but AEM Cloud Service customers are strongly advised
+          By default, AEM projects are built by Cloud Manager build process using Oracle 8 JDK, but AEM Cloud Service customers are strongly advised
           to set the JDK version used to execute Maven to 11 for improved performance, security, and support over earlier versions.
         </section>
         <section className="pt-3">
