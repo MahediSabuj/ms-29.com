@@ -308,7 +308,7 @@ export const UPDATE_JAVA_JDK_V11_FOR_AEM_CLOUD : IArticleItem = {
   url: "/aem/sites/update-java-jdk-v11-for-aem-cloud",
   publishDate: "August 25, 2024",
   modifiedDate: "August 25, 2024",
-  description: `By default, projects are built by the Cloud Manager build process using the Oracle 8 JDK, but AEM Cloud Service customers are strongly advised 
+  description: `By default, AEM projects are built by the Cloud Manager build process using the Oracle 8 JDK, but AEM Cloud Service customers are strongly advised 
   to set the JDK version used to execute Maven to 11 for improved performance, security, and support over earlier versions.`,
   topics: [ TOPICS.AEM_SITES ],
   active: true
