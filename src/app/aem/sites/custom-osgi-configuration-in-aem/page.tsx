@@ -33,8 +33,8 @@ public @interface AppConfig {
   String client_secret();
 }`;
 
-const APP_CONFIGURATION_SERVICE =
-`public interface AppConfigurationService {
+const APP_CONFIG_SERVICE =
+`public interface AppConfigService {
   String getAppName();
   
   String getAPIEndPoint();
@@ -44,10 +44,10 @@ const APP_CONFIGURATION_SERVICE =
   String getClientSecret();
 }`
 
-const APP_CONFIGURATION_SERVICE_IMPL =
-`@Component(service = AppConfigurationService.class)
+const APP_CONFIG_SERVICE_IMPL =
+`@Component(service = AppConfigService.class)
 @Designate(ocd = AppConfig.class)
-public class AppConfigurationServiceImpl implements AppConfigurationService {
+public class AppConfigServiceImpl implements AppConfigService {
   private AppConfig appConfig;
 
   @Activate
@@ -76,7 +76,7 @@ public class AppConfigurationServiceImpl implements AppConfigurationService {
   }
 }`;
 
-const OSGI_CONFIQ =
+const OSGI_CONFIG =
 `{
   "app.name": "aem-demo",
   "api.endpoint": "https://www.google.com",
@@ -84,7 +84,7 @@ const OSGI_CONFIQ =
   "client.secret": "8TxmpkXAPRtLiOHIFHzjx4uKHlm1soAvO7I"
 }`;
 
-const OSGI_CONFIQ_CLOUD =
+const OSGI_CONFIG_CLOUD =
 `{
   "app.name": "aem-demo",
   "api.endpoint": "$[env:API_ENDPOINT]",
@@ -119,13 +119,13 @@ export default function CustomOsgiConfig() {
             To create a custom OSGi configuration, you need to define an interface that determines how the fields will appear configuration console.
           </section>
           <Highlight code={APP_CONFIG} language="java" path="AppConfig.java"/>
-          <Highlight code={APP_CONFIGURATION_SERVICE} language="java" path="AppConfigurationService.java"/>
-          <Highlight code={APP_CONFIGURATION_SERVICE_IMPL} language="java" path="AppConfigurationServiceImpl.java"/>
-          <Highlight code={OSGI_CONFIQ} language="json" path="com.aem.demo.core.services.impl.AppConfigurationServiceImpl.cfg.json"/>
+          <Highlight code={APP_CONFIG_SERVICE} language="java" path="AppConfigService.java"/>
+          <Highlight code={APP_CONFIG_SERVICE_IMPL} language="java" path="AppConfigServiceImpl.java"/>
+          <Highlight code={OSGI_CONFIG} language="json" path="com.aem.demo.core.services.impl.AppConfigServiceImpl.cfg.json"/>
           <Image src={CUSTOM_OSGI_CONFIGURATION} className="border" height="250"
              alt="Custom OSGI Configuration">
           </Image>
-          <Highlight code={OSGI_CONFIQ_CLOUD} language="json" path="com.aem.demo.core.services.impl.AppConfigurationServiceImpl.cfg.json"/>
+          <Highlight code={OSGI_CONFIG_CLOUD} language="json" path="com.aem.demo.core.services.impl.AppConfigServiceImpl.cfg.json"/>
         </div>
       </article>
     </div>
