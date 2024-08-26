@@ -57,9 +57,10 @@ export const AEM_LOG_INVESTIGATION : IArticleItem = {
   title: "AEM Log Investigation",
   description: ``,
   url: "/aem/dispatcher/aem-log-investigation",
-  publishDate: "February 20, 2024",
-  modifiedDate: "February 20, 2024",
-  topics: [ TOPICS.AEM_DISPATCHER ]
+  publishDate: "October 01, 2024",
+  modifiedDate: "October 01, 2024",
+  topics: [ TOPICS.AEM_DISPATCHER ],
+  active: false
 }
 
 export const AEM_DISPATCHER: IArticleItem[] = [
