@@ -27,8 +27,8 @@ export const CUSTOM_AEM_WORKFLOW_STEP: IArticleItem = {
   title: "Custom AEM Workflow Step",
   description: ``,
   url: "/aem/workflow/custom-aem-workflow-step",
-  publishDate: "June 15, 2024",
-  modifiedDate: "June 15, 2024",
+  publishDate: "October 28, 2024",
+  modifiedDate: "October 28, 2024",
   topics: [ TOPICS.AEM_WORKFLOW ],
   active: false
 }

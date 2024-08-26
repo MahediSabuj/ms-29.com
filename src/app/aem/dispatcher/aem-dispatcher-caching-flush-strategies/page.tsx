@@ -95,7 +95,7 @@ export default function DispatcherCache() {
                  alt="AEM Dispatcher Invalidate Cache FLush Agent">
               </Image>
             </div>
-            <div className="md:w-1/2 w-full md:pt-0 pt-4 ml-4">
+            <div className="md:w-1/2 w-full md:pt-0 pt-4 md:ml-4">
               <Image className="py-3" src={aem_content_publish_replication_agent}
                  alt="AEM Dispatcher Invalidate Cache Flush Headers">
               </Image>
@@ -115,7 +115,7 @@ export default function DispatcherCache() {
                  alt="AEM Dispatcher Invalidate Cache FLush Agent">
               </Image>
             </div>
-            <div className="md:w-1/2 w-full md:pt-0 pt-4 ml-4">
+            <div className="md:w-1/2 w-full md:pt-0 pt-4 md:ml-4">
               <Image className="py-3" src={aem_dispatcher_invalidate_cache_flush_headers}
                  alt="AEM Dispatcher Invalidate Cache Flush Headers">
               </Image>
@@ -128,7 +128,7 @@ export default function DispatcherCache() {
             <div className="md:w-1/2 w-full">
               <Highlight code={publish_flush_farm} language="apache" path="available_farms / publish_flush_farm.any"/>
             </div>
-            <div className="md:w-1/2 w-full md:pt-0 pt-4 ml-4">
+            <div className="md:w-1/2 w-full md:pt-0 pt-4 md:ml-4">
               <Highlight code={aem_flush_vhost} language="apache" path="available_vhosts / aem_flush.vhost"/>
             </div>
           </div>

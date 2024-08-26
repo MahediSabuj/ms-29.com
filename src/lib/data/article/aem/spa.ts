@@ -5,8 +5,8 @@ export const CUSTOM_AEM_SPA_COMPONENT: IArticleItem = {
   title: "Custom AEM SPA Component",
   description: ``,
   url: "/aem/spa/custom-spa-component",
-  publishDate: "April 28, 2024",
-  modifiedDate: "April 28, 2024",
+  publishDate: "October 15, 2024",
+  modifiedDate: "October 15, 2024",
   topics: [ TOPICS.AEM_SPA ],
   active: false
 }

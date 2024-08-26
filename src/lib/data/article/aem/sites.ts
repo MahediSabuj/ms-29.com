@@ -18,11 +18,11 @@ export const MULTI_SITE_MANAGER: IArticleItem = {
   title: "Multi Site Manager (MSM) in AEM",
   description: `Multi Site Manager and its Live Copy features allow to use the same site content in multiple locations. MSM maintains 
     the live relationship between the source and its live copies, ensuring that changes made to the source are also reflected in the live 
-    copies. Aditionally, You can adjust the content of the live copies by disconnecting the live relationship for individual subpages, or components, 
+    copies. Additionally, You can adjust the content of the live copies by disconnecting the live relationship for individual subpages, or components, 
     or both. By doing this, changes to the source are no longer applied to the live copy.`,
   url: "/aem/sites/multi-site-manager-in-aem",
-  publishDate: "May 24, 2024",
-  modifiedDate: "May 24, 2024",
+  publishDate: "September 24, 2024",
+  modifiedDate: "September 24, 2024",
   topics: [ TOPICS.AEM_SITES ],
   active: false
 }
@@ -80,8 +80,8 @@ export const CUSTOM_OSGI_CONFIGURATION: IArticleItem = {
   description: `OSGi Configuration allow us to configure run-mode specific properties. All the out-of-the-box OSGi configurations
     are available at /system/console/configMgr while custom configurations can be created as per business requirements.`,
   url: "/aem/sites/custom-osgi-configuration-in-aem",
-  publishDate: "June 28, 2024",
-  modifiedDate: "June 28, 2024",
+  publishDate: "August 30, 2024",
+  modifiedDate: "August 30, 2024",
   topics: [ TOPICS.AEM_SITES ],
   active: false
 }
@@ -151,8 +151,8 @@ export const BEST_PRACTICE_ANALYSIS_FOR_AEMAACS_MIGRATION: IArticleItem = {
 export const CONTEXT_AWARE_CONFIGURATION : IArticleItem = {
   title: "Apache Sling Context Aware Configuration in AEM",
   url: "/aem/sites/context-aware-configuration",
-  publishDate: "May 18, 2024",
-  modifiedDate: "May 18, 2024",
+  publishDate: "September 18, 2024",
+  modifiedDate: "September 18, 2024",
   description: `Context-aware configurations  are related to a content resource, allows different configs for 
     different content resources. Parameters within nested contexts allow hierarchical based inheritance and 
     global fallback values when required. Leveraging the Context-Aware Configuration Java API, one can retrieve 
@@ -174,8 +174,8 @@ export const EXPAND_CORE_SEARCH_COMPONENT_SCOPE : IArticleItem = {
 export const DYNAMICALLY_POPULATE_SELECT_OPTIONS_IN_AEM_COMPONENT_DIALOG : IArticleItem = {
   title: "Dynamically Populate Select Options in AEM Component Dialog",
   url: "/aem/sites/dynamically-populate-select-options-in-aem-component-dialog",
-  publishDate: "August 30, 2024",
-  modifiedDate: "August 30, 2024",
+  publishDate: "September 08, 2024",
+  modifiedDate: "September 08, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
   active: false
@@ -221,7 +221,7 @@ export const SONARQUBE_SETUP_FOR_AEM_DEVELOPMENT : IArticleItem = {
 
 export const WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS : IArticleItem = {
   title: "Web Optimized Image Delivery for AEM Custom Components",
-  url: "/aem/sites/web-optimized-image-delivery-for-custom-component",
+  url: "/aem/sites/web-optimized-image-delivery-for-aem-custom-component",
   publishDate: "April 09, 2024",
   modifiedDate: "April 09, 2024",
   description: `Web Optimized Image Delivery feature of AEM as a Cloud service delivers image assets from
@@ -331,8 +331,8 @@ export const REPOSITORY_MODERNIZER: IArticleItem = {
 export const SETUP_LOCAL_AEM_DEVELOPMENT_ENVIRONMENT : IArticleItem = {
   title: "Setup Local AEM Development Environment",
   url: "/aem/sites/set-up-local-aem-development-environment",
-  publishDate: "August 28, 2024",
-  modifiedDate: "August 28, 2024",
+  publishDate: "September 12, 2024",
+  modifiedDate: "September 12, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
   active: false
@@ -341,8 +341,8 @@ export const SETUP_LOCAL_AEM_DEVELOPMENT_ENVIRONMENT : IArticleItem = {
 export const SLING_RESOURCE_MERGER : IArticleItem = {
   title: "Sling Resource Merger in AEM",
   url: "/aem/sites/sling-resource-merger",
-  publishDate: "August 28, 2024",
-  modifiedDate: "August 28, 2024",
+  publishDate: "September 28, 2024",
+  modifiedDate: "September 28, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
   active: false

@@ -20,8 +20,8 @@ export const GOOGLE_RECAPTCHA_AEM_FORMS: IArticleItem = {
   title: "Google Recaptcha in AEM Forms",
   description: ``,
   url: "/aem/forms/google-recaptcha-in-aem-forms",
-  publishDate: "February 20, 2024",
-  modifiedDate: "February 20, 2024",
+  publishDate: "October 22, 2024",
+  modifiedDate: "October 22, 2024",
   topics: [ TOPICS.AEM_FORMS ],
   active: false
 }
