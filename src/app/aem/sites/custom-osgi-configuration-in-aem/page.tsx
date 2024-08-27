@@ -6,6 +6,7 @@ import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Highlight from "@/components/highlight/highlight";
 import { CUSTOM_OSGI_CONFIGURATION as ARTICLE } from "@/lib/data/article/aem/sites";
+
 import CUSTOM_OSGI_CONFIGURATION from "./assets/custom_osgi_configuration.png";
 
 export const metadata: Metadata = {
@@ -36,11 +37,8 @@ public @interface AppConfig {
 const APP_CONFIG_SERVICE =
 `public interface AppConfigService {
   String getAppName();
-  
-  String getAPIEndPoint();
-  
+  String getAPIEndpoint();
   String getClientID();
-  
   String getClientSecret();
 }`
 
@@ -61,7 +59,7 @@ public class AppConfigServiceImpl implements AppConfigService {
   }
 
   @Override
-  public String getAPIEndPoint() {
+  public String getAPIEndpoint() {
     return appConfig.api_endpoint();
   }
 
@@ -119,13 +117,30 @@ export default function CustomOsgiConfig() {
             To create a custom OSGi configuration, you need to define an interface that determines how the fields will appear configuration console.
           </section>
           <Highlight code={APP_CONFIG} language="java" path="AppConfig.java"/>
+          <section className="pt-3">
+            Next, you need to create a service to read those configuration values.
+          </section>
           <Highlight code={APP_CONFIG_SERVICE} language="java" path="AppConfigService.java"/>
           <Highlight code={APP_CONFIG_SERVICE_IMPL} language="java" path="AppConfigServiceImpl.java"/>
-          <Highlight code={OSGI_CONFIG} language="json" path="com.aem.demo.core.services.impl.AppConfigServiceImpl.cfg.json"/>
+          <section className="pt-3">
+            To add your custom-developed OSGi configuration to AEM instance, place it in the <code className="code-inline background">ui.config / osgiconfig</code> folder of your project.
+            If the configuration values differ across environments or run modes, you should add separate configurations within the respective environment or run mode-specific folders
+            like <code className="code-inline">config.dev.publish</code>, <code className="code-inline">config.stage.publish</code>, etc.
+          </section>
+          <Highlight code={OSGI_CONFIG} language="json" path="config / com.aem.demo.core.services.impl.AppConfigServiceImpl.cfg.json"/>
+          <section className="pt-3">
+            You can check the configuration on your instance from here <code className="code-inline background">/system/console/configMgr</code>.
+          </section>
           <Image src={CUSTOM_OSGI_CONFIGURATION} className="border" height="250"
              alt="Custom OSGI Configuration">
           </Image>
-          <Highlight code={OSGI_CONFIG_CLOUD} language="json" path="com.aem.demo.core.services.impl.AppConfigServiceImpl.cfg.json"/>
+          <section className="pt-3">
+            However, if you&apos;re using AEM as a Cloud Service, there&apos;s no need to create separate configurations for different environments or run modes. Instead, you can manage environment-specific variables directly within Cloud Manager and use them like below.
+          </section>
+          <Highlight code={OSGI_CONFIG_CLOUD} language="json" path="config / com.aem.demo.core.services.impl.AppConfigServiceImpl.cfg.json"/>
+          <section className="pt-3">
+            Additionally, <code className="code-inline background">/system/console/configMgr</code> is not accessible in AEM Cloud environment. To view configuration values, you can use Developer Console instead.
+          </section>
         </div>
       </article>
     </div>
