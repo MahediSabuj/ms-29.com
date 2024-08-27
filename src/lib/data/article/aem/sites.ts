@@ -36,7 +36,7 @@ export const AEM_USER_PERMISSION: IArticleItem = {
   publishDate: "September 05, 2024",
   modifiedDate: "September 05, 2024",
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const FETCH_MULTIFIELD_SLING_MODEL: IArticleItem = {
