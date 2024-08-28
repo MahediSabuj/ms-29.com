@@ -182,6 +182,16 @@ export const DYNAMICALLY_POPULATE_SELECT_OPTIONS_IN_AEM_COMPONENT_DIALOG : IArti
   active: false
 }
 
+export const ENVIRONMENT_VARIABLES_AND_SECRETS : IArticleItem = {
+  title: "Environment Variables and Secrets in AEMaaCS",
+  url: "/aem/sites/environment-variables-and-secrets-in-aemaacs",
+  publishDate: "September 03, 2024",
+  modifiedDate: "September 03, 2024",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
+}
+
 export const HTL_SPECIFICATION_CHEATSHEET : IArticleItem = {
   title: "HTL Specification CheatSheet",
   url: "/aem/sites/htl-specification-cheatsheet",
@@ -378,5 +388,6 @@ export const AEM_SITES : IArticleItem[] = [
   UPDATE_JAVA_JDK_V11_FOR_AEM_CLOUD,
   SETUP_LOCAL_AEM_DEVELOPMENT_ENVIRONMENT,
   SLING_RESOURCE_MERGER,
-  DYNAMICALLY_POPULATE_SELECT_OPTIONS_IN_AEM_COMPONENT_DIALOG
+  DYNAMICALLY_POPULATE_SELECT_OPTIONS_IN_AEM_COMPONENT_DIALOG,
+  ENVIRONMENT_VARIABLES_AND_SECRETS
 ].filter(m => m.active);
