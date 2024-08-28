@@ -189,8 +189,19 @@ export const ENVIRONMENT_VARIABLES_AND_SECRETS : IArticleItem = {
   modifiedDate: "September 03, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
+  active: true
+}
+
+export const PRIVATE_GITHUB_REPOSITORIES_IN_CLOUD_MANAGER : IArticleItem = {
+  title: "Integrating Private GitHub Repositories in AEM Cloud Manager",
+  url: "/aem/sites/private-github-repositories-in-cloud-manager",
+  publishDate: "October 03, 2024",
+  modifiedDate: "October 03, 2024",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
   active: false
 }
+
 
 export const HTL_SPECIFICATION_CHEATSHEET : IArticleItem = {
   title: "HTL Specification CheatSheet",
@@ -389,5 +400,6 @@ export const AEM_SITES : IArticleItem[] = [
   SETUP_LOCAL_AEM_DEVELOPMENT_ENVIRONMENT,
   SLING_RESOURCE_MERGER,
   DYNAMICALLY_POPULATE_SELECT_OPTIONS_IN_AEM_COMPONENT_DIALOG,
-  ENVIRONMENT_VARIABLES_AND_SECRETS
+  ENVIRONMENT_VARIABLES_AND_SECRETS,
+  PRIVATE_GITHUB_REPOSITORIES_IN_CLOUD_MANAGER
 ].filter(m => m.active);
