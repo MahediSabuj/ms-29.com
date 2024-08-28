@@ -5,6 +5,7 @@ import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Highlight from "@/components/highlight/highlight";
+import FAQ from "@/components/faq/faq";
 import { CUSTOM_OSGI_CONFIGURATION as ARTICLE } from "@/lib/data/article/aem/sites";
 
 import CUSTOM_OSGI_CONFIGURATION from "./assets/custom_osgi_configuration.png";
@@ -143,6 +144,10 @@ export default function CustomOsgiConfig() {
           </section>
         </div>
       </article>
+      <FAQ items={[{
+        question: `<code>osgiconfig</code> is not visible in AEM Cloud`,
+        answer: `This is expected behavior; <code>osgiconfig</code> folder isn&apos;t visible in AEMaaCS. You can view OSGi configuration through Developer Console.`
+      }]}/>
     </div>
   );
 }
