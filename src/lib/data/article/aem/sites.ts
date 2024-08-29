@@ -189,7 +189,7 @@ export const ENVIRONMENT_VARIABLES_AND_SECRETS : IArticleItem = {
   modifiedDate: "September 03, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const PRIVATE_GITHUB_REPOSITORIES_IN_CLOUD_MANAGER : IArticleItem = {
