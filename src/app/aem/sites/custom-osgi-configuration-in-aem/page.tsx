@@ -126,7 +126,7 @@ export default function CustomOsgiConfig() {
           <section className="pt-3">
             To add your custom-developed OSGi configuration to AEM instance, place it in the <code className="code-inline background">ui.config / osgiconfig</code> folder of your project.
             If the configuration values differ across environments or run modes, you should add separate configurations within the respective environment or run mode-specific folders
-            like <code className="code-inline">config.dev.publish</code>, <code className="code-inline">config.stage.publish</code>, etc.
+            like <code className="code-inline">config.publish.dev</code>, <code className="code-inline">config.publish.stage</code>, etc.
           </section>
           <Highlight code={OSGI_CONFIG} language="json" path="config / com.aem.demo.core.services.impl.AppConfigServiceImpl.cfg.json"/>
           <section className="pt-3">
