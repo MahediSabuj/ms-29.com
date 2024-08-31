@@ -32,7 +32,7 @@ export const AEM_USER_PERMISSION: IArticleItem = {
   description: `Adobe Experience Manager (AEM) is a content management system managing content authoring across multiple 
     sites with multiple content creators. User Permissions enforces strict governance over user actions like read, create, 
     modify, delete, publish contents. This mechanism ensures that only authorized users can perform these specific actions.`,
-  url: "/aem/sites/aem-user-permission",
+  url: "/aem/sites/managing-user-permission-and-access-control-in-aem",
   publishDate: "September 05, 2024",
   modifiedDate: "September 05, 2024",
   topics: [ TOPICS.AEM_SITES ],
@@ -189,6 +189,17 @@ export const ENVIRONMENT_VARIABLES_AND_SECRETS : IArticleItem = {
   modifiedDate: "September 03, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
+  active: false
+}
+
+
+export const TAILING_LOGS_ON_AEM_AS_CLOUD_SERVICE : IArticleItem = {
+  title: "Tailing logs on AEM as Cloud Service",
+  description: ``,
+  url: "/aem/sites/tailing-logs-on-aem-as-cloud-service",
+  publishDate: "September 10, 2024",
+  modifiedDate: "September 10, 2024",
+  topics: [ TOPICS.AEM_DISPATCHER ],
   active: false
 }
 
@@ -370,6 +381,26 @@ export const SLING_RESOURCE_MERGER : IArticleItem = {
   active: false
 }
 
+export const CONTENT_TRANSFER_TOOL : IArticleItem = {
+  title: "Content Migration to AEMaaCS using Content Transfer Tool",
+  url: "/aem/sites/content-migration-to-aemaacs-using-content-transfer-tool",
+  publishDate: "September 28, 2024",
+  modifiedDate: "September 28, 2024",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
+}
+
+export const SLING_MAPPING_FOR_RESOURCE_RESOLUTION : IArticleItem = {
+  title: "Sling Mapping for Resource Resolution",
+  url: "/aem/sites/sling-mapping-for-resource-resolution",
+  publishDate: "September 28, 2024",
+  modifiedDate: "September 28, 2024",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
+}
+
 export const AEM_SITES : IArticleItem[] = [
   PROJECT_LOMBOK_IN_AEM_PROJECTS,
   MULTI_SITE_MANAGER,
@@ -401,5 +432,8 @@ export const AEM_SITES : IArticleItem[] = [
   SLING_RESOURCE_MERGER,
   DYNAMICALLY_POPULATE_SELECT_OPTIONS_IN_AEM_COMPONENT_DIALOG,
   ENVIRONMENT_VARIABLES_AND_SECRETS,
-  PRIVATE_GITHUB_REPOSITORIES_IN_CLOUD_MANAGER
+  PRIVATE_GITHUB_REPOSITORIES_IN_CLOUD_MANAGER,
+  TAILING_LOGS_ON_AEM_AS_CLOUD_SERVICE,
+  CONTENT_TRANSFER_TOOL,
+  SLING_MAPPING_FOR_RESOURCE_RESOLUTION
 ].filter(m => m.active);

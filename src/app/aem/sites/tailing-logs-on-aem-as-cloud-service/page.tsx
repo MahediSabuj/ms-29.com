@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 import Article from "@/components/article/article";
-import { AEM_LOG_INVESTIGATION as ARTICLE } from "@/lib/data/article/aem/dispatcher";
+import { TAILING_LOGS_ON_AEM_AS_CLOUD_SERVICE as ARTICLE } from "@/lib/data/article/aem/sites";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,

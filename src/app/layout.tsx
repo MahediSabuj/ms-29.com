@@ -36,7 +36,11 @@ const adobeCleanFont = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ms-29.com"),
-  title: "MS-29"
+  title: "MS-29",
+  openGraph: {
+    type: "website",
+    siteName: "MS-29"
+  }
 };
 
 const headerConfig: HeaderConfig = {

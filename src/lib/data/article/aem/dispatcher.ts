@@ -53,20 +53,9 @@ export const DISPATCHER_CACHE_FLUSH_STRATEGIES: IArticleItem = {
   active: true
 }
 
-export const AEM_LOG_INVESTIGATION : IArticleItem = {
-  title: "AEM Log Investigation",
-  description: ``,
-  url: "/aem/dispatcher/aem-log-investigation",
-  publishDate: "September 10, 2024",
-  modifiedDate: "September 10, 2024",
-  topics: [ TOPICS.AEM_DISPATCHER ],
-  active: false
-}
-
 export const AEM_DISPATCHER: IArticleItem[] = [
   BASIC_HTTP_AUTHENTICATION,
   CACHE_AEM_GATED_PAGES,
   CACHE_AEM_DYNAMIC_CONTENT,
-  DISPATCHER_CACHE_FLUSH_STRATEGIES,
-  AEM_LOG_INVESTIGATION
+  DISPATCHER_CACHE_FLUSH_STRATEGIES
 ].filter(m => m.active);
