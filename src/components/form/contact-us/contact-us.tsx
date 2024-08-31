@@ -13,7 +13,7 @@ interface FormValues {
   termsConditions: boolean;
 }
 
-export default function ArticleReview() {
+export default function ContactUsForm() {
   const [success, setSuccess] = useState(false);
 
   const {
@@ -28,7 +28,7 @@ export default function ArticleReview() {
   const onSubmit = async (data: FormValues) => {
     if (window.dataLayer) {
       window.dataLayer.push({
-        event: "articleReview",
+        event: "contactUs",
         ...data,
       });
 

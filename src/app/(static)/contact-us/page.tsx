@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import ArticleReview from "@/components/article-review/article-review";
+import ContactUsForm from "@/components/form/contact-us/contact-us";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -15,7 +15,7 @@ export default function Contact() {
       <h1 className="text-2xl" itemProp="name">
         Contact Us
       </h1>
-      <ArticleReview/>
+      <ContactUsForm/>
     </div>
   ); 
 }
