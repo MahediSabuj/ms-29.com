@@ -33,10 +33,10 @@ export const AEM_USER_PERMISSION: IArticleItem = {
     sites with multiple content creators. User Permissions enforces strict governance over user actions like read, create, 
     modify, delete, publish contents. This mechanism ensures that only authorized users can perform these specific actions.`,
   url: "/aem/sites/managing-user-permission-and-access-control-in-aem",
-  publishDate: "September 05, 2024",
-  modifiedDate: "September 05, 2024",
+  publishDate: "September 10, 2024",
+  modifiedDate: "September 10, 2024",
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const FETCH_MULTIFIELD_SLING_MODEL: IArticleItem = {
@@ -175,11 +175,11 @@ export const EXPAND_CORE_SEARCH_COMPONENT_SCOPE : IArticleItem = {
 export const DYNAMICALLY_POPULATE_SELECT_OPTIONS_IN_AEM_COMPONENT_DIALOG : IArticleItem = {
   title: "Dynamically Populate Select Options in AEM Component Dialog",
   url: "/aem/sites/dynamically-populate-select-options-in-aem-component-dialog",
-  publishDate: "September 08, 2024",
-  modifiedDate: "September 08, 2024",
+  publishDate: "September 13, 2024",
+  modifiedDate: "September 13, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const ENVIRONMENT_VARIABLES_AND_SECRETS : IArticleItem = {
@@ -187,20 +187,21 @@ export const ENVIRONMENT_VARIABLES_AND_SECRETS : IArticleItem = {
   url: "/aem/sites/environment-variables-and-secrets-in-aemaacs",
   publishDate: "September 03, 2024",
   modifiedDate: "September 03, 2024",
-  description: ``,
+  description: `Environment variables allow AEM code and applications to adapt based on context, enabling different configurations 
+    for development, production, or staging environments. They can be updated or deleted as needed, no code changes or deployments 
+    required. By separating code from configuration, they enhance security and keep sensitive information out of version control.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
-
 
 export const TAILING_LOGS_ON_AEM_AS_CLOUD_SERVICE : IArticleItem = {
   title: "Tailing logs on AEM as Cloud Service",
   description: ``,
   url: "/aem/sites/tailing-logs-on-aem-as-cloud-service",
-  publishDate: "September 10, 2024",
-  modifiedDate: "September 10, 2024",
+  publishDate: "September 08, 2024",
+  modifiedDate: "September 08, 2024",
   topics: [ TOPICS.AEM_DISPATCHER ],
-  active: false
+  active: true
 }
 
 export const PRIVATE_GITHUB_REPOSITORIES_IN_CLOUD_MANAGER : IArticleItem = {
@@ -394,11 +395,21 @@ export const CONTENT_TRANSFER_TOOL : IArticleItem = {
 export const SLING_MAPPING_FOR_RESOURCE_RESOLUTION : IArticleItem = {
   title: "Sling Mapping for Resource Resolution",
   url: "/aem/sites/sling-mapping-for-resource-resolution",
-  publishDate: "September 28, 2024",
-  modifiedDate: "September 28, 2024",
+  publishDate: "September 05, 2024",
+  modifiedDate: "September 05, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
+}
+
+export const CUSTOM_RUN_MODES_ON_AEMAACS : IArticleItem = {
+  title: "Custom Run Modes on AEMaaCS",
+  url: "/aem/sites/custom-run-modes-on-aemaacs",
+  publishDate: "September 16, 2024",
+  modifiedDate: "September 16, 2024",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: true
 }
 
 export const AEM_SITES : IArticleItem[] = [
@@ -435,5 +446,6 @@ export const AEM_SITES : IArticleItem[] = [
   PRIVATE_GITHUB_REPOSITORIES_IN_CLOUD_MANAGER,
   TAILING_LOGS_ON_AEM_AS_CLOUD_SERVICE,
   CONTENT_TRANSFER_TOOL,
-  SLING_MAPPING_FOR_RESOURCE_RESOLUTION
+  SLING_MAPPING_FOR_RESOURCE_RESOLUTION,
+  CUSTOM_RUN_MODES_ON_AEMAACS
 ].filter(m => m.active);
