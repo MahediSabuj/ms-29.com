@@ -9,6 +9,7 @@ import FAQ from "@/components/faq/faq";
 import { CUSTOM_OSGI_CONFIGURATION as ARTICLE } from "@/lib/data/article/aem/sites";
 
 import CUSTOM_OSGI_CONFIGURATION from "./assets/custom_osgi_configuration.png";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -135,10 +136,19 @@ export default function CustomOsgiConfig() {
           <Image src={CUSTOM_OSGI_CONFIGURATION} className="border" height="250"
              alt="Custom OSGI Configuration">
           </Image>
-          <section className="pt-3">
-            However, if you&apos;re using AEM as a Cloud Service, there&apos;s no need to create separate configurations for different environments or run modes. Instead, you can manage environment-specific variables directly within Cloud Manager and use them like below.
+          <section className="pt-3" id="aemaacs-osgi-config">
+            However, if you&apos;re using AEM as a Cloud Service, you can manage environment-specific variables directly within Cloud Manager and use them like below. For more information about
+            Environment Variables and Secrets, please visit this <Link target="_blank" className="text-blue-600" href="/aem/sites/environment-variables-and-secrets-in-aemaacs">link</Link>.
           </section>
           <Highlight code={OSGI_CONFIG_CLOUD} language="json" path="config / com.aem.demo.core.services.impl.AppConfigServiceImpl.cfg.json"/>
+          <section className="pt-3">
+            There are three varieties of OSGi configuration values that can be used with AEM as a Cloud Service.
+            <ul className="list-disc ml-6 pt-1 pl-2.5">
+              <li><strong>Inline values:</strong> which are values that are hard-coded into the OSGi configuration and stored in Git, such as <code className="code-inline">app.name</code>.</li>
+              <li><strong>Environment-specific values:</strong> which are values that vary between Development environments, and thus cannot be accurately targeted by run mode, particularly when multiple development environments are needed and share the same run mode.</li>
+              <li><strong>Secret values:</strong> which are values that must not be stored in Git for security reasons, such as <code className="code-inline">client.id</code> and <code className="code-inline">client.secret</code>.</li>
+            </ul>
+          </section>
           <section className="pt-3">
             Additionally, <code className="code-inline background">/system/console/configMgr</code> is not accessible in AEM Cloud environment. To view configuration values, you can use Developer Console instead.
           </section>
