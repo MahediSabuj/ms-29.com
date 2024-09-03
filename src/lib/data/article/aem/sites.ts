@@ -36,7 +36,7 @@ export const AEM_USER_PERMISSION: IArticleItem = {
   publishDate: "September 10, 2024",
   modifiedDate: "September 10, 2024",
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const FETCH_MULTIFIELD_SLING_MODEL: IArticleItem = {
@@ -179,7 +179,7 @@ export const DYNAMICALLY_POPULATE_SELECT_OPTIONS_IN_AEM_COMPONENT_DIALOG : IArti
   modifiedDate: "September 13, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const ENVIRONMENT_VARIABLES_AND_SECRETS : IArticleItem = {
@@ -201,7 +201,7 @@ export const TAILING_LOGS_ON_AEM_AS_CLOUD_SERVICE : IArticleItem = {
   publishDate: "September 08, 2024",
   modifiedDate: "September 08, 2024",
   topics: [ TOPICS.AEM_DISPATCHER ],
-  active: true
+  active: false
 }
 
 export const PRIVATE_GITHUB_REPOSITORIES_IN_CLOUD_MANAGER : IArticleItem = {
@@ -399,7 +399,7 @@ export const SLING_MAPPING_FOR_RESOURCE_RESOLUTION : IArticleItem = {
   modifiedDate: "September 05, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const CUSTOM_RUN_MODES_ON_AEMAACS : IArticleItem = {
@@ -409,7 +409,7 @@ export const CUSTOM_RUN_MODES_ON_AEMAACS : IArticleItem = {
   modifiedDate: "September 16, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const AEM_SITES : IArticleItem[] = [

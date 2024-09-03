@@ -56,12 +56,17 @@ export default function EnvironmentVariable() {
           It&apos;s recommend to add multiple variables at once in the Environment Configuration dialog to update the environment in a single step. Otherwise, each save will trigger an environment update.
           Note that when editing secrets, you can only update their values; viewing them is not possible.
         </section>
-        <section className="pt-3">
-          Once environment variables are created, you can use them in your OSGi configurations. The values will be automatically pulled from Cloud Manager based on the environment you are in.
-          To learn how to use environment variables in OSGi configs, refer to this <Link target="_blank" className="text-blue-600" href="/aem/sites/custom-osgi-configuration-in-aem#aemaacs-osgi-config">link</Link>.
-        </section>
-        <section className="pt-3">
-          You can use environment variables in <code className="code-inline">pom.xml</code> as well. For example, passwords needn't be hard coded and you can access environment variables and secrets via XML like <code className="code-inline">${"{env.VARIABLE_NAME}"}</code>.
+        <h2 className="text-xl mt-4">
+          <strong>How to Use</strong>
+        </h2>
+        <section>
+          Once environment variables are created, you can use them in several places.
+          <ul className="list-disc ml-6 pt-1 pl-2.5 pb-1">
+            <li><strong>OSGi Configs:</strong> Both regular environment variables and secrets can be used in OSGi configurations. To learn how to use environment variables in OSGi configs, refer to this <Link target="_blank" className="text-blue-600" href="/aem/sites/custom-osgi-configuration-in-aem#aemaacs-osgi-config">link</Link>.</li>
+            <li><strong><code className="code-inline">pom.xml</code></strong>: You can access environment variables and secrets in XML using <code className="code-inline">${"{env.VARIABLE_NAME}"}</code>. For example, instead of hardcoding passwords, you can use environment variables.</li>
+            <li><strong>Dispatcher:</strong> Only regular environment variables can be used with the dispatcher. Secrets cannot be used. However environment variables cannot be used in <code className="code-inline">IfDefine</code> directives.</li>
+          </ul>
+          These environment-specific values will be automatically pulled from Cloud Manager based on the environment you are in.
         </section>
         <section className="pt-3">
           <strong>Important Note</strong>: In Cloud Manager, the limit is 250 environment variables per environment. To stay within this limit, consider using inline values in OSGi configs where possible.
