@@ -35,9 +35,9 @@ export default function CookiePolicy() {
           </thead>
           <tbody>
             <tr className="border-b border-x">
-              <th scope="row" className="px-6 py-4 font-medium border-r whitespace-nowrap">
+              <td scope="row" className="px-6 py-4 font-medium border-r whitespace-nowrap">
                 _ga<br/>_gat_UA...
-              </th>
+              </td>
               <td className="px-6 py-4">
                 These cookies enable us to anonymously track how visitors access and browse our website, thereby enabling us to optimise and improve our service.
               </td>
