@@ -69,7 +69,7 @@ export default function EnvironmentVariable() {
           These environment-specific values will be automatically pulled from Cloud Manager based on the environment you are in.
         </section>
         <section className="pt-3">
-          <strong>Important Note</strong>: In Cloud Manager, the limit is 250 environment variables per environment. To stay within this limit, consider using inline values in OSGi configs where possible.
+          <strong>Important Note</strong>: In Cloud Manager, the limit is 200 environment variables per environment. To stay within this limit, consider using inline values in OSGi configs where possible.
         </section>
       </article>
     </div>
