@@ -392,14 +392,14 @@ export const CONTENT_TRANSFER_TOOL : IArticleItem = {
   active: false
 }
 
-export const SLING_MAPPING_FOR_RESOURCE_RESOLUTION : IArticleItem = {
-  title: "Sling Mapping for Resource Resolution",
-  url: "/aem/sites/sling-mapping-for-resource-resolution",
+export const SLING_MAPPINGS_FOR_RESOURCE_RESOLUTION : IArticleItem = {
+  title: "Sling Mappings for Resource Resolution",
+  url: "/aem/sites/sling-mappings-for-resource-resolution",
   publishDate: "September 05, 2024",
   modifiedDate: "September 05, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const CUSTOM_RUN_MODES_ON_AEMAACS : IArticleItem = {
@@ -407,6 +407,16 @@ export const CUSTOM_RUN_MODES_ON_AEMAACS : IArticleItem = {
   url: "/aem/sites/custom-run-modes-on-aemaacs",
   publishDate: "September 16, 2024",
   modifiedDate: "September 16, 2024",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
+}
+
+export const SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD : IArticleItem = {
+  title: "Setting Up Custom Domain in AEM Cloud",
+  url: "/aem/sites/setting-up-custom-domain-aem-cloud",
+  publishDate: "September 22, 2024",
+  modifiedDate: "September 22, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
   active: false
@@ -446,6 +456,7 @@ export const AEM_SITES : IArticleItem[] = [
   PRIVATE_GITHUB_REPOSITORIES_IN_CLOUD_MANAGER,
   TAILING_LOGS_ON_AEM_AS_CLOUD_SERVICE,
   CONTENT_TRANSFER_TOOL,
-  SLING_MAPPING_FOR_RESOURCE_RESOLUTION,
-  CUSTOM_RUN_MODES_ON_AEMAACS
+  SLING_MAPPINGS_FOR_RESOURCE_RESOLUTION,
+  CUSTOM_RUN_MODES_ON_AEMAACS,
+  SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD
 ].filter(m => m.active);
