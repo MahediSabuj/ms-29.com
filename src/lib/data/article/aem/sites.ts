@@ -196,12 +196,16 @@ export const ENVIRONMENT_VARIABLES_AND_SECRETS : IArticleItem = {
 
 export const TAILING_LOGS_ON_AEM_AS_CLOUD_SERVICE : IArticleItem = {
   title: "Tailing logs on AEM as Cloud Service",
-  description: ``,
+  description: `Tailing logs is a very basic need that every developer performs daily, as logs serve as the frontline for debugging 
+    AEM applications. While AEM 6.5 allows tailing logs via the System Console or SSH into AEM servers, AEM Cloud Service no longer
+    provides this access. Instead, Adobe Cloud Manager supports accessing AEMaaCS logs via Adobe I/O CLI with Cloud Manager plugin, 
+    which allows for downloading and tailing logs. Additionally, Adobe Cloud Manager allows for the download of logs, by day, via 
+    environment's Download Logs action.`,
   url: "/aem/sites/tailing-logs-on-aem-as-cloud-service",
-  publishDate: "September 08, 2024",
-  modifiedDate: "September 08, 2024",
-  topics: [ TOPICS.AEM_DISPATCHER ],
-  active: false
+  publishDate: "September 09, 2024",
+  modifiedDate: "September 09, 2024",
+  topics: [ TOPICS.AEM_SITES ],
+  active: true
 }
 
 export const PRIVATE_GITHUB_REPOSITORIES_IN_CLOUD_MANAGER : IArticleItem = {
@@ -395,11 +399,11 @@ export const CONTENT_TRANSFER_TOOL : IArticleItem = {
 export const SLING_MAPPINGS_FOR_RESOURCE_RESOLUTION : IArticleItem = {
   title: "Sling Mappings for Resource Resolution",
   url: "/aem/sites/sling-mappings-for-resource-resolution",
-  publishDate: "September 05, 2024",
-  modifiedDate: "September 05, 2024",
+  publishDate: "September 12, 2024",
+  modifiedDate: "September 12, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const CUSTOM_RUN_MODES_ON_AEMAACS : IArticleItem = {
