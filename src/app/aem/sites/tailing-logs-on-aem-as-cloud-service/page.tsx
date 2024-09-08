@@ -19,7 +19,8 @@ export const metadata: Metadata = {
 
 const CUSTOM_LOGGING =
 `{
-   "org.apache.sling.commons.log.file": "logs/error.log"
+  "org.apache.sling.commons.log.level": "DEBUG",
+  "org.apache.sling.commons.log.file": "logs/error.log"
 }`;
 
 const breadcrumbs : IBreadCrumb = {
@@ -58,6 +59,11 @@ export default function LogInvestigation() {
           Available log options in AEM Author and Publish services are <code className="code-inline">aemerror</code>, <code className="code-inline">aemaccess</code>, and <code className="code-inline">aemrequest</code> logs,
           while AEM Dispatcher provides <code className="code-inline">httpdaccess</code>, <code className="code-inline">httperror</code>, and <code className="code-inline">aemdispatcher</code> log files. The recommended log
           levels for custom loggers per environment type: DEBUG (Development), WARN (Stage), ERROR (Production).
+        </section>
+        <section className="pt-3">
+          Hierarchy of logging levels are as follows in Highest to Lowest order: TRACE, DEBUG, INFO, WARN, ERROR. The high level logs contains all the
+          logs of lower levels like in case of Trace log level, it will include all the logs of debug, info, warn and error as well. Setting a high-level
+          log such as TRACE in a production environment can lead to excessive logging, which may impact AEM’s performance.
         </section>
         <section className="pt-3">
           Here are the steps to tail logs on AEM as a Cloud Service environment:
