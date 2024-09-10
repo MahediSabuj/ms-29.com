@@ -73,7 +73,7 @@ export default function LogInvestigation() {
             <li><strong>Login to Adobe IMS:</strong> <code className="code-inline">aio login</code></li>
             <li><strong>Org List:</strong> <code className="code-inline">aio cloudmanager:org:list</code></li>
             <li><strong>Select Org:</strong> <code className="code-inline">aio cloudmanager:org:select [ORGID]</code></li>
-            <li><strong>List of Programs:</strong> <code className="code-inline">aio cloudmanager:org:select [ORGID]aio cloudmanager:list-programs</code></li>
+            <li><strong>List of Programs:</strong> <code className="code-inline">aio cloudmanager:list-programs</code></li>
             <li><strong>Select Default Program:</strong> <code className="code-inline">aio config:set cloudmanager_programid [PROGRAMID]</code></li>
             <li><strong>List of Environments:</strong> <code className="code-inline">aio cloudmanager:list-environments</code></li>
             <li><strong>List Available Log Options:</strong> <code className="code-inline">aio cloudmanager:environment:list-available-log-options [ENVIRONMENTID]</code></li>
