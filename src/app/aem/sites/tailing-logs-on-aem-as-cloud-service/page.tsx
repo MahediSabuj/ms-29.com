@@ -78,7 +78,7 @@ export default function LogInvestigation() {
             <li><strong>List of Environments:</strong> <code className="code-inline">aio cloudmanager:list-environments</code></li>
             <li><strong>List Available Log Options:</strong> <code className="code-inline">aio cloudmanager:environment:list-available-log-options [ENVIRONMENTID]</code></li>
             <li><strong>Download Logs:</strong> <code className="code-inline">aio cloudmanager:environment:download-logs [ENVIRONMENTID] [SERVICE] [NAME] [DAYS]</code></li>
-            <li><strong>Tail Logs:</strong> <code className="code-inline">aio cloudmanager:environment:tail-logs [ENVIRONMENTID] [SERVICE] [NAME]</code></li>
+            <li><strong>Tail Log:</strong> <code className="code-inline">aio cloudmanager:environment:tail-log [ENVIRONMENTID] [SERVICE] [NAME]</code></li>
           </ul>
         </section>
       </article>
