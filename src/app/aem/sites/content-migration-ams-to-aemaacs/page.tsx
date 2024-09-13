@@ -1,9 +1,12 @@
 import { Metadata } from "next";
+import Image from "next/image";
 
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import { CONTENT_TRANSFER_TOOL as ARTICLE } from "@/lib/data/article/aem/sites";
+
+import MIGRATION_SET_CLOUD_MANAGER from './assets/migration-set-cloud-manager.png';
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -21,7 +24,7 @@ const breadcrumbs : IBreadCrumb = {
   current: ARTICLE.title
 }
 
-export default function SlingModelAnnotations() {
+export default function ContentTransfer() {
   return (
     <div>
       <BreadCrumb {...breadcrumbs}/>
@@ -32,10 +35,11 @@ export default function SlingModelAnnotations() {
           modifiedDate={ARTICLE.modifiedDate}/>
         <div>
           <section className="pt-6">
-            In AEM, various annotations are provide for use in Java Sling Models. Sling Model enables 
-            injector-specific annotations, used to inject values. For each injector there is a specialized 
-            annotation available.
+            Content Transfer Tool (CTT) is used to move existing content from source AEM (on-premise or AMS) instance to target AEM Cloud Service instance.
           </section>
+          <Image src={MIGRATION_SET_CLOUD_MANAGER} className="border mt-3" height="400"
+             alt="Migration Set Cloud Manager">
+          </Image>
         </div>  
       </article>
     </div>

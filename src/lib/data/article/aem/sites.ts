@@ -36,7 +36,7 @@ export const AEM_USER_PERMISSION: IArticleItem = {
   publishDate: "September 22, 2024",
   modifiedDate: "September 22, 2024",
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const FETCH_MULTIFIELD_SLING_MODEL: IArticleItem = {
@@ -159,7 +159,7 @@ export const CONTEXT_AWARE_CONFIGURATION : IArticleItem = {
     global fallback values when required. Leveraging the Context-Aware Configuration Java API, one can retrieve 
     the appropriate configuration for each content resource without concerning  where it is stored or how the inheritance works.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const EXPAND_CORE_SEARCH_COMPONENT_SCOPE : IArticleItem = {
@@ -228,7 +228,7 @@ export const HTL_SPECIFICATION_CHEATSHEET : IArticleItem = {
     template system for HTML in AEM, preferred over JSP (JavaServer Pages) for new projects. However, moving to HTL is not 
     necessarily an all-or-nothing choice, as HTL components can harmoniously coexist with JSP within the same project.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const SLING_MODEL_DELEGATION_PATTERN : IArticleItem = {
@@ -241,7 +241,7 @@ export const SLING_MODEL_DELEGATION_PATTERN : IArticleItem = {
     to customize the functionality of core components to address project-specific requirements. The business logic for the core components 
     is implemented in Sling Models, which can be customized using the delegation pattern.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const SONARQUBE_SETUP_FOR_AEM_DEVELOPMENT : IArticleItem = {
@@ -290,7 +290,7 @@ export const APACHE_SLING_SITEMAP_GENERATOR: IArticleItem = {
     like Google to efficiently crawl and index web pages. AEM offers Apache Sling Sitemap Generator, dynamically generating XML 
     sitemap based on the content structure and updating them with any page creation, deletion, or modification.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const SAML_AUTHENTICATION : IArticleItem = {
@@ -326,7 +326,7 @@ export const SETTING_UP_ERROR_PAGES_IN_AEM : IArticleItem = {
     HTTP status codes. By tailoring these pages with informative and user-friendly content, you can ensure users able to navigate smoothly
     and continue browsing the website.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const START_AEM_IN_DEBUG_MODE : IArticleItem = {
@@ -387,11 +387,11 @@ export const SLING_RESOURCE_MERGER : IArticleItem = {
 }
 
 export const CONTENT_TRANSFER_TOOL : IArticleItem = {
-  title: "Content Migration to AEMaaCS using Content Transfer Tool",
-  url: "/aem/sites/content-migration-to-aemaacs-using-content-transfer-tool",
-  publishDate: "September 28, 2024",
-  modifiedDate: "September 28, 2024",
-  description: ``,
+  title: "Content Migration AMS to AEMaaCS",
+  url: "/aem/sites/content-migration-ams-to-aemaacs",
+  publishDate: "October 28, 2024",
+  modifiedDate: "October 28, 2024",
+  description: `Content Transfer Tool (CTT) is used to move existing content from source AEM (on-premise or AMS) instance to target AEM Cloud Service instance.`,
   topics: [ TOPICS.AEM_SITES ],
   active: false
 }
@@ -414,17 +414,18 @@ export const CUSTOM_RUN_MODES_ON_AEMAACS : IArticleItem = {
   description: `In AEM 6.5, you can use arbitrary run modes to apply OSGi configs to specific instances. However, AEMaaCS 
     supports an exact set of run modes.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD : IArticleItem = {
   title: "Setting Up Custom Domain in AEM Cloud",
   url: "/aem/sites/setting-up-custom-domain-aem-cloud",
-  publishDate: "September 22, 2024",
-  modifiedDate: "September 22, 2024",
-  description: ``,
+  publishDate: "September 18, 2024",
+  modifiedDate: "September 18, 2024",
+  description: `It is good practice to have a Domain for your site that is memorable for customer and reflects your brand's identity.
+    Adding a custom domain name in AEMaaCS requires interaction between DNS service and Cloud Manager.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const AEM_SITES : IArticleItem[] = [
