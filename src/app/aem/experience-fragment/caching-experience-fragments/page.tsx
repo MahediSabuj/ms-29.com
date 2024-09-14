@@ -30,7 +30,7 @@ const SDI_OSGI_CONFIGURATION =
   ],
   "include-filter.config.rewrite": false,
   "include-filter.config.path": "/content/experience-fragments/aem-demo",
-  "include-filter.config.selector": "conf",
+  "include-filter.config.selector": "xf",
   "include-filter.config.required_header": "Server-Agent=Communique-Dispatcher",
   "include-filter.config.ttl": ""
 }`;
