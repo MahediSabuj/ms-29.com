@@ -33,8 +33,8 @@ export const AEM_USER_PERMISSION: IArticleItem = {
     sites with multiple content creators. User Permissions enforces strict governance over user actions like read, create, 
     modify, delete, publish contents. This mechanism ensures that only authorized users can perform these specific actions.`,
   url: "/aem/sites/managing-user-permission-and-access-control-in-aem",
-  publishDate: "September 10, 2024",
-  modifiedDate: "September 10, 2024",
+  publishDate: "September 22, 2024",
+  modifiedDate: "September 22, 2024",
   topics: [ TOPICS.AEM_SITES ],
   active: false
 }
@@ -152,8 +152,8 @@ export const BEST_PRACTICE_ANALYSIS_FOR_AEMAACS_MIGRATION: IArticleItem = {
 export const CONTEXT_AWARE_CONFIGURATION : IArticleItem = {
   title: "Apache Sling Context Aware Configuration in AEM",
   url: "/aem/sites/context-aware-configuration",
-  publishDate: "September 18, 2024",
-  modifiedDate: "September 18, 2024",
+  publishDate: "October 18, 2024",
+  modifiedDate: "October 18, 2024",
   description: `Context-aware configurations  are related to a content resource, allows different configs for 
     different content resources. Parameters within nested contexts allow hierarchical based inheritance and 
     global fallback values when required. Leveraging the Context-Aware Configuration Java API, one can retrieve 
@@ -222,8 +222,8 @@ export const PRIVATE_GITHUB_REPOSITORIES_IN_CLOUD_MANAGER : IArticleItem = {
 export const HTL_SPECIFICATION_CHEATSHEET : IArticleItem = {
   title: "HTL Specification CheatSheet",
   url: "/aem/sites/htl-specification-cheatsheet",
-  publishDate: "May 28, 2024",
-  modifiedDate: "May 28, 2024",
+  publishDate: "October 10, 2024",
+  modifiedDate: "October 10, 2024",
   description: `HTML Template Language (HTL), formerly known as Sightly, is the preferred and recommended server-side 
     template system for HTML in AEM, preferred over JSP (JavaServer Pages) for new projects. However, moving to HTL is not 
     necessarily an all-or-nothing choice, as HTL components can harmoniously coexist with JSP within the same project.`,
@@ -234,8 +234,8 @@ export const HTL_SPECIFICATION_CHEATSHEET : IArticleItem = {
 export const SLING_MODEL_DELEGATION_PATTERN : IArticleItem = {
   title: "Sling Model Delegation Pattern with Lombok",
   url: "/aem/sites/sling-model-delegation-pattern",
-  publishDate: "June 30, 2024",
-  modifiedDate: "June 30, 2024",
+  publishDate: "October 02, 2024",
+  modifiedDate: "October 02, 2024",
   description: `AEM Core Components are a standard set components to be used with AEM. Built with Adobe's best practices and 
     standards, Core Components provide a baseline set of functionality for any Sites implementation. However, it's often necessary 
     to customize the functionality of core components to address project-specific requirements. The business logic for the core components 
@@ -284,8 +284,8 @@ export const EXTEND_AEM_PAGE_PROPERTIES : IArticleItem = {
 export const APACHE_SLING_SITEMAP_GENERATOR: IArticleItem = {
   title: "Apache Sling Sitemap Generator for AEM",
   url: "/aem/sites/apache-sling-sitemap-generator",
-  publishDate: "June 04, 2024",
-  modifiedDate: "June 04, 2024",
+  publishDate: "September 27, 2024",
+  modifiedDate: "September 27, 2024",
   description: `Sitemap is essential for any website, an XML file that provides the pages of the website, allowing search engines 
     like Google to efficiently crawl and index web pages. AEM offers Apache Sling Sitemap Generator, dynamically generating XML 
     sitemap based on the content structure and updating them with any page creation, deletion, or modification.`,
@@ -319,8 +319,8 @@ export const SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION : IArticleItem = {
 export const SETTING_UP_ERROR_PAGES_IN_AEM : IArticleItem = {
   title: "Setting Up Error Pages in AEM",
   url: "/aem/sites/setup-error-page-in-aem",
-  publishDate: "July 03, 2024",
-  modifiedDate: "July 03, 2024",
+  publishDate: "September 16, 2024",
+  modifiedDate: "September 16, 2024",
   description: `Customizing error pages in AEM is crucial for ensuring seamless user experience and brand consistency. Error pages 
     act as backups when requested resources cannot be found or unexpected errors occur, such as the commonly encountered 404 and 500
     HTTP status codes. By tailoring these pages with informative and user-friendly content, you can ensure users able to navigate smoothly
@@ -387,11 +387,11 @@ export const SLING_RESOURCE_MERGER : IArticleItem = {
 }
 
 export const CONTENT_TRANSFER_TOOL : IArticleItem = {
-  title: "Content Migration to AEMaaCS using Content Transfer Tool",
-  url: "/aem/sites/content-migration-to-aemaacs-using-content-transfer-tool",
-  publishDate: "September 28, 2024",
-  modifiedDate: "September 28, 2024",
-  description: ``,
+  title: "Content Migration AMS to AEMaaCS",
+  url: "/aem/sites/content-migration-ams-to-aemaacs",
+  publishDate: "September 25, 2024",
+  modifiedDate: "September 25, 2024",
+  description: `Content Transfer Tool (CTT) is used to move existing content from source AEM (on-premise or AMS) instance to target AEM Cloud Service instance.`,
   topics: [ TOPICS.AEM_SITES ],
   active: false
 }
@@ -409,9 +409,10 @@ export const SLING_MAPPINGS_FOR_RESOURCE_RESOLUTION : IArticleItem = {
 export const CUSTOM_RUN_MODES_ON_AEMAACS : IArticleItem = {
   title: "Custom Run Modes on AEMaaCS",
   url: "/aem/sites/custom-run-modes-on-aemaacs",
-  publishDate: "September 16, 2024",
-  modifiedDate: "September 16, 2024",
-  description: ``,
+  publishDate: "September 12, 2024",
+  modifiedDate: "September 12, 2024",
+  description: `In AEM 6.5, you can use arbitrary run modes to apply OSGi configs to specific instances. However, AEMaaCS 
+    supports an exact set of run modes.`,
   topics: [ TOPICS.AEM_SITES ],
   active: false
 }
@@ -419,8 +420,20 @@ export const CUSTOM_RUN_MODES_ON_AEMAACS : IArticleItem = {
 export const SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD : IArticleItem = {
   title: "Setting Up Custom Domain in AEM Cloud",
   url: "/aem/sites/setting-up-custom-domain-aem-cloud",
-  publishDate: "September 22, 2024",
-  modifiedDate: "September 22, 2024",
+  publishDate: "September 18, 2024",
+  modifiedDate: "September 18, 2024",
+  description: `It is good practice to have a Domain for your site that is memorable for customer and reflects your brand's identity.
+    Adding a custom domain name in AEMaaCS requires interaction between DNS service and Cloud Manager. A user must be a member of Business 
+    Owner or Deployment Manager role to complete this task.`,
+  topics: [ TOPICS.AEM_SITES ],
+  active: true
+}
+
+export const DEDICATED_IP_FOR_AEMAACS : IArticleItem = {
+  title: "Dedicated IP using Advanced Networking in AEMaaCS",
+  url: "/aem/sites/dedicated-ip-using-advanced-networking-in-aemaacs",
+  publishDate: "September 30, 2024",
+  modifiedDate: "September 30, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
   active: false
@@ -462,5 +475,6 @@ export const AEM_SITES : IArticleItem[] = [
   CONTENT_TRANSFER_TOOL,
   SLING_MAPPINGS_FOR_RESOURCE_RESOLUTION,
   CUSTOM_RUN_MODES_ON_AEMAACS,
-  SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD
+  SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD,
+  DEDICATED_IP_FOR_AEMAACS
 ].filter(m => m.active);
