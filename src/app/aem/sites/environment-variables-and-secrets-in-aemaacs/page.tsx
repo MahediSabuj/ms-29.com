@@ -45,16 +45,16 @@ export default function EnvironmentVariable() {
           store sensitive information such as passwords and API keys.
         </section>
         <section className="pb-3">
-          To create Environment Variables in Cloud Manager, navigate to the Side Navigation bar, select Environments, and choose the desired environment. In the environment
-          details, go to the Configuration tab and click Add to open the Environment Configuration dialog.
+          To create Environment Variables in Cloud Manager, navigate to the left Navigation panel, select <strong>Environments</strong>, and choose the desired environment. In the environment
+          details, go to the <strong>Configuration</strong> tab and click Add to open the Environment Configuration dialog.
         </section>
         <Image src={AEM_CLOUD_MANAGER_ENVIRONMENT_VARIABLE} className="border"
            alt="Custom OSGI Configuration">
         </Image>
         <section className="pt-3">
-          While creating the variables, you can specify the service to which the variables apply, such as Author, Publish, Preview, or All, and choose their type, either Variable or Secret.
-          It&apos;s recommend to add multiple variables at once in the Environment Configuration dialog to update the environment in a single step. Otherwise, each save will trigger an environment update.
-          Note that when editing secrets, you can only update their values; viewing them is not possible.
+          While creating the variables, you can specify the service to which the variables apply, such as <strong>Author</strong>, <strong>Publish</strong>, <strong>Preview</strong>, or <strong>All</strong>, and
+          choose their type, either <strong>Variable</strong> or <strong>Secret</strong>. It&apos;s recommend to add multiple variables at once in the <strong>Environment Configuration</strong> dialog to update
+          the environment in a single step. Otherwise, each save will trigger an environment update. Note that when editing secrets, you can only update their values; viewing them is not possible.
         </section>
         <h2 className="text-xl mt-4">
           <strong>How to Use</strong>

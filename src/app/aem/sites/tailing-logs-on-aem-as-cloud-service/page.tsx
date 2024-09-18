@@ -56,8 +56,8 @@ export default function LogInvestigation() {
         </section>
         <Highlight code={CUSTOM_LOGGING} language="json" path="org.apache.sling.commons.log.LogManager.factory.config~aem-demo.cfg.json"/>
         <section className="pt-2">
-          Available log options in AEM Author and Publish services are <code className="code-inline">aemerror</code>, <code className="code-inline">aemaccess</code>, and <code className="code-inline">aemrequest</code> logs,
-          while AEM Dispatcher provides <code className="code-inline">httpdaccess</code>, <code className="code-inline">httperror</code>, and <code className="code-inline">aemdispatcher</code> log files. The recommended log
+          Available log options in AEM Author and Publish services are <code className="code-inline font-bold">aemerror</code>, <code className="code-inline font-bold">aemaccess</code>, and <code className="code-inline font-bold">aemrequest</code> logs,
+          while AEM Dispatcher provides <code className="code-inline font-bold">httpdaccess</code>, <code className="code-inline font-bold">httperror</code>, and <code className="code-inline font-bold">aemdispatcher</code> log files. The recommended log
           levels for custom loggers per environment type: DEBUG (Development), WARN (Stage), ERROR (Production).
         </section>
         <section className="pt-3">

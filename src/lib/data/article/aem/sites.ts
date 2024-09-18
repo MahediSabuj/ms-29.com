@@ -389,8 +389,8 @@ export const SLING_RESOURCE_MERGER : IArticleItem = {
 export const CONTENT_TRANSFER_TOOL : IArticleItem = {
   title: "Content Migration AMS to AEMaaCS",
   url: "/aem/sites/content-migration-ams-to-aemaacs",
-  publishDate: "October 28, 2024",
-  modifiedDate: "October 28, 2024",
+  publishDate: "September 25, 2024",
+  modifiedDate: "September 25, 2024",
   description: `Content Transfer Tool (CTT) is used to move existing content from source AEM (on-premise or AMS) instance to target AEM Cloud Service instance.`,
   topics: [ TOPICS.AEM_SITES ],
   active: false
@@ -423,9 +423,20 @@ export const SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD : IArticleItem = {
   publishDate: "September 18, 2024",
   modifiedDate: "September 18, 2024",
   description: `It is good practice to have a Domain for your site that is memorable for customer and reflects your brand's identity.
-    Adding a custom domain name in AEMaaCS requires interaction between DNS service and Cloud Manager.`,
+    Adding a custom domain name in AEMaaCS requires interaction between DNS service and Cloud Manager. A user must be a member of Business 
+    Owner or Deployment Manager role to complete this task.`,
   topics: [ TOPICS.AEM_SITES ],
   active: true
+}
+
+export const DEDICATED_IP_FOR_AEMAACS : IArticleItem = {
+  title: "Dedicated IP using Advanced Networking in AEMaaCS",
+  url: "/aem/sites/dedicated-ip-using-advanced-networking-in-aemaacs",
+  publishDate: "September 30, 2024",
+  modifiedDate: "September 30, 2024",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
 }
 
 export const AEM_SITES : IArticleItem[] = [
@@ -464,5 +475,6 @@ export const AEM_SITES : IArticleItem[] = [
   CONTENT_TRANSFER_TOOL,
   SLING_MAPPINGS_FOR_RESOURCE_RESOLUTION,
   CUSTOM_RUN_MODES_ON_AEMAACS,
-  SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD
+  SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD,
+  DEDICATED_IP_FOR_AEMAACS
 ].filter(m => m.active);
