@@ -5,6 +5,8 @@ import Article from "@/components/article/article";
 import Highlight from "@/components/highlight/highlight";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
 import { AEM_COMPONENT_DIALOG_CHEATSHEET as ARTICLE } from "@/lib/data/article/aem/sites";
 
 import PathFieldImage from "./assets/aem-component-dialog__pathfield.webp";
@@ -261,6 +263,10 @@ export default function DialogCheatSheet() {
             </div>
           </div>
       </article>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   )
 }

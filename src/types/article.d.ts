@@ -25,4 +25,15 @@ export interface IArticleList {
   pageType?: PAGE_TYPE
 }
 
+export interface IArticleReview {
+  items: IArticleReviewItem[]
+}
+
+export interface IArticleReviewItem {
+  fullName: string;
+  reviewDate: string;
+  message: string;
+  replies?: IArticleReviewItem[]
+}
+
 export default PAGE_TYPE;
