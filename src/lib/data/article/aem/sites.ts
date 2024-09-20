@@ -393,7 +393,7 @@ export const CONTENT_TRANSFER_TOOL : IArticleItem = {
   modifiedDate: "September 25, 2024",
   description: `Content Transfer Tool (CTT) is used to move existing content from source AEM (on-premise or AMS) instance to target AEM Cloud Service instance.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const SLING_MAPPINGS_FOR_RESOURCE_RESOLUTION : IArticleItem = {

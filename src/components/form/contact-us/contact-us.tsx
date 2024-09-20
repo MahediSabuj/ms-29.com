@@ -7,7 +7,6 @@ import Link from "next/link";
 interface FormValues {
   firstName: string;
   lastName: string;
-  userEmail: string;
   subject: string;
   message: string;
   termsConditions: boolean;
@@ -61,7 +60,6 @@ export default function ContactUsForm() {
                   id="firstName"
                   {...register("firstName", { required: "Required" })}
                   className={`${errors.firstName ? 'border-red-500' : 'border-gray-300'} shadow-sm bg-gray-50 border text-gray-900 text-sm rounded-lg focus:outline-none block w-full p-2.5`}
-                  placeholder="Mahedi"
                 />
               </div>
               <div className="relative z-0 w-full group">
@@ -73,27 +71,8 @@ export default function ContactUsForm() {
                   id="lastName"
                   {...register("lastName", { required: "Required" })}
                   className={`${errors.lastName ? 'border-red-500' : 'border-gray-300'} shadow-sm bg-gray-50 border text-gray-900 text-sm rounded-lg focus:outline-none block w-full p-2.5`}
-                  placeholder="Sabuj"
                 />
               </div>
-            </div>
-            <div>
-              <label htmlFor="userEmail"
-                  className="block mb-2 text-sm font-medium text-gray-900">
-                Email address
-              </label>
-              <input type="email"
-                id="userEmail"
-                {...register("userEmail", {
-                  required: "Required",
-                  pattern: {
-                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                    message: "Invalid",
-                  },
-                })}
-                className={`${errors.userEmail ? 'border-red-500' : 'border-gray-300'} shadow-sm bg-gray-50 border text-gray-900 text-sm rounded-lg focus:outline-none block w-full p-2.5`}
-                placeholder="youremail@domain.com"
-              />
             </div>
             <div>
               <label htmlFor="subject"
@@ -104,7 +83,6 @@ export default function ContactUsForm() {
                 id="subject"
                 {...register("subject", { required: "Required" })}
                 className={`${errors.subject ? 'border-red-500' : 'border-gray-300'} block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border shadow-sm focus:outline-none`}
-                placeholder="Let us know how we can help you"
               />
             </div>
             <div className="sm:col-span-2">
@@ -116,7 +94,6 @@ export default function ContactUsForm() {
                 rows={6}
                 {...register("message", { required: "Required" })}
                 className={`${errors.message ? 'border-red-500' : 'border-gray-300'} block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border focus:outline-none`}
-                placeholder="Leave a comment..."
               />
             </div>
             <div className="flex">

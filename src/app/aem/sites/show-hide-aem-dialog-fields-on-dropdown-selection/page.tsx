@@ -4,6 +4,7 @@ import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Article from "@/components/article/article";
 import Highlight from "@/components/highlight/highlight";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
 import { SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION as ARTICLE } from "@/lib/data/article/aem/sites";
 
 export const metadata: Metadata = {
@@ -86,6 +87,10 @@ export default function ShowHideDialogFields() {
           </div>
         </div>  
       </article>
+      <hr className="h-px mt-8 mb-4 bg-gray-200 border-0"/>
+      <div className="mt-6">
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }
