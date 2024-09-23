@@ -1,13 +1,15 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import Image from "next/image";
 
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
 import { ENVIRONMENT_VARIABLES_AND_SECRETS as ARTICLE } from "@/lib/data/article/aem/sites";
 
 import AEM_CLOUD_MANAGER_ENVIRONMENT_VARIABLE from './assets/aem-cloud-manager-environment-variable.png';
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -72,6 +74,10 @@ export default function EnvironmentVariable() {
           <strong>Important Note</strong>: In Cloud Manager, the limit is 200 environment variables per environment. To stay within this limit, consider using inline values in OSGi configs where possible.
         </section>
       </article>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }

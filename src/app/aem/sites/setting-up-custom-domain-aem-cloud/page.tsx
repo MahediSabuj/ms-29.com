@@ -4,6 +4,8 @@ import Image from "next/image";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
 import { SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD as ARTICLE } from "@/lib/data/article/aem/sites";
 
 import NEW_DOMAIN_NAME from './assets/new-domain-name.png';
@@ -168,6 +170,10 @@ export default function DomainConfiguration() {
           Congratulations! You have successfully configured your custom domain for use with Cloud Manager.
         </section>
       </article>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }
