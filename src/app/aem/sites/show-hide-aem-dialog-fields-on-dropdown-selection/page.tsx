@@ -63,7 +63,8 @@ export default function ShowHideDialogFields() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <div>
           <section className="pt-6 pb-3">
             Enabling Show/Hide functionality for AEM dialog fields improves user experience by allowing content authors to 

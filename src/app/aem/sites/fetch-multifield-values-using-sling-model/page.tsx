@@ -4,6 +4,8 @@ import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Highlight from "@/components/highlight/highlight";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import { FETCH_MULTIFIELD_SLING_MODEL as ARTICLE } from "@/lib/data/article/aem/sites";
 
 export const metadata: Metadata = {
@@ -121,7 +123,8 @@ export default function FetchMultiField() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <div className="pt-6">
           In accordance with specific project requirements, there might be a need to incorporate Multifield within the
           component dialog. Let&apos;s explore how to retrieve Multifield data and effectively utilize it in HTL.
@@ -155,6 +158,10 @@ export default function FetchMultiField() {
           You can externalize the <code className="code-inline">detailsPage</code> value according to your business requirements.
         </div>
       </article>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }

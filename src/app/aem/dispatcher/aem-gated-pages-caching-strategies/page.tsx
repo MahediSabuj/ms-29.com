@@ -5,6 +5,8 @@ import Article from "@/components/article/article";
 import Highlight from "@/components/highlight/highlight";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import { CACHE_AEM_GATED_PAGES as ARTICLE } from "@/lib/data/article/aem/dispatcher";
 
 import aem_gated_pages_caching_workflow from './assets/aem-gated-pages-caching-workflow.svg';
@@ -100,7 +102,8 @@ export default function CacheGatedPages() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <div className="pt-6">
           In General, requests containing authentication information are not cached because the cached document is served
           to the client without authentication. However, if the requirements permit the caching of authenticated documents,
@@ -196,6 +199,10 @@ export default function CacheGatedPages() {
           </ol>
         </div>
       </article>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }

@@ -5,6 +5,8 @@ import FAQ from "@/components/faq/faq";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import { DEFAULT_VALUES_IN_AEM_COMPONENT_DIALOG as ARTICLE } from "@/lib/data/article/aem/sites";
 
 export const metadata: Metadata = {
@@ -47,7 +49,8 @@ export default function DefaultValueComponentDialog() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <div>
           <section className="pt-6">
             In AEM components, it&apos;s often necessary to establish default values. This ensures that when components are
@@ -79,6 +82,10 @@ export default function DefaultValueComponentDialog() {
           Additionally, utilizing cq:template allows for adding default item or setting a default value for a multifield,
           which isn&apos;t supported by the value property of each node.`
       }]}/>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }

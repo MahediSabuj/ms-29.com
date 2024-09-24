@@ -5,6 +5,8 @@ import Article from "@/components/article/article";
 import Highlight from "@/components/highlight/highlight";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import { DATA_SLY_RESOURCE_IN_AEM_SPA as ARTICLE } from "@/lib/data/article/aem/spa";
 
 import TEASER_AUTHOR_VIEW from './assets/Teaser_Author_View.webp';
@@ -102,7 +104,8 @@ export default function DataSlyResourceInSPA() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <div>
           <section className="pt-6">
             In traditional AEM development, composite components are built by combining several atomic components 
@@ -143,6 +146,10 @@ export default function DataSlyResourceInSPA() {
           </Image>
         </div>  
       </article>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }

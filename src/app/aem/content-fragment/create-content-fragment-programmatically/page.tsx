@@ -5,6 +5,8 @@ import Highlight from "@/components/highlight/highlight";
 import FAQ from "@/components/faq/faq";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import { CONTENT_FRAGMENT_PROGRAMMATICALLY as ARTICLE } from "@/lib/data/article/aem/content-fragment";
 
 export const metadata: Metadata = {
@@ -55,7 +57,8 @@ export default function ContentFragmentProgrammatically() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <div>
           <section className="pt-6 pb-2">
             Creating a content fragment programmatically requires setting up a <strong>system user</strong> with
@@ -70,6 +73,10 @@ export default function ContentFragmentProgrammatically() {
         question: "No exceptions but content fragment wasn't created at the specified path.",
         answer: `Ensure to use <code>session.save()</code> to save the changes in the repository.`
       }]}/>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   )
 }

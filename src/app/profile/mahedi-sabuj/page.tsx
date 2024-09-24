@@ -47,6 +47,9 @@ export default function Resume() {
         <h2 className="headline">Adobe Certified AEM Developer | Adobe AEM Community Advisor</h2>
       </section>
       <section className="pt-4">
+        Experienced AEM Developer with 6 years of expertise.
+      </section>
+      <section className="pt-4">
         <h2 className="text-xl">Certifications</h2>
         <div className="pt-3 flex flex-col gap-y-4">
           {certifications.map((certification, index) => {

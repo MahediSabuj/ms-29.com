@@ -22,6 +22,7 @@ export const CACHE_AEM_GATED_PAGES: IArticleItem = {
   url: "/aem/dispatcher/aem-gated-pages-caching-strategies",
   publishDate: "March 21, 2024",
   modifiedDate: "March 21, 2024",
+  views: 158,
   topics: [ TOPICS.AEM_DISPATCHER ],
   active: true
 }
