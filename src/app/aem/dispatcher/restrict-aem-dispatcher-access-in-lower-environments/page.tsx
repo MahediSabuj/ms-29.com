@@ -5,6 +5,8 @@ import Article from "@/components/article/article";
 import Highlight from "@/components/highlight/highlight";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
 import { BASIC_HTTP_AUTHENTICATION as ARTICLE } from "@/lib/data/article/aem/dispatcher";
 
 export const metadata: Metadata = {
@@ -138,6 +140,10 @@ export default function BasicAuthentication() {
         </div>
         <Highlight code={basic_auth_group} language="apache" path="conf.d / available_vhosts / domain.vhost"></Highlight>
       </article>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }

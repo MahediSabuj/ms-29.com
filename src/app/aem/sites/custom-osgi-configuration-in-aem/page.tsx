@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import Image from "next/image";
 
 import Article from "@/components/article/article";
@@ -6,10 +7,11 @@ import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Highlight from "@/components/highlight/highlight";
 import FAQ from "@/components/faq/faq";
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
 import { CUSTOM_OSGI_CONFIGURATION as ARTICLE } from "@/lib/data/article/aem/sites";
 
 import CUSTOM_OSGI_CONFIGURATION from "./assets/custom_osgi_configuration.png";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -158,6 +160,10 @@ export default function CustomOsgiConfig() {
         question: `<code>osgiconfig</code> is not visible in AEM Cloud`,
         answer: `This is expected behavior; <code>osgiconfig</code> folder isn&apos;t visible in AEMaaCS. You can view OSGi configuration through Developer Console.`
       }]}/>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }

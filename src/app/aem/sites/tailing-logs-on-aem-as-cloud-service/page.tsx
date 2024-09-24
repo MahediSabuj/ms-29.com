@@ -5,6 +5,8 @@ import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Highlight from "@/components/highlight/highlight";
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
 import { TAILING_LOGS_ON_AEM_AS_CLOUD_SERVICE as ARTICLE } from "@/lib/data/article/aem/sites";
 
 import AEM_CLOUD_MANAGER_DOWNLOAD_LOGS from "./assets/aem-cloud-manager-download-logs.png";
@@ -82,6 +84,10 @@ export default function LogInvestigation() {
           </ul>
         </section>
       </article>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }
