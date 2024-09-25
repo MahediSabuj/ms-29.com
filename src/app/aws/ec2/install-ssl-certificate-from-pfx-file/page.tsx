@@ -56,7 +56,8 @@ export default function InstallCertificate() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <div className="pt-6">
           Installing SSL certificate is crucial for securing websites, ensuring encryption of data transmission between users
           browser and the site to protect sensitive information. Let&apos;s explore the process of installing SSL certificate
