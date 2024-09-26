@@ -443,6 +443,16 @@ export const DEDICATED_IP_FOR_AEMAACS : IArticleItem = {
   active: false
 }
 
+export const SETUP_RDE_FOR_AEM_CLOUD : IArticleItem = {
+  title: "Setup Rapid Development Environments for AEM Cloud",
+  url: "/aem/sites/setup-rapid-development-environment-for-aem-cloud",
+  publishDate: "September 30, 2024",
+  modifiedDate: "September 30, 2024",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: true
+}
+
 export const AEM_SITES : IArticleItem[] = [
   PROJECT_LOMBOK_IN_AEM_PROJECTS,
   MULTI_SITE_MANAGER,
@@ -480,5 +490,6 @@ export const AEM_SITES : IArticleItem[] = [
   SLING_MAPPINGS_FOR_RESOURCE_RESOLUTION,
   CUSTOM_RUN_MODES_ON_AEMAACS,
   SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD,
-  DEDICATED_IP_FOR_AEMAACS
+  DEDICATED_IP_FOR_AEMAACS,
+  SETUP_RDE_FOR_AEM_CLOUD
 ].filter(m => m.active);

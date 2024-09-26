@@ -7,6 +7,8 @@ import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import { CONTENT_TRANSFER_TOOL as ARTICLE } from "@/lib/data/article/aem/sites";
 
 import MIGRATION_SET_CLOUD_MANAGER from './assets/migration-set-cloud-manager.png';
+import MIGRATION_SET_EXTRACTION_KEY from './assets/migration-set-extraction-key.png';
+import MIGRATION_SET_AEM_AUTHOR from './assets/migration-set-aem-author.png';
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -39,6 +41,12 @@ export default function ContentTransfer() {
           </section>
           <Image src={MIGRATION_SET_CLOUD_MANAGER} className="border mt-3" height="400"
              alt="Migration Set Cloud Manager">
+          </Image>
+          <Image src={MIGRATION_SET_EXTRACTION_KEY} className="border mt-3"
+             alt="Migration Set Extraction Key">
+          </Image>
+          <Image src={MIGRATION_SET_AEM_AUTHOR} className="border mt-3" height="500"
+             alt="Migration Set AEM Author">
           </Image>
         </div>  
       </article>
