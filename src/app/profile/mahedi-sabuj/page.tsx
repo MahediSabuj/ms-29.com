@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 
 import aem_architect_certification from './assets/Adobe_Certified_Master_Experience_Cloud_products_Digital_Badge.webp';
@@ -29,7 +30,7 @@ const certifications: Certification[] = [{
 }, {
   title: "Adobe Experience Manager Sites Developer",
   issued: "Jul 2021",
-  expired: "Feb 2025",
+  expired: "May 2026",
   badge: adobe_developer_certification,
   url: "https://www.credly.com/badges/e6f2d0ab-286f-455c-b169-271f57f43e03"
 }, {
@@ -46,10 +47,10 @@ export default function Resume() {
         <h1 className="title"><strong>Abdullah &ndash; Al &ndash; Mahedi Sabuj</strong></h1>
         <h2 className="headline">Adobe Certified AEM Developer | Adobe AEM Community Advisor</h2>
       </section>
-      <section className="pt-4">
-        Experienced AEM Developer with 6 years of expertise.
+      <section className="pt-6">
+        Experienced AEM Developer with 6 years of expertise, currently working on migrating projects from AMS to AEMaaCS.
       </section>
-      <section className="pt-4">
+      <section className="pt-6">
         <h2 className="text-xl">Certifications</h2>
         <div className="pt-3 flex flex-col gap-y-4">
           {certifications.map((certification, index) => {
@@ -63,9 +64,9 @@ export default function Resume() {
                 </div>
                 <div>
                   <div>
-                    <a className="text-[#3273dc]" target="_blank" href={certification.url}>
+                    <Link className="text-[#3273dc]" target="_blank" href={certification.url}>
                       {certification.title}
-                    </a>
+                    </Link>
                   </div>
                   <div>
                     <span className="text-[#636B74]">Issued</span> {certification.issued}
@@ -75,6 +76,22 @@ export default function Resume() {
               </div>
             )
           })}
+        </div>
+      </section>
+      <section className="pt-6">
+        <h2 className="text-xl">Publications</h2>
+        <div>
+          <Link className="text-[#3273dc]" target="_blank" href="https://ieeexplore.ieee.org/document/7307475">
+            Randomly Encrypted Key Generation Algorithm against Side Channel Attack in Cloud Computing
+          </Link>
+        </div>
+        <div className="md:inline">
+          <span className="text-[#636B74] mr-2">Publisher</span>
+          <span>IEEE</span>
+        </div>
+        <div className="md:inline md:ml-4">
+          <span className="text-[#636B74] mr-2">Published</span>
+          <span>October 2015</span>
         </div>
       </section>
     </div>
