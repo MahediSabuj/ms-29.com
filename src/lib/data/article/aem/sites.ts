@@ -395,7 +395,9 @@ export const CONTENT_TRANSFER_TOOL : IArticleItem = {
   url: "/aem/sites/content-migration-ams-to-aemaacs",
   publishDate: "September 25, 2024",
   modifiedDate: "September 25, 2024",
-  description: `Content Transfer Tool (CTT) is used to move existing content from source AEM (on-premise or AMS) instance to target AEM Cloud Service instance.`,
+  description: `Content transfer is a crucial step when migrating AEM projects to AEMaaCS, especially with large volumes of content. 
+    To streamline this process, Adobe provides Content Transfer Tool (CTT), which can be used to initiate the migration of existing 
+    content from a source AEM instance (on-premise or AMS) to the target AEM Cloud Service instance.`,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
@@ -434,13 +436,13 @@ export const SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD : IArticleItem = {
 }
 
 export const DEDICATED_IP_FOR_AEMAACS : IArticleItem = {
-  title: "Dedicated IP using Advanced Networking in AEMaaCS",
-  url: "/aem/sites/dedicated-ip-using-advanced-networking-in-aemaacs",
+  title: "Dedicated egress IP using Advanced Networking in AEMaaCS",
+  url: "/aem/sites/dedicated-egress-ip-using-advanced-networking-in-aemaacs",
   publishDate: "September 30, 2024",
   modifiedDate: "September 30, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const SETUP_RDE_FOR_AEM_CLOUD : IArticleItem = {
