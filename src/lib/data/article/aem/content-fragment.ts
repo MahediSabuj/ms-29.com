@@ -10,7 +10,7 @@ export const CONTENT_FRAGMENT_PROGRAMMATICALLY: IArticleItem = {
   url: "/aem/content-fragment/create-content-fragment-programmatically",
   publishDate: "February 16, 2024",
   modifiedDate: "February 16, 2024",
-  views: 174,
+  views: 176,
   topics: [ TOPICS.CONTENT_FRAGMENT ],
   active: true
 }
