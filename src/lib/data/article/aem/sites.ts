@@ -46,7 +46,7 @@ export const FETCH_MULTIFIELD_SLING_MODEL: IArticleItem = {
   url: "/aem/sites/fetch-multifield-values-using-sling-model",
   publishDate: "March 14, 2024",
   modifiedDate: "March 14, 2024",
-  views: 169,
+  views: 170,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
@@ -105,7 +105,7 @@ export const AEM_COMPONENT_DIALOG_CHEATSHEET: IArticleItem = {
   url: "/aem/sites/component-dialog-cheatsheet",
   publishDate: "February 13, 2024",
   modifiedDate: "February 28, 2024",
-  views: 271,
+  views: 274,
   description: `Granite UI provides a large range of the basic components needed to create component 
     dialog on the authoring environment. These components are constructed using Coral UI-based elements.`,
   topics: [ TOPICS.AEM_SITES ],
@@ -117,7 +117,7 @@ export const DEFAULT_VALUES_IN_AEM_COMPONENT_DIALOG: IArticleItem = {
   url: "/aem/sites/default-value-in-component-dialog",
   publishDate: "February 04, 2024",
   modifiedDate: "February 10, 2024",
-  views: 172,
+  views: 173,
   description: `In AEM components, it&apos;s often necessary to establish default values. 
     This ensures that when components are dragged onto the page, they display predefined initial values.
     This functionality is achievable through the utilization of cq:template and cq:templatePath.`,
@@ -313,7 +313,7 @@ export const SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION : IArticleItem = {
   url: "/aem/sites/show-hide-aem-dialog-fields-on-dropdown-selection",
   publishDate: "April 10, 2024",
   modifiedDate: "April 10, 2024",
-  views: 371,
+  views: 375,
   description: `Enabling Show/Hide functionality for AEM dialog fields improves user experience by allowing content authors to 
     focus on relevant fields, thereby making the authoring process more efficient and less error-prone.`,
   topics: [ TOPICS.AEM_SITES ],
@@ -393,8 +393,8 @@ export const SLING_RESOURCE_MERGER : IArticleItem = {
 export const CONTENT_TRANSFER_TOOL : IArticleItem = {
   title: "Content Migration AMS to AEMaaCS",
   url: "/aem/sites/content-migration-ams-to-aemaacs",
-  publishDate: "September 25, 2024",
-  modifiedDate: "September 25, 2024",
+  publishDate: "October 02, 2024",
+  modifiedDate: "October 02, 2024",
   description: `Content transfer is a crucial step when migrating AEM projects to AEMaaCS, especially with large volumes of content. 
     To streamline this process, Adobe provides Content Transfer Tool (CTT), which can be used to initiate the migration of existing 
     content from a source AEM instance (on-premise or AMS) to the target AEM Cloud Service instance.`,
