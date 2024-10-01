@@ -7,12 +7,15 @@ import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import { CONTENT_TRANSFER_TOOL as ARTICLE } from "@/lib/data/article/aem/sites";
 
-import MIGRATION_SET_CLOUD_MANAGER from './assets/migration-set-cloud-manager.png';
+import MIGRATION_SET_CLOUD_ACCELERATION_MANAGER from './assets/migration-set-cloud-acceleration-manager.png';
 import MIGRATION_SET_EXTRACTION_KEY from './assets/migration-set-extraction-key.png';
 import MIGRATION_SET_AEM_AUTHOR from './assets/migration-set-aem-author.png';
 import MIGRATION_SET_CHECK_SIZE from './assets/migration-set-check-size.png';
+import MIGRATION_SET_CHECK_SIZE_STATUS from './assets/migration-set-check-size-status.png';
 import MIGRATION_SET_EXTRACTION from './assets/migration-set-extraction.png';
 import CONTENT_TRANSFER_SOURCE_AEM_INSTANCE from './assets/content-transfer-source-aem-instance.png';
+import EXTRACTION_PROCESS_VIEW_PROGRESS from './assets/extraction-process-view-progress.png';
+import CLOUD_ACCELERATION_MANAGER_MIGRATION_SET_DETAILS from './assets/cloud-acceleration-manager-migration-set-details.png';
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -61,7 +64,7 @@ export default function ContentTransfer() {
             From <strong>Cloud Acceleration Manager (CAM)</strong>, create a new project if you haven't already. Then, click on the <strong>Content Transfer</strong> and
             proceed by creating <strong>Migration Set</strong>.
           </section>
-          <Image src={MIGRATION_SET_CLOUD_MANAGER} className="border mt-3" height="400"
+          <Image src={MIGRATION_SET_CLOUD_ACCELERATION_MANAGER} className="border mt-3" height="400"
              alt="Migration Set Cloud Manager">
           </Image>
           <section className="pt-3">
@@ -95,10 +98,12 @@ export default function ContentTransfer() {
              alt="Migration Set Check Size">
           </Image>
           <section className="pt-3">
-            Once the <strong>Check Size</strong> process is completed, the status will change to <strong>FINISHED</strong>. Select the same Migration Set and click Check Size to view the results.
-            If the results indicate insufficient disk space, <strong>WARNING</strong> status will be displayed.
+            Once <strong>Check Size</strong> process is completed, the status will change to <strong>FINISHED</strong>. If the results indicate insufficient disk space, <strong>WARNING</strong> status will be displayed.
           </section>
-          <h2 className="text-xl mt-4">
+          <Image src={MIGRATION_SET_CHECK_SIZE_STATUS} className="border mt-3" height="500"
+             alt="Migration Set Check Size Status">
+          </Image>
+          <h2 className="text-xl mt-6">
             <strong>Extracting Content from Source</strong>
           </h2>
           <section>
@@ -107,7 +112,26 @@ export default function ContentTransfer() {
           <Image src={MIGRATION_SET_EXTRACTION} className="border mt-3" height="500"
              alt="Migration Set Extraction">
           </Image>
-          <h2 className="text-xl mt-4">
+          <section className="pt-3">
+            The <strong>Extraction</strong> field now displays the <strong>RUNNING</strong> status to indicate that the extraction is in-progress.
+            You can click <strong>View Progress</strong> to get a granular view of the on-going extraction.
+          </section>
+          <Image src={EXTRACTION_PROCESS_VIEW_PROGRESS} className="border mt-3" height="500"
+             alt="Extraction Process - View Progress">
+          </Image>
+          <section className="pt-3">
+            You can also monitor the Extraction phase progress from <strong>Cloud Acceleration Manager</strong> by visiting the <strong>Content Transfer</strong> page,
+            and see it in more details by clicking <strong>…</strong> &gt; <strong>View details</strong>.
+          </section>
+          <Image src={CLOUD_ACCELERATION_MANAGER_MIGRATION_SET_DETAILS} className="border mt-3" height="500"
+             alt="Cloud Acceleration Manager - Migration Set Details">
+          </Image>
+          <section className="pt-3">
+            The Content Transfer Tool has a feature that supports differential content top-up where it is possible to transfer only changes
+            made since the previous content transfer activity. You can transfer delta content by using top-up extraction method; simply
+            disable the <strong>Overwrite staging container during extraction</strong> option for any subsequent extractions.
+          </section>
+          <h2 className="text-xl mt-6">
             <strong>Ingesting Content into Cloud Service</strong>
           </h2>
         </div>  
