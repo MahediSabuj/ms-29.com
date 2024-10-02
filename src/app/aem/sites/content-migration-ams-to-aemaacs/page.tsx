@@ -16,6 +16,7 @@ import MIGRATION_SET_EXTRACTION from './assets/migration-set-extraction.png';
 import CONTENT_TRANSFER_SOURCE_AEM_INSTANCE from './assets/content-transfer-source-aem-instance.png';
 import EXTRACTION_PROCESS_VIEW_PROGRESS from './assets/extraction-process-view-progress.png';
 import CLOUD_ACCELERATION_MANAGER_MIGRATION_SET_DETAILS from './assets/cloud-acceleration-manager-migration-set-details.png';
+import CONTENT_TRANSFER_NEW_INGESTION from './assets/content-transfer-new-ingestion.png';
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -94,13 +95,13 @@ export default function ContentTransfer() {
             By running Size Check on the Migration Set, you are able to determine if there is sufficient disk space in the <code className="code-inline">crx-quickstart</code> subdirectory
             to complete Extraction successfully. This is because CTT creates a local copy of the repository that is later uploaded to migration set.
           </section>
-          <Image src={MIGRATION_SET_CHECK_SIZE} className="border mt-3" height="500"
+          <Image src={MIGRATION_SET_CHECK_SIZE} className="border mt-3"
              alt="Migration Set Check Size">
           </Image>
           <section className="pt-3">
             Once <strong>Check Size</strong> process is completed, the status will change to <strong>FINISHED</strong>. If the results indicate insufficient disk space, <strong>WARNING</strong> status will be displayed.
           </section>
-          <Image src={MIGRATION_SET_CHECK_SIZE_STATUS} className="border mt-3" height="500"
+          <Image src={MIGRATION_SET_CHECK_SIZE_STATUS} className="border mt-3"
              alt="Migration Set Check Size Status">
           </Image>
           <h2 className="text-xl mt-6">
@@ -109,7 +110,7 @@ export default function ContentTransfer() {
           <section>
             Select a migration set from the Content Transfer wizard and click Extract to start extraction.
           </section>
-          <Image src={MIGRATION_SET_EXTRACTION} className="border mt-3" height="500"
+          <Image src={MIGRATION_SET_EXTRACTION} className="border mt-3"
              alt="Migration Set Extraction">
           </Image>
           <section className="pt-3">
@@ -123,7 +124,7 @@ export default function ContentTransfer() {
             You can also monitor the Extraction phase progress from <strong>Cloud Acceleration Manager</strong> by visiting the <strong>Content Transfer</strong> page,
             and see it in more details by clicking <strong>…</strong> &gt; <strong>View details</strong>.
           </section>
-          <Image src={CLOUD_ACCELERATION_MANAGER_MIGRATION_SET_DETAILS} className="border mt-3" height="500"
+          <Image src={CLOUD_ACCELERATION_MANAGER_MIGRATION_SET_DETAILS} className="border mt-3"
              alt="Cloud Acceleration Manager - Migration Set Details">
           </Image>
           <section className="pt-3">
@@ -134,6 +135,12 @@ export default function ContentTransfer() {
           <h2 className="text-xl mt-6">
             <strong>Ingesting Content into Cloud Service</strong>
           </h2>
+          <section>
+            Navigate to Cloud Acceleration Manager. Select your project card and click on the Content Transfer card. Go to Ingestion Jobs and click on New Ingestion.
+          </section>
+          <Image src={CONTENT_TRANSFER_NEW_INGESTION} className="border mt-3"
+             alt="Content Transfer - New Ingestion">
+          </Image>
         </div>  
       </article>
     </div>
