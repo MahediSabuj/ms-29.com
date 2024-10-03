@@ -133,7 +133,7 @@ export default function ContentTransfer() {
              alt="Cloud Acceleration Manager - Migration Set Details">
           </Image>
           <section className="pt-3">
-            <FontAwesomeIcon icon={faExclamationCircle} className="text-red-600 inline-block " width={20} height={20}/> The Content Transfer Tool has a feature that supports differential content top-up where it is possible to transfer only changes
+            The Content Transfer Tool has a feature that supports differential content top-up where it is possible to transfer only changes
             made since the previous content transfer activity. You can transfer delta content by using top-up extraction method; simply
             disable the <strong>Overwrite staging container during extraction</strong> option for any subsequent extractions.
           </section>
@@ -141,6 +141,11 @@ export default function ContentTransfer() {
             <strong>Ingesting Content into Cloud Service</strong>
           </h2>
           <section>
+            Make sure you have <strong>administrators</strong> access on target AEM Cloud Service environment.
+            If the target tier is Author, the author instance is shut down for the duration of the ingestion, making it unavailable to users. This measure protects the system and prevents any changes that could be lost or
+            cause an ingestion conflict. However, during ingestion to the publish tier, the publish instance will not be scaled down, unlike the author instance.
+          </section>
+          <section className="pt-3">
             Navigate to <strong>Cloud Acceleration Manager</strong>. Select your project card and click on the Content Transfer card. Go to <strong>Ingestion Jobs</strong> and click on <strong>New Ingestion</strong>.
           </section>
           <Image src={CONTENT_TRANSFER_NEW_INGESTION} className="border mt-3"
