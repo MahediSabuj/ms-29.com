@@ -1,10 +1,14 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
 import { CONTENT_TRANSFER_TOOL as ARTICLE } from "@/lib/data/article/aem/sites";
 
 import MIGRATION_SET_CLOUD_ACCELERATION_MANAGER from './assets/migration-set-cloud-acceleration-manager.png';
@@ -17,6 +21,7 @@ import CONTENT_TRANSFER_SOURCE_AEM_INSTANCE from './assets/content-transfer-sour
 import EXTRACTION_PROCESS_VIEW_PROGRESS from './assets/extraction-process-view-progress.png';
 import CLOUD_ACCELERATION_MANAGER_MIGRATION_SET_DETAILS from './assets/cloud-acceleration-manager-migration-set-details.png';
 import CONTENT_TRANSFER_NEW_INGESTION from './assets/content-transfer-new-ingestion.png';
+import CONTENT_INGESTION_JOB_DETAILS from './assets/content-ingestion-job-details.png';
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -128,7 +133,7 @@ export default function ContentTransfer() {
              alt="Cloud Acceleration Manager - Migration Set Details">
           </Image>
           <section className="pt-3">
-            The Content Transfer Tool has a feature that supports differential content top-up where it is possible to transfer only changes
+            <FontAwesomeIcon icon={faExclamationCircle} className="text-red-600 inline-block " width={20} height={20}/> The Content Transfer Tool has a feature that supports differential content top-up where it is possible to transfer only changes
             made since the previous content transfer activity. You can transfer delta content by using top-up extraction method; simply
             disable the <strong>Overwrite staging container during extraction</strong> option for any subsequent extractions.
           </section>
@@ -136,13 +141,27 @@ export default function ContentTransfer() {
             <strong>Ingesting Content into Cloud Service</strong>
           </h2>
           <section>
-            Navigate to Cloud Acceleration Manager. Select your project card and click on the Content Transfer card. Go to Ingestion Jobs and click on New Ingestion.
+            Navigate to <strong>Cloud Acceleration Manager</strong>. Select your project card and click on the Content Transfer card. Go to <strong>Ingestion Jobs</strong> and click on <strong>New Ingestion</strong>.
           </section>
           <Image src={CONTENT_TRANSFER_NEW_INGESTION} className="border mt-3"
              alt="Content Transfer - New Ingestion">
           </Image>
+          <section className="pt-3">
+            You can monitor the ingestion process from the Ingestion Jobs list view. For a more detailed view, including the duration of each step during or
+            after ingestion, use the action menu, click the ellipsis (<strong>…</strong>), and select <strong>View durations</strong>.
+          </section>
+          <Image src={CONTENT_INGESTION_JOB_DETAILS} className="border mt-3" height="500"
+             alt="Content Ingestion Job Details">
+          </Image>
+          <section className="pt-3">
+            Once you have completed the content ingestion into Cloud Service, you can view the content in the target Cloud Service.
+          </section>
         </div>  
       </article>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }

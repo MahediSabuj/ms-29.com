@@ -393,8 +393,8 @@ export const SLING_RESOURCE_MERGER : IArticleItem = {
 export const CONTENT_TRANSFER_TOOL : IArticleItem = {
   title: "Content Migration AMS to AEMaaCS",
   url: "/aem/sites/content-migration-ams-to-aemaacs",
-  publishDate: "October 02, 2024",
-  modifiedDate: "October 02, 2024",
+  publishDate: "October 03, 2024",
+  modifiedDate: "October 03, 2024",
   description: `Content transfer is a crucial step when migrating AEM projects to AEMaaCS, especially with large volumes of content. 
     To streamline this process, Adobe provides Content Transfer Tool (CTT), which can be used to initiate the migration of existing 
     content from a source AEM instance (on-premise or AMS) to the target AEM Cloud Service instance.`,
