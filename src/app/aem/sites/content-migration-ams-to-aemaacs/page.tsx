@@ -67,7 +67,7 @@ export default function ContentTransfer() {
           </section>
           <section className="pt-3">
             Before extracting content from the source AEM instance, Migration Set needs to be created on the target <strong>Cloud Manager</strong> instance.
-            From <strong>Cloud Acceleration Manager (CAM)</strong>, create a new project if you haven't already. Then, click on the <strong>Content Transfer</strong> and
+            From <strong>Cloud Acceleration Manager (CAM)</strong>, create a new project if you haven&apos;t already. Then, click on the <strong>Content Transfer</strong> and
             proceed by creating <strong>Migration Set</strong>.
           </section>
           <Image src={MIGRATION_SET_CLOUD_ACCELERATION_MANAGER} className="border mt-3" height="400"
