@@ -178,11 +178,11 @@ export const EXPAND_CORE_SEARCH_COMPONENT_SCOPE : IArticleItem = {
 export const DYNAMICALLY_POPULATE_SELECT_OPTIONS_IN_AEM_COMPONENT_DIALOG : IArticleItem = {
   title: "Dynamically Populate Select Options in AEM Component Dialog",
   url: "/aem/sites/dynamically-populate-select-options-in-aem-component-dialog",
-  publishDate: "September 13, 2024",
-  modifiedDate: "September 13, 2024",
+  publishDate: "October 08, 2024",
+  modifiedDate: "October 08, 2024",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const ENVIRONMENT_VARIABLES_AND_SECRETS : IArticleItem = {
