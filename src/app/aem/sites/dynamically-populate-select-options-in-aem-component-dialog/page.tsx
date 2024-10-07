@@ -11,6 +11,7 @@ import { DYNAMICALLY_POPULATE_SELECT_OPTIONS_IN_AEM_COMPONENT_DIALOG as ARTICLE 
 
 import ACS_COMMONS_GENERIC_LIST from './assets/acs-commons-generic-list.png';
 import ACS_COMMONS_GENERIC_LIST_ITEMS from './assets/acs-commons-generic-list-items.png';
+import COMPONENT_DIALOG_USING_GENERIC_LIST from './assets/component-dialog-using-acs-commons-generic-list.png';
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -47,6 +48,35 @@ const ACS_COMMONS =
   </dependency>
 </dependencies>`;
 
+const ACS_COMMONS_CLOUD_SERVICE =
+`<plugins>
+  <plugin>
+    <groupId>org.apache.jackrabbit</groupId>
+    <artifactId>filevault-package-maven-plugin</artifactId>
+      <configuration>
+        <embeddeds>
+          <embedded>
+            <groupId>com.adobe.acs</groupId>
+            <artifactId>acs-aem-commons-all</artifactId>
+            <target>/apps/aem-demo-vendor-packages/container/install</target>
+            <filter>true</filter>
+            <isAllVersionsFilter>true</isAllVersionsFilter>
+          </embedded>
+        </embeddeds>
+      </configuration>
+  </plugin>
+</plugins>
+
+<dependencies>
+  <dependency>
+    <groupId>com.adobe.acs</groupId>
+    <artifactId>acs-aem-commons-all</artifactId>
+    <classifier>cloud</classifier>
+    <version>6.7.0</version>
+    <type>zip</type>
+  </dependency>
+</dependencies>`;
+
 const ARTICLE_TYPE_SELECT_LIST =
 `<articleTypes jcr:primaryType="nt:unstructured"
   sling:resourceType="granite/ui/components/foundation/form/select"
@@ -75,16 +105,22 @@ export default function PopulateSelectOptions() {
           publishDate={ARTICLE.publishDate}
           modifiedDate={ARTICLE.modifiedDate}/>
         <section className="pt-6">
-
+          Creating dynamic and interactive components can significantly enhance the authoring experience. One effective enhancement is dynamically
+          populating the options of a select field within a component dialog. This is especially useful when the options need to be fetched from an
+          external source or depend on other selections made by the author.
         </section>
+        <Highlight code={ACS_COMMONS_CLOUD_SERVICE} language="xml" path="all / pom.xml"/>
         <Highlight code={ACS_COMMONS} language="xml" path="all / pom.xml"/>
         <Image src={ACS_COMMONS_GENERIC_LIST} className="border mt-2" width="500"
           alt="ACS Commons Generic List">
         </Image>
         <Image src={ACS_COMMONS_GENERIC_LIST_ITEMS} className="border mt-2"
-           alt="ACS Commons Generic List Items">
+          alt="ACS Commons Generic List Items">
         </Image>
         <Highlight code={ARTICLE_TYPE_SELECT_LIST} language="xml" path="article / _cq_dialog / .content.xml"/>
+        <Image src={COMPONENT_DIALOG_USING_GENERIC_LIST} className="border mt-2" width="500"
+          alt="Component Dialog using Generic List">
+        </Image>
       </article>
       <div className="mt-8 mb-4">
         <ArticleReviewList items={[]}/>

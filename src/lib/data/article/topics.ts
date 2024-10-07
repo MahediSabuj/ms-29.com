@@ -37,9 +37,17 @@ const TOPICS: Topics = {
     title: "Experience Fragment",
     url: "/aem/experience-fragment"
   },
+  AEM_CLOUD_SERVICE: {
+    title: "AEM as a Cloud Service",
+    url: "/aem/cloud-service"
+  },
   AWS_EC2: {
     title: "AWS EC2",
     url: "/aws/ec2"
+  },
+  AWS_SES: {
+    title: "AWS SES",
+    url: "/aws/ses"
   },
   SF_LWC: {
     title: "Lightning Web Component",

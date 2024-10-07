@@ -4,9 +4,10 @@ import Image from "next/image";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
+import TOPICS from "@/lib/data/article/topics";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
-import { SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD as ARTICLE } from "@/lib/data/article/aem/sites";
+import { SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD as ARTICLE } from "@/lib/data/article/aem/cloud-service";
 
 import NEW_DOMAIN_NAME from './assets/new-domain-name.png';
 import DOMAIN_CERTIFICATION_SELECTION from './assets/domain-certification-selection.png';
@@ -27,8 +28,8 @@ export const metadata: Metadata = {
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
-    title: "AEM Sites",
-    url: "/aem/sites"
+    title: TOPICS.AEM_CLOUD_SERVICE.title,
+    url: TOPICS.AEM_CLOUD_SERVICE.url
   }],
   current: ARTICLE.title
 }

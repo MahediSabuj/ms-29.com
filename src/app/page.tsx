@@ -12,7 +12,9 @@ import { CODE_COVERAGE } from "@/lib/data/article/aem/code-coverage";
 import { AEM_DISPATCHER } from "@/lib/data/article/aem/dispatcher";
 import { AEM_WORKFLOW } from "@/lib/data/article/aem/workflow";
 import { EXPERIENCE_FRAGMENT } from "@/lib/data/article/aem/experience-fragment";
+import { AEM_CLOUD_SERVICE } from "@/lib/data/article/aem/cloud-service";
 import { AWS_EC2 } from "@/lib/data/article/aws/ec2";
+import { AWS_SES } from "@/lib/data/article/aws/ses";
 import { SF_LWC } from "@/lib/data/article/salesforce/lwc";
 import { SF_IDENTITY } from "@/lib/data/article/salesforce/identity";
 import { DYNAMIC_PROGRAMMING } from "@/lib/data/article/cp/dynamic-programming";
@@ -37,7 +39,9 @@ const articles : IArticleList = {
     ...AEM_DISPATCHER,
     ...AEM_WORKFLOW,
     ...EXPERIENCE_FRAGMENT,
+    ...AEM_CLOUD_SERVICE,
     ...AWS_EC2,
+    ...AWS_SES,
     ...SF_LWC,
     ...SF_IDENTITY,
     ...DYNAMIC_PROGRAMMING,

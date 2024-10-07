@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import { CUSTOM_RUN_MODES_ON_AEMAACS as ARTICLE } from "@/lib/data/article/aem/sites";
+import { SETUP_SMTP_CONFIG_USING_AWS_SES as ARTICLE } from "@/lib/data/article/aws/ses";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -15,13 +15,13 @@ export const metadata: Metadata = {
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
-    title: "AEM Sites",
-    url: "/aem/sites"
+    title: "AWS SES",
+    url: "/aws/ses"
   }],
   current: ARTICLE.title
 }
 
-export default function CustomRunModes() {
+export default function SetupCICDPipeline() {
   return (
     <div>
       <BreadCrumb {...breadcrumbs}/>

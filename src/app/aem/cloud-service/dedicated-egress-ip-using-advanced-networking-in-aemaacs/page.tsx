@@ -3,7 +3,8 @@ import { Metadata } from "next";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import { DEDICATED_IP_FOR_AEMAACS as ARTICLE } from "@/lib/data/article/aem/sites";
+import TOPICS from "@/lib/data/article/topics";
+import { DEDICATED_IP_FOR_AEMAACS as ARTICLE } from "@/lib/data/article/aem/cloud-service";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -15,13 +16,13 @@ export const metadata: Metadata = {
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
-    title: "AEM Sites",
-    url: "/aem/sites"
+    title: TOPICS.AEM_CLOUD_SERVICE.title,
+    url: TOPICS.AEM_CLOUD_SERVICE.url
   }],
   current: ARTICLE.title
 }
 
-export default function CustomRunModes() {
+export default function DedicatedIP() {
   return (
     <div>
       <BreadCrumb {...breadcrumbs}/>

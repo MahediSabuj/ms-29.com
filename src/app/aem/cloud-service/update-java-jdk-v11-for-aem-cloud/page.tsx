@@ -5,7 +5,8 @@ import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Highlight from "@/components/highlight/highlight";
 import FAQ from "@/components/faq/faq";
-import { UPDATE_JAVA_JDK_V11_FOR_AEM_CLOUD as ARTICLE } from "@/lib/data/article/aem/sites";
+import TOPICS from "@/lib/data/article/topics";
+import { UPDATE_JAVA_JDK_V11_FOR_AEM_CLOUD as ARTICLE } from "@/lib/data/article/aem/cloud-service";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -55,8 +56,8 @@ const UPDATE_JAVA_11_POM =
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
-    title: "AEM Sites",
-    url: "/aem/sites"
+    title: TOPICS.AEM_CLOUD_SERVICE.title,
+    url: TOPICS.AEM_CLOUD_SERVICE.url
   }],
   current: ARTICLE.title
 }
