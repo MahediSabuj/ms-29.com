@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import { SETTING_UP_ERROR_PAGES_IN_AEM as ARTICLE } from "@/lib/data/article/aem/sites";
+import { SETTING_UP_ERROR_PAGES as ARTICLE } from "@/lib/data/article/aem/acs-commons";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
