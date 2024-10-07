@@ -41,6 +41,10 @@ const TOPICS: Topics = {
     title: "AEM as a Cloud Service",
     url: "/aem/cloud-service"
   },
+  ACS_COMMONS: {
+    title: "ACS Commons",
+    url: "/aem/acs-commons"
+  },
   AWS_EC2: {
     title: "AWS EC2",
     url: "/aws/ec2"

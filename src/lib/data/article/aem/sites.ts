@@ -20,7 +20,7 @@ export const MULTI_SITE_MANAGER: IArticleItem = {
     the live relationship between the source and its live copies, ensuring that changes made to the source are also reflected in the live 
     copies. Additionally, You can adjust the content of the live copies by disconnecting the live relationship for individual subpages, or components, 
     or both. By doing this, changes to the source are no longer applied to the live copy.`,
-  url: "/aem/sites/multi-site-manager-in-aem",
+  url: "/aem/sites/multi-site-manager",
   publishDate: "September 24, 2024",
   modifiedDate: "September 24, 2024",
   topics: [ TOPICS.AEM_SITES ],
@@ -32,7 +32,7 @@ export const AEM_USER_PERMISSION: IArticleItem = {
   description: `Adobe Experience Manager (AEM) is a content management system managing content authoring across multiple 
     sites with multiple content creators. User Permissions enforces strict governance over user actions like read, create, 
     modify, delete, publish contents. This mechanism ensures that only authorized users can perform these specific actions.`,
-  url: "/aem/sites/managing-user-permission-and-access-control-in-aem",
+  url: "/aem/sites/managing-user-permission-and-access-control",
   publishDate: "September 22, 2024",
   modifiedDate: "September 22, 2024",
   topics: [ TOPICS.AEM_SITES ],
@@ -81,7 +81,7 @@ export const CUSTOM_OSGI_CONFIGURATION: IArticleItem = {
   description: `OSGi Configuration allow us to configure run-mode specific properties. All the out-of-the-box OSGi configurations
     are available at /system/console/configMgr while custom configurations can be created as per business requirements. These configurations 
     are typically managed within the AEM project's ui.config module in the code repository.`,
-  url: "/aem/sites/custom-osgi-configuration-in-aem",
+  url: "/aem/sites/custom-osgi-configuration",
   publishDate: "August 30, 2024",
   modifiedDate: "August 30, 2024",
   topics: [ TOPICS.AEM_SITES ],
@@ -170,7 +170,7 @@ export const DYNAMICALLY_POPULATE_SELECT_OPTIONS_IN_AEM_COMPONENT_DIALOG : IArti
     populating the options of a select field within a component dialog. This is especially useful when the options need to be fetched from an external source 
     or depend on other selections made by the author.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const HTL_SPECIFICATION_CHEATSHEET : IArticleItem = {
@@ -259,19 +259,6 @@ export const SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION : IArticleItem = {
   active: true
 }
 
-export const SETTING_UP_ERROR_PAGES_IN_AEM : IArticleItem = {
-  title: "Setting Up Error Pages in AEM",
-  url: "/aem/sites/setup-error-page-in-aem",
-  publishDate: "September 16, 2024",
-  modifiedDate: "September 16, 2024",
-  description: `Customizing error pages in AEM is crucial for ensuring seamless user experience and brand consistency. Error pages 
-    act as backups when requested resources cannot be found or unexpected errors occur, such as the commonly encountered 404 and 500
-    HTTP status codes. By tailoring these pages with informative and user-friendly content, you can ensure users able to navigate smoothly
-    and continue browsing the website.`,
-  topics: [ TOPICS.AEM_SITES ],
-  active: false
-}
-
 export const START_AEM_IN_DEBUG_MODE : IArticleItem = {
   title: "Start AEM in Debug Mode",
   url: "/aem/sites/start-aem-in-debug-mode",
@@ -325,7 +312,6 @@ export const AEM_SITES : IArticleItem[] = [
   APACHE_SLING_SITEMAP_GENERATOR,
   SAML_AUTHENTICATION,
   SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION,
-  SETTING_UP_ERROR_PAGES_IN_AEM,
   START_AEM_IN_DEBUG_MODE,
   SLING_RESOURCE_MERGER,
   DYNAMICALLY_POPULATE_SELECT_OPTIONS_IN_AEM_COMPONENT_DIALOG,

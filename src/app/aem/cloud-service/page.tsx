@@ -25,7 +25,7 @@ const breadcrumbs : IBreadCrumb = {
   current: TOPICS.AEM_CLOUD_SERVICE.title
 }
 
-export default function CodeCoverage() {
+export default function AEMCloudService() {
   return (
     <div>
       <BreadCrumb {...breadcrumbs}/> 
