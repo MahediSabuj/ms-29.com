@@ -102,7 +102,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   loadArticles(TOPICS.AEM_DISPATCHER.url, AEM_DISPATCHER);
   loadArticles(TOPICS.CONTENT_FRAGMENT.url, CONTENT_FRAGMENT);
   loadArticles(TOPICS.AEM_SPA.url, AEM_SPA);
-  loadArticles(TOPICS.CODE_COVERAGE.url, CODE_COVERAGE);
+  loadArticles(TOPICS.AEM_CODE_COVERAGE.url, CODE_COVERAGE);
   loadArticles(TOPICS.AEM_WORKFLOW.url, AEM_WORKFLOW);
   loadArticles(TOPICS.EXPERIENCE_FRAGMENT.url, EXPERIENCE_FRAGMENT);
   loadArticles(TOPICS.AEM_CLOUD_SERVICE.url, AEM_CLOUD_SERVICE);

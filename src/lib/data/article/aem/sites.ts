@@ -170,7 +170,7 @@ export const DYNAMICALLY_POPULATE_SELECT_OPTIONS_IN_AEM_COMPONENT_DIALOG : IArti
     populating the options of a select field within a component dialog. This is especially useful when the options need to be fetched from an external source 
     or depend on other selections made by the author.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const HTL_SPECIFICATION_CHEATSHEET : IArticleItem = {
