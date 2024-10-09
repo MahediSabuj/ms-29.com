@@ -109,6 +109,9 @@ export default function PopulateSelectOptions() {
           populating the options of a select field within a component dialog. This is especially useful when the options need to be fetched from an
           external source or depend on other selections made by the author.
         </section>
+        <section className="pt-3">
+          <strong>ACS Commons</strong> provides <strong>Generic Lists</strong> utility, allowing for easy creation and management of simple key-value pairs.
+        </section>
         <Highlight code={ACS_COMMONS_CLOUD_SERVICE} language="xml" path="all / pom.xml"/>
         <Highlight code={ACS_COMMONS} language="xml" path="all / pom.xml"/>
         <Image src={ACS_COMMONS_GENERIC_LIST} className="border mt-2" width="500"
