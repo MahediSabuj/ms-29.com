@@ -136,11 +136,11 @@ export const SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD : IArticleItem = {
 export const DEDICATED_IP_FOR_AEMAACS : IArticleItem = {
   title: "Dedicated egress IP using Advanced Networking in AEMaaCS",
   url: "/aem/cloud-service/dedicated-egress-ip-using-advanced-networking",
-  publishDate: "September 30, 2024",
-  modifiedDate: "September 30, 2024",
+  publishDate: "October 15, 2024",
+  modifiedDate: "October 15, 2024",
   description: ``,
   topics: [ TOPICS.AEM_CLOUD_SERVICE ],
-  active: false
+  active: true
 }
 
 export const SETUP_RDE_FOR_AEM_CLOUD : IArticleItem = {
