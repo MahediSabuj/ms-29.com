@@ -44,8 +44,8 @@ export const TAILING_LOGS_ON_AEM_AS_CLOUD_SERVICE : IArticleItem = {
 export const PRIVATE_GITHUB_REPOSITORIES_IN_CLOUD_MANAGER : IArticleItem = {
   title: "Integrating Private GitHub Repositories in AEM Cloud Manager",
   url: "/aem/cloud-service/private-github-repositories-in-cloud-manager",
-  publishDate: "October 03, 2024",
-  modifiedDate: "October 03, 2024",
+  publishDate: "October 23, 2024",
+  modifiedDate: "October 23, 2024",
   description: ``,
   topics: [ TOPICS.AEM_CLOUD_SERVICE ],
   active: false
@@ -91,8 +91,8 @@ export const REPOSITORY_MODERNIZER: IArticleItem = {
 export const SETUP_LOCAL_AEM_DEVELOPMENT_ENVIRONMENT : IArticleItem = {
   title: "Setup Local AEM Development Environment",
   url: "/aem/cloud-service/set-up-local-aem-development-environment",
-  publishDate: "September 12, 2024",
-  modifiedDate: "September 12, 2024",
+  publishDate: "October 28, 2024",
+  modifiedDate: "October 28, 2024",
   description: ``,
   topics: [ TOPICS.AEM_CLOUD_SERVICE ],
   active: false
@@ -113,8 +113,8 @@ export const CONTENT_TRANSFER_TOOL : IArticleItem = {
 export const CUSTOM_RUN_MODES_ON_AEMAACS : IArticleItem = {
   title: "Custom Run Modes on AEMaaCS",
   url: "/aem/cloud-service/custom-run-modes-on-aemaacs",
-  publishDate: "September 12, 2024",
-  modifiedDate: "September 12, 2024",
+  publishDate: "November 05, 2024",
+  modifiedDate: "November 05, 2024",
   description: `In AEM 6.5, you can use arbitrary run modes to apply OSGi configs to specific instances. However, AEMaaCS 
     supports an exact set of run modes.`,
   topics: [ TOPICS.AEM_CLOUD_SERVICE ],
@@ -136,11 +136,11 @@ export const SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD : IArticleItem = {
 export const DEDICATED_IP_FOR_AEMAACS : IArticleItem = {
   title: "Dedicated egress IP using Advanced Networking in AEMaaCS",
   url: "/aem/cloud-service/dedicated-egress-ip-using-advanced-networking",
-  publishDate: "October 15, 2024",
-  modifiedDate: "October 15, 2024",
+  publishDate: "October 18, 2024",
+  modifiedDate: "October 18, 2024",
   description: ``,
   topics: [ TOPICS.AEM_CLOUD_SERVICE ],
-  active: true
+  active: false
 }
 
 export const SETUP_RDE_FOR_AEM_CLOUD : IArticleItem = {

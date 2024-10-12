@@ -164,13 +164,13 @@ export const EXPAND_CORE_SEARCH_COMPONENT_SCOPE : IArticleItem = {
 export const DYNAMICALLY_POPULATE_SELECT_OPTIONS_IN_AEM_COMPONENT_DIALOG : IArticleItem = {
   title: "Dynamically Populate Select Options in AEM Component Dialog",
   url: "/aem/sites/dynamically-populate-select-options-in-aem-component-dialog",
-  publishDate: "October 12, 2024",
-  modifiedDate: "October 12, 2024",
+  publishDate: "October 15, 2024",
+  modifiedDate: "October 15, 2024",
   description: `Creating dynamic and interactive components can significantly enhance the authoring experience. One effective enhancement is dynamically 
     populating the options of a select field within a component dialog. This is especially useful when the options need to be fetched from an external source 
     or depend on other selections made by the author.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const HTL_SPECIFICATION_CHEATSHEET : IArticleItem = {

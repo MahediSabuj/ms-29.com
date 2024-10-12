@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
+import TOPICS from "@/lib/data/article/topics";
 import { SETTING_UP_ERROR_PAGES as ARTICLE } from "@/lib/data/article/aem/acs-commons";
 
 export const metadata: Metadata = {
@@ -15,8 +16,8 @@ export const metadata: Metadata = {
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
-    title: "AEM Sites",
-    url: "/aem/sites"
+    title: TOPICS.ACS_COMMONS.title,
+    url: TOPICS.ACS_COMMONS.url
   }],
   current: ARTICLE.title
 }

@@ -14,6 +14,18 @@ export const SETTING_UP_ERROR_PAGES : IArticleItem = {
   active: false
 }
 
+export const SETUP_ACS_COMMONS_IN_AEM_PROJECTS : IArticleItem = {
+  title: "Setup ACS AEM Commons in AEM Projects",
+  description: `ACS AEM Commons is a collection of reusable components and utilities designed to enhance the functionality of AEM.
+    It offers a variety of features that help developers tackle common challenges and simplify development tasks through effective solutions.`,
+  url: "/aem/acs-commons/setup-acs-commons-in-aem-projects",
+  publishDate: "October 12, 2024",
+  modifiedDate: "October 12, 2024",
+  topics: [ TOPICS.ACS_COMMONS ],
+  active: true
+}
+
 export const ACS_COMMONS: IArticleItem[] = [
-  SETTING_UP_ERROR_PAGES
+  SETTING_UP_ERROR_PAGES,
+  SETUP_ACS_COMMONS_IN_AEM_PROJECTS
 ].filter(m => m.active);

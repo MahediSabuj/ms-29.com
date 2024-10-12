@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
+import Reference from "@/components/reference/reference";
 import { FORM_SUBMISSION_AUTHOR_INSTANCE as ARTICLE } from "@/lib/data/article/aem/forms";
 
 import aem_ds_settings_service from './assets/aem-ds-settings-service.webp';
@@ -72,6 +73,12 @@ export default function SubmitFormIntoAuthor() {
           <section className="pt-1">
             After updating the configuration, you can verify by submitting a form from the publish instance. If you configure
             the submit action to &quot;Invoke an AEM workflow&quot;, the workflow will be triggered on the Author environment.
+          </section>
+          <section className="pt-3">
+            <Reference references={[{
+              title: "Configuring AEM DS Settings",
+              url: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/install-aem-forms/configure-aem-forms/configuring-the-processing-server-url"
+            }]}/>
           </section>
         </div>
     </div>

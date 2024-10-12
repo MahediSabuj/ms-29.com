@@ -21,62 +21,6 @@ export const metadata: Metadata = {
   }
 };
 
-const ACS_COMMONS =
-`<plugins>
-  <plugin>
-    <groupId>org.apache.jackrabbit</groupId>
-    <artifactId>filevault-package-maven-plugin</artifactId>
-    <configuration>
-      <subPackages>
-        <subPackage>
-          <groupId>com.adobe.acs</groupId>
-          <artifactId>acs-aem-commons-all</artifactId>
-          <filter>true</filter>
-          <isAllVersionsFilter>true</isAllVersionsFilter>
-        </subPackage>
-      </subPackages>
-    </configuration>
-  </plugin>
-</plugins>
-
-<dependencies>
-  <dependency>
-    <groupId>com.adobe.acs</groupId>
-    <artifactId>acs-aem-commons-all</artifactId>
-    <version>6.6.4</version>
-    <type>zip</type>
-  </dependency>
-</dependencies>`;
-
-const ACS_COMMONS_CLOUD_SERVICE =
-`<plugins>
-  <plugin>
-    <groupId>org.apache.jackrabbit</groupId>
-    <artifactId>filevault-package-maven-plugin</artifactId>
-      <configuration>
-        <embeddeds>
-          <embedded>
-            <groupId>com.adobe.acs</groupId>
-            <artifactId>acs-aem-commons-all</artifactId>
-            <target>/apps/aem-demo-vendor-packages/container/install</target>
-            <filter>true</filter>
-            <isAllVersionsFilter>true</isAllVersionsFilter>
-          </embedded>
-        </embeddeds>
-      </configuration>
-  </plugin>
-</plugins>
-
-<dependencies>
-  <dependency>
-    <groupId>com.adobe.acs</groupId>
-    <artifactId>acs-aem-commons-all</artifactId>
-    <classifier>cloud</classifier>
-    <version>6.7.0</version>
-    <type>zip</type>
-  </dependency>
-</dependencies>`;
-
 const ARTICLE_TYPE_SELECT_LIST =
 `<articleTypes jcr:primaryType="nt:unstructured"
   sling:resourceType="granite/ui/components/foundation/form/select"
@@ -110,10 +54,9 @@ export default function PopulateSelectOptions() {
           external source or depend on other selections made by the author.
         </section>
         <section className="pt-3">
-          <strong>ACS Commons</strong> provides <strong>Generic Lists</strong> utility, allowing for easy creation and management of simple key-value pairs.
+          For a select list that needs regular updates with new items, you can use the <strong>Generic Lists</strong> utility from <strong>ACS Commons</strong> to make
+          changes without code deployment.
         </section>
-        <Highlight code={ACS_COMMONS_CLOUD_SERVICE} language="xml" path="all / pom.xml"/>
-        <Highlight code={ACS_COMMONS} language="xml" path="all / pom.xml"/>
         <Image src={ACS_COMMONS_GENERIC_LIST} className="border mt-2" width="500"
           alt="ACS Commons Generic List">
         </Image>
