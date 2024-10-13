@@ -100,51 +100,49 @@ export default function InstallACSCommons() {
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
           modifiedDate={ARTICLE.modifiedDate}/>
-        <div>
-          <section className="pt-6">
-            ACS AEM Commons is a collection of reusable components and utilities designed to enhance the functionality of AEM. It offers a variety
-            of features that help developers tackle common challenges and simplify development tasks through effective solutions.
-          </section>
-          <section className="pt-3">
-            ACS AEM Commons should be included as a Maven dependency in your AEM project. The instructions for adding ACS AEM Commons to
-            your project vary depending on the version of AEM you are using.
-          </section>
-          <section className="pt-3">
-            The setup for ACS AEM Commons in your code base differs slightly between AEMaaCS and AEM 6.5.
-          </section>
-          <h2 className="text-xl mt-4">
-            <strong>AEM as a Cloud Service</strong>
-          </h2>
-          <section>
-            To include ACS AEM Commons in AEMaaCS, embed <code className="code-inline background">acs-aem-commons-all</code> and add it
-            as a dependency in the container package (<strong>all</strong> module) <code className="code-inline background">pom.xml</code> as shown below.
-          </section>
-          <Highlight code={ACS_COMMONS_CLOUD_SERVICE} language="xml" path="all / pom.xml"/>
-          <section className="pt-3">
-            After installing the code, ACS AEM Commons will appear in the Tools section, as shown below.
-          </section>
-          <Image src={ACS_COMMONS_IN_AEMAACS} className="border mt-2"
-             alt="ACS Commons in AEMaaCS">
-          </Image>
-          <section className="pt-3">
-            To use Java APIs provided by ACS AEM Commons in your code, add <code className="code-inline background">acs-aem-commons-bundle</code> dependency
-            in your <strong>core</strong> module.
-          </section>
-          <Highlight code={ACS_COMMONS_BUNDLE} language="xml" path="core / pom.xml"/>
-          <h2 className="text-xl mt-4">
-            <strong>AEM 6.5</strong>
-          </h2>
-          <section>
-            All information of AEM as a Cloud Service above applies, but instead of using the specific <strong>classifier</strong> <code className="code-inline">cloud</code>, you don&apos;t use any classifier at all.
-            Also instead of <strong>embeddeds</strong> one leverages <strong>subpackages</strong>.
-          </section>
-          <Highlight code={ACS_COMMONS_6_5} language="xml" path="all / pom.xml"/>
-          <Reference references={[{
-            title: "Adobe Consulting Service",
-            url: "https://adobe-consulting-services.github.io/acs-aem-commons/pages/maven.html"
-          }]}/>
-        </div>  
+        <section className="pt-6">
+          ACS AEM Commons is a collection of reusable components and utilities designed to enhance the functionality of AEM. It offers a variety
+          of features that help developers tackle common challenges and simplify development tasks through effective solutions.
+        </section>
+        <section className="pt-3">
+          ACS AEM Commons should be included as a Maven dependency in your AEM project. The instructions for adding ACS AEM Commons to
+          your project vary depending on the version of AEM you are using.
+        </section>
+        <section className="pt-3">
+          The setup for ACS AEM Commons in your code base differs slightly between AEMaaCS and AEM 6.5.
+        </section>
+        <h2 className="text-xl mt-4">
+          <strong>AEM as a Cloud Service</strong>
+        </h2>
+        <section>
+          To include ACS AEM Commons in AEMaaCS, embed <code className="code-inline background">acs-aem-commons-all</code> and add it
+          as a dependency in the container package (<strong>all</strong> module) <code className="code-inline background">pom.xml</code> as shown below.
+        </section>
+        <Highlight code={ACS_COMMONS_CLOUD_SERVICE} language="xml" path="all / pom.xml"/>
+        <section className="pt-3">
+          After installing the code, ACS AEM Commons will appear in the Tools section, as shown below.
+        </section>
+        <Image src={ACS_COMMONS_IN_AEMAACS} className="border mt-2"
+           alt="ACS Commons in AEMaaCS">
+        </Image>
+        <section className="pt-3">
+          To use Java APIs provided by ACS AEM Commons in your code, add <code className="code-inline background">acs-aem-commons-bundle</code> dependency
+          in your <strong>core</strong> module.
+        </section>
+        <Highlight code={ACS_COMMONS_BUNDLE} language="xml" path="core / pom.xml"/>
+        <h2 className="text-xl mt-4">
+          <strong>AEM 6.5</strong>
+        </h2>
+        <section>
+          All information of AEM as a Cloud Service above applies, but instead of using the specific <strong>classifier</strong> <code className="code-inline">cloud</code>, you don&apos;t use any classifier at all.
+          Also instead of <strong>embeddeds</strong> one leverages <strong>subpackages</strong>.
+        </section>
+        <Highlight code={ACS_COMMONS_6_5} language="xml" path="all / pom.xml"/>
       </article>
+      <Reference references={[{
+        title: "Adobe Consulting Service",
+        url: "https://adobe-consulting-services.github.io/acs-aem-commons/pages/maven.html"
+      }]}/>
     </div>
   );
 }

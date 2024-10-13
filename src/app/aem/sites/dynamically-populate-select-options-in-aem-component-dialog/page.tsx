@@ -9,6 +9,7 @@ import Highlight from "@/components/highlight/highlight";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 import Reference from "@/components/reference/reference";
+import TOPICS from "@/lib/data/article/topics";
 import { DYNAMICALLY_POPULATE_SELECT_OPTIONS_IN_AEM_COMPONENT_DIALOG as ARTICLE } from "@/lib/data/article/aem/sites";
 
 import ACS_COMMONS_GENERIC_LIST from './assets/acs-commons-generic-list.png';
@@ -30,13 +31,62 @@ const ARTICLE_TYPE_SELECT_LIST =
   name="./articleTypes">
   <datasource jcr:primaryType="nt:unstructured"
     sling:resourceType="acs-commons/components/utilities/genericlist/datasource"
-    path="/etc/acs-commons/lists/article-type" />
+    path="/etc/acs-commons/lists/article-types" />
 </articleTypes>`;
+
+const AEM_SERVLET =
+`@Component(service = { Servlet.class })
+@SlingServletPaths(
+  value = "/bin/public/aem-demo/dropdowns"
+)
+@ServiceDescription("Dynamic Dropdown Servlet")
+public class DropdownServlet extends SlingSafeMethodsServlet {
+  @Reference
+  DropdownService dropdownService;
+
+  @Override
+  protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response) {
+    ResourceResolver resolver = request.getResourceResolver();
+    
+    // Current Page Path
+    String currentPagePath = request.getRequestPathInfo().getSuffix();
+
+    // Fetch Property from datasource
+    Resource datasource = request.getResource().getChild("datasource");
+    ValueMap vm = datasource.getValueMap();
+    String type = vm.get("type", ""); // articleTypes
+
+    // Fetch dropdown options from External Source or other Component properties
+    List<String> options = dropdownService.getOptions(currentPagePath, type);
+
+    DataSource dataSource = new SimpleDataSource(
+        new TransformIterator<>(options.iterator(), input -> {
+      ValueMap valueMap = new ValueMapDecorator(new HashMap<>());
+      valueMap.put("value", input);
+      valueMap.put("text", input);
+
+      return new ValueMapResource(
+          resolver, new ResourceMetadata(), JcrConstants.NT_UNSTRUCTURED, valueMap);
+    }));
+
+    request.setAttribute(DataSource.class.getName(), dataSource);
+  }
+}`;
+
+const COMPONENT_DIALOG_USING_DYNAMIC_OPTIONS =
+`<articleTypes jcr:primaryType="nt:unstructured"
+  sling:resourceType="granite/ui/components/coral/foundation/form/select"
+  fieldLabel="Article Types"
+  name="./articleTypes">
+  <datasource jcr:primaryType="nt:unstructured"
+    type="articleTypes"
+    sling:resourceType="/bin/public/aem-demo/dropdowns"/>
+</articleTypes>`
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
-    title: "AEM Sites",
-    url: "/aem/sites"
+    title: TOPICS.AEM_SITES.title,
+    url: TOPICS.AEM_SITES.url
   }],
   current: ARTICLE.title
 }
@@ -55,7 +105,10 @@ export default function PopulateSelectOptions() {
           populating the options of a select field within a component dialog. This is especially useful when the options need to be fetched from an
           external source or depend on other selections made by the author.
         </section>
-        <section className="pt-3">
+        <h2 className="text-xl mt-4">
+          <strong>Using ACS AEM Commons</strong>
+        </h2>
+        <section>
           For a select list that needs regular updates with new items, you can use the <strong>Generic Lists</strong> utility from <strong>ACS AEM Commons</strong> to make
           changes without code deployment. Generic Lists allow for the easy creation and management of simple key-value pairs. Check out this <Link target="_blank"
           className="text-blue-600" href="/aem/acs-commons/setup-acs-commons-in-aem-projects">article</Link> on how to install ACS AEM Commons.
@@ -86,11 +139,29 @@ export default function PopulateSelectOptions() {
         <section className="pt-3">
           To update the select list options, choose the specified list from the Generic Lists and click on Properties. The changes will be reflected in the component dialog immediately.
         </section>
-        <Reference references={[{
-          title: "Generic Lists",
-          url: "https://adobe-consulting-services.github.io/acs-aem-commons/features/generic-lists/index.html"
-        }]}/>
+        <h2 className="text-xl mt-4">
+          <strong>Using Sling Servlet</strong>
+        </h2>
+        <section>
+          In some cases, select options need to be retrieved from an external source or other component properties, which can be accomplished
+          using custom servlet. To utilize the custom servlet, the component dialog XML will look like the example below.
+        </section>
+        <Highlight code={COMPONENT_DIALOG_USING_DYNAMIC_OPTIONS} language="xml" path="article / _cq_dialog / .content.xml"/>
+        <section className="pt-2">
+          You can pass properties from the component dialog to servlet, similar to how <code className="code-inline">types</code> are passed in the above example.
+        </section>
+        <section className="pt-3">
+          To populate options for select field using custom servlet, follow the example below and adjust the implementation according to your requirements.
+        </section>
+        <Highlight code={AEM_SERVLET} language="java" path="servlets / DropdownServlet.java"/>
+        <section className="pt-2">
+          Caffeine (or any caching service) can be used to cache dropdown options, ensuring faster loading times for dialogs. It&apos;s essential to implement cache expiration or invalidation to ensure that the latest updates are reflected in the dialog.
+        </section>
       </article>
+      <Reference references={[{
+        title: "Generic Lists",
+        url: "https://adobe-consulting-services.github.io/acs-aem-commons/features/generic-lists/index.html"
+      }]}/>
       <div className="mt-8 mb-4">
         <ArticleReviewList items={[]}/>
         <ArticleReviewForm/>
