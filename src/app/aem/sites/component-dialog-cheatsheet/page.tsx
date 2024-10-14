@@ -181,6 +181,17 @@ const radioGroup =
     </items>
 </gender>`;
 
+const textArea =
+`<description jcr:primaryType="nt:unstructured"
+  sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+  fieldLabel="Description"
+  fieldDescription="Short details about the article"
+  required="{Boolean}true"
+  emptyText="Enter details about the article"
+  name="./description"
+  rows="4"
+  maxlength="{Long}250"/>`;
+
 const breadcrumbs : IBreadCrumb = {
   items: [{
     title: "AEM Sites",
@@ -302,6 +313,16 @@ export default function DialogCheatSheet() {
                 <Link className="text-blue-600 break-all" target="_blank"
                       href={`${GRANITE_UI}/switch/index.html`}>
                   {GRANITE_UI}/switch/index.html
+                </Link>
+              </div>
+            </div>
+            <div className="pt-4">
+              <Highlight code={textArea} language="xml" path="Text Area"/>
+              <div>
+                <strong>Reference: </strong>
+                <Link className="text-blue-600 break-all" target="_blank"
+                      href={`${GRANITE_UI}/textarea/index.html`}>
+                  {GRANITE_UI}/textarea/index.html
                 </Link>
               </div>
             </div>
