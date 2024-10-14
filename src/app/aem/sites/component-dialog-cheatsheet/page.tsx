@@ -109,7 +109,7 @@ const multifield =
 
 const checkbox =
 `<removeBottomSpacing jcr:primaryType="nt:unstructured"
-  sling:resourceType="/libs/granite/ui/components/coral/foundation/form/checkbox"
+  sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
   text="Remove Bottom Spacing?"
   fieldDescription="Remove Default Bottom Spacing of the Component"
   tooltipPosition="right"
@@ -147,6 +147,40 @@ const pathfield =
   required="{Boolean}true"
   rootPath="/content/aem-demo"/>`;
 
+const colorfield =
+`<textColor jcr:primaryType="nt:unstructured"
+  sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"
+  fieldLabel="Text Color"
+  name="./textColor"
+  showDefaultColors="{Boolean}false"
+  showProperties="{Boolean}true"
+  showSwatches="{Boolean}true">
+  <items jcr:primaryType="nt:unstructured">
+    <color1 jcr:primaryType="nt:unstructured"
+      value="000000"/>
+    <color2 jcr:primaryType="nt:unstructured"
+      value="FFFFFF"/>
+  </items>
+</textColor>`;
+
+const radioGroup =
+`<gender jcr:primaryType="nt:unstructured"
+  sling:resourceType="granite/ui/components/coral/foundation/form/radiogroup"
+  fieldDescription="Select either Male or Female"
+  fieldLabel="Gender"
+  vertical="{Boolean}false"
+  name="./gender">
+  <items jcr:primaryType="nt:unstructured">
+    <male jcr:primaryType="nt:unstructured"
+      checked="{Boolean}true"
+      text="Male"
+      value="male"/>
+    <female jcr:primaryType="nt:unstructured"
+      text="Female"
+      value="female"/>
+    </items>
+</gender>`;
+
 const breadcrumbs : IBreadCrumb = {
   items: [{
     title: "AEM Sites",
@@ -177,6 +211,16 @@ export default function DialogCheatSheet() {
                 <Link className="text-blue-600 break-all" target="_blank"
                       href={`${GRANITE_UI}/checkbox/index.html`}>
                   {GRANITE_UI}/checkbox/index.html
+                </Link>
+              </div>
+            </div>
+            <div className="pt-4">
+              <Highlight code={colorfield} language="xml" path="Color Field"/>
+              <div>
+                <strong>Reference: </strong>
+                <Link className="text-blue-600 break-all" target="_blank"
+                      href={`${GRANITE_UI}/colorfield/index.html`}>
+                  {GRANITE_UI}/colorfield/index.html
                 </Link>
               </div>
             </div>
@@ -228,6 +272,16 @@ export default function DialogCheatSheet() {
                 <Link className="text-blue-600 break-all" target="_blank"
                       href={`${GRANITE_UI}/pathfield/index.html`}>
                   {GRANITE_UI}/pathfield/index.html
+                </Link>
+              </div>
+            </div>
+            <div className="pt-4">
+              <Highlight code={radioGroup} language="xml" path="Radio Group"/>
+              <div>
+                <strong>Reference: </strong>
+                <Link className="text-blue-600 break-all" target="_blank"
+                      href={`${GRANITE_UI}/radiogroup/index.html`}>
+                  {GRANITE_UI}/radiogroup/index.html
                 </Link>
               </div>
             </div>
