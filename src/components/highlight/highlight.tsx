@@ -16,7 +16,7 @@ export default function Highlight({ code, language, path, image }: Highlight) {
             dangerouslySetInnerHTML={{ __html: highlighted_code }}/>
         </div>
         {image &&
-          <Image src={image.src}
+          <Image src={image.src} width="450"
             alt={image.alt}>
           </Image>
         }
