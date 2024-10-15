@@ -8,7 +8,7 @@ export const SALESFORCE_HEADLESS_AUTHENTICATION: IArticleItem = {
     url: "/salesforce/identity/salesforce-headless-authentication",
     publishDate: "May 03, 2024",
     modifiedDate: "May 05, 2024",
-    views: 137,
+    views: 141,
     topics: [ TOPICS.SF_IDENTITY ],
     active: true
 }
