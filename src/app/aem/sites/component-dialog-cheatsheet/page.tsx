@@ -7,6 +7,7 @@ import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
+import TOPICS from "@/lib/data/article/topics";
 import { AEM_COMPONENT_DIALOG_CHEATSHEET as ARTICLE } from "@/lib/data/article/aem/sites";
 
 import PathFieldImage from "./assets/aem-component-dialog__pathfield.webp";
@@ -192,10 +193,59 @@ const textArea =
   rows="4"
   maxlength="{Long}250"/>`;
 
+const nestedCheckboxList =
+`<expertise jcr:primaryType="nt:unstructured"
+  disconnected="{Boolean}true"
+  sling:resourceType="granite/ui/components/coral/foundation/form/nestedcheckboxlist">
+  <items jcr:primaryType="nt:unstructured">
+    <adobe jcr:primaryType="nt:unstructured"
+      sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+      name="adobe"
+      value="{Boolean}true"
+      text="Adobe Experience Cloud">
+      <sublist jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/form/nestedcheckboxlist">
+        <items jcr:primaryType="nt:unstructured">
+          <aem jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+            name="aem"
+            value="{Boolean}true"
+            text="Adobe Experience Manager"/>
+          <analytics jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+            name="analytics"
+            value="{Boolean}true"
+            text="Adobe Analytics"/>
+        </items>  
+      </sublist>
+    </adobe>
+    <aws jcr:primaryType="nt:unstructured"
+      sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+      name="aws"
+      value="{Boolean}true"
+      text="Amazon Web Service"/>
+  </items>
+</expertise>`;
+
+const password =
+`<password jcr:primaryType="nt:unstructured"
+  name="./password"
+  fieldLabel="Password"
+  emptyText="Enter your Password"
+  required="{Boolean}true"
+  retype="./confirmPassword"
+  sling:resourceType="granite/ui/components/coral/foundation/form/password"/>
+<confirmPassword jcr:primaryType="nt:unstructured"
+  name="./confirmPassword"
+  fieldLabel="Confirm Password"
+  emptyText="Confirm your Password"
+  required="{Boolean}true"
+  sling:resourceType="granite/ui/components/coral/foundation/form/password"/>`;
+
 const breadcrumbs : IBreadCrumb = {
   items: [{
-    title: "AEM Sites",
-    url: "/aem/sites"
+    title: TOPICS.AEM_SITES.title,
+    url: TOPICS.AEM_SITES.url
   }],
   current: ARTICLE.title
 }
@@ -266,12 +316,32 @@ export default function DialogCheatSheet() {
               </div>
             </div>
             <div className="pt-4">
+              <Highlight code={nestedCheckboxList} language="xml" path="Nested Check Box List"/>
+              <div>
+                <strong>Reference: </strong>
+                <Link className="text-blue-600 break-all" target="_blank"
+                      href={`${GRANITE_UI}/nestedcheckboxlist/index.html`}>
+                  {GRANITE_UI}/nestedcheckboxlist/index.html
+                </Link>
+              </div>
+            </div>
+            <div className="pt-4">
               <Highlight code={numberField} language="xml" path="Number Field"/>
               <div>
                 <strong>Reference: </strong>
                 <Link className="text-blue-600 break-all" target="_blank"
                       href={`${GRANITE_UI}/numberfield/index.html`}>
                   {GRANITE_UI}/numberfield/index.html
+                </Link>
+              </div>
+            </div>
+            <div className="pt-4">
+              <Highlight code={password} language="xml" path="Password"/>
+              <div>
+                <strong>Reference: </strong>
+                <Link className="text-blue-600 break-all" target="_blank"
+                      href={`${GRANITE_UI}/password/index.html`}>
+                  {GRANITE_UI}/password/index.html
                 </Link>
               </div>
             </div>
