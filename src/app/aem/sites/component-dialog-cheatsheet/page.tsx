@@ -20,7 +20,8 @@ export const metadata: Metadata = {
   }
 };
 
-const GRANITE_UI = "https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form";
+const CORAL_UI = "https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3";
+const GRANITE_UI = "https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation";
 
 const textField =
 `<firstName jcr:primaryType="nt:unstructured"
@@ -242,6 +243,36 @@ const password =
   required="{Boolean}true"
   sling:resourceType="granite/ui/components/coral/foundation/form/password"/>`;
 
+const tabs =
+`<tabs jcr:primaryType="nt:unstructured"
+  orientation="horizontal"
+  size="M"
+  margin="{Boolean}true"
+  maximized="{Boolean}true"
+  sling:resourceType="granite/ui/components/coral/foundation/tabs">
+  <items jcr:primaryType="nt:unstructured">
+    <settings jcr:primaryType="nt:unstructured"
+      jcr:title="Settings"
+      sling:resourceType="granite/ui/components/coral/foundation/container">
+      <items jcr:primaryType="nt:unstructured">
+        <removeBottomSpacing jcr:primaryType="nt:unstructured"
+          sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+          text="Remove Bottom Spacing?"
+          name="./removeBottomSpacing"
+          value="mb-0"/>
+      </items>
+      <parentConfig jcr:primaryType="nt:unstructured"
+        icon="gear"/> <!-- Coral Icon -->
+    </settings>
+    <accessibility jcr:primaryType="nt:unstructured"
+      jcr:title="Accessibility"
+      sling:resourceType="granite/ui/components/coral/foundation/container">
+      <parentConfig jcr:primaryType="nt:unstructured"
+        active="{Boolean}true"/>
+    </accessibility>
+  </items>
+</tabs>`;
+
 const breadcrumbs : IBreadCrumb = {
   items: [{
     title: TOPICS.AEM_SITES.title,
@@ -270,8 +301,8 @@ export default function DialogCheatSheet() {
               <div>
                 <strong>Reference: </strong>
                 <Link className="text-blue-600 break-all" target="_blank"
-                      href={`${GRANITE_UI}/checkbox/index.html`}>
-                  {GRANITE_UI}/checkbox/index.html
+                      href={`${GRANITE_UI}/form/checkbox/index.html`}>
+                  {GRANITE_UI}/form/checkbox/index.html
                 </Link>
               </div>
             </div>
@@ -280,8 +311,8 @@ export default function DialogCheatSheet() {
               <div>
                 <strong>Reference: </strong>
                 <Link className="text-blue-600 break-all" target="_blank"
-                      href={`${GRANITE_UI}/colorfield/index.html`}>
-                  {GRANITE_UI}/colorfield/index.html
+                      href={`${GRANITE_UI}/form/colorfield/index.html`}>
+                  {GRANITE_UI}/form/colorfield/index.html
                 </Link>
               </div>
             </div>
@@ -290,8 +321,8 @@ export default function DialogCheatSheet() {
               <div>
                 <strong>Reference: </strong>
                 <Link className="text-blue-600 break-all" target="_blank"
-                      href={`${GRANITE_UI}/datepicker/index.html`}>
-                  {GRANITE_UI}/datepicker/index.html
+                      href={`${GRANITE_UI}/form/datepicker/index.html`}>
+                  {GRANITE_UI}/form/datepicker/index.html
                 </Link>
               </div>
             </div>
@@ -300,8 +331,8 @@ export default function DialogCheatSheet() {
               <div>
                 <strong>Reference: </strong>
                 <Link className="text-blue-600 break-all" target="_blank"
-                      href={`${GRANITE_UI}/fieldset/index.html`}>
-                  {GRANITE_UI}/fieldset/index.html
+                      href={`${GRANITE_UI}/form/fieldset/index.html`}>
+                  {GRANITE_UI}/form/fieldset/index.html
                 </Link>
               </div>
             </div>
@@ -310,8 +341,8 @@ export default function DialogCheatSheet() {
               <div>
                 <strong>Reference: </strong>
                 <Link className="text-blue-600 break-all" target="_blank"
-                      href={`${GRANITE_UI}/multifield/index.html`}>
-                  {GRANITE_UI}/multifield/index.html
+                      href={`${GRANITE_UI}/form/multifield/index.html`}>
+                  {GRANITE_UI}/form/multifield/index.html
                 </Link>
               </div>
             </div>
@@ -320,8 +351,8 @@ export default function DialogCheatSheet() {
               <div>
                 <strong>Reference: </strong>
                 <Link className="text-blue-600 break-all" target="_blank"
-                      href={`${GRANITE_UI}/nestedcheckboxlist/index.html`}>
-                  {GRANITE_UI}/nestedcheckboxlist/index.html
+                      href={`${GRANITE_UI}/form/nestedcheckboxlist/index.html`}>
+                  {GRANITE_UI}/form/nestedcheckboxlist/index.html
                 </Link>
               </div>
             </div>
@@ -330,8 +361,8 @@ export default function DialogCheatSheet() {
               <div>
                 <strong>Reference: </strong>
                 <Link className="text-blue-600 break-all" target="_blank"
-                      href={`${GRANITE_UI}/numberfield/index.html`}>
-                  {GRANITE_UI}/numberfield/index.html
+                      href={`${GRANITE_UI}/form/numberfield/index.html`}>
+                  {GRANITE_UI}/form/numberfield/index.html
                 </Link>
               </div>
             </div>
@@ -340,8 +371,8 @@ export default function DialogCheatSheet() {
               <div>
                 <strong>Reference: </strong>
                 <Link className="text-blue-600 break-all" target="_blank"
-                      href={`${GRANITE_UI}/password/index.html`}>
-                  {GRANITE_UI}/password/index.html
+                      href={`${GRANITE_UI}/form/password/index.html`}>
+                  {GRANITE_UI}/form/password/index.html
                 </Link>
               </div>
             </div>
@@ -351,8 +382,8 @@ export default function DialogCheatSheet() {
               <div>
                 <strong>Reference: </strong>
                 <Link className="text-blue-600 break-all" target="_blank"
-                      href={`${GRANITE_UI}/pathfield/index.html`}>
-                  {GRANITE_UI}/pathfield/index.html
+                      href={`${GRANITE_UI}/form/pathfield/index.html`}>
+                  {GRANITE_UI}/form/pathfield/index.html
                 </Link>
               </div>
             </div>
@@ -361,8 +392,8 @@ export default function DialogCheatSheet() {
               <div>
                 <strong>Reference: </strong>
                 <Link className="text-blue-600 break-all" target="_blank"
-                      href={`${GRANITE_UI}/radiogroup/index.html`}>
-                  {GRANITE_UI}/radiogroup/index.html
+                      href={`${GRANITE_UI}/form/radiogroup/index.html`}>
+                  {GRANITE_UI}/form/radiogroup/index.html
                 </Link>
               </div>
             </div>
@@ -371,8 +402,8 @@ export default function DialogCheatSheet() {
               <div>
                 <strong>Reference: </strong>
                 <Link className="text-blue-600 break-all" target="_blank"
-                      href={`${GRANITE_UI}/select/index.html`}>
-                  {GRANITE_UI}/select/index.html
+                      href={`${GRANITE_UI}/form/select/index.html`}>
+                  {GRANITE_UI}/form/select/index.html
                 </Link>
               </div>
             </div>
@@ -381,8 +412,22 @@ export default function DialogCheatSheet() {
               <div>
                 <strong>Reference: </strong>
                 <Link className="text-blue-600 break-all" target="_blank"
-                      href={`${GRANITE_UI}/switch/index.html`}>
-                  {GRANITE_UI}/switch/index.html
+                      href={`${GRANITE_UI}/form/switch/index.html`}>
+                  {GRANITE_UI}/form/switch/index.html
+                </Link>
+              </div>
+            </div>
+            <div className="pt-4">
+              <Highlight code={tabs} language="xml" path="Tabs"/>
+              <div>
+                <strong>Reference: </strong>
+                <Link className="text-blue-600 break-all" target="_blank"
+                      href={`${CORAL_UI}/Coral.Icon.html#availableIcons`}>
+                  {CORAL_UI}/Coral.Icon.html
+                </Link><br/>
+                <Link className="text-blue-600 break-all" target="_blank"
+                      href={`${GRANITE_UI}/tabs/index.html`}>
+                  {GRANITE_UI}/tabs/index.html
                 </Link>
               </div>
             </div>
@@ -391,8 +436,8 @@ export default function DialogCheatSheet() {
               <div>
                 <strong>Reference: </strong>
                 <Link className="text-blue-600 break-all" target="_blank"
-                      href={`${GRANITE_UI}/textarea/index.html`}>
-                  {GRANITE_UI}/textarea/index.html
+                      href={`${GRANITE_UI}/form/textarea/index.html`}>
+                  {GRANITE_UI}/form/textarea/index.html
                 </Link>
               </div>
             </div>
@@ -401,8 +446,8 @@ export default function DialogCheatSheet() {
               <div>
                 <strong>Reference: </strong>
                 <Link className="text-blue-600 break-all" target="_blank"
-                      href={`${GRANITE_UI}/textfield/index.html`}>
-                  {GRANITE_UI}/textfield/index.html
+                      href={`${GRANITE_UI}/form/textfield/index.html`}>
+                  {GRANITE_UI}/form/textfield/index.html
                 </Link>
               </div>
             </div>
