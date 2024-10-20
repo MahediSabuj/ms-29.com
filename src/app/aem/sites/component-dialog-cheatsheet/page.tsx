@@ -273,6 +273,58 @@ const tabs =
   </items>
 </tabs>`;
 
+const accordion =
+`<accordion jcr:primaryType="nt:unstructured"
+  margin="{Boolean}false"
+  multiple="{Boolean}false"
+  sling:resourceType="granite/ui/components/coral/foundation/accordion">
+  <items jcr:primaryType="nt:unstructured">
+    <aem jcr:primaryType="nt:unstructured"
+      jcr:title="AEM"
+      sling:resourceType="granite/ui/components/foundation/container">
+      <items jcr:primaryType="nt:unstructured">
+        <workflow jcr:primaryType="nt:unstructured"
+          name="./workflow"
+          value="{Boolean}true"
+          sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+          text="Workflow"/>
+      </items>
+      <parentConfig jcr:primaryType="nt:unstructured"
+        active="{Boolean}true"/>
+    </aem>
+  </items>
+</accordion>`;
+
+const hidden =
+`<firstName jcr:primaryType="nt:unstructured"
+  fieldLabel="First Name"
+  name="./firstName"
+  required="{Boolean}true"
+  emptyText="Enter your First Name"
+  sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+<pageTitle jcr:primaryType="nt:unstructured"
+  value="./firstName"
+  name="./pageTitle@ValueFrom"
+  sling:resourceType="granite/ui/components/coral/foundation/form/hidden"/>
+<resourceType jcr:primaryType="nt:unstructured"
+  value="article/v1/article"
+  name="./resourceType"
+  sling:resourceType="granite/ui/components/coral/foundation/form/hidden"/>`;
+
+const well =
+`<well jcr:primaryType="nt:unstructured"
+  margin="{Boolean}true"
+  sling:resourceType="granite/ui/components/coral/foundation/well">
+  <items jcr:primaryType="nt:unstructured">
+    <parentPage jcr:primaryType="nt:unstructured"
+      sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+      fieldDescription="Select Blogs Parent Page"
+      fieldLabel="Parent Page"
+      name="./parentPage"
+      rootPath="/content/aem-demo"/>
+  </items>
+</well>`;
+
 const breadcrumbs : IBreadCrumb = {
   items: [{
     title: TOPICS.AEM_SITES.title,
@@ -297,6 +349,16 @@ export default function DialogCheatSheet() {
               authoring environment. These components are constructed using Coral UI-based elements.
             </section>
             <div>
+              <Highlight code={accordion} language="xml" path="Accordion"/>
+              <div>
+                <strong>Reference: </strong>
+                <Link className="text-blue-600 break-all" target="_blank"
+                      href={`${GRANITE_UI}/accordion/index.html`}>
+                  {GRANITE_UI}/accordion/index.html
+                </Link>
+              </div>
+            </div>
+            <div className="pt-4">
               <Highlight code={checkbox} language="xml" path="Check Box"/>
               <div>
                 <strong>Reference: </strong>
@@ -333,6 +395,16 @@ export default function DialogCheatSheet() {
                 <Link className="text-blue-600 break-all" target="_blank"
                       href={`${GRANITE_UI}/form/fieldset/index.html`}>
                   {GRANITE_UI}/form/fieldset/index.html
+                </Link>
+              </div>
+            </div>
+            <div className="pt-4">
+              <Highlight code={hidden} language="xml" path="Hidden Field"/>
+              <div>
+                <strong>Reference: </strong>
+                <Link className="text-blue-600 break-all" target="_blank"
+                      href={`${GRANITE_UI}/form/hidden/index.html`}>
+                  {GRANITE_UI}/form/hidden/index.html
                 </Link>
               </div>
             </div>
@@ -448,6 +520,16 @@ export default function DialogCheatSheet() {
                 <Link className="text-blue-600 break-all" target="_blank"
                       href={`${GRANITE_UI}/form/textfield/index.html`}>
                   {GRANITE_UI}/form/textfield/index.html
+                </Link>
+              </div>
+            </div>
+            <div className="pt-4">
+              <Highlight code={well} language="xml" path="Well"/>
+              <div>
+                <strong>Reference: </strong>
+                <Link className="text-blue-600 break-all" target="_blank"
+                      href={`${GRANITE_UI}/well/index.html`}>
+                  {GRANITE_UI}/well/index.html
                 </Link>
               </div>
             </div>
