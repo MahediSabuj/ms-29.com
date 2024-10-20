@@ -325,6 +325,26 @@ const well =
   </items>
 </well>`;
 
+const include =
+`<textStyle jcr:primaryType="nt:unstructured"
+  sling:resourceType="granite/ui/components/coral/foundation/include"/>`;
+
+const includeClientLibs = ``;
+
+const fixedColumns = ``;
+
+const container = ``;
+
+const pageField = ``;
+
+const tagField = ``;
+
+const fileUpload = ``;
+
+const cfPicker = ``;
+
+const xfPicker = ``;
+
 const breadcrumbs : IBreadCrumb = {
   items: [{
     title: TOPICS.AEM_SITES.title,
@@ -359,6 +379,9 @@ export default function DialogCheatSheet() {
               </div>
             </div>
             <div className="pt-4">
+              <Highlight code={cfPicker} language="xml" path="CF Picker"/>
+            </div>
+            <div className="pt-4">
               <Highlight code={checkbox} language="xml" path="Check Box"/>
               <div>
                 <strong>Reference: </strong>
@@ -375,6 +398,16 @@ export default function DialogCheatSheet() {
                 <Link className="text-blue-600 break-all" target="_blank"
                       href={`${GRANITE_UI}/form/colorfield/index.html`}>
                   {GRANITE_UI}/form/colorfield/index.html
+                </Link>
+              </div>
+            </div>
+            <div className="pt-4">
+              <Highlight code={container} language="xml" path="Container"/>
+              <div>
+                <strong>Reference: </strong>
+                <Link className="text-blue-600 break-all" target="_blank"
+                      href={`${GRANITE_UI}/container/index.html`}>
+                  {GRANITE_UI}/container/index.html
                 </Link>
               </div>
             </div>
@@ -399,12 +432,45 @@ export default function DialogCheatSheet() {
               </div>
             </div>
             <div className="pt-4">
+              <Highlight code={fileUpload} language="xml" path="File Upload"/>
+            </div>
+            <div className="pt-4">
+              <Highlight code={fixedColumns} language="xml" path="Fixed Columns"/>
+              <div>
+                <strong>Reference: </strong>
+                <Link className="text-blue-600 break-all" target="_blank"
+                      href={`${GRANITE_UI}/fixedcolumns/index.html`}>
+                  {GRANITE_UI}/fixedcolumns/index.html
+                </Link>
+              </div>
+            </div>
+            <div className="pt-4">
               <Highlight code={hidden} language="xml" path="Hidden Field"/>
               <div>
                 <strong>Reference: </strong>
                 <Link className="text-blue-600 break-all" target="_blank"
                       href={`${GRANITE_UI}/form/hidden/index.html`}>
                   {GRANITE_UI}/form/hidden/index.html
+                </Link>
+              </div>
+            </div>
+            <div className="pt-4">
+              <Highlight code={include} language="xml" path="Include"/>
+              <div>
+                <strong>Reference: </strong>
+                <Link className="text-blue-600 break-all" target="_blank"
+                      href={`${GRANITE_UI}/include/index.html`}>
+                  {GRANITE_UI}/include/index.html
+                </Link>
+              </div>
+            </div>
+            <div className="pt-4">
+              <Highlight code={includeClientLibs} language="xml" path="Include Clientlibs"/>
+              <div>
+                <strong>Reference: </strong>
+                <Link className="text-blue-600 break-all" target="_blank"
+                      href={`${GRANITE_UI}/includeclientlibs/index.html`}>
+                  {GRANITE_UI}/includeclientlibs/index.html
                 </Link>
               </div>
             </div>
@@ -437,6 +503,9 @@ export default function DialogCheatSheet() {
                   {GRANITE_UI}/form/numberfield/index.html
                 </Link>
               </div>
+            </div>
+            <div className="pt-4">
+              <Highlight code={pageField} language="xml" path="Page Field"/>
             </div>
             <div className="pt-4">
               <Highlight code={password} language="xml" path="Password"/>
@@ -504,6 +573,9 @@ export default function DialogCheatSheet() {
               </div>
             </div>
             <div className="pt-4">
+              <Highlight code={tagField} language="xml" path="Tag Field"/>
+            </div>
+            <div className="pt-4">
               <Highlight code={textArea} language="xml" path="Text Area"/>
               <div>
                 <strong>Reference: </strong>
@@ -532,6 +604,9 @@ export default function DialogCheatSheet() {
                   {GRANITE_UI}/well/index.html
                 </Link>
               </div>
+            </div>
+            <div className="pt-4">
+              <Highlight code={xfPicker} language="xml" path="XF Picker"/>
             </div>
           </div>
       </article>
