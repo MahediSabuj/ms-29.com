@@ -327,19 +327,140 @@ const well =
 
 const include =
 `<textStyle jcr:primaryType="nt:unstructured"
-  sling:resourceType="granite/ui/components/coral/foundation/include"/>`;
+  sling:resourceType="granite/ui/components/coral/foundation/include"
+  path="/apps/aem-demo/components/common/color"/>
 
-const includeClientLibs = ``;
+<!-- /apps/aem-demo/components/common/color/.content.xml -->
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" 
+  xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+  jcr:primaryType="nt:unstructured"
+  sling:resourceType="granite/ui/components/coral/foundation/container">
+  <items jcr:primaryType="nt:unstructured">
+    <textColor jcr:primaryType="nt:unstructured"
+      sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"
+      fieldLabel="Text Color"
+      name="./textColor"
+      showDefaultColors="{Boolean}true"
+      showProperties="{Boolean}true"
+      showSwatches="{Boolean}true"/>
+    <backgroundColor jcr:primaryType="nt:unstructured"
+      sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"
+      fieldLabel="Background Color"
+      name="./backgroundColor"
+      showDefaultColors="{Boolean}true"
+      showProperties="{Boolean}true"
+      showSwatches="{Boolean}true"/>
+  </items>
+</jcr:root>`;
 
-const fixedColumns = ``;
+const container =
+`<container jcr:primaryType="nt:unstructured"
+  margin="{Boolean}true"
+  maximized="{Boolean}true"
+  sling:resourceType = "granite/ui/components/coral/foundation/container">
+  <items jcr:primaryType="nt:unstructured">
+    <imageCaption jcr:primaryType="nt:unstructured"
+      sling:resourceType = "granite/ui/components/coral/foundation/form/textfield"
+      fieldLabel="Image Caption"
+      name="./imageCaption"/>
+    <alternateText jcr:primaryType="nt:unstructured"
+      sling:resourceType="cq/gui/components/coral/common/form/textfield"
+      fieldLabel="Alternate Text"
+      name="./alternateText"/>
+  </items>
+</container>`;
 
-const container = ``;
+const includeClientLibs =
+`<basic jcr:primaryType="nt:unstructured"
+  jcr:title="Basic"
+  sling:resourceSuperType="wcm/foundation/components/basicpage/v1/basicpage/tabs/basic"
+  sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+  <items jcr:primaryType="nt:unstructured">
+    <column jcr:primaryType="nt:unstructured"
+      sling:resourceType="granite/ui/components/coral/foundation/container">
+      <items jcr:primaryType="nt:unstructured">
+        <clientLibs jcr:primaryType="nt:unstructured"
+          categories="aem-demo.tab.showHide"
+          js="aem-demo.dropdown.showHide"
+          css="aem-demo.dialogHeight"
+          sling:resourceType="granite/ui/components/coral/foundation/includeclientlibs"/>
+      </items>
+    </column>
+  </items>
+</basic>`;
 
-const pageField = ``;
+const fixedColumns =
+`<content jcr:primaryType="nt:unstructured"
+  margin="{Boolean}true"
+  maximized="{Boolean}true"
+  sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+  <items jcr:primaryType="nt:unstructured">
+    <column jcr:primaryType="nt:unstructured"
+      margin="{Boolean}true"
+      maximized="{Boolean}true"
+      sling:resourceType = "granite/ui/components/coral/foundation/container">
+      <items jcr:primaryType="nt:unstructured">
+        <videoSource jcr:primaryType="nt:unstructured"
+          sling:resourceType="granite/ui/components/coral/foundation/form/select"
+          fieldLabel="Video Source"
+          name="./videoSource">
+          <items jcr:primaryType="nt:unstructured">
+            <youtube jcr:primaryType="nt:unstructured"
+              text="YouTube"
+              value="youtube"/>
+            <brightcove jcr:primaryType="nt:unstructured"
+              selected="{Boolean}true"
+              text="BrightCove"
+              value="brightcove"/>
+          </items>
+        </videoSource>
+        <videoId jcr:primaryType="nt:unstructured"
+          sling:resourceType = "granite/ui/components/coral/foundation/form/textfield"
+          fieldLabel="Video ID"
+          name="./videoId"/>
+      </items>
+    </column>
+  </items>
+</content>`;
 
-const tagField = ``;
+const pageField =
+`<navigationRoot jcr:primaryType="nt:unstructured"
+  sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+  fieldDescription="The root page to build the navigation."
+  fieldLabel="Navigation Root"
+  rootPath="/content/aem-demo"
+  name="./navigationRoot"
+  multiple="{Boolean}true"
+  emptyText="Navigation Root"
+  required="{Boolean}true"/>`;
 
-const fileUpload = ``;
+const tagField =
+`<articleTopics jcr:primaryType="nt:unstructured"
+  sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+  fieldLabel="Article Topics"
+  multiple="{Boolean}true"
+  name="./articleTopics"
+  emptyText="Article Topics"
+  forceSelection="{Boolean}true"
+  required="{Boolean}true"
+  rootPath="/content/cq:tags/aem-demo/article/topics"/>`;
+
+const fileUpload =
+`<thumbnail jcr:primaryType="nt:unstructured"
+  icon="adobe"
+  fieldLabel="Thumbnail"
+  fieldDescription="Thumbnail"
+  sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+  name="./image/file"
+  fileNameParameter="./image/fileName"
+  fileReferenceParameter="./image/fileReference"
+  mimeTypes="[image/gif,image/jpeg,image/png,image/webp,image/tiff,image/svg+xml]"
+  allowUpload="{Boolean}false"
+  allowDrop="{Boolean}true"
+  multiple="{Boolean}false"
+  required="{Boolean}true"
+  sizeLimit="10000000"/>`;
 
 const cfPicker = ``;
 
@@ -467,6 +588,7 @@ export default function DialogCheatSheet() {
             <div className="pt-4">
               <Highlight code={includeClientLibs} language="xml" path="Include Clientlibs"/>
               <div>
+                This is especially useful when trying to load client libraries during page creation. <br/>
                 <strong>Reference: </strong>
                 <Link className="text-blue-600 break-all" target="_blank"
                       href={`${GRANITE_UI}/includeclientlibs/index.html`}>
