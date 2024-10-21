@@ -462,9 +462,33 @@ const fileUpload =
   required="{Boolean}true"
   sizeLimit="10000000"/>`;
 
-const cfPicker = ``;
+const cfPicker =
+`<fragmentPath jcr:primaryType="nt:unstructured"
+  sling:resourceType="dam/cfm/components/cfpicker"
+  name="./fragmentPath"
+  fieldDescription="Path to the Content Fragment to display."
+  fieldLabel="Content Fragment"
+  emptyText="Enter or select Content Fragment"
+  forceSelection="{Boolean}true"
+  required="{Boolean}true"
+  multiple="{Boolean}false"
+  pickerTitle="Select Content Fragment"
+  rootPath="/content/dam/aem-demo"/>`;
 
-const xfPicker = ``;
+const xfField =
+`<fragmentVariationPath jcr:primaryType="nt:unstructured"
+  sling:resourceType="cq/experience-fragments/editor/components/xffield"
+  name="./fragmentVariationPath"
+  fieldLabel="Variation"
+  filter="folderOrVariant"
+  propertyFilter="cq:xfShowInEditor"
+  variant="web"
+  emptyText="Enter or select Experience Fragment"
+  forceSelection="{Boolean}true"
+  required="{Boolean}true"
+  multiple="{Boolean}false"
+  fieldDescription="Choose the experience fragment variation to display."
+  rootPath="/content/experience-fragments/aem-demo"/>`;
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
@@ -728,7 +752,7 @@ export default function DialogCheatSheet() {
               </div>
             </div>
             <div className="pt-4">
-              <Highlight code={xfPicker} language="xml" path="XF Picker"/>
+              <Highlight code={xfField} language="xml" path="XF Field"/>
             </div>
           </div>
       </article>
