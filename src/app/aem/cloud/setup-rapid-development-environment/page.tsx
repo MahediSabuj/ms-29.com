@@ -4,7 +4,7 @@ import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import TOPICS from "@/lib/data/article/topics";
-import { CUSTOM_RUN_MODES_ON_AEMAACS as ARTICLE } from "@/lib/data/article/aem/cloud-service";
+import { SETUP_RDE_FOR_AEM_CLOUD as ARTICLE } from "@/lib/data/article/aem/cloud";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -16,13 +16,13 @@ export const metadata: Metadata = {
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
-    title: TOPICS.AEM_CLOUD_SERVICE.title,
-    url: TOPICS.AEM_CLOUD_SERVICE.url
+    title: TOPICS.AEM_CLOUD.title,
+    url: TOPICS.AEM_CLOUD.url
   }],
   current: ARTICLE.title
 }
 
-export default function CustomRunModes() {
+export default function ErrorPageSetup() {
   return (
     <div>
       <BreadCrumb {...breadcrumbs}/>

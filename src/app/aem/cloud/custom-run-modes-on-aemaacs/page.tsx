@@ -4,7 +4,7 @@ import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import TOPICS from "@/lib/data/article/topics";
-import { SETUP_LOCAL_AEM_DEVELOPMENT_ENVIRONMENT as ARTICLE } from "@/lib/data/article/aem/cloud-service";
+import { CUSTOM_RUN_MODES_ON_AEMAACS as ARTICLE } from "@/lib/data/article/aem/cloud";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -16,13 +16,13 @@ export const metadata: Metadata = {
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
-    title: TOPICS.AEM_CLOUD_SERVICE.title,
-    url: TOPICS.AEM_CLOUD_SERVICE.url
+    title: TOPICS.AEM_CLOUD.title,
+    url: TOPICS.AEM_CLOUD.url
   }],
   current: ARTICLE.title
 }
 
-export default function AEMasDebugMode() {
+export default function CustomRunModes() {
   return (
     <div>
       <BreadCrumb {...breadcrumbs}/>
@@ -31,6 +31,11 @@ export default function AEMasDebugMode() {
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
           modifiedDate={ARTICLE.modifiedDate}/>
+        <div>
+          <section className="pt-6">
+
+          </section>
+        </div>  
       </article>
     </div>
   );

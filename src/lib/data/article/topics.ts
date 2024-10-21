@@ -37,9 +37,9 @@ const TOPICS: Topics = {
     title: "Experience Fragment",
     url: "/aem/experience-fragment"
   },
-  AEM_CLOUD_SERVICE: {
+  AEM_CLOUD: {
     title: "AEM as a Cloud Service",
-    url: "/aem/cloud-service"
+    url: "/aem/cloud"
   },
   ACS_COMMONS: {
     title: "ACS AEM Commons",

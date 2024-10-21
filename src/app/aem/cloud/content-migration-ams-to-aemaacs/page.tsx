@@ -10,7 +10,7 @@ import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import TOPICS from "@/lib/data/article/topics";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
-import { CONTENT_TRANSFER_TOOL as ARTICLE } from "@/lib/data/article/aem/cloud-service";
+import { CONTENT_TRANSFER_TOOL as ARTICLE } from "@/lib/data/article/aem/cloud";
 
 import CONTENT_TRANSFER_DISABLE_GROUP_MIGRATION from './assets/content-tranfer-disable-group-migration.png';
 import MIGRATION_SET_CLOUD_ACCELERATION_MANAGER from './assets/migration-set-cloud-acceleration-manager.png';
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
-    title: TOPICS.AEM_CLOUD_SERVICE.title,
-    url: TOPICS.AEM_CLOUD_SERVICE.url
+    title: TOPICS.AEM_CLOUD.title,
+    url: TOPICS.AEM_CLOUD.url
   }],
   current: ARTICLE.title
 }

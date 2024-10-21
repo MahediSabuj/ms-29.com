@@ -9,7 +9,7 @@ import { CODE_COVERAGE } from "@/lib/data/article/aem/code-coverage";
 import { AEM_DISPATCHER } from "@/lib/data/article/aem/dispatcher";
 import { AEM_WORKFLOW } from "@/lib/data/article/aem/workflow";
 import { EXPERIENCE_FRAGMENT } from "@/lib/data/article/aem/experience-fragment";
-import { AEM_CLOUD_SERVICE } from "@/lib/data/article/aem/cloud-service";
+import { AEM_CLOUD } from "@/lib/data/article/aem/cloud";
 import { ACS_COMMONS } from "@/lib/data/article/aem/acs-commons";
 import { AWS_EC2 } from "@/lib/data/article/aws/ec2";
 import { AWS_SES } from "@/lib/data/article/aws/ses";
@@ -105,7 +105,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   loadArticles(TOPICS.AEM_CODE_COVERAGE.url, CODE_COVERAGE);
   loadArticles(TOPICS.AEM_WORKFLOW.url, AEM_WORKFLOW);
   loadArticles(TOPICS.EXPERIENCE_FRAGMENT.url, EXPERIENCE_FRAGMENT);
-  loadArticles(TOPICS.AEM_CLOUD_SERVICE.url, AEM_CLOUD_SERVICE);
+  loadArticles(TOPICS.AEM_CLOUD.url, AEM_CLOUD);
   loadArticles(TOPICS.ACS_COMMONS.url, ACS_COMMONS);
 
   loadArticles(TOPICS.AWS_EC2.url, AWS_EC2);

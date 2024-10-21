@@ -8,7 +8,7 @@ import Highlight from "@/components/highlight/highlight";
 import TOPICS from "@/lib/data/article/topics";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
-import { TAILING_LOGS_ON_AEM_AS_CLOUD_SERVICE as ARTICLE } from "@/lib/data/article/aem/cloud-service";
+import { TAILING_LOGS_ON_AEM_AS_CLOUD_SERVICE as ARTICLE } from "@/lib/data/article/aem/cloud";
 
 import AEM_CLOUD_MANAGER_DOWNLOAD_LOGS from "./assets/aem-cloud-manager-download-logs.png";
 
@@ -28,8 +28,8 @@ const CUSTOM_LOGGING =
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
-    title: TOPICS.AEM_CLOUD_SERVICE.title,
-    url: TOPICS.AEM_CLOUD_SERVICE.url
+    title: TOPICS.AEM_CLOUD.title,
+    url: TOPICS.AEM_CLOUD.url
   }],
   current: ARTICLE.title
 }

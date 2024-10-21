@@ -4,7 +4,7 @@ import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import TOPICS from "@/lib/data/article/topics";
-import { SETUP_RDE_FOR_AEM_CLOUD as ARTICLE } from "@/lib/data/article/aem/cloud-service";
+import { PRIVATE_GITHUB_REPOSITORIES_IN_CLOUD_MANAGER as ARTICLE } from "@/lib/data/article/aem/cloud";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -16,13 +16,13 @@ export const metadata: Metadata = {
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
-    title: TOPICS.AEM_CLOUD_SERVICE.title,
-    url: TOPICS.AEM_CLOUD_SERVICE.url
+    title: TOPICS.AEM_CLOUD.title,
+    url: TOPICS.AEM_CLOUD.url
   }],
   current: ARTICLE.title
 }
 
-export default function ErrorPageSetup() {
+export default function PrivateGithubRepository() {
   return (
     <div>
       <BreadCrumb {...breadcrumbs}/>
@@ -33,7 +33,6 @@ export default function ErrorPageSetup() {
           modifiedDate={ARTICLE.modifiedDate}/>
         <div>
           <section className="pt-6">
-
           </section>
         </div>  
       </article>

@@ -7,7 +7,7 @@ import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Highlight from "@/components/highlight/highlight";
 import FAQ from "@/components/faq/faq";
 import TOPICS from "@/lib/data/article/topics";
-import { WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS as ARTICLE } from "@/lib/data/article/aem/cloud-service";
+import { WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS as ARTICLE } from "@/lib/data/article/aem/cloud";
 
 import enable_web_optimized_images from "./assets/enable-web-optimized-images.webp";
 
@@ -83,8 +83,8 @@ public class ArticleImpl implements Article {
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
-    title: TOPICS.AEM_CLOUD_SERVICE.title,
-    url: TOPICS.AEM_CLOUD_SERVICE.url
+    title: TOPICS.AEM_CLOUD.title,
+    url: TOPICS.AEM_CLOUD.url
   }],
   current: ARTICLE.title
 }

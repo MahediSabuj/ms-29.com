@@ -7,7 +7,7 @@ import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import TOPICS from "@/lib/data/article/topics";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
-import { SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD as ARTICLE } from "@/lib/data/article/aem/cloud-service";
+import { SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD as ARTICLE } from "@/lib/data/article/aem/cloud";
 
 import NEW_DOMAIN_NAME from './assets/new-domain-name.png';
 import DOMAIN_CERTIFICATION_SELECTION from './assets/domain-certification-selection.png';
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
-    title: TOPICS.AEM_CLOUD_SERVICE.title,
-    url: TOPICS.AEM_CLOUD_SERVICE.url
+    title: TOPICS.AEM_CLOUD.title,
+    url: TOPICS.AEM_CLOUD.url
   }],
   current: ARTICLE.title
 }

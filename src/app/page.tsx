@@ -12,7 +12,7 @@ import { CODE_COVERAGE } from "@/lib/data/article/aem/code-coverage";
 import { AEM_DISPATCHER } from "@/lib/data/article/aem/dispatcher";
 import { AEM_WORKFLOW } from "@/lib/data/article/aem/workflow";
 import { EXPERIENCE_FRAGMENT } from "@/lib/data/article/aem/experience-fragment";
-import { AEM_CLOUD_SERVICE } from "@/lib/data/article/aem/cloud-service";
+import { AEM_CLOUD } from "@/lib/data/article/aem/cloud";
 import { ACS_COMMONS } from "@/lib/data/article/aem/acs-commons";
 import { AWS_EC2 } from "@/lib/data/article/aws/ec2";
 import { AWS_SES } from "@/lib/data/article/aws/ses";
@@ -40,7 +40,7 @@ const articles : IArticleList = {
     ...AEM_DISPATCHER,
     ...AEM_WORKFLOW,
     ...EXPERIENCE_FRAGMENT,
-    ...AEM_CLOUD_SERVICE,
+    ...AEM_CLOUD,
     ...ACS_COMMONS,
     ...AWS_EC2,
     ...AWS_SES,

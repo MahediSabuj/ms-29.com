@@ -6,7 +6,7 @@ import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import TOPICS from "@/lib/data/article/topics";
-import { BEST_PRACTICE_ANALYSER_FOR_AEMAACS_MIGRATION as ARTICLE } from "@/lib/data/article/aem/cloud-service";
+import { BEST_PRACTICE_ANALYSER_FOR_AEMAACS_MIGRATION as ARTICLE } from "@/lib/data/article/aem/cloud";
 
 import BEST_PRACTICES_ANALYZER from './assets/Best_Practices_Analyzer.webp';
 import BEST_PRACTICES_ANALYZER_CONFIGURATION from './assets/Best_Practices_Analyzer_Configuration.webp';
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
-    title: TOPICS.AEM_CLOUD_SERVICE.title,
-    url: TOPICS.AEM_CLOUD_SERVICE.url
+    title: TOPICS.AEM_CLOUD.title,
+    url: TOPICS.AEM_CLOUD.url
   }],
   current: ARTICLE.title
 }

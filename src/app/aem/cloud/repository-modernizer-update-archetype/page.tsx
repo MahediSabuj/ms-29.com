@@ -7,7 +7,7 @@ import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Highlight from "@/components/highlight/highlight";
 import FAQ from "@/components/faq/faq";
 import TOPICS from "@/lib/data/article/topics";
-import { REPOSITORY_MODERNIZER as ARTICLE } from "@/lib/data/article/aem/cloud-service";
+import { REPOSITORY_MODERNIZER as ARTICLE } from "@/lib/data/article/aem/cloud";
 
 import AEM_CLOUD_COMPATIBLE_ARCHETYPE from './assets/aem-cloud-compatible-archetype.png';
 
@@ -86,8 +86,8 @@ const aem_migration_config =
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
-    title: TOPICS.AEM_CLOUD_SERVICE.title,
-    url: TOPICS.AEM_CLOUD_SERVICE.url
+    title: TOPICS.AEM_CLOUD.title,
+    url: TOPICS.AEM_CLOUD.url
   }],
   current: ARTICLE.title
 }

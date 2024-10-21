@@ -12,7 +12,7 @@ import { CODE_COVERAGE } from "@/lib/data/article/aem/code-coverage";
 import { AEM_DISPATCHER } from "@/lib/data/article/aem/dispatcher";
 import { AEM_WORKFLOW } from "@/lib/data/article/aem/workflow";
 import { EXPERIENCE_FRAGMENT } from "@/lib/data/article/aem/experience-fragment";
-import { AEM_CLOUD_SERVICE } from "@/lib/data/article/aem/cloud-service";
+import { AEM_CLOUD } from "@/lib/data/article/aem/cloud";
 import { ACS_COMMONS } from "@/lib/data/article/aem/acs-commons";
 import { AWS_EC2 } from "@/lib/data/article/aws/ec2";
 import { AWS_SES } from "@/lib/data/article/aws/ses";
@@ -53,8 +53,8 @@ const aem : IListGroup = {
     topic: TOPICS.EXPERIENCE_FRAGMENT,
     count: EXPERIENCE_FRAGMENT.length
    }, {
-    topic: TOPICS.AEM_CLOUD_SERVICE,
-    count: AEM_CLOUD_SERVICE.length
+    topic: TOPICS.AEM_CLOUD,
+    count: AEM_CLOUD.length
   }, {
     topic: TOPICS.ACS_COMMONS,
     count: ACS_COMMONS.length
