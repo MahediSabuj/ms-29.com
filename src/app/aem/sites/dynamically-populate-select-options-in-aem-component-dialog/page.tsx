@@ -54,7 +54,7 @@ public class DropdownServlet extends SlingSafeMethodsServlet {
     // Fetch Property from datasource
     Resource datasource = request.getResource().getChild("datasource");
     ValueMap vm = datasource.getValueMap();
-    String type = vm.get("type", ""); // articleTypes
+    String type = vm.get("types", ""); // articleTypes
 
     // Fetch dropdown options from External Source or other Component properties
     List<String> options = dropdownService.getOptions(currentPagePath, type);
@@ -79,7 +79,7 @@ const COMPONENT_DIALOG_USING_DYNAMIC_OPTIONS =
   fieldLabel="Article Types"
   name="./articleTypes">
   <datasource jcr:primaryType="nt:unstructured"
-    type="articleTypes"
+    types="articleTypes"
     sling:resourceType="/bin/public/aem-demo/dropdowns"/>
 </articleTypes>`
 

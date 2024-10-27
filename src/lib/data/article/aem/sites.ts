@@ -1,15 +1,26 @@
 import { IArticleItem } from "@/types/article";
 import TOPICS from "@/lib/data/article/topics";
 
-export const PROJECT_LOMBOK_IN_AEM_PROJECTS: IArticleItem = {
-  title: "Project Lombok in AEM Projects",
-  description: `In AEM backend Java development, Sling Models are utilized to retrieve dialog values using annotations. However, 
-    writing boilerplate code such as getter methods for passing these values to HTL can be tedious. To simplify this 
-    process, Project Lombok can be integrated, automatically generating the necessary boilerplate code 
-    with annotations like @Getter. This streamlines development tasks by eliminating the need for manual getter method creation.`,
-  url: "/aem/sites/project-lombok-in-aem-projects",
-  publishDate: "March 17, 2024",
-  modifiedDate: "March 17, 2024",
+export const AEM_USER_PERMISSION: IArticleItem = {
+  title: "Managing User Permissions and Access Control in AEM",
+  description: `Adobe Experience Manager (AEM) is a content management system managing content authoring across multiple 
+    sites with multiple content creators. User Permissions enforces strict governance over user actions like read, create, 
+    modify, delete, publish contents. This mechanism ensures that only authorized users can perform these specific actions.`,
+  url: "/aem/sites/managing-user-permission-and-access-control",
+  publishDate: "September 22, 2024",
+  modifiedDate: "September 22, 2024",
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
+}
+
+export const CUSTOM_SLING_MODEL_INJECTOR: IArticleItem = {
+  title: "Custom Sling Model Injector using Annotations",
+  description: `Sling Model Injectors allow developers to retrieve and inject data directly into Sling models. However, sometimes, 
+    standard injectors aren't enough when you need to pull custom or complex data, such as tag properties or content fragments. In 
+    such cases, custom Sling Model injectors can be developed to meet specific data requirements.`,
+  url: "/aem/sites/custom-sling-model-injector-using-annotations",
+  publishDate: "October 28, 2024",
+  modifiedDate: "October 28, 2024",
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
@@ -27,16 +38,17 @@ export const MULTI_SITE_MANAGER: IArticleItem = {
   active: false
 }
 
-export const AEM_USER_PERMISSION: IArticleItem = {
-  title: "Managing User Permissions and Access Control in AEM",
-  description: `Adobe Experience Manager (AEM) is a content management system managing content authoring across multiple 
-    sites with multiple content creators. User Permissions enforces strict governance over user actions like read, create, 
-    modify, delete, publish contents. This mechanism ensures that only authorized users can perform these specific actions.`,
-  url: "/aem/sites/managing-user-permission-and-access-control",
-  publishDate: "September 22, 2024",
-  modifiedDate: "September 22, 2024",
+export const PROJECT_LOMBOK_IN_AEM_PROJECTS: IArticleItem = {
+  title: "Project Lombok in AEM Projects",
+  description: `In AEM backend Java development, Sling Models are utilized to retrieve dialog values using annotations. However, 
+    writing boilerplate code such as getter methods for passing these values to HTL can be tedious. To simplify this 
+    process, Project Lombok can be integrated, automatically generating the necessary boilerplate code 
+    with annotations like @Getter. This streamlines development tasks by eliminating the need for manual getter method creation.`,
+  url: "/aem/sites/project-lombok-in-aem-projects",
+  publishDate: "March 17, 2024",
+  modifiedDate: "March 17, 2024",
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const FETCH_MULTIFIELD_SLING_MODEL: IArticleItem = {
@@ -46,7 +58,7 @@ export const FETCH_MULTIFIELD_SLING_MODEL: IArticleItem = {
   url: "/aem/sites/fetch-multifield-values-using-sling-model",
   publishDate: "March 14, 2024",
   modifiedDate: "March 14, 2024",
-  views: 181,
+  views: 206,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
@@ -105,7 +117,7 @@ export const AEM_COMPONENT_DIALOG_CHEATSHEET: IArticleItem = {
   url: "/aem/sites/component-dialog-cheatsheet",
   publishDate: "February 13, 2024",
   modifiedDate: "February 28, 2024",
-  views: 311,
+  views: 330,
   description: `Granite UI provides a large range of the basic components needed to create component 
     dialog on the authoring environment. These components are constructed using Coral UI-based elements.`,
   topics: [ TOPICS.AEM_SITES ],
@@ -117,7 +129,7 @@ export const DEFAULT_VALUES_IN_AEM_COMPONENT_DIALOG: IArticleItem = {
   url: "/aem/sites/default-value-in-component-dialog",
   publishDate: "February 04, 2024",
   modifiedDate: "February 10, 2024",
-  views: 183,
+  views: 192,
   description: `In AEM components, it&apos;s often necessary to establish default values. 
     This ensures that when components are dragged onto the page, they display predefined initial values.
     This functionality is achievable through the utilization of cq:template and cq:templatePath.`,
@@ -252,7 +264,7 @@ export const SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION : IArticleItem = {
   url: "/aem/sites/show-hide-aem-dialog-fields-on-dropdown-selection",
   publishDate: "April 10, 2024",
   modifiedDate: "April 10, 2024",
-  views: 418,
+  views: 442,
   description: `Enabling Show/Hide functionality for AEM dialog fields improves user experience by allowing content authors to 
     focus on relevant fields, thereby making the authoring process more efficient and less error-prone.`,
   topics: [ TOPICS.AEM_SITES ],
@@ -292,9 +304,10 @@ export const SLING_MAPPINGS_FOR_RESOURCE_RESOLUTION : IArticleItem = {
 }
 
 export const AEM_SITES : IArticleItem[] = [
-  PROJECT_LOMBOK_IN_AEM_PROJECTS,
-  MULTI_SITE_MANAGER,
   AEM_USER_PERMISSION,
+  CUSTOM_SLING_MODEL_INJECTOR,
+  MULTI_SITE_MANAGER,
+  PROJECT_LOMBOK_IN_AEM_PROJECTS,
   FETCH_MULTIFIELD_SLING_MODEL,
   SLING_MODEL_INJECTORS_ANNOTATIONS,
   QUERY_BUILDER_CHEATSHEET,

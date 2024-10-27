@@ -4,6 +4,7 @@ import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Article from "@/components/article/article";
 import Highlight from "@/components/highlight/highlight";
+import TOPICS from "@/lib/data/article/topics";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 
@@ -49,8 +50,8 @@ const show_hide_dialog =
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
-    title: "AEM Sites",
-    url: "/aem/sites"
+    title: TOPICS.AEM_SITES.title,
+    url: TOPICS.AEM_SITES.url
   }],
   current: ARTICLE.title
 }

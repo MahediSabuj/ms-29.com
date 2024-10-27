@@ -10,7 +10,7 @@ export const CONTENT_FRAGMENT_PROGRAMMATICALLY: IArticleItem = {
   url: "/aem/content-fragment/create-content-fragment-programmatically",
   publishDate: "February 16, 2024",
   modifiedDate: "February 16, 2024",
-  views: 190,
+  views: 210,
   topics: [ TOPICS.CONTENT_FRAGMENT ],
   active: true
 }
@@ -50,9 +50,20 @@ export const COMPOSITE_MULTIFIELD_FOR_CONTENT_FRAGMENT: IArticleItem = {
   active: false
 }
 
+export const RETRIEVE_CONTENT_FRAGMENT_SLING_MODEL: IArticleItem = {
+  title: "Retrieve Content Fragment Data using Sling Model",
+  description: ``,
+  url: "/aem/content-fragment/retrieve-content-fragment-data-using-sling-model",
+  publishDate: "November 08, 2024",
+  modifiedDate: "November 08, 2024",
+  topics: [ TOPICS.CONTENT_FRAGMENT ],
+  active: false
+}
+
 export const CONTENT_FRAGMENT: IArticleItem[] = [
   CONTENT_FRAGMENT_PROGRAMMATICALLY,
   CROSS_CHANNEL_CONTENT_DELIVERY,
   CONTENT_FRAGMENTS_VS_EXPERIENCE_FRAGMENTS,
-  COMPOSITE_MULTIFIELD_FOR_CONTENT_FRAGMENT
+  COMPOSITE_MULTIFIELD_FOR_CONTENT_FRAGMENT,
+  RETRIEVE_CONTENT_FRAGMENT_SLING_MODEL
 ].filter(m => m.active);
