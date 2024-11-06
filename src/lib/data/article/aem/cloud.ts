@@ -91,11 +91,11 @@ export const REPOSITORY_MODERNIZER: IArticleItem = {
 export const SETUP_LOCAL_AEM_DEVELOPMENT_ENVIRONMENT : IArticleItem = {
   title: "Setup Local AEM Development Environment",
   url: "/aem/cloud/set-up-local-aem-development-environment",
-  publishDate: "October 28, 2024",
-  modifiedDate: "October 28, 2024",
+  publishDate: "November 22, 2024",
+  modifiedDate: "November 22, 2024",
   description: ``,
   topics: [ TOPICS.AEM_CLOUD ],
-  active: false
+  active: true
 }
 
 export const CONTENT_TRANSFER_TOOL : IArticleItem = {
@@ -136,21 +136,21 @@ export const SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD : IArticleItem = {
 export const DEDICATED_IP_FOR_AEMAACS : IArticleItem = {
   title: "Dedicated egress IP using Advanced Networking in AEMaaCS",
   url: "/aem/cloud/dedicated-egress-ip-using-advanced-networking",
-  publishDate: "October 18, 2024",
-  modifiedDate: "October 18, 2024",
+  publishDate: "November 15, 2024",
+  modifiedDate: "November 15, 2024",
   description: ``,
   topics: [ TOPICS.AEM_CLOUD ],
-  active: false
+  active: true
 }
 
 export const SETUP_RDE_FOR_AEM_CLOUD : IArticleItem = {
   title: "Setup Rapid Development Environments for AEM Cloud",
   url: "/aem/cloud/setup-rapid-development-environment",
-  publishDate: "September 30, 2024",
-  modifiedDate: "September 30, 2024",
+  publishDate: "November 30, 2024",
+  modifiedDate: "November 30, 2024",
   description: ``,
   topics: [ TOPICS.AEM_CLOUD ],
-  active: false
+  active: true
 }
 
 export const AEM_CLOUD : IArticleItem[] = [
