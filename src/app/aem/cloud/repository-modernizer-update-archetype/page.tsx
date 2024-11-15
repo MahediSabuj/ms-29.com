@@ -100,7 +100,8 @@ export default function RepositoryModernizer() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <div>
           <section className="pt-6">
             AEM Project Archetype is a Maven template creates a minimal, best-practices-based AEM project. Over the years, AEM Project Archetype has

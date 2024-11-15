@@ -1,3 +1,4 @@
+import React from "react";
 import { PAGE_TYPE } from "@/types/enum/page-type";
 
 export interface ITopic {
@@ -34,6 +35,11 @@ export interface IArticleReviewItem {
   reviewDate: string;
   message: string;
   replies?: IArticleReviewItem[]
+}
+
+export interface IHeading {
+  heading: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  children: React.ReactNode
 }
 
 export default PAGE_TYPE;

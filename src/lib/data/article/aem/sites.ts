@@ -58,7 +58,7 @@ export const FETCH_MULTIFIELD_SLING_MODEL: IArticleItem = {
   url: "/aem/sites/fetch-multifield-values-using-sling-model",
   publishDate: "March 14, 2024",
   modifiedDate: "March 14, 2024",
-  views: 206,
+  views: 225,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
@@ -117,7 +117,7 @@ export const AEM_COMPONENT_DIALOG_CHEATSHEET: IArticleItem = {
   url: "/aem/sites/component-dialog-cheatsheet",
   publishDate: "February 13, 2024",
   modifiedDate: "February 28, 2024",
-  views: 330,
+  views: 381,
   description: `Granite UI provides a large range of the basic components needed to create component 
     dialog on the authoring environment. These components are constructed using Coral UI-based elements.`,
   topics: [ TOPICS.AEM_SITES ],
@@ -129,7 +129,7 @@ export const DEFAULT_VALUES_IN_AEM_COMPONENT_DIALOG: IArticleItem = {
   url: "/aem/sites/default-value-in-component-dialog",
   publishDate: "February 04, 2024",
   modifiedDate: "February 10, 2024",
-  views: 192,
+  views: 203,
   description: `In AEM components, it&apos;s often necessary to establish default values. 
     This ensures that when components are dragged onto the page, they display predefined initial values.
     This functionality is achievable through the utilization of cq:template and cq:templatePath.`,
@@ -264,7 +264,7 @@ export const SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION : IArticleItem = {
   url: "/aem/sites/show-hide-aem-dialog-fields-on-dropdown-selection",
   publishDate: "April 10, 2024",
   modifiedDate: "April 10, 2024",
-  views: 442,
+  views: 484,
   description: `Enabling Show/Hide functionality for AEM dialog fields improves user experience by allowing content authors to 
     focus on relevant fields, thereby making the authoring process more efficient and less error-prone.`,
   topics: [ TOPICS.AEM_SITES ],

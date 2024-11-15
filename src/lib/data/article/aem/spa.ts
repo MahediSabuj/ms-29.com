@@ -20,7 +20,7 @@ export const DATA_SLY_RESOURCE_IN_AEM_SPA : IArticleItem = {
   url: "/aem/spa/replicate-data-sly-resource-aem-spa",
   publishDate: "April 30, 2024",
   modifiedDate: "April 30, 2024",
-  views: 128,
+  views: 143,
   topics: [ TOPICS.AEM_SPA ],
   active: true
 }

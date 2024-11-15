@@ -84,6 +84,7 @@ export const REPOSITORY_MODERNIZER: IArticleItem = {
   url: "/aem/cloud/repository-modernizer-update-archetype",
   publishDate: "August 11, 2024",
   modifiedDate: "August 11, 2024",
+  views: 105,
   topics: [ TOPICS.AEM_CLOUD ],
   active: true
 }
