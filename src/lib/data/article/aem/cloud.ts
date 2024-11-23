@@ -96,7 +96,7 @@ export const SETUP_LOCAL_AEM_DEVELOPMENT_ENVIRONMENT : IArticleItem = {
   modifiedDate: "November 22, 2024",
   description: ``,
   topics: [ TOPICS.AEM_CLOUD ],
-  active: true
+  active: false
 }
 
 export const CONTENT_TRANSFER_TOOL : IArticleItem = {
@@ -141,7 +141,7 @@ export const DEDICATED_IP_FOR_AEMAACS : IArticleItem = {
   modifiedDate: "November 15, 2024",
   description: ``,
   topics: [ TOPICS.AEM_CLOUD ],
-  active: true
+  active: false
 }
 
 export const SETUP_RDE_FOR_AEM_CLOUD : IArticleItem = {
@@ -151,7 +151,7 @@ export const SETUP_RDE_FOR_AEM_CLOUD : IArticleItem = {
   modifiedDate: "November 30, 2024",
   description: ``,
   topics: [ TOPICS.AEM_CLOUD ],
-  active: true
+  active: false
 }
 
 export const AEM_CLOUD : IArticleItem[] = [

@@ -57,7 +57,7 @@ export const RETRIEVE_CONTENT_FRAGMENT_SLING_MODEL: IArticleItem = {
   publishDate: "November 08, 2024",
   modifiedDate: "November 08, 2024",
   topics: [ TOPICS.CONTENT_FRAGMENT ],
-  active: true
+  active: false
 }
 
 export const CONTENT_FRAGMENT: IArticleItem[] = [
