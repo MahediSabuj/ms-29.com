@@ -8,7 +8,7 @@ export default function Navigation(config: HeaderConfig) {
 
   return (
     <nav>
-      <div className="max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between">
           <Link href={brand.url}>{brand.title}</Link>
           <button type="button"

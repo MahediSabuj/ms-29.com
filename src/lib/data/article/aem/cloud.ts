@@ -147,11 +147,11 @@ export const DEDICATED_IP_FOR_AEMAACS : IArticleItem = {
 export const SETUP_RDE_FOR_AEM_CLOUD : IArticleItem = {
   title: "Setup Rapid Development Environments for AEM Cloud",
   url: "/aem/cloud/setup-rapid-development-environment",
-  publishDate: "November 30, 2024",
-  modifiedDate: "November 30, 2024",
+  publishDate: "December 03, 2024",
+  modifiedDate: "December 03, 2024",
   description: ``,
   topics: [ TOPICS.AEM_CLOUD ],
-  active: false
+  active: true
 }
 
 export const AEM_CLOUD : IArticleItem[] = [
