@@ -163,8 +163,8 @@ export const IMPERSONATE_USERS_AUTHOR_ENVIRONMENT : IArticleItem = {
   description: `To troubleshoot issues, we often need to impersonate users in the author environment. With the Impersonate functionality, a user can
     work on behalf of another user.`,
   url: "/aem/sites/impersonate-users-in-author-environment",
-  publishDate: "November 28, 2024",
-  modifiedDate: "November 28, 2024",
+  publishDate: "December 10, 2024",
+  modifiedDate: "December 10, 2024",
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
