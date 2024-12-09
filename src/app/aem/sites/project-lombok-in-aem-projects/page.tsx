@@ -96,7 +96,8 @@ export default function ProjectLombok() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <div className="pt-6">
           In AEM backend Java development, Sling Models are utilized to retrieve dialog values using annotations. However,
           writing boilerplate code such as getter methods for passing these values to HTL can be tedious. To simplify this

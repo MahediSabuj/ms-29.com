@@ -8,7 +8,7 @@ export const SETUP_SMTP_CONFIG_USING_AWS_SES: IArticleItem = {
   publishDate: "December 08, 2024",
   modifiedDate: "December 08, 2024",
   topics: [ TOPICS.AWS_SES ],
-  active: true
+  active: false
 }
 
 export const AWS_SES: IArticleItem[] = [
