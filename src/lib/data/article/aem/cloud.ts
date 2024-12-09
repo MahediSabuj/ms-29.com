@@ -1,6 +1,16 @@
 import { IArticleItem } from "@/types/article";
 import TOPICS from "@/lib/data/article/topics";
 
+export const AMS_TO_AEMAACS_MIGRATION : IArticleItem = {
+  title: "Migration Journey to AEM as a Cloud Service",
+  url: "/aem/cloud/migration-journey-to-aemaacs",
+  publishDate: "December 15, 2024",
+  modifiedDate: "December 15, 2024",
+  description: ``,
+  topics: [ TOPICS.AEM_CLOUD ],
+  active: false
+}
+
 export const BEST_PRACTICE_ANALYSER_FOR_AEMAACS_MIGRATION: IArticleItem = {
   title: "Best Practices Analyzer for AEMaaCS Migration",
   url: "/aem/cloud/best-practices-analyzer-for-aemaacs-migration",
@@ -151,10 +161,11 @@ export const SETUP_RDE_FOR_AEM_CLOUD : IArticleItem = {
   modifiedDate: "December 03, 2024",
   description: ``,
   topics: [ TOPICS.AEM_CLOUD ],
-  active: true
+  active: false
 }
 
 export const AEM_CLOUD : IArticleItem[] = [
+  AMS_TO_AEMAACS_MIGRATION,
   BEST_PRACTICE_ANALYSER_FOR_AEMAACS_MIGRATION,
   WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS,
   REPOSITORY_MODERNIZER,
