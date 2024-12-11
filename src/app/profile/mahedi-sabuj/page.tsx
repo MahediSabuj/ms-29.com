@@ -48,7 +48,8 @@ export default function Resume() {
         <h2 className="headline">Adobe Certified AEM Developer | Adobe AEM Community Advisor</h2>
       </section>
       <section className="pt-6">
-        Experienced AEM Developer with 6 years of expertise, currently working on migrating projects from AMS to AEMaaCS.
+        Experienced AEM Developer with 6 years of expertise, specializing in AEM 6.5, AEM as a Cloud Service (AEMaaCS), AEM SPA (React), and AEM Cloud Migration.
+        Additionally proficient in various programming languages and frameworks, including Java, Spring Boot, C++, C#, JavaScript, and Golang.
       </section>
       <section className="pt-6">
         <h2 className="text-xl">Certifications</h2>
