@@ -1,6 +1,8 @@
 import Link from "next/link";
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-aem">
       <div className="py-2">
@@ -22,7 +24,7 @@ export default function Footer() {
           </li>
         </ul>
         <div className="text-center text-white">
-          Copyright &copy; 2024 MS-29. All rights reserved.
+          Copyright &copy; {currentYear} MS-29. All rights reserved.
         </div>
       </div>
     </footer>
