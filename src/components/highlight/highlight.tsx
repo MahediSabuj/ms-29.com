@@ -2,7 +2,7 @@ import Image from "next/image";
 import hljs from "highlight.js/lib/core";
 import { Highlight } from "@/types/highlight";
 
-export default function Highlight({ code, language, path, image }: Highlight) {
+export default function HighlightCode({ code, language, path, image }: Highlight) {
   const highlighted_code = hljs.highlight(code, {
     language
   }).value;
