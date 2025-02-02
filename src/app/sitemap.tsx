@@ -13,6 +13,7 @@ import { AEM_CLOUD } from "@/lib/data/article/aem/cloud";
 import { ACS_COMMONS } from "@/lib/data/article/aem/acs-commons";
 import { AWS_EC2 } from "@/lib/data/article/aws/ec2";
 import { AWS_SES } from "@/lib/data/article/aws/ses";
+import { AI_LLM } from "@/lib/data/article/ai/large-language-model";
 import { SF_LWC } from "@/lib/data/article/salesforce/lwc";
 import { SF_IDENTITY } from "@/lib/data/article/salesforce/identity";
 import { DYNAMIC_PROGRAMMING } from "@/lib/data/article/cp/dynamic-programming";
@@ -110,6 +111,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   loadArticles(TOPICS.AWS_EC2.url, AWS_EC2);
   loadArticles(TOPICS.AWS_SES.url, AWS_SES);
+
+  loadArticles(TOPICS.AI_LLM.url, AI_LLM);
 
   loadArticles(TOPICS.SF_LWC.url, SF_LWC);
   loadArticles(TOPICS.SF_IDENTITY.url, SF_IDENTITY);

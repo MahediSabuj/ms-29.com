@@ -170,7 +170,8 @@ export default function FormsInSite() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
           <div>
             <section className="pt-6">
               There are two potential scenarios for integrating Adaptive forms into AEM Sites: one for new projects
