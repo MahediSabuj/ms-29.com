@@ -19,7 +19,7 @@ export const AEM_COMPONENT_DIALOG_CHEATSHEET: IArticleItem = {
   url: "/aem/sites/component-dialog-cheatsheet",
   publishDate: "February 13, 2024",
   modifiedDate: "February 28, 2024",
-  views: 461,
+  views: 580,
   description: `Granite UI provides a large range of the basic components needed to create component 
     dialog on the authoring environment. These components are constructed using Coral UI-based elements.`,
   topics: [ TOPICS.AEM_SITES ],
@@ -92,7 +92,7 @@ export const DEFAULT_VALUES_IN_AEM_COMPONENT_DIALOG: IArticleItem = {
   url: "/aem/sites/default-value-in-component-dialog",
   publishDate: "February 04, 2024",
   modifiedDate: "February 10, 2024",
-  views: 223,
+  views: 247,
   description: `In AEM components, it&apos;s often necessary to establish default values. 
     This ensures that when components are dragged onto the page, they display predefined initial values.
     This functionality is achievable through the utilization of cq:template and cq:templatePath.`,
@@ -141,7 +141,7 @@ export const FETCH_MULTIFIELD_SLING_MODEL: IArticleItem = {
   url: "/aem/sites/fetch-multifield-values-using-sling-model",
   publishDate: "March 14, 2024",
   modifiedDate: "March 14, 2024",
-  views: 246,
+  views: 298,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
@@ -160,7 +160,7 @@ export const HTL_SPECIFICATION_CHEATSHEET : IArticleItem = {
 
 export const IMPERSONATE_USERS_AUTHOR_ENVIRONMENT : IArticleItem = {
   title: "Impersonate Users in AEM Author Environment",
-  description: `To troubleshoot issues, we often need to impersonate users in the author environment. With the Impersonate functionality, a user can
+  description: `To troubleshoot issues, we may need to impersonate users in the author environment. With the Impersonate functionality, a user can
     work on behalf of another user.`,
   url: "/aem/sites/impersonate-users-in-author-environment",
   publishDate: "December 10, 2024",
@@ -175,6 +175,7 @@ export const INTEGRATE_ADAPTIVE_FORMS_IN_AEM_SITES: IArticleItem = {
     and another for existing projects. Adobe has developed the aem-core-forms-components which can be used to 
     incorporate forms standard components into AEM Sites.`,
   url: "/aem/sites/integrate-adaptive-forms-in-aem-sites",
+  views: 106,
   publishDate: "February 29, 2024",
   modifiedDate: "March 01, 2024",
   topics: [ TOPICS.AEM_SITES ],
@@ -203,7 +204,7 @@ export const PROJECT_LOMBOK_IN_AEM_PROJECTS: IArticleItem = {
   url: "/aem/sites/project-lombok-in-aem-projects",
   publishDate: "March 17, 2024",
   modifiedDate: "March 17, 2024",
-  views: 102,
+  views: 131,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
@@ -238,7 +239,7 @@ export const SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION : IArticleItem = {
   url: "/aem/sites/show-hide-aem-dialog-fields-on-dropdown-selection",
   publishDate: "April 10, 2024",
   modifiedDate: "April 10, 2024",
-  views: 510,
+  views: 571,
   description: `Enabling Show/Hide functionality for AEM dialog fields improves user experience by allowing content authors to 
     focus on relevant fields, thereby making the authoring process more efficient and less error-prone.`,
   topics: [ TOPICS.AEM_SITES ],
