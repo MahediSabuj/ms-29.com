@@ -9,7 +9,7 @@ export const SETUP_DEEPSEEK_LOCALLY: IArticleItem = {
     publishDate: "February 04, 2025",
     modifiedDate: "February 04, 2025",
     topics: [ TOPICS.AI_LLM ],
-    active: true
+    active: false
 }
 
 export const AI_LLM: IArticleItem[] = [
