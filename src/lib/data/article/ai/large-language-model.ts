@@ -14,4 +14,4 @@ export const SETUP_DEEPSEEK_LOCALLY: IArticleItem = {
 
 export const AI_LLM: IArticleItem[] = [
   SETUP_DEEPSEEK_LOCALLY
-].filter(m => true);
+].filter(m => m.active);
