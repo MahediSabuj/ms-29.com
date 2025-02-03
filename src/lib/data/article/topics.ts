@@ -76,6 +76,10 @@ const TOPICS: Topics = {
   POSTGRESQL: {
     title: "PostgreSQL",
     url: "/db/postgresql"
+  },
+  AI_LLM: {
+    title: "Large Language Model",
+    url: "/ai/large-language-model"
   }
 }
 

@@ -16,6 +16,7 @@ import { AEM_CLOUD } from "@/lib/data/article/aem/cloud";
 import { ACS_COMMONS } from "@/lib/data/article/aem/acs-commons";
 import { AWS_EC2 } from "@/lib/data/article/aws/ec2";
 import { AWS_SES } from "@/lib/data/article/aws/ses";
+import { AI_LLM } from "@/lib/data/article/ai/large-language-model";
 import { SF_LWC } from "@/lib/data/article/salesforce/lwc";
 import { SF_IDENTITY } from "@/lib/data/article/salesforce/identity";
 import { DYNAMIC_PROGRAMMING } from "@/lib/data/article/cp/dynamic-programming";
@@ -72,6 +73,14 @@ const aws: IListGroup = {
   }]
 }
 
+const artificialIntelligence: IListGroup = {
+  title: "Artificial Intelligence",
+  listItems: [{
+    topic: TOPICS.AI_LLM,
+    count: AI_LLM.length
+  }]
+}
+
 const salesforce: IListGroup = {
   title: "Salesforce",
   listItems: [{
@@ -115,8 +124,9 @@ export default function Sidebar() {
         <div>
           <Link href="/profile/mahedi-sabuj" className="text-blue-600">
             Abdullah &ndash; Al &ndash; Mahedi <strong>Sabuj</strong><br/>
-          </Link>  
-          Principal Engineer @ <Link target="_blank" href="https://brainstation-23.com" className="text-blue-600">Brain Station 23</Link>
+          </Link>
+          Principal Engineer @ <Link target="_blank" href="https://brainstation-23.com"
+              className="text-blue-600">Brain Station 23</Link>
         </div>
       </section>
       <section className="mt-4">
@@ -124,6 +134,9 @@ export default function Sidebar() {
       </section>
       <section className="mt-4">
         <ListGroup {...aws}/>
+      </section>
+      <section className="mt-4">
+        <ListGroup {...artificialIntelligence}/>
       </section>
       <section className="mt-4">
         <ListGroup {...salesforce}/>
@@ -135,5 +148,5 @@ export default function Sidebar() {
         <ListGroup {...database}/>
       </section>
     </div>
-  ); 
+  );
 }

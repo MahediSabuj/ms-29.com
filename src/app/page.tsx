@@ -16,6 +16,7 @@ import { AEM_CLOUD } from "@/lib/data/article/aem/cloud";
 import { ACS_COMMONS } from "@/lib/data/article/aem/acs-commons";
 import { AWS_EC2 } from "@/lib/data/article/aws/ec2";
 import { AWS_SES } from "@/lib/data/article/aws/ses";
+import { AI_LLM } from "@/lib/data/article/ai/large-language-model";
 import { SF_LWC } from "@/lib/data/article/salesforce/lwc";
 import { SF_IDENTITY } from "@/lib/data/article/salesforce/identity";
 import { DYNAMIC_PROGRAMMING } from "@/lib/data/article/cp/dynamic-programming";
@@ -44,6 +45,7 @@ const articles : IArticleList = {
     ...ACS_COMMONS,
     ...AWS_EC2,
     ...AWS_SES,
+    ...AI_LLM,
     ...SF_LWC,
     ...SF_IDENTITY,
     ...DYNAMIC_PROGRAMMING,
