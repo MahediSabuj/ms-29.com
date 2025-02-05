@@ -100,6 +100,16 @@ export const DEFAULT_VALUES_IN_AEM_COMPONENT_DIALOG: IArticleItem = {
   active: true
 }
 
+export const DESIGN_DIALOG_SHOW_HIDE_DIALOG_OPTIONS: IArticleItem = {
+  title: "Design Dialog to Show/Hide Dialog Options based on Template",
+  url: "/aem/sites/design-dialog-to-show-hide-dialog-fields-based-on-template",
+  publishDate: "February 07, 2025",
+  modifiedDate: "February 07, 2025",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
+}
+
 export const DYNAMICALLY_POPULATE_SELECT_OPTIONS_IN_AEM_COMPONENT_DIALOG : IArticleItem = {
   title: "Dynamically Populate Select Options in AEM Component Dialog",
   url: "/aem/sites/dynamically-populate-select-options-in-aem-component-dialog",
@@ -325,6 +335,7 @@ export const AEM_SITES : IArticleItem[] = [
   CUSTOM_OSGI_CONFIGURATION,
   CUSTOM_SLING_MODEL_INJECTOR,
   DEFAULT_VALUES_IN_AEM_COMPONENT_DIALOG,
+  DESIGN_DIALOG_SHOW_HIDE_DIALOG_OPTIONS,
   DYNAMICALLY_POPULATE_SELECT_OPTIONS_IN_AEM_COMPONENT_DIALOG,
   EXPAND_CORE_SEARCH_COMPONENT_SCOPE,
   EXTEND_AEM_PAGE_PROPERTIES,

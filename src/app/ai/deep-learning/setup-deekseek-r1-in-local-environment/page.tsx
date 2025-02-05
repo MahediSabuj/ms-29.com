@@ -9,7 +9,7 @@ import TOPICS from "@/lib/data/article/topics";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 
-import { SETUP_DEEPSEEK_LOCALLY as ARTICLE } from "@/lib/data/article/ai/large-language-model";
+import { SETUP_DEEPSEEK_LOCALLY as ARTICLE } from "@/lib/data/article/ai/deep-learning";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -81,8 +81,8 @@ const OLLAHA_API = `curl http://localhost:11434/api/generate -d '{
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
-    title: TOPICS.AI_LLM.title,
-    url: TOPICS.AI_LLM.url
+    title: TOPICS.DEEP_LEARNING.title,
+    url: TOPICS.DEEP_LEARNING.url
   }],
   current: ARTICLE.title
 }

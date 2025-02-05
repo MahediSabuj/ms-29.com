@@ -77,9 +77,13 @@ const TOPICS: Topics = {
     title: "PostgreSQL",
     url: "/db/postgresql"
   },
-  AI_LLM: {
-    title: "Large Language Model",
-    url: "/ai/large-language-model"
+  DEEP_LEARNING: {
+    title: "Deep Learning",
+    url: "/ai/deep-learning"
+  },
+  GOOGLE_ANALYTICS: {
+    title: "Google Analytics",
+    url: "/analytics/google"
   }
 }
 

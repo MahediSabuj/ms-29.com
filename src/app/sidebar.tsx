@@ -16,7 +16,7 @@ import { AEM_CLOUD } from "@/lib/data/article/aem/cloud";
 import { ACS_COMMONS } from "@/lib/data/article/aem/acs-commons";
 import { AWS_EC2 } from "@/lib/data/article/aws/ec2";
 import { AWS_SES } from "@/lib/data/article/aws/ses";
-import { AI_LLM } from "@/lib/data/article/ai/large-language-model";
+import { DEEP_LEARNING } from "@/lib/data/article/ai/deep-learning";
 import { SF_LWC } from "@/lib/data/article/salesforce/lwc";
 import { SF_IDENTITY } from "@/lib/data/article/salesforce/identity";
 import { DYNAMIC_PROGRAMMING } from "@/lib/data/article/cp/dynamic-programming";
@@ -76,8 +76,8 @@ const aws: IListGroup = {
 const artificialIntelligence: IListGroup = {
   title: "Artificial Intelligence",
   listItems: [{
-    topic: TOPICS.AI_LLM,
-    count: AI_LLM.length
+    topic: TOPICS.DEEP_LEARNING,
+    count: DEEP_LEARNING.length
   }]
 }
 
