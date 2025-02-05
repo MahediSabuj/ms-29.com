@@ -83,17 +83,21 @@ const COMPONENT_DIALOG = `<?xml version="1.0" encoding="UTF-8"?>
                   <column jcr:primaryType="nt:unstructured"
                     sling:resourceType="granite/ui/components/coral/foundation/container">
                     <items jcr:primaryType="nt:unstructured">
+                      <link jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+                        name="./link"
+                        fieldLabel="Link"
+                        value="\${cqDesign.link}"
+                        rootPath="/content/wknd-site"/>
                       <action jcr:primaryType="nt:unstructured"
                         granite:hide="\${cqDesign.actionDisabled}"
                         sling:resourceType="granite/ui/components/coral/foundation/container"
                         name="./action">
                         <items jcr:primaryType="nt:unstructured">
-                          <link jcr:primaryType="nt:unstructured"
-                            sling:resourceType="cq/gui/components/coral/common/form/pagefield"
-                            name="./link"
-                            fieldLabel="Link"
-                            value="\${cqDesign.link}"
-                            rootPath="/content/wknd-site"/>                                     
+                          <text jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Text"
+                            name="./text"/>                               
                         </items>
                       </action>
                     </items>
@@ -136,76 +140,63 @@ const breadcrumbs : IBreadCrumb = {
 
 export default function DesignDialog() {
   return (
-      <div>
-        <BreadCrumb {...breadcrumbs}/>
-        <article itemScope itemType="https://schema.org/Article">
-          <Article
-              title={ARTICLE.title}
-              publishDate={ARTICLE.publishDate}
-              modifiedDate={ARTICLE.modifiedDate}/>
-          <div>
-            <section className="pt-6">
-              Design Dialog allows developers and template authors to configure component behavior at the template
-              level. It
-              includes setting default values and controlling the visibility of fields in the component dialog. Acting
-              as a bridge
-              between Template Editor and Component Dialog, it provides a way to customize component behavior
-              dynamically.
-            </section>
-            <section className="pt-3">
-              To create a Design Dialog, you need to define <code
-                className="code-inline background">_cq_design_dialog</code> node in your component&apos;s structure.
-              <Highlight code={DESIGN_DIALOG} language="xml" path="helloworld / _cq_design_dialog / .content.xml"/>
-            </section>
-            <section className="pt-3">
-              To configure the Design Dialog properties, navigate to <strong>Tools</strong> &gt;
-              <strong>Templates</strong> &gt; <strong>Your_Project</strong> &gt; <strong>Template</strong> and
-              click on the <strong>Edit</strong> then select <strong>Policy</strong> from the <strong>Template
-              Editor</strong>.
-            </section>
-            <Image src={TEMPLATE_EDITOR} className="border mt-2"
-                   alt="Template Editor">
-            </Image>
-            <section className="pt-4">
-              In the Policy Editor, configure the values according to the requirements.
-            </section>
-            <Image src={COMPONENT_POLICY} className="border mt-2"
-                   alt="Component Policy">
-            </Image>
-            <section className="pt-2">
-              Once the Design Dialog is configured, you can use its values to control the visibility of fields and set
-              default values in component dialog.
-            </section>
-            <section className="pt-4">
-              In component dialog, you can fetch design dialog value using <code
-                className="code-inline background">cqDesign.property_name</code>. The
-              complete example is provided below:
-              <Highlight code={COMPONENT_DIALOG} language="xml" path="helloworld / _cq_dialog / .content.xml"/>
-            </section>
-            <section className="pt-4">
-              The dialog will now appear as shown below, retrieving the link value from the design dialog.
-            </section>
-            <Image src={_COMPONENT_DIALOG_} className="border mt-2" height="250"
-                   alt="Component Dialog">
-            </Image>
-            <section className="pt-3">
-              However, if the <strong>Disable Call-to-Action</strong> checkbox is selected,
-              the <strong>Link</strong> option will be hidden.
-            </section>
-            <section className="pt-6">
-              In case, you require Design Dialog values in a Sling Model, you can fetch them as shown below:
-            </section>
-            <Highlight code={SLING_MODEL} language="java" path="HelloWorld.java"/>
-            <section className="pt-6">
-              Hope, you now understand how to use the Design Dialog and how it helps customize the Component Dialog.
-              Happy learning!
-            </section>
-          </div>
-        </article>
-        <div className="mt-8 mb-4">
-          <ArticleReviewList items={[]}/>
-          <ArticleReviewForm/>
+    <div>
+      <BreadCrumb {...breadcrumbs}/>
+      <article itemScope itemType="https://schema.org/Article">
+        <Article
+          title={ARTICLE.title}
+            publishDate={ARTICLE.publishDate}
+            modifiedDate={ARTICLE.modifiedDate}/>
+        <div>
+          <section className="pt-6">
+            Design Dialog allows developers and template authors to configure component behavior at the template level. It
+            includes setting default values and controlling the visibility of fields in the component dialog. Acting as a bridge
+            between Template Editor and Component Dialog, it provides a way to customize component behavior dynamically.
+          </section>
+          <section className="pt-3">
+            To create a Design Dialog, you need to define <code className="code-inline background">_cq_design_dialog</code> node in your component&apos;s structure.
+            <Highlight code={DESIGN_DIALOG} language="xml" path="helloworld / _cq_design_dialog / .content.xml"/>
+          </section>
+          <section className="pt-3">
+            To configure the Design Dialog properties, navigate to <strong>Tools</strong> &gt; <strong>Templates</strong> &gt; <strong>Your_Project</strong> &gt; <strong>Template</strong> and
+            click on the <strong>Edit</strong> then select <strong>Policy</strong> from the <strong>Template Editor</strong>.
+          </section>
+          <Image src={TEMPLATE_EDITOR} className="border mt-2"
+             alt="Template Editor">
+          </Image>
+          <section className="pt-4">
+            In the Policy Editor, configure the values according to the requirements.
+          </section>
+          <Image src={COMPONENT_POLICY} className="border mt-2"
+             alt="Component Policy">
+          </Image>
+          <section className="pt-2">
+            Once the Design Dialog is configured, you can use its values to control the visibility of fields and set default values in component dialog.
+          </section>
+          <section className="pt-4">
+            In component dialog, you can fetch design dialog value using <code className="code-inline background">cqDesign.property_name</code>. The
+            complete example is provided below:
+            <Highlight code={COMPONENT_DIALOG} language="xml" path="helloworld / _cq_dialog / .content.xml"/>
+          </section>
+          <section className="pt-4">
+            The dialog will now appear as shown below, retrieving the link value from the design dialog and hiding the action fields.
+          </section>
+          <Image src={_COMPONENT_DIALOG_} className="border mt-2" height="250"
+             alt="Component Dialog">
+          </Image>
+          <section className="pt-6">
+            In case, you require Design Dialog values in a Sling Model, you can fetch them as shown below:
+          </section>
+          <Highlight code={SLING_MODEL} language="java" path="HelloWorld.java"/>
+          <section className="pt-6">
+            Hope, you now understand how to use the Design Dialog and how it helps customize the Component Dialog. Happy learning!
+          </section>
         </div>
+      </article>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
       </div>
+    </div>
   );
 }
