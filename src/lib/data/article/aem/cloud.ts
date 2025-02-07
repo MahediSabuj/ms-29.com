@@ -102,8 +102,8 @@ export const REPOSITORY_MODERNIZER: IArticleItem = {
 export const SETUP_LOCAL_AEM_DEVELOPMENT_ENVIRONMENT : IArticleItem = {
   title: "Setup Local AEM Development Environment",
   url: "/aem/cloud/set-up-local-aem-development-environment",
-  publishDate: "November 22, 2024",
-  modifiedDate: "November 22, 2024",
+  publishDate: "February 15, 2025",
+  modifiedDate: "February 15, 2025",
   description: ``,
   topics: [ TOPICS.AEM_CLOUD ],
   active: false
@@ -124,8 +124,8 @@ export const CONTENT_TRANSFER_TOOL : IArticleItem = {
 export const CUSTOM_RUN_MODES_ON_AEMAACS : IArticleItem = {
   title: "Custom Run Modes on AEMaaCS",
   url: "/aem/cloud/custom-run-modes-on-aemaacs",
-  publishDate: "November 05, 2024",
-  modifiedDate: "November 05, 2024",
+  publishDate: "February 20, 2025",
+  modifiedDate: "February 20, 2025",
   description: `In AEM 6.5, you can use arbitrary run modes to apply OSGi configs to specific instances. However, AEMaaCS 
     supports an exact set of run modes.`,
   topics: [ TOPICS.AEM_CLOUD ],

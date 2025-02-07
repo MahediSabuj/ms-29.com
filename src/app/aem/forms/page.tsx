@@ -7,7 +7,7 @@ import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 
 export const metadata: Metadata = {
-  title: "AWS Forms",
+  title: "AEM Forms",
   alternates: {
     canonical: "/aem/forms"
   }
