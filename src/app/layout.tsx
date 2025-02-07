@@ -142,7 +142,7 @@ export default function RootLayout({
       <div className="container mx-auto py-4 grow">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 md:flex">
           <main className="md:w-3/4 w-full">
-            <div id='div-gpt-ad-1738911994343-0' style={{minWidth: '320px', minHeight: '50px'}}>
+            <div id='div-gpt-ad-1738911994343-0' className="mb-6 flex justify-center">
               <Script id="top-banner">
                 {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1738911994343-0'); });`}
               </Script>
