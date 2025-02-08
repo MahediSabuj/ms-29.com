@@ -8,7 +8,7 @@ import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import { AEM_WORKFLOW } from "@/lib/data/article/aem/workflow";
 
 export const metadata: Metadata = {
-  title: "AWS Workflow",
+  title: "AEM Workflow",
   alternates: {
     canonical: "/aem/workflow"
   }

@@ -5,8 +5,8 @@ export const SETUP_SMTP_CONFIG_USING_AWS_SES: IArticleItem = {
   title: "Setup SMTP Configuration using AWS SES",
   description: ``,
   url: "/aws/ses/setup-smtp-config-using-aws-ses",
-  publishDate: "December 08, 2024",
-  modifiedDate: "December 08, 2024",
+  publishDate: "February 23, 2025",
+  modifiedDate: "February 23, 2025",
   topics: [ TOPICS.AWS_SES ],
   active: false
 }

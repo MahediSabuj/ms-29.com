@@ -8,7 +8,7 @@ import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import { AEM_SPA } from "@/lib/data/article/aem/spa";
 
 export const metadata: Metadata = {
-  title: "AWS SPA",
+  title: "AEM SPA",
   alternates: {
     canonical: "/aem/spa"
   }

@@ -3,10 +3,11 @@ import TOPICS from "@/lib/data/article/topics";
 
 export const CODE_COVERAGE_OSGI_CONFIGURATION: IArticleItem = {
   title: "Code Coverage for OSGI Configuration",
-  description: ``,
+  description: `Custom OSGi configurations are often required based on project needs. In a previous article, we discussed how to implement 
+    custom OSGi configurations; now, we will share how to write code coverage for them.`,
   url: "/aem/code-coverage/osgi-configuration",
-  publishDate: "September 30, 2024",
-  modifiedDate: "September 30, 2024",
+  publishDate: "February 10, 2025",
+  modifiedDate: "February 10, 2025",
   topics: [ TOPICS.AEM_CODE_COVERAGE ],
   active: false
 }

@@ -8,7 +8,7 @@ import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 
 export const metadata: Metadata = {
-  title: "AWS Dispatcher",
+  title: "AEM Dispatcher",
   alternates: {
     canonical: "/aem/dispatcher"
   }
