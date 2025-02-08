@@ -4,12 +4,12 @@ import TOPICS from "@/lib/data/article/topics";
 export const CODE_COVERAGE_OSGI_CONFIGURATION: IArticleItem = {
   title: "Code Coverage for OSGI Configuration",
   description: `Custom OSGi configurations are often required based on project needs. In a previous article, we discussed how to implement 
-    custom OSGi configurations; now, we will share how to write code coverage for them.`,
+    custom OSGi configurations. Now, we will cover how to write unit tests and ensure code coverage for these configurations using JUnit 5, OSGi Mocks, and Mockito.`,
   url: "/aem/code-coverage/osgi-configuration",
   publishDate: "February 10, 2025",
   modifiedDate: "February 10, 2025",
   topics: [ TOPICS.AEM_CODE_COVERAGE ],
-  active: false
+  active: true
 }
 
 export const MOCK_STATIC_METHODS_MOCKITO: IArticleItem = {
