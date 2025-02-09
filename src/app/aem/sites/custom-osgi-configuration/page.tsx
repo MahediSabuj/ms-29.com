@@ -42,7 +42,7 @@ const APP_CONFIG_SERVICE =
 `public interface AppConfigService {
   String getAppName();
   String getAPIEndpoint();
-  String getClientID();
+  String getClientIds();
   String getClientSecret();
 }`
 
@@ -68,7 +68,7 @@ public class AppConfigServiceImpl implements AppConfigService {
   }
 
   @Override
-  public String getClientID() {
+  public String getClientId() {
     return appConfig.client_id();
   }
 
@@ -117,7 +117,7 @@ export default function CustomOsgiConfig() {
             are available at <code className="code-inline background">/system/console/configMgr</code> while custom configurations can be
             created as per business requirements. These configurations are typically managed within the AEM project&apos;s <code className="code-inline">ui.config</code> module in the code repository.
           </section>
-          <section className="pt-3">
+          <section className="pt-3" id="create">
             To create a custom OSGi configuration, you need to define an interface that determines how the fields will appear configuration console.
           </section>
           <Highlight code={APP_CONFIG} language="java" path="AppConfig.java"/>
