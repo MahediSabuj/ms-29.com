@@ -12,7 +12,7 @@ export default function GooglePublisherTag({ adUnit, sizes, container }: AdSlot)
   const isInitialRender = useRef(true);
   const pathname = usePathname();
 
-  adUnit = `/${AD_SLOT_ID}/${adUnit}`;
+  const fullAdUnit = `/${AD_SLOT_ID}/${adUnit}`;
 
   useEffect(() => {
     const initAd = () => {
@@ -23,14 +23,13 @@ export default function GooglePublisherTag({ adUnit, sizes, container }: AdSlot)
 
       googletag.cmd.push(() => {
         if (!slotRef.current) {
-          console.log("define");
-          slotRef.current = googletag.defineSlot(adUnit, sizes, adRef.current!.id).addService(googletag.pubads());
+          console.log("gooletag", googletag);
+          slotRef.current = googletag.defineSlot(fullAdUnit, sizes, container).addService(googletag.pubads());
           googletag.pubads().enableSingleRequest();
           googletag.pubads().collapseEmptyDivs();
           googletag.enableServices();
         }
-        console.log("display");
-        googletag.display(adRef.current!.id);
+        googletag.display(container);
       });
     }
 
@@ -41,27 +40,24 @@ export default function GooglePublisherTag({ adUnit, sizes, container }: AdSlot)
       if (typeof window !== "undefined" && slotRef.current) {
         const googletag = window.googletag;
         googletag.cmd.push(() => {
-          console.log("destroy");
           googletag.destroySlots([slotRef.current]);
         });
       }
     }
-  }, [adUnit, sizes]); // Run only on mount and when adUnitPath or size changes
+  }, [fullAdUnit, sizes, container]); // Run only on mount and when adUnitPath or size changes
 
   useEffect(() => {
     // Skip the initial render
     if (isInitialRender.current) {
       isInitialRender.current = false;
-      console.log("initial");
       return;
     }
-    console.log("change");
+
     // Refresh the ad when pathname changes
     const timeout = setTimeout(() => {
       if (typeof window !== "undefined" && slotRef.current) {
         const googletag = window.googletag;
         googletag.cmd.push(() => {
-          console.log("refresh");
           googletag.pubads().refresh([slotRef.current]);
         });
       }
