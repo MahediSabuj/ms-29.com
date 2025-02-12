@@ -23,27 +23,18 @@ export default function GooglePublisherTag({ adUnit, sizes, container }: AdSlot)
 
       googletag.cmd.push(() => {
         if (!slotRef.current) {
-          slotRef.current = googletag.defineSlot(fullAdUnit, sizes, container).addService(googletag.pubads());
+          slotRef.current = googletag.defineSlot(fullAdUnit, sizes, adRef.current!.id).addService(googletag.pubads());
           googletag.pubads().enableSingleRequest();
           googletag.pubads().collapseEmptyDivs();
           googletag.enableServices();
         }
-        googletag.display(container);
+        googletag.display(adRef.current!.id);
       });
     }
 
     initAd();
 
-    return () => {
-      // Clean up the ad when component unmounts
-      if (typeof window !== "undefined" && slotRef.current) {
-        const googletag = window.googletag;
-        googletag.cmd.push(() => {
-          googletag.destroySlots([slotRef.current]);
-        });
-      }
-    }
-  }, [fullAdUnit, sizes, container]); // Run only on mount and when adUnitPath or size changes
+  }, [fullAdUnit, sizes]); // Run only on mount and when adUnitPath or size changes
 
   useEffect(() => {
     // Skip the initial render

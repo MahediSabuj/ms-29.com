@@ -123,6 +123,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+      </head>
       <body className={adobeCleanFont.className}>
         <div className="flex flex-col h-screen">
           <Header {...headerConfig}/>
@@ -142,7 +145,6 @@ export default function RootLayout({
           </div>
           <Footer/>
           <GoogleTagManager gtmId={process.env.GTM_ID || ""}/>
-          <Script strategy="afterInteractive" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></Script>
         </div>
       </body>
     </html>
