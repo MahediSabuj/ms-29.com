@@ -21,6 +21,7 @@ import 'highlight.js/styles/default.css';
 
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
+import GooglePublisherTag from "@/components/third-parties/google/gpt";
 import { HeaderConfig } from "@/types/header";
 import Sidebar from "./sidebar";
 
@@ -123,18 +124,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script strategy="afterInteractive" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></Script>
-        <Script id="ad-tags" strategy="afterInteractive">
-          {`
-            window.googletag = window.googletag || {cmd: []};
-            googletag.cmd.push(function() {
-              googletag.defineSlot('/22343941244/ms29-banner', [[728, 90], [320, 50], [970, 90]], 'div-gpt-ad-1738911994343-0').addService(googletag.pubads());
-              googletag.pubads().enableSingleRequest();
-              googletag.pubads().collapseEmptyDivs();
-              googletag.enableServices();
-            });
-          `}
-        </Script>
+        <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
       </head>
       <body className={adobeCleanFont.className}>
         <div className="flex flex-col h-screen">
@@ -142,11 +132,10 @@ export default function RootLayout({
           <div className="container mx-auto py-4 grow">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 md:flex">
               <main className="md:w-3/4 w-full">
-                <div id='div-gpt-ad-1738911994343-0' className="mb-6 flex justify-center">
-                  <Script id="top-banner">
-                    {`googletag.cmd.push(function() { googletag.display('div-gpt-ad-1738911994343-0'); });`}
-                  </Script>
-                </div>
+                <GooglePublisherTag
+                  container="div-gpt-ad-1738911994343-0"
+                  adUnit="ms29-banner"
+                  sizes={[[728, 90], [320, 50], [970, 90]]}/>
                 <div className="md:mr-8">{children}</div>
               </main>
               <aside className="md:w-1/4 w-full md:pt-0 pt-4">
@@ -156,6 +145,7 @@ export default function RootLayout({
           </div>
           <Footer/>
           <GoogleTagManager gtmId={process.env.GTM_ID || ""}/>
+          <Script strategy="afterInteractive" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></Script>
         </div>
       </body>
     </html>

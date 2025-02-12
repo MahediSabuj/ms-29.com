@@ -20,6 +20,7 @@ import { DYNAMIC_PROGRAMMING } from "@/lib/data/article/cp/dynamic-programming";
 import { GRAPH } from "@/lib/data/article/cp/graph";
 import { DIVIDE_CONQUER } from "@/lib/data/article/cp/divide-conquer";
 import { POSTGRESQL } from "@/lib/data/article/db/postgresql";
+import { GOOGLE_ANALYTICS } from "@/lib/data/article/analytics/google";
 import { IArticleItem } from "@/types/article";
 import TOPICS from '@/lib/data/article/topics';
 
@@ -71,7 +72,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     }, {
       url: withDomain("/about-us"),
-      lastModified: "2024-04-30",
+      lastModified: "2025-02-03",
       changeFrequency: 'monthly',
       priority: 0.8
     }, {
@@ -122,6 +123,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   loadArticles(TOPICS.DIVIDE_CONQUER.url, DIVIDE_CONQUER);
 
   loadArticles(TOPICS.POSTGRESQL.url, POSTGRESQL);
+
+  loadArticles(TOPICS.GOOGLE_ANALYTICS.url, GOOGLE_ANALYTICS);
 
   return sitemap;
 }
