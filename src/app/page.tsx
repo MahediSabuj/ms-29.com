@@ -23,6 +23,7 @@ import { DYNAMIC_PROGRAMMING } from "@/lib/data/article/cp/dynamic-programming";
 import { GRAPH } from "@/lib/data/article/cp/graph";
 import { DIVIDE_CONQUER } from "@/lib/data/article/cp/divide-conquer";
 import { POSTGRESQL } from "@/lib/data/article/db/postgresql";
+import { GOOGLE_ANALYTICS } from "@/lib/data/article/analytics/google";
 
 export const metadata: Metadata = {
   alternates: {
@@ -51,7 +52,8 @@ const articles : IArticleList = {
     ...DYNAMIC_PROGRAMMING,
     ...GRAPH,
     ...DIVIDE_CONQUER,
-    ...POSTGRESQL
+    ...POSTGRESQL,
+    ...GOOGLE_ANALYTICS
   ],
   pageType: PAGE_TYPE.HOME_PAGE
 }

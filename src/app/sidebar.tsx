@@ -23,6 +23,7 @@ import { DYNAMIC_PROGRAMMING } from "@/lib/data/article/cp/dynamic-programming";
 import { GRAPH } from "@/lib/data/article/cp/graph";
 import { DIVIDE_CONQUER } from "@/lib/data/article/cp/divide-conquer";
 import { POSTGRESQL } from "@/lib/data/article/db/postgresql";
+import { GOOGLE_ANALYTICS } from "@/lib/data/article/analytics/google";
 
 const aem : IListGroup = {
   title: "Adobe Experience Manager",
@@ -114,6 +115,14 @@ const database: IListGroup = {
   }]
 }
 
+const analytics: IListGroup = {
+  title: "Analytics",
+  listItems: [{
+    topic: TOPICS.GOOGLE_ANALYTICS,
+    count: GOOGLE_ANALYTICS.length
+  }]
+}
+
 export default function Sidebar() {
   return (
     <div>
@@ -146,6 +155,9 @@ export default function Sidebar() {
       </section>
       <section className="mt-4">
         <ListGroup {...database}/>
+      </section>
+      <section className="mt-4">
+        <ListGroup {...analytics}/>
       </section>
     </div>
   );
