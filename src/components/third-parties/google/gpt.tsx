@@ -23,7 +23,6 @@ export default function GooglePublisherTag({ adUnit, sizes, container }: AdSlot)
 
       googletag.cmd.push(() => {
         if (!slotRef.current) {
-          console.log("gooletag", googletag);
           slotRef.current = googletag.defineSlot(fullAdUnit, sizes, container).addService(googletag.pubads());
           googletag.pubads().enableSingleRequest();
           googletag.pubads().collapseEmptyDivs();

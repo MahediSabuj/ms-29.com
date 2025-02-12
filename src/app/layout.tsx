@@ -123,9 +123,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
-      </head>
       <body className={adobeCleanFont.className}>
         <div className="flex flex-col h-screen">
           <Header {...headerConfig}/>
