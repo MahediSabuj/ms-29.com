@@ -4,9 +4,11 @@ import { useEffect, useRef } from "react"
 import { usePathname } from "next/navigation"
 import { AdSlot } from "@/types/google";
 
+import styles from "./gpt.module.scss";
+
 export const AD_SLOT_ID = "22343941244";
 
-export default function GooglePublisherTag({ adUnit, sizes, container }: AdSlot) {
+export default function GooglePublisherTag({ adUnit, sizes, container, sizeMapping }: AdSlot) {
   const adRef = useRef<HTMLDivElement>(null);
   const slotRef = useRef<any>(null);
   const isInitialRender = useRef(true);
@@ -23,7 +25,14 @@ export default function GooglePublisherTag({ adUnit, sizes, container }: AdSlot)
 
       googletag.cmd.push(() => {
         if (!slotRef.current) {
-          slotRef.current = googletag.defineSlot(fullAdUnit, sizes, adRef.current!.id).addService(googletag.pubads());
+          const mapping = googletag.sizeMapping();
+          sizeMapping.forEach(([viewport, adSizes]) =>
+            mapping.addSize(viewport, adSizes)
+          );
+
+          slotRef.current = googletag.defineSlot(fullAdUnit, sizes, adRef.current!.id)
+            .defineSizeMapping(mapping.build())
+            .addService(googletag.pubads());
           googletag.pubads().enableSingleRequest();
           googletag.pubads().collapseEmptyDivs();
           googletag.enableServices();
@@ -34,7 +43,7 @@ export default function GooglePublisherTag({ adUnit, sizes, container }: AdSlot)
 
     initAd();
 
-  }, [fullAdUnit, sizes]); // Run only on mount and when adUnitPath or size changes
+  }, [fullAdUnit, sizes, sizeMapping]); // Run only on mount and when adUnitPath or size changes
 
   useEffect(() => {
     // Skip the initial render
@@ -56,5 +65,5 @@ export default function GooglePublisherTag({ adUnit, sizes, container }: AdSlot)
     return () => clearTimeout(timeout);
   }, [pathname]); // Run when pathname changes
 
-    return <div ref={adRef} id={container} className="mb-6 flex justify-center" />
+    return <div ref={adRef} id={container} className={`${styles.adContainer} flex justify-center`} />
 }
