@@ -17,6 +17,8 @@ export default function GooglePublisherTag({ adUnit, sizes, container, sizeMappi
   const fullAdUnit = `/${AD_SLOT_ID}/${adUnit}`;
 
   useEffect(() => {
+    if(process.env.NODE_ENV === "development") return;
+
     const initAd = () => {
       if (typeof window === "undefined" || !adRef.current) return;
 
@@ -46,6 +48,8 @@ export default function GooglePublisherTag({ adUnit, sizes, container, sizeMappi
   }, [fullAdUnit, sizes, sizeMapping]); // Run only on mount and when adUnitPath or size changes
 
   useEffect(() => {
+    if(process.env.NODE_ENV === "development") return;
+
     // Skip the initial render
     if (isInitialRender.current) {
       isInitialRender.current = false;
@@ -65,5 +69,7 @@ export default function GooglePublisherTag({ adUnit, sizes, container, sizeMappi
     return () => clearTimeout(timeout);
   }, [pathname]); // Run when pathname changes
 
-    return <div ref={adRef} id={container} className={`${styles.adContainer} flex justify-center`} />
+  if(process.env.NODE_ENV === "development") return;
+
+  return <div ref={adRef} id={container} className={`${styles.adContainer} flex justify-center`} />
 }
