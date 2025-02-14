@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 
-import aem_architect_certification from './assets/Adobe_Certified_Master_Experience_Cloud_products_Digital_Badge.webp';
+import aem_expert_certification from './assets/Adobe_Certified_Master_Experience_Cloud_products_Digital_Badge.webp';
 import adobe_developer_certification from './assets/Adobe_Certified_Expert_Experience_Cloud_products_Digital_Badge.webp';
 import salesforce_platform_developer_certification from './assets/Salesforce_Certified_Platform_Developer_I.webp';
 import salesforce_javascript_developer_certification from './assets/Salesforce_Certified_JavaScript_Developer_I.webp';
+import microsoft_html5_css3_js_certification from './assets/Programming_in_HTML5_with_JavaScript_and_Css3.png';
 
 export const metadata: Metadata = {
   title: "Mahedi Sabuj",
@@ -38,6 +39,11 @@ const certifications: Certification[] = [{
   issued: "Nov 2020",
   badge: salesforce_platform_developer_certification,
   url: "https://www.salesforce.com/trailblazer/mahedi-sabuj"
+}, {
+  title: "Programming in HTML5 with JavaScript and CSS3",
+  issued: "May 2019",
+  badge: microsoft_html5_css3_js_certification,
+  url: "https://www.credly.com/badges/41de70eb-156a-49b6-a03e-0892d3ed06b4"
 }]
 
 export default function Resume() {
@@ -59,7 +65,7 @@ export default function Resume() {
               <div key={index} className="flex flex-row gap-x-2">
                 <div>
                   <Image src={certification.badge}
-                    width="50" height="50"
+                    style={{width: 50, height: 50}}
                     alt={certification.title}>
                   </Image>
                 </div>

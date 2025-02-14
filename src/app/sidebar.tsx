@@ -137,7 +137,7 @@ export default function Sidebar() {
             Abdullah &ndash; Al &ndash; Mahedi <strong>Sabuj</strong><br/>
           </Link>
           Principal Engineer @ <Link target="_blank" href="https://brainstation-23.com"
-              className="text-blue-600">Brain Station 23</Link>
+            className="text-blue-600">Brain Station 23</Link>
         </div>
       </section>
       <div className="mt-4">
