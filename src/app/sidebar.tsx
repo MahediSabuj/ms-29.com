@@ -3,6 +3,8 @@ import Link from "next/link";
 import { IListGroup } from "@/types/list";
 import ListGroup from "@/components/list-group/list-group";
 import TOPICS from "@/lib/data/article/topics";
+import GooglePublisherTag from "@/components/third-parties/google/gpt";
+
 import { AEM_SITES } from "@/lib/data/article/aem/sites";
 import { AEM_ASSETS } from "@/lib/data/article/aem/assets";
 import { CONTENT_FRAGMENT } from "@/lib/data/article/aem/content-fragment";
@@ -138,6 +140,15 @@ export default function Sidebar() {
               className="text-blue-600">Brain Station 23</Link>
         </div>
       </section>
+      <div className="mt-4">
+        <GooglePublisherTag
+          adUnit="ms29-sidebar"
+          sizes={[[300, 50]]}
+          container="div-gpt-ad-1739527525309-0"
+          sizeMapping={[
+            [[0, 0], [[300, 50]]]
+          ]}/>
+      </div>
       <section className="mt-4">
         <ListGroup {...aem}/>
       </section>
