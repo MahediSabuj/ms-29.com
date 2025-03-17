@@ -146,7 +146,8 @@ export default function Sidebar() {
           sizes={[[300, 50]]}
           container="div-gpt-ad-1739527525309-0"
           sizeMapping={[
-            [[0, 0], [[300, 50]]]
+            [[768, 0], [[728, 90]]],
+            [[0, 0], [[320, 50]]]
           ]}/>
       </div>
       <section className="mt-4">

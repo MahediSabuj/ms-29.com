@@ -22,7 +22,7 @@ const breadcrumbs : IBreadCrumb = {
   current: ARTICLE.title
 }
 
-export default function SitemapGenerator() {
+export default function DataLayer() {
   return (
     <div>
       <BreadCrumb {...breadcrumbs}/>
@@ -34,7 +34,7 @@ export default function SitemapGenerator() {
         <div>
           <section className="pt-6">
             In today&apos;s data-driven world, tracking user interactions is essential for optimizing digital experiences.
-            By implementing a data layer and integrating Google Tag Manager (GTM) with BigQuery, businesses can efficiently
+            By implementing data layer and integrating Google Tag Manager (GTM) with BigQuery, businesses can efficiently
             collect, structure, and analyze granular event data at scale, unlocking actionable insights for advanced analytics.
             This guide walks you through setting up a data layer, sending events to GTM, and syncing data with BigQuery.
           </section>
