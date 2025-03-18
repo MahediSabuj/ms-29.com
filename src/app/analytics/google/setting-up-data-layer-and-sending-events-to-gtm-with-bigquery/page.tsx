@@ -4,6 +4,8 @@ import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import TOPICS from "@/lib/data/article/topics";
+import Highlight from "@/components/highlight/highlight";
+
 import { SETTING_UP_DATALAYER_GTM_SYNC_WITH_BIGQUERY as ARTICLE } from "@/lib/data/article/analytics/google";
 
 export const metadata: Metadata = {
@@ -13,6 +15,14 @@ export const metadata: Metadata = {
     canonical: ARTICLE.url
   }
 };
+
+const DATA_LAYER =
+`window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  eventType: 'pageview',
+  eventLabel: 'Home Page',
+  eventAction: 'pageload'
+});`;
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
@@ -37,6 +47,15 @@ export default function DataLayer() {
             By implementing data layer and integrating Google Tag Manager (GTM) with BigQuery, businesses can efficiently
             collect, structure, and analyze granular event data at scale, unlocking actionable insights for advanced analytics.
             This guide walks you through setting up a data layer, sending events to GTM, and syncing data with BigQuery.
+          </section>
+          <section className="pt-3">
+            The <strong>datalayer</strong> is a JavaScript object that stores and transfers information from your website to GTM.
+            It acts as a central repository where you can push custom data based on user interactions. By defining a data layer,
+            it becomes easier to manage and track events across your website, ensuring consistent data collection and accurate reporting.
+          </section>
+          <section className="pt-3">
+            A typical datalayer consists of key-value pairs like below:
+            <Highlight code={DATA_LAYER} language="javascript" path=""/>
           </section>
         </div>  
       </article>
