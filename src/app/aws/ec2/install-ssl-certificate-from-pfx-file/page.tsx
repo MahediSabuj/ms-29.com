@@ -15,6 +15,7 @@ import sni_add_certificate from './assets/aws-elb-sni-add-certificate.webp';
 import sni_available_certificates from './assets/aws-elb-sni-available-certificates.webp';
 import sni_pending_certificates from './assets/aws-elb-sni-pending-certificates.webp';
 import sni_certificates from './assets/aws-elb-sni-certificates.webp';
+import TOPICS from "@/lib/data/article/topics";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -42,8 +43,8 @@ const nginx_conf =
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
-    title: "AWS EC2",
-    url: "/aws/ec2"
+    title: TOPICS.AWS_EC2.title,
+    url: TOPICS.AWS_EC2.url
   }],
   current: ARTICLE.title
 }

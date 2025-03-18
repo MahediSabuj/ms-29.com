@@ -7,26 +7,26 @@ import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import TOPICS from "@/lib/data/article/topics";
 
-import { AWS_EC2 } from "@/lib/data/article/aws/ec2";
+import { AWS_ECS } from "@/lib/data/article/aws/ecs";
 
 export const metadata: Metadata = {
-  title: TOPICS.AWS_EC2.title,
+  title: TOPICS.AWS_ECS.title,
   alternates: {
-    canonical: TOPICS.AWS_EC2.url,
+    canonical: TOPICS.AWS_ECS.url
   }
 };
 
 const articles : IArticleList = {
-  articleItems: AWS_EC2,
+  articleItems: AWS_ECS,
   pageType: PAGE_TYPE.APP_PAGE
 }
 
 const breadcrumbs : IBreadCrumb = {
   items: [],
-  current: TOPICS.AWS_EC2.title
+  current: TOPICS.AWS_ECS.title
 }
 
-export default function Ec2() {
+export default function ECS() {
   return (
     <div>
       <BreadCrumb {...breadcrumbs}/>

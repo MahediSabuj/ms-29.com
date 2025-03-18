@@ -18,6 +18,7 @@ import { AEM_CLOUD } from "@/lib/data/article/aem/cloud";
 import { ACS_COMMONS } from "@/lib/data/article/aem/acs-commons";
 import { AWS_EC2 } from "@/lib/data/article/aws/ec2";
 import { AWS_SES } from "@/lib/data/article/aws/ses";
+import { AWS_ECS } from "@/lib/data/article/aws/ecs";
 import { DEEP_LEARNING } from "@/lib/data/article/ai/deep-learning";
 import { SF_LWC } from "@/lib/data/article/salesforce/lwc";
 import { SF_IDENTITY } from "@/lib/data/article/salesforce/identity";
@@ -73,6 +74,9 @@ const aws: IListGroup = {
   }, {
     topic: TOPICS.AWS_SES,
     count: AWS_SES.length
+  }, {
+    topic: TOPICS.AWS_ECS,
+    count: AWS_ECS.length
   }]
 }
 
@@ -146,7 +150,7 @@ export default function Sidebar() {
           sizes={[[300, 50]]}
           container="div-gpt-ad-1739527525309-0"
           sizeMapping={[
-            [[768, 0], [[728, 90]]],
+            [[768, 0], [[320, 50]]],
             [[0, 0], [[320, 50]]]
           ]}/>
       </div>

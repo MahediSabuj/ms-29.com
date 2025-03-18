@@ -5,7 +5,7 @@ import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import TOPICS from "@/lib/data/article/topics";
 
-import { SETUP_SMTP_CONFIG_USING_AWS_SES as ARTICLE } from "@/lib/data/article/aws/ses";
+import { SETUP_CI_CD_PIPELINE_TO_DEPLOY_SPRING_BOOT_APP_TO_AWS_ECS as ARTICLE } from "@/lib/data/article/aws/ecs";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
-    title: TOPICS.AWS_SES.title,
-    url: TOPICS.AWS_SES.url
+    title: TOPICS.AWS_ECS.title,
+    url: TOPICS.AWS_ECS.url
   }],
   current: ARTICLE.title
 }
@@ -34,7 +34,9 @@ export default function SetupCICDPipeline() {
           modifiedDate={ARTICLE.modifiedDate}/>
         <div>
           <section className="pt-6">
-
+            In today&apos;s fast-paced software development environment, Continuous Integration and Continuous Deployment (CI/CD) 
+            pipelines have become essential tools. These pipelines streamline the development process, automate testing, and expedite 
+            application deployment, making it faster, more reliable, and less error-prone.
           </section>
         </div>  
       </article>

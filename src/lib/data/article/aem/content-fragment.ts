@@ -22,8 +22,8 @@ export const CROSS_CHANNEL_CONTENT_DELIVERY: IArticleItem = {
     independent of layout, have the capability to deliver content to AEM Sites using Core Component or distribute it to 
     downstream channels in a headless manner through GraphQL.`,
   url: "/aem/content-fragment/cross-channel-content-delivery-using-content-fragments",
-  publishDate: "October 05, 2024",
-  modifiedDate: "October 05, 2024",
+  publishDate: "October 05, 2025",
+  modifiedDate: "October 05, 2025",
   topics: [ TOPICS.CONTENT_FRAGMENT ],
   active: false
 }

@@ -13,6 +13,7 @@ import { AEM_CLOUD } from "@/lib/data/article/aem/cloud";
 import { ACS_COMMONS } from "@/lib/data/article/aem/acs-commons";
 import { AWS_EC2 } from "@/lib/data/article/aws/ec2";
 import { AWS_SES } from "@/lib/data/article/aws/ses";
+import { AWS_ECS } from "@/lib/data/article/aws/ecs";
 import { DEEP_LEARNING } from "@/lib/data/article/ai/deep-learning";
 import { SF_LWC } from "@/lib/data/article/salesforce/lwc";
 import { SF_IDENTITY } from "@/lib/data/article/salesforce/identity";
@@ -61,13 +62,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const sitemap: MetadataRoute.Sitemap = [
     {
       url: domain,
-      lastModified: "2024-04-30",
+      lastModified: "2025-03-18",
       changeFrequency: 'weekly',
       priority: 1,
     },
     {
       url: withDomain("/profile/mahedi-sabuj"),
-      lastModified: "2024-04-04",
+      lastModified: "2025-03-20",
       changeFrequency: 'monthly',
       priority: 0.8,
     }, {
@@ -112,6 +113,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   loadArticles(TOPICS.AWS_EC2.url, AWS_EC2);
   loadArticles(TOPICS.AWS_SES.url, AWS_SES);
+  loadArticles(TOPICS.AWS_ECS.url, AWS_ECS);
 
   loadArticles(TOPICS.DEEP_LEARNING.url, DEEP_LEARNING);
 

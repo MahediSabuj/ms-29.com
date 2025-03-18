@@ -45,13 +45,21 @@ const TOPICS: Topics = {
     title: "ACS AEM Commons",
     url: "/aem/acs-commons"
   },
+  AEM_UNIVERSAL_EDITOR: {
+    title: "AEM Universal Editor",
+    url: "/aem/universal-editor"
+  },
   AWS_EC2: {
-    title: "AWS EC2",
+    title: "Elastic Compute Cloud",
     url: "/aws/ec2"
   },
   AWS_SES: {
-    title: "AWS SES",
+    title: "Simple Email Service",
     url: "/aws/ses"
+  },
+  AWS_ECS: {
+    title: "Elastic Container Service",
+    url: "/aws/ecs"
   },
   SF_LWC: {
     title: "Lightning Web Component",

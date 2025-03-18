@@ -16,6 +16,7 @@ import { AEM_CLOUD } from "@/lib/data/article/aem/cloud";
 import { ACS_COMMONS } from "@/lib/data/article/aem/acs-commons";
 import { AWS_EC2 } from "@/lib/data/article/aws/ec2";
 import { AWS_SES } from "@/lib/data/article/aws/ses";
+import { AWS_ECS } from "@/lib/data/article/aws/ecs";
 import { DEEP_LEARNING } from "@/lib/data/article/ai/deep-learning";
 import { SF_LWC } from "@/lib/data/article/salesforce/lwc";
 import { SF_IDENTITY } from "@/lib/data/article/salesforce/identity";
@@ -46,6 +47,7 @@ const articles : IArticleList = {
     ...ACS_COMMONS,
     ...AWS_EC2,
     ...AWS_SES,
+    ...AWS_ECS,
     ...DEEP_LEARNING,
     ...SF_LWC,
     ...SF_IDENTITY,

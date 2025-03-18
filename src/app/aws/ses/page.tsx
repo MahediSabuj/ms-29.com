@@ -6,11 +6,12 @@ import { IArticleList } from "@/types/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import { AWS_SES } from "@/lib/data/article/aws/ses";
+import TOPICS from "@/lib/data/article/topics";
 
 export const metadata: Metadata = {
-  title: "AWS SES",
+  title: TOPICS.AWS_SES.title,
   alternates: {
-    canonical: "/aws/ses"
+    canonical: TOPICS.AWS_SES.url,
   }
 };
 
@@ -21,7 +22,7 @@ const articles : IArticleList = {
 
 const breadcrumbs : IBreadCrumb = {
   items: [],
-  current: "AWS SES"
+  current: TOPICS.AWS_SES.title
 }
 
 export default function SES() {
