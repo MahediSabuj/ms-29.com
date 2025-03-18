@@ -5,6 +5,8 @@ import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import TOPICS from "@/lib/data/article/topics";
 import Highlight from "@/components/highlight/highlight";
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
 
 import { SETTING_UP_DATALAYER_GTM_SYNC_WITH_BIGQUERY as ARTICLE } from "@/lib/data/article/analytics/google";
 
@@ -56,9 +58,16 @@ export default function DataLayer() {
           <section className="pt-3">
             A typical datalayer consists of key-value pairs like below:
             <Highlight code={DATA_LAYER} language="javascript" path=""/>
+            <div className="pt-1">
+              In this example, when a user loads the home page, an event (<code className="code-inline background">pageview</code>) will be pushed to the data layer.
+            </div>
           </section>
-        </div>  
+        </div>
       </article>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }
