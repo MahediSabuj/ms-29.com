@@ -13,6 +13,7 @@ import { SETTING_UP_DATALAYER_GTM_SYNC_WITH_BIGQUERY as ARTICLE } from "@/lib/da
 
 import GTM_CUSTOM_VARIABLE from './assets/gtm-custom-variable.png';
 import GTM_TRIGGER from './assets/gtm-trigger.png';
+import GTM_TAG from './assets/gtm-tag.png';
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -96,6 +97,46 @@ export default function DataLayer() {
             <Image src={GTM_TRIGGER} className="border mt-2"
                 alt="GTM Trigger Configuration">
             </Image>
+          </section>
+          <section className="pt-4">
+            To create a tag, follow the steps below:
+            <ol className="list-decimal ml-6 pt-1 pl-2.5">
+              <li>Navigate to <strong>Tags</strong> tab and click on <strong>New</strong>.</li>
+              <li>Choose <strong>Tag Configuration</strong> and select <strong>Google Analytics: GA4 Event</strong>.
+              </li>
+              <li>
+                Configure Measurement ID by selecting the appropriate Google Analytics property.
+              </li>
+              <li>
+                Define Event Name as <code className="code-inline background">pageView</code>. Ensure this matches the
+                event name in trigger.
+              </li>
+              <li>
+                Enter Event Parameters as below:
+                <ul className="list-disc ml-6 pt-1 pl-2.5">
+                  <li>
+                    <strong>eventType:</strong> <code className="code-inline background">{"{{Event Type}}"}</code>
+                  </li>
+                  <li>
+                    <strong>eventLabel:</strong> <code className="code-inline background">{"{{Event Label}}"}</code>
+                  </li>
+                  <li>
+                    <strong>eventAction:</strong> <code className="code-inline background">{"{{Event Action}}"}</code>
+                  </li>
+                </ul>
+              </li>
+              <li>Choose the <strong>Triggering</strong> option and select the trigger you created earlier.</li>
+              <li>Enter the <strong>Tag Name</strong> as <code className="code-inline background">Page View</code>.</li>
+              <li>Click on <strong>Save</strong> to create the tag.</li>
+            </ol>
+            <Image src={GTM_TAG} className="border mt-2"
+                alt="GTM Tag Configuration">
+            </Image>
+            <div className="pt-4">
+              With the data layer, variables, triggers, and tags configured in GTM, you can now start sending events to GTM.
+              To ensure the setup is working correctly, use <strong>GTM Preview Mode</strong> to debug and validate the data layer events.
+              Once the preview verification is successful, <strong>Submit</strong> and <strong>Publish</strong> the container to make the changes live on your website.
+            </div>
           </section>
         </div>
       </article>
