@@ -14,6 +14,7 @@ import { AEM_WORKFLOW } from "@/lib/data/article/aem/workflow";
 import { EXPERIENCE_FRAGMENT } from "@/lib/data/article/aem/experience-fragment";
 import { AEM_CLOUD } from "@/lib/data/article/aem/cloud";
 import { ACS_COMMONS } from "@/lib/data/article/aem/acs-commons";
+import { AEM_UNIVERSAL_EDITOR } from "@/lib/data/article/aem/universal-editor";
 import { AWS_EC2 } from "@/lib/data/article/aws/ec2";
 import { AWS_SES } from "@/lib/data/article/aws/ses";
 import { AWS_ECS } from "@/lib/data/article/aws/ecs";
@@ -45,6 +46,7 @@ const articles : IArticleList = {
     ...EXPERIENCE_FRAGMENT,
     ...AEM_CLOUD,
     ...ACS_COMMONS,
+    ...AEM_UNIVERSAL_EDITOR,
     ...AWS_EC2,
     ...AWS_SES,
     ...AWS_ECS,
