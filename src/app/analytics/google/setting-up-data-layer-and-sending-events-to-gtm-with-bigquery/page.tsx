@@ -85,8 +85,8 @@ export default function DataLayer() {
             </div>
           </section>
           <section className="pt-4">
-            Once the data layer variables are set up, you need to create trigger and tag in GTM to fire events based on user interactions.
-            To create a trigger, follow these steps:
+            Once the data layer variables are set up, you need to create trigger and tag in GTM to fire events based on
+            user interactions. To create a trigger, follow these steps:
             <ol className="list-decimal ml-6 pt-1 pl-2.5">
               <li>Navigate to <strong>Triggers</strong> tab and click on <strong>New</strong>.</li>
               <li>Choose <strong>Trigger Configuration</strong> and select <strong>Custom Event</strong>.</li>
@@ -102,15 +102,9 @@ export default function DataLayer() {
             To create a tag, follow the steps below:
             <ol className="list-decimal ml-6 pt-1 pl-2.5">
               <li>Navigate to <strong>Tags</strong> tab and click on <strong>New</strong>.</li>
-              <li>Choose <strong>Tag Configuration</strong> and select <strong>Google Analytics: GA4 Event</strong>.
-              </li>
-              <li>
-                Configure Measurement ID by selecting the appropriate Google Analytics property.
-              </li>
-              <li>
-                Define Event Name as <code className="code-inline background">pageView</code>. Ensure this matches the
-                event name in trigger.
-              </li>
+              <li>Choose <strong>Tag Configuration</strong> and select <strong>Google Analytics: GA4 Event</strong>.</li>
+              <li>Configure Measurement ID by selecting the appropriate Google Analytics property.</li>
+              <li>Define Event Name as <code className="code-inline background">pageView</code>. Ensure this matches the event name in trigger.</li>
               <li>
                 Enter Event Parameters as below:
                 <ul className="list-disc ml-6 pt-1 pl-2.5">
@@ -136,6 +130,30 @@ export default function DataLayer() {
               With the data layer, variables, triggers, and tags configured in GTM, you can now start sending events to GTM.
               To ensure the setup is working correctly, use <strong>GTM Preview Mode</strong> to debug and validate the data layer events.
               Once the preview verification is successful, <strong>Submit</strong> and <strong>Publish</strong> the container to make the changes live on your website.
+            </div>
+            <div className="pt-2">
+              You will also be able to view the data layer events in the Google Analytics which you configured in the tag.
+            </div>
+          </section>
+          <h2 className="text-xl mt-6">
+            <strong>Sending Events to BigQuery</strong>
+          </h2>
+          <section>
+            By integrating with BigQuery, you can leverage the power of Google&apos;s cloud-based data warehouse to
+            store and analyze event data from your website. This integration enables you to sync GTM data with BigQuery in real-time,
+            providing a scalable solution for advanced analytics and reporting.
+          </section>
+          <section className="mt-4">
+            To enable linking BigQuery, follow the steps below:
+            <ol className="list-decimal ml-6 pt-1 pl-2.5">
+              <li>Log in to your Google Analytics account and navigate to the desired property.</li>
+              <li>Click on <strong>Admin</strong> and navigate to <strong>Property Settings</strong> &gt; <strong>Product Links</strong> &gt; <strong>BigQuery Links</strong>.</li>
+              <li>Click on <strong>Link</strong> and select the BigQuery project you want to link with.</li>
+              <li>Choose Event Data Export Type as either Daily to Streaming. Streaming option sends data to BigQuery in real time but requires a paid Google Analytics account.</li>
+              <li>Review the details and click on <strong>Submit</strong> to link BigQuery with Google Analytics.</li>
+            </ol>
+            <div className="pt-4">
+              Once the setup is complete, you can start querying and analyzing the event data in BigQuery. By running SQL queries, you can generate custom reports, perform advanced analysis, and gain deeper insights into user behavior on your website.
             </div>
           </section>
         </div>
