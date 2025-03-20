@@ -13,6 +13,7 @@ import json from 'highlight.js/lib/languages/json';
 import makefile from 'highlight.js/lib/languages/makefile';
 import nginx from 'highlight.js/lib/languages/nginx';
 import python from 'highlight.js/lib/languages/python';
+import sql from 'highlight.js/lib/languages/sql';
 import xml from 'highlight.js/lib/languages/xml';
 import yaml from 'highlight.js/lib/languages/yaml';
 
@@ -34,6 +35,7 @@ hljs.registerLanguage('makefile', makefile);
 hljs.registerLanguage('nginx', nginx);
 hljs.registerLanguage('python', python);
 hljs.registerLanguage('shell', shell);
+hljs.registerLanguage('sql', sql);
 hljs.registerLanguage('xml', xml);
 hljs.registerLanguage('yaml', yaml);
 

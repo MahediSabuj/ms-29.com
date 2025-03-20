@@ -54,9 +54,11 @@ export const TAILING_LOGS_ON_AEM_AS_CLOUD_SERVICE : IArticleItem = {
 export const PRIVATE_GITHUB_REPOSITORIES_IN_CLOUD_MANAGER : IArticleItem = {
   title: "Integrating Private GitHub Repositories in AEM Cloud Manager",
   url: "/aem/cloud/private-github-repositories-in-cloud-manager",
-  publishDate: "October 23, 2024",
-  modifiedDate: "October 23, 2024",
-  description: ``,
+  publishDate: "March 23, 2025",
+  modifiedDate: "March 23, 2025",
+  description: `Integrating Private GitHub repositories into AEM Cloud Manager streamlines development workflow by allowing direct code 
+    validation within GitHub, eliminating the need for frequent synchronization with Adobe's repository. This article provides a step-by-step 
+    guide to integrating private GitHub repositories into AEM Cloud Manager.`,
   topics: [ TOPICS.AEM_CLOUD ],
   active: false
 }
@@ -137,6 +139,7 @@ export const SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD : IArticleItem = {
   url: "/aem/cloud/setting-up-custom-domain-aem-cloud",
   publishDate: "September 18, 2024",
   modifiedDate: "September 18, 2024",
+  views: 105,
   description: `It is good practice to have a Domain for your site that is memorable for customer and reflects your brand's identity.
     Adding a custom domain name in AEMaaCS requires interaction between DNS service and Cloud Manager. A user must be a member of Business 
     Owner or Deployment Manager role to complete this task.`,

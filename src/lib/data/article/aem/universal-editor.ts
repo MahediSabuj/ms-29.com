@@ -6,8 +6,8 @@ export const UNIVERSAL_EDITOR_IN_LOCAL_ENVIRONMENT: IArticleItem = {
   description: `Universal Editor is a versatile visual editor that is part of AEM Sites. It enables authors to perform WYSIWYG 
     editing of any headless or headful experience.`,
   url: `${TOPICS.AEM_UNIVERSAL_EDITOR.url}/universal-editor-in-local-environment`,
-  publishDate: "March 25, 2025",
-  modifiedDate: "March 25, 2025",
+  publishDate: "March 28, 2025",
+  modifiedDate: "March 28, 2025",
   topics: [ TOPICS.AEM_UNIVERSAL_EDITOR ],
   active: false
 }

@@ -42,7 +42,8 @@ export default function DomainConfiguration() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <section className="pt-6">
           It is good practice to have a Domain for your site that is memorable for customer and reflects your brand&apos;s identity.
           Adding a custom domain name in AEMaaCS requires interaction between DNS service and Cloud Manager. A user must be a member
