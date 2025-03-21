@@ -7,6 +7,9 @@ import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Highlight from "@/components/highlight/highlight";
 import FAQ from "@/components/faq/faq";
 import TOPICS from "@/lib/data/article/topics";
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
+
 import { REPOSITORY_MODERNIZER as ARTICLE } from "@/lib/data/article/aem/cloud";
 
 import AEM_CLOUD_COMPATIBLE_ARCHETYPE from './assets/aem-cloud-compatible-archetype.png';
@@ -94,81 +97,100 @@ const breadcrumbs : IBreadCrumb = {
 
 export default function RepositoryModernizer() {
   return (
-    <div>
-      <BreadCrumb {...breadcrumbs}/>
-      <article itemScope itemType="https://schema.org/Article">
-        <Article
-          title={ARTICLE.title}
-          publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}
-          views={ARTICLE.views}/>
-        <div>
-          <section className="pt-6">
-            AEM Project Archetype is a Maven template creates a minimal, best-practices-based AEM project. Over the years, AEM Project Archetype has
-            been revolutionized with significant advancements, introducing many new features and possibilities into AEM projects. The latest Archetype
-            emphasizing the separation of content and code into discrete subpackages to maintain the distinction between mutable and immutable content.
-            To align existing projects with AEM’s Cloud Service structure, the Repository Modernizer tool can be used to refactor and reorganize project
-            packages, separating content and code into the appropriate packages.
-          </section>
-          <Image src={AEM_CLOUD_COMPATIBLE_ARCHETYPE}
-             alt="AEM Cloud Compatible ArcheType">
-          </Image>
-          <section>
-            To use the Repository Modernizer, ensure that Node.js and Python are available on your computer. Follow these steps to set up:
-            <ul className="list-disc ml-6 pt-1 pl-2.5">
-              <li>
-                <strong>Install Adobe I/O CLI: </strong> <code className="code-inline">npm install -g @adobe/aio-cli</code>
-              </li>
-              <li>
-                <strong>Install AEM Cloud Service Migration Plugin: </strong> <code className="code-inline">aio plugins:install @adobe/aio-cli-plugin-aem-cloud-service-migration</code>
-              </li>
-            </ul>
-          </section>
-          <section className="pt-3 pb-2">
-            In order to restructure an existing project&apos;s packages for compatibility with AEM as a Cloud Service, execute the <code className="code-inline background ">aio aem-migration:repository-modernizer</code> command. You&apos;ll need
-            to create an <strong>aem-migration-config.yaml</strong> file, which can be stored either in your local file system or within the CLI configuration directory.
-            <ul className="list-disc ml-6 pt-1 pl-2.5">
-              <li>
-                <strong>Local Project Location: </strong> <code className="code-inline">./.aio-cli</code>
-              </li>
-              <li>
-                <strong>CLI Config Directory: </strong> <code className="code-inline">~/.config/@adobe/aio-cli</code>
-              </li>
-            </ul>
-          </section>
-          <Highlight code={aem_migration_config} language="yaml" path="aem-migration-config.yaml"/>
-          <section className="pt-3">
-            After running the repository-modernizer command, review the <code className="code-inline">target</code> folder for refactored code, updated configurations, a summary report, and the tool&apos;s execution logs.
-          </section>
-          <section className="pt-3">
-            The tool has some known limitations and certain tasks that will need to be handled manually.
-            <ul className="list-disc ml-6 pt-1 pl-2.5">
-              <li>
-                Missing version info in core bundles will be reported; the version will also need to be added in the dependency section in the <code className="code-inline">all/pom.xml</code>.
-              </li>
-              <li>
-                Ensure that you add the Gson dependency before the AEM SDK API; otherwise, you might encounter <code className="code-inline">java.lang.NoSuchMethodError</code> during the testing phase.
-              </li>
-              <li>
-                The Core dependency is missing in the <code className="code-inline">ui.apps/pom.xml</code>; it needs to be added to the dependencies section.
-              </li>
-            </ul>
-          </section>
+      <div>
+        <BreadCrumb {...breadcrumbs}/>
+        <article itemScope itemType="https://schema.org/Article">
+          <Article
+              title={ARTICLE.title}
+              publishDate={ARTICLE.publishDate}
+              modifiedDate={ARTICLE.modifiedDate}
+              views={ARTICLE.views}/>
+          <div>
+            <section className="pt-6">
+              AEM Project Archetype is a Maven template creates a minimal, best-practices-based AEM project. Over the
+              years, AEM Project Archetype has
+              been revolutionized with significant advancements, introducing many new features and possibilities into
+              AEM projects. The latest Archetype
+              emphasizing the separation of content and code into discrete subpackages to maintain the distinction
+              between mutable and immutable content.
+              To align existing projects with AEM’s Cloud Service structure, the Repository Modernizer tool can be used
+              to refactor and reorganize project
+              packages, separating content and code into the appropriate packages.
+            </section>
+            <Image src={AEM_CLOUD_COMPATIBLE_ARCHETYPE}
+                   alt="AEM Cloud Compatible ArcheType">
+            </Image>
+            <section>
+              To use the Repository Modernizer, ensure that Node.js and Python are available on your computer. Follow
+              these steps to set up:
+              <ul className="list-disc ml-6 pt-1 pl-2.5">
+                <li>
+                  <strong>Install Adobe I/O CLI: </strong> <code className="code-inline">npm install -g
+                  @adobe/aio-cli</code>
+                </li>
+                <li>
+                  <strong>Install AEM Cloud Service Migration Plugin: </strong> <code className="code-inline">aio
+                  plugins:install @adobe/aio-cli-plugin-aem-cloud-service-migration</code>
+                </li>
+              </ul>
+            </section>
+            <section className="pt-3 pb-2">
+              In order to restructure an existing project&apos;s packages for compatibility with AEM as a Cloud Service,
+              execute the <code className="code-inline background ">aio
+              aem-migration:repository-modernizer</code> command. You&apos;ll need
+              to create an <strong>aem-migration-config.yaml</strong> file, which can be stored either in your local
+              file system or within the CLI configuration directory.
+              <ul className="list-disc ml-6 pt-1 pl-2.5">
+                <li>
+                  <strong>Local Project Location: </strong> <code className="code-inline">./.aio-cli</code>
+                </li>
+                <li>
+                  <strong>CLI Config Directory: </strong> <code className="code-inline">~/.config/@adobe/aio-cli</code>
+                </li>
+              </ul>
+            </section>
+            <Highlight code={aem_migration_config} language="yaml" path="aem-migration-config.yaml"/>
+            <section className="pt-3">
+              After running the repository-modernizer command, review the <code
+                className="code-inline">target</code> folder for refactored code, updated configurations, a summary
+              report, and the tool&apos;s execution logs.
+            </section>
+            <section className="pt-3">
+              The tool has some known limitations and certain tasks that will need to be handled manually.
+              <ul className="list-disc ml-6 pt-1 pl-2.5">
+                <li>
+                  Missing version info in core bundles will be reported; the version will also need to be added in the
+                  dependency section in the <code className="code-inline">all/pom.xml</code>.
+                </li>
+                <li>
+                  Ensure that you add the Gson dependency before the AEM SDK API; otherwise, you might encounter <code
+                    className="code-inline">java.lang.NoSuchMethodError</code> during the testing phase.
+                </li>
+                <li>
+                  The Core dependency is missing in the <code className="code-inline">ui.apps/pom.xml</code>; it needs
+                  to be added to the dependencies section.
+                </li>
+              </ul>
+            </section>
+          </div>
+        </article>
+        <FAQ items={[{
+          question: `<code>data-sly-test</code>: avoid redundant constant value comparisons`,
+          answer: `Use <code>data-sly-set</code> when it&apos;s only needed to define a variable for later use.`
+        }, {
+          question: `Failed to execute goal <code>com.adobe.aem:aemanalyser-maven-plugin0.0.12:analyse</code> (default-analyse) on project: Unable to build resource for null: Importing java.* packages not allowed: java.io`,
+          answer: `Update <code>aemanalyser.version</code>  to the latest version, e.g., v1.6.4`
+        }, {
+          question: `Bundle <code>aem-demo.core:4.7.9-SNAPSHOT</code> is importing package(s) in start level 20 but no bundle is exporting these for that start level`,
+          answer: `Ensure that these bundles are embedded in the container (all) project. If they aren&apos;t, the Cloud instance won&apos;t have access to them during runtime, leading to the errors you're encountering.`
+        }, {
+          question: `The POM for com.aem.demo:aem-demo.ui.apps.structure:zip:4.7.9-SNAPSHOT is missing, no dependency information available`,
+          answer: 'Add <code>&lt;module&gt;ui.apps.structure&lt;/module&gt;</code> to the <code>pom.xml</code>'
+        }]}/>
+        <div className="mt-8 mb-4">
+          <ArticleReviewList items={[]}/>
+          <ArticleReviewForm/>
         </div>
-      </article>
-      <FAQ items={[{
-        question: `<code>data-sly-test</code>: avoid redundant constant value comparisons`,
-        answer: `Use <code>data-sly-set</code> when it&apos;s only needed to define a variable for later use.`
-      }, {
-        question: `Failed to execute goal <code>com.adobe.aem:aemanalyser-maven-plugin0.0.12:analyse</code> (default-analyse) on project: Unable to build resource for null: Importing java.* packages not allowed: java.io`,
-        answer: `Update <code>aemanalyser.version</code>  to the latest version, e.g., v1.6.4`
-      }, {
-        question: `Bundle <code>aem-demo.core:4.7.9-SNAPSHOT</code> is importing package(s) in start level 20 but no bundle is exporting these for that start level`,
-        answer: `Ensure that these bundles are embedded in the container (all) project. If they aren&apos;t, the Cloud instance won&apos;t have access to them during runtime, leading to the errors you're encountering.`
-      }, {
-        question: `The POM for com.aem.demo:aem-demo.ui.apps.structure:zip:4.7.9-SNAPSHOT is missing, no dependency information available`,
-        answer: 'Add <code>&lt;module&gt;ui.apps.structure&lt;/module&gt;</code> to the <code>pom.xml</code>'
-      }]}/>
-    </div>
+      </div>
   );
 }

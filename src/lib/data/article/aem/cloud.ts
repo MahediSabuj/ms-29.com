@@ -54,13 +54,13 @@ export const TAILING_LOGS_ON_AEM_AS_CLOUD_SERVICE : IArticleItem = {
 export const PRIVATE_GITHUB_REPOSITORIES_IN_CLOUD_MANAGER : IArticleItem = {
   title: "Integrating Private GitHub Repositories in AEM Cloud Manager",
   url: "/aem/cloud/private-github-repositories-in-cloud-manager",
-  publishDate: "March 23, 2025",
-  modifiedDate: "March 23, 2025",
+  publishDate: "March 21, 2025",
+  modifiedDate: "March 21, 2025",
   description: `Integrating Private GitHub repositories into AEM Cloud Manager streamlines development workflow by allowing direct code 
     validation within GitHub, eliminating the need for frequent synchronization with Adobe's repository. This article provides a step-by-step 
     guide to integrating private GitHub repositories into AEM Cloud Manager.`,
   topics: [ TOPICS.AEM_CLOUD ],
-  active: false
+  active: true
 }
 
 export const WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS : IArticleItem = {
