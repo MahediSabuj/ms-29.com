@@ -231,6 +231,7 @@ export const QUERY_BUILDER_CHEATSHEET: IArticleItem = {
   url: "/aem/sites/query-builder-cheatsheet",
   publishDate: "February 21, 2024",
   modifiedDate: "March 17, 2024",
+  views: 101,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
@@ -251,7 +252,7 @@ export const SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION : IArticleItem = {
   title: "Show/Hide AEM Dialog Fields on Dropdown Selection",
   url: "/aem/sites/show-hide-aem-dialog-fields-on-dropdown-selection",
   publishDate: "April 10, 2024",
-  modifiedDate: "April 10, 2024",
+  modifiedDate: "March 23, 2025",
   views: 627,
   description: `Enabling Show/Hide functionality for AEM dialog fields improves user experience by allowing content authors to 
     focus on relevant fields, thereby making the authoring process more efficient and less error-prone.`,

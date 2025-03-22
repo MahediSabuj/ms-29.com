@@ -48,6 +48,153 @@ const show_hide_dialog =
     showhidetargetvalue="backgroundColor"/>
 </backgroundColorContainer>`;
 
+const SHOW_HIDE_MULTIPLE_VALUES =
+`<meetingType jcr:primaryType="nt:unstructured"
+  sling:resourceType="granite/ui/components/coral/foundation/form/select"
+  fieldLabel="Meeting Type"
+  name="./meetingType"
+  granite:class="cq-dialog-dropdown-showhide">
+  <items jcr:primaryType="nt:unstructured">
+    <office jcr:primaryType="nt:unstructured"
+      text="Office"
+      value="office"/>
+    <online jcr:primaryType="nt:unstructured"
+      text="Online"
+      value="online"/>
+    <hybrid jcr:primaryType="nt:unstructured"
+      text="Hybrid"
+      value="hybrid"/>
+  </items>
+  <granite:data jcr:primaryType="nt:unstructured"
+    cq-dialog-dropdown-showhide-target=".meeting-type-show-hide"/>
+</meetingType>
+<meetingLinkContainer jcr:primaryType="nt:unstructured"
+  sling:resourceType="granite/ui/components/coral/foundation/container"
+  granite:class="hide meeting-type-show-hide">
+  <items jcr:primaryType="nt:unstructured">
+    <meetingLink jcr:primaryType="nt:unstructured"
+      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+      fieldLabel="Meeting Link"
+      name="./meetingLink"/>
+  </items>
+  <granite:data jcr:primaryType="nt:unstructured"
+    showhidetargetvalue="online,hybrid"/>
+</meetingLinkContainer>`;
+
+const HANDLE_MULTIPLE_VALUES =
+`var targetValues = (element.dataset.showhidetargetvalue || "")
+  .split(",").map(v => v.trim());
+var show = targetValues.includes(value);`;
+
+const SHOW_HIDE_DROPDOWN_FIELDS_JS =
+`(function (document, $) {
+  "use strict";
+
+  // when dialog gets injected
+  $(document).on("foundation-contentloaded", function (e) {
+    // if there is already an inital value make sure the according target element becomes visible
+    Coral.commons.ready(function () {
+      showHideHandler($(".cq-dialog-dropdown-showhide", e.target));
+    });
+  });
+
+  $(document).on("selected", ".cq-dialog-dropdown-showhide", function (e) {
+    showHideHandler($(this));
+  });
+
+  function showHideHandler(el) {
+    el.each(function (i, element) {
+      if ($(element).is("coral-select")) {
+        // handle Coral3 base drop-down
+        Coral.commons.ready(element, function (component) {
+          showHide(component, element);
+          component.on("change", function () {
+            showHide(component, element);
+          });
+        });
+      } else {
+        // handle Coral2 based drop-down
+        var component = $(element).data("select");
+        if (component) {
+          showHide(component, element);
+        }
+      }
+    })
+  }
+
+  function showHide(component, element) {
+    // get the selector to find the target elements. its stored as data-.. attribute
+    var target = $(element).data("cqDialogDropdownShowhideTarget");
+    // querySelector won't create HTML objects on the fly as jquery does
+    var sanitizedTarget = document.querySelectorAll(target);
+    var $target = $(sanitizedTarget);
+
+    if (sanitizedTarget.length) {
+      var value;
+      if (typeof component.value !== "undefined") {
+        value = component.value;
+      } else if (typeof component.getValue === "function") {
+        value = component.getValue();
+      }
+
+      $target.each(function(index, element) {
+        // make sure all unselected target elements are hidden.
+        // unhide the target element that contains the selected value as data-showhidetargetvalue attribute
+        var targetValues = (element.dataset.showhidetargetvalue || "")
+                    .split(",").map(v => v.trim());
+        var show = targetValues.includes(value);
+        setVisibilityAndHandleFieldValidation($(element), show);
+      });
+    }
+  }
+
+  function setVisibilityAndHandleFieldValidation($element, show) {
+    if (show) {
+      $element.removeClass("hide");
+      $element.find("
+        input[aria-required=false], coral-multifield[aria-required=false], foundation-autocomplete[aria-required=false]"
+      ).filter(":not(.hide>input)").filter(":not(input.hide)")
+      .filter(":not(foundation-autocomplete[aria-required=false] input)")
+      .filter(":not(.hide>coral-multifield)").filter(":not(input.coral-multifield)").each(function(index, field) {
+        toggleValidation($(field));
+      });
+    } else {
+      $element.addClass("hide");
+      $element.find("
+        input[aria-required=true], coral-multifield[aria-required=true], foundation-autocomplete[required]"
+      ).filter(":not(foundation-autocomplete[required] input)")
+      .each(function(index, field) {
+        toggleValidation($(field));
+      });
+    }
+  }
+
+  function toggleValidation($field) {
+    var required = $field.prop("required");
+    var ariaRequired = $field.attr('aria-required');
+    var notRequired = ariaRequired === 'true';
+    if ($field.is("foundation-autocomplete") && required !== 'undefined') {
+      if (required === true) {
+        $field[0].required = false;
+        $field.attr('aria-required', false);
+      } else if (required === false) {
+        $field[0].required = true;
+        $field.removeAttr('aria-required');
+      }
+    } else if (typeof ariaRequired !== 'undefined') {
+      $field.attr('aria-required', String(!notRequired));
+    }
+    
+    var api = $field.adaptTo("foundation-validation");
+    if (api) {
+      if (notRequired) {
+        api.checkValidity();
+      }
+      api.updateUI();
+    }
+  }
+})(document, Granite.$);`;
+
 const breadcrumbs : IBreadCrumb = {
   items: [{
     title: TOPICS.AEM_SITES.title,
@@ -85,10 +232,28 @@ export default function ShowHideDialogFields() {
             </ul>
           </section>
           <Highlight code={show_hide_dialog} language="xml" path="_cq_dialog / .content.xml"/>
-          <div className="pt-2">
+          <section className="pt-2">
             According to the <code className="code-inline">_cq_dialog</code> configuration provided above, the Color Code option will be displayed 
             only when Background Color is selected in the Background Config. Otherwise, the Color Code field will remain hidden in the dialog.
-          </div>
+          </section>
+          <h2 className="text-xl mt-4">
+            <strong>Show/Hide Fields for Multiple Options</strong>
+          </h2>
+          <section>
+            While the default implementation supports showing or hiding fields based on a single dropdown option, it doesn&apos;t account for multiple selections.
+            To achieve that functionality, a custom JavaScript solution is required. Consider the following example:
+          </section>
+          <Highlight code={SHOW_HIDE_MULTIPLE_VALUES} language="xml" path="_cq_dialog / .content.xml"/>
+          <section className="pt-4">
+            In the given configuration, expectation is that <strong>Meeting Link</strong> field should be displayed only when the <strong>Meeting Type</strong> dropdown is set to <strong>Online</strong> or <strong>Hybrid</strong>.
+            To achieve this, <code className="code-inline">showHide</code> method needs to be updated to handle multiple values.
+          </section>
+          <Highlight code={HANDLE_MULTIPLE_VALUES} language="javascript" path="js / dropdownshowhide.js"/>
+          <section className="pt-2">
+            To incorporate the changes, create a custom ClientLib that includes the updated <code className="code-inline">dropdownshowhide.js</code> file.
+            Then, ensure the Clientlib category is added as <code className="code-inline">extraClientlibs</code> in the dialog. Here is the completed JavaScript implementation:
+          </section>
+          <Highlight code={SHOW_HIDE_DROPDOWN_FIELDS_JS} language="javascript" path="js / dropdownshowhide.js"/>
         </div>  
       </article>
       <div className="mt-8 mb-4">

@@ -79,7 +79,8 @@ export default function QueryBuilder() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
           <div>
             <section className="pt-6 pb-3">
               Query Builder offers an easy way of querying the content repository of AEM. The API is
