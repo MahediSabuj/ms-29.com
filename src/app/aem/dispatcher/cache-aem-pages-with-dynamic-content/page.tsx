@@ -90,7 +90,8 @@ export default function CacheDynamicContent() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <div>
           <section className="pt-6">
             In general, when a page is retrieved from cache, all users view identical content. However, websites with gated 

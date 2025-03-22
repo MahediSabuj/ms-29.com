@@ -37,6 +37,7 @@ export const CACHE_AEM_DYNAMIC_CONTENT: IArticleItem = {
   url: "/aem/dispatcher/cache-aem-pages-with-dynamic-content",
   publishDate: "April 28, 2024",
   modifiedDate: "April 28, 2024",
+  views: 115,
   topics: [ TOPICS.AEM_DISPATCHER ],
   active: true
 }
