@@ -68,6 +68,7 @@ export const WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS : IArticleItem =
   url: "/aem/cloud/web-optimized-image-delivery-for-aem-custom-component",
   publishDate: "April 09, 2024",
   modifiedDate: "April 09, 2024",
+  views: 109,
   description: `Web Optimized Image Delivery feature of AEM as a Cloud service delivers image assets from
     the DAM in WebP format. WebP can reduce the download size of an image by about 25% on average, which
     results in faster page loading.`,
@@ -126,12 +127,13 @@ export const CONTENT_TRANSFER_TOOL : IArticleItem = {
 export const CUSTOM_RUN_MODES_ON_AEMAACS : IArticleItem = {
   title: "Custom Run Modes on AEMaaCS",
   url: "/aem/cloud/custom-run-modes-on-aemaacs",
-  publishDate: "March 25, 2025",
-  modifiedDate: "March 25, 2025",
-  description: `In AEM 6.5, you can use arbitrary run modes to apply OSGi configs to specific instances. However, AEMaaCS 
-    supports an exact set of run modes.`,
+  publishDate: "March 26, 2025",
+  modifiedDate: "March 26, 2025",
+  description: `In AEM 6.5, you can define arbitrary run modes to apply OSGi configurations to specific instances. However, in AEMaaCS, the platform supports a fixed 
+    set of predefined run modes. While custom run modes cannot be created in AEMaaCS, you can still achieve similar functionality using alternative approaches. 
+    In this article, we will explore the changes in run modes in AEMaaCS and discuss how to adapt your custom run modes for use in AEMaaCS.`,
   topics: [ TOPICS.AEM_CLOUD ],
-  active: false
+  active: true
 }
 
 export const SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD : IArticleItem = {
@@ -150,11 +152,14 @@ export const SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD : IArticleItem = {
 export const DEDICATED_IP_FOR_AEMAACS : IArticleItem = {
   title: "Dedicated egress IP using Advanced Networking in AEMaaCS",
   url: "/aem/cloud/dedicated-egress-ip-using-advanced-networking",
-  publishDate: "November 15, 2024",
-  modifiedDate: "November 15, 2024",
-  description: ``,
+  publishDate: "April 04, 2025",
+  modifiedDate: "April 04, 2025",
+  description: `Due to the organization's networking policy, certain applications may need to be hosted behind a firewall, accessible only through 
+    specific whitelisted IP addresses. In terms of AEMaaCS, Cloud Environment IP range is large and dynamic, is not shared with customers for whitelisting.
+    To address this issue, Adobe provides a solution to assign a dedicated egress IP address to your AEMaaCS environment using Advanced Networking so that 
+    you can whitelist this IP address in organization's firewall.`,
   topics: [ TOPICS.AEM_CLOUD ],
-  active: false
+  active: true
 }
 
 export const SETUP_RDE_FOR_AEM_CLOUD : IArticleItem = {

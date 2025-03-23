@@ -33,7 +33,10 @@ export default function DedicatedIP() {
           modifiedDate={ARTICLE.modifiedDate}/>
         <div>
           <section className="pt-6">
-
+            Due to the organization&apos;s networking policy, certain applications may need to be hosted behind a firewall, accessible only
+            through specific whitelisted IP addresses. In terms of AEMaaCS, Cloud Environment IP range is large and dynamic, is not shared
+            with customers for whitelisting. To address this issue, Adobe provides a solution to assign a dedicated egress IP address to your
+            AEMaaCS environment using Advanced Networking so that you can whitelist this IP address in organization&apos;s firewall.
           </section>
         </div>  
       </article>

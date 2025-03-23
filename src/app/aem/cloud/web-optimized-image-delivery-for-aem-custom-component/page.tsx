@@ -7,6 +7,7 @@ import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Highlight from "@/components/highlight/highlight";
 import FAQ from "@/components/faq/faq";
 import TOPICS from "@/lib/data/article/topics";
+
 import { WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS as ARTICLE } from "@/lib/data/article/aem/cloud";
 
 import enable_web_optimized_images from "./assets/enable-web-optimized-images.webp";
@@ -97,7 +98,8 @@ export default function WebOptimizedImageDelivery() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <div>
           <section className="pt-6">
             Web Optimized Image Delivery feature of <strong>AEM as a Cloud Service</strong> delivers image assets from
