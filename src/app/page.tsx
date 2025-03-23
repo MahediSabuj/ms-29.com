@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import ArticleList from "@/components/article-list/article-list";
 import { IArticleList } from "@/types/article";
 import { PAGE_TYPE } from "@/types/enum/page-type";
+
+import { SPRING_BOOT } from "@/lib/data/article/backend/spring-boot"
 import { AEM_SITES } from "@/lib/data/article/aem/sites";
 import { AEM_ASSETS } from "@/lib/data/article/aem/assets";
 import { AEM_FORMS } from "@/lib/data/article/aem/forms";
@@ -35,6 +37,7 @@ export const metadata: Metadata = {
 
 const articles : IArticleList = {
   articleItems: [
+    ...SPRING_BOOT,
     ...AEM_SITES,
     ...AEM_ASSETS,
     ...AEM_FORMS,

@@ -33,9 +33,12 @@ export default function CustomRunModes() {
           modifiedDate={ARTICLE.modifiedDate}/>
         <div>
           <section className="pt-6">
-            In AEM 6.5, you can define arbitrary run modes to apply OSGi configurations to specific instances. However, in AEMaaCS, the platform supports a fixed
-            set of predefined run modes. While custom run modes cannot be created in AEMaaCS, you can still achieve similar functionality using alternative approaches.
-            In this article, we will explore the changes in run modes in AEMaaCS and discuss how to adapt your custom run modes for use in AEMaaCS.
+            In AEM 6.5, you can define arbitrary run modes to apply OSGi configurations to specific instances. However,
+            in AEMaaCS, the platform supports a fixed
+            set of predefined run modes. While custom run modes cannot be created in AEMaaCS, you can still achieve
+            similar functionality using alternative approaches.
+            In this article, we will explore the changes in run modes in AEMaaCS and discuss how to adapt your custom
+            run modes for use in AEMaaCS.
           </section>
           <h2 className="text-xl mt-4">
             <strong>Changes in Run Modes on AEMaaCS</strong>
@@ -43,20 +46,27 @@ export default function CustomRunModes() {
           <section>
             <ul className="list-disc ml-6 pt-1 pl-2.5">
               <li>
-                <strong>Predefined Run Modes:</strong> Environments are standardized with predefined set: <strong>RDE</strong>, <strong>Dev</strong>, <strong>Stage</strong>, and <strong>Prod</strong>.
-                Each environment consists of <strong>Author</strong>, <strong>Publish</strong>, and <strong>Preview</strong> service.
+                <strong>Predefined Run Modes:</strong> Environments are standardized with predefined
+                set: <strong>RDE</strong>, <strong>Dev</strong>, <strong>Stage</strong>, and <strong>Prod</strong>.
+                Each environment consists of <strong>Author</strong>, <strong>Publish</strong>,
+                and <strong>Preview</strong> service.
               </li>
               <li>
-                <strong>SlingSettingsService:</strong> The <code className="code-inline">getRunModes()</code> method returns either &quot;author&quot; or &quot;publish&quot;, depending on the instance type.
+                <strong>SlingSettingsService:</strong> The <code className="code-inline">getRunModes()</code> method
+                returns either &quot;author&quot; or &quot;publish&quot;, depending on the instance type.
                 However, it does not indicate the specific environment, such as Dev, Stage, or Prod.
               </li>
               <li>
-                <strong>Preview Environment: </strong> AEMaaCS provides Preview service, allows previewing the final website experience before content is published and made publicly available.
+                <strong>Preview Environment: </strong> AEMaaCS provides Preview service, allows previewing the final
+                website experience before content is published and made publicly available.
               </li>
             </ul>
+          </section>
+          <section className="pt-4">
+            Each program can have only one production environment, but multiple non-production environments.
           </section>
         </div>
       </article>
     </div>
-);
+  );
 }

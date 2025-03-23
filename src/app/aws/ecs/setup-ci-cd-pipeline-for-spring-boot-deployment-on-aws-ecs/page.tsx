@@ -7,6 +7,7 @@ import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import TOPICS from "@/lib/data/article/topics";
 
 import { SETUP_CI_CD_PIPELINE_TO_DEPLOY_SPRING_BOOT_APP_TO_AWS_ECS as ARTICLE } from "@/lib/data/article/aws/ecs";
+import HighlightCode from "@/components/highlight/highlight";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -15,6 +16,21 @@ export const metadata: Metadata = {
     canonical: ARTICLE.url
   }
 };
+
+const application_yml =
+`server:
+  port: 8080
+
+spring:
+  application:
+    name: ms29-event
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ms29-event
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true`;
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
@@ -58,6 +74,20 @@ export default function SetupCICDPipeline() {
               By the end of this tutorial, you will have a fully automated pipeline that builds, tests, and deploy Spring Boot application to AWS ECS.
             </div>
           </section>
+          <h2 className="text-xl mt-4">
+            <strong>Creating a Spring Boot Application using Spring Initializr</strong>
+          </h2>
+          <section>
+            For the sake of brevity, we won&apos;t dive deeply into the development of the Spring Boot application. Assume you have a Spring Boot application
+            with a configuration similar to the following <code className="code-inline">application.yml</code> example:
+            <HighlightCode code={application_yml} language="yaml" path="application.yml"/>
+            <div className="pt-2">
+              If you haven&apos;t develop Spring Boot application yet, you can check this article on <Link href="/backend/spring-boot/spring-boot-application-using-spring-initializr" className="text-blue-600">Creating Spring Boot Application using Spring Initializr</Link>.
+            </div>
+          </section>
+          <h2 className="text-xl mt-4">
+            <strong>Provisioning AWS Resources with Terraform</strong>
+          </h2>
         </div>
       </article>
     </div>

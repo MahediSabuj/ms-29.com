@@ -5,6 +5,7 @@ import ListGroup from "@/components/list-group/list-group";
 import TOPICS from "@/lib/data/article/topics";
 import GooglePublisherTag from "@/components/third-parties/google/gpt";
 
+import { SPRING_BOOT } from "@/lib/data/article/backend/spring-boot"
 import { AEM_SITES } from "@/lib/data/article/aem/sites";
 import { AEM_ASSETS } from "@/lib/data/article/aem/assets";
 import { CONTENT_FRAGMENT } from "@/lib/data/article/aem/content-fragment";
@@ -28,6 +29,16 @@ import { GRAPH } from "@/lib/data/article/cp/graph";
 import { DIVIDE_CONQUER } from "@/lib/data/article/cp/divide-conquer";
 import { POSTGRESQL } from "@/lib/data/article/db/postgresql";
 import { GOOGLE_ANALYTICS } from "@/lib/data/article/analytics/google";
+
+const backend : IListGroup = {
+  title: "Backend Development",
+  listItems: [
+    {
+      topic: TOPICS.SPRING_BOOT,
+      count: SPRING_BOOT.length
+    }
+  ]
+}
 
 const aem : IListGroup = {
   title: "Adobe Experience Manager",
@@ -158,6 +169,9 @@ export default function Sidebar() {
             [[0, 0], [[320, 50]]]
           ]}/>
       </div>
+      <section className="mt-4">
+        <ListGroup {...backend}/>
+      </section>
       <section className="mt-4">
         <ListGroup {...aem}/>
       </section>
