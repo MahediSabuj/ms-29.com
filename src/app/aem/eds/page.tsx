@@ -7,26 +7,26 @@ import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import TOPICS from "@/lib/data/article/topics";
 
-import { AEM_UNIVERSAL_EDITOR } from "@/lib/data/article/aem/universal-editor";
+import { EDGE_DELIVERY_SERVICE } from "@/lib/data/article/aem/eds";
 
 export const metadata: Metadata = {
-  title: TOPICS.AEM_UNIVERSAL_EDITOR.title,
+  title: TOPICS.EDGE_DELIVERY_SERVICE.title,
   alternates: {
-    canonical: TOPICS.AEM_UNIVERSAL_EDITOR.url
+    canonical: TOPICS.EDGE_DELIVERY_SERVICE.url
   }
 };
 
 const articles : IArticleList = {
-  articleItems: AEM_UNIVERSAL_EDITOR,
+  articleItems: EDGE_DELIVERY_SERVICE,
   pageType: PAGE_TYPE.APP_PAGE
 }
 
 const breadcrumbs : IBreadCrumb = {
   items: [],
-  current: TOPICS.AEM_UNIVERSAL_EDITOR.title
+  current: TOPICS.EDGE_DELIVERY_SERVICE.title
 }
 
-export default function UniversalEditor() {
+export default function EdgeDeliverService() {
   return (
     <div>
       <BreadCrumb {...breadcrumbs}/>

@@ -45,9 +45,9 @@ const TOPICS: Topics = {
     title: "ACS AEM Commons",
     url: "/aem/acs-commons"
   },
-  AEM_UNIVERSAL_EDITOR: {
-    title: "AEM Universal Editor",
-    url: "/aem/universal-editor"
+  EDGE_DELIVERY_SERVICE: {
+    title: "Edge Delivery Service",
+    url: "/aem/eds"
   },
   AWS_EC2: {
     title: "Elastic Compute Cloud",

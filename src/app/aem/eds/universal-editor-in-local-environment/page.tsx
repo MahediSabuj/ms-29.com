@@ -5,7 +5,7 @@ import { IBreadCrumb } from "@/types/breadcrumb";
 import TOPICS from "@/lib/data/article/topics";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 
-import { UNIVERSAL_EDITOR_IN_LOCAL_ENVIRONMENT as ARTICLE } from "@/lib/data/article/aem/universal-editor";
+import { UNIVERSAL_EDITOR_IN_LOCAL_ENVIRONMENT as ARTICLE } from "@/lib/data/article/aem/eds";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
-    title:TOPICS.AEM_UNIVERSAL_EDITOR.title,
-    url: TOPICS.AEM_UNIVERSAL_EDITOR.url
+    title:TOPICS.EDGE_DELIVERY_SERVICE.title,
+    url: TOPICS.EDGE_DELIVERY_SERVICE.url
   }],
   current: ARTICLE.title
 }

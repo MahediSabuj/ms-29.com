@@ -11,7 +11,7 @@ import { AEM_WORKFLOW } from "@/lib/data/article/aem/workflow";
 import { EXPERIENCE_FRAGMENT } from "@/lib/data/article/aem/experience-fragment";
 import { AEM_CLOUD } from "@/lib/data/article/aem/cloud";
 import { ACS_COMMONS } from "@/lib/data/article/aem/acs-commons";
-import { AEM_UNIVERSAL_EDITOR } from "@/lib/data/article/aem/universal-editor";
+import { EDGE_DELIVERY_SERVICE } from "@/lib/data/article/aem/eds";
 import { AWS_EC2 } from "@/lib/data/article/aws/ec2";
 import { AWS_SES } from "@/lib/data/article/aws/ses";
 import { AWS_ECS } from "@/lib/data/article/aws/ecs";
@@ -111,7 +111,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   loadArticles(TOPICS.EXPERIENCE_FRAGMENT.url, EXPERIENCE_FRAGMENT);
   loadArticles(TOPICS.AEM_CLOUD.url, AEM_CLOUD);
   loadArticles(TOPICS.ACS_COMMONS.url, ACS_COMMONS);
-  loadArticles(TOPICS.AEM_UNIVERSAL_EDITOR.url, AEM_UNIVERSAL_EDITOR);
+  loadArticles(TOPICS.EDGE_DELIVERY_SERVICE.url, EDGE_DELIVERY_SERVICE);
 
   loadArticles(TOPICS.AWS_EC2.url, AWS_EC2);
   loadArticles(TOPICS.AWS_SES.url, AWS_SES);
