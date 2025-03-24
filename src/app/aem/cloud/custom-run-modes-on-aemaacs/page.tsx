@@ -33,6 +33,8 @@ const OSGI_CONFIG_CLOUD = `{
   "client.secret": "$[secret:CLIENT_SECRET]"
 }`;
 
+const ENVIRONMENT_VARIABLES = `String envName = System.getenv("AEM_ENV_NAME");`;
+
 const breadcrumbs : IBreadCrumb = {
   items: [{
     title: TOPICS.AEM_CLOUD.title,
@@ -70,7 +72,7 @@ export default function CustomRunModes() {
                 However, it does not indicate the specific environment, such as Dev, Stage, or Prod.
               </li>
               <li>
-                <strong>Preview Environment: </strong> AEMaaCS provides Preview service, allows previewing the final website experience before content is published and made publicly available.
+                <strong>Preview Service: </strong> AEMaaCS provides Preview service, allows previewing the final website experience before content is published and made publicly available.
               </li>
             </ul>
           </section>
@@ -91,9 +93,40 @@ export default function CustomRunModes() {
             <Link href="/aem/cloud/environment-variables-and-secrets-in-aemaacs" className="text-blue-600">Environment Variables and Secrets</Link> come into play to setup environment-specific configurations.
             You can set environment variables at the environment level in Cloud Manager and use them in your OSGi config to differentiate between environments.
             <Highlight code={OSGI_CONFIG_CLOUD} language="json" path="config.pusbish.dev / com.aem.demo.core.services.impl.AppConfigServiceImpl.cfg.json"/>
+            <div className="pt-2">
+              Now, <code className="code-inline">api.endpoint</code>, <code className="code-inline">client.id</code>, and <code className="code-inline">client.secret</code> will be retrieved from environment variables
+              and loaded dynamically based on the environment in which the instance is running.
+            </div>
+          </section>
+          <section className="pt-4">
+            <code className="text-lg">SlingSettingsService</code> is used to determine the run mode of the instance. In AEM 6.5, you can define custom run modes e.g., <code className="code-inline">uat</code> and <code className="code-inline">getRunModes()</code> will
+            return both <code className="code-inline">author</code> and <code className="code-inline">uat</code> as run mode. However, in AEMaaCS, you will get the service only either &quot;author&quot; or &quot;publish&quot;, no information about environment.
+          </section>
+          <section className="pt-4">
+            In case you need to understand the environment in which the instance is running, you can use <strong>Environment Variables</strong> to differentiate between environments.
+            Create a new environment variable in Cloud Manager for each environment and use it in your code to determine the environment.
+            <Highlight code={ENVIRONMENT_VARIABLES} language="java" path="Environment.java"/>
+            <div className="pt-2">
+              Depending on your project requirement, you can use the environment variable as a property in OSGi configuration as well.
+            </div>
+          </section>
+          <h2 className="text-xl mt-4">
+            Run Modes for Preview Service
+          </h2>
+          <section>
+            AEMaaCS introduces Preview service but does not provide a separate run mode for it. Both Publish and Preview services share the same run mode, &quot;publish&quot;.
+            Since separate run mode is not provided, environment variables can be used to distinguish between them by defining dedicated variables for each service.
+          </section>
+          <section className="pt-6">
+            Hope, this article helps you to understand the changes in run modes in AEMaaCS and how to manage configurations for different environments.
+            Have any questions or feedback? Feel free to share in the comments below.
           </section>
         </div>
       </article>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }
