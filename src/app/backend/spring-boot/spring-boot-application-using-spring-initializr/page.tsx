@@ -34,7 +34,8 @@ export default function SpringBootApplication() {
           modifiedDate={ARTICLE.modifiedDate}/>
         <div>
           <section className="pt-6">
-
+            Spring Initializr is a web based tool provided by Spring to bootstrap your project. It streamlines the project setup process by
+            generating a pre configured Spring Boot project.
           </section>
         </div>  
       </article>

@@ -32,10 +32,10 @@ export const AEM_USER_PERMISSION: IArticleItem = {
     sites with multiple content creators. User Permissions enforces strict governance over user actions like read, create, 
     modify, delete, publish contents. This mechanism ensures that only authorized users can perform these specific actions.`,
   url: "/aem/sites/managing-user-permission-and-access-control",
-  publishDate: "April 06, 2025",
-  modifiedDate: "April 06, 2025",
+  publishDate: "April 26, 2025",
+  modifiedDate: "April 26, 2025",
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const APACHE_SLING_SITEMAP_GENERATOR: IArticleItem = {

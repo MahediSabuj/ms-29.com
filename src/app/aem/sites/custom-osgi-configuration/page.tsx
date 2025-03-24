@@ -140,7 +140,7 @@ export default function CustomOsgiConfig() {
           </Image>
           <section className="pt-3" id="aemaacs-osgi-config">
             However, if you&apos;re using AEM as a Cloud Service, you can manage environment-specific variables directly within Cloud Manager and use them like below. For more information about
-            Environment Variables and Secrets, please visit this <Link target="_blank" className="text-blue-600" href="/aem/sites/environment-variables-and-secrets-in-aemaacs">link</Link>.
+            Environment Variables and Secrets, please visit this <Link target="_blank" className="text-blue-600" href="/aem/cloud/environment-variables-and-secrets-in-aemaacs">link</Link>.
           </section>
           <Highlight code={OSGI_CONFIG_CLOUD} language="json" path="config / com.aem.demo.core.services.impl.AppConfigServiceImpl.cfg.json"/>
           <section className="pt-3">
