@@ -1,6 +1,18 @@
 import { IArticleItem } from "@/types/article";
 import TOPICS from "@/lib/data/article/topics";
 
+export const AEM_USER_PERMISSION: IArticleItem = {
+  title: "Managing User Permissions and Access Control in AEM",
+  description: `Adobe Experience Manager (AEM) is a content management system managing content authoring across multiple 
+    sites with multiple content creators. User Permissions enforces strict governance over user actions like read, create, 
+    modify, delete, publish contents. This mechanism ensures that only authorized users can perform these specific actions.`,
+  url: "/aem/cloud/managing-user-permission-and-access-control",
+  publishDate: "April 26, 2025",
+  modifiedDate: "April 26, 2025",
+  topics: [ TOPICS.AEM_CLOUD ],
+  active: true
+}
+
 export const AMS_TO_AEMAACS_MIGRATION : IArticleItem = {
   title: "Migration Journey to AEM as a Cloud Service",
   url: "/aem/cloud/migration-journey-to-aemaacs",
@@ -173,6 +185,7 @@ export const SETUP_RDE_FOR_AEM_CLOUD : IArticleItem = {
 }
 
 export const AEM_CLOUD : IArticleItem[] = [
+  AEM_USER_PERMISSION,
   AMS_TO_AEMAACS_MIGRATION,
   BEST_PRACTICE_ANALYSER_FOR_AEMAACS_MIGRATION,
   WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS,

@@ -26,18 +26,6 @@ export const AEM_COMPONENT_DIALOG_CHEATSHEET: IArticleItem = {
   active: true
 }
 
-export const AEM_USER_PERMISSION: IArticleItem = {
-  title: "Managing User Permissions and Access Control in AEM",
-  description: `Adobe Experience Manager (AEM) is a content management system managing content authoring across multiple 
-    sites with multiple content creators. User Permissions enforces strict governance over user actions like read, create, 
-    modify, delete, publish contents. This mechanism ensures that only authorized users can perform these specific actions.`,
-  url: "/aem/sites/managing-user-permission-and-access-control",
-  publishDate: "April 26, 2025",
-  modifiedDate: "April 26, 2025",
-  topics: [ TOPICS.AEM_SITES ],
-  active: true
-}
-
 export const APACHE_SLING_SITEMAP_GENERATOR: IArticleItem = {
   title: "Apache Sling Sitemap Generator for AEM",
   url: "/aem/sites/apache-sling-sitemap-generator",
@@ -333,7 +321,6 @@ export const START_AEM_IN_DEBUG_MODE : IArticleItem = {
 export const AEM_SITES : IArticleItem[] = [
   ADAPTIVE_IMAGE_SERVLET_FOR_CUSTOM_COMPONENTS,
   AEM_COMPONENT_DIALOG_CHEATSHEET,
-  AEM_USER_PERMISSION,
   APACHE_SLING_SITEMAP_GENERATOR,
   CONTEXT_AWARE_CONFIGURATION,
   CUSTOM_OSGI_CONFIGURATION,
