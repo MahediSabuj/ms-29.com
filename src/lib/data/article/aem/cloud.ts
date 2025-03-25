@@ -137,8 +137,8 @@ export const CONTENT_TRANSFER_TOOL : IArticleItem = {
 }
 
 export const CUSTOM_RUN_MODES_ON_AEMAACS : IArticleItem = {
-  title: "Custom Run Modes on AEMaaCS",
-  url: "/aem/cloud/custom-run-modes-on-aemaacs",
+  title: "Custom Run Modes in AEMaaCS",
+  url: "/aem/cloud/custom-run-modes-in-aemaacs",
   publishDate: "March 26, 2025",
   modifiedDate: "March 26, 2025",
   description: `In AEM 6.5, you can define arbitrary run modes to apply OSGi configurations to specific instances. However, in AEMaaCS, the platform supports a fixed 

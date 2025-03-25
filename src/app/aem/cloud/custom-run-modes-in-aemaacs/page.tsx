@@ -59,7 +59,7 @@ export default function CustomRunModes() {
             In this article, we will explore the changes in run modes in AEMaaCS and discuss how to adapt your custom run modes for use in AEMaaCS.
           </section>
           <h2 className="text-xl mt-4">
-            <strong>Changes in Run Modes on AEMaaCS</strong>
+            <strong>Changes in Run Modes in AEMaaCS</strong>
           </h2>
           <section>
             <ul className="list-disc ml-6 pt-1 pl-2.5">
