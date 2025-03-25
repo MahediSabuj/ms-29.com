@@ -107,7 +107,8 @@ export default function CustomRunModes() {
             Create a new environment variable in Cloud Manager for each environment and use it in your code to determine the environment.
             <Highlight code={ENVIRONMENT_VARIABLES} language="java" path="Environment.java"/>
             <div className="pt-2">
-              Depending on your project requirement, you can use the environment variable as a property in OSGi configuration as well.
+              Depending on your project requirement, you can use the environment variable as a property in OSGi configuration as well. However, it is highly recommended to
+              avoid environment specific business logic in your code.
             </div>
           </section>
           <h2 className="text-xl mt-4">

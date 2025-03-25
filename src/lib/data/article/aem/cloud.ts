@@ -100,7 +100,7 @@ export const UPDATE_JAVA_JDK_V11_FOR_AEM_CLOUD : IArticleItem = {
 }
 
 export const REPOSITORY_MODERNIZER: IArticleItem = {
-  title: "Update AEM Archetype using Repository Modernizer",
+  title: "Update Archetype AEM Cloud Compatible using Repository Modernizer",
   description: `AEM Project Archetype is a Maven template creates a minimal, best-practices-based AEM project. Over the years, AEM Project 
     Archetype has been revolutionized with significant advancements, introducing many new features and possibilities into AEM projects. The 
     latest Archetype emphasizing the separation of content and code into discrete subpackages to maintain the distinction between mutable and 
