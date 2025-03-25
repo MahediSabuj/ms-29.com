@@ -3,7 +3,9 @@ import { Metadata } from "next";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import { AEM_USER_PERMISSION as ARTICLE } from "@/lib/data/article/aem/sites";
+import TOPICS from "@/lib/data/article/topics";
+
+import { AEM_USER_PERMISSION as ARTICLE } from "@/lib/data/article/aem/cloud";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -15,8 +17,8 @@ export const metadata: Metadata = {
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
-    title: "AEM Sites",
-    url: "/aem/sites"
+    title: TOPICS.AEM_CLOUD.title,
+    url: TOPICS.AEM_CLOUD.url
   }],
   current: ARTICLE.title
 }
