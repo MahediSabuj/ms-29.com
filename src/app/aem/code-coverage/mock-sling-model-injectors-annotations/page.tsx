@@ -1,11 +1,14 @@
 import { Metadata } from "next";
+import Link from "next/link";
 
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import TOPICS from "@/lib/data/article/topics";
+import Highlight from "@/components/highlight/highlight";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
 
-import { SETUP_SMTP_CONFIG_USING_AWS_SES as ARTICLE } from "@/lib/data/article/aws/ses";
+import { MOCK_SLING_MODEL_INJECTORS_ANNOTATIONS as ARTICLE } from "@/lib/data/article/aem/code-coverage";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -17,13 +20,13 @@ export const metadata: Metadata = {
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
-    title: TOPICS.AWS_SES.title,
-    url: TOPICS.AWS_SES.url
+    title: "Code Coverage",
+    url: "/aem/code-coverage"
   }],
   current: ARTICLE.title
 }
 
-export default function SetupCICDPipeline() {
+export default function MockSlingModelAnnotations() {
   return (
     <div>
       <BreadCrumb {...breadcrumbs}/>
@@ -34,11 +37,14 @@ export default function SetupCICDPipeline() {
           modifiedDate={ARTICLE.modifiedDate}/>
         <div>
           <section className="pt-6">
-            AWS Simple Email Service (SES) is a cloud-based SASS platform that allows you to send emails to your customers. Amazon SES sends
-            email using SMTP, which is the most common email protocol on the internet.
+
           </section>
-        </div>  
+        </div>
       </article>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }

@@ -93,6 +93,10 @@ const TOPICS: Topics = {
     title: "Google Analytics",
     url: "/analytics/google"
   },
+  ADOBE_ANALYTICS: {
+    title: "Adobe Analytics",
+    url: "/analytics/adobe"
+  },
   SPRING_BOOT: {
     title: "Spring Boot",
     url: "/backend/spring-boot"

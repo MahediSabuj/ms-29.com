@@ -28,6 +28,7 @@ import { DYNAMIC_PROGRAMMING } from "@/lib/data/article/cp/dynamic-programming";
 import { GRAPH } from "@/lib/data/article/cp/graph";
 import { DIVIDE_CONQUER } from "@/lib/data/article/cp/divide-conquer";
 import { POSTGRESQL } from "@/lib/data/article/db/postgresql";
+import { ADOBE_ANALYTICS } from "@/lib/data/article/analytics/adobe";
 import { GOOGLE_ANALYTICS } from "@/lib/data/article/analytics/google";
 
 const backend : IListGroup = {
@@ -139,6 +140,9 @@ const database: IListGroup = {
 const analytics: IListGroup = {
   title: "Analytics",
   listItems: [{
+    topic: TOPICS.ADOBE_ANALYTICS,
+    count: ADOBE_ANALYTICS.length
+  },{
     topic: TOPICS.GOOGLE_ANALYTICS,
     count: GOOGLE_ANALYTICS.length
   }]
