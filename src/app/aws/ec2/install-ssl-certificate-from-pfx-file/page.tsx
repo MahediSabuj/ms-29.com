@@ -5,6 +5,10 @@ import Article from "@/components/article/article";
 import Highlight from "@/components/highlight/highlight";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
+import TOPICS from "@/lib/data/article/topics";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
+
 import { INSTALL_SSL_CERTIFICATE_FROM_PFX_FILE as ARTICLE } from "@/lib/data/article/aws/ec2";
 
 import import_ssl_certificate from './assets/aws-certificate-manager_import-certificate.webp';
@@ -15,7 +19,6 @@ import sni_add_certificate from './assets/aws-elb-sni-add-certificate.webp';
 import sni_available_certificates from './assets/aws-elb-sni-available-certificates.webp';
 import sni_pending_certificates from './assets/aws-elb-sni-pending-certificates.webp';
 import sni_certificates from './assets/aws-elb-sni-certificates.webp';
-import TOPICS from "@/lib/data/article/topics";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -154,6 +157,10 @@ export default function InstallCertificate() {
           If you&apos;ve followed along, you can now verify the SSL certificate and its expiry date from your preferred web browser by visiting your website.
         </div>
       </article>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }
