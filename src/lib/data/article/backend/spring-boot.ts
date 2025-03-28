@@ -13,6 +13,17 @@ export const SPRING_BOOT_APPLICATION_USING_SPRING_INITIALIZR: IArticleItem = {
   active: !true
 }
 
+export const SPRING_BOOT_APPLICATION_WITH_POSTGRESQL_THYMELEAF: IArticleItem = {
+  title: "Develop Spring Boot Application with PostgreSQL and Thymeleaf",
+  description: ``,
+  url: `${TOPICS.SPRING_BOOT.url}/develop-spring-boot-application-with-postgresql-and-thymeleaf`,
+  publishDate: "April 20, 2025",
+  modifiedDate: "April 20, 2025",
+  topics: [ TOPICS.SPRING_BOOT ],
+  active: true
+}
+
 export const SPRING_BOOT: IArticleItem[] = [
-  SPRING_BOOT_APPLICATION_USING_SPRING_INITIALIZR
+  SPRING_BOOT_APPLICATION_USING_SPRING_INITIALIZR,
+  SPRING_BOOT_APPLICATION_WITH_POSTGRESQL_THYMELEAF
 ].filter(m => m.active);
