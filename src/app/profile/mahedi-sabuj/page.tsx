@@ -55,7 +55,7 @@ export default function Resume() {
       </section>
       <section className="pt-6">
         Experienced AEM Developer with 6 years of expertise, specializing in AEM 6.5, AEM as a Cloud Service (AEMaaCS), AEM SPA (React), and AEM Cloud Migration.
-        Additionally proficient in various programming languages and frameworks, including Java, Spring Boot, C++, C#, JavaScript, and Golang.
+        Additionally proficient in various programming languages and frameworks, including Java, Spring Boot, C++, C#, JavaScript, and MicroService.
       </section>
       <section className="pt-6">
         <h2 className="text-xl">Certifications</h2>
