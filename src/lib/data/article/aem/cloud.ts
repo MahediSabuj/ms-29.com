@@ -7,8 +7,8 @@ export const AEM_USER_PERMISSION: IArticleItem = {
     sites with multiple content creators. User Permissions enforces strict governance over user actions like read, create, 
     modify, delete, publish contents. This mechanism ensures that only authorized users can perform these specific actions.`,
   url: "/aem/cloud/managing-user-permission-and-access-control",
-  publishDate: "April 26, 2025",
-  modifiedDate: "April 26, 2025",
+  publishDate: "May 18, 2025",
+  modifiedDate: "May 18, 2025",
   topics: [ TOPICS.AEM_CLOUD ],
   active: true
 }
@@ -164,8 +164,8 @@ export const SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD : IArticleItem = {
 export const DEDICATED_IP_FOR_AEMAACS : IArticleItem = {
   title: "Dedicated egress IP using Advanced Networking in AEMaaCS",
   url: "/aem/cloud/dedicated-egress-ip-using-advanced-networking",
-  publishDate: "April 04, 2025",
-  modifiedDate: "April 04, 2025",
+  publishDate: "April 26, 2025",
+  modifiedDate: "April 26, 2025",
   description: `Due to the organization's networking policy, certain applications may need to be hosted behind a firewall, accessible only through 
     specific whitelisted IP addresses. In terms of AEMaaCS, Cloud Environment IP range is large and dynamic, is not shared with customers for whitelisting.
     To address this issue, Adobe provides a solution to assign a dedicated egress IP address to your AEMaaCS environment using Advanced Networking so that 

@@ -277,10 +277,10 @@ export const SLING_MODEL_INJECTORS_ANNOTATIONS: IArticleItem = {
     injector-specific annotations, used to inject values. For each injector there is a specialized annotation 
     available.`,
   url: "/aem/sites/sling-model-injectors-annotations",
-  publishDate: "May 20, 2024",
-  modifiedDate: "May 20, 2024",
+  publishDate: "May 05, 2025",
+  modifiedDate: "May 05, 2025",
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const SLING_RESOURCE_MERGER : IArticleItem = {

@@ -24,7 +24,18 @@ export const MOCK_STATIC_METHODS_MOCKITO: IArticleItem = {
   active: true
 }
 
+export const MOCK_SLING_MODEL_INJECTORS_ANNOTATIONS: IArticleItem = {
+  title: "Mock Sling Model Injectors Annotations",
+  description: ``,
+  url: "/aem/code-coverage/mock-sling-model-injectors-annotations",
+  publishDate: "May 25, 2025",
+  modifiedDate: "May 25, 2025",
+  topics: [ TOPICS.AEM_CODE_COVERAGE ],
+  active: true
+}
+
 export const CODE_COVERAGE: IArticleItem[] = [
   CODE_COVERAGE_OSGI_CONFIGURATION,
-  MOCK_STATIC_METHODS_MOCKITO
+  MOCK_STATIC_METHODS_MOCKITO,
+  MOCK_SLING_MODEL_INJECTORS_ANNOTATIONS
 ].filter(m => m.active);
