@@ -1,5 +1,9 @@
 import { MetadataRoute } from 'next';
+
 import DateFormatter from "@/lib/util/date-formatter";
+import { IArticleItem } from "@/types/article";
+import TOPICS from '@/lib/data/article/topics';
+
 import { AEM_SITES } from "@/lib/data/article/aem/sites";
 import { AEM_ASSETS } from "@/lib/data/article/aem/assets";
 import { AEM_FORMS } from "@/lib/data/article/aem/forms";
@@ -22,9 +26,8 @@ import { DYNAMIC_PROGRAMMING } from "@/lib/data/article/cp/dynamic-programming";
 import { GRAPH } from "@/lib/data/article/cp/graph";
 import { DIVIDE_CONQUER } from "@/lib/data/article/cp/divide-conquer";
 import { POSTGRESQL } from "@/lib/data/article/db/postgresql";
+import { ADOBE_ANALYTICS } from "@/lib/data/article/analytics/adobe";
 import { GOOGLE_ANALYTICS } from "@/lib/data/article/analytics/google";
-import { IArticleItem } from "@/types/article";
-import TOPICS from '@/lib/data/article/topics';
 
 const domain: string = "https://ms-29.com";
 
@@ -128,6 +131,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   loadArticles(TOPICS.POSTGRESQL.url, POSTGRESQL);
 
+  loadArticles(TOPICS.ADOBE_ANALYTICS.url, ADOBE_ANALYTICS);
   loadArticles(TOPICS.GOOGLE_ANALYTICS.url, GOOGLE_ANALYTICS);
 
   return sitemap;

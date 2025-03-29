@@ -7,6 +7,9 @@ import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import TOPICS from "@/lib/data/article/topics";
 import Highlight from "@/components/highlight/highlight";
 import Reference from "@/components/reference/reference";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
+
 import { SETUP_ACS_COMMONS_IN_AEM_PROJECTS as ARTICLE } from "@/lib/data/article/aem/acs-commons";
 
 import ACS_COMMONS_IN_AEMAACS from './assets/acs-commons-in-aemaacs.png';
@@ -143,6 +146,10 @@ export default function InstallACSCommons() {
         title: "Adobe Consulting Service",
         url: "https://adobe-consulting-services.github.io/acs-aem-commons/pages/maven.html"
       }]}/>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }

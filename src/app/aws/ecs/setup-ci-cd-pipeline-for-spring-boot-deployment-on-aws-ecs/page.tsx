@@ -5,6 +5,8 @@ import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import TOPICS from "@/lib/data/article/topics";
+import ArticleReviewList from '@/components/article-review-list/article-review-list';
+import ArticleReviewForm from "@/components/form/article-review/article-review";
 
 import { SETUP_CI_CD_PIPELINE_TO_DEPLOY_SPRING_BOOT_APP_TO_AWS_ECS as ARTICLE } from "@/lib/data/article/aws/ecs";
 import HighlightCode from "@/components/highlight/highlight";
@@ -31,6 +33,26 @@ spring:
     driver-class-name: org.postgresql.Driver
   jpa:
     show-sql: true`;
+
+const AWS_RESOURCES =
+`provider "aws" {
+  region = "ap-southeast-1" // Singapore
+}
+
+/* Create event.ms-29.com S3 Bucket */
+resource "aws_s3_bucket" "event_bucket" {
+  bucket = "event.ms-29.com"
+}
+
+/* Read Access to event.ms-29.com Bucket */
+resource "aws_s3_bucket_policy" "event_bucket_policy" {
+  bucket = aws_s3_bucket.event_bucket.id
+}
+
+/* Create ms29-event ECR Repository */
+resource "aws_ecr_repository" "event_repo" {
+  name = "ms29-event"
+}`;
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
@@ -88,8 +110,20 @@ export default function SetupCICDPipeline() {
           <h2 className="text-xl mt-4">
             <strong>Provisioning AWS Resources with Terraform</strong>
           </h2>
+          <section>
+            To deploy the application to AWS, need to create cloud resources for storing images, hosting database, and running application.
+            We will use Terraform to provision the AWS resources.
+          </section>
+          <section className="mt-4">
+            Terraform allows us to define infrastructure as code. Below is the configuration to create the required AWS resources.
+          </section>
+          <HighlightCode code={AWS_RESOURCES} language="terraform" path="terraform / main.tf"/>
         </div>
       </article>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }
