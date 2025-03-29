@@ -173,7 +173,7 @@ export default function Sidebar() {
             [[0, 0], [[320, 50]]]
           ]}/>
       </div>
-      <section className="mt-4">
+      <section>
         <ListGroup {...backend}/>
       </section>
       <section className="mt-4">
