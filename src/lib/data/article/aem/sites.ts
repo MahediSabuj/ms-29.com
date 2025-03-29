@@ -280,7 +280,7 @@ export const SLING_MODEL_INJECTORS_ANNOTATIONS: IArticleItem = {
   publishDate: "May 05, 2025",
   modifiedDate: "May 05, 2025",
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const SLING_RESOURCE_MERGER : IArticleItem = {
