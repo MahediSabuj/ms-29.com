@@ -12,6 +12,17 @@ export const SETUP_SMTP_CONFIG_USING_AWS_SES: IArticleItem = {
   active: true
 }
 
+export const VERIFY_IDENTITIES_IN_AWS_SES: IArticleItem = {
+  title: "Verify Identities through Email and Domain in AWS SES",
+  description: `In AWS SES, verified identity is a domain or email address that you use to send email.`,
+  url: "/aws/ses/verify-identities-through-email-and-domain-in-aws-ses",
+  publishDate: "April 02, 2025",
+  modifiedDate: "April 02, 2025",
+  topics: [ TOPICS.AWS_SES ],
+  active: true
+}
+
 export const AWS_SES: IArticleItem[] = [
-  SETUP_SMTP_CONFIG_USING_AWS_SES
+  SETUP_SMTP_CONFIG_USING_AWS_SES,
+  VERIFY_IDENTITIES_IN_AWS_SES
 ].filter(m => m.active);

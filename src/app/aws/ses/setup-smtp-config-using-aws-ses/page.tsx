@@ -6,6 +6,9 @@ import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import TOPICS from "@/lib/data/article/topics";
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
+import HighlightCode from "@/components/highlight/highlight";
 
 import { SETUP_SMTP_CONFIG_USING_AWS_SES as ARTICLE } from "@/lib/data/article/aws/ses";
 
@@ -21,6 +24,42 @@ export const metadata: Metadata = {
   }
 };
 
+const SEND_EMAIL =
+`const nodemailer = require("nodemailer");
+
+async function sendEmail(to, subject, body) {
+  // Configure SMTP transporter
+  const transporter = nodemailer.createTransport({
+    host: "email-smtp.<region>.amazonaws.com", // Replace with your AWS SES region
+    port: 587, // Use 465 for SSL, 587 for TLS
+    secure: false, // false for TLS, true for SSL
+    auth: {
+      user: "YOUR_SMTP_USERNAME", // Replace with your SMTP username
+      pass: "YOUR_SMTP_PASSWORD" // Replace with your SMTP password
+    }
+  });
+
+  // Email options
+  const mailOptions = {
+    from: "your-email@example.com", // Must be a verified SES sender email
+    to: to,
+    subject: subject,
+    text: body, // Plain Text body
+    html: \`<p>\${body}</p>\` // HTML body
+  };
+
+  try {
+    const info = await transporter.sendMail(mailOptions);
+    console.log("Email sent successfully:", info.messageId);
+  } catch (error) {
+    console.error("Error sending email:", error);
+  }
+}
+
+// Example Usage
+sendEmail("recipient@example.com", "Test Email", 
+  "This is a test email from AWS SES using SMTP in Node.js.");`;
+
 const breadcrumbs : IBreadCrumb = {
   items: [{
     title: TOPICS.AWS_SES.title,
@@ -29,7 +68,7 @@ const breadcrumbs : IBreadCrumb = {
   current: ARTICLE.title
 }
 
-export default function SetupCICDPipeline() {
+export default function SMTPConfiguration() {
   return (
     <div>
       <BreadCrumb {...breadcrumbs}/>
@@ -73,8 +112,29 @@ export default function SetupCICDPipeline() {
               </li>
             </ul>
           </section>
-        </div>  
+          <section className="pt-4">
+            Now that you have the SMTP credentials, you need to verify the email address with SES before you can send emails.
+            Email addresses can be verified individually or through domain verification. For more details about verification, please check
+            how to <Link className="text-blue-600" target="_blank" href="/aws/ses/verify-identities-through-email-and-domain-in-aws-ses">Verify Identities through Email and Domain in AWS SES</Link>.
+          </section>
+          <section className="pt-4">
+            To check the configuration, you can create a simple Node.js app that sends an email using the SMTP credentials.
+          </section>
+          <HighlightCode code={SEND_EMAIL} language="javascript" path="aws / ses.js"/>
+          <section className="pt-3">
+            Replace <strong>YOUR_SMTP_USERNAME</strong> and <strong>YOUR_SMTP_PASSWORD</strong> with the SMTP credentials you noted earlier.
+            The <strong>from</strong> email address must be a verified SES sender email. You can also customize the email body with plain text and HTML.
+          </section>
+          <section className="pt-4">
+            Hopefully, this guide helps you set up SMTP configuration using AWS SES, allowing you to successfully send emails via SMTP.
+            If you have any questions or feedback, feel free to leave a comment below.
+          </section>
+        </div>
       </article>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }
