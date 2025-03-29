@@ -31,7 +31,7 @@ export const MOCK_SLING_MODEL_INJECTORS_ANNOTATIONS: IArticleItem = {
   publishDate: "May 25, 2025",
   modifiedDate: "May 25, 2025",
   topics: [ TOPICS.AEM_CODE_COVERAGE ],
-  active: true
+  active: false
 }
 
 export const CODE_COVERAGE: IArticleItem[] = [

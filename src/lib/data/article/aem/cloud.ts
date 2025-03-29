@@ -10,7 +10,7 @@ export const AEM_USER_PERMISSION: IArticleItem = {
   publishDate: "May 18, 2025",
   modifiedDate: "May 18, 2025",
   topics: [ TOPICS.AEM_CLOUD ],
-  active: !true
+  active: false
 }
 
 export const AMS_TO_AEMAACS_MIGRATION : IArticleItem = {
@@ -171,7 +171,7 @@ export const DEDICATED_IP_FOR_AEMAACS : IArticleItem = {
     To address this issue, Adobe provides a solution to assign a dedicated egress IP address to your AEMaaCS environment using Advanced Networking so that 
     you can whitelist this IP address in organization's firewall.`,
   topics: [ TOPICS.AEM_CLOUD ],
-  active: !true
+  active: false
 }
 
 export const SETUP_RDE_FOR_AEM_CLOUD : IArticleItem = {

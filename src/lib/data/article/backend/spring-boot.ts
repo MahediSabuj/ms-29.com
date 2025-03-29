@@ -10,7 +10,7 @@ export const SPRING_BOOT_APPLICATION_USING_SPRING_INITIALIZR: IArticleItem = {
   publishDate: "March 30, 2025",
   modifiedDate: "March 30, 2025",
   topics: [ TOPICS.SPRING_BOOT ],
-  active: !true
+  active: true
 }
 
 export const SPRING_BOOT_APPLICATION_WITH_POSTGRESQL_THYMELEAF: IArticleItem = {
@@ -20,7 +20,7 @@ export const SPRING_BOOT_APPLICATION_WITH_POSTGRESQL_THYMELEAF: IArticleItem = {
   publishDate: "April 20, 2025",
   modifiedDate: "April 20, 2025",
   topics: [ TOPICS.SPRING_BOOT ],
-  active: true
+  active: false
 }
 
 export const SPRING_BOOT: IArticleItem[] = [

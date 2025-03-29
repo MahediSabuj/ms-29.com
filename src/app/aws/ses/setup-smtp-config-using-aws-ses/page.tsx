@@ -35,7 +35,8 @@ export default function SetupCICDPipeline() {
         <div>
           <section className="pt-6">
             AWS Simple Email Service (SES) is a cloud-based SASS platform that allows you to send emails to your customers. Amazon SES sends
-            email using SMTP, which is the most common email protocol on the internet.
+            email using SMTP, which is the most common email protocol on the internet. It allows sending large volumes of email in minutes.
+
           </section>
         </div>  
       </article>
