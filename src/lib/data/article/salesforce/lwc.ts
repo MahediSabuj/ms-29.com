@@ -7,10 +7,10 @@ export const CUSTOM_LIGHTNING_WEB_COMPONENT: IArticleItem = {
     and lightweight UI components for the Salesforce platform. Although Salesforce provides a wide range of standard Lightning 
     Web Components, custom components are often required to address specific business requirements.`,
   url: "/salesforce/lwc/custom-lightning-web-component-in-salesforce",
-  publishDate: "April 10, 2025",
-  modifiedDate: "April 10, 2025",
+  publishDate: "April 04, 2025",
+  modifiedDate: "April 04, 2025",
   topics: [ TOPICS.SF_LWC ],
-  active: false
+  active: true
 }
 
 export const SF_LWC: IArticleItem[] = [
