@@ -9,6 +9,8 @@ import TOPICS from "@/lib/data/article/topics";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 import Reference from "@/components/reference/reference";
+import HighlightCode from "@/components/highlight/highlight";
+import FAQ from "@/components/faq/faq";
 
 import { VERIFY_IDENTITIES_IN_AWS_SES as ARTICLE } from "@/lib/data/article/aws/ses";
 
@@ -17,6 +19,8 @@ import AWS_SES_DOMAIN_IDENTITY from "./assets/aws-ses-domain-identity.png";
 import AWS_SES_MAIL_FROM_DOMAIN from "./assets/aws-ses-mail-from-domain.png";
 import AWS_SES_DOMAIN_VERIFICATION from "./assets/aws-ses-domain-verification.png";
 import AWS_SES_PRODUCTION_ACCESS from "./assets/aws-ses-production-access.png";
+import AWS_SES_BYO_DKIM_CONFIG from "./assets/aws-ses-byo-dkim-config.png";
+import AWS_SES_BYO_DKIM_DNS_RECORD from "./assets/aws-ses-byo-dkim-dns-record.png";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -108,10 +112,24 @@ export default function VerifyIdentities() {
                       <li>To use Deterministic Easy DKIM (DEED) in Amazon SES, you must first enable Easy DKIM for at least one domain. After that, DEED can be used for additional domains without requiring separate DKIM record configurations.</li>
                       <li>
                         As an alternative to using Easy DKIM, you can instead configure DKIM authentication by using your own public-private key pair. This process is known as Bring Your Own DKIM (BYODKIM).
-                        How to configure BYODKIM is beyond the scope of this article but you can refer to the <Link className="text-blue-600" target="_blank" href="https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim-bring-your-own.html">official documentation</Link> for more information.
                       </li>
                     </ul>
                     <Image src={AWS_SES_DOMAIN_VERIFICATION} className="border my-2" alt="AWS SES Domain Verification"/>
+                    To use Bring Your Own DKIM feature, you first have to create an RSA key pair. To generate a key pair, follow the steps below:
+                    <ul className="list-disc ml-6 pt-1 pl-2.5 pb-2">
+                      <li>
+                        Open a terminal window and run the following command to generate the private key:
+                        <HighlightCode code="openssl genrsa -f4 -out private.key 2048" language="shell" path=""/>
+                      </li>
+                      <li>
+                        Run the following command to generate the public key:
+                        <HighlightCode code="openssl rsa -in private.key -outform PEM -pubout -out public.key" language="shell" path=""/>
+                      </li>
+                    </ul>
+                    Now that you&apos;ve created a key pair, you have to add the public key as a TXT record to the DNS configuration for your domain. You You must include the <code className="code-inline">p=</code> prefix in the DNS record.
+                    <Image src={AWS_SES_BYO_DKIM_DNS_RECORD} className="border my-2" alt="AWS SES BYO DKIM DNS Record"/>
+                    Paste the private key you generated earlier and specify the selector name you used in the DNS settings. The selector is a string that uniquely identifies the public key in the DNS records.
+                    <Image src={AWS_SES_BYO_DKIM_CONFIG} className="border my-2" alt="AWS SES BYO DKIM Config"/>
                   </li>
                   <li>
                     Click on <strong>Create Identity</strong>. Once created, you will see the required DNS records that you need to add to your domain&apos;s DNS settings.
@@ -140,12 +158,19 @@ export default function VerifyIdentities() {
             </section>
           </div>
       </article>
+      <FAQ items={[{
+        question: "InvalidChangeBatch 400: CharacterStringTooLong (Value is too long) error while adding DKIM record in Route 53",
+        answer: `Do not use "one string per line" instead separate strings with a single space, eg. <code class="code-inline background">"foo" "bar"</code> not <code class="code-inline background">"foo"\\n"bar"</code>`
+      }]}/>
       <Reference references={[{
         title: "Verified identities in Amazon SES",
         url: "https://docs.aws.amazon.com/ses/latest/dg/verify-addresses-and-domains.html"
       }, {
         title: "Creating and verifying identities in Amazon SES",
         url: "https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html"
+      }, {
+        title: "Provide your own DKIM authentication token (BYODKIM) in Amazon SES",
+        url: "https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim-bring-your-own.html"
       }]}/>
       <div className="mt-8 mb-4">
         <ArticleReviewList items={[]}/>

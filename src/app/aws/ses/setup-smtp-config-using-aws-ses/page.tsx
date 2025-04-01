@@ -115,7 +115,7 @@ export default function SMTPConfiguration() {
           <section className="pt-4">
             Now that you have the SMTP credentials, you need to verify the email address with SES before you can send emails.
             Email addresses can be verified individually or through domain verification. For more details about verification, please check
-            how to <Link className="text-blue-600" target="_blank" href="/aws/ses/verify-identities-through-email-and-domain-in-aws-ses">Verify Identities through Email and Domain in AWS SES</Link>.
+            how to <Link className="text-blue-600" target="_blank" href="/aws/ses/email-and-domain-identity-verification-in-aws-ses">Verify Email and Domain Identities in AWS SES</Link>.
           </section>
           <section className="pt-4">
             To check the configuration, you can create a simple Node.js app that sends an email using the SMTP credentials.

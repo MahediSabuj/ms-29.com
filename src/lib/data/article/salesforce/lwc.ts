@@ -10,7 +10,7 @@ export const CUSTOM_LIGHTNING_WEB_COMPONENT: IArticleItem = {
   publishDate: "April 04, 2025",
   modifiedDate: "April 04, 2025",
   topics: [ TOPICS.SF_LWC ],
-  active: true
+  active: false
 }
 
 export const SF_LWC: IArticleItem[] = [
