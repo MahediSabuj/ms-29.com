@@ -28,6 +28,7 @@ import { DIVIDE_CONQUER } from "@/lib/data/article/cp/divide-conquer";
 import { POSTGRESQL } from "@/lib/data/article/db/postgresql";
 import { ADOBE_ANALYTICS } from "@/lib/data/article/analytics/adobe";
 import { GOOGLE_ANALYTICS } from "@/lib/data/article/analytics/google";
+import { IAC } from "@/lib/data/article/devops/iac";
 
 const domain: string = "https://ms-29.com";
 
@@ -133,6 +134,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   loadArticles(TOPICS.ADOBE_ANALYTICS.url, ADOBE_ANALYTICS);
   loadArticles(TOPICS.GOOGLE_ANALYTICS.url, GOOGLE_ANALYTICS);
+
+  loadArticles(TOPICS.IAC.url, IAC);
 
   return sitemap;
 }

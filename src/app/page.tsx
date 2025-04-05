@@ -29,6 +29,7 @@ import { DIVIDE_CONQUER } from "@/lib/data/article/cp/divide-conquer";
 import { POSTGRESQL } from "@/lib/data/article/db/postgresql";
 import { ADOBE_ANALYTICS } from "@/lib/data/article/analytics/adobe";
 import { GOOGLE_ANALYTICS } from "@/lib/data/article/analytics/google";
+import { IAC } from "@/lib/data/article/devops/iac";
 
 export const metadata: Metadata = {
   alternates: {
@@ -62,7 +63,8 @@ const articles : IArticleList = {
     ...DIVIDE_CONQUER,
     ...POSTGRESQL,
     ...ADOBE_ANALYTICS,
-    ...GOOGLE_ANALYTICS
+    ...GOOGLE_ANALYTICS,
+    ...IAC
   ],
   pageType: PAGE_TYPE.HOME_PAGE
 }

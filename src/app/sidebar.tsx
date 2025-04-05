@@ -30,6 +30,7 @@ import { DIVIDE_CONQUER } from "@/lib/data/article/cp/divide-conquer";
 import { POSTGRESQL } from "@/lib/data/article/db/postgresql";
 import { ADOBE_ANALYTICS } from "@/lib/data/article/analytics/adobe";
 import { GOOGLE_ANALYTICS } from "@/lib/data/article/analytics/google";
+import { IAC } from "@/lib/data/article/devops/iac";
 
 const backend : IListGroup = {
   title: "Backend Development",
@@ -148,6 +149,14 @@ const analytics: IListGroup = {
   }]
 }
 
+const devOps: IListGroup = {
+  title: "DevOps",
+  listItems: [{
+    topic: TOPICS.IAC,
+    count: IAC.length
+  }]
+}
+
 export default function Sidebar() {
   return (
     <div>
@@ -159,7 +168,7 @@ export default function Sidebar() {
           <Link href="/profile/mahedi-sabuj" className="text-blue-600">
             Abdullah &ndash; Al &ndash; Mahedi <strong>Sabuj</strong><br/>
           </Link>
-          Principal Engineer @ <Link target="_blank" href="https://brainstation-23.com"
+          Principal Software Engineer @ <Link target="_blank" href="https://brainstation-23.com"
             className="text-blue-600">Brain Station 23</Link>
         </div>
       </section>
@@ -196,6 +205,9 @@ export default function Sidebar() {
       </section>
       <section className="mt-4">
         <ListGroup {...analytics}/>
+      </section>
+      <section className="mt-4">
+        <ListGroup {...devOps}/>
       </section>
     </div>
   );

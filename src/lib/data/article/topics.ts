@@ -100,6 +100,10 @@ const TOPICS: Topics = {
   SPRING_BOOT: {
     title: "Spring Boot",
     url: "/backend/spring-boot"
+  },
+  IAC: {
+    title: "Infrastructure as Code",
+    url: "/devops/iac"
   }
 }
 
