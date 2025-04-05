@@ -6,10 +6,10 @@ export const SETUP_SMTP_CONFIG_USING_AWS_SES: IArticleItem = {
   description: `AWS Simple Email Service (SES) is a cloud-based SASS platform that allows you to send emails to your customers.
     Amazon SES sends email using SMTP, which is the most common email protocol on the internet. It allows sending large volumes of email in minutes.`,
   url: "/aws/ses/setup-smtp-config-using-aws-ses",
-  publishDate: "April 08, 2025",
-  modifiedDate: "April 08, 2025",
+  publishDate: "April 06, 2025",
+  modifiedDate: "April 06, 2025",
   topics: [ TOPICS.AWS_SES ],
-  active: false
+  active: true
 }
 
 export const VERIFY_IDENTITIES_IN_AWS_SES: IArticleItem = {
