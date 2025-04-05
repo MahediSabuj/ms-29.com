@@ -128,8 +128,11 @@ export default function LocalEnvironment() {
             Local Dev is Salesforce CLI tool that lets you run real time preview of your Lightning web components in your browser.
             The preview updates automatically as you edit your components locally, so you don&apos;t have to deploy code or manually refresh your browser page.
             Run below command in terminal to install Local Dev plugin.
-            <HighlightCode code="sf plugins install @salesforce/plugin-lightning-dev" language="shell" path=""/>
-            <div className="mt-4">
+            <HighlightCode code="sf plugins install @salesforce/plugin-lightning-dev@prerelease" language="shell" path=""/>
+            <div className="pt-2">
+              If you have production org with an upcoming release, you should install the latest version of Local Dev using <code className="code-inline background">@latest</code>.
+            </div>
+            <div className="pt-4">
               To enable Local Dev in your project, follow these steps.
               <ul className="list-disc ml-6 pt-1 pl-2.5">
                 <li>Open the <code className="code-inline background">config/project-scratch-def.json</code> file.</li>
