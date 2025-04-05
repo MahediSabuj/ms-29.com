@@ -3,7 +3,8 @@ import TOPICS from "@/lib/data/article/topics";
 
 export const INSTALL_AND_CONFIGURE_TERRAFORM: IArticleItem = {
   title: "Install and Configure Terraform to Provision AWS Resources",
-  description: ``,
+  description: `Infrastructure as Code (IaC) helps automate cloud resource setup, one of the leading tools in the IaC space is Terraform 
+    by HashiCorp.`,
   url: `${TOPICS.IAC.url}/install-and-confiure-terraform-to-provision-aws-resource`,
   publishDate: "April 22, 2025",
   modifiedDate: "April 22, 2025",

@@ -40,6 +40,7 @@ export default function TerraformSetup() {
           modifiedDate={ARTICLE.modifiedDate}/>
         <div>
           <section className="pt-6">
+            Infrastructure as Code (IaC) helps automate cloud resource setup, one of the leading tools in the IaC space is Terraform by HashiCorp.
           </section>
         </div>
       </article>
