@@ -89,6 +89,69 @@ spring:
     init:
       mode: always`;
 
+const EVENT_ENTITY =
+`@Entity
+@Table(name = "events")
+@Getter @Setter
+public class Event {
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Integer id;
+
+  private String eventName;
+
+  private String eventDescription;
+
+  private String eventLocation;
+
+  private LocalDateTime eventStartDatetime;
+
+  private LocalDateTime eventEndDatetime;
+
+  private LocalDateTime registrationStartDatetime;
+
+  private LocalDateTime registrationEndDatetime;
+}`;
+
+const EVENT_REPOSITORY =
+`@Repository
+public interface EventRepository extends JpaRepository<Event, Integer> {
+}`;
+
+const EVENT_SERVICE =
+`@Service
+@AllArgsConstructor
+public class EventService {
+  private final EventRepository eventRepository;
+  
+  public Event createEvent(Event event) {
+    return eventRepository.save(event);
+  }
+}`;
+
+const EVENT_CONTROLLER =
+`@Controller
+@RequestMapping("/event")
+@AllArgsConstructor
+public class EventController {
+  private final EventService eventService;
+  
+  @GetMapping("/create")
+  public String showCreateEventForm(Model model) {
+    model.addAttribute("event", new Event());
+    return "event/create";
+  }
+  
+  @PostMapping("/create")
+  public String createEvent(@ModelAttribute Event event) {
+    eventService.createEvent(event);
+    return "redirect:/event/list";
+  }
+}`;
+
+const EVENT_FORM =
+``;
+
 const breadcrumbs : IBreadCrumb = {
   items: [{
     title: TOPICS.SPRING_BOOT.title,
@@ -115,7 +178,7 @@ export default function SpringBootRestAPI() {
             By the end, we will develop an <strong>Event Registration System</strong> that allows users to register for an event.
             Also, Admin to create the event and view the registered users.
           </section>
-          <h2 className="text-xl mt-4">
+          <h2 className="text-xl mt-6">
             <strong>Database Schema for Event Registration System</strong>
           </h2>
           <section>
@@ -130,7 +193,7 @@ export default function SpringBootRestAPI() {
             Spring Boot will automatically execute this script on application startup to create the necessary tables.
             <HighlightCode code={USER_ROLE_TABLE} language="sql" path="resources / schema.sql"/>
           </section>
-          <h2 className="text-xl mt-4">
+          <h2 className="text-xl mt-6">
             Provision PostgreSQL Database and Configure PostgreSQL Driver
           </h2>
           <section>
@@ -148,6 +211,34 @@ export default function SpringBootRestAPI() {
             <div className="pt-2">
               Make sure sql init mode is set to <code className="code-inline background">never</code> to avoid executing the schema.sql file in the production environment.
             </div>
+          </section>
+          <section className="pt-4">
+            Now, we can start the Spring Boot application and it will automatically create the necessary tables in the PostgreSQL database.
+            You can verify the tables by connecting to the PostgreSQL database using a database client like DBeaver or pgAdmin.
+          </section>
+          <h2 className="text-xl mt-6">
+            <strong>Event Creation with Spring MVC Architecture</strong>
+          </h2>
+          <section>
+            In a typical real-world application, event creation functionality is restricted to admin users. However, to keep things simple, we&apos;ll allow all
+            users to create events in this implementation. This approach will allow to focus on the technical aspects without getting into complex role-based access control at this stage.
+          </section>
+          <section className="pt-4">
+            We&apos;ll begin by implementing the backend functionality. This includes creating <code className="code-inline">Event</code> entity, defining Repository interface for database operations,
+            building service layer to handle business logic, and setting up controller to handle form submissions and page rendering.
+            <HighlightCode code={EVENT_ENTITY} language="java" path="entities / Event.java"/>
+            <HighlightCode code={EVENT_REPOSITORY} language="java" path="repositories / EventRepository.java"/>
+            <HighlightCode code={EVENT_SERVICE} language="java" path="services / EventService.java"/>
+          </section>
+          <section className="pt-4">
+            Instead of exposing REST APIs, we&apos;ll work with traditional Spring MVC patterns to support server-side rendering with Thymeleaf. Once the backend is in place, we&apos;ll test the form-based
+            submission using tools like <strong>Postman</strong> to ensure that event data is processed and stored in database correctly.
+            <HighlightCode code={EVENT_CONTROLLER} language="java" path="controllers / EventController.java"/>
+          </section>
+          <section className="pt-4">
+            After confirming that the API is working as expected, we&apos;ll move to the frontend part. We&apos;ll create a simple HTML form named <code className="code-inline background">create-event.html</code> inside
+            the <code className="code-inline background">resources/templates/event</code> directory. This form will allow users to input event details and submit them to the backend. The backend will process the form data
+            and save the event information in the PostgreSQL database.
           </section>
         </div>
       </article>
