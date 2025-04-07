@@ -10,7 +10,7 @@ export const AEM_USER_PERMISSION: IArticleItem = {
   publishDate: "April 11, 2025",
   modifiedDate: "April 11, 2025",
   topics: [ TOPICS.AEM_CLOUD ],
-  active: true
+  active: false
 }
 
 export const AMS_TO_AEMAACS_MIGRATION : IArticleItem = {

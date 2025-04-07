@@ -16,7 +16,7 @@ export const SPRING_BOOT_APPLICATION_USING_SPRING_INITIALIZR: IArticleItem = {
 export const SPRING_BOOT_APPLICATION_WITH_POSTGRESQL_THYMELEAF: IArticleItem = {
   title: "Develop Spring Boot Application with PostgreSQL and Thymeleaf",
   description: `In the previous article, Set Up Spring Boot Application using Spring Initializr, we covered the setup of a Spring Boot application.
-    Now, we will configure the Spring Boot application to integrate with a PostgreSQL database and implement functionality to store user profile images in an AWS S3 bucket.`,
+    Now, we will configure the Spring Boot application to integrate with a PostgreSQL database and implement event creation functionality using Spring MVC architecture.`,
   url: `${TOPICS.SPRING_BOOT.url}/develop-spring-boot-application-with-postgresql-and-thymeleaf`,
   publishDate: "April 07, 2025",
   modifiedDate: "April 07, 2025",

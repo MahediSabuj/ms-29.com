@@ -9,7 +9,7 @@ export const SETUP_SMTP_CONFIG_USING_AWS_SES: IArticleItem = {
   publishDate: "April 13, 2025",
   modifiedDate: "April 13, 2025",
   topics: [ TOPICS.AWS_SES ],
-  active: true
+  active: false
 }
 
 export const VERIFY_IDENTITIES_IN_AWS_SES: IArticleItem = {

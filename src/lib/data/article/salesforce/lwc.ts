@@ -22,7 +22,7 @@ export const SETUP_LWC_LOCAL_DEVELOPMENT_ENVIRONMENT: IArticleItem = {
   publishDate: "April 16, 2025",
   modifiedDate: "April 16, 2025",
   topics: [ TOPICS.SF_LWC ],
-  active: true
+  active: false
 }
 
 export const SF_LWC: IArticleItem[] = [

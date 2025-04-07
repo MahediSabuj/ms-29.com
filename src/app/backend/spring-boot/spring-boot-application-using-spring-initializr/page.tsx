@@ -92,7 +92,7 @@ export default function SpringBootApplication() {
             For IntelliJ IDEA, project will be set up on your local machine. You can start building your Spring Boot application by creating controllers, services, and repositories.
           </section>
           <section className="pt-4">
-            We will discuss how to configure the Spring Boot application, create REST APIs, and interact with the database in the upcoming articles. Please keep an eye on the website for more updates.
+            We will discuss how to configure the Spring Boot application, and interact with the database in the upcoming articles. Please keep an eye on the website for more updates.
           </section>
         </div>
       </article>

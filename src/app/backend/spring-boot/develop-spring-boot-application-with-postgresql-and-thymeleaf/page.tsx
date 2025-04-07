@@ -15,6 +15,7 @@ import {
 } from "@/lib/data/article/backend/spring-boot";
 
 import EVENT_REGISTRATION_SYSTEM_DB_DIAGRAM from "./assets/event-registration-db-diagram.png";
+import EVENT_CREATE_POSTMAN from "./assets/event-create-postman.png";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -37,7 +38,6 @@ CREATE TABLE IF NOT EXISTS users (
   email_address VARCHAR(100) UNIQUE NOT NULL,
   password VARCHAR(100) NOT NULL,
   profile_image VARCHAR(100),
-  terms_accepted boolean NOT NULL,
   user_role_id INT NOT NULL REFERENCES user_roles(id)
 );
 
@@ -56,7 +56,6 @@ CREATE TABLE IF NOT EXISTS event_participants (
   id SERIAL PRIMARY KEY,
   user_id INT NOT NULL REFERENCES users(id),
   event_id INT NOT NULL REFERENCES events(id),
-  registration_datetime TIMESTAMP NOT NULL,
   UNIQUE (user_id, event_id)
 );`
 
@@ -147,10 +146,82 @@ public class EventController {
     eventService.createEvent(event);
     return "redirect:/event/list";
   }
+  
+  @GetMapping("/list")
+  public String listEvents(Model model) {
+    model.addAttribute("events", eventService.getAllEvents());
+    return "event/list";
+  }
 }`;
 
 const EVENT_FORM =
-``;
+`<form class="pt-6 space-y-4" th:action="@{/event/create}"
+    th:object="\${event}" method="post">
+  <div>
+    <label for="eventName"
+        class="block mb-2 text-sm font-medium text-gray-900">
+      Event Name <span class="text-red-400">*</span>
+    </label>
+    <input type="text" id="eventName" th:field="*{eventName}" required
+        class="border-gray-300 shadow-sm bg-gray-50 border text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:outline-none"/>
+  </div>
+  <div>
+    <label for="eventDescription"
+        class="block mb-2 text-sm font-medium text-gray-900">
+      Event Description <span class="text-red-400">*</span>
+    </label>
+    <textarea id="eventDescription" th:field="*{eventDescription}" required rows="4"
+        class="border-gray-300 shadow-sm bg-gray-50 border text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:outline-none"></textarea>
+  </div>
+  <div>
+    <label for="eventLocation"
+        class="block mb-2 text-sm font-medium text-gray-900">
+      Event Location <span class="text-red-400">*</span>
+    </label>
+    <input type="text" id="eventLocation" th:field="*{eventLocation}" required
+        class="border-gray-300 shadow-sm bg-gray-50 border text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:outline-none"/>
+  </div>
+  <div class="grid md:grid-cols-2 md:gap-6">
+    <div class="relative z-0 w-full group">
+      <label for="eventStartDatetime"
+          class="block mb-2 text-sm font-medium text-gray-900">
+        Event Start Date & Time <span class="text-red-400">*</span>
+      </label>
+      <input type="datetime-local" id="eventStartDatetime" th:field="*{eventStartDatetime}" required
+          class="border-gray-300 shadow-sm bg-gray-50 border text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:outline-none"/>
+    </div>
+    <div class="relative z-0 w-full group pt-4 sm:pt-0">
+      <label for="eventEndDatetime"
+          class="block mb-2 text-sm font-medium text-gray-900">
+        Event End Date & Time <span class="text-red-400">*</span>
+      </label>
+      <input type="datetime-local" id="eventEndDatetime" th:field="*{eventEndDatetime}" required
+          class="border-gray-300 shadow-sm bg-gray-50 border text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:outline-none"/>
+    </div>
+  </div>
+  <div class="grid md:grid-cols-2 md:gap-6">
+    <div class="relative z-0 w-full group">
+      <label for="registrationStartDatetime"
+          class="block mb-2 text-sm font-medium text-gray-900">
+        Registration Start Date & Time <span class="text-red-400">*</span>
+      </label>
+      <input type="datetime-local" id="registrationStartDatetime" th:field="*{registrationStartDatetime}" required
+          class="border-gray-300 shadow-sm bg-gray-50 border text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:outline-none"/>
+    </div>
+    <div class="relative z-0 w-full group pt-4 sm:pt-0">
+      <label for="registrationEndDatetime"
+          class="block mb-2 text-sm font-medium text-gray-900">
+        Registration End Date & Time <span class="text-red-400">*</span>
+      </label>
+      <input type="datetime-local" id="registrationEndDatetime" th:field="*{registrationEndDatetime}" required
+          class="border-gray-300 shadow-sm bg-gray-50 border text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:outline-none"/>
+    </div>
+  </div>
+  <button type="submit"
+      class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-gray-600 sm:w-fit focus:outline-none">
+    Save
+  </button>
+</form>`;
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
@@ -172,11 +243,11 @@ export default function SpringBootRestAPI() {
         <div>
           <section className="pt-6">
             In the previous article, <Link href="/backend/spring-boot/spring-boot-application-using-spring-initializr" className="text-blue-600" target="_blank">Set Up Spring Boot Application using Spring Initializr</Link>, we covered the setup of a Spring Boot application.
-            Now, we will configure the Spring Boot application to integrate with a PostgreSQL database and implement functionality to store user profile images in an AWS S3 bucket.
+            Now, we will configure the Spring Boot application to integrate with a PostgreSQL database and implement event creation functionality using Spring MVC architecture.
           </section>
           <section className="pt-4">
             By the end, we will develop an <strong>Event Registration System</strong> that allows users to register for an event.
-            Also, Admin to create the event and view the registered users.
+            Also, Admin to create the event and view the registered users. <strong>However, In this article, we will focus on the event creation functionality.</strong>
           </section>
           <h2 className="text-xl mt-6">
             <strong>Database Schema for Event Registration System</strong>
@@ -234,11 +305,19 @@ export default function SpringBootRestAPI() {
             Instead of exposing REST APIs, we&apos;ll work with traditional Spring MVC patterns to support server-side rendering with Thymeleaf. Once the backend is in place, we&apos;ll test the form-based
             submission using tools like <strong>Postman</strong> to ensure that event data is processed and stored in database correctly.
             <HighlightCode code={EVENT_CONTROLLER} language="java" path="controllers / EventController.java"/>
+            <Image src={EVENT_CREATE_POSTMAN} alt="Create Event Request in Postman" className="border mt-2"/>
           </section>
           <section className="pt-4">
-            After confirming that the API is working as expected, we&apos;ll move to the frontend part. We&apos;ll create a simple HTML form named <code className="code-inline background">create-event.html</code> inside
+            After confirming that API is working as expected, we&apos;ll move to frontend part. We&apos;ll create a simple HTML form named <code className="code-inline background">create.html</code> inside
             the <code className="code-inline background">resources/templates/event</code> directory. This form will allow users to input event details and submit them to the backend. The backend will process the form data
             and save the event information in the PostgreSQL database.
+            <HighlightCode code={EVENT_FORM} language="html" path="resources / templates / event / create.html"/>
+          </section>
+          <section className="pt-2">
+            You can integrate google maps API to search for event location and any date picker library to select registration and event date and time. To keep things simple, we are using a basic HTML form.
+          </section>
+          <section className="pt-6">
+            Hopefully, you have successfully created the event creation functionality using Spring Boot and PostgreSQL. In the next article, we will implement the user registration and login functionality using Spring Security.
           </section>
         </div>
       </article>
