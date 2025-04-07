@@ -316,6 +316,9 @@ export default function SpringBootRestAPI() {
           <section className="pt-2">
             You can integrate google maps API to search for event location and any date picker library to select registration and event date and time. To keep things simple, we are using a basic HTML form.
           </section>
+          <section className="pt-4">
+            You can check this GitHub Repository as a reference, <Link href="https://github.com/MahediSabuj/event-registration/tree/v1.0.0" className="text-blue-600" target="_blank">https://github.com/MahediSabuj/event-registration/tree/v1.0.0</Link>
+          </section>
           <section className="pt-6">
             Hopefully, you have successfully created the event creation functionality using Spring Boot and PostgreSQL. In the next article, we will implement the user registration and login functionality using Spring Security.
           </section>
