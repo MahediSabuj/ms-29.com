@@ -99,7 +99,8 @@ export default function PopulateSelectOptions() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <section className="pt-6">
           Creating dynamic and interactive components can significantly enhance the authoring experience. One effective enhancement is dynamically
           populating the options of a select field within a component dialog. This is especially useful when the options need to be fetched from an

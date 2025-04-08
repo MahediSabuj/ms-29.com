@@ -153,7 +153,7 @@ export const SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD : IArticleItem = {
   url: "/aem/cloud/setting-up-custom-domain-aem-cloud",
   publishDate: "September 18, 2024",
   modifiedDate: "September 18, 2024",
-  views: 105,
+  views: 115,
   description: `It is good practice to have a Domain for your site that is memorable for customer and reflects your brand's identity.
     Adding a custom domain name in AEMaaCS requires interaction between DNS service and Cloud Manager. A user must be a member of Business 
     Owner or Deployment Manager role to complete this task.`,
