@@ -33,8 +33,7 @@ export default function UnusedAssetCleanup() {
         <div>
           <section className="pt-6">
             In asset management, it becomes apparent that certain assets are no longer referenced with any pages. It&apos;s recommended 
-            to delete these unused images from the asset repository. This not only decreases the size of the AEM instance but also 
-            improves search/query performance.
+            to delete these unused images from asset repository. This not only decreases size of AEM instance but also improves search/query performance.
           </section>
         </div>  
       </article>

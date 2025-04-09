@@ -302,14 +302,14 @@ export default function SpringBootRestAPI() {
             <HighlightCode code={EVENT_SERVICE} language="java" path="services / EventService.java"/>
           </section>
           <section className="pt-4">
-            Instead of exposing REST APIs, we&apos;ll work with traditional Spring MVC patterns to support server-side rendering with Thymeleaf. Once the backend is in place, we&apos;ll test the form-based
+            Instead of exposing REST APIs, we&apos;re working with traditional Spring MVC patterns to support server-side rendering with Thymeleaf. Once the backend is in place, we can test the form-based
             submission using tools like <strong>Postman</strong> to ensure that event data is processed and stored in database correctly.
             <HighlightCode code={EVENT_CONTROLLER} language="java" path="controllers / EventController.java"/>
             <Image src={EVENT_CREATE_POSTMAN} alt="Create Event Request in Postman" className="border mt-2"/>
           </section>
           <section className="pt-4">
-            After confirming that API is working as expected, we&apos;ll move to frontend part. We&apos;ll create a simple HTML form named <code className="code-inline background">create.html</code> inside
-            the <code className="code-inline background">resources/templates/event</code> directory. This form will allow users to input event details and submit them to the backend. The backend will process the form data
+            After confirming that API is working as expected, we move to frontend part. We&apos;ll create a simple HTML form named <code className="code-inline background">create.html</code> inside
+            the <code className="code-inline background">resources/templates/event</code> directory. This form allow users to input event details and submit them to the backend. The backend will process the form data
             and save the event information in the PostgreSQL database.
             <HighlightCode code={EVENT_FORM} language="html" path="resources / templates / event / create.html"/>
           </section>
