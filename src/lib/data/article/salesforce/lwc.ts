@@ -19,8 +19,8 @@ export const SETUP_LWC_LOCAL_DEVELOPMENT_ENVIRONMENT: IArticleItem = {
     productivity, enable faster testing, and allow integration with version control systems. This allows developers to build, debug, 
     and validate LWC applications before pushing them to Salesforce org.`,
   url: "/salesforce/lwc/setup-lwc-local-development-environment",
-  publishDate: "April 12, 2025",
-  modifiedDate: "April 12, 2025",
+  publishDate: "April 10, 2025",
+  modifiedDate: "April 10, 2025",
   topics: [ TOPICS.SF_LWC ],
   active: true
 }

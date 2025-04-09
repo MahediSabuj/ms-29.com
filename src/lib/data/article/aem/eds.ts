@@ -7,10 +7,10 @@ export const BUILD_WEBSITE_WITH_EDGE_DELIVERY_SERVICE_DOCUMENT_BASED_AUTHORING: 
     This article solely focuses on document based authoring that enables content creators to use familiar tools like Microsoft Word or Google Docs to write and 
     structure content.`,
   url: `${TOPICS.EDGE_DELIVERY_SERVICE.url}/build-website-with-edge-delivery-service-and-document-based-authoring`,
-  publishDate: "April 15, 2025",
-  modifiedDate: "April 15, 2025",
+  publishDate: "April 12, 2025",
+  modifiedDate: "April 12, 2025",
   topics: [ TOPICS.EDGE_DELIVERY_SERVICE ],
-  active: true
+  active: false
 }
 
 export const UNIVERSAL_EDITOR_IN_LOCAL_ENVIRONMENT: IArticleItem = {
