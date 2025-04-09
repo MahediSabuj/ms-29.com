@@ -7,8 +7,8 @@ export const AEM_USER_PERMISSION: IArticleItem = {
     sites with multiple content creators. User Permissions enforces strict governance over user actions like read, create, 
     modify, delete, publish contents. This mechanism ensures that only authorized users can perform these specific actions.`,
   url: "/aem/cloud/managing-user-permission-and-access-control",
-  publishDate: "April 11, 2025",
-  modifiedDate: "April 11, 2025",
+  publishDate: "April 25, 2025",
+  modifiedDate: "April 25, 2025",
   topics: [ TOPICS.AEM_CLOUD ],
   active: false
 }
@@ -16,8 +16,8 @@ export const AEM_USER_PERMISSION: IArticleItem = {
 export const AMS_TO_AEMAACS_MIGRATION : IArticleItem = {
   title: "Migration Journey to AEM as a Cloud Service",
   url: "/aem/cloud/migration-journey-to-aemaacs",
-  publishDate: "December 15, 2024",
-  modifiedDate: "December 15, 2024",
+  publishDate: "May 08, 2025",
+  modifiedDate: "May 08, 2025",
   description: ``,
   topics: [ TOPICS.AEM_CLOUD ],
   active: false
@@ -80,7 +80,7 @@ export const WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS : IArticleItem =
   url: "/aem/cloud/web-optimized-image-delivery-for-aem-custom-component",
   publishDate: "April 09, 2024",
   modifiedDate: "April 09, 2024",
-  views: 109,
+  views: 129,
   description: `Web Optimized Image Delivery feature of AEM as a Cloud service delivers image assets from
     the DAM in WebP format. WebP can reduce the download size of an image by about 25% on average, which
     results in faster page loading.`,
@@ -117,8 +117,8 @@ export const REPOSITORY_MODERNIZER: IArticleItem = {
 export const SETUP_LOCAL_AEM_DEVELOPMENT_ENVIRONMENT : IArticleItem = {
   title: "Setup Local AEM Development Environment",
   url: "/aem/cloud/set-up-local-aem-development-environment",
-  publishDate: "February 15, 2025",
-  modifiedDate: "February 15, 2025",
+  publishDate: "May 04, 2025",
+  modifiedDate: "May 04, 2025",
   description: ``,
   topics: [ TOPICS.AEM_CLOUD ],
   active: false
@@ -153,7 +153,7 @@ export const SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD : IArticleItem = {
   url: "/aem/cloud/setting-up-custom-domain-aem-cloud",
   publishDate: "September 18, 2024",
   modifiedDate: "September 18, 2024",
-  views: 115,
+  views: 126,
   description: `It is good practice to have a Domain for your site that is memorable for customer and reflects your brand's identity.
     Adding a custom domain name in AEMaaCS requires interaction between DNS service and Cloud Manager. A user must be a member of Business 
     Owner or Deployment Manager role to complete this task.`,
@@ -164,8 +164,8 @@ export const SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD : IArticleItem = {
 export const DEDICATED_IP_FOR_AEMAACS : IArticleItem = {
   title: "Dedicated egress IP using Advanced Networking in AEMaaCS",
   url: "/aem/cloud/dedicated-egress-ip-using-advanced-networking",
-  publishDate: "April 26, 2025",
-  modifiedDate: "April 26, 2025",
+  publishDate: "April 30, 2025",
+  modifiedDate: "April 30, 2025",
   description: `Due to the organization's networking policy, certain applications may need to be hosted behind a firewall, accessible only through 
     specific whitelisted IP addresses. In terms of AEMaaCS, Cloud Environment IP range is large and dynamic, is not shared with customers for whitelisting.
     To address this issue, Adobe provides a solution to assign a dedicated egress IP address to your AEMaaCS environment using Advanced Networking so that 
@@ -177,8 +177,8 @@ export const DEDICATED_IP_FOR_AEMAACS : IArticleItem = {
 export const SETUP_RDE_FOR_AEM_CLOUD : IArticleItem = {
   title: "Setup Rapid Development Environments for AEM Cloud",
   url: "/aem/cloud/setup-rapid-development-environment",
-  publishDate: "December 03, 2024",
-  modifiedDate: "December 03, 2024",
+  publishDate: "April 28, 2025",
+  modifiedDate: "April 28, 2025",
   description: ``,
   topics: [ TOPICS.AEM_CLOUD ],
   active: false

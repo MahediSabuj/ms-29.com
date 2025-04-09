@@ -8,6 +8,7 @@ import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Article from "@/components/article/article";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
+import HighlightCode from "@/components/highlight/highlight";
 
 import {
   BUILD_WEBSITE_WITH_EDGE_DELIVERY_SERVICE_DOCUMENT_BASED_AUTHORING as ARTICLE
@@ -16,6 +17,7 @@ import {
 import EDS_DOCUMENT_BASED_WEBSITE from "./assets/eds-document-based-website.png";
 import AEM_SIDEKICK_CHROME_EXTENSION from "./assets/aem-sidekick-chrome-extension.png";
 import SHARE_WITH_AEM_USER from "./assets/share-with-aem-user.png";
+import AEM_SIDEKICK_TOOLBAR from "./assets/aem-sidekick-toolbar.png";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -104,6 +106,39 @@ export default function DocumentSite() {
             To preview and publish content, author has to install <Link href="https://chromewebstore.google.com/detail/aem-sidekick/igkmdomcgoebiipaifhmpfjhbjccggml" target="_blank" className="text-blue-600">AEM Sidekick</Link> Chrome extension.
             After installing the extension in Chrome, make sure to pin it for quick and easy access.
             <Image src={AEM_SIDEKICK_CHROME_EXTENSION} alt="AEM Sidekick Chrome Extension" className="my-2 border"/>
+          </section>
+          <section className="pt-4">
+            Navigate to the <strong>Google Drive folder</strong> and activate the AEM Sidekick by clicking on your pinned extension. A new toolbar will appear on the bottom of the screen.
+            <Image src={AEM_SIDEKICK_TOOLBAR} alt="AEM Sidekick Toolbar" className="my-2 border"/>
+            <div className="mt-2">
+              Click on the <strong>Preview</strong> button to view content in preview environment and the <strong>Publish</strong> button to publish the content to live environment.
+              Content must be previewed before it can be published — publishing without previewing will not be successful.
+            </div>
+          </section>
+          <section className="pt-4">
+            You can update the content directly in your Google Drive folder. Any changes you make will appear in preview and live environment once you click the respective buttons.
+          </section>
+          <h2 className="text-xl mt-4">
+            Development in Local Environment
+          </h2>
+          <section>
+            To get started with development, install the AEM Command Line Interface (CLI).
+            <HighlightCode code="npm install -g @adobe/aem-cli" language="shell" path=""/>
+          </section>
+          <section className="pt-4">
+            From the project directory where you cloned the repository, start your local development environment using the following command.
+            <HighlightCode code="aem up" language="shell" path=""/>
+            <div className="pt-2">
+              This will launch <Link href="http://localhost:3000" className="text-blue-600" target="_blank">http://localhost:3000</Link> and you are ready to make changes.
+              You can make changes in the <code className="code-inline">blocks</code> folder, typically in <code className="code-inline">.css</code> or <code className="code-inline">.js</code> file and
+              you should see the changes in your browser immediately.
+            </div>
+            <div className="pt-2">
+              Once you&apos;re ready and push the changes to GitHub, the updates will be visible in both the preview and live environments immediately. No AEM Sidekick preview or publish action is needed for code changes.
+            </div>
+          </section>
+          <section className="pt-6">
+            Hopefully this article has provided you with a good understanding of how to set up and use document based authoring with Edge Delivery Service. If you have any questions or feedback, please feel free to reach out.
           </section>
         </div>
       </article>

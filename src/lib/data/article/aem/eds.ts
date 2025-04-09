@@ -10,7 +10,7 @@ export const BUILD_WEBSITE_WITH_EDGE_DELIVERY_SERVICE_DOCUMENT_BASED_AUTHORING: 
   publishDate: "April 12, 2025",
   modifiedDate: "April 12, 2025",
   topics: [ TOPICS.EDGE_DELIVERY_SERVICE ],
-  active: false
+  active: true
 }
 
 export const UNIVERSAL_EDITOR_IN_LOCAL_ENVIRONMENT: IArticleItem = {
