@@ -104,6 +104,14 @@ const TOPICS: Topics = {
   IAC: {
     title: "Infrastructure as Code",
     url: "/devops/iac"
+  },
+  SYSTEM_DESIGN: {
+    title: "System Design",
+    url: "/system/design"
+  },
+  SYSTEM_ARCHITECTURE: {
+    title: "System Architecture",
+    url: "/system/architecture"
   }
 }
 

@@ -59,7 +59,7 @@ export default function DocumentSite() {
             Edge Delivery Service. Use this template to create a new repository in your GitHub account.
           </section>
           <section className="pt-4">
-            Next, install the <Link href="https://github.com/apps/aem-code-sync/installations/new" className="text-blue-600" target="_blank">AEM Code Sync GitHub</Link> app to your GitHub account
+            Next, install the <Link href="https://github.com/apps/aem-code-sync/installations/new" className="text-blue-600" target="_blank">AEM Code Sync</Link> GitHub app to your GitHub account
             and provide access to the repository created in the previous step. Afterward, you&apos;ll be able to view the website in both preview and live mode.
             <ul className="list-disc ml-6 pt-1 pl-2.5">
               <li><strong>Preview</strong>: <Link href="https://main--{repo}--{owner}.aem.page" className="text-blue-600" target="_blank">{'https://main--{repo}--{owner}.aem.page'}</Link></li>

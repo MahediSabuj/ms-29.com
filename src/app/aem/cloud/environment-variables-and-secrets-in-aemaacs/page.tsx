@@ -36,7 +36,8 @@ export default function EnvironmentVariable() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <section className="pt-6">
           Environment variables allow AEM code and applications to adapt based on context, enabling different configurations for development, production, or staging
           environments. They can be updated or deleted as needed, no code changes or deployments required. By separating code from configuration, they enhance security
