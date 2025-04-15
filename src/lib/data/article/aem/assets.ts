@@ -23,7 +23,7 @@ export const UNUSED_ASSET_CLEANUP : IArticleItem = {
   publishDate: "April 15, 2025",
   modifiedDate: "April 15, 2025",
   topics: [ TOPICS.AEM_ASSETS ],
-  active: true
+  active: false
 }
 
 export const CUSTOM_SEARCH_FACETS_AEM_ASSETS: IArticleItem = {
