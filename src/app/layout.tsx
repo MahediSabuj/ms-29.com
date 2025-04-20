@@ -17,6 +17,7 @@ import sql from 'highlight.js/lib/languages/sql';
 import terraform from '@/lib/highlightjs/terraform';
 import xml from 'highlight.js/lib/languages/xml';
 import yaml from 'highlight.js/lib/languages/yaml';
+import ini from 'highlight.js/lib/languages/ini';
 
 import "./globals.scss";
 import 'highlight.js/styles/default.css';
@@ -29,6 +30,7 @@ import Sidebar from "./sidebar";
 
 hljs.registerLanguage('apache', apache);
 hljs.registerLanguage('bash', bash);
+hljs.registerLanguage('ini', ini);
 hljs.registerLanguage('java', java);
 hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('json', json);
