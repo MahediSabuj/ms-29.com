@@ -122,13 +122,13 @@ export default function UnusedAssetCleanup() {
                 to read asset path and reference count. Apache POI included in AEM Jar by default so you don&apos;t need to add any additional dependencies.
               </li>
               <li>
-                Use Sling Job to delete the a sets in the background. This is important because deleting a large number of assets can take time and you don&apos;t want to block the request.
+                Use Sling Job to delete the assets in the background. This is important because deleting a large number of assets can take time and you don&apos;t want to block the request.
               </li>
               <li>Using RepoInit, Create a Service User and provide necessary permission to delete assets from the asset repository.</li>
               <li>Retrieve ResourceResolver using Service User mapping.</li>
               <li>Finally, delete the assets using ResourceResolver.</li>
             </ul>
-            Additionally, you can sent an email notification once the job is completed mentioning the status of each asset deletion. You can find
+            Additionally, you can send an email notification once the job is completed mentioning the status of each asset deletion. You can find
             the sample implementation here: <Link href="https://github.com/MahediSabuj/aem-commons/pull/1/files" className="text-blue-600" target="_blank">https://github.com/MahediSabuj/aem-commons/pull/1/files</Link>.
           </section>
           <section className="pt-6">
