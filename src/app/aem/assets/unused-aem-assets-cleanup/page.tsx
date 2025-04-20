@@ -129,7 +129,16 @@ export default function UnusedAssetCleanup() {
               <li>Finally, delete the assets using ResourceResolver.</li>
             </ul>
             Additionally, you can sent an email notification once the job is completed mentioning the status of each asset deletion. You can find
-            the sample implementation here: <Link href="https://github.com/MahediSabuj/aem-commons/pull/1/files" className="text-blue-600" target="_blank">https://github.com/MahediSabuj/aem-commons/pull/1/files</Link>
+            the sample implementation here: <Link href="https://github.com/MahediSabuj/aem-commons/pull/1/files" className="text-blue-600" target="_blank">https://github.com/MahediSabuj/aem-commons/pull/1/files</Link>.
+          </section>
+          <section className="pt-6">
+            The above approach using ACS Commons reports and a custom Sling Servlet involves manual steps, first generating and downloading the Excel report, then
+            uploading it as a request payload (e.g., via Postman) to trigger the deletion process.
+          </section>
+          <section className="pt-4">
+            As an automated alternative, you can implement a Custom Managed Controlled Process (MCP) and initiate it directly from the ACS Commons interface. This
+            streamlines the workflow by eliminating manual intervention. We will discuss this in detail in one of the upcoming articles.
+            {/*For implementation guidance, refer to the article, <Link href="/aem/acs-commons/create-custom-mcp-process-in-acs-commons" className="text-blue-600" target="_blank">Create Custom MCP Process in ACS Commons</Link>.*/}
           </section>
         </div>
       </article>
