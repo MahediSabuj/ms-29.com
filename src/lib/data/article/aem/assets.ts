@@ -20,18 +20,18 @@ export const UNUSED_ASSET_CLEANUP : IArticleItem = {
   description: `In asset management, it becomes apparent that certain assets are no longer referenced with any pages. It's recommended 
     to delete these unused images from asset repository. This not only decreases size of AEM instance but also improves search/query performance.`,
   url: "/aem/assets/unused-aem-assets-cleanup",
-  publishDate: "April 15, 2025",
-  modifiedDate: "April 15, 2025",
+  publishDate: "April 20, 2025",
+  modifiedDate: "April 20, 2025",
   topics: [ TOPICS.AEM_ASSETS ],
-  active: false
+  active: true
 }
 
 export const CUSTOM_SEARCH_FACETS_AEM_ASSETS: IArticleItem = {
   title: "Custom Search Facets in AEM Assets",
   description: ``,
   url: "/aem/assets/custom-search-facets-in-aem-assets",
-  publishDate: "April 20, 2025",
-  modifiedDate: "April 20, 2025",
+  publishDate: "April 23, 2025",
+  modifiedDate: "April 23, 2025",
   topics: [ TOPICS.AEM_ASSETS ],
   active: false
 }

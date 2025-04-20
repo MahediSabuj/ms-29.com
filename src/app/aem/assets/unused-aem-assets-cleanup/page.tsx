@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
@@ -108,7 +109,38 @@ export default function UnusedAssetCleanup() {
             You can manually delete the assets from the AEM instance. Make sure to unpublish the assets before deleting them.
             However, if you have a large number of assets to delete, it&apos;s more efficient to automate the deletion using a servlet, or Groovy script.
           </section>
-        </div>  
+          <h2 className="text-xl mt-4">
+            <strong>Bulk Asset Delete using Sling Servlet</strong>
+          </h2>
+          <section>
+            The downloaded Excel report can be used as input for Sling Servlet to handle bulk delete operations. The servlet will read the
+            Excel file and delete all the assets that are not referenced on any page. The servlet can be implemented as follows:
+            <ul className="list-disc ml-6 py-1 pl-2.5">
+              <li>Create a Sling Servlet that accepts the Excel file as input.</li>
+              <li>
+                Use Apache POI to read Excel file and extract the list of unused assets. Based on your excel report, you can update index
+                to read asset path and reference count. Apache POI included in AEM Jar by default so you don&apos;t need to add any additional dependencies.
+              </li>
+              <li>
+                Use Sling Job to delete the assets in the background. This is important because deleting a large number of assets can take time and you don&apos;t want to block the request.
+              </li>
+              <li>Using RepoInit, Create a Service User and provide necessary permission to delete assets from the asset repository.</li>
+              <li>Retrieve ResourceResolver using Service User mapping.</li>
+              <li>Finally, delete the assets using ResourceResolver.</li>
+            </ul>
+            Additionally, you can send an email notification once the job is completed mentioning the status of each asset deletion. You can find
+            the sample implementation here: <Link href="https://github.com/MahediSabuj/aem-commons/pull/1/files" className="text-blue-600" target="_blank">https://github.com/MahediSabuj/aem-commons/pull/1/files</Link>.
+          </section>
+          <section className="pt-6">
+            The above approach using ACS Commons reports and a custom Sling Servlet involves manual steps, first generating and downloading the Excel report, then
+            uploading it as a request payload (e.g., via Postman) to trigger the deletion process.
+          </section>
+          <section className="pt-4">
+            As an automated alternative, you can implement a Custom Managed Controlled Process (MCP) and initiate it directly from the ACS Commons interface. This
+            streamlines the workflow by eliminating manual intervention. We will discuss this in detail in one of the upcoming articles.
+            {/*For implementation guidance, refer to the article, <Link href="/aem/acs-commons/create-custom-mcp-process-in-acs-commons" className="text-blue-600" target="_blank">Create Custom MCP Process in ACS Commons</Link>.*/}
+          </section>
+        </div>
       </article>
       <div className="mt-8 mb-4">
         <ArticleReviewList items={[]}/>
