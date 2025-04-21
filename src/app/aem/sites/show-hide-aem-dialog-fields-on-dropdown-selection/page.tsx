@@ -236,7 +236,7 @@ export default function ShowHideDialogFields() {
             According to the <code className="code-inline">_cq_dialog</code> configuration provided above, the Color Code option will be displayed 
             only when Background Color is selected in the Background Config. Otherwise, the Color Code field will remain hidden in the dialog.
           </section>
-          <h2 className="text-xl mt-4">
+          <h2 className="text-xl mt-4" id="show-hide-multiple-options">
             <strong>Show/Hide Fields for Multiple Options</strong>
           </h2>
           <section>
