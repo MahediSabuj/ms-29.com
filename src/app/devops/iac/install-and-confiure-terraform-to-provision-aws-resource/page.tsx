@@ -8,6 +8,7 @@ import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import TOPICS from "@/lib/data/article/topics";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
+import HighlightCode from "@/components/highlight/highlight";
 
 import {
   INSTALL_AND_CONFIGURE_TERRAFORM as ARTICLE
@@ -40,7 +41,24 @@ export default function TerraformSetup() {
           modifiedDate={ARTICLE.modifiedDate}/>
         <div>
           <section className="pt-6">
-            Infrastructure as Code (IaC) helps automate cloud resource setup, one of the leading tools in the IaC space is Terraform by HashiCorp.
+            Infrastructure as Code (IaC) is changing how teams build and manage cloud infrastructure by turning manual processes into code. Terraform, developed by HashiCorp,
+            is one of the most popular tools in the IaC space. It allows you to define and provision infrastructure using a declarative configuration language and supports a
+            wide range of cloud providers, including AWS, Azure, and Google Cloud.
+          </section>
+          <h2 className="text-xl mt-4" id="salesforce-cli">
+            <strong>Install Terraform</strong>
+          </h2>
+          <section>
+            <ul className="list-disc ml-6 pt-1 pl-2.5">
+              <li>
+                Install from <Link href="https://developer.hashicorp.com/terraform/install" className="text-blue-600" target="_blank">
+                https://developer.hashicorp.com/terraform/install</Link>.
+              </li>
+              <li>
+                Verify the installation using following command:
+                <HighlightCode code="terraform -v" language="shell" path=""/>
+              </li>
+            </ul>
           </section>
         </div>
       </article>
