@@ -42,6 +42,7 @@ export const ENVIRONMENT_VARIABLES_AND_SECRETS : IArticleItem = {
   url: "/aem/cloud/environment-variables-and-secrets-in-aemaacs",
   publishDate: "September 03, 2024",
   modifiedDate: "September 03, 2024",
+  views: 112,
   description: `Environment variables allow AEM code and applications to adapt based on context, enabling different configurations 
     for development, production, or staging environments. They can be updated or deleted as needed, no code changes or deployments 
     required. By separating code from configuration, they enhance security and keep sensitive information out of version control.`,
@@ -80,7 +81,7 @@ export const WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS : IArticleItem =
   url: "/aem/cloud/web-optimized-image-delivery-for-aem-custom-component",
   publishDate: "April 09, 2024",
   modifiedDate: "April 09, 2024",
-  views: 129,
+  views: 136,
   description: `Web Optimized Image Delivery feature of AEM as a Cloud service delivers image assets from
     the DAM in WebP format. WebP can reduce the download size of an image by about 25% on average, which
     results in faster page loading.`,
@@ -109,7 +110,7 @@ export const REPOSITORY_MODERNIZER: IArticleItem = {
   url: "/aem/cloud/repository-modernizer-update-archetype",
   publishDate: "August 11, 2024",
   modifiedDate: "August 11, 2024",
-  views: 134,
+  views: 173,
   topics: [ TOPICS.AEM_CLOUD ],
   active: true
 }
@@ -153,7 +154,7 @@ export const SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD : IArticleItem = {
   url: "/aem/cloud/setting-up-custom-domain-aem-cloud",
   publishDate: "September 18, 2024",
   modifiedDate: "September 18, 2024",
-  views: 126,
+  views: 132,
   description: `It is good practice to have a Domain for your site that is memorable for customer and reflects your brand's identity.
     Adding a custom domain name in AEMaaCS requires interaction between DNS service and Cloud Manager. A user must be a member of Business 
     Owner or Deployment Manager role to complete this task.`,

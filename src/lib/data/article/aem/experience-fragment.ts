@@ -9,10 +9,11 @@ export const CACHING_EXPERIENCE_FRAGMENTS : IArticleItem = {
   url: "/aem/experience-fragment/caching-experience-fragments",
   publishDate: "May 28, 2024",
   modifiedDate: "May 28, 2024",
+  views: 101,
   topics: [ TOPICS.EXPERIENCE_FRAGMENT ],
   active: true
 }
 
 export const EXPERIENCE_FRAGMENT: IArticleItem[] = [
-    CACHING_EXPERIENCE_FRAGMENTS
+  CACHING_EXPERIENCE_FRAGMENTS
 ].filter(m => m.active);
