@@ -110,7 +110,8 @@ export default function CustomOsgiConfig() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <div>
           <section className="pt-6">
             OSGi Configuration allow us to configure run-mode specific properties. All the out-of-the-box OSGi configurations 
