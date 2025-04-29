@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 
 import aem_expert_certification from './assets/Adobe_Certified_Master_Experience_Cloud_products_Digital_Badge.webp';
+import salesforce_certified_ai_associate from './assets/Salesforce_Certified_AI_Associate.png';
 import adobe_developer_certification from './assets/Adobe_Certified_Expert_Experience_Cloud_products_Digital_Badge.webp';
 import salesforce_platform_developer_certification from './assets/Salesforce_Certified_Platform_Developer_I.webp';
 import salesforce_javascript_developer_certification from './assets/Salesforce_Certified_JavaScript_Developer_I.webp';
@@ -24,6 +25,11 @@ interface Certification {
 }
 
 const certifications: Certification[] = [{
+  title: "Salesforce Certified AI Associate",
+  issued: "April 2025",
+  badge: salesforce_certified_ai_associate,
+  url: "https://www.salesforce.com/trailblazer/mahedi-sabuj"
+},{
   title: "Salesforce Certified JavaScript Developer I",
   issued: "Mar 2024",
   badge: salesforce_javascript_developer_certification,
