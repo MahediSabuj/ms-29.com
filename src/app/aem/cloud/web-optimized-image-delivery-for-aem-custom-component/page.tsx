@@ -7,6 +7,8 @@ import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Highlight from "@/components/highlight/highlight";
 import FAQ from "@/components/faq/faq";
 import TOPICS from "@/lib/data/article/topics";
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
 
 import { WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS as ARTICLE } from "@/lib/data/article/aem/cloud";
 
@@ -150,6 +152,10 @@ export default function WebOptimizedImageDelivery() {
         answer: `Consider creating an OSGi service that acts as a proxy for the AssetDelivery OSGi Service, then utilize this 
           proxy OSGi service for all Sling Models instead of directly accessing the AssetDelivery API from each Sling Model.`
       }]}/>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }

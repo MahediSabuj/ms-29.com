@@ -28,12 +28,14 @@ export const UNUSED_ASSET_CLEANUP : IArticleItem = {
 
 export const CUSTOM_SEARCH_FACETS_AEM_ASSETS: IArticleItem = {
   title: "Custom Search Facets in AEM Assets",
-  description: ``,
+  description: `Search Facet allow authors to filter assets based on metadata. While AEM provides default search facets out-of-the-box (like file
+    type, file size, status), many organizations have unique metadata requirements. That's where custom search facets come in — they let you tailor 
+    the search experience to better suit your organization's specific asset metadata and workflows.`,
   url: "/aem/assets/custom-search-facets-in-aem-assets",
-  publishDate: "April 23, 2025",
-  modifiedDate: "April 23, 2025",
+  publishDate: "May 03, 2025",
+  modifiedDate: "May 03, 2025",
   topics: [ TOPICS.AEM_ASSETS ],
-  active: false
+  active: true
 }
 
 export const AEM_ASSETS: IArticleItem[] = [
