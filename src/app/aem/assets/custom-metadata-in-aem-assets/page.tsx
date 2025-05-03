@@ -4,6 +4,9 @@ import Image from "next/image";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
+
 import { CUSTOM_METADATA_AEM_ASSETS as ARTICLE } from "@/lib/data/article/aem/assets";
 
 import CUSTOM_METADATA_SCHEMA from './assets/Custom_MetaData_Schema.webp';
@@ -80,6 +83,10 @@ export default function CustomMetadata() {
           </section>
         </div>
       </article>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }
