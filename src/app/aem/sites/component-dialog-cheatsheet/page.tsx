@@ -536,7 +536,7 @@ export default function DialogCheatSheet() {
                 </Link>
               </div>
             </div>
-            <div className="pt-4">
+            <div className="pt-4" id="color-field">
               <Highlight code={colorfield} language="xml" path="Color Field"/>
               <div>
                 <strong>Reference: </strong>
@@ -599,7 +599,7 @@ export default function DialogCheatSheet() {
                 </Link>
               </div>
             </div>
-            <div className="pt-4">
+            <div className="pt-4" id="include">
               <Highlight code={include} language="xml" path="Include"/>
               <div>
                 <strong>Reference: </strong>
