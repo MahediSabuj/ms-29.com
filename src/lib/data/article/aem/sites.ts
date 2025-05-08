@@ -26,11 +26,31 @@ export const AEM_COMPONENT_DIALOG_CHEATSHEET: IArticleItem = {
   active: true
 }
 
+export const AEM_SERVICE_USERS_USING_REPOINIT_AND_RESOURCE_RESOLVER: IArticleItem = {
+  title: "AEM Service Users using RepoInit, Mapping and Resource Resolver",
+  url: "/aem/sites/aem-service-users-using-repoinit-mapping-and-resource-resolver",
+  publishDate: "May 25, 2025",
+  modifiedDate: "May 25, 2025",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
+}
+
+export const APACHE_SLING_SERVLET_IN_AEM : IArticleItem = {
+  title: "Apache Sling Servlet in AEM",
+  url: "/aem/sites/apache-sling-servlet-in-aem",
+  publishDate: "May 08, 2025",
+  modifiedDate: "May 08, 2025",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
+}
+
 export const APACHE_SLING_SITEMAP_GENERATOR: IArticleItem = {
   title: "Apache Sling Sitemap Generator for AEM",
   url: "/aem/sites/apache-sling-sitemap-generator",
-  publishDate: "March 30, 2025",
-  modifiedDate: "March 30, 2025",
+  publishDate: "May 23, 2025",
+  modifiedDate: "May 23, 2025",
   description: `Sitemap is essential for any website, an XML file that provides the pages of the website, allowing search engines 
     like Google to efficiently crawl and index web pages. AEM offers Apache Sling Sitemap Generator, dynamically generating XML 
     sitemap based on the content structure and updating them with any page creation, deletion, or modification.`,
@@ -212,6 +232,18 @@ export const PROJECT_LOMBOK_IN_AEM_PROJECTS: IArticleItem = {
   active: true
 }
 
+export const REUSE_COMMON_DIALOG_PARTS_IN_AEM_COMPONENTS: IArticleItem = {
+  title: "Reuse Common Dialog Parts in AEM Components",
+  description: `In AEM development, it's common to encounter scenarios where the same set of dialog fields such as alternative text 
+    for an image, or text and background color options are needed across multiple components. Traditionally, developers might copy-paste 
+    these dialog configurations into each component, but this leads to code duplication and maintenance headaches.`,
+  url: "/aem/sites/reuse-common-dialog-parts-in-aem-components",
+  publishDate: "May 08, 2025",
+  modifiedDate: "May 08, 2025",
+  topics: [ TOPICS.AEM_SITES ],
+  active: true
+}
+
 export const QUERY_BUILDER_CHEATSHEET: IArticleItem = {
   title: "Query Builder CheatSheet",
   description: `Query Builder offers an easy way of querying the content repository of AEM. The API is
@@ -250,6 +282,16 @@ export const SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION : IArticleItem = {
   active: true
 }
 
+export const SLING_JOBS_IN_AEM : IArticleItem = {
+  title: "Sling Jobs in AEM",
+  url: "/aem/sites/sling-jobs-in-aem",
+  publishDate: "June 15, 2025",
+  modifiedDate: "June 15, 2025",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
+}
+
 export const SLING_MAPPINGS_FOR_RESOURCE_RESOLUTION : IArticleItem = {
   title: "Sling Mappings for Resource Resolution",
   url: "/aem/sites/sling-mappings-for-resource-resolution",
@@ -279,8 +321,8 @@ export const SLING_MODEL_INJECTORS_ANNOTATIONS: IArticleItem = {
     injector-specific annotations, used to inject values. For each injector there is a specialized annotation 
     available.`,
   url: "/aem/sites/sling-model-injectors-annotations",
-  publishDate: "May 05, 2025",
-  modifiedDate: "May 05, 2025",
+  publishDate: "May 18, 2025",
+  modifiedDate: "May 18, 2025",
   topics: [ TOPICS.AEM_SITES ],
   active: false
 }
@@ -323,6 +365,8 @@ export const START_AEM_IN_DEBUG_MODE : IArticleItem = {
 export const AEM_SITES : IArticleItem[] = [
   ADAPTIVE_IMAGE_SERVLET_FOR_CUSTOM_COMPONENTS,
   AEM_COMPONENT_DIALOG_CHEATSHEET,
+  AEM_SERVICE_USERS_USING_REPOINIT_AND_RESOURCE_RESOLVER,
+  APACHE_SLING_SERVLET_IN_AEM,
   APACHE_SLING_SITEMAP_GENERATOR,
   CONTEXT_AWARE_CONFIGURATION,
   CUSTOM_OSGI_CONFIGURATION,
@@ -338,9 +382,11 @@ export const AEM_SITES : IArticleItem[] = [
   INTEGRATE_ADAPTIVE_FORMS_IN_AEM_SITES,
   MULTI_SITE_MANAGER,
   PROJECT_LOMBOK_IN_AEM_PROJECTS,
+  REUSE_COMMON_DIALOG_PARTS_IN_AEM_COMPONENTS,
   QUERY_BUILDER_CHEATSHEET,
   SAML_AUTHENTICATION,
   SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION,
+  SLING_JOBS_IN_AEM,
   SLING_MAPPINGS_FOR_RESOURCE_RESOLUTION,
   SLING_MODEL_DELEGATION_PATTERN,
   SLING_MODEL_INJECTORS_ANNOTATIONS,
