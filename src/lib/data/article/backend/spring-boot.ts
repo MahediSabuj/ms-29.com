@@ -24,7 +24,18 @@ export const SPRING_BOOT_APPLICATION_WITH_POSTGRESQL_THYMELEAF: IArticleItem = {
   active: true
 }
 
+export const USER_REGISTRATION_AND_LOGIN_USING_SPRING_SECURITY: IArticleItem = {
+  title: "User Registration and Login using Spring Security",
+  description: ``,
+  url: `${TOPICS.SPRING_BOOT.url}/user-registration-and-login-using-spring-security`,
+  publishDate: "May 27, 2025",
+  modifiedDate: "May 27, 2025",
+  topics: [ TOPICS.SPRING_BOOT ],
+  active: false
+}
+
 export const SPRING_BOOT: IArticleItem[] = [
   SPRING_BOOT_APPLICATION_USING_SPRING_INITIALIZR,
-  SPRING_BOOT_APPLICATION_WITH_POSTGRESQL_THYMELEAF
+  SPRING_BOOT_APPLICATION_WITH_POSTGRESQL_THYMELEAF,
+  USER_REGISTRATION_AND_LOGIN_USING_SPRING_SECURITY
 ].filter(m => m.active);

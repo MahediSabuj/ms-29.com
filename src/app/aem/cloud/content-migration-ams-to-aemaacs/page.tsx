@@ -51,7 +51,8 @@ export default function ContentTransfer() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <div>
           <section className="pt-6">
             Content transfer is a crucial step when migrating AEM projects to AEMaaCS, especially with large volumes of content.

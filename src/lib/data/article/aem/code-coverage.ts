@@ -28,8 +28,8 @@ export const MOCK_SLING_MODEL_INJECTORS_ANNOTATIONS: IArticleItem = {
   title: "Mock Sling Model Injectors Annotations",
   description: ``,
   url: "/aem/code-coverage/mock-sling-model-injectors-annotations",
-  publishDate: "May 25, 2025",
-  modifiedDate: "May 25, 2025",
+  publishDate: "May 31, 2025",
+  modifiedDate: "May 31, 2025",
   topics: [ TOPICS.AEM_CODE_COVERAGE ],
   active: false
 }

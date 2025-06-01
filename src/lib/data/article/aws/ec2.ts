@@ -9,7 +9,7 @@ export const INSTALL_SSL_CERTIFICATE_FROM_PFX_FILE: IArticleItem = {
   url: "/aws/ec2/install-ssl-certificate-from-pfx-file",
   publishDate: "March 24, 2024",
   modifiedDate: "March 24, 2024",
-  views: 179,
+  views: 192,
   topics: [ TOPICS.AWS_EC2 ],
   active: true
 }

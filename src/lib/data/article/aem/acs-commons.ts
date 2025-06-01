@@ -21,11 +21,23 @@ export const SETUP_ACS_COMMONS_IN_AEM_PROJECTS : IArticleItem = {
   url: "/aem/acs-commons/setup-acs-commons-in-aem-projects",
   publishDate: "October 12, 2024",
   modifiedDate: "October 12, 2024",
+  views: 111,
   topics: [ TOPICS.ACS_COMMONS ],
   active: true
 }
 
+export const CREATE_CUSTOM_MCP_PROCESS_IN_ACS_COMMONS : IArticleItem = {
+  title: "Create Custom MCP Process in ACS Commons",
+  description: ``,
+  url: `${TOPICS.ACS_COMMONS.url}/create-custom-mcp-process-in-acs-commons`,
+  publishDate: "May 18, 2025",
+  modifiedDate: "May 18, 2025",
+  topics: [ TOPICS.ACS_COMMONS ],
+  active: false
+}
+
 export const ACS_COMMONS: IArticleItem[] = [
   SETTING_UP_ERROR_PAGES,
-  SETUP_ACS_COMMONS_IN_AEM_PROJECTS
+  SETUP_ACS_COMMONS_IN_AEM_PROJECTS,
+  CREATE_CUSTOM_MCP_PROCESS_IN_ACS_COMMONS
 ].filter(m => m.active);

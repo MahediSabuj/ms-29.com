@@ -7,8 +7,8 @@ export const AEM_USER_PERMISSION: IArticleItem = {
     sites with multiple content creators. User Permissions enforces strict governance over user actions like read, create, 
     modify, delete, publish contents. This mechanism ensures that only authorized users can perform these specific actions.`,
   url: "/aem/cloud/managing-user-permission-and-access-control",
-  publishDate: "April 25, 2025",
-  modifiedDate: "April 25, 2025",
+  publishDate: "May 10, 2025",
+  modifiedDate: "May 10, 2025",
   topics: [ TOPICS.AEM_CLOUD ],
   active: false
 }
@@ -16,8 +16,8 @@ export const AEM_USER_PERMISSION: IArticleItem = {
 export const AMS_TO_AEMAACS_MIGRATION : IArticleItem = {
   title: "Migration Journey to AEM as a Cloud Service",
   url: "/aem/cloud/migration-journey-to-aemaacs",
-  publishDate: "May 08, 2025",
-  modifiedDate: "May 08, 2025",
+  publishDate: "June 11, 2025",
+  modifiedDate: "June 11, 2025",
   description: ``,
   topics: [ TOPICS.AEM_CLOUD ],
   active: false
@@ -28,6 +28,7 @@ export const BEST_PRACTICE_ANALYSER_FOR_AEMAACS_MIGRATION: IArticleItem = {
   url: "/aem/cloud/best-practices-analyzer-for-aemaacs-migration",
   publishDate: "May 20, 2024",
   modifiedDate: "May 20, 2024",
+  views: 126,
   description: `Best Practices Analyzer (BPA) evaluates the current AEM implementation, identifying 
     areas not in alignment with AEM best practices and offering guidance on how to improve. It also 
     expedites the assessment of readiness for transitioning from an existing Adobe Experience Manager 
@@ -42,7 +43,7 @@ export const ENVIRONMENT_VARIABLES_AND_SECRETS : IArticleItem = {
   url: "/aem/cloud/environment-variables-and-secrets-in-aemaacs",
   publishDate: "September 03, 2024",
   modifiedDate: "September 03, 2024",
-  views: 112,
+  views: 142,
   description: `Environment variables allow AEM code and applications to adapt based on context, enabling different configurations 
     for development, production, or staging environments. They can be updated or deleted as needed, no code changes or deployments 
     required. By separating code from configuration, they enhance security and keep sensitive information out of version control.`,
@@ -81,7 +82,7 @@ export const WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS : IArticleItem =
   url: "/aem/cloud/web-optimized-image-delivery-for-aem-custom-component",
   publishDate: "April 09, 2024",
   modifiedDate: "April 09, 2024",
-  views: 136,
+  views: 170,
   description: `Web Optimized Image Delivery feature of AEM as a Cloud service delivers image assets from
     the DAM in WebP format. WebP can reduce the download size of an image by about 25% on average, which
     results in faster page loading.`,
@@ -110,7 +111,7 @@ export const REPOSITORY_MODERNIZER: IArticleItem = {
   url: "/aem/cloud/repository-modernizer-update-archetype",
   publishDate: "August 11, 2024",
   modifiedDate: "August 11, 2024",
-  views: 173,
+  views: 180,
   topics: [ TOPICS.AEM_CLOUD ],
   active: true
 }
@@ -130,6 +131,7 @@ export const CONTENT_TRANSFER_TOOL : IArticleItem = {
   url: "/aem/cloud/content-migration-ams-to-aemaacs",
   publishDate: "October 03, 2024",
   modifiedDate: "October 03, 2024",
+  views: 116,
   description: `Content transfer is a crucial step when migrating AEM projects to AEMaaCS, especially with large volumes of content. 
     To streamline this process, Adobe provides Content Transfer Tool (CTT), which can be used to initiate the migration of existing 
     content from a source AEM instance (on-premise or AMS) to the target AEM Cloud Service instance.`,
@@ -154,7 +156,7 @@ export const SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD : IArticleItem = {
   url: "/aem/cloud/setting-up-custom-domain-aem-cloud",
   publishDate: "September 18, 2024",
   modifiedDate: "September 18, 2024",
-  views: 132,
+  views: 154,
   description: `It is good practice to have a Domain for your site that is memorable for customer and reflects your brand's identity.
     Adding a custom domain name in AEMaaCS requires interaction between DNS service and Cloud Manager. A user must be a member of Business 
     Owner or Deployment Manager role to complete this task.`,
@@ -165,21 +167,21 @@ export const SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD : IArticleItem = {
 export const DEDICATED_IP_FOR_AEMAACS : IArticleItem = {
   title: "Dedicated egress IP using Advanced Networking in AEMaaCS",
   url: "/aem/cloud/dedicated-egress-ip-using-advanced-networking",
-  publishDate: "April 30, 2025",
-  modifiedDate: "April 30, 2025",
+  publishDate: "June 02, 2025",
+  modifiedDate: "June 02, 2025",
   description: `Due to the organization's networking policy, certain applications may need to be hosted behind a firewall, accessible only through 
     specific whitelisted IP addresses. In terms of AEMaaCS, Cloud Environment IP range is large and dynamic, is not shared with customers for whitelisting.
     To address this issue, Adobe provides a solution to assign a dedicated egress IP address to your AEMaaCS environment using Advanced Networking so that 
     you can whitelist this IP address in organization's firewall.`,
   topics: [ TOPICS.AEM_CLOUD ],
-  active: false
+  active: true
 }
 
 export const SETUP_RDE_FOR_AEM_CLOUD : IArticleItem = {
   title: "Setup Rapid Development Environments for AEM Cloud",
   url: "/aem/cloud/setup-rapid-development-environment",
-  publishDate: "April 28, 2025",
-  modifiedDate: "April 28, 2025",
+  publishDate: "May 28, 2025",
+  modifiedDate: "May 28, 2025",
   description: ``,
   topics: [ TOPICS.AEM_CLOUD ],
   active: false

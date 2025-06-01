@@ -38,7 +38,8 @@ export default function BestPracticeAnalysis() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <div>
           <section className="pt-6">
             Best Practices Analyzer (BPA) evaluates the current AEM implementation, identifying areas not in alignment 

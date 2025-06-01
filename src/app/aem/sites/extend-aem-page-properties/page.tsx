@@ -7,6 +7,8 @@ import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Highlight from "@/components/highlight/highlight";
 import { EXTEND_AEM_PAGE_PROPERTIES as ARTICLE } from "@/lib/data/article/aem/sites";
 
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -151,6 +153,10 @@ export default function ExtendPageProperties() {
           <Highlight code={HIDE_TAB} language="xml" path="page / _cq_dialog / .content.xml"/>
         </div>
       </article>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }
