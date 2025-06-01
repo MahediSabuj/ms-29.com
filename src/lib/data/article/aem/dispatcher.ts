@@ -9,7 +9,7 @@ export const BASIC_HTTP_AUTHENTICATION: IArticleItem = {
   url: "/aem/dispatcher/restrict-aem-dispatcher-access-in-lower-environments",
   publishDate: "March 05, 2024",
   modifiedDate: "March 05, 2024",
-  views: 215,
+  views: 237,
   topics: [ TOPICS.AEM_DISPATCHER ],
   active: true
 }
@@ -23,7 +23,7 @@ export const CACHE_AEM_GATED_PAGES: IArticleItem = {
   url: "/aem/dispatcher/aem-gated-pages-caching-strategies",
   publishDate: "March 21, 2024",
   modifiedDate: "March 21, 2024",
-  views: 280,
+  views: 301,
   topics: [ TOPICS.AEM_DISPATCHER ],
   active: true
 }
@@ -37,7 +37,7 @@ export const CACHE_AEM_DYNAMIC_CONTENT: IArticleItem = {
   url: "/aem/dispatcher/cache-aem-pages-with-dynamic-content",
   publishDate: "April 28, 2024",
   modifiedDate: "April 28, 2024",
-  views: 128,
+  views: 144,
   topics: [ TOPICS.AEM_DISPATCHER ],
   active: true
 }
@@ -52,6 +52,7 @@ export const DISPATCHER_CACHE_FLUSH_STRATEGIES: IArticleItem = {
   url: "/aem/dispatcher/aem-dispatcher-caching-flush-strategies",
   publishDate: "August 28, 2024",
   modifiedDate: "August 28, 2024",
+  views: 117,
   topics: [ TOPICS.AEM_DISPATCHER ],
   active: true
 }

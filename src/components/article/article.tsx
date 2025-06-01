@@ -32,7 +32,7 @@ export default function Article({
         {views && 
           <div className="md:inline md:ml-4">
             <span className="text-[#636B74] mr-2">Viewed</span>
-            <span>{views} times</span>
+            <span>{views.toLocaleString('en-US')} times</span>
           </div>
         }
       </div>

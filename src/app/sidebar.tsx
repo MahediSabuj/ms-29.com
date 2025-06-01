@@ -168,8 +168,8 @@ export default function Sidebar() {
           <Link href="/profile/mahedi-sabuj" className="text-blue-600">
             Abdullah &ndash; Al &ndash; Mahedi <strong>Sabuj</strong><br/>
           </Link>
-          Principal Software Engineer @ <Link target="_blank" href="https://brainstation-23.com"
-            className="text-blue-600">Brain Station 23</Link>
+          Principal Software Engineer<br/>
+          <Link target="_blank" href="https://brainstation-23.com" className="text-blue-600">Brain Station 23</Link>
         </div>
       </section>
       <div className="mt-4">

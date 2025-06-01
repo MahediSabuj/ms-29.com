@@ -73,7 +73,8 @@ export default function DispatcherCache() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <div>
           <section className="pt-6">
             When caching is implemented for your website, it&apos;s essential to clear the dispatcher cache after publishing pages

@@ -102,7 +102,8 @@ export default function InstallACSCommons() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <section className="pt-6">
           ACS AEM Commons is a collection of reusable components and utilities designed to enhance the functionality of AEM. It offers a variety
           of features that help developers tackle common challenges and simplify development tasks through effective solutions.

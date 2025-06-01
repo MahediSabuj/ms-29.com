@@ -22,7 +22,7 @@ const breadcrumbs : IBreadCrumb = {
   current: ARTICLE.title
 }
 
-export default function DedicatedIP() {
+export default function DedicatedEgressIp() {
   return (
     <div>
       <BreadCrumb {...breadcrumbs}/>
@@ -38,7 +38,17 @@ export default function DedicatedIP() {
             with customers for whitelisting. To address this issue, Adobe provides a solution to assign a dedicated egress IP address to your
             AEMaaCS environment using Advanced Networking so that you can whitelist this IP address in organization&apos;s firewall.
           </section>
-        </div>  
+          <section className="pt-4">
+            Advanced Networking is only available in the Production program and is not supported in the Sandbox environment.
+            {/*To enable non-standard traffic (on ports other than 80 or 443) from AEMaaCS, you must use the Advanced Networking feature.*/}
+          </section>
+          <h2 className="mt-4 text-xl">
+            <strong>Configuring Advanced Networking</strong>
+          </h2>
+          <section>
+            Configuration of the Advanced Networking option must first be done at the Program level.
+          </section>
+        </div>
       </article>
     </div>
   );
