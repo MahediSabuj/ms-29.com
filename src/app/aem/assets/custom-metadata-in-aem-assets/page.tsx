@@ -38,7 +38,8 @@ export default function CustomMetadata() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <div>
           <section className="pt-6">
             Custom metadata that allows authors to define additional properties for digital assets beyond the 
