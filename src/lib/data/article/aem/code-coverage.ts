@@ -2,7 +2,7 @@ import { IArticleItem } from "@/types/article";
 import TOPICS from "@/lib/data/article/topics";
 
 export const CODE_COVERAGE_OSGI_CONFIGURATION: IArticleItem = {
-  title: "Code Coverage for OSGI Configuration",
+  title: "Code Coverage for OSGi Configuration",
   description: `Custom OSGi configurations are often required based on project needs. In a previous article, we discussed how to implement 
     custom OSGi configurations. Now, we will cover how to write unit tests and ensure code coverage for these configurations using JUnit 5, OSGi Mocks, and Mockito.`,
   url: "/aem/code-coverage/osgi-configuration",

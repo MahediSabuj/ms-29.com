@@ -53,7 +53,7 @@ export default function EnvironmentVariable() {
           details, go to the <strong>Configuration</strong> tab and click Add to open the Environment Configuration dialog.
         </section>
         <Image src={AEM_CLOUD_MANAGER_ENVIRONMENT_VARIABLE} className="border"
-           alt="Custom OSGI Configuration">
+           alt="Custom OSGi Configuration">
         </Image>
         <section className="pt-3">
           While creating the variables, you can specify the service to which the variables apply, such as <strong>Author</strong>, <strong>Publish</strong>, <strong>Preview</strong>, or <strong>All</strong>, and

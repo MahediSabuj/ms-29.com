@@ -4,6 +4,9 @@ import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Highlight from "@/components/highlight/highlight";
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
+
 import { PROJECT_LOMBOK_IN_AEM_PROJECTS as ARTICLE} from "@/lib/data/article/aem/sites";
 
 export const metadata: Metadata = {
@@ -74,6 +77,24 @@ public class Article {
   String category;
 }`;
 
+const sling_model_lombok_class_level =
+`import lombok.Getter;
+
+@Getter
+public class Article {
+  @ValueMapValue
+  String title;
+
+  @ValueMapValue
+  String[] tags;
+
+  @ValueMapValue
+  Date publishDate;
+
+  @ValueMapValue
+  String category;
+}`;
+
 const core_pom_xml =
 `<dependency>
   <groupId>org.projectlombok</groupId>
@@ -117,15 +138,24 @@ export default function ProjectLombok() {
         <div className="pt-6 pb-1">
           For the demonstration purpose, let&apos;s consider a component with a dialog comprising a textfield (title), tagfield (tags),
           datepicker (publishDate), and select (category) field. In a Sling Model, the typical approach involves creating
-          getter methods for each variable needed for access from HTL
+          getter methods for each variable needed for access from HTL.
         </div>
         <Highlight code={sling_model} language="java" path="Article.java"/>
         <div className="pt-6 pb-1">
-          By leveraging Lombok, we can enhance the Article Sling Model as follows. <code className="code-inline">@Getter</code> annotation
-          instructs Lombok to automatically generate getter methods for the fields within the class.
+          By leveraging Lombok, we can simplify and enhance the Article Sling Model impplementation as follows. <code className="code-inline">@Getter</code> annotation
+          from Lombok automatically generates getter methods for the fields within the class.
         </div>
         <Highlight code={sling_model_lombok} language="java" path="Article.java"/>
+        <div className="pt-6 pb-1">
+          You can make the Sling Model even more concise if all the properties require getter methods. Instead of adding <code className="code-inline">@Getter</code> to each field, simply 
+          use the annotation at the class level to apply it to all fields at once.
+        </div>
+        <Highlight code={sling_model_lombok_class_level} language="java" path="Article.java"/>
       </article>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }
