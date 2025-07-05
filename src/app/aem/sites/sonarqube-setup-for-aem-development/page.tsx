@@ -5,6 +5,9 @@ import Link from "next/link";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
+
 import { SONARQUBE_SETUP_FOR_AEM_DEVELOPMENT as ARTICLE } from "@/lib/data/article/aem/sites";
 
 import CREATE_LOCAL_PROJECT_SONARQUBE from './assets/Create_Local_Project_SonarQube.webp';
@@ -35,7 +38,8 @@ export default function SonarQubeSetup() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <div>
           <section className="pt-6">
             In AEM development, prioritizing code quality is essential. Even during deployment via Cloud Manager, it&apos;s crucial to 
@@ -89,6 +93,10 @@ export default function SonarQubeSetup() {
           </section>
         </div>  
       </article>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }

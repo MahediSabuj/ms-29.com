@@ -5,6 +5,9 @@ import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import { START_AEM_IN_DEBUG_MODE as ARTICLE } from "@/lib/data/article/aem/sites";
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
+
 import REMOTE_JAVA_DEBUG_INTELLIJ_IDEA from "./assets/remote_java_debug_intellij_idea.png";
 
 export const metadata: Metadata = {
@@ -59,6 +62,10 @@ export default function AEMinDebugMode() {
           Open the AEM page with the component using the Java class where you&apos;ve set breakpoints. For example, if you&apos;ve set breakpoints in <code className="code-inline">Article.java</code>, access or refresh the page with the Article component. <code className="code-inline">IntelliJ IDEA</code> will then notify you, and the program will pause at the breakpoint.
         </section>
       </article>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }
