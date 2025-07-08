@@ -27,7 +27,7 @@ const certifications: Certification[] = [{
   title: "Adobe Experience Manager Cloud Service Migration Expert",
   issued: "July 2025",
   badge: aem_expert_certification,
-  url: "https://www.credly.com/badges/"
+  url: "https://certification.adobe.com/credential/verify/7129fc19-5bb0-11f0-9b2a-42010a400fc3"
 }, {
   title: "Salesforce Certified AI Associate",
   issued: "April 2025",
@@ -43,7 +43,7 @@ const certifications: Certification[] = [{
   issued: "July 2021",
   expired: "May 2026",
   badge: aem_expert_certification,
-  url: "https://www.credly.com/badges/e6f2d0ab-286f-455c-b169-271f57f43e03"
+  url: "https://certification.adobe.com/credential/verify/c8c94bc5-ea0c-4d52-8e67-750ae04cc9c3"
 }, {
   title: "Salesforce Certified Platform Developer I",
   issued: "November 2020",
