@@ -62,7 +62,7 @@ export default function Resume() {
     <div className="resume">
       <section className="profile-info">
         <h1 className="title"><strong>Abdullah &ndash; Al &ndash; Mahedi Sabuj</strong></h1>
-        <h2 className="headline">Adobe Certified AEM Developer | Adobe AEM Community Advisor</h2>
+        <h2 className="headline">AEM Sites Developer Expert | AEM Community Advisor | AEMaaCS Migration Expert</h2>
       </section>
       <section className="pt-6">
         Experienced AEM Developer with 6 years of expertise, specializing in AEM 6.5, AEM as a Cloud Service (AEMaaCS), AEM SPA (React), and AEM Cloud Migration.
