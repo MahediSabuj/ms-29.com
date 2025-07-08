@@ -26,6 +26,7 @@ interface Certification {
 const certifications: Certification[] = [{
   title: "Adobe Experience Manager Cloud Service Migration Expert",
   issued: "July 2025",
+  expired: "July 2027",
   badge: aem_expert_certification,
   url: "https://certification.adobe.com/credential/verify/7129fc19-5bb0-11f0-9b2a-42010a400fc3"
 }, {
