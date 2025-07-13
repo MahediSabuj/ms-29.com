@@ -25,6 +25,14 @@ export const metadata: Metadata = {
   }
 };
 
+const JAVA_IMPLEMENTATION =
+`try (CloseableHttpClient httpClient = HttpClientBuilder.create()
+    .setDefaultRequestConfig(getRequestConfig())
+    .useSystemProperties()
+    .build()) {
+    // Implementation goes here
+}`;
+
 const breadcrumbs : IBreadCrumb = {
   items: [{
     title: TOPICS.AEM_CLOUD.title,
@@ -96,16 +104,27 @@ export default function DedicatedEgressIp() {
           </section>
           <section className="pt-4">
             On the <strong>Port forwards</strong> tab, you can define port forwarding rules for any destination ports other than 80/443. For each destination
-            host, you must map the intended destination port to a port from 30000 through 30999.
-            <div className="pt-4">
-              For example, if you want to connect to a PostgreSQL database, you could use 5432 as the source port and 35432 as the destination port. While you may
-              choose any port within the allowed range, it is considered best practice to align the destination port with the source port for easier identification.
-            </div>
+            host, you must map the intended destination port to a port from 30000 through 30999. For example, if you want to connect to a PostgreSQL database, you
+            could use 30432 as the <strong>Port Orig</strong> and 5432 as the <strong>Port Dest</strong>.
             <Image src={EGRESS_IP_PORT_FORWARDS} className="border py-2 mt-1" width="600"
                 alt="Egress IP Port Forwards"/>
           </section>
           <section className="pt-4">
             Click <strong>Save</strong> in the dialog box to apply the advanced networking configuration to the selected environment.
+          </section>
+          <h2 className="mt-4 text-xl">
+            <strong>Usage in AEM Backend</strong>
+          </h2>
+          <section>
+            Most libraries use system properties from egress IP settings by default. However, Some libraries, such as <code className="code-inline background">HttpClientBuilder</code>, require explicit configuration to use system properties from egress IP settings. Otherwise, they may continue to use the shared IP when sending requests to the client.
+            <HighlightCode code={JAVA_IMPLEMENTATION} language="java" path="RestClientService.java"/>
+          </section>
+          <section className="pt-6">
+            With the dedicated egress IP obtained using the <code className="code-inline font-bold">dig</code> command, you can now whitelist it in your firewall.
+            Once your required changes are deployed to the cloud environment, you should be able to connect to APIs that are hosted behind the firewall.
+          </section>
+          <section className="pt-4">
+            Happy learning! In an upcoming article, we&apos;ll explore how to send emails in AEMaaCS using ports other than 80/443.
           </section>
         </div>
       </article>
