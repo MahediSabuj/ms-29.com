@@ -133,7 +133,7 @@ export default function RootLayout({
         <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
       </head>
       <body className={adobeCleanFont.className}>
-        <div className="flex flex-col h-screen">
+        <div className="flex flex-col min-h-screen">
           <Header {...headerConfig}/>
           <div className="container mx-auto py-4 grow">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 md:flex">

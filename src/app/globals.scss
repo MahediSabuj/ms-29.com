@@ -39,3 +39,14 @@
     }
   }
 }
+
+@layer components {
+  .modern-brand {
+    @apply text-3xl font-bold bg-gradient-to-r from-primary-600 to-accent-500 
+           bg-clip-text text-transparent;
+  }
+
+  .modern-header {
+    @apply bg-white/80 backdrop-blur-md border-b border-neutral-200/50 shadow-soft;
+  }
+}

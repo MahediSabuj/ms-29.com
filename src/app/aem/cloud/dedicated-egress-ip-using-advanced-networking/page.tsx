@@ -116,7 +116,7 @@ export default function DedicatedEgressIp() {
             <strong>Usage in AEM Backend</strong>
           </h2>
           <section>
-            Most libraries use system properties from egress IP settings by default. However, Some libraries, such as <code className="code-inline background">HttpClientBuilder</code>, require explicit configuration to use system properties from egress IP settings. Otherwise, they may continue to use the shared IP when sending requests to the client.
+            Some libraries, such as <code className="code-inline background">HttpClientBuilder</code>, require explicit configuration to use system properties from egress IP settings. Otherwise, they may continue to use the shared IP when sending requests to the client.
             <HighlightCode code={JAVA_IMPLEMENTATION} language="java" path="RestClientService.java"/>
           </section>
           <section className="pt-6">

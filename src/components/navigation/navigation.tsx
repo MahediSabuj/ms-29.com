@@ -10,7 +10,9 @@ export default function Navigation(config: HeaderConfig) {
     <nav>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between">
-          <Link href={brand.url}>{brand.title}</Link>
+          <Link href={brand.url} className="modern-brand hover:scale-105 transition-transform duration-300">
+            {brand.title}
+          </Link>
           <button type="button"
               className="inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-[#3A2A1D] rounded-lg md:hidden"
               aria-controls="navbar-hamburger" aria-expanded="false">
