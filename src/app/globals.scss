@@ -43,10 +43,35 @@
 @layer components {
   .modern-brand {
     @apply text-3xl font-bold bg-gradient-to-r from-primary-600 to-accent-500 
-           bg-clip-text text-transparent;
+      bg-clip-text text-transparent;
   }
 
   .modern-header {
     @apply bg-white/80 backdrop-blur-md border-b border-neutral-200/50 shadow-soft;
+  }
+
+  .modern-link {
+    @apply text-primary-600 hover:text-primary-700 transition-colors duration-200
+      font-medium hover:decoration-2;
+  }
+
+  .article-title {
+    @apply text-2xl font-bold text-neutral-800 leading-tight 
+      hover:text-primary-600 transition-colors duration-300;
+  }
+
+  .article-meta {
+    @apply text-neutral-500 text-sm font-medium;
+  }
+
+  .article-description {
+    @apply text-neutral-600 leading-relaxed;
+  }
+
+  .topic-tag {
+    @apply bg-gradient-to-r from-neutral-100 to-neutral-150 text-neutral-700 
+      border border-neutral-200 rounded-full px-3 py-1 text-xs font-medium
+      hover:from-primary-50 hover:to-primary-100 hover:text-primary-700 
+      hover:border-primary-200 transition-all duration-300;
   }
 }

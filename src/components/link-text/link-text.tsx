@@ -4,7 +4,7 @@ import { ILink } from '@/types/link';
 export default function LinkText({ url, text } : ILink) {
   if(url) {
     return (
-      <Link className="text-[#3273dc]" href={url}>
+      <Link className="modern-link group-hover:text-primary-600" href={url}>
         {text}
       </Link>
     );

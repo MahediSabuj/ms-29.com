@@ -69,12 +69,12 @@ export default function DedicatedEgressIp() {
           </section>
           <section className="pt-4">
             From your desired program, Navigate to <strong>Services</strong> &gt; <strong>Network Infrastructures</strong> and click on the <strong>Add network infrastructure</strong> button.
-            <Image src={AEMAACS_NEW_NETWORK_INFRASTRUCTURE} className="border py-2 mt-1"
+            <Image src={AEMAACS_NEW_NETWORK_INFRASTRUCTURE} className="border mt-1"
                 alt="AEMaaCS New Network Infrastructure"/>
           </section>
           <section className="pt-4">
             In the <strong>Add network infrastructure</strong> dialog, select the <strong>Dedicated egress IP address</strong> option, and select the <strong>Region</strong> to create the dedicated egress IP address.
-            <Image src={DEDICATED_EGRESS_IP_ADDRESS} className="border py-2 mt-1" width="600"
+            <Image src={DEDICATED_EGRESS_IP_ADDRESS} className="border mt-1" width="600"
                 alt="Dedicated Egress IP Address"/>
           </section>
           <section className="pt-4">
@@ -92,21 +92,21 @@ export default function DedicatedEgressIp() {
           </section>
           <section className="pt-4">
             Navigate to Environment where you want to enable the advanced networking configuration. Then select the Advanced network configuration tab of the selected environment and click Enable network infrastructure.
-            <Image src={ENABLE_NETWORK_INFRASTRUCTURE} className="border py-2 mt-1" width="600"
+            <Image src={ENABLE_NETWORK_INFRASTRUCTURE} className="border mt-1" width="600"
                 alt="Enable Network Infrastructure"/>
           </section>
           <section className="pt-4">
             Within the <strong>Configure Advanced Networking</strong> dialog box, the <strong>Non-Proxy Hosts</strong> tab allows to define a list of hosts.
             These defined hosts will be routed through the shared IP address range instead of the dedicated egress IP. This approach may be useful since traffic
             egressing through shared IPs may be further optimized.
-            <Image src={EGRESS_IP_NON_PROXY_HOSTS} className="border py-2 mt-1" width="600"
+            <Image src={EGRESS_IP_NON_PROXY_HOSTS} className="border mt-1" width="600"
                 alt="Egress IP Non Proxy Hosts"/>
           </section>
           <section className="pt-4">
             On the <strong>Port forwards</strong> tab, you can define port forwarding rules for any destination ports other than 80/443. For each destination
             host, you must map the intended destination port to a port from 30000 through 30999. For example, if you want to connect to a PostgreSQL database, you
             could use 30432 as the <strong>Port Orig</strong> and 5432 as the <strong>Port Dest</strong>.
-            <Image src={EGRESS_IP_PORT_FORWARDS} className="border py-2 mt-1" width="600"
+            <Image src={EGRESS_IP_PORT_FORWARDS} className="border mt-1" width="600"
                 alt="Egress IP Port Forwards"/>
           </section>
           <section className="pt-4">
