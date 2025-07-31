@@ -78,7 +78,8 @@ export default function ReuseComponentDialog() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <div>
           <section className="pt-6">
             In AEM development, it&apos;s common to encounter scenarios where the same set of dialog fields such as alternative text
@@ -131,9 +132,12 @@ export default function ReuseComponentDialog() {
             Additionally, ensure that the <code className="code-inline">sling:resourceType</code> matches that of the <code className="code-inline">jcr:root</code> node in the common dialog.
             <HighlightCode code={REUSE_DIALOG_WITH_OVERRIDE} language="xml" path="apps / aem-demo / components / text / _cq_dialog / .content.xml"/>
           </section>
-          <section className="mt-4">
+          <section className="pt-4">
             By using the <code className="code-inline">sling:resourceSuperType</code> property, we can inherit all the properties from the common dialog and override or add any additional fields as needed.
             This allows for maximum flexibility while still maintaining a clean and reusable dialog structure.
+          </section>
+          <section className="pt-4">
+            Using this approach, you can inherit
           </section>
           <section className="pt-6">
             Reusing and extending common dialog fragments is a best practice that every AEM developer should adopt. It enforces consistency

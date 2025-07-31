@@ -26,6 +26,17 @@ export const AEM_COMPONENT_DIALOG_CHEATSHEET: IArticleItem = {
   active: true
 }
 
+export const AEM_DEPLOYMENT_MODELS: IArticleItem = {
+  title: "AEM Deployment Models: On-Premise, Managed Service & AEM as a Cloud Service",
+  url: "/aem/sites/aem-deployment-models",
+  publishDate: "July 31, 2025",
+  modifiedDate: "July 31, 2025",
+  description: `AEM offers three deployment models: On-Premise, Managed Service & AEM as a Cloud Service. Each designed to meet different organizational needs, technical requirements, and strategic objectives.
+    Understanding these options is crucial for making an informed decision that aligns with your business goals, technical capabilities, and budget constraints.`,
+  topics: [ TOPICS.AEM_SITES ],
+  active: true
+}
+
 export const AEM_SERVICE_USERS_USING_REPOINIT_AND_RESOURCE_RESOLVER: IArticleItem = {
   title: "AEM Service Users using RepoInit, Mapping and Resource Resolver",
   url: "/aem/sites/aem-service-users-using-repoinit-mapping-and-resource-resolver",
@@ -61,8 +72,8 @@ export const APACHE_SLING_SITEMAP_GENERATOR: IArticleItem = {
 export const CONTEXT_AWARE_CONFIGURATION : IArticleItem = {
   title: "Apache Sling Context Aware Configuration in AEM",
   url: "/aem/sites/context-aware-configuration",
-  publishDate: "October 18, 2024",
-  modifiedDate: "October 18, 2024",
+  publishDate: "August 23, 2025",
+  modifiedDate: "August 23, 2025",
   description: `Context-aware configurations  are related to a content resource, allows different configs for 
     different content resources. Parameters within nested contexts allow hierarchical based inheritance and 
     global fallback values when required. Leveraging the Context-Aware Configuration Java API, one can retrieve 
@@ -241,6 +252,7 @@ export const REUSE_COMMON_DIALOG_PARTS_IN_AEM_COMPONENTS: IArticleItem = {
   url: "/aem/sites/reuse-common-dialog-parts-in-aem-components",
   publishDate: "May 08, 2025",
   modifiedDate: "May 08, 2025",
+  views: 102,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
@@ -306,8 +318,8 @@ export const SLING_MAPPINGS_FOR_RESOURCE_RESOLUTION : IArticleItem = {
 export const SLING_MODEL_DELEGATION_PATTERN : IArticleItem = {
   title: "Sling Model Delegation Pattern with Lombok",
   url: "/aem/sites/sling-model-delegation-pattern",
-  publishDate: "October 02, 2024",
-  modifiedDate: "October 02, 2024",
+  publishDate: "August 17, 2025",
+  modifiedDate: "August 17, 2025",
   description: `AEM Core Components are a standard set components to be used with AEM. Built with Adobe's best practices and 
     standards, Core Components provide a baseline set of functionality for any Sites implementation. However, it's often necessary 
     to customize the functionality of core components to address project-specific requirements. The business logic for the core components 
@@ -367,6 +379,7 @@ export const START_AEM_IN_DEBUG_MODE : IArticleItem = {
 export const AEM_SITES : IArticleItem[] = [
   ADAPTIVE_IMAGE_SERVLET_FOR_CUSTOM_COMPONENTS,
   AEM_COMPONENT_DIALOG_CHEATSHEET,
+  AEM_DEPLOYMENT_MODELS,
   AEM_SERVICE_USERS_USING_REPOINIT_AND_RESOURCE_RESOLVER,
   APACHE_SLING_SERVLET_IN_AEM,
   APACHE_SLING_SITEMAP_GENERATOR,
