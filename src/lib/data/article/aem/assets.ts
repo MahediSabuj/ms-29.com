@@ -11,7 +11,7 @@ export const CUSTOM_METADATA_AEM_ASSETS: IArticleItem = {
   url: "/aem/assets/custom-metadata-in-aem-assets",
   publishDate: "May 25, 2024",
   modifiedDate: "May 25, 2024",
-  views: 101,
+  views: 115,
   topics: [ TOPICS.AEM_ASSETS ],
   active: true
 }

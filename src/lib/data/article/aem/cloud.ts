@@ -28,7 +28,7 @@ export const BEST_PRACTICE_ANALYSER_FOR_AEMAACS_MIGRATION: IArticleItem = {
   url: "/aem/cloud/best-practices-analyzer-for-aemaacs-migration",
   publishDate: "May 20, 2024",
   modifiedDate: "May 20, 2024",
-  views: 126,
+  views: 191,
   description: `Best Practices Analyzer (BPA) evaluates the current AEM implementation, identifying 
     areas not in alignment with AEM best practices and offering guidance on how to improve. It also 
     expedites the assessment of readiness for transitioning from an existing Adobe Experience Manager 
@@ -43,7 +43,7 @@ export const ENVIRONMENT_VARIABLES_AND_SECRETS : IArticleItem = {
   url: "/aem/cloud/environment-variables-and-secrets-in-aemaacs",
   publishDate: "September 03, 2024",
   modifiedDate: "September 03, 2024",
-  views: 142,
+  views: 189,
   description: `Environment variables allow AEM code and applications to adapt based on context, enabling different configurations 
     for development, production, or staging environments. They can be updated or deleted as needed, no code changes or deployments 
     required. By separating code from configuration, they enhance security and keep sensitive information out of version control.`,
@@ -82,7 +82,7 @@ export const WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS : IArticleItem =
   url: "/aem/cloud/web-optimized-image-delivery-for-aem-custom-component",
   publishDate: "April 09, 2024",
   modifiedDate: "April 09, 2024",
-  views: 170,
+  views: 209,
   description: `Web Optimized Image Delivery feature of AEM as a Cloud service delivers image assets from
     the DAM in WebP format. WebP can reduce the download size of an image by about 25% on average, which
     results in faster page loading.`,
@@ -111,7 +111,7 @@ export const REPOSITORY_MODERNIZER: IArticleItem = {
   url: "/aem/cloud/repository-modernizer-update-archetype",
   publishDate: "August 11, 2024",
   modifiedDate: "August 11, 2024",
-  views: 180,
+  views: 188,
   topics: [ TOPICS.AEM_CLOUD ],
   active: true
 }
@@ -131,7 +131,7 @@ export const CONTENT_TRANSFER_TOOL : IArticleItem = {
   url: "/aem/cloud/content-migration-ams-to-aemaacs",
   publishDate: "October 03, 2024",
   modifiedDate: "October 03, 2024",
-  views: 116,
+  views: 124,
   description: `Content transfer is a crucial step when migrating AEM projects to AEMaaCS, especially with large volumes of content. 
     To streamline this process, Adobe provides Content Transfer Tool (CTT), which can be used to initiate the migration of existing 
     content from a source AEM instance (on-premise or AMS) to the target AEM Cloud Service instance.`,
@@ -156,7 +156,7 @@ export const SETTING_UP_CUSTOM_DOMAIN_AEM_CLOUD : IArticleItem = {
   url: "/aem/cloud/setting-up-custom-domain-aem-cloud",
   publishDate: "September 18, 2024",
   modifiedDate: "September 18, 2024",
-  views: 154,
+  views: 184,
   description: `It is good practice to have a Domain for your site that is memorable for customer and reflects your brand's identity.
     Adding a custom domain name in AEMaaCS requires interaction between DNS service and Cloud Manager. A user must be a member of Business 
     Owner or Deployment Manager role to complete this task.`,

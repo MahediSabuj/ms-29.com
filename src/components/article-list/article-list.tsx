@@ -16,7 +16,7 @@ export default function ArticleList({ articleItems, pageType } : IArticleList) {
     <div className={styles.articleList}>
       {articleItems.map((item, index) => {
         return (
-          <div className={styles.articleItem} key={index}>
+          <article className={styles.articleItem} key={index}>
             <Article title={item.title}
               url={item.url}
               topics={showTopics ? item.topics : []}
@@ -24,7 +24,7 @@ export default function ArticleList({ articleItems, pageType } : IArticleList) {
               publishDate={item.publishDate}
               modifiedDate={item.modifiedDate}
               views={item.views}/>
-          </div>
+          </article>
         )
       })}
     </div>

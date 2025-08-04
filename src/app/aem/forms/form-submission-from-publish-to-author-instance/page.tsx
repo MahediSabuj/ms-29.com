@@ -5,6 +5,9 @@ import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Reference from "@/components/reference/reference";
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
+
 import { FORM_SUBMISSION_AUTHOR_INSTANCE as ARTICLE } from "@/lib/data/article/aem/forms";
 
 import aem_ds_settings_service from './assets/aem-ds-settings-service.webp';
@@ -77,6 +80,10 @@ export default function SubmitFormIntoAuthor() {
         title: "Configuring AEM DS Settings",
         url: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/install-aem-forms/configure-aem-forms/configuring-the-processing-server-url"
       }]}/>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }

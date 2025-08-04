@@ -3,6 +3,9 @@ import { Metadata } from "next";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
+
 import { SLING_MODEL_DELEGATION_PATTERN as ARTICLE } from "@/lib/data/article/aem/sites";
 
 export const metadata: Metadata = {
@@ -39,6 +42,10 @@ export default function SlingModelDelegationPattern() {
           </section>
         </div>  
       </article>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }
