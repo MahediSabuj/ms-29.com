@@ -76,7 +76,7 @@ export default function ImpersonateUsers() {
       </article>
       <Reference references={[{
         title: "User Administration and Security",
-        url: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/security/security#impersonating-another-user"
+        url: "experienceleague.adobe.com/en/docs/experience-manager-65/content/security/security#impersonating-another-user"
       }]}/>
       <div className="mt-8 mb-4">
         <ArticleReviewList items={[{

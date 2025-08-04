@@ -145,7 +145,7 @@ export default function InstallACSCommons() {
       </article>
       <Reference references={[{
         title: "Adobe Consulting Service",
-        url: "https://adobe-consulting-services.github.io/acs-aem-commons/pages/maven.html"
+        url: "adobe-consulting-services.github.io/acs-aem-commons/pages/maven.html"
       }]}/>
       <div className="mt-8 mb-4">
         <ArticleReviewList items={[]}/>

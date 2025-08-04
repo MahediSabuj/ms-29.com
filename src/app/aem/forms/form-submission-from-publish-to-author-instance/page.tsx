@@ -78,7 +78,7 @@ export default function SubmitFormIntoAuthor() {
       </article>
       <Reference references={[{
         title: "Configuring AEM DS Settings",
-        url: "https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/install-aem-forms/configure-aem-forms/configuring-the-processing-server-url"
+        url: "experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/install-aem-forms/configure-aem-forms/configuring-the-processing-server-url"
       }]}/>
       <div className="mt-8 mb-4">
         <ArticleReviewList items={[]}/>

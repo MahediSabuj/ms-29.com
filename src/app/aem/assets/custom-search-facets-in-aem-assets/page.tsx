@@ -86,7 +86,7 @@ export default function CustomSearchFacet() {
       </article>
       <Reference references={[{
         title: "Assets Admin Search Rail",
-        url: "https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/configuring/assets-admin-search-rail"
+        url: "experienceleague.adobe.com/en/docs/experience-manager-learn/assets/configuring/assets-admin-search-rail"
       }]}/>
       <div className="mt-8 mb-4">
         <ArticleReviewList items={[]}/>

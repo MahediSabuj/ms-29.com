@@ -161,7 +161,7 @@ export default function PopulateSelectOptions() {
       </article>
       <Reference references={[{
         title: "Generic Lists",
-        url: "https://adobe-consulting-services.github.io/acs-aem-commons/features/generic-lists/index.html"
+        url: "adobe-consulting-services.github.io/acs-aem-commons/features/generic-lists/index.html"
       }]}/>
       <div className="mt-8 mb-4">
         <ArticleReviewList items={[]}/>

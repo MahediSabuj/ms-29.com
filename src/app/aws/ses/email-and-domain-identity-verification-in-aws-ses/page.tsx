@@ -164,13 +164,13 @@ export default function VerifyIdentities() {
       }]}/>
       <Reference references={[{
         title: "Verified identities in Amazon SES",
-        url: "https://docs.aws.amazon.com/ses/latest/dg/verify-addresses-and-domains.html"
+        url: "docs.aws.amazon.com/ses/latest/dg/verify-addresses-and-domains.html"
       }, {
         title: "Creating and verifying identities in Amazon SES",
-        url: "https://docs.aws.amazon.com/ses/latest/dg/creating-identities.html"
+        url: "docs.aws.amazon.com/ses/latest/dg/creating-identities.html"
       }, {
         title: "Provide your own DKIM authentication token (BYODKIM) in Amazon SES",
-        url: "https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim-bring-your-own.html"
+        url: "docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim-bring-your-own.html"
       }]}/>
       <div className="mt-8 mb-4">
         <ArticleReviewList items={[]}/>
