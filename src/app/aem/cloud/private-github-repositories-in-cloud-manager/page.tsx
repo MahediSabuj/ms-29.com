@@ -124,13 +124,13 @@ export default function PrivateGithubRepository() {
       </article>
       <Reference references={[{
         title: "Add a private GitHub Cloud repository in Cloud Manager",
-        url: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/managing-code/private-repositories"
+        url: "experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/managing-code/private-repositories"
       }, {
       title: "Manage repositories in Cloud Manager",
-      url: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/managing-code/managing-repositories"
+      url: "experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/managing-code/managing-repositories"
       }, {
         title: "Cloud Manager CI/CD Pipelines",
-        url: "https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines"
+        url: "experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines"
       }]}/>
       <div className="mt-8 mb-4">
         <ArticleReviewList items={[]}/>

@@ -13,7 +13,7 @@ export default function Reference({ references } : IReference) {
             <li key={index}>
               <span className="mr-1">{item.title},</span>
               <Link className="text-blue-600" target="_blank"
-                  href={item.url}>
+                  href={`https://${item.url}`}>
                   <span className="break-all">{item.url}</span>
               </Link>
             </li>

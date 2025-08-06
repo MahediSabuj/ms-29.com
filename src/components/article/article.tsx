@@ -10,7 +10,7 @@ export default function Article({
   const Heading: keyof JSX.IntrinsicElements = description ? 'h2' : 'h1'; /* Description available only on Listing Page */
 
   return (
-    <article className="group">
+    <div className="group">
       <Heading className="article-title mb-4" itemProp="name">
         <LinkText url={url || ""} text={title}/>
       </Heading>
@@ -67,6 +67,6 @@ export default function Article({
           })}
         </div>
       }
-    </article>
+    </div>
   )
 }
