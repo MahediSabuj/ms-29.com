@@ -162,24 +162,24 @@ const EVENT_FORM =
         class="block mb-2 text-sm font-medium text-gray-900">
       Event Name <span class="text-red-400">*</span>
     </label>
-    <input type="text" id="eventName" th:field="*{eventName}" required
-        class="border-gray-300 shadow-sm bg-gray-50 border text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:outline-none"/>
+    <input type="text" id="eventName" 
+        th:field="*{eventName}" required/>
   </div>
   <div>
     <label for="eventDescription"
         class="block mb-2 text-sm font-medium text-gray-900">
       Event Description <span class="text-red-400">*</span>
     </label>
-    <textarea id="eventDescription" th:field="*{eventDescription}" required rows="4"
-        class="border-gray-300 shadow-sm bg-gray-50 border text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:outline-none"></textarea>
+    <textarea id="eventDescription" th:field="*{eventDescription}" 
+        required rows="4""></textarea>
   </div>
   <div>
     <label for="eventLocation"
         class="block mb-2 text-sm font-medium text-gray-900">
       Event Location <span class="text-red-400">*</span>
     </label>
-    <input type="text" id="eventLocation" th:field="*{eventLocation}" required
-        class="border-gray-300 shadow-sm bg-gray-50 border text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:outline-none"/>
+    <input type="text" id="eventLocation" 
+        th:field="*{eventLocation}" required"/>
   </div>
   <div class="grid md:grid-cols-2 md:gap-6">
     <div class="relative z-0 w-full group">
@@ -187,16 +187,16 @@ const EVENT_FORM =
           class="block mb-2 text-sm font-medium text-gray-900">
         Event Start Date & Time <span class="text-red-400">*</span>
       </label>
-      <input type="datetime-local" id="eventStartDatetime" th:field="*{eventStartDatetime}" required
-          class="border-gray-300 shadow-sm bg-gray-50 border text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:outline-none"/>
+      <input type="datetime-local" id="eventStartDatetime" 
+          th:field="*{eventStartDatetime}" required"/>
     </div>
     <div class="relative z-0 w-full group pt-4 sm:pt-0">
       <label for="eventEndDatetime"
           class="block mb-2 text-sm font-medium text-gray-900">
         Event End Date & Time <span class="text-red-400">*</span>
       </label>
-      <input type="datetime-local" id="eventEndDatetime" th:field="*{eventEndDatetime}" required
-          class="border-gray-300 shadow-sm bg-gray-50 border text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:outline-none"/>
+      <input type="datetime-local" id="eventEndDatetime" 
+          th:field="*{eventEndDatetime}" required/>
     </div>
   </div>
   <div class="grid md:grid-cols-2 md:gap-6">
@@ -205,20 +205,19 @@ const EVENT_FORM =
           class="block mb-2 text-sm font-medium text-gray-900">
         Registration Start Date & Time <span class="text-red-400">*</span>
       </label>
-      <input type="datetime-local" id="registrationStartDatetime" th:field="*{registrationStartDatetime}" required
-          class="border-gray-300 shadow-sm bg-gray-50 border text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:outline-none"/>
+      <input type="datetime-local" id="registrationStartDatetime" 
+          th:field="*{registrationStartDatetime}" required/>
     </div>
     <div class="relative z-0 w-full group pt-4 sm:pt-0">
       <label for="registrationEndDatetime"
           class="block mb-2 text-sm font-medium text-gray-900">
         Registration End Date & Time <span class="text-red-400">*</span>
       </label>
-      <input type="datetime-local" id="registrationEndDatetime" th:field="*{registrationEndDatetime}" required
-          class="border-gray-300 shadow-sm bg-gray-50 border text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:outline-none"/>
+      <input type="datetime-local" id="registrationEndDatetime" 
+          th:field="*{registrationEndDatetime}" required/>
     </div>
   </div>
-  <button type="submit"
-      class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-gray-600 sm:w-fit focus:outline-none">
+  <button type="submit">
     Save
   </button>
 </form>`;
