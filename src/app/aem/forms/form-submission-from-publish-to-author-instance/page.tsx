@@ -37,7 +37,8 @@ export default function SubmitFormIntoAuthor() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <section className="pt-6">
           In General, when an end user submits a form, the request is routed to the publish environment.
           Any modifications made at the CRX/DE during the execution of the post request are stored in
