@@ -9,9 +9,11 @@ import Highlight from "@/components/highlight/highlight";
 import FAQ from "@/components/faq/faq";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
+
 import { CUSTOM_OSGI_CONFIGURATION as ARTICLE } from "@/lib/data/article/aem/sites";
 
 import CUSTOM_OSGI_CONFIGURATION from "./assets/custom_osgi_configuration.png";
+import OSGI_INSTALLER_CONFIGURATION_PRINTER from "./assets/osgi-installer-configuration-printer.png";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -114,7 +116,7 @@ export default function CustomOsgiConfig() {
           views={ARTICLE.views}/>
         <div>
           <section className="pt-6">
-            OSGi Configuration allow us to configure run-mode specific properties. All the out-of-the-box OSGi configurations 
+            OSGi Configuration allow us to configure run-mode specific properties. All the out-of-the-box OSGi configurations
             are available at <code className="code-inline background">/system/console/configMgr</code> while custom configurations can be
             created as per business requirements. These configurations are typically managed within the AEM project&apos;s <code className="code-inline">ui.config</code> module in the code repository.
           </section>
@@ -137,9 +139,34 @@ export default function CustomOsgiConfig() {
             You can check the configuration on your instance from here <code className="code-inline background">/system/console/configMgr</code>.
           </section>
           <Image src={CUSTOM_OSGI_CONFIGURATION} className="border" height="250"
-             alt="Custom OSGI Configuration">
+             alt="Custom OSGi Configuration">
           </Image>
-          <section className="pt-3" id="aemaacs-osgi-config">
+          <h2 className="text-xl mt-4">
+            <strong>OSGi Installer Configuration Printer</strong>
+          </h2>
+          <section>
+            There are scenarios when OSGi properties and their value formats may not be well understood by the developer defining OSGi configurations in the AEM project, particularly 
+            for AEM-provided OSGi components. 
+          </section>
+          <section className="mt-4">
+            In such cases, you can first locate the targeted OSGi configuration in <code className="code-inline background">/system/console/configMgr</code> and modify its property values.
+            Record the Persistent Identity (PID) which will be used to generate the OSGi configuration JSON.
+          </section>
+          <section className="mt-4">
+            Navigate to <strong>OSGi Installer Configuration Printer</strong> at <code className="code-inline background">/system/console/osgi-installer-config-printer</code>. Paste the PID 
+            in the PID field that was copied in the previous step, ensure the Serialization Format is set to &quot;OSGi Configurator JSON&quot; and Select Print. The OSGi Configuration in JSON 
+            format will display in the Serialized Configuration Properties section.
+          </section>
+          <Image src={OSGI_INSTALLER_CONFIGURATION_PRINTER} className="border" height="250"
+             alt="OSGi Installer Configuration Printer">
+          </Image>
+          {/* <h2 className="text-xl mt-4">
+            <strong>OSGi Config Resolution Order</strong>
+          </h2> */}
+          <h2 className="text-xl mt-4">
+            <strong>Configuring OSGi for AEMaaCS</strong>
+          </h2>
+          <section id="aemaacs-osgi-config">
             However, if you&apos;re using AEM as a Cloud Service, you can manage environment-specific variables directly within Cloud Manager and use them like below. For more information about
             Environment Variables and Secrets, please visit this <Link target="_blank" className="text-blue-600" href="/aem/cloud/environment-variables-and-secrets-in-aemaacs">link</Link>.
           </section>
@@ -155,6 +182,9 @@ export default function CustomOsgiConfig() {
           <section className="pt-3">
             Additionally, <code className="code-inline background">/system/console/configMgr</code> is not accessible in AEM Cloud environment. To view configuration values, you can use Developer Console instead.
           </section>
+          {/* <h2 className="text-xl mt-4">
+            <strong>Test in Local Environment</strong>
+          </h2> */}
         </div>
       </article>
       <FAQ items={[{
