@@ -140,23 +140,23 @@ export default function OsgiConfiguration() {
             publishDate={ARTICLE.publishDate}
             modifiedDate={ARTICLE.modifiedDate}/>
         <div>
-          <section className="pt-6">
+          <section className="mt-6">
             The Sling Model Delegation pattern allows extending Core Components functionality while maintaining the original API contract. 
             In a <Link className="text-blue-600" target="_blank" href="/aem/sites/sling-model-delegation-pattern-with-lombok">previous article</Link>, we 
             discussed how to implement Sling Model delegation pattern. Now, we will cover how to write comprehensive unit tests and ensure code coverage for these 
             delegated Sling Models using JUnit 5, AEM Mocks, and proper test setup.
           </section>
-          <section className="pt-4">
+          <section className="mt-4">
             For this tutorial, we will use an example Button component that extends the Core WCM Components Button 
             using the delegation pattern. We&apos;ll demonstrate how to properly test both the delegated functionality 
             and any custom overridden methods.
           </section>
-          <section className="pt-3">
+          <section className="mt-4">
             First, let&apos;s examine the test content structure. We need to set up proper JSON files that represent 
             both the component definitions and the content structure for testing.
           </section>
           <HighlightCode code={BUTTON_CONTENT} language="json" path="content / aem-demo / components / button.json"/>
-          <section className="pt-3">
+          <section className="mt-4">
             The component definition files are essential for the delegation pattern to work correctly in unit tests. 
             These JSON files establish the component hierarchy and resource type relationships that AEM Mocks needs to resolve the 
             <code className="code-inline background">sling:resourceSuperType</code> delegation chain. Without proper component definitions, 
@@ -164,17 +164,17 @@ export default function OsgiConfiguration() {
           </section>
           <HighlightCode code={AEM_DEMO_BUTTON_COMPONENT} language="json" path="apps / aem-demo / components / button.json"/>
           <HighlightCode code={CORE_BUTTON_COMPONENT} language="json" path="apps / core /components / button.json"/>
-          <section className="pt-3">
+          <section className="mt-4">
             Here&apos;s the Sling Model implementation we&apos;ll be testing. This demonstrates the delegation pattern 
             where most functionality is delegated to the Core Component, with specific methods overridden for customization:
           </section>
           <HighlightCode code={BUTTON_SLING_MODEL} language="java" path="ButtonImpl.java"/>
-          <section className="pt-3">
+          <section className="mt-4">
             Now, let&apos;s implement comprehensive unit tests using <code className="code-inline background">AemContext</code>. The test setup includes loading 
             component definitions, test content, and properly registering the Sling Models for testing.
           </section>
           <HighlightCode code={BUTTON_UNIT_TEST} language="java" path="ButtonImplTest.java"/>
-          <section className="pt-4">
+          <section className="mt-4">
             By following this testing approach, you can maintain high code coverage and ensure reliability 
             when extending Core Components through the Sling Model delegation pattern.
           </section>
