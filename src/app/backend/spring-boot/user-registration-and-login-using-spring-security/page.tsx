@@ -433,11 +433,6 @@ export default function SpringBootApplication() {
               <li><strong>CSRF Protection:</strong> Disabled for simplicity, but should be enabled in production with proper configuration.</li>
             </ul>
           </section>
-          <section className="mt-4">
-            <strong>Note:</strong> Spring Security automatically detects and uses our <code className="code-inline background">CustomUserDetailsService</code> through component scanning 
-            since it&apos;s annotated with <code className="code-inline background">@Service</code> and implements <code className="code-inline background">UserDetailsService</code>. 
-            We don&apos;t need to explicitly inject it into SecurityConfig unless we have multiple UserDetailsService implementations.
-          </section>
           <h2 className="text-xl mt-6">
             <strong>User Entities and Repositories</strong>
           </h2>
