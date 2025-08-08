@@ -26,12 +26,13 @@ export const SPRING_BOOT_APPLICATION_WITH_POSTGRESQL_THYMELEAF: IArticleItem = {
 
 export const USER_REGISTRATION_AND_LOGIN_USING_SPRING_SECURITY: IArticleItem = {
   title: "User Registration and Login using Spring Security",
-  description: ``,
+  description: `Spring Security is a powerful authentication and authorization framework for Java applications. It provides comprehensive security services 
+    for Spring based applications, including features like user authentication, password encoding, session management, and protection against common security vulnerabilities.`,
   url: `${TOPICS.SPRING_BOOT.url}/user-registration-and-login-using-spring-security`,
-  publishDate: "May 27, 2025",
-  modifiedDate: "May 27, 2025",
+  publishDate: "August 11, 2025",
+  modifiedDate: "August 11, 2025",
   topics: [ TOPICS.SPRING_BOOT ],
-  active: false
+  active: true
 }
 
 export const SPRING_BOOT: IArticleItem[] = [
