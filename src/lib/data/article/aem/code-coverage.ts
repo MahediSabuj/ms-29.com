@@ -34,8 +34,21 @@ export const MOCK_SLING_MODEL_INJECTORS_ANNOTATIONS: IArticleItem = {
   active: false
 }
 
+export const CODE_COVERAGE_SLING_MODEL_DELEGATION_PATTERN: IArticleItem = {
+  title: "Unit Test for Sling Model Delegation Pattern",
+  description: `The Sling Model Delegation pattern allows extending Core Components functionality while maintaining the original API 
+  contract. In a previous article, we discussed how to implement Sling Model delegation pattern. Now, we will cover how to write 
+  comprehensive unit tests and ensure code coverage for these delegated Sling Models using JUnit 5, AEM Mocks.`,
+  url: "/aem/code-coverage/sling-model-delegation-pattern",
+  publishDate: "August 15, 2025",
+  modifiedDate: "August 15, 2025",
+  topics: [ TOPICS.AEM_CODE_COVERAGE ],
+  active: true  
+}
+
 export const CODE_COVERAGE: IArticleItem[] = [
   CODE_COVERAGE_OSGI_CONFIGURATION,
   MOCK_STATIC_METHODS_MOCKITO,
-  MOCK_SLING_MODEL_INJECTORS_ANNOTATIONS
+  MOCK_SLING_MODEL_INJECTORS_ANNOTATIONS,
+  CODE_COVERAGE_SLING_MODEL_DELEGATION_PATTERN
 ].filter(m => m.active);
