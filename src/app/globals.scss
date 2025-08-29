@@ -41,6 +41,103 @@
 }
 
 @layer components {
+  .hero-section {
+    @apply bg-gradient-to-br from-slate-50 via-white to-blue-50
+      min-h-[85vh] flex items-center relative overflow-hidden;
+  }
+
+  .hero-content {
+    @apply max-w-4xl mx-auto text-center px-6 relative z-10;
+  }
+
+  .hero-title {
+    @apply text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight;
+    background: linear-gradient(135deg, #3A2A1D 0%, #5D4B37 50%, #3A2A1D 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .hero-subtitle {
+    @apply text-xl md:text-2xl text-slate-600 mb-8 font-light leading-relaxed;
+  }
+
+  .hero-cta {
+    @apply inline-flex items-center px-8 py-4
+      text-white font-semibold rounded-xl
+      shadow-lg hover:shadow-xl transition-all duration-300
+      hover:-translate-y-1;
+    background-color: #3A2A1D;
+
+    &:hover {
+      background-color: #2F1F11;
+    }
+  }
+
+  .feature-card {
+      @apply bg-white rounded-2xl p-8 shadow-sm hover:shadow-md
+        transition-all duration-300 border border-slate-100
+        hover:border-slate-200 hover:-translate-y-1;
+    }
+
+  .feature-icon {
+    @apply w-12 h-12 rounded-xl flex items-center justify-center mb-4;
+    background: linear-gradient(135deg, #3A2A1D 0%, #5D4B37 100%);
+  }
+
+  .feature-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .stats-card {
+    @apply text-center p-6;
+  }
+
+  .stats-number {
+    @apply text-3xl md:text-4xl font-bold text-slate-900 mb-2;
+  }
+
+  .stats-label {
+    @apply text-slate-600 font-medium;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-center mb-4;
+    color: #3A2A1D;
+  }
+
+  .section-subtitle {
+    @apply text-xl text-slate-600 text-center mb-12 font-light;
+  }
+
+  .modern-card {
+    @apply bg-white rounded-2xl shadow-sm hover:shadow-md
+      transition-all duration-300 border border-slate-100
+      hover:border-slate-200;
+  }
+
+  .blog-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12;
+   }
+
+  .blog-card {
+    @apply modern-card p-6 hover:-translate-y-1 cursor-pointer;
+  }
+
+  .blog-title {
+    @apply font-semibold text-slate-900 mb-2 line-clamp-2;
+  }
+
+  .blog-excerpt {
+    @apply text-slate-600 text-sm mb-4 line-clamp-3;
+  }
+
+  .blog-meta {
+    @apply flex items-center justify-between text-sm text-slate-500;
+  }
+
   .modern-brand {
     @apply text-3xl font-bold bg-gradient-to-r from-primary-600 to-accent-500 
       bg-clip-text text-transparent;
@@ -51,13 +148,15 @@
   }
 
   .modern-link {
-    @apply text-primary-600 hover:text-primary-700 transition-colors duration-200
+    @apply hover:text-primary-700 transition-colors duration-200
       font-medium hover:decoration-2;
+    color: #3A2A1D;
   }
 
   .article-title {
-    @apply text-2xl font-bold text-neutral-800 leading-tight 
+    @apply text-2xl font-bold leading-tight
       hover:text-primary-600 transition-colors duration-300;
+    color: #3A2A1D;
   }
 
   .article-meta {
@@ -73,5 +172,24 @@
       border border-neutral-200 rounded-full px-3 py-1 text-xs font-medium
       hover:from-primary-50 hover:to-primary-100 hover:text-primary-700 
       hover:border-primary-200 transition-all duration-300;
+  }
+
+  .modern-button {
+    @apply px-6 py-3 rounded-xl font-semibold transition-all duration-200
+      shadow-sm hover:shadow-md;
+  }
+
+  .button-primary {
+    @apply modern-button text-white;
+    background-color: #3A2A1D;
+
+    &:hover {
+      background-color: #2F1F11;
+    }
+  }
+
+  .button-secondary {
+    @apply modern-button bg-white text-slate-700 border border-slate-200
+      hover:border-slate-300 hover:bg-slate-50;
   }
 }
