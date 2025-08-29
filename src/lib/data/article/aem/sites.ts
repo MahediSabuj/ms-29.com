@@ -72,14 +72,14 @@ export const APACHE_SLING_SITEMAP_GENERATOR: IArticleItem = {
 export const CONTEXT_AWARE_CONFIGURATION : IArticleItem = {
   title: "Apache Sling Context Aware Configuration in AEM",
   url: "/aem/sites/context-aware-configuration",
-  publishDate: "August 19, 2025",
-  modifiedDate: "August 19, 2025",
+  publishDate: "August 23, 2025",
+  modifiedDate: "August 23, 2025",
   description: `Context-aware configurations  are related to a content resource, allows different configs for 
     different content resources. Parameters within nested contexts allow hierarchical based inheritance and 
     global fallback values when required. Leveraging the Context-Aware Configuration Java API, one can retrieve 
     the appropriate configuration for each content resource without concerning  where it is stored or how the inheritance works.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const CUSTOM_OSGI_CONFIGURATION: IArticleItem = {

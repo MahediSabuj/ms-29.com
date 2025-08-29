@@ -4,7 +4,8 @@ interface Brand {
 }
 
 interface NavigationItem {
-
+  name: string;
+  url: string;
 }
 
 export interface IconItem {
