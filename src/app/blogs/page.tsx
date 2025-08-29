@@ -33,7 +33,7 @@ import { GOOGLE_ANALYTICS } from "@/lib/data/article/analytics/google";
 import { IAC } from "@/lib/data/article/devops/iac";
 
 export const metadata: Metadata = {
-  title: "Technical Articles & Tutorials | MS-29",
+  title: "Technical Articles & Tutorials",
   description: "Browse our comprehensive collection of technical articles covering AEM, AWS, Spring Boot, competitive programming, and more. Expert insights and practical tutorials for developers.",
   alternates: {
     canonical: "/blogs"

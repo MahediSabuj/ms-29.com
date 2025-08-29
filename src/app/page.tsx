@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "MS-29 | Modern Technology Insights",
-  description: "Explore cutting-edge technology insights, tutorials, and best practices in AEM, AWS, Spring Boot, and competitive programming. European-inspired design meets technical excellence.",
+  title: "MS-29",
+  description: "Explore cutting-edge technology insights, tutorials, and best practices in AEM, AWS, Spring Boot, and competitive programming.",
   alternates: {
     canonical: "/"
   }
