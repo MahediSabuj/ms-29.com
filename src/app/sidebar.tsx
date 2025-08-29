@@ -18,6 +18,7 @@ import { EXPERIENCE_FRAGMENT } from "@/lib/data/article/aem/experience-fragment"
 import { AEM_CLOUD } from "@/lib/data/article/aem/cloud";
 import { ACS_COMMONS } from "@/lib/data/article/aem/acs-commons";
 import { EDGE_DELIVERY_SERVICE } from "@/lib/data/article/aem/eds";
+import { AWS_COGNITO } from "@/lib/data/article/aws/cognito";
 import { AWS_EC2 } from "@/lib/data/article/aws/ec2";
 import { AWS_SES } from "@/lib/data/article/aws/ses";
 import { AWS_ECS } from "@/lib/data/article/aws/ecs";
@@ -86,6 +87,9 @@ const aem : IListGroup = {
 const aws: IListGroup = {
   title: "Amazon Web Service",
   listItems: [{
+    topic: TOPICS.AWS_COGNITO,
+    count: AWS_COGNITO.length
+  }, {
     topic: TOPICS.AWS_EC2,
     count: AWS_EC2.length
   }, {

@@ -14,7 +14,8 @@ export default function Navigation(config: HeaderConfig) {
             {brand.title}
           </Link>
           <button type="button"
-              className="inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-[#3A2A1D] rounded-lg md:hidden"
+              className="inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-neutral-700 rounded-xl md:hidden 
+                         hover:bg-neutral-100 transition-colors duration-200"
               aria-controls="navbar-hamburger" aria-expanded="false">
             <span className="sr-only">Open main menu</span>
             <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"

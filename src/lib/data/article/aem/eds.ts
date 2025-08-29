@@ -40,8 +40,8 @@ export const UNDERSTANDING_EDGE_DELIVERY_SERVICE_AND_UNIVERSAL_EDITOR: IArticleI
   title: "Understanding Edge Delivery Service and Universal Editor",
   description: ``,
   url: `${TOPICS.EDGE_DELIVERY_SERVICE.url}/understanding-edge-delivery-service-and-universal-editor`,
-  publishDate: "May 15, 2025",
-  modifiedDate: "May 15, 2025",
+  publishDate: "August 22, 2025",
+  modifiedDate: "August 22, 2025",
   topics: [ TOPICS.EDGE_DELIVERY_SERVICE ],
   active: false
 }

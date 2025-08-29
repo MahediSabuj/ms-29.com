@@ -1,9 +1,12 @@
 .iconItem {
+  @apply p-2 rounded-xl hover:bg-neutral-100 transition-all duration-300;
+  
   svg {
-    width: 50px;
-    height: 35px;
+    width: 32px;
+    height: 32px;
   }
+  
   + .iconItem {
-    padding-left: 10px;
+    margin-left: 8px;
   }
 }

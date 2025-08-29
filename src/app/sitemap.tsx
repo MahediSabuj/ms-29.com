@@ -16,6 +16,7 @@ import { EXPERIENCE_FRAGMENT } from "@/lib/data/article/aem/experience-fragment"
 import { AEM_CLOUD } from "@/lib/data/article/aem/cloud";
 import { ACS_COMMONS } from "@/lib/data/article/aem/acs-commons";
 import { EDGE_DELIVERY_SERVICE } from "@/lib/data/article/aem/eds";
+import { AWS_COGNITO } from "@/lib/data/article/aws/cognito";
 import { AWS_EC2 } from "@/lib/data/article/aws/ec2";
 import { AWS_SES } from "@/lib/data/article/aws/ses";
 import { AWS_ECS } from "@/lib/data/article/aws/ecs";
@@ -117,6 +118,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   loadArticles(TOPICS.ACS_COMMONS.url, ACS_COMMONS);
   loadArticles(TOPICS.EDGE_DELIVERY_SERVICE.url, EDGE_DELIVERY_SERVICE);
 
+  loadArticles(TOPICS.AWS_COGNITO.url, AWS_COGNITO);
   loadArticles(TOPICS.AWS_EC2.url, AWS_EC2);
   loadArticles(TOPICS.AWS_SES.url, AWS_SES);
   loadArticles(TOPICS.AWS_ECS.url, AWS_ECS);

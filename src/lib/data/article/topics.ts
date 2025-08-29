@@ -61,6 +61,10 @@ const TOPICS: Topics = {
     title: "Elastic Container Service",
     url: "/aws/ecs"
   },
+  AWS_COGNITO: {
+    title: "Amazon Cognito",
+    url: "/aws/cognito"
+  },
   SF_LWC: {
     title: "Lightning Web Component",
     url: "/salesforce/lwc"

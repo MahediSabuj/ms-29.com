@@ -72,8 +72,8 @@ export const APACHE_SLING_SITEMAP_GENERATOR: IArticleItem = {
 export const CONTEXT_AWARE_CONFIGURATION : IArticleItem = {
   title: "Apache Sling Context Aware Configuration in AEM",
   url: "/aem/sites/context-aware-configuration",
-  publishDate: "August 23, 2025",
-  modifiedDate: "August 23, 2025",
+  publishDate: "August 19, 2025",
+  modifiedDate: "August 19, 2025",
   description: `Context-aware configurations  are related to a content resource, allows different configs for 
     different content resources. Parameters within nested contexts allow hierarchical based inheritance and 
     global fallback values when required. Leveraging the Context-Aware Configuration Java API, one can retrieve 
@@ -283,6 +283,16 @@ export const SAML_AUTHENTICATION : IArticleItem = {
   active: false
 }
 
+export const SETUP_LOCAL_AEM_DEVELOPMENT_ENVIRONMENT : IArticleItem = {
+  title: "Setup Local AEM Development Environment",
+  url: "/aem/sites/set-up-local-aem-development-environment",
+  publishDate: "August 19, 2025",
+  modifiedDate: "August 19, 2025",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
+}
+
 export const SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION : IArticleItem = {
   title: "Show/Hide AEM Dialog Fields on Dropdown Selection",
   url: "/aem/sites/show-hide-aem-dialog-fields-on-dropdown-selection",
@@ -400,6 +410,7 @@ export const AEM_SITES : IArticleItem[] = [
   REUSE_COMMON_DIALOG_PARTS_IN_AEM_COMPONENTS,
   QUERY_BUILDER_CHEATSHEET,
   SAML_AUTHENTICATION,
+  SETUP_LOCAL_AEM_DEVELOPMENT_ENVIRONMENT,
   SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION,
   SLING_JOBS_IN_AEM,
   SLING_MAPPINGS_FOR_RESOURCE_RESOLUTION,
