@@ -115,19 +115,19 @@ const COMPONENT_DIALOG = `<?xml version="1.0" encoding="UTF-8"?>
 const SLING_MODEL = `@Model(adaptables = SlingHttpServletRequest.class)
 public class HelloWorld {
 
-    @ScriptVariable
-    protected Style currentStyle;
+  @ScriptVariable
+  protected Style currentStyle;
     
-    private boolean actionDisabled;
+  private boolean actionDisabled;
 
-    @PostConstruct
-    protected void init() {
-        actionDisabled = currentStyle.get("actionDisabled", false);
-    }
+  @PostConstruct
+  protected void init() {
+    actionDisabled = currentStyle.get("actionDisabled", false);
+  }
 
-    public boolean isActionDisabled() {
-        return actionDisabled;
-    }
+  public boolean isActionDisabled() {
+    return actionDisabled;
+  }
 }`;
 
 const breadcrumbs : IBreadCrumb = {
