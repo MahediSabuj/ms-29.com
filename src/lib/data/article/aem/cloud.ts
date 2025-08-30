@@ -116,16 +116,6 @@ export const REPOSITORY_MODERNIZER: IArticleItem = {
   active: true
 }
 
-export const SETUP_LOCAL_AEM_DEVELOPMENT_ENVIRONMENT : IArticleItem = {
-  title: "Setup Local AEM Development Environment",
-  url: "/aem/cloud/set-up-local-aem-development-environment",
-  publishDate: "May 04, 2025",
-  modifiedDate: "May 04, 2025",
-  description: ``,
-  topics: [ TOPICS.AEM_CLOUD ],
-  active: false
-}
-
 export const CONTENT_TRANSFER_TOOL : IArticleItem = {
   title: "Content Migration AMS to AEMaaCS",
   url: "/aem/cloud/content-migration-ams-to-aemaacs",
@@ -194,7 +184,6 @@ export const AEM_CLOUD : IArticleItem[] = [
   WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS,
   REPOSITORY_MODERNIZER,
   UPDATE_JAVA_JDK_V11_FOR_AEM_CLOUD,
-  SETUP_LOCAL_AEM_DEVELOPMENT_ENVIRONMENT,
   ENVIRONMENT_VARIABLES_AND_SECRETS,
   PRIVATE_GITHUB_REPOSITORIES_IN_CLOUD_MANAGER,
   TAILING_LOGS_ON_AEM_AS_CLOUD_SERVICE,
