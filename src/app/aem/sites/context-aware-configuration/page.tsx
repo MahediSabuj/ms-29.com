@@ -55,7 +55,7 @@ const SLING_MODEL =
   adapters = { PageConfig.class })
 public class PageConfigImpl implements PageConfig {
 
-    @Reference
+    @OSGiService
     private SiteConfigService configService;
 
     @SlingObject
@@ -161,13 +161,13 @@ export default function ContextAwareConfiguration() {
             <strong>Using Configuration in Components</strong>
           </h2>
           <section className="pt-4">
-            Access the configuration in your AEM components or services:
+            Access the configuration in Sling Model:
             <Highlight code={SLING_MODEL} language="java" path="components / internal / models / impl / PageConfigImpl.java"/>
           </section>
 
           <section className="pt-6">
-            With context-aware configurations, you can easily manage different settings for different content areas . 
-            This approach provides flexible configuration management that scales with your AEM project structure.
+            With this setup, you can now use them in HTL and different configuration values will be applied for different 
+            content paths. This approach provides flexible configuration management that scales with your AEM project structure.
           </section>
         </div>  
       </article>
