@@ -38,9 +38,9 @@ const featuredTopics = [
 
 const stats = [
   { number: "60+", label: "Technical Articles" },
-  { number: "13K+", label: "Total Views" },
-  { number: "8+", label: "Technology Stacks" },
-  { number: "10+", label: "Years Experience" }
+  { number: "15+", label: "Projects Delivered" },
+  { number: "6+", label: "Certifications" },
+  { number: "11+", label: "Years Experience" }
 ];
 
 export default function Home() {
@@ -125,19 +125,20 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50/30">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{color: '#3A2A1D'}}>
-            Technical Excellence & Clean Design
+            A bit about my journey
           </h2>
           <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-            MS-29 combines technical depth with clean, sophisticated design.
-            Our content focuses on practical solutions, best practices, and real-world implementations
-            that help developers and architects build better systems.
+            Started coding in university with competitive programming, got my first job working on ASP.NET, and somehow
+            ended up specializing in marketing technology. These days, I spend most of my time with AEM, AWS, Salesforce, and Spring Boot.
+            I write here because I wish I had these resources when I was figuring things out. Maybe they'll help you avoid
+            some of the headaches I had to work through.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/blogs" className="button-secondary">
-              Browse All Articles
+              Browse My Posts
             </Link>
             <Link href="/profile/mahedi-sabuj" className="button-primary">
-              About the Author
+              Learn More About Me
             </Link>
           </div>
         </div>
