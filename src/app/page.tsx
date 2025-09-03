@@ -130,7 +130,7 @@ export default function Home() {
           <p className="text-xl text-slate-600 mb-8 leading-relaxed">
             Started coding in university with competitive programming, got my first job working on ASP.NET, and somehow
             ended up specializing in marketing technology. These days, I spend most of my time with AEM, AWS, Salesforce, and Spring Boot.
-            I write here because I wish I had these resources when I was figuring things out. Maybe they'll help you avoid
+            I write here because I wish I had these resources when I was figuring things out. Maybe they&apos;ll help you avoid
             some of the headaches I had to work through.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
