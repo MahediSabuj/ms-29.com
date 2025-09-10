@@ -26,7 +26,6 @@ import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import GooglePublisherTag from "@/components/third-parties/google/gpt";
 import { HeaderConfig } from "@/types/header";
-import Sidebar from "./sidebar";
 
 hljs.registerLanguage('apache', apache);
 hljs.registerLanguage('bash', bash);
