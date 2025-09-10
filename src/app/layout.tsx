@@ -74,19 +74,15 @@ export default function RootLayout({
         <div className="flex flex-col min-h-screen">
           <Header/>
           <div className="pb-8 grow">
-            <div className="md:flex gap-8">
-              <main className="w-full">
-                <GooglePublisherTag
-                  container="div-gpt-ad-1738911994343-0"
-                  adUnit="ms29-banner"
-                  sizes={[[728, 90], [320, 50], [970, 90]]}
-                  sizeMapping={[
-                    [[768, 0], [[728, 90]]],
-                    [[0, 0], [[320, 50]]]
-                  ]}/>
-                <div>{children}</div>
-              </main>
-            </div>
+            <GooglePublisherTag
+              container="div-gpt-ad-1738911994343-0"
+              adUnit="ms29-banner"
+              sizes={[[728, 90], [320, 50], [970, 90]]}
+              sizeMapping={[
+                [[768, 0], [[728, 90]]],
+                [[0, 0], [[320, 50]]]
+              ]}/>
+            <div>{children}</div>
           </div>
           <Footer/>
           <GoogleTagManager gtmId={process.env.GTM_ID || ""}/>
