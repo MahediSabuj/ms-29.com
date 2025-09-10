@@ -60,9 +60,9 @@ export default function Home() {
               </h1>
               
               <p className="text-xl text-slate-600 leading-relaxed max-w-2xl">
-                Building scalable <span className="font-semibold text-slate-800">MarTech solutions</span> with 
-                AEM, AWS, Salesforce, and Spring Boot. Sharing knowledge through 
-                <span className="font-semibold text-slate-800">technical writing</span> and community engagement.
+                Building scalable <span className="font-semibold text-slate-800">MarTech solutions</span> with <span className="font-semibold text-slate-800">AEM, AWS, Salesforce, and Spring
+                Boot</span>. Sharing knowledge through <span className="font-semibold text-slate-800">technical writing</span> and
+                community engagement.
               </p>
             </div>
             
