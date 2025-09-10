@@ -19,7 +19,7 @@ import xml from 'highlight.js/lib/languages/xml';
 import yaml from 'highlight.js/lib/languages/yaml';
 import ini from 'highlight.js/lib/languages/ini';
 
-import "./globals.scss";
+import "../globals.scss";
 import 'highlight.js/styles/default.css';
 
 import Header from "@/components/header/header";
@@ -44,7 +44,7 @@ hljs.registerLanguage('xml', xml);
 hljs.registerLanguage('yaml', yaml);
 
 const adobeCleanFont = localFont({
-  src: "./AdobeClean-Regular.otf" 
+  src: "../AdobeClean-Regular.otf"
 });
 
 export const metadata: Metadata = {
@@ -74,9 +74,9 @@ export default function RootLayout({
       <body className={adobeCleanFont.className}>
         <div className="flex flex-col min-h-screen">
           <Header/>
-          <div className="pb-8 grow">
-            <div className="md:flex gap-8">
-              <main className="w-full">
+          <div className="container mx-auto py-8 grow">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 md:flex gap-8">
+              <main className="md:w-3/4 w-full">
                 <GooglePublisherTag
                   container="div-gpt-ad-1738911994343-0"
                   adUnit="ms29-banner"
@@ -87,6 +87,9 @@ export default function RootLayout({
                   ]}/>
                 <div>{children}</div>
               </main>
+              <aside className="md:w-1/4 w-full md:pt-0 pt-8">
+                <Sidebar/>
+              </aside>
             </div>
           </div>
           <Footer/>
