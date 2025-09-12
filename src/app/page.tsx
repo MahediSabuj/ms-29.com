@@ -44,25 +44,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
-            <div className="inline-flex items-center px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">
-              👋 Welcome to my digital space
-            </div>
-            
             <div className="space-y-6">
-              <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                <span className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text text-transparent">
-                  Technology
-                </span>
-                <br />
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                  Enthusiast
-                </span>
-              </h1>
-              
               <p className="text-xl text-slate-600 leading-relaxed max-w-2xl">
-                Building scalable <span className="font-semibold text-slate-800">MarTech solutions</span> with <span className="font-semibold text-slate-800">AEM, AWS, Salesforce, and Spring
-                Boot</span>. Sharing knowledge through <span className="font-semibold text-slate-800">technical writing</span> and
-                community engagement.
+                Passionate about building scalable MarTech solutions with
+                <span className="font-semibold text-slate-700"> AEM, AWS, Salesforce, Spring Boot</span> and
+                sharing insights through technical writing and community engagement.
               </p>
             </div>
             
