@@ -73,7 +73,7 @@ export default function PrivateGithubRepository() {
           <section className="pt-4">
             Make sure you have <strong>Deployment Manager</strong> or <strong>Business Owner</strong> role otherwise you won&apos;t be able to add a repository.
           </section>
-          <Image src={GITHUB_PRIVATE_REPOSITORY} className="border mt-2" width="650"
+          <Image src={GITHUB_PRIVATE_REPOSITORY} className="border border-gray-200 mt-2" width="650"
               alt="GitHub Private Repository">
           </Image>
           <h2 className="text-xl mt-4" id="validate-ownership">
@@ -83,7 +83,7 @@ export default function PrivateGithubRepository() {
             Cloud Manager now knows about your GitHub repository, but it still needs access to it. To grant access, you need to install the
             Adobe GitHub app and verify that you own the specified repository.
           </section>
-          <Image src={VALIDATE_GITHUB_OWNERSHIP} className="border mt-2" width="650"
+          <Image src={VALIDATE_GITHUB_OWNERSHIP} className="border border-gray-200 mt-2" width="650"
               alt="Validate GitHub Repository Ownership">
           </Image>
           <section className="pt-4">
@@ -111,7 +111,7 @@ export default function PrivateGithubRepository() {
           This pipeline is started at each pull request update. The GitHub check remains in a running state until the code quality check is complete. The code quality
           results are then propagated to the GitHub check.
         </section>
-        <Image src={GITHUB_CODE_QUALITY_PIPELINE} className="border mt-2" width="650"
+        <Image src={GITHUB_CODE_QUALITY_PIPELINE} className="border border-gray-200 mt-2" width="650"
             alt="GitHub Code Quality Pipeline Result">
         </Image>
         <section className="pt-4">

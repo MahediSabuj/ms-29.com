@@ -92,7 +92,7 @@ export default function SMTPConfiguration() {
                 note the following:<br/>
                 <strong>SMTP endpoint</strong>: email-smtp.ap-southeast-1.amazonaws.com<br/>
                 <strong>Port</strong>: 25, 465 or 587
-                <Image src={AWS_SES_SMTP_CONFIGURATION} className="border my-2"
+                <Image src={AWS_SES_SMTP_CONFIGURATION} className="border border-gray-200 my-2"
                    alt="AWS SES SMTP Configuration">
                 </Image>
               </li>
@@ -100,13 +100,13 @@ export default function SMTPConfiguration() {
                 Click on <strong>Create SMTP Credentials</strong>, which will redirect you to <strong>IAM Console</strong>.
                 For <strong>Create User for SMTP</strong>, type a name for your SMTP user in the <strong>User Name</strong> field
                 and click on <strong>Create user</strong> in the bottom-right corner.
-                <Image src={AWS_SES_SMTP_USER} className="border my-2"
+                <Image src={AWS_SES_SMTP_USER} className="border border-gray-200 my-2"
                     alt="AWS SES SMTP User">
                 </Image>
               </li>
               <li>
                 Note the <strong>SMTP Username</strong> and <strong>SMTP Password</strong> for your SMTP user. Alternatively, you can download the <strong>CSV</strong> file.
-                <Image src={AWS_SES_SMTP_CREDENTIALS} className="border my-2"
+                <Image src={AWS_SES_SMTP_CREDENTIALS} className="border border-gray-200 my-2"
                     alt="AWS SES SMTP Credentials">
                 </Image>
               </li>

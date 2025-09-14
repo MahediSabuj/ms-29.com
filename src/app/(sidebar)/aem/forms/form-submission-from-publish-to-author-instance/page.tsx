@@ -69,7 +69,7 @@ export default function SubmitFormIntoAuthor() {
             </li>
           </ul>
         </section>
-        <Image className="border" src={aem_ds_settings_service}
+        <Image className="border border-gray-200" src={aem_ds_settings_service}
                alt="AEM DS Settings Service">
         </Image>
         <section className="pt-1">

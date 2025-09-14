@@ -73,19 +73,19 @@ export default function SonarQubeSetup() {
           <section>
             From <strong>Projects</strong> tab, click on <strong>Create Project</strong>.
           </section>
-          <Image src={CREATE_LOCAL_PROJECT_SONARQUBE} className="border mt-2"
+          <Image src={CREATE_LOCAL_PROJECT_SONARQUBE} className="border border-gray-200 mt-2"
              width={500} alt="Create Project in SonarQube">
           </Image>
           <section className="pt-3">
             The next step involves creating project token and prepare Maven command to initiate the analysis of your project.
           </section>
-          <Image src={ANALYSIS_PROJECT_SONARQUBE} className="border mt-2"
+          <Image src={ANALYSIS_PROJECT_SONARQUBE} className="border border-gray-200 mt-2"
               alt="Analysis Project in SonarQube">
           </Image>
           <section className="pt-3">
             Copy the Maven command and execute it on your project, then navigate to the SonarQube dashboard to view the analysis report.
           </section>
-          <Image src={SONARQUBE_ANALYSIS_REPORT} className="border mt-2"
+          <Image src={SONARQUBE_ANALYSIS_REPORT} className="border border-gray-200 mt-2"
              alt="SonarQube Analysis Report">
           </Image>
           <section className="pt-3">

@@ -10,7 +10,7 @@ export default function ListGroup({ title, listItems } : IListGroup) {
   return (
     listItems.length > 0 &&
       <div className="list-group">
-        <div className="text-lg block border-b">{title}</div>
+        <div className="text-lg block border-gray-200 border-b">{title}</div>
         <div>
           <ul className="text-sm font-medium text-gray-900">
             {listItems.map((item, index) => {

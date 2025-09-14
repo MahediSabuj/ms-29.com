@@ -37,6 +37,16 @@ export const AEM_DEPLOYMENT_MODELS: IArticleItem = {
   active: true
 }
 
+export const AEM_DEVELOPER_ROADMAP: IArticleItem = {
+  title: "AEM Developer Roadmap",
+  url: "/aem/sites/aem-developer-roadmap",
+  publishDate: "September 19, 2025",
+  modifiedDate: "September 19, 2025",
+  description: ``,
+  topics: [ TOPICS.AEM_SITES ],
+  active: false
+}
+
 export const AEM_SERVICE_USERS_USING_REPOINIT_AND_RESOURCE_RESOLVER: IArticleItem = {
   title: "AEM Service Users using RepoInit, Mapping and Resource Resolver",
   url: "/aem/sites/aem-service-users-using-repoinit-mapping-and-resource-resolver",
@@ -286,8 +296,8 @@ export const SAML_AUTHENTICATION : IArticleItem = {
 export const SETUP_LOCAL_AEM_DEVELOPMENT_ENVIRONMENT : IArticleItem = {
   title: "Setup Local AEM Development Environment",
   url: "/aem/sites/set-up-local-aem-development-environment",
-  publishDate: "August 19, 2025",
-  modifiedDate: "August 19, 2025",
+  publishDate: "September 26, 2025",
+  modifiedDate: "September 26, 2025",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
   active: false
@@ -390,6 +400,7 @@ export const AEM_SITES : IArticleItem[] = [
   ADAPTIVE_IMAGE_SERVLET_FOR_CUSTOM_COMPONENTS,
   AEM_COMPONENT_DIALOG_CHEATSHEET,
   AEM_DEPLOYMENT_MODELS,
+  AEM_DEVELOPER_ROADMAP,
   AEM_SERVICE_USERS_USING_REPOINIT_AND_RESOURCE_RESOLVER,
   APACHE_SLING_SERVLET_IN_AEM,
   APACHE_SLING_SITEMAP_GENERATOR,

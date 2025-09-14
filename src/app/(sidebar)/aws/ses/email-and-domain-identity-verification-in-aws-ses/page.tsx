@@ -69,7 +69,7 @@ export default function VerifyIdentities() {
                 <li>Under <strong>Identity details</strong>, choose <strong>Email address</strong> as the identity type.</li>
                 <li>
                   For <strong>Email address</strong>, enter the email address that you want to use. The email address must be an address that&apos;s able to receive mail and you have access.
-                  <Image src={AWS_SES_EMAIL_IDENTITY} className="border my-2"
+                  <Image src={AWS_SES_EMAIL_IDENTITY} className="border border-gray-200 my-2"
                       alt="AWS SES Email Identity">
                   </Image>
                 </li>
@@ -92,7 +92,7 @@ export default function VerifyIdentities() {
                   <li>Under <strong>Identity details</strong>, choose <strong>Domain</strong> as the identity type.</li>
                   <li>
                     For <strong>Domain</strong>, enter the domain name that you want to use. You must have access to the domain&apos;s DNS settings to complete the domain verification process.
-                    <Image src={AWS_SES_DOMAIN_IDENTITY} className="border my-2" alt="AWS SES Domain Identity"/>
+                    <Image src={AWS_SES_DOMAIN_IDENTITY} className="border border-gray-200 my-2" alt="AWS SES Domain Identity"/>
                   </li>
                   <li>
                     To use custom <strong>MAIL FROM Domain</strong>, select the check box and complete the following steps:
@@ -103,7 +103,7 @@ export default function VerifyIdentities() {
                         You can either allow SES to fallback to subdomain of <strong>amazonses.com</strong> or reject the message, triggering <code className="code-inline">MailFromDomainNotVerified</code> error.
                       </li>
                     </ul>
-                    <Image src={AWS_SES_MAIL_FROM_DOMAIN} className="border my-2" alt="AWS SES Mail From Domain"/>
+                    <Image src={AWS_SES_MAIL_FROM_DOMAIN} className="border border-gray-200 my-2" alt="AWS SES Mail From Domain"/>
                   </li>
                   <li>
                     SES uses Easy DKIM with 2048 bit singing length by default. To customize, expand <strong>Advanced DKIM settings</strong> and choose the desired DKIM type.
@@ -114,7 +114,7 @@ export default function VerifyIdentities() {
                         As an alternative to using Easy DKIM, you can instead configure DKIM authentication by using your own public-private key pair. This process is known as Bring Your Own DKIM (BYODKIM).
                       </li>
                     </ul>
-                    <Image src={AWS_SES_DOMAIN_VERIFICATION} className="border my-2" alt="AWS SES Domain Verification"/>
+                    <Image src={AWS_SES_DOMAIN_VERIFICATION} className="border border-gray-200 my-2" alt="AWS SES Domain Verification"/>
                     To use Bring Your Own DKIM feature, you first have to create an RSA key pair. To generate a key pair, follow the steps below:
                     <ul className="list-disc ml-6 pt-1 pl-2.5 pb-2">
                       <li>
@@ -127,9 +127,9 @@ export default function VerifyIdentities() {
                       </li>
                     </ul>
                     Now that you&apos;ve created a key pair, you have to add the public key as a TXT record to the DNS configuration for your domain. You You must include the <code className="code-inline">p=</code> prefix in the DNS record.
-                    <Image src={AWS_SES_BYO_DKIM_DNS_RECORD} className="border my-2" alt="AWS SES BYO DKIM DNS Record"/>
+                    <Image src={AWS_SES_BYO_DKIM_DNS_RECORD} className="border border-gray-200 my-2" alt="AWS SES BYO DKIM DNS Record"/>
                     Paste the private key you generated earlier and specify the selector name you used in the DNS settings. The selector is a string that uniquely identifies the public key in the DNS records.
-                    <Image src={AWS_SES_BYO_DKIM_CONFIG} className="border my-2" alt="AWS SES BYO DKIM Config"/>
+                    <Image src={AWS_SES_BYO_DKIM_CONFIG} className="border border-gray-200 my-2" alt="AWS SES BYO DKIM Config"/>
                   </li>
                   <li>
                     Click on <strong>Create Identity</strong>. Once created, you will see the required DNS records that you need to add to your domain&apos;s DNS settings.
@@ -151,7 +151,7 @@ export default function VerifyIdentities() {
             <section>
               To Request Production Access, navigate to <strong>Get Set Up</strong> from SES Console. Click on <strong>Request Production Access</strong> and fill out the form.
             </section>
-            <Image src={AWS_SES_PRODUCTION_ACCESS} className="border mt-2" alt="Amazon SES Production Access"/>
+            <Image src={AWS_SES_PRODUCTION_ACCESS} className="border border-gray-200 mt-2" alt="Amazon SES Production Access"/>
             <section className="pt-3">
               Once getting production access, you can send emails to any recipient without verifying the recipient email addresses. To test sending an email, navigate to a verified
               domain identity, click &quot;Send Test Email&quot; and fill in the required details.

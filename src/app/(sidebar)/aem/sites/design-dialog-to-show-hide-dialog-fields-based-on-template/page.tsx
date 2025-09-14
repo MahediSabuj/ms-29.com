@@ -161,13 +161,13 @@ export default function DesignDialog() {
             To configure the Design Dialog properties, navigate to <strong>Tools</strong> &gt; <strong>Templates</strong> &gt; <strong>Your_Project</strong> &gt; <strong>Template</strong> and
             click on the <strong>Edit</strong> then select <strong>Policy</strong> from the <strong>Template Editor</strong>.
           </section>
-          <Image src={TEMPLATE_EDITOR} className="border mt-2"
+          <Image src={TEMPLATE_EDITOR} className="border border-gray-200 mt-2"
              alt="Template Editor">
           </Image>
           <section className="pt-4">
             In the Policy Editor, configure the values according to the requirements.
           </section>
-          <Image src={COMPONENT_POLICY} className="border mt-2"
+          <Image src={COMPONENT_POLICY} className="border border-gray-200 mt-2"
              alt="Component Policy">
           </Image>
           <section className="pt-2">
@@ -181,7 +181,7 @@ export default function DesignDialog() {
           <section className="pt-4">
             The dialog will now appear as shown below, retrieving the link value from the design dialog and hiding the action fields.
           </section>
-          <Image src={_COMPONENT_DIALOG_} className="border mt-2" height="250"
+          <Image src={_COMPONENT_DIALOG_} className="border border-gray-200 mt-2" height="250"
              alt="Component Dialog">
           </Image>
           <section className="pt-6">

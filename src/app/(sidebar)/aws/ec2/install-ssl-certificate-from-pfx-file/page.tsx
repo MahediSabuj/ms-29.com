@@ -102,20 +102,20 @@ export default function InstallCertificate() {
           the &quot;Import Certificate&quot; option from the left-hand menu. Paste the certificate and private key into
           the respective text boxes, add tags accordingly, and review the details before confirming the import certificate.
         </div>
-        <Image src={import_ssl_certificate} className="border"
+        <Image src={import_ssl_certificate} className="border border-gray-200"
           alt="Import SSL Certificate in AWS Certificate Manager">
         </Image>
         <div className="py-2">
           Upon successful completion, the imported certificate will appear in the list of certificates.
         </div>
-        <Image src={certificates_list} className="border"
+        <Image src={certificates_list} className="border border-gray-200"
           alt="AWS Certificate Manager Certificates List">
         </Image>
         <div className="pt-4 pb-2">
           When creating a new Application Load Balancer, you can set up the Default Certificate by selecting the certificate
           imported in the previous step under the &quot;Default SSL/TLS server certificate&quot; section.
         </div>
-        <Image src={default_certificate} className="border"
+        <Image src={default_certificate} className="border border-gray-200"
           alt="AWS Elastic Load Balancer Default Certificate Setup">
         </Image>
         <div className="py-2">
@@ -123,7 +123,7 @@ export default function InstallCertificate() {
           its configuration by accessing HTTPS:443 from the Listeners and Rules tab. Then, navigate to the &quot;Certificates&quot;
           tab on the details page to confirm the setup.
         </div>
-        <Image src={https_listener_certificate} className="border"
+        <Image src={https_listener_certificate} className="border border-gray-200"
           alt="AWS ELB HTTPS Listener Certificate">
         </Image>
         <div className="pt-2">
@@ -132,25 +132,25 @@ export default function InstallCertificate() {
         <div className="pt-4 py-2">
           If you&apos;re maintaining the same load balancer to support multiple domains on the same port, you can assign different certificate for each domain using the &quot;Add SSL Certificates for SNI&quot; feature.
         </div>
-        <Image src={sni_add_certificate} className="border"
+        <Image src={sni_add_certificate} className="border border-gray-200"
           alt="Add SSL Certificate for SNI">
         </Image>
         <div className="py-2">
           Select the certificate you want to add from the list of available certificates and choose &quot;Include as Pending below&quot;.
         </div>
-        <Image src={sni_available_certificates} className="border"
+        <Image src={sni_available_certificates} className="border border-gray-200"
           alt="Available Certificate for SNI">
         </Image>
         <div className="py-2">
           After confirming the selection, you need to proceed by clicking on &quot;Add Pending Certificates&quot;.
         </div>
-        <Image src={sni_pending_certificates} className="border"
+        <Image src={sni_pending_certificates} className="border border-gray-200"
           alt="Add Pending Certificate for SNI">
         </Image>
         <div className="py-2">
           The certificate will now be available in the list of &quot;Listener Certificates for SNI&quot;.
         </div>
-        <Image src={sni_certificates} className="border"
+        <Image src={sni_certificates} className="border border-gray-200"
           alt="Listener Certificates for SNI">
         </Image>
         <div className="pt-4">

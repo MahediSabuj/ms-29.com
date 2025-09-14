@@ -58,17 +58,17 @@ export default function CustomSearchFacet() {
               <li>
                 For our use case, let&apos; proceed with <strong>Assets Admin Search Rail</strong> form. This form is used to search for assets in the AEM Assets UI.
                 When configuring the search form remember it&apos;s global across AEM Assets.
-                <Image src={AEM_ASSETS_SEARCH_FORM} width="600" alt="AEM Assets Search Form" className="border my-2"/>
+                <Image src={AEM_ASSETS_SEARCH_FORM} width="600" alt="AEM Assets Search Form" className="border border-gray-200 my-2"/>
               </li>
               <li>
                 Select the <strong>Assets Admin Search Rail</strong> form and click on the <strong>Edit</strong> button. In the right panel, list of predicates are provided.
-                <Image src={AEM_ASSETS_EDIT_SEARCH_FROM} alt="AEM Assets Edit Search Form" className="border my-2"/>
+                <Image src={AEM_ASSETS_EDIT_SEARCH_FROM} alt="AEM Assets Edit Search Form" className="border border-gray-200 my-2"/>
               </li>
               <li>
                 Add a new predicate (e.g., <strong>Property predicate</strong>) from the <strong>Select Predicate</strong> section. This will add a new filter to the Asset Search UI.
                 Configure the predicate by specifying the Property Name, Field Label, etc. The Property Name should match the metadata field you want to filter on.
                 Need a custom metadata field? Read the article <Link className="text-blue-600" target="_blank" href="/aem/assets/custom-metadata-in-aem-assets">Custom Metadata in AEM Assets</Link> for step-by-step instructions.
-                <Image src={AEM_ASSETS_PROPERTY_PREDICATE} alt="AEM Assets Property Predicate" className="border my-2"/>
+                <Image src={AEM_ASSETS_PROPERTY_PREDICATE} alt="AEM Assets Property Predicate" className="border border-gray-200 my-2"/>
                 Choose the predicate type that best matches your requirements.
               </li>
               <li>Save the changes to the search form. This will update the search UI to include the new facet.</li>
@@ -76,7 +76,7 @@ export default function CustomSearchFacet() {
           </section>
           <section className="pt-4">
             Navigate to an Asset Folder and click on <strong>Search</strong> icon in the top right corner of the Assets UI. You should see the new facet you created in the search filter panel.
-            <Image src={AEM_ASSETS_SEARCH_FILTER} alt="AEM Assets Search Filter" className="border mt-2"/>
+            <Image src={AEM_ASSETS_SEARCH_FILTER} alt="AEM Assets Search Filter" className="border border-gray-200 mt-2"/>
           </section>
           <section className="pt-4">
             Custom Search Facets can be found at <code className="code-inline break-all">/conf/global/settings/dam/search/facets/assets</code>. You can incorporate this configs into your AEM codebase

@@ -67,7 +67,7 @@ export default function SpringBootApplication() {
               </li>
             </ul>
           </section>
-          <Image src={SPRING_BOO_PROJECT_CONFIGURATION} className="border my-2" width="650"
+          <Image src={SPRING_BOO_PROJECT_CONFIGURATION} className="border border-gray-200 my-2" width="650"
               alt="Spring Boot Project Configuration">
           </Image>
           <section className="pt-2">
@@ -84,7 +84,7 @@ export default function SpringBootApplication() {
               <li><strong>Thymeleaf</strong> templating engine for rendering HTML pages.</li>
             </ul>
           </section>
-          <Image src={SPRING_BOO_PROJECT_DEPENDENCIES} className="border my-2" width="650"
+          <Image src={SPRING_BOO_PROJECT_DEPENDENCIES} className="border border-gray-200 my-2" width="650"
               alt="Spring Boot Project Dependencies">
           </Image>
           <section className="pt-2">

@@ -93,6 +93,10 @@ const TOPICS: Topics = {
     title: "Deep Learning",
     url: "/ai/deep-learning"
   },
+  CODING_ASSISTANT: {
+    title: "AI Coding Assistant",
+    url: "/ai/coding-assistant"
+  },
   GOOGLE_ANALYTICS: {
     title: "Google Analytics",
     url: "/analytics/google"

@@ -8,6 +8,7 @@ import Highlight from "@/components/highlight/highlight";
 import TOPICS from "@/lib/data/article/topics";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
+
 import { TAILING_LOGS_ON_AEM_AS_CLOUD_SERVICE as ARTICLE } from "@/lib/data/article/aem/cloud";
 
 import AEM_CLOUD_MANAGER_DOWNLOAD_LOGS from "./assets/aem-cloud-manager-download-logs.png";
@@ -49,7 +50,7 @@ export default function LogInvestigation() {
           Instead, Adobe Cloud Manager supports accessing AEMaaCS logs via Adobe I/O CLI with Cloud Manager plugin, which allows for downloading
           and tailing logs. Additionally, Adobe Cloud Manager allows for the download of logs, by day, via environment&apos;s Download Logs action.
         </section>
-        <Image src={AEM_CLOUD_MANAGER_DOWNLOAD_LOGS} className="border mt-3" height="250"
+        <Image src={AEM_CLOUD_MANAGER_DOWNLOAD_LOGS} className="border border-gray-200 mt-3" height="250"
            alt="AEM Cloud Manager Download Logs">
         </Image>
         <section className="pt-3">

@@ -7,6 +7,7 @@ import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
+
 import { DATA_SLY_RESOURCE_IN_AEM_SPA as ARTICLE } from "@/lib/data/article/aem/spa";
 
 import TEASER_AUTHOR_VIEW from './assets/Teaser_Author_View.webp';
@@ -141,7 +142,7 @@ export default function DataSlyResourceInSPA() {
           <section className="pt-3 pb-1">
             If you&apos;ve been following along with us thus far, in your Author, you should observe something similar to the following.
           </section>
-          <Image src={TEASER_AUTHOR_VIEW} className="border py-1 my-1"
+          <Image src={TEASER_AUTHOR_VIEW} className="border border-gray-200 py-1 my-1"
             alt="Teaser Author View">
           </Image>
         </div>  

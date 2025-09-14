@@ -6,6 +6,9 @@ import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Highlight from "@/components/highlight/highlight";
 import FAQ from "@/components/faq/faq";
 import TOPICS from "@/lib/data/article/topics";
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
+
 import { UPDATE_JAVA_JDK_V11_FOR_AEM_CLOUD as ARTICLE } from "@/lib/data/article/aem/cloud";
 
 export const metadata: Metadata = {
@@ -90,6 +93,10 @@ export default function JdkVersionUpdate() {
         question: `Cannot access <code>org.apache.jackrabbit.api.security.user.Group</code> bad class file: <code class="code-inline background break-all">/root/.m2/repository/com/adobe/aem/aem-sdk-api/2024.7.17258.20240726T172406Z-240700/aem-sdk-api-2024.7.17258.20240726T172406Z-240700.jar(org/apache/jackrabbit/api/security/user/Group.class)</code> class file has wrong version 55.0, should be 52.0`,
         answer: `Ensure Cloud Manager uses Java JDK v11.`
       }]}/>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }

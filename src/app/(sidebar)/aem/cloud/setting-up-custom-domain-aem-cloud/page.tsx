@@ -60,14 +60,14 @@ export default function DomainConfiguration() {
           From the left Navigation panel, Select <strong>Domain Settings</strong> then click <strong>Add Domain</strong>.
           In the Add domain dialog box, enter the custom domain name you are using. Do not include http:// or https:// when entering in your domain.
         </section>
-        <Image src={NEW_DOMAIN_NAME} className="border mt-3" height="200"
+        <Image src={NEW_DOMAIN_NAME} className="border border-gray-200 mt-3" height="200"
            alt="New Domain Name">
         </Image>
         <section className="py-3">
           The next step is to verify the domain. In the Verify Domain dialog box, select <strong>What certificate type do you plan on using with this
           domain?</strong> Adobe or Customer Managed Certificate.
         </section>
-        <Image src={DOMAIN_CERTIFICATION_SELECTION} className="border mb-3" height="300"
+        <Image src={DOMAIN_CERTIFICATION_SELECTION} className="border border-gray-200 mb-3" height="300"
            alt="Domain Name Verification">
         </Image>
         <section className="pb-3">
@@ -76,7 +76,7 @@ export default function DomainConfiguration() {
         <div className="md:flex">
           <div className="md:w-1/2 w-full">
             <figure>
-              <Image className="border py-3" src={DOMAIN_NAME_VERIFICATION_ADOBE}
+              <Image className="border border-gray-200 py-3" src={DOMAIN_NAME_VERIFICATION_ADOBE}
                  alt="Domain Name Verification for Adobe Managed Certificate">
               </Image>
               <figcaption className="text-center text-sm text-neutral-600">Adobe Managed Certificate</figcaption>
@@ -84,7 +84,7 @@ export default function DomainConfiguration() {
           </div>
           <div className="md:w-1/2 w-full md:pt-0 pt-4 md:ml-4">
             <figure>
-              <Image className=" border py-3" src={DOMAIN_NAME_VERIFICATION}
+              <Image className="border border-gray-200 py-3" src={DOMAIN_NAME_VERIFICATION}
                  alt="Domain Name Verification for Customer Managed Certificate">
               </Image>
               <figcaption className="text-center text-sm text-neutral-600">Customer Managed Certificate</figcaption>
@@ -101,14 +101,14 @@ export default function DomainConfiguration() {
         <div className="md:flex">
           <div className="md:w-1/2 w-full">
             <figure>
-              <Image className="border py-3" src={NEW_SSL_CERTIFICATE_ADOBE}
+              <Image className="border border-gray-200 py-3" src={NEW_SSL_CERTIFICATE_ADOBE}
                  alt="SSL Certificate for Adobe Managed Certificate">
               </Image>
             </figure>
           </div>
           <div className="md:w-1/2 w-full md:pt-0 pt-4 md:ml-4">
             <figure>
-              <Image className=" border py-3" src={NEW_SSL_CERTIFICATE}
+              <Image className=" border border-gray-200 py-3" src={NEW_SSL_CERTIFICATE}
                  alt="SSL Certificate for Customer Managed Certificate">
               </Image>
             </figure>
@@ -127,14 +127,14 @@ export default function DomainConfiguration() {
         <div className="md:flex">
           <div className="md:w-1/2 w-full">
             <figure>
-              <Image className="border py-3" src={CDN_CONFIGURATION_ADOBE}
+              <Image className="border border-gray-200 py-3" src={CDN_CONFIGURATION_ADOBE}
                  alt="CDN Configuration for Adobe Managed Certificate">
               </Image>
             </figure>
           </div>
           <div className="md:w-1/2 w-full md:pt-0 pt-4 md:ml-4">
             <figure>
-              <Image className=" border py-3" src={CDN_CONFIGURATION}
+              <Image className=" border border-gray-200 py-3" src={CDN_CONFIGURATION}
                  alt="CDN Configuration for Customer Managed Certificate">
               </Image>
             </figure>

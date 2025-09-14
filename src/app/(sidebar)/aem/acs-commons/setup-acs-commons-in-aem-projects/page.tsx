@@ -126,7 +126,7 @@ export default function InstallACSCommons() {
         <section className="pt-3">
           After installing the code, ACS AEM Commons will appear in the Tools section, as shown below.
         </section>
-        <Image src={ACS_COMMONS_IN_AEMAACS} className="border mt-2"
+        <Image src={ACS_COMMONS_IN_AEMAACS} className="border border-gray-200 mt-2"
            alt="ACS Commons in AEMaaCS">
         </Image>
         <section className="pt-3">

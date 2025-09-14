@@ -54,7 +54,7 @@ export default function AEMinDebugMode() {
           <ul className="list-disc ml-6 py-1 pl-2.5">
             <li>
               From <strong>Run / Debug</strong>, add new <strong>Remote JVM Debug</strong> configuration.
-              <Image className="py-1" src={REMOTE_JAVA_DEBUG_INTELLIJ_IDEA} height="250"
+              <Image className="border border-gray-200 p-1 mt-1" src={REMOTE_JAVA_DEBUG_INTELLIJ_IDEA} height="250"
                  alt="Remote Java Debug configuration in Intellij Idea">
               </Image>
             </li>

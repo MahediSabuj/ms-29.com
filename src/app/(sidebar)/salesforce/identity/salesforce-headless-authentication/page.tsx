@@ -6,6 +6,7 @@ import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
+
 import { SALESFORCE_HEADLESS_AUTHENTICATION as ARTICLE } from "@/lib/data/article/salesforce/identity";
 
 import HEADLESS_ALLOW_CODE_CREDENTIALS from './assets/Headless_Allow_Code_Credentials.webp';
@@ -65,8 +66,8 @@ export default function HeadlessAuthentication() {
             From <strong>Setup</strong>, select <strong>OAuth and OpenID Connect Settings</strong> and turn on <strong>Allow Authorization
             Code and Credentials Flows.</strong>
           </section>
-          <Image src={HEADLESS_ALLOW_CODE_CREDENTIALS} className="border mt-2"
-            alt="Allow Headless Code Credentilas">
+          <Image src={HEADLESS_ALLOW_CODE_CREDENTIALS} className="border border-gray-200 mt-2"
+            alt="Allow Headless Code Credentials">
           </Image>
           <h2 className="text-xl mt-4">
             <strong>Create a Role to Manage Headless Identity Features</strong>
@@ -76,14 +77,14 @@ export default function HeadlessAuthentication() {
             have the right level of access to manage Headless Identity features. From <strong>Roles</strong>, click on <strong>Set Up 
             Roles</strong> and select <strong>Add Role</strong> under the CEO.
           </section>
-          <Image src={MANAGE_HEADLESS_IDENTITY_FEATURES} className="border mt-2"
+          <Image src={MANAGE_HEADLESS_IDENTITY_FEATURES} className="border border-gray-200 mt-2"
             alt="Manage Headless Identity Features">
           </Image>
           <section className="pt-2">
             Assign the role that you created to your System Administrator user. From <strong>Users</strong>, edit the System Administrator
             user and assign the newly created Role from the <strong>Role</strong> dropdown.
           </section>
-          <Image src={ASSIGN_HEADLESS_ADMIN_ROLE_TO_SYSTEM_ADMIN} className="border mt-2"
+          <Image src={ASSIGN_HEADLESS_ADMIN_ROLE_TO_SYSTEM_ADMIN} className="border border-gray-200 mt-2"
             alt="Assign Headless Admin Role to System Admin">
           </Image>
           <h2 className="text-xl mt-4">
@@ -95,7 +96,7 @@ export default function HeadlessAuthentication() {
             preconfigured permissions and access settings. You can then customize the profile as needed. From <strong>Profiles</strong>, clone <strong>Customer 
             Community User</strong>.
           </section>
-          <Image src={SETUP_PROFILE_FOR_END_USERS} className="border mt-2"
+          <Image src={SETUP_PROFILE_FOR_END_USERS} className="border border-gray-200 mt-2"
             alt="Set Up Profile for End Users">
           </Image>
           <section className="pt-2">
@@ -104,7 +105,7 @@ export default function HeadlessAuthentication() {
             For this example, you use a business account to keep all your end-user records in one place. From <strong>Sales</strong> app, select <strong>
             Accounts</strong> Tab and click <strong>New</strong> to create a new account.
           </section>
-          <Image src={CREATE_ACCOUNT_FOR_END_USERS} className="border mt-2"
+          <Image src={CREATE_ACCOUNT_FOR_END_USERS} className="border border-gray-200 mt-2"
             alt="Create Account for End Users">
           </Image>
           <h2 className="text-xl mt-4">
@@ -114,14 +115,14 @@ export default function HeadlessAuthentication() {
             All orgs get a My Domain with enhanced domains by default. If you don&apos;t like your org&apos;s My Domain name or circumstances demand 
             a change, you can rename it. From <strong>My Domain</strong>, edit <strong>My Domain Details</strong>.
           </section>
-          <Image src={SALESFORCE_MY_DOMAIN_SETUP} className="border mt-2"
+          <Image src={SALESFORCE_MY_DOMAIN_SETUP} className="border border-gray-200 mt-2"
             alt="Setup Salesforce My Domain">
           </Image>
           <section className="pt-2">
             Enabling digital experiences is the first step to creating your Experience Cloud site. From <strong>Digital Experiences | Settings</strong>,
             Select <strong>Enable Digital Experiences</strong>. If enhanced domains are enabled in your org, you see your digital experiences domain name.
           </section>
-          <Image src={ENABLE_DIGITAL_EXPERIENCE} className="border mt-2"
+          <Image src={ENABLE_DIGITAL_EXPERIENCE} className="border border-gray-200 mt-2"
             alt="Enable Digital Experience">
           </Image>
           <section className="pt-2">
@@ -129,7 +130,7 @@ export default function HeadlessAuthentication() {
            Experience Cloud site. It is recommend that you don&apos;t provide a URL suffix for your site. That way, you&apos;re not required to remember it every 
            time you need the Experience Cloud domain.
           </section>
-          <Image src={NEW_EXPERIENCE_CLOUD_SITE} className="border mt-2"
+          <Image src={NEW_EXPERIENCE_CLOUD_SITE} className="border border-gray-200 mt-2"
             alt="Create Experience Cloud Site">
           </Image>
           <section className="pt-2">
@@ -137,7 +138,7 @@ export default function HeadlessAuthentication() {
             Workspaces, select <strong>Administration</strong>. From the Administration page, select <strong>Members</strong> and add &quot;AEM Headless Profile&quot; 
             that you created earlier to the <strong>Selected Profiles</strong>.
           </section>
-          <Image src={SETUP_PROFILE_FOR_EXPERIENCE_CLOUD_SITE} className="border mt-2"
+          <Image src={SETUP_PROFILE_FOR_EXPERIENCE_CLOUD_SITE} className="border border-gray-200 mt-2"
             alt="Setup Profile for Experience Cloud Site">
           </Image>
           <h2 className="text-xl mt-4">
@@ -148,7 +149,7 @@ export default function HeadlessAuthentication() {
             During configuring the Connected App for headless authentication, ensure to activate the Authorization Code and Credentials 
             Flow at the app level. To begin, navigate to <strong>App Manager</strong> and select <strong>New Connected App</strong>.
           </section>
-          <Image src={CONNECTED_APP_SETUP} className="border mt-2"
+          <Image src={CONNECTED_APP_SETUP} className="border border-gray-200 mt-2"
             alt="Connected App for Headless Setup">
           </Image>
           <section className="pt-2">
@@ -157,13 +158,13 @@ export default function HeadlessAuthentication() {
             OAuth policies on your connected app. From <strong>Edit Policies</strong>, under <strong>OAuth Policies</strong>, set the Permitted 
             Users policy to <strong>Admin approved users are pre-authorized</strong>.
           </section>
-          <Image src={CONNECTED_APP_AUTH_POLICIES} className="border mt-2"
+          <Image src={CONNECTED_APP_AUTH_POLICIES} className="border border-gray-200 mt-2"
             alt="Connected App Auth Policies">
           </Image>
           <section className="pt-2">
             On the Connected App <strong>Manage</strong> page, select <strong>Manage Profiles</strong> and add &quot;AEM Headless Profile&quot; that you created earlier.
           </section>
-          <Image src={CONNECTED_APP_MANAGE_PROFILES} className="border mt-2"
+          <Image src={CONNECTED_APP_MANAGE_PROFILES} className="border border-gray-200 mt-2"
             alt="Connected App Manage Profiles">
           </Image>
           <section className="pt-2">
@@ -171,7 +172,7 @@ export default function HeadlessAuthentication() {
             third-party app during headless identity flows. To access the Consumer Key, navigate to the <strong>App Manager</strong>, select <strong>View</strong> next 
             to your app, then on the Connected App detail page, click <strong>Manage Consumer Details</strong>.
           </section>
-          <Image src={CONNECTED_APP_MANAGE_CONSUMER_DETAILS} className="border mt-2"
+          <Image src={CONNECTED_APP_MANAGE_CONSUMER_DETAILS} className="border border-gray-200 mt-2"
             alt="Connected App Manage Consumer Details">
           </Image>
           <h2 className="text-xl mt-4">
@@ -182,7 +183,7 @@ export default function HeadlessAuthentication() {
             and &quot;AEM Headless Account&quot; business account created earlier. If person accounts are enabled, refrain from populating the Account field. 
             From <strong>All Sites</strong>, next to your Site, click <strong>Workspaces</strong>, select <strong>Administration</strong>, and then select <strong>Login & Registration</strong>.
           </section>
-          <Image src={EXPERIENCE_CLOUD_SITE_REGISTER_USER_CONFIGURATION} className="border mt-2"
+          <Image src={EXPERIENCE_CLOUD_SITE_REGISTER_USER_CONFIGURATION} className="border border-gray-200 mt-2"
             alt="Experience Cloud Site Register User Configuration">
           </Image>
           <section className="pt-2">
@@ -215,7 +216,7 @@ export default function HeadlessAuthentication() {
                     redirect_uri: [Connected App Callback URL]
                   </dd>
                 </dl>
-                <Image src={HEADLESS_LOGIN_AUTHORIZATION_REQUEST} className="border mt-2"
+                <Image src={HEADLESS_LOGIN_AUTHORIZATION_REQUEST} className="border border-gray-200 mt-2"
                   alt="Headless Login Authorization Request">
                 </Image>
               </li>
@@ -230,7 +231,7 @@ export default function HeadlessAuthentication() {
                     redirect_uri: [Connected App Callback URL]
                   </dd>
                 </dl>
-                <Image src={HEADLESS_LOGIN_ACCESS_TOKEN_REQUEST} className="border mt-2"
+                <Image src={HEADLESS_LOGIN_ACCESS_TOKEN_REQUEST} className="border border-gray-200 mt-2"
                   alt="Headless Login Access Token Request">
                 </Image>
               </li>
@@ -243,7 +244,7 @@ export default function HeadlessAuthentication() {
                     Content-Type: application/json
                   </dd>
                 </dl>
-                <Image src={HEADLESS_LOGIN_USERPROFILE_INFO} className="border mt-2"
+                <Image src={HEADLESS_LOGIN_USERPROFILE_INFO} className="border border-gray-200 mt-2"
                   alt="Headless Login UserProfile Info">
                 </Image>
                 <span className="mt-1 inline-block">

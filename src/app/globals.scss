@@ -1,6 +1,50 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #f0f9ff;
+  --color-primary-100: #e0f2fe;
+  --color-primary-200: #bae6fd;
+  --color-primary-300: #7dd3fc;
+  --color-primary-400: #38bdf8;
+  --color-primary-500: #0ea5e9;
+  --color-primary-600: #0284c7;
+  --color-primary-700: #0369a1;
+  --color-primary-800: #075985;
+  --color-primary-900: #0c4a6e;
+  
+  --color-accent-50: #fef7ee;
+  --color-accent-100: #fdedd3;
+  --color-accent-200: #fbd9a5;
+  --color-accent-300: #f8c06d;
+  --color-accent-400: #f59e0b;
+  --color-accent-500: #f97316;
+  --color-accent-600: #ea580c;
+  --color-accent-700: #c2410c;
+  --color-accent-800: #9a3412;
+  --color-accent-900: #7c2d12;
+  
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-150: #f0f0f0;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-300: #d4d4d4;
+  --color-neutral-400: #a3a3a3;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #525252;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
+  
+  --font-family-sans: Inter, ui-sans-serif, system-ui, sans-serif;
+  --shadow-soft: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04);
+  --shadow-medium: 0 4px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 25px -5px rgba(0, 0, 0, 0.04);
+  --shadow-strong: 0 10px 40px -10px rgba(0, 0, 0, 0.15), 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --spacing-18: 4.5rem;
+  --spacing-88: 22rem;
+}
 
 .linkedIn {
   svg {
@@ -123,7 +167,9 @@
    }
 
   .blog-card {
-    @apply modern-card p-6 hover:-translate-y-1 cursor-pointer;
+    @apply bg-white rounded-2xl shadow-sm hover:shadow-md
+      transition-all duration-300 border border-slate-100
+      hover:border-slate-200 p-6 hover:-translate-y-1 cursor-pointer;
   }
 
   .blog-title {
@@ -180,7 +226,8 @@
   }
 
   .button-primary {
-    @apply modern-button text-white;
+    @apply px-6 py-3 rounded-xl font-semibold transition-all duration-200
+      shadow-sm hover:shadow-md text-white;
     background-color: #3A2A1D;
 
     &:hover {
@@ -189,7 +236,8 @@
   }
 
   .button-secondary {
-    @apply modern-button bg-white text-slate-700 border border-slate-200
+    @apply px-6 py-3 rounded-xl font-semibold transition-all duration-200
+      shadow-sm hover:shadow-md bg-white text-slate-700 border border-slate-200
       hover:border-slate-300 hover:bg-slate-50;
   }
 }

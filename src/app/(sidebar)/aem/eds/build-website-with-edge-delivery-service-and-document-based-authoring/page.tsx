@@ -69,7 +69,7 @@ export default function DocumentSite() {
               Replace <code className="code-inline background">{'{repo}'}</code> and <code className="code-inline background">{'{owner}'}</code> with the name of your repository and GitHub username respectively.
             </div>
           </section>
-          <Image src={EDS_DOCUMENT_BASED_WEBSITE} alt="EDS Document based WebSite" className="my-2 border"/>
+          <Image src={EDS_DOCUMENT_BASED_WEBSITE} alt="EDS Document based WebSite" className="my-2 border border-gray-200"/>
           <h2 className="text-xl mt-4">
             <strong>Change Content Source to your Google Drive</strong>
           </h2>
@@ -89,7 +89,7 @@ export default function DocumentSite() {
               Alternatively, you can also download the files and upload them to your new folder. But it requires to convert the downloaded <code className="code-inline">.docx</code> files back into
               native Google Docs, when you upload them to your folder in your Google Drive. Make sure the folder is shared with the Adobe Experience Manager user (<Link href="mailto:helix@adobe.com" className="text-blue-600">helix@adobe.com</Link>).
             </div>
-            <Image src={SHARE_WITH_AEM_USER} alt="Share with AEM User" width="400" className="my-2 border"/>
+            <Image src={SHARE_WITH_AEM_USER} alt="Share with AEM User" width="400" className="my-2 border border-gray-200"/>
           </section>
           <section className="pt-4">
             Now that you have the content in your own folder, you need to update the reference in <code className="code-inline">fstab.yaml</code> in your GitHub repo. Copy/paste the folder URL from
@@ -105,11 +105,11 @@ export default function DocumentSite() {
           <section className="pt-4">
             To preview and publish content, author has to install <Link href="https://chromewebstore.google.com/detail/aem-sidekick/igkmdomcgoebiipaifhmpfjhbjccggml" target="_blank" className="text-blue-600">AEM Sidekick</Link> Chrome extension.
             After installing the extension in Chrome, make sure to pin it for quick and easy access.
-            <Image src={AEM_SIDEKICK_CHROME_EXTENSION} alt="AEM Sidekick Chrome Extension" className="my-2 border"/>
+            <Image src={AEM_SIDEKICK_CHROME_EXTENSION} alt="AEM Sidekick Chrome Extension" className="my-2 border border-gray-200"/>
           </section>
           <section className="pt-4">
             Navigate to the <strong>Google Drive folder</strong> and activate the AEM Sidekick by clicking on your pinned extension. A new toolbar will appear on the bottom of the screen.
-            <Image src={AEM_SIDEKICK_TOOLBAR} alt="AEM Sidekick Toolbar" className="my-2 border"/>
+            <Image src={AEM_SIDEKICK_TOOLBAR} alt="AEM Sidekick Toolbar" className="my-2 border border-gray-200"/>
             <div className="mt-2">
               Click on the <strong>Preview</strong> button to view content in preview environment and the <strong>Publish</strong> button to publish the content to live environment.
               Content must be previewed before it can be published — publishing without previewing will not be successful.

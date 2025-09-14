@@ -254,7 +254,7 @@ export default function SpringBootRestAPI() {
           <section>
             Before we get our hands dirty with development, let&apos;s take a look at the database diagram of the Event
             Registration System. It is a best practice to have a clear understanding of the database schema before starting the development.
-            <Image src={EVENT_REGISTRATION_SYSTEM_DB_DIAGRAM} className="border mt-2" width="650"
+            <Image src={EVENT_REGISTRATION_SYSTEM_DB_DIAGRAM} className="border border-gray-200 mt-2" width="650"
                 alt="Event Registration Database Diagram">
             </Image>
           </section>
@@ -304,7 +304,7 @@ export default function SpringBootRestAPI() {
             Instead of exposing REST APIs, we&apos;re working with traditional Spring MVC patterns to support server-side rendering with Thymeleaf. Once the backend is in place, we can test the form-based
             submission using tools like <strong>Postman</strong> to ensure that event data is processed and stored in database correctly.
             <HighlightCode code={EVENT_CONTROLLER} language="java" path="controllers / EventController.java"/>
-            <Image src={EVENT_CREATE_POSTMAN} alt="Create Event Request in Postman" className="border mt-2"/>
+            <Image src={EVENT_CREATE_POSTMAN} alt="Create Event Request in Postman" className="border border-gray-200 mt-2"/>
           </section>
           <section className="pt-4">
             After confirming that API is working as expected, we move to frontend part. We&apos;ll create a simple HTML form named <code className="code-inline background">create.html</code> inside

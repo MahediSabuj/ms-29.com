@@ -77,7 +77,7 @@ export default function DataLayer() {
               <li>Enter the <strong>Variable Name</strong> as <code className="code-inline background">eventType</code>.</li>
               <li>Click on <strong>Save</strong> to create the variable.</li>
             </ol>
-            <Image src={GTM_CUSTOM_VARIABLE} className="border mt-2"
+            <Image src={GTM_CUSTOM_VARIABLE} className="border border-gray-200 mt-2"
                 alt="GM Custom Variable">
             </Image>
             <div className="pt-2">
@@ -94,7 +94,7 @@ export default function DataLayer() {
               <li>Choose the triggers firing for <strong>All Custom Events</strong>.</li>
               <li>Click on <strong>Save</strong> to create the trigger.</li>
             </ol>
-            <Image src={GTM_TRIGGER} className="border mt-2"
+            <Image src={GTM_TRIGGER} className="border border-gray-200 mt-2"
                 alt="GTM Trigger Configuration">
             </Image>
           </section>
@@ -123,7 +123,7 @@ export default function DataLayer() {
               <li>Enter the <strong>Tag Name</strong> as <code className="code-inline background">Page View</code>.</li>
               <li>Click on <strong>Save</strong> to create the tag.</li>
             </ol>
-            <Image src={GTM_TAG} className="border mt-2"
+            <Image src={GTM_TAG} className="border border-gray-200 mt-2"
                 alt="GTM Tag Configuration">
             </Image>
             <div className="pt-4">

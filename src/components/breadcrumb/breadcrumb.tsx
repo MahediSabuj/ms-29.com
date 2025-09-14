@@ -17,18 +17,29 @@ export default function BreadCrumb({ items, current } : IBreadCrumb) {
           </Link>
           <meta itemProp="position" content="1"/>
         </li>
+        <li itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem">
+          <div className="flex items-center">
+            <svg className="block w-3 h-3 mx-1 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <Link itemProp="item" href="/blogs" className="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2">
+              <span itemProp="name">Articles</span>
+            </Link>
+          </div>
+          <meta itemProp="position" content="2"/>
+        </li>
         {items.map((breadcrumb, index) => {
           return (
             <li key={index} itemProp="itemListElement" itemScope itemType="http://schema.org/ListItem">
               <div className="flex items-center">
-                <svg className="block w-3 h-3 mx-1 text-gray-400 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <svg className="block w-3 h-3 mx-1 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
                 </svg>
                 <Link itemProp="item" href={breadcrumb.url} className="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2">
                   <span itemProp="name">{breadcrumb.title}</span>
                 </Link>
               </div>
-              <meta itemProp="position" content={`${index + 2}`}/>
+              <meta itemProp="position" content={`${index + 3}`}/>
             </li>
           )  
         })}
@@ -40,7 +51,7 @@ export default function BreadCrumb({ items, current } : IBreadCrumb) {
               </svg>
               <span itemProp="name" className="ms-1 text-sm font-medium text-gray-500 md:ms-2">{current}</span>
             </div>
-            <meta itemProp="position" content={`${items.length + 2}`}/>
+            <meta itemProp="position" content={`${items.length + 3}`}/>
           </li>
         }
       </ol>

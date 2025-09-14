@@ -138,7 +138,7 @@ export default function CustomOsgiConfig() {
           <section className="pt-3">
             You can check the configuration on your instance from here <code className="code-inline background">/system/console/configMgr</code>.
           </section>
-          <Image src={CUSTOM_OSGI_CONFIGURATION} className="border" height="250"
+          <Image src={CUSTOM_OSGI_CONFIGURATION} className="border border-gray-200 mt-2" height="250"
              alt="Custom OSGi Configuration">
           </Image>
           <h2 className="text-xl mt-4">
@@ -157,7 +157,7 @@ export default function CustomOsgiConfig() {
             in the PID field that was copied in the previous step, ensure the Serialization Format is set to &quot;OSGi Configurator JSON&quot; and Select Print. The OSGi Configuration in JSON 
             format will display in the Serialized Configuration Properties section.
           </section>
-          <Image src={OSGI_INSTALLER_CONFIGURATION_PRINTER} className="border" height="250"
+          <Image src={OSGI_INSTALLER_CONFIGURATION_PRINTER} className="border border-gray-200 mt-2" height="250"
              alt="OSGi Installer Configuration Printer">
           </Image>
           {/* <h2 className="text-xl mt-4">

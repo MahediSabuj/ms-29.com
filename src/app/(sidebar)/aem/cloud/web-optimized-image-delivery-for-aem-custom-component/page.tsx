@@ -116,7 +116,7 @@ export default function WebOptimizedImageDelivery() {
             this feature, you only need to enable the &quot;Enable Web Optimized Images&quot; option within the component&apos;s 
             design dialog.
           </section>
-          <Image src={enable_web_optimized_images} className="border"
+          <Image src={enable_web_optimized_images} className="border border-gray-200"
             alt="Enable Web Optimized Images for AEM Core Components">
           </Image>
           <div className="pt-2">

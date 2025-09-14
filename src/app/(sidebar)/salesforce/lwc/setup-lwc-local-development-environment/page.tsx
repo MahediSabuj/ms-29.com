@@ -103,7 +103,7 @@ export default function LocalEnvironment() {
               <li>Launch Visual Studio Code and Click Extensions in the Sidebar.</li>
               <li>
                 Search for Salesforce Extension Pack (Expanded) and Click Install.
-                <Image src={INSTALL_SALESFORCE_EXTENSION_PACK} className="background my-2" width="650"
+                <Image src={INSTALL_SALESFORCE_EXTENSION_PACK} className="border border-gray-200 my-2" width="650"
                     alt="Install Salesforce Extension Pack"/>
               </li>
             </ul>
@@ -119,7 +119,7 @@ export default function LocalEnvironment() {
               <li>From <strong>Setup</strong>, enter <code className="code-inline background">Dev Hub</code> in the Quick Find box and select <strong>Dev Hub</strong>.</li>
               <li>Click the slider to enable Dev Hub.</li>
             </ul>
-            <Image src={SALESFORCE_DEV_HUB} alt="Enable Salesforce Dev Hub" className="my-2 border"/>
+            <Image src={SALESFORCE_DEV_HUB} alt="Enable Salesforce Dev Hub" className="my-2 border border-gray-200"/>
           </section>
           <h2 className="text-xl mt-4">
             <strong>Install Local Dev Plugin</strong>
@@ -183,7 +183,7 @@ export default function LocalEnvironment() {
               <li>Click <strong>Assign as Org Default</strong> and then select <strong>Desktop and phone</strong>.</li>
               <li>Click <strong>Next</strong>, then <strong>Save</strong>.</li>
             </ul>
-            <Image src={SALESFORCE_ACCOUNT_RECORD_PAGE} className="border my-2" alt="Account Record Page"/>
+            <Image src={SALESFORCE_ACCOUNT_RECORD_PAGE} className="border border-gray-200 my-2" alt="Account Record Page"/>
           </section>
           <h2 className="text-xl mt-4">
             <strong>Preview Component using Local Dev</strong>

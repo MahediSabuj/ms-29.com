@@ -8,6 +8,7 @@ import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import TOPICS from "@/lib/data/article/topics";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
+
 import { ENVIRONMENT_VARIABLES_AND_SECRETS as ARTICLE } from "@/lib/data/article/aem/cloud";
 
 import AEM_CLOUD_MANAGER_ENVIRONMENT_VARIABLE from './assets/aem-cloud-manager-environment-variable.png';
@@ -52,7 +53,7 @@ export default function EnvironmentVariable() {
           To create Environment Variables in Cloud Manager, navigate to the left Navigation panel, select <strong>Environments</strong>, and choose the desired environment. In the environment
           details, go to the <strong>Configuration</strong> tab and click Add to open the Environment Configuration dialog.
         </section>
-        <Image src={AEM_CLOUD_MANAGER_ENVIRONMENT_VARIABLE} className="border"
+        <Image src={AEM_CLOUD_MANAGER_ENVIRONMENT_VARIABLE} className="border border-gray-200"
            alt="Custom OSGi Configuration">
         </Image>
         <section className="pt-3">

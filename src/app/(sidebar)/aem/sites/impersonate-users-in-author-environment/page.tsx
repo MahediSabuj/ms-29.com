@@ -58,11 +58,11 @@ export default function ImpersonateUsers() {
             <strong className="text-xl">With Admin privilege</strong>, navigate to <strong>Tools</strong> &gt; <strong>Security</strong> &gt; <strong>Users</strong> and
             select the user you want to impersonate. From <strong>Impersonators</strong> tab, add yourself as Impersonator.
           </section>
-          <Image className="border p-1 mt-2" src={ADD_USERS_AS_IMPERSONATORS} alt="Add Users as Impersonators"/>
+          <Image className="border border-gray-200 p-1 mt-2" src={ADD_USERS_AS_IMPERSONATORS} alt="Add Users as Impersonators"/>
           <section className="pt-2">
             Now, by accessing the User option in the header and select the user you&apos;ve set yourself as the impersonator for.
           </section>
-          <Image className="border p-1 mt-2" height={400} src={IMPERSONATE_AS_USER} alt="Impersonate as Users"/>
+          <Image className="border border-gray-200 p-1 mt-2" height={400} src={IMPERSONATE_AS_USER} alt="Impersonate as Users"/>
           <section className="pt-2">
             You will now be able to complete tasks as if you were using the account and troubleshoot issues by understanding user&apos;s perspective.
           </section>
@@ -87,7 +87,7 @@ export default function ImpersonateUsers() {
             fullName: "Mahedi Sabuj (Author)",
             message: `Impersonators tab available only in AEM as a Cloud Service. In AEM 6.5, you can find it in the classic UI 
               at <code class="code-inline background">/useradmin</code>.
-              <Image class="border p-1 mt-2" src=${IMPERSONATE_USERS_AEM_65.src} alt="Add Users as Impersonators"/>`,
+              <Image class="border border-gray-200 p-1 mt-2" src=${IMPERSONATE_USERS_AEM_65.src} alt="Add Users as Impersonators"/>`,
             reviewDate: "May 02, 2025"
           }]
         }]}/>

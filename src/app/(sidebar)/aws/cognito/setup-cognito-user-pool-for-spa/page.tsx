@@ -116,7 +116,7 @@ export default function SetupCognitoUserPool() {
               <li>Choose your <strong>Application Type</strong> and <strong>Sign-in Identifiers</strong> based on your application requirements.</li>
               <li>Select <strong>Required attributes</strong> such as email, given_name, family_name.</li>
             </ul>
-            <Image src={AWS_COGNITO_CREATE_USER_POOL} className="border mt-4"
+            <Image src={AWS_COGNITO_CREATE_USER_POOL} className="border border-gray-200 mt-4"
              alt="Create AWS Cognito User Pool for SPA">
             </Image>
           </section>
@@ -137,7 +137,7 @@ export default function SetupCognitoUserPool() {
               </li>
               <li>Configure other custom attributes as needed for your business requirements.</li>
             </ul>
-            <Image src={AWS_COGNITO_SIGNUP_ADDITIONAL_ATTRIBUTES} className="border mt-4"
+            <Image src={AWS_COGNITO_SIGNUP_ADDITIONAL_ATTRIBUTES} className="border border-gray-200 mt-4"
              alt="Configure Custom Attributes for User Pool Sign Up">
             </Image>
           </section>

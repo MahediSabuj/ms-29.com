@@ -7,6 +7,7 @@ import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
+
 import { CACHE_AEM_DYNAMIC_CONTENT as ARTICLE } from "@/lib/data/article/aem/dispatcher";
 
 import SLING_DYNAMIC_INCLUDE_HTML_IMAGE from './assets/Sling-Dynamic-Include-HTML.webp';
@@ -113,7 +114,7 @@ export default function CacheDynamicContent() {
           <section className="pt-2">
             If you inspect the cached file from the dispatcher or inspect the HTML, you&apos;ll find something similar as shown below. 
           </section>
-          <Image src={SLING_DYNAMIC_INCLUDE_HTML_IMAGE} className="border py-1 my-1"
+          <Image src={SLING_DYNAMIC_INCLUDE_HTML_IMAGE} className="border border-gray-200 py-1 my-1"
             alt="HTML View of Sling Dynamic Include Implementation">
           </Image>
           <section className="pt-1">

@@ -44,7 +44,7 @@ export default function ArticleReviewForm() {
 
   return (
     <div className="mt-4">
-      <div className='py-1 mt-4 border border-x-0 border-t-0'>
+      <div className='py-1 mt-4 border border-gray-200 border-x-0 border-t-0'>
         <strong>Write your Comment</strong>
       </div>
       <div>

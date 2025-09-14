@@ -10,6 +10,7 @@ import ArticleReviewList from "@/components/article-review-list/article-review-l
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 import Reference from "@/components/reference/reference";
 import TOPICS from "@/lib/data/article/topics";
+
 import { DYNAMICALLY_POPULATE_SELECT_OPTIONS_IN_AEM_COMPONENT_DIALOG as ARTICLE } from "@/lib/data/article/aem/sites";
 
 import ACS_COMMONS_GENERIC_LIST from './assets/acs-commons-generic-list.png';
@@ -118,13 +119,13 @@ export default function PopulateSelectOptions() {
           To create Generic Lists, navigate to <strong>Tools</strong> &gt; <strong>ACS AEM Commons</strong> &gt; <strong>Generic Lists</strong> and click on <strong>Create</strong>.
           Generic Lists are represented as CQ Page under <code className="code-inline">/etc/acs-commons/lists</code>.
         </section>
-        <Image src={ACS_COMMONS_GENERIC_LIST} className="border mt-2" width="500"
+        <Image src={ACS_COMMONS_GENERIC_LIST} className="border border-gray-200 mt-2" width="500"
           alt="ACS Commons Generic List">
         </Image>
         <section className="pt-3">
           Once the list is created, you have the option to edit it and add values. Click Add to add items to list, use drag handles to re-order items.
         </section>
-        <Image src={ACS_COMMONS_GENERIC_LIST_ITEMS} className="border mt-2"
+        <Image src={ACS_COMMONS_GENERIC_LIST_ITEMS} className="border border-gray-200 mt-2"
           alt="ACS Commons Generic List Items">
         </Image>
         <section className="pt-3">

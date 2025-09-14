@@ -69,11 +69,11 @@ export default function UnusedAssetCleanup() {
                   <li><strong>Source:</strong> Path of the folder you want to check for unused assets.</li>
                   <li>
                     <strong>Destination:</strong> Path where assets will be copied. However, since we&apos;re only performing a Dry Run, the path will not have any effect.
-                    <Image src={MCP_RENOVATOR_CONFIG} alt="MCP Renovator Process" className="border my-2" width="650"/>
+                    <Image src={MCP_RENOVATOR_CONFIG} alt="MCP Renovator Process" className="border border-gray-200 my-2" width="650"/>
                   </li>
                   <li>
                     Make sure to check the Dry run checkbox, otherwise all the assets will be moved to the Destination folder.
-                    <Image src={MCP_RENOVATOR_DRY_RUN} alt="MCP Renovator Dry Run" className="border my-2" height="150"/>
+                    <Image src={MCP_RENOVATOR_DRY_RUN} alt="MCP Renovator Dry Run" className="border border-gray-200 my-2" height="150"/>
                   </li>
                   <li>
                     <strong>Detailed Report</strong> should be checked to view information such as the list of assets, the number of references, and the specific pages where each asset is referenced.
@@ -92,12 +92,12 @@ export default function UnusedAssetCleanup() {
             <ul className="list-disc ml-6 pt-1 pl-2.5">
               <li>
                 Click on the <strong>View</strong> to view the report. You can also <strong>Download</strong> the report in Excel format for further analysis.
-                <Image src={MCP_RENOVATOR_PROCESS_EXECUTION_DETAILS} alt="MCP Renovator Process Execution Details" className="border my-2" width="400"/>
+                <Image src={MCP_RENOVATOR_PROCESS_EXECUTION_DETAILS} alt="MCP Renovator Process Execution Details" className="border border-gray-200 my-2" width="400"/>
               </li>
               <li>
                 The report will provide a list of all assets in the specified folder, along with the pages where they are referenced and the number of references.
                 This information can be used to identify unused assets that can be safely deleted from the asset repository.
-                <Image src={MCP_RENOVATOR_DETAILED_REPORT} alt="MCP Renovator Detailed Report" className="border my-2"/>
+                <Image src={MCP_RENOVATOR_DETAILED_REPORT} alt="MCP Renovator Detailed Report" className="border border-gray-200 my-2"/>
                 <div className="py-2">
                   If you look carefully at the report, you will see that the <strong>ALL REFERENCES</strong> column shows the number of references for each asset, while the <strong>REFERRED IN</strong> column shows the pages where the asset is referenced.
                   Based on above report, 4 assets are not referenced on any page. You can safely delete these assets from the asset repository.

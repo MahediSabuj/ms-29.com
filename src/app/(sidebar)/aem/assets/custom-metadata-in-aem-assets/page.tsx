@@ -53,7 +53,7 @@ export default function CustomMetadata() {
             The default schema provides the standard properties for any asset. Choose the default schema and copy it to create your custom schema 
             based on the existing one.
           </section>
-          <Image src={CUSTOM_METADATA_SCHEMA} className="border my-1"
+          <Image src={CUSTOM_METADATA_SCHEMA} className="border border-gray-200 my-1"
             alt="Custom Metadata Schema">
           </Image>
           <section className="pt-3">
@@ -61,21 +61,21 @@ export default function CustomMetadata() {
             you can add new tabs. However, while you can add any fields to any sections within the root folder (in our case, AEM Demo) during editing, 
             for child items, you can only add fields to new sections and new tabs.
           </section>
-          <Image src={METADATA_SCHEMA_EDITOR} className="border my-1"
+          <Image src={METADATA_SCHEMA_EDITOR} className="border border-gray-200 my-1"
             alt="Edit Custom Metadata Schema">
           </Image>
           <section className="pt-3">
             After completing the metadata schema edits, you need to attach the schema to your project root folder or any specific folder. This ensures that 
             the changes will be applied to the properties of the assets within those folders.
           </section>
-          <Image src={METADATA_SCHEMA_APPLY_FOLDERS} className="border my-1"
+          <Image src={METADATA_SCHEMA_APPLY_FOLDERS} className="border border-gray-200 my-1"
             alt="Apply Custom Metadata Schema to Folders">
           </Image>
           <section className="pt-3">
             To validate the custom metadata setup, open the properties of any assets in the folder you specified in the previous step. You should see <strong>Navigation 
             Title</strong> property and <strong>Content Approval</strong> tab.
           </section>
-          <Image src={ASSET_PROPERTIES} className="border my-1"
+          <Image src={ASSET_PROPERTIES} className="border border-gray-200 my-1"
             alt="Asset Properties">
           </Image>
           <section className="pt-3">

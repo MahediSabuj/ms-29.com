@@ -5,6 +5,9 @@ import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Highlight from "@/components/highlight/highlight";
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
+
 import { CUSTOM_AEM_WORKFLOW_PROCESS as ARTICLE } from "@/lib/data/article/aem/workflow";
 
 import AEM_WORKFLOW_NEW_MODEL from './assets/AEM_Workflow_New_Model.webp';
@@ -72,7 +75,7 @@ export default function CustomWorkflowProcess() {
             select <strong>Workflow</strong> and click on <strong>Models</strong>. Proceed by creating a new workflow model
             with a suitable name.
           </section>
-          <Image src={AEM_WORKFLOW_NEW_MODEL} className="border mt-2"
+          <Image src={AEM_WORKFLOW_NEW_MODEL} className="border border-gray-200 mt-2"
             alt="AEM Workflow New Model">
           </Image>
           <section className="pt-3">
@@ -80,7 +83,7 @@ export default function CustomWorkflowProcess() {
             Remove the default &quot;Step 1&quot; and drag the <strong>Process Step</strong> into the workflow model. Afterwards, 
             configure this step with the custom process as illustrated below.
           </section>
-          <Image src={AEM_WORKFLOW_CUSTOM_PROCESS} className="border mt-2"
+          <Image src={AEM_WORKFLOW_CUSTOM_PROCESS} className="border border-gray-200 mt-2"
             alt="AEM Workflow Custom Process">
           </Image>
           <section className="pt-3">
@@ -90,6 +93,10 @@ export default function CustomWorkflowProcess() {
           </section>
         </div>
       </article>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }

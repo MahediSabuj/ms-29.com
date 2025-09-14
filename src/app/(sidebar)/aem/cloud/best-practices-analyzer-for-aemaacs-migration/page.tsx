@@ -6,6 +6,9 @@ import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import TOPICS from "@/lib/data/article/topics";
+import ArticleReviewList from "@/components/article-review-list/article-review-list";
+import ArticleReviewForm from "@/components/form/article-review/article-review";
+
 import { BEST_PRACTICE_ANALYSER_FOR_AEMAACS_MIGRATION as ARTICLE } from "@/lib/data/article/aem/cloud";
 
 import BEST_PRACTICES_ANALYZER from './assets/Best_Practices_Analyzer.webp';
@@ -52,7 +55,7 @@ export default function BestPracticeAnalysis() {
             You can install the package via Package Manager on your AEM instance. Once installed, you can access BPA
             by navigating to <strong>Tools</strong> &gt; <strong>Operations</strong> &gt; <strong>Best Practices Analyzer</strong>.
           </section>
-          <Image src={BEST_PRACTICES_ANALYZER} className="border"
+          <Image src={BEST_PRACTICES_ANALYZER} className="border border-gray-200"
             alt="Best Practice Analyzer">
           </Image>
           <section className="pt-3 pb-1">
@@ -60,20 +63,20 @@ export default function BestPracticeAnalysis() {
             can be obtained by creating a project in CAM (e.g., AEM Demo), navigating to Best Practices Analysis, and retrieving the key
             for your project. You can still generate the report without the Upload Key, but you will need to manually upload the report to CAM in that case.
           </section>
-          <Image src={BPA_UPLOAD_KEY} className="border"
+          <Image src={BPA_UPLOAD_KEY} className="border border-gray-200"
             alt="BPA Upload Key">
           </Image>
           <section className="pt-3 pb-1">
             Based on your choice, either set BPA Upload Key or skip auto upload to CAM; Project Name will be auto-populated based on the Key.
           </section>
-          <Image src={BEST_PRACTICES_ANALYZER_CONFIGURATION} className="border"
+          <Image src={BEST_PRACTICES_ANALYZER_CONFIGURATION} className="border border-gray-200"
             alt="Best Practice Analyzer Configuration">
           </Image>
           <section className="pt-3 pb-1">
             Once the BPA report is generated, it provides summary and lists the findings in a table, categorized by type and importance level. 
             For more details on a particular finding, click the number corresponding to that type in the table.
           </section>
-          <Image src={BEST_PRACTICES_ANALYZER_REPORT} className="border"
+          <Image src={BEST_PRACTICES_ANALYZER_REPORT} className="border border-gray-200"
             alt="Best Practices Analyzer Report">
           </Image>
           <section className="pt-3 pb-1">
@@ -81,7 +84,7 @@ export default function BestPracticeAnalysis() {
             Upload Key during previous step, you will see an option <strong>Go to CAM</strong> which will direct you to the Best Practices 
             Analysis page in CAM, where you can view the report; otherwise, you can manually upload the report on the same page.
           </section>
-          <Image src={BEST_PRACTICES_ANALYZER_CAM_REPORT} className="border"
+          <Image src={BEST_PRACTICES_ANALYZER_CAM_REPORT} className="border border-gray-200"
             alt="Best Practices Analyzer Report View in CAM">
           </Image>
           <section className="pt-2">
@@ -90,6 +93,10 @@ export default function BestPracticeAnalysis() {
           </section>
         </div>  
       </article>
+      <div className="mt-8 mb-4">
+        <ArticleReviewList items={[]}/>
+        <ArticleReviewForm/>
+      </div>
     </div>
   );
 }

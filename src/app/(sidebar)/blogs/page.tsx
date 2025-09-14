@@ -22,6 +22,7 @@ import { AWS_EC2 } from "@/lib/data/article/aws/ec2";
 import { AWS_SES } from "@/lib/data/article/aws/ses";
 import { AWS_ECS } from "@/lib/data/article/aws/ecs";
 import { DEEP_LEARNING } from "@/lib/data/article/ai/deep-learning";
+import { CODING_ASSISTANT } from "@/lib/data/article/ai/coding-assistant";
 import { SF_LWC } from "@/lib/data/article/salesforce/lwc";
 import { SF_IDENTITY } from "@/lib/data/article/salesforce/identity";
 import { DYNAMIC_PROGRAMMING } from "@/lib/data/article/cp/dynamic-programming";
@@ -60,6 +61,7 @@ const articles: IArticleList = {
     ...AWS_SES,
     ...AWS_ECS,
     ...DEEP_LEARNING,
+    ...CODING_ASSISTANT,
     ...SF_LWC,
     ...SF_IDENTITY,
     ...DYNAMIC_PROGRAMMING,
