@@ -4,12 +4,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-MS-29.com is a modern technical blog and portfolio website built with Next.js 14, focusing on MarTech solutions and technical content around Adobe Experience Manager (AEM), AWS, Salesforce, Spring Boot, and competitive programming. The site is configured for static export and deployment to GitHub Pages.
+MS-29.com is a modern technical blog and portfolio website built with Next.js 15, focusing on MarTech solutions and technical content around Adobe Experience Manager (AEM), AWS, Salesforce, Spring Boot, and competitive programming. The site is configured for static export and deployment to GitHub Pages.
 
 ## Architecture & Technology Stack
 
 ### Core Technologies
-- **Next.js 14** - App Router architecture with static export
+- **Next.js 15** - App Router architecture with static export
 - **TypeScript** - Full type safety throughout the application
 - **Tailwind CSS v4** - Modern CSS framework with custom theme system
 - **SCSS** - For advanced styling and custom components
@@ -155,22 +155,27 @@ Custom theme defined in `globals.scss` with:
 
 ## Key Development Commands
 
+**Note: This project uses Yarn as the package manager. Always use yarn commands, not npm.**
+
 ```bash
 # Development server
-npm run dev
 yarn dev
 
 # Production build (static export)
-npm run build
 yarn build
 
 # Start production server (for testing)
-npm run start
 yarn start
 
 # Linting
-npm run lint
 yarn lint
+
+# Install dependencies
+yarn install
+
+# Add new packages
+yarn add <package-name>
+yarn add -D <package-name>  # for dev dependencies
 ```
 
 ## Configuration Files
@@ -216,10 +221,13 @@ The site is configured for static export to GitHub Pages:
 
 ## Important Notes
 
+- **Package Manager**: Always use `yarn` instead of `npm` for all package management operations
 - The site uses a route group `(sidebar)` for content pages with navigation
+- Built with Next.js 15 and React 19 - uses modern React features
 - Syntax highlighting supports multiple languages including custom Terraform support
 - The brand uses a specific color palette - maintain consistency
 - All external links open in new tabs by default
 - Content is statically generated - no server-side rendering needed
+- Routes using MetadataRoute (robots.tsx, sitemap.tsx) require `export const dynamic = 'force-static'` for static export
 
 This architecture provides a scalable, maintainable foundation for a technical blog with excellent performance and SEO capabilities.

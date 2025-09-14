@@ -1,5 +1,7 @@
 import { MetadataRoute } from 'next';
 
+export const dynamic = 'force-static'
+
 import DateFormatter from "@/lib/util/date-formatter";
 import { IArticleItem } from "@/types/article";
 import TOPICS from '@/lib/data/article/topics';
