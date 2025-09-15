@@ -5,13 +5,13 @@ import Image from "next/image";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 
 import {
   SPRING_BOOT_APPLICATION_USING_SPRING_INITIALIZR as ARTICLE
-} from "@/lib/data/article/backend/spring-boot";
+} from "@/data/article/backend/spring-boot";
 
 import SPRING_BOO_PROJECT_CONFIGURATION from "./assets/spring-boot-project-configuration.png";
 import SPRING_BOO_PROJECT_DEPENDENCIES from "./assets/spring-boot-project-dependencies.png";

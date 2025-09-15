@@ -4,13 +4,13 @@ import Image from "next/image";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 import Highlight from "@/components/highlight/highlight";
 import Reference from "@/components/reference/reference";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 
-import { SETUP_ACS_COMMONS_IN_AEM_PROJECTS as ARTICLE } from "@/lib/data/article/aem/acs-commons";
+import { SETUP_ACS_COMMONS_IN_AEM_PROJECTS as ARTICLE } from "@/data/article/aem/acs-commons";
 
 import ACS_COMMONS_IN_AEMAACS from './assets/acs-commons-in-aemaacs.png';
 

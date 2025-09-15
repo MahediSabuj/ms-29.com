@@ -5,9 +5,9 @@ import { PAGE_TYPE } from "@/types/enum/page-type";
 import { IArticleList } from "@/types/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 
-import { DEEP_LEARNING } from "@/lib/data/article/ai/deep-learning";
+import { DEEP_LEARNING } from "@/data/article/ai/deep-learning";
 
 export const metadata: Metadata = {
   title: TOPICS.DEEP_LEARNING.title,

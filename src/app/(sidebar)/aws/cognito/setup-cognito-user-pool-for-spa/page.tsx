@@ -8,9 +8,9 @@ import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import HighlightCode from "@/components/highlight/highlight";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 
-import { SETUP_COGNITO_FOR_SPA as ARTICLE } from "@/lib/data/article/aws/cognito";
+import { SETUP_COGNITO_FOR_SPA as ARTICLE } from "@/data/article/aws/cognito";
 
 import AWS_COGNITO_CREATE_USER_POOL from "./assets/aws-cognito-setup.png";
 import AWS_COGNITO_SIGNUP_ADDITIONAL_ATTRIBUTES from "./assets/aws-cognito-signup-additional-attributes.png";

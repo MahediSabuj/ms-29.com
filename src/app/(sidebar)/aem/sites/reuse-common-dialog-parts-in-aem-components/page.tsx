@@ -5,13 +5,13 @@ import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import HighlightCode from "@/components/highlight/highlight";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 
 import {
   REUSE_COMMON_DIALOG_PARTS_IN_AEM_COMPONENTS as ARTICLE
-} from "@/lib/data/article/aem/sites";
+} from "@/data/article/aem/sites";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,

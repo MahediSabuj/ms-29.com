@@ -5,7 +5,8 @@ import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Highlight from "@/components/highlight/highlight";
-import { EXTEND_AEM_PAGE_PROPERTIES as ARTICLE } from "@/lib/data/article/aem/sites";
+
+import { EXTEND_AEM_PAGE_PROPERTIES as ARTICLE } from "@/data/article/aem/sites";
 
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";

@@ -4,9 +4,9 @@ import Link from "next/link";
 import Article from "@/components/article/article";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import { IBreadCrumb } from "@/types/breadcrumb";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 
-import { CUSTOM_LIGHTNING_WEB_COMPONENT as ARTICLE } from "@/lib/data/article/salesforce/lwc";
+import { CUSTOM_LIGHTNING_WEB_COMPONENT as ARTICLE } from "@/data/article/salesforce/lwc";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,

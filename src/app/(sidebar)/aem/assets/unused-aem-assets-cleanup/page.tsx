@@ -8,7 +8,7 @@ import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 
-import { UNUSED_ASSET_CLEANUP as ARTICLE } from "@/lib/data/article/aem/assets";
+import { UNUSED_ASSET_CLEANUP as ARTICLE } from "@/data/article/aem/assets";
 
 import MCP_RENOVATOR_CONFIG from "./assets/mcp-renovator-config.png";
 import MCP_RENOVATOR_DRY_RUN from "./assets/mcp-renovator-dry-run.png";

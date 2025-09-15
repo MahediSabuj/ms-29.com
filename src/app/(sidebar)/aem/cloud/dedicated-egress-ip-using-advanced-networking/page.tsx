@@ -4,12 +4,12 @@ import Image from "next/image";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 import HighlightCode from "@/components/highlight/highlight";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 
-import { DEDICATED_IP_FOR_AEMAACS as ARTICLE } from "@/lib/data/article/aem/cloud";
+import { DEDICATED_IP_FOR_AEMAACS as ARTICLE } from "@/data/article/aem/cloud";
 
 import AEMAACS_NEW_NETWORK_INFRASTRUCTURE from "./assets/aemaacs-new-networking-infrastructure.png";
 import DEDICATED_EGRESS_IP_ADDRESS from "./assets/dedicated-egress-ip-address.png";

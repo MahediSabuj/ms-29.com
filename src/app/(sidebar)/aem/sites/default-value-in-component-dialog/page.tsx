@@ -7,7 +7,8 @@ import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
-import { DEFAULT_VALUES_IN_AEM_COMPONENT_DIALOG as ARTICLE } from "@/lib/data/article/aem/sites";
+
+import { DEFAULT_VALUES_IN_AEM_COMPONENT_DIALOG as ARTICLE } from "@/data/article/aem/sites";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,

@@ -6,11 +6,11 @@ import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Highlight from "@/components/highlight/highlight";
 import FAQ from "@/components/faq/faq";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 
-import { REPOSITORY_MODERNIZER as ARTICLE } from "@/lib/data/article/aem/cloud";
+import { REPOSITORY_MODERNIZER as ARTICLE } from "@/data/article/aem/cloud";
 
 import AEM_CLOUD_COMPATIBLE_ARCHETYPE from './assets/aem-cloud-compatible-archetype.png';
 

@@ -3,7 +3,8 @@ import { Metadata } from "next";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import { SETUP_CI_CD_PIPELINE_TO_DEPLOY_NODEJS_APP_TO_AWS_EC2 as ARTICLE } from "@/lib/data/article/aws/ec2";
+
+import { SETUP_CI_CD_PIPELINE_TO_DEPLOY_NODEJS_APP_TO_AWS_EC2 as ARTICLE } from "@/data/article/aws/ec2";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,

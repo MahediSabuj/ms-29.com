@@ -3,9 +3,10 @@ import { Metadata } from "next";
 import ArticleList from "@/components/article-list/article-list";
 import { PAGE_TYPE } from "@/types/enum/page-type";
 import { IArticleList } from "@/types/article";
-import { AEM_SITES } from "@/lib/data/article/aem/sites";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import { IBreadCrumb } from "@/types/breadcrumb";
+
+import { AEM_SITES } from "@/data/article/aem/sites";
 
 export const metadata: Metadata = {
   title: "AEM Sites",

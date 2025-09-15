@@ -5,10 +5,11 @@ import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Highlight from "@/components/highlight/highlight";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
-import { CUSTOM_SLING_MODEL_INJECTOR as ARTICLE } from "@/lib/data/article/aem/sites";
+
+import { CUSTOM_SLING_MODEL_INJECTOR as ARTICLE } from "@/data/article/aem/sites";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,

@@ -5,7 +5,8 @@ import { PAGE_TYPE } from "@/types/enum/page-type";
 import { IArticleList } from "@/types/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import { AEM_ASSETS } from "@/lib/data/article/aem/assets";
+
+import { AEM_ASSETS } from "@/data/article/aem/assets";
 
 export const metadata: Metadata = {
   title: "AEM Assets",

@@ -5,9 +5,9 @@ import { PAGE_TYPE } from "@/types/enum/page-type";
 import { IArticleList } from "@/types/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 
-import { EDGE_DELIVERY_SERVICE } from "@/lib/data/article/aem/eds";
+import { EDGE_DELIVERY_SERVICE } from "@/data/article/aem/eds";
 
 export const metadata: Metadata = {
   title: TOPICS.EDGE_DELIVERY_SERVICE.title,

@@ -6,11 +6,11 @@ import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Highlight from "@/components/highlight/highlight";
 import FAQ from "@/components/faq/faq";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 
-import { WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS as ARTICLE } from "@/lib/data/article/aem/cloud";
+import { WEB_OPTIMIZED_IMAGE_DELIVERY_FOR_CUSTOM_COMPONENTS as ARTICLE } from "@/data/article/aem/cloud";
 
 import enable_web_optimized_images from "./assets/enable-web-optimized-images.webp";
 

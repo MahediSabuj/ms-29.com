@@ -8,7 +8,7 @@ import Highlight from "@/components/highlight/highlight";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 
-import { CODE_COVERAGE_OSGI_CONFIGURATION as ARTICLE } from "@/lib/data/article/aem/code-coverage";
+import { CODE_COVERAGE_OSGI_CONFIGURATION as ARTICLE } from "@/data/article/aem/code-coverage";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,

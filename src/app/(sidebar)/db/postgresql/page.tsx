@@ -5,8 +5,9 @@ import { PAGE_TYPE } from "@/types/enum/page-type";
 import { IArticleList } from "@/types/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import { POSTGRESQL } from "@/lib/data/article/db/postgresql";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
+
+import { POSTGRESQL } from "@/data/article/db/postgresql";
 
 export const metadata: Metadata = {
   title: TOPICS.POSTGRESQL.title,

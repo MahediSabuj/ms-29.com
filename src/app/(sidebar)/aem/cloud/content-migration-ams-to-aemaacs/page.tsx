@@ -7,12 +7,12 @@ import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 import Heading from "@/components/heading/heading";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 
-import { CONTENT_TRANSFER_TOOL as ARTICLE } from "@/lib/data/article/aem/cloud";
+import { CONTENT_TRANSFER_TOOL as ARTICLE } from "@/data/article/aem/cloud";
 
 import CONTENT_TRANSFER_DISABLE_GROUP_MIGRATION from './assets/content-tranfer-disable-group-migration.png';
 import MIGRATION_SET_CLOUD_ACCELERATION_MANAGER from './assets/migration-set-cloud-acceleration-manager.png';

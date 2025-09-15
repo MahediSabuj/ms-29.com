@@ -10,7 +10,7 @@ import FAQ from "@/components/faq/faq";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 
-import { CUSTOM_OSGI_CONFIGURATION as ARTICLE } from "@/lib/data/article/aem/sites";
+import { CUSTOM_OSGI_CONFIGURATION as ARTICLE } from "@/data/article/aem/sites";
 
 import CUSTOM_OSGI_CONFIGURATION from "./assets/custom_osgi_configuration.png";
 import OSGI_INSTALLER_CONFIGURATION_PRINTER from "./assets/osgi-installer-configuration-printer.png";

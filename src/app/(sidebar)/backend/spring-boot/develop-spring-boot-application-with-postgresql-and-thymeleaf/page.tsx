@@ -5,14 +5,14 @@ import Image from "next/image";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 import HighlightCode from "@/components/highlight/highlight";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 
 import {
   SPRING_BOOT_APPLICATION_WITH_POSTGRESQL_THYMELEAF as ARTICLE
-} from "@/lib/data/article/backend/spring-boot";
+} from "@/data/article/backend/spring-boot";
 
 import EVENT_REGISTRATION_SYSTEM_DB_DIAGRAM from "./assets/event-registration-db-diagram.png";
 import EVENT_CREATE_POSTMAN from "./assets/event-create-postman.png";

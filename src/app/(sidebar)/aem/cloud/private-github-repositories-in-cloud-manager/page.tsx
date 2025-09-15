@@ -5,12 +5,12 @@ import Image from "next/image";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 import Reference from "@/components/reference/reference";
 
-import { PRIVATE_GITHUB_REPOSITORIES_IN_CLOUD_MANAGER as ARTICLE } from "@/lib/data/article/aem/cloud";
+import { PRIVATE_GITHUB_REPOSITORIES_IN_CLOUD_MANAGER as ARTICLE } from "@/data/article/aem/cloud";
 
 import GITHUB_PRIVATE_REPOSITORY from './assets/github-private-repository.webp';
 import VALIDATE_GITHUB_OWNERSHIP from './assets/validate-github-repository-ownership.webp';

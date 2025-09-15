@@ -3,10 +3,10 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 import { IBreadCrumb } from "@/types/breadcrumb";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 
-import { UNDERSTANDING_EDGE_DELIVERY_SERVICE_AND_UNIVERSAL_EDITOR as ARTICLE } from "@/lib/data/article/aem/eds";
+import { UNDERSTANDING_EDGE_DELIVERY_SERVICE_AND_UNIVERSAL_EDITOR as ARTICLE } from "@/data/article/aem/eds";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,

@@ -5,9 +5,9 @@ import { PAGE_TYPE } from "@/types/enum/page-type";
 import { IArticleList } from "@/types/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 
-import { CODING_ASSISTANT } from "@/lib/data/article/ai/coding-assistant";
+import { CODING_ASSISTANT } from "@/data/article/ai/coding-assistant";
 
 export const metadata: Metadata = {
   title: TOPICS.CODING_ASSISTANT.title,

@@ -7,7 +7,7 @@ import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 
-import { CUSTOM_METADATA_AEM_ASSETS as ARTICLE } from "@/lib/data/article/aem/assets";
+import { CUSTOM_METADATA_AEM_ASSETS as ARTICLE } from "@/data/article/aem/assets";
 
 import CUSTOM_METADATA_SCHEMA from './assets/Custom_MetaData_Schema.webp';
 import METADATA_SCHEMA_EDITOR from './assets/Metadata_Schema_Editor.webp';

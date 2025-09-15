@@ -5,7 +5,8 @@ import { PAGE_TYPE } from "@/types/enum/page-type";
 import { IArticleList } from "@/types/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import { SF_IDENTITY } from "@/lib/data/article/salesforce/identity";
+
+import { SF_IDENTITY } from "@/data/article/salesforce/identity";
 
 export const metadata: Metadata = {
   title: "Salesforce Identity",

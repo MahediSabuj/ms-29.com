@@ -5,7 +5,8 @@ import { PAGE_TYPE } from "@/types/enum/page-type";
 import { IArticleList } from "@/types/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import { AEM_WORKFLOW } from "@/lib/data/article/aem/workflow";
+
+import { AEM_WORKFLOW } from "@/data/article/aem/workflow";
 
 export const metadata: Metadata = {
   title: "AEM Workflow",

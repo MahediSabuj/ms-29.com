@@ -8,7 +8,7 @@ import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 
-import { SONARQUBE_SETUP_FOR_AEM_DEVELOPMENT as ARTICLE } from "@/lib/data/article/aem/sites";
+import { SONARQUBE_SETUP_FOR_AEM_DEVELOPMENT as ARTICLE } from "@/data/article/aem/sites";
 
 import CREATE_LOCAL_PROJECT_SONARQUBE from './assets/Create_Local_Project_SonarQube.webp';
 import ANALYSIS_PROJECT_SONARQUBE from './assets/Analysis_Project_SonarQube.webp';

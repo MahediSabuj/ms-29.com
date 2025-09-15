@@ -5,8 +5,9 @@ import { PAGE_TYPE } from "@/types/enum/page-type";
 import { IArticleList } from "@/types/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import { DYNAMIC_PROGRAMMING } from "@/lib/data/article/cp/dynamic-programming";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
+
+import { DYNAMIC_PROGRAMMING } from "@/data/article/cp/dynamic-programming";
 
 export const metadata: Metadata = {
   title: TOPICS.DYNAMIC_PROGRAMMING.title,

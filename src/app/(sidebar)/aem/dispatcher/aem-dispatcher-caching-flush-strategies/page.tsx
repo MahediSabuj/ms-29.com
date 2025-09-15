@@ -8,7 +8,8 @@ import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Highlight from "@/components/highlight/highlight";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
-import { DISPATCHER_CACHE_FLUSH_STRATEGIES as ARTICLE } from "@/lib/data/article/aem/dispatcher";
+
+import { DISPATCHER_CACHE_FLUSH_STRATEGIES as ARTICLE } from "@/data/article/aem/dispatcher";
 
 import aem_content_publish_replication_agent from "./assets/aem-content-publish-replication-agent.png";
 import aem_content_publish_replication_agent_settings from "./assets/aem-content-publish-replication-agent-settings.png";

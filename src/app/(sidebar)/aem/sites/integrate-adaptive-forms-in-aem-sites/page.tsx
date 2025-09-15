@@ -5,7 +5,8 @@ import Article from "@/components/article/article";
 import Highlight from "@/components/highlight/highlight";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import { INTEGRATE_ADAPTIVE_FORMS_IN_AEM_SITES as ARTICLE } from "@/lib/data/article/aem/sites";
+
+import { INTEGRATE_ADAPTIVE_FORMS_IN_AEM_SITES as ARTICLE } from "@/data/article/aem/sites";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,

@@ -3,7 +3,8 @@ import { Metadata } from "next";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import { ADAPTIVE_FORMS_USING_JSON_SCHEMA as ARTICLE } from "@/lib/data/article/aem/forms";
+
+import { ADAPTIVE_FORMS_USING_JSON_SCHEMA as ARTICLE } from "@/data/article/aem/forms";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,

@@ -7,7 +7,7 @@ import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 
-import { SALESFORCE_HEADLESS_AUTHENTICATION as ARTICLE } from "@/lib/data/article/salesforce/identity";
+import { SALESFORCE_HEADLESS_AUTHENTICATION as ARTICLE } from "@/data/article/salesforce/identity";
 
 import HEADLESS_ALLOW_CODE_CREDENTIALS from './assets/Headless_Allow_Code_Credentials.webp';
 import MANAGE_HEADLESS_IDENTITY_FEATURES from './assets/Manage_Headless_Identity_Features.webp';

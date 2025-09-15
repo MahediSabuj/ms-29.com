@@ -7,7 +7,7 @@ import Highlight from "@/components/highlight/highlight";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 
-import { PROJECT_LOMBOK_IN_AEM_PROJECTS as ARTICLE} from "@/lib/data/article/aem/sites";
+import { PROJECT_LOMBOK_IN_AEM_PROJECTS as ARTICLE} from "@/data/article/aem/sites";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,

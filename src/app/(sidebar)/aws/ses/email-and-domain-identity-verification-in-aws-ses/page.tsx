@@ -5,14 +5,14 @@ import Image from "next/image";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 import Reference from "@/components/reference/reference";
 import HighlightCode from "@/components/highlight/highlight";
 import FAQ from "@/components/faq/faq";
 
-import { VERIFY_IDENTITIES_IN_AWS_SES as ARTICLE } from "@/lib/data/article/aws/ses";
+import { VERIFY_IDENTITIES_IN_AWS_SES as ARTICLE } from "@/data/article/aws/ses";
 
 import AWS_SES_EMAIL_IDENTITY from "./assets/aws-ses-email-identity.png";
 import AWS_SES_DOMAIN_IDENTITY from "./assets/aws-ses-domain-identity.png";

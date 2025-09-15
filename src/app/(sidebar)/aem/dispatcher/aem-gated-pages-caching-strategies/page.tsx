@@ -7,7 +7,8 @@ import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
-import { CACHE_AEM_GATED_PAGES as ARTICLE } from "@/lib/data/article/aem/dispatcher";
+
+import { CACHE_AEM_GATED_PAGES as ARTICLE } from "@/data/article/aem/dispatcher";
 
 import aem_gated_pages_caching_workflow from './assets/aem-gated-pages-caching-workflow.svg';
 

@@ -4,12 +4,12 @@ import Link from "next/link";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 import ArticleReviewList from '@/components/article-review-list/article-review-list';
 import ArticleReviewForm from "@/components/form/article-review/article-review";
-
-import { SETUP_CI_CD_PIPELINE_TO_DEPLOY_SPRING_BOOT_APP_TO_AWS_ECS as ARTICLE } from "@/lib/data/article/aws/ecs";
 import HighlightCode from "@/components/highlight/highlight";
+
+import { SETUP_CI_CD_PIPELINE_TO_DEPLOY_SPRING_BOOT_APP_TO_AWS_ECS as ARTICLE } from "@/data/article/aws/ecs";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,

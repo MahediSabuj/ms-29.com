@@ -8,7 +8,7 @@ import HighlightCode from "@/components/highlight/highlight";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 
-import { CODE_COVERAGE_SLING_MODEL_DELEGATION_PATTERN as ARTICLE } from "@/lib/data/article/aem/code-coverage";
+import { CODE_COVERAGE_SLING_MODEL_DELEGATION_PATTERN as ARTICLE } from "@/data/article/aem/code-coverage";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,

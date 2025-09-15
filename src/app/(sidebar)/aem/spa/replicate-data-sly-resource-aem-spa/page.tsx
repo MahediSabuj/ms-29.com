@@ -8,7 +8,7 @@ import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 
-import { DATA_SLY_RESOURCE_IN_AEM_SPA as ARTICLE } from "@/lib/data/article/aem/spa";
+import { DATA_SLY_RESOURCE_IN_AEM_SPA as ARTICLE } from "@/data/article/aem/spa";
 
 import TEASER_AUTHOR_VIEW from './assets/Teaser_Author_View.webp';
 

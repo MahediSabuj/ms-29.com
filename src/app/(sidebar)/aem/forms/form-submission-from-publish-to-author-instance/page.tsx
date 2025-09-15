@@ -8,7 +8,7 @@ import Reference from "@/components/reference/reference";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 
-import { FORM_SUBMISSION_AUTHOR_INSTANCE as ARTICLE } from "@/lib/data/article/aem/forms";
+import { FORM_SUBMISSION_AUTHOR_INSTANCE as ARTICLE } from "@/data/article/aem/forms";
 
 import aem_ds_settings_service from './assets/aem-ds-settings-service.webp';
 import form_submission_from_publisher_to_author_instance from './assets/form-submission-from-publisher-to-author-instance.png';

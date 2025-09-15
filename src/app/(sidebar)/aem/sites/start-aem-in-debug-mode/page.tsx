@@ -4,9 +4,10 @@ import Image from "next/image";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import { START_AEM_IN_DEBUG_MODE as ARTICLE } from "@/lib/data/article/aem/sites";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
+
+import { START_AEM_IN_DEBUG_MODE as ARTICLE } from "@/data/article/aem/sites";
 
 import REMOTE_JAVA_DEBUG_INTELLIJ_IDEA from "./assets/remote_java_debug_intellij_idea.png";
 

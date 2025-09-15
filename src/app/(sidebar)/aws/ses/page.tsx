@@ -5,8 +5,9 @@ import { PAGE_TYPE } from "@/types/enum/page-type";
 import { IArticleList } from "@/types/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import { AWS_SES } from "@/lib/data/article/aws/ses";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
+
+import { AWS_SES } from "@/data/article/aws/ses";
 
 export const metadata: Metadata = {
   title: TOPICS.AWS_SES.title,

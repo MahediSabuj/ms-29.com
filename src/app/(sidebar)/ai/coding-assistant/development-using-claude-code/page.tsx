@@ -5,11 +5,11 @@ import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Highlight from "@/components/highlight/highlight";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 
-import { DEVELOPMENT_USING_CLAUDE_CODE as ARTICLE } from "@/lib/data/article/ai/coding-assistant";
+import { DEVELOPMENT_USING_CLAUDE_CODE as ARTICLE } from "@/data/article/ai/coding-assistant";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,

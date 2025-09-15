@@ -4,12 +4,12 @@ import Link from "next/link";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 import Highlight from "@/components/highlight/highlight";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 
-import { CUSTOM_RUN_MODES_ON_AEMAACS as ARTICLE } from "@/lib/data/article/aem/cloud";
+import { CUSTOM_RUN_MODES_ON_AEMAACS as ARTICLE } from "@/data/article/aem/cloud";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,

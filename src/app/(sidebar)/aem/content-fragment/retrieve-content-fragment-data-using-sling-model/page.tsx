@@ -3,7 +3,8 @@ import { Metadata } from "next";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import { RETRIEVE_CONTENT_FRAGMENT_SLING_MODEL as ARTICLE } from "@/lib/data/article/aem/content-fragment";
+
+import { RETRIEVE_CONTENT_FRAGMENT_SLING_MODEL as ARTICLE } from "@/data/article/aem/content-fragment";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,

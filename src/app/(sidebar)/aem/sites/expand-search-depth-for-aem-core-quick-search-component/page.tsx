@@ -1,5 +1,6 @@
 import Article from "@/components/article/article";
-import { EXPAND_CORE_SEARCH_COMPONENT_SCOPE as ARTICLE } from "@/lib/data/article/aem/sites";
+
+import { EXPAND_CORE_SEARCH_COMPONENT_SCOPE as ARTICLE } from "@/data/article/aem/sites";
 
 export default function CoreSearchComponent() {
   return (

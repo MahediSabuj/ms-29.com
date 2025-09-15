@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { IBreadCrumb } from "@/types/breadcrumb";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import Article from "@/components/article/article";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
@@ -12,7 +12,7 @@ import HighlightCode from "@/components/highlight/highlight";
 
 import {
   BUILD_WEBSITE_WITH_EDGE_DELIVERY_SERVICE_DOCUMENT_BASED_AUTHORING as ARTICLE
-} from "@/lib/data/article/aem/eds";
+} from "@/data/article/aem/eds";
 
 import EDS_DOCUMENT_BASED_WEBSITE from "./assets/eds-document-based-website.png";
 import AEM_SIDEKICK_CHROME_EXTENSION from "./assets/aem-sidekick-chrome-extension.png";

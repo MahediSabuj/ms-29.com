@@ -1,5 +1,6 @@
 import Article from "@/components/article/article";
-import { CUSTOM_RENDITIONS_FOR_IMAGES as ARTICLE } from "@/lib/data/article/aem/workflow";
+
+import { CUSTOM_RENDITIONS_FOR_IMAGES as ARTICLE } from "@/data/article/aem/workflow";
 
 export default function CustomRenditions() {
   return (

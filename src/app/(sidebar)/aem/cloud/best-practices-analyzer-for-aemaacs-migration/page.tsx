@@ -5,11 +5,11 @@ import Link from "next/link";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 
-import { BEST_PRACTICE_ANALYSER_FOR_AEMAACS_MIGRATION as ARTICLE } from "@/lib/data/article/aem/cloud";
+import { BEST_PRACTICE_ANALYSER_FOR_AEMAACS_MIGRATION as ARTICLE } from "@/data/article/aem/cloud";
 
 import BEST_PRACTICES_ANALYZER from './assets/Best_Practices_Analyzer.webp';
 import BEST_PRACTICES_ANALYZER_CONFIGURATION from './assets/Best_Practices_Analyzer_Configuration.webp';

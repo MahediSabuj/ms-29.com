@@ -5,9 +5,9 @@ import { PAGE_TYPE } from "@/types/enum/page-type";
 import { IArticleList } from "@/types/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 
-import { AWS_COGNITO } from "@/lib/data/article/aws/cognito";
+import { AWS_COGNITO } from "@/data/article/aws/cognito";
 
 export const metadata: Metadata = {
   title: TOPICS.AWS_COGNITO.title,

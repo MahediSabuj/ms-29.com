@@ -3,9 +3,9 @@ import { Metadata } from "next";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 
-import { AEM_USER_PERMISSION as ARTICLE } from "@/lib/data/article/aem/cloud";
+import { AEM_USER_PERMISSION as ARTICLE } from "@/data/article/aem/cloud";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,

@@ -6,7 +6,7 @@ import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 
-import { AEM_DEVELOPER_ROADMAP as ARTICLE } from "@/lib/data/article/aem/sites";
+import { AEM_DEVELOPER_ROADMAP as ARTICLE } from "@/data/article/aem/sites";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,

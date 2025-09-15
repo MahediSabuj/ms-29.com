@@ -4,7 +4,8 @@ import Link from "next/link";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import { CONTENT_FRAGMENTS_VS_EXPERIENCE_FRAGMENTS as ARTICLE } from "@/lib/data/article/aem/content-fragment";
+
+import { CONTENT_FRAGMENTS_VS_EXPERIENCE_FRAGMENTS as ARTICLE } from "@/data/article/aem/content-fragment";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,

@@ -9,7 +9,7 @@ import ArticleReviewList from "@/components/article-review-list/article-review-l
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 import Reference from "@/components/reference/reference";
 
-import { CUSTOM_SEARCH_FACETS_AEM_ASSETS as ARTICLE } from "@/lib/data/article/aem/assets";
+import { CUSTOM_SEARCH_FACETS_AEM_ASSETS as ARTICLE } from "@/data/article/aem/assets";
 
 import AEM_ASSETS_SEARCH_FORM from "./assets/aem-assets-search-form.png";
 import AEM_ASSETS_EDIT_SEARCH_FROM from "./assets/aem-assets-edit-search-form.png";

@@ -3,11 +3,11 @@ import { Metadata } from "next";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 
 import {
   CREATE_CUSTOM_MCP_PROCESS_IN_ACS_COMMONS as ARTICLE
-} from "@/lib/data/article/aem/acs-commons";
+} from "@/data/article/aem/acs-commons";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,

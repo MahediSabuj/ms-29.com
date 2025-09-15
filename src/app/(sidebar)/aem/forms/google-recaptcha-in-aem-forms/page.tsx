@@ -1,5 +1,6 @@
 import Article from "@/components/article/article";
-import { GOOGLE_RECAPTCHA_AEM_FORMS as ARTICLE } from "@/lib/data/article/aem/forms";
+
+import { GOOGLE_RECAPTCHA_AEM_FORMS as ARTICLE } from "@/data/article/aem/forms";
 
 export default function GoogleRecaptcha() {
   return (

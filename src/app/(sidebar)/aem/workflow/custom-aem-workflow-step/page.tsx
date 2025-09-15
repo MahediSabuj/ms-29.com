@@ -1,5 +1,6 @@
 import Article from "@/components/article/article";
-import { CUSTOM_AEM_WORKFLOW_STEP as ARTICLE } from "@/lib/data/article/aem/workflow";
+
+import { CUSTOM_AEM_WORKFLOW_STEP as ARTICLE } from "@/data/article/aem/workflow";
 
 export default function CustomWorkflowStep() {
   return (

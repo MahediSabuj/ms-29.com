@@ -8,7 +8,7 @@ import Highlight from "@/components/highlight/highlight";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 
-import { MOCK_SLING_MODEL_INJECTORS_ANNOTATIONS as ARTICLE } from "@/lib/data/article/aem/code-coverage";
+import { MOCK_SLING_MODEL_INJECTORS_ANNOTATIONS as ARTICLE } from "@/data/article/aem/code-coverage";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,

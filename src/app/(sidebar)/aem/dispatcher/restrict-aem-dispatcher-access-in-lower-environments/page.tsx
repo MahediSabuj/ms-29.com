@@ -7,7 +7,8 @@ import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
-import { BASIC_HTTP_AUTHENTICATION as ARTICLE } from "@/lib/data/article/aem/dispatcher";
+
+import { BASIC_HTTP_AUTHENTICATION as ARTICLE } from "@/data/article/aem/dispatcher";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,

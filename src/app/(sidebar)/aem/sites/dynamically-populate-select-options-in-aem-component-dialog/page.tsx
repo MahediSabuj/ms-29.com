@@ -9,9 +9,9 @@ import Highlight from "@/components/highlight/highlight";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 import Reference from "@/components/reference/reference";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 
-import { DYNAMICALLY_POPULATE_SELECT_OPTIONS_IN_AEM_COMPONENT_DIALOG as ARTICLE } from "@/lib/data/article/aem/sites";
+import { DYNAMICALLY_POPULATE_SELECT_OPTIONS_IN_AEM_COMPONENT_DIALOG as ARTICLE } from "@/data/article/aem/sites";
 
 import ACS_COMMONS_GENERIC_LIST from './assets/acs-commons-generic-list.png';
 import ACS_COMMONS_GENERIC_LIST_ITEMS from './assets/acs-commons-generic-list-items.png';

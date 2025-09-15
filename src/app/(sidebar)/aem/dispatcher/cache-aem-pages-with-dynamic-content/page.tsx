@@ -8,7 +8,7 @@ import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 
-import { CACHE_AEM_DYNAMIC_CONTENT as ARTICLE } from "@/lib/data/article/aem/dispatcher";
+import { CACHE_AEM_DYNAMIC_CONTENT as ARTICLE } from "@/data/article/aem/dispatcher";
 
 import SLING_DYNAMIC_INCLUDE_HTML_IMAGE from './assets/Sling-Dynamic-Include-HTML.webp';
 

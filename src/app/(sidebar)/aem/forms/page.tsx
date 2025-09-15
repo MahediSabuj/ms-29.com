@@ -2,9 +2,10 @@ import { Metadata } from "next";
 
 import ArticleList from "@/components/article-list/article-list";
 import { IArticleList } from "@/types/article";
-import { AEM_FORMS } from "@/lib/data/article/aem/forms";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
+
+import { AEM_FORMS } from "@/data/article/aem/forms";
 
 export const metadata: Metadata = {
   title: "AEM Forms",

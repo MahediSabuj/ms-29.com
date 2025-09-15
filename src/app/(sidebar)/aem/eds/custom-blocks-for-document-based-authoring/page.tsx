@@ -2,10 +2,10 @@ import Article from "@/components/article/article";
 import { Metadata } from "next";
 
 import { IBreadCrumb } from "@/types/breadcrumb";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 
-import { CUSTOM_BLOCKS_FOR_DOCUMENT_BASED_AUTHORING as ARTICLE } from "@/lib/data/article/aem/eds";
+import { CUSTOM_BLOCKS_FOR_DOCUMENT_BASED_AUTHORING as ARTICLE } from "@/data/article/aem/eds";
 import Link from "next/link";
 
 export const metadata: Metadata = {

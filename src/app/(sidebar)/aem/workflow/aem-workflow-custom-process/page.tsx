@@ -8,7 +8,7 @@ import Highlight from "@/components/highlight/highlight";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 
-import { CUSTOM_AEM_WORKFLOW_PROCESS as ARTICLE } from "@/lib/data/article/aem/workflow";
+import { CUSTOM_AEM_WORKFLOW_PROCESS as ARTICLE } from "@/data/article/aem/workflow";
 
 import AEM_WORKFLOW_NEW_MODEL from './assets/AEM_Workflow_New_Model.webp';
 import AEM_WORKFLOW_CUSTOM_PROCESS from './assets/AEM_Workflow_Custom_Process.webp';

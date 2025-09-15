@@ -8,7 +8,7 @@ import Reference from "@/components/reference/reference";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 
-import { SLING_MODEL_DELEGATION_PATTERN as ARTICLE } from "@/lib/data/article/aem/sites";
+import { SLING_MODEL_DELEGATION_PATTERN as ARTICLE } from "@/data/article/aem/sites";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,

@@ -2,10 +2,10 @@ import Article from "@/components/article/article";
 import { Metadata } from "next";
 
 import { IBreadCrumb } from "@/types/breadcrumb";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 
-import { UNIVERSAL_EDITOR_IN_LOCAL_ENVIRONMENT as ARTICLE } from "@/lib/data/article/aem/eds";
+import { UNIVERSAL_EDITOR_IN_LOCAL_ENVIRONMENT as ARTICLE } from "@/data/article/aem/eds";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,

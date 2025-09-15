@@ -5,9 +5,9 @@ import { PAGE_TYPE } from "@/types/enum/page-type";
 import { IArticleList } from "@/types/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 
-import { SPRING_BOOT } from "@/lib/data/article/backend/spring-boot";
+import { SPRING_BOOT } from "@/data/article/backend/spring-boot";
 
 export const metadata: Metadata = {
   title: TOPICS.SPRING_BOOT.title,

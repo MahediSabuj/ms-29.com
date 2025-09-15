@@ -2,37 +2,37 @@ import Link from "next/link";
 
 import { IListGroup } from "@/types/list";
 import ListGroup from "@/components/list-group/list-group";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 import GooglePublisherTag from "@/components/third-parties/google/gpt";
 
-import { SPRING_BOOT } from "@/lib/data/article/backend/spring-boot"
-import { AEM_SITES } from "@/lib/data/article/aem/sites";
-import { AEM_ASSETS } from "@/lib/data/article/aem/assets";
-import { CONTENT_FRAGMENT } from "@/lib/data/article/aem/content-fragment";
-import { AEM_FORMS } from "@/lib/data/article/aem/forms";
-import { AEM_SPA } from "@/lib/data/article/aem/spa";
-import { CODE_COVERAGE } from "@/lib/data/article/aem/code-coverage";
-import { AEM_DISPATCHER } from "@/lib/data/article/aem/dispatcher";
-import { AEM_WORKFLOW } from "@/lib/data/article/aem/workflow";
-import { EXPERIENCE_FRAGMENT } from "@/lib/data/article/aem/experience-fragment";
-import { AEM_CLOUD } from "@/lib/data/article/aem/cloud";
-import { ACS_COMMONS } from "@/lib/data/article/aem/acs-commons";
-import { EDGE_DELIVERY_SERVICE } from "@/lib/data/article/aem/eds";
-import { AWS_COGNITO } from "@/lib/data/article/aws/cognito";
-import { AWS_EC2 } from "@/lib/data/article/aws/ec2";
-import { AWS_SES } from "@/lib/data/article/aws/ses";
-import { AWS_ECS } from "@/lib/data/article/aws/ecs";
-import { DEEP_LEARNING } from "@/lib/data/article/ai/deep-learning";
-import { CODING_ASSISTANT } from "@/lib/data/article/ai/coding-assistant";
-import { SF_LWC } from "@/lib/data/article/salesforce/lwc";
-import { SF_IDENTITY } from "@/lib/data/article/salesforce/identity";
-import { DYNAMIC_PROGRAMMING } from "@/lib/data/article/cp/dynamic-programming";
-import { GRAPH } from "@/lib/data/article/cp/graph";
-import { DIVIDE_CONQUER } from "@/lib/data/article/cp/divide-conquer";
-import { POSTGRESQL } from "@/lib/data/article/db/postgresql";
-import { ADOBE_ANALYTICS } from "@/lib/data/article/analytics/adobe";
-import { GOOGLE_ANALYTICS } from "@/lib/data/article/analytics/google";
-import { IAC } from "@/lib/data/article/devops/iac";
+import { SPRING_BOOT } from "@/data/article/backend/spring-boot"
+import { AEM_SITES } from "@/data/article/aem/sites";
+import { AEM_ASSETS } from "@/data/article/aem/assets";
+import { CONTENT_FRAGMENT } from "@/data/article/aem/content-fragment";
+import { AEM_FORMS } from "@/data/article/aem/forms";
+import { AEM_SPA } from "@/data/article/aem/spa";
+import { CODE_COVERAGE } from "@/data/article/aem/code-coverage";
+import { AEM_DISPATCHER } from "@/data/article/aem/dispatcher";
+import { AEM_WORKFLOW } from "@/data/article/aem/workflow";
+import { EXPERIENCE_FRAGMENT } from "@/data/article/aem/experience-fragment";
+import { AEM_CLOUD } from "@/data/article/aem/cloud";
+import { ACS_COMMONS } from "@/data/article/aem/acs-commons";
+import { EDGE_DELIVERY_SERVICE } from "@/data/article/aem/eds";
+import { AWS_COGNITO } from "@/data/article/aws/cognito";
+import { AWS_EC2 } from "@/data/article/aws/ec2";
+import { AWS_SES } from "@/data/article/aws/ses";
+import { AWS_ECS } from "@/data/article/aws/ecs";
+import { DEEP_LEARNING } from "@/data/article/ai/deep-learning";
+import { CODING_ASSISTANT } from "@/data/article/ai/coding-assistant";
+import { SF_LWC } from "@/data/article/salesforce/lwc";
+import { SF_IDENTITY } from "@/data/article/salesforce/identity";
+import { DYNAMIC_PROGRAMMING } from "@/data/article/cp/dynamic-programming";
+import { GRAPH } from "@/data/article/cp/graph";
+import { DIVIDE_CONQUER } from "@/data/article/cp/divide-conquer";
+import { POSTGRESQL } from "@/data/article/db/postgresql";
+import { ADOBE_ANALYTICS } from "@/data/article/analytics/adobe";
+import { GOOGLE_ANALYTICS } from "@/data/article/analytics/google";
+import { IAC } from "@/data/article/devops/iac";
 
 const backend : IListGroup = {
   title: "Backend Development",

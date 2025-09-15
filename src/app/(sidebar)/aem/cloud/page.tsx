@@ -3,10 +3,11 @@ import { Metadata } from "next";
 import ArticleList from "@/components/article-list/article-list";
 import { PAGE_TYPE } from "@/types/enum/page-type";
 import { IArticleList } from "@/types/article";
-import { AEM_CLOUD } from "@/lib/data/article/aem/cloud";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
+
+import { AEM_CLOUD } from "@/data/article/aem/cloud";
 
 export const metadata: Metadata = {
   title: TOPICS.AEM_CLOUD.title,

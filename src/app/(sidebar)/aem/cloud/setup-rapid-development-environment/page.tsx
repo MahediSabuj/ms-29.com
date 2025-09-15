@@ -3,8 +3,9 @@ import { Metadata } from "next";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import TOPICS from "@/lib/data/article/topics";
-import { SETUP_RDE_FOR_AEM_CLOUD as ARTICLE } from "@/lib/data/article/aem/cloud";
+import TOPICS from "@/data/article/topics";
+
+import { SETUP_RDE_FOR_AEM_CLOUD as ARTICLE } from "@/data/article/aem/cloud";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,

@@ -1,5 +1,6 @@
 import Article from "@/components/article/article";
-import { CUSTOM_AEM_SPA_COMPONENT as ARTICLE } from "@/lib/data/article/aem/spa";
+
+import { CUSTOM_AEM_SPA_COMPONENT as ARTICLE } from "@/data/article/aem/spa";
 
 export default function SpaComponent() {
   return (

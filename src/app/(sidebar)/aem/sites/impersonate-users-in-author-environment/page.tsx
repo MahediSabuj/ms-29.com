@@ -4,12 +4,12 @@ import Image from "next/image";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 import Reference from "@/components/reference/reference";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 
-import { IMPERSONATE_USERS_AUTHOR_ENVIRONMENT as ARTICLE } from "@/lib/data/article/aem/sites";
+import { IMPERSONATE_USERS_AUTHOR_ENVIRONMENT as ARTICLE } from "@/data/article/aem/sites";
 
 import ADD_USERS_AS_IMPERSONATORS from "./assets/add-users-as-impersonators.png";
 import IMPERSONATE_AS_USER from "./assets/impersonate-as-users.png";

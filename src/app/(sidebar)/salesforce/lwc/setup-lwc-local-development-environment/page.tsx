@@ -5,14 +5,14 @@ import Image from "next/image";
 import Article from "@/components/article/article";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
 import { IBreadCrumb } from "@/types/breadcrumb";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 import HighlightCode from "@/components/highlight/highlight";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 
 import {
   SETUP_LWC_LOCAL_DEVELOPMENT_ENVIRONMENT as ARTICLE
-} from "@/lib/data/article/salesforce/lwc";
+} from "@/data/article/salesforce/lwc";
 
 import INSTALL_SALESFORCE_EXTENSION_PACK from "./assets/install-salesforce-extension-pack.png";
 import SALESFORCE_DEV_HUB from "./assets/salesforce-dev-hub.png";

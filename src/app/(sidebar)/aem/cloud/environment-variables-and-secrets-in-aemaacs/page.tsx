@@ -5,11 +5,11 @@ import Image from "next/image";
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import TOPICS from "@/lib/data/article/topics";
+import TOPICS from "@/data/article/topics";
 import ArticleReviewList from "@/components/article-review-list/article-review-list";
 import ArticleReviewForm from "@/components/form/article-review/article-review";
 
-import { ENVIRONMENT_VARIABLES_AND_SECRETS as ARTICLE } from "@/lib/data/article/aem/cloud";
+import { ENVIRONMENT_VARIABLES_AND_SECRETS as ARTICLE } from "@/data/article/aem/cloud";
 
 import AEM_CLOUD_MANAGER_ENVIRONMENT_VARIABLE from './assets/aem-cloud-manager-environment-variable.png';
 
