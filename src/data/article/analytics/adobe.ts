@@ -8,7 +8,7 @@ export const ADOBE_ANALYTICS_INTEGRATION_WITH_AEM: IArticleItem = {
   publishDate: "September 30, 2025",
   modifiedDate: "September 30, 2025",
   topics: [ TOPICS.ADOBE_ANALYTICS ],
-  active: false
+  active: true
 }
 
 export const ADOBE_ANALYTICS: IArticleItem[] = [

@@ -35,6 +35,7 @@ export default function AEMRoadMap() {
           modifiedDate={ARTICLE.modifiedDate}/>
         <div>
           <section className="pt-6">
+            AEM has extensive documentation, but it is scattered across different places.
           </section>
         </div>  
       </article>

@@ -10,7 +10,7 @@ export const DEVELOPMENT_USING_CLAUDE_CODE: IArticleItem = {
     publishDate: "September 14, 2025",
     modifiedDate: "September 14, 2025",
     topics: [ TOPICS.CODING_ASSISTANT ],
-    active: false
+    active: true
 }
 
 export const CODING_ASSISTANT: IArticleItem[] = [

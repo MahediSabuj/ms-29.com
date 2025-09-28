@@ -42,9 +42,9 @@ export const AEM_DEVELOPER_ROADMAP: IArticleItem = {
   url: "/aem/sites/aem-developer-roadmap",
   publishDate: "September 19, 2025",
   modifiedDate: "September 19, 2025",
-  description: ``,
+  description: `AEM has extensive documentation, but it is scattered across different places.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const AEM_SERVICE_USERS_USING_REPOINIT_AND_RESOURCE_RESOLVER: IArticleItem = {
@@ -300,7 +300,7 @@ export const SETUP_LOCAL_AEM_DEVELOPMENT_ENVIRONMENT : IArticleItem = {
   modifiedDate: "September 26, 2025",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION : IArticleItem = {
