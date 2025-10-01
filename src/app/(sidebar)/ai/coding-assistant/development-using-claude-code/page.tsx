@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   }
 };
 
+const START_CLAUDE_CODE = 
+`cd your-project
+claude`;
+
 const breadcrumbs : IBreadCrumb = {
   items: [{
     title: TOPICS.CODING_ASSISTANT.title,
@@ -59,6 +63,31 @@ export default function ClaudeCode() {
                 <strong>API Integration (Anthropic Console)</strong>: Programmatic access to Claude AI model APIs for custom applications and integrations. Requires paid subscription.
               </li>
             </ul>
+            While Claude is available through several different interfaces, in this article, we will focus specifically on Claude Code.
+          </section>
+          <h2 className="text-xl mt-6">
+            <strong>Set up Claude Code</strong>
+          </h2>
+          <section className="pt-4">
+            To install Claude Code, run the following command:
+            <Highlight language="bash" code="npm install -g @anthropic-ai/claude-code" path=""/>
+            <div className="pt-4">
+              After the installation completes, navigate to your project and start Claude Code:
+              <Highlight language="bash" code={START_CLAUDE_CODE} path=""/>
+            </div>
+            <div className="pt-4">
+              You will be prompted to login during your first session. Claude Code offers the following authentication options:
+              <ul className="list-decimal ml-6 pt-1 pb-2 pl-2.5">
+                <li>
+                  <strong>Claude account with subscription (Pro, Max, Team or Enterprise)</strong>: Unified subscription that includes both Claude Code 
+                  and the web interface. Log in with your Claude.ai account.
+                </li>
+                <li>
+                  <strong>Anthropic Console account (API usage billing)</strong>: Connect through the Claude Console and complete the OAuth process. Requires 
+                  active billing at <Link href="https://console.anthropic.com" className="text-blue-600" target="_blank"><strong>console.anthropic.com</strong></Link>.
+                </li>
+              </ul>
+            </div>
           </section>
         </div>
         </article>

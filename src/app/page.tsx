@@ -67,7 +67,7 @@ export default function Home() {
             {/* Quick Stats */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8">
               <div className="text-center">
-                <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">13K+</div>
+                <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">14K+</div>
                 <div className="text-sm text-slate-600">Total Views</div>
               </div>
               <div className="text-center">

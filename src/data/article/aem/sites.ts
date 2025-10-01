@@ -135,6 +135,7 @@ export const DESIGN_DIALOG_SHOW_HIDE_DIALOG_OPTIONS: IArticleItem = {
   url: "/aem/sites/design-dialog-to-show-hide-dialog-fields-based-on-template",
   publishDate: "February 07, 2025",
   modifiedDate: "February 07, 2025",
+  views: 106,
   description: `Design Dialog allows developers and template authors to configure component behavior at the template level. 
     It includes setting default values and controlling the visibility of fields in the component dialog. Acting as a bridge 
     between Template Editor and Component Dialog, it provides a way to customize component behavior dynamically.`,

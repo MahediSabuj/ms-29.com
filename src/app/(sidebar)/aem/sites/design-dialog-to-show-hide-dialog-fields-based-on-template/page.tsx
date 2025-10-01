@@ -146,7 +146,8 @@ export default function DesignDialog() {
         <Article
           title={ARTICLE.title}
             publishDate={ARTICLE.publishDate}
-            modifiedDate={ARTICLE.modifiedDate}/>
+            modifiedDate={ARTICLE.modifiedDate}
+            views={ARTICLE.views}/>
         <div>
           <section className="pt-6">
             Design Dialog allows developers and template authors to configure component behavior at the template level. It
