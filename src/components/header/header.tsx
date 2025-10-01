@@ -9,6 +9,9 @@ const headerConfig: HeaderConfig = {
   navigationItems: [{
     name: "Articles",
     url: "/blogs"
+  }, {
+    name: "Case Studies",
+    url: "/case-studies"
   }],
   socialProfiles: [{
     name: "adobe",
