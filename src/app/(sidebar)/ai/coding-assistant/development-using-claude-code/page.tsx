@@ -59,6 +59,7 @@ export default function ClaudeCode() {
                 <strong>API Integration (Anthropic Console)</strong>: Programmatic access to Claude AI model APIs for custom applications and integrations. Requires paid subscription.
               </li>
             </ul>
+            While Claude is available through several different interfaces, in this article, we will focus specifically on Claude Code.
           </section>
         </div>
         </article>
