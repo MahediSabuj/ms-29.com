@@ -186,7 +186,7 @@ export default function DispatcherCache() {
                 forwarded to the AEM publish instance and the response is sent back to the user.
               </li>
               <li>
-                <strong>Content is Cached: </strong> The requested content path is combined with the <code className="code-inline">/docroot</code> specified in the <code className="code-inline">/cache</code> section to verify if the resulting path exists in the Dispatcher.
+                <strong>Content is Cached: </strong> Requested content path is combined with the <code className="code-inline">/docroot</code> specified in the <code className="code-inline">/cache</code> section to verify if the resulting path exists in the Dispatcher.
                 For instance, when <code className="code-inline background">/content/aem-demo/us/en/mobile.html</code> is requested and <code className="code-inline">/docroot</code> is set to <code className="code-inline background">/mnt/var/www/html</code>, the Dispatcher looks for the file at <code className="code-inline break-all background">/mnt/var/www/html/content/aem-demo/us/en/mobile.html</code>.
               </li>
               <li>

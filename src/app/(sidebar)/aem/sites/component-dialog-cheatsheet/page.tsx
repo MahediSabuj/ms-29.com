@@ -491,6 +491,142 @@ const xfField =
   fieldDescription="Choose the experience fragment variation to display."
   rootPath="/content/experience-fragments/aem-demo"/>`;
 
+const richText =
+`<richText jcr:primaryType="nt:unstructured"
+  sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+  fieldLabel="Rich Text"
+  name="./richText"
+  useFixedInlineToolbar="{Boolean}true">
+  <rtePlugins jcr:primaryType="nt:unstructured">
+    <format jcr:primaryType="nt:unstructured"
+      features="*"/>
+    <justify jcr:primaryType="nt:unstructured"
+      features="*"/>
+    <lists jcr:primaryType="nt:unstructured"
+      features="*"/>
+    <paraformat jcr:primaryType="nt:unstructured"
+      features="*">
+      <formats jcr:primaryType="cq:WidgetCollection">
+        <default_p jcr:primaryType="nt:unstructured"
+          description="Paragraph"
+          tag="p"/>
+        <default_h1 jcr:primaryType="nt:unstructured"
+          description="Heading 1"
+          tag="h1"/>
+        <default_h2 jcr:primaryType="nt:unstructured"
+          description="Heading 2"
+          tag="h2"/>
+        <default_h3 jcr:primaryType="nt:unstructured"
+          description="Heading 3"
+          tag="h3"/>
+        <default_h4 jcr:primaryType="nt:unstructured"
+          description="Heading 4"
+          tag="h4"/>
+        <default_h5 jcr:primaryType="nt:unstructured"
+          description="Heading 5"
+          tag="h5"/>
+        <default_h6 jcr:primaryType="nt:unstructured"
+          description="Heading 6"
+          tag="h6"/>
+        <default_blockquote jcr:primaryType="nt:unstructured"
+          description="Quote"
+          tag="blockquote"/>
+        <default_pre jcr:primaryType="nt:unstructured"
+          description="Preformatted"
+          tag="pre"/>
+      </formats>
+    </paraformat>
+    <links jcr:primaryType="nt:unstructured"
+      features="*"/>
+    <findreplace jcr:primaryType="nt:unstructured"
+      features="*"/>
+    <subsuperscript jcr:primaryType="nt:unstructured"
+      features="*"/>
+    <spellcheck jcr:primaryType="nt:unstructured"
+      features="*"/>
+    <edit jcr:primaryType="nt:unstructured"
+      features="*"/>
+    <misctools jcr:primaryType="nt:unstructured"
+      features="*">
+      <specialCharsConfig jcr:primaryType="nt:unstructured">
+        <chars jcr:primaryType="nt:unstructured">
+          <copyright jcr:primaryType="nt:unstructured"
+            entity="&amp;#169;"/>
+          <trademark jcr:primaryType="nt:unstructured"
+            entity="&amp;#8482;"/>
+          <registered jcr:primaryType="nt:unstructured"
+            entity="&amp;#174;"/>
+          <emDash jcr:primaryType="nt:unstructured"
+            entity="&amp;#8212;"/>
+          <pound jcr:primaryType="nt:unstructured"
+            entity="&amp;#163;"/>
+          <nbsp jcr:primaryType="nt:unstructured"
+            entity="&amp;#160;"/>
+        </chars>
+      </specialCharsConfig>
+    </misctools>
+    <styles jcr:primaryType="nt:unstructured"
+      features="*">
+      <styles jcr:primaryType="nt:unstructured">
+        <plainSpan jcr:primaryType="nt:unstructured"
+          cssName="defaultSpan"
+          text="Default (add span tag)"/>
+        <lead jcr:primaryType="nt:unstructured"
+          cssName="lead"
+          text="Lead"/>
+        <white jcr:primaryType="nt:unstructured"
+          cssName="text-white"
+          text="White"/>
+        <small jcr:primaryType="nt:unstructured"
+          cssName="small"
+          text="Small"/>
+      </styles>
+    </styles>
+    <table jcr:primaryType="nt:unstructured"
+      features="*"/>
+  </rtePlugins>
+  <uiSettings jcr:primaryType="nt:unstructured">
+    <cui jcr:primaryType="nt:unstructured">
+      <inline jcr:primaryType="nt:unstructured"
+        toolbar="[format#bold,format#italic,format#underline,subsuperscript#subscript,subsuperscript#superscript,#justify,links#modifylink,links#unlink,links#anchor,#lists,spellcheck#checktext,findreplace#replace,misctools#specialchars,misctools#sourceedit,#styles,edit#cut,edit#copy,edit#paste-default,edit#paste-plaintext,edit#paste-wordhtml]">
+        <popovers jcr:primaryType="nt:unstructured">
+          <justify jcr:primaryType="nt:unstructured"
+            items="[justify#justifyleft,justify#justifycenter,justify#justifyright,justify#justifyjustify]"
+            ref="justify"/>
+          <lists jcr:primaryType="nt:unstructured"
+            items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]"
+            ref="lists"/>
+          <paraformat jcr:primaryType="nt:unstructured"
+            items="paraformat:getFormats:paraformat-pulldown"
+            ref="paraformat"/>
+          <styles jcr:primaryType="nt:unstructured"
+            items="styles:getStyles:styles-pulldown"
+            ref="styles"/>
+        </popovers>
+      </inline>
+      <dialogFullScreen jcr:primaryType="nt:unstructured"
+        toolbar="[format#bold,format#italic,format#underline,subsuperscript#subscript,subsuperscript#superscript,#justify,table#table,links#modifylink,links#unlink,links#anchor,#lists,spellcheck#checktext,findreplace#replace,misctools#specialchars,misctools#sourceedit,#styles,#paraformat,edit#cut,edit#copy,edit#paste-default,edit#paste-plaintext,edit#paste-wordhtml]">
+        <popovers jcr:primaryType="nt:unstructured">
+          <justify jcr:primaryType="nt:unstructured"
+            items="[justify#justifyleft,justify#justifycenter,justify#justifyright,justify#justifyjustify]"
+            ref="justify"/>
+          <lists jcr:primaryType="nt:unstructured"
+            items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]"
+            ref="lists"/>
+          <paraformat jcr:primaryType="nt:unstructured"
+            items="paraformat:getFormats:paraformat-pulldown"
+            ref="paraformat"/>
+          <styles jcr:primaryType="nt:unstructured"
+            items="styles:getStyles:styles-pulldown"
+            ref="styles"/>
+        </popovers>
+      </dialogFullScreen>
+      <tableEditOptions  jcr:primaryType="nt:unstructured"
+        toolbar="[table#insertcolumn-before,table#insertcolumn-after,table#removecolumn,-,table#insertrow-before,table#insertrow-after,table#removerow,-,table#mergecells-right,table#mergecells-down,table#mergecells,table#splitcell-horizontal,table#splitcell-vertical,-,table#selectrow,table#selectcolumn,-,table#ensureparagraph,-,table#modifytableandcell,table#removetable,-,undo#undo,undo#redo,-,table#exitTableEditing,-]"/>
+    </cui>
+  </uiSettings>
+</richText>`;
+
 const breadcrumbs : IBreadCrumb = {
   items: [{
     title: TOPICS.AEM_SITES.title,
@@ -684,6 +820,9 @@ export default function DialogCheatSheet() {
                   {GRANITE_UI}/form/radiogroup/index.html
                 </Link>
               </div>
+            </div>
+            <div className="pt-4">
+              <Highlight code={richText} language="xml" path="Rich Text"/>
             </div>
             <div className="pt-4">
               <Highlight code={select} language="xml" path="Select"/>
