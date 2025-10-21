@@ -90,8 +90,21 @@ export default function ClaudeCode() {
               Once logged into Claude, you can start prompting for development in the terminal.
             </div>
           </section>
+          <h2 className="text-xl mt-6">
+            <strong>Setting up Project Context</strong>
+          </h2>
           <section className="pt-4">
-
+            Assuming you have already created your project, the next step is to create context file (CLAUDE.md). This file serves as comprehensive guideline that
+            includes a brief project introduction, technologies and frameworks used, project structure and organization, architecture and design patterns, development
+            guidelines and workflows, as well as coding standards, dos and don'ts.
+          </section>
+          <section className="pt-4">
+            Run the following command to automatically create the CLAUDE.md file. This command analyzes the project structure and generates a context file based on your existing codebase.
+            <Highlight language="bash" code="/init" path=""/>
+            <div className="pt-4">
+              Make sure you commit the CLAUDE.md file to your repository so everyone on your team can access and use the same context. Update it regularly, especially after completing each feature or enhancement.
+              This ensures that when you prompt Claude for changes, it has the latest information and can accurately follow your project structure and guidelines.
+            </div>
           </section>
         </div>
         </article>
