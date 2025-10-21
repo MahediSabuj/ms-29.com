@@ -65,6 +65,10 @@ const TOPICS: Topics = {
     title: "Amazon Cognito",
     url: "/aws/cognito"
   },
+  AWS_S3: {
+    title: "Simple Storage Service",
+    url: "/aws/s3"
+  },
   SF_LWC: {
     title: "Lightning Web Component",
     url: "/salesforce/lwc"

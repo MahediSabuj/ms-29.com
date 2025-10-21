@@ -87,7 +87,11 @@ export default function ClaudeCode() {
                   active billing at <Link href="https://console.anthropic.com" className="text-blue-600" target="_blank"><strong>console.anthropic.com</strong></Link>.
                 </li>
               </ul>
+              Once logged into Claude, you can start prompting for development in the terminal.
             </div>
+          </section>
+          <section className="pt-4">
+
           </section>
         </div>
         </article>

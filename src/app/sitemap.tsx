@@ -22,6 +22,7 @@ import { AWS_COGNITO } from "@/data/article/aws/cognito";
 import { AWS_EC2 } from "@/data/article/aws/ec2";
 import { AWS_SES } from "@/data/article/aws/ses";
 import { AWS_ECS } from "@/data/article/aws/ecs";
+import { AWS_S3 } from "@/data/article/aws/s3";
 import { DEEP_LEARNING } from "@/data/article/ai/deep-learning";
 import { SF_LWC } from "@/data/article/salesforce/lwc";
 import { SF_IDENTITY } from "@/data/article/salesforce/identity";
@@ -127,6 +128,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   loadArticles(TOPICS.AWS_EC2.url, AWS_EC2);
   loadArticles(TOPICS.AWS_SES.url, AWS_SES);
   loadArticles(TOPICS.AWS_ECS.url, AWS_ECS);
+  loadArticles(TOPICS.AWS_S3.url, AWS_S3);
 
   loadArticles(TOPICS.DEEP_LEARNING.url, DEEP_LEARNING);
 

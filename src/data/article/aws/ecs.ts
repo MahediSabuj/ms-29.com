@@ -7,10 +7,10 @@ export const SETUP_CI_CD_PIPELINE_TO_DEPLOY_SPRING_BOOT_APP_TO_AWS_ECS: IArticle
     pipelines have become essential tools. These pipelines streamline the development process, automate testing, and expedite 
     application deployment, making it faster, more reliable, and less error-prone.`,
   url: "/aws/ecs/setup-ci-cd-pipeline-for-spring-boot-deployment-on-aws-ecs",
-  publishDate: "May 21, 2025",
-  modifiedDate: "May 21, 2025",
+  publishDate: "October 21, 2025",
+  modifiedDate: "October 21, 2025",
   topics: [ TOPICS.AWS_ECS ],
-  active: false
+  active: true
 }
 
 export const AWS_ECS: IArticleItem[] = [
