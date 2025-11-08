@@ -106,6 +106,21 @@ export default function ClaudeCode() {
               This ensures that when you prompt Claude for changes, it has the latest information and can accurately follow your project structure and guidelines.
             </div>
           </section>
+          <h2 className="text-xl mt-6">
+            <strong>Usage in MicroService Project</strong>
+          </h2>
+          <section className="pt-4">
+            In a monorepo setup where your User table schema and frontend coexist, you can simply ask: '<em>Create a registration form using the required User schema fields</em>'. Easy! This works perfectly 
+            for single-codebase or modular monolith architectures.
+          </section>
+          <section className="pt-4">
+            But here&apos;s the challenge: What if you have separate repositories for frontend, backend, and microservices? How does Claude understand everything when your code is distributed?
+            The answer is simple, add additional working directories! Use this command:
+            <Highlight language="bash" code="/add-dir [directory-path]" path=""/>
+            <div className="pt-4">
+              Now Claude has access to all your microservices. With this setup, Claude can understand the complete context and provide accurate responses across your entire distributed system.
+            </div>
+          </section>
         </div>
         </article>
         <div className="mt-8 mb-4">
