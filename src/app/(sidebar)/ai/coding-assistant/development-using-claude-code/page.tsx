@@ -102,7 +102,7 @@ export default function ClaudeCode() {
           <section className="pt-4">
             Assuming you have already created your project, the next step is to create context file (CLAUDE.md). This file serves as comprehensive guideline that
             includes a brief project introduction, technologies and frameworks used, project structure and organization, architecture and design patterns, development
-            guidelines and workflows, as well as coding standards, dos and don'ts.
+            guidelines and workflows, as well as coding standards, dos and don&apos;ts.
           </section>
           <section className="pt-4">
             Run the following command to automatically create the CLAUDE.md file. This command analyzes the project structure and generates a context file based on your existing codebase.
@@ -116,7 +116,7 @@ export default function ClaudeCode() {
             <strong>Usage in MicroService Project</strong>
           </h2>
           <section className="pt-4">
-            In a monorepo setup where your User table schema and frontend coexist, you can simply ask: '<em>Create a registration form using the required User schema fields</em>'. Easy! This works perfectly 
+            In a monorepo setup where your User table schema and frontend coexist, you can simply ask: &apos;<em>Create a registration form using the required User schema fields</em>&apos;. Easy! This works perfectly 
             for single-codebase or modular monolith architectures.
           </section>
           <section className="pt-4">

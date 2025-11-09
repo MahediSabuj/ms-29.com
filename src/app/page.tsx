@@ -190,7 +190,7 @@ export default function Home() {
             <Link href="/ai/coding-assistant/development-using-claude-code" className="blog-card">
               <div className="blog-title">Development using Claude Code</div>
               <p className="blog-excerpt">
-                As AI Coding Assistant tools are evolving rapidly, We've been experimenting with different AI-powered development tools like Claude Code, Cursor, GitHub Copilot, and others.
+                As AI Coding Assistant tools are evolving rapidly, We&apos;ve been experimenting with different AI-powered development tools like Claude Code, Cursor, GitHub Copilot, and others.
               </p>
               <div className="blog-meta">
                 <span>Coding Assistant</span>
