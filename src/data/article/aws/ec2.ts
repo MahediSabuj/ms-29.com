@@ -9,7 +9,7 @@ export const INSTALL_SSL_CERTIFICATE_FROM_PFX_FILE: IArticleItem = {
   url: "/aws/ec2/install-ssl-certificate-from-pfx-file",
   publishDate: "March 24, 2024",
   modifiedDate: "March 24, 2024",
-  views: 212,
+  views: 242,
   topics: [ TOPICS.AWS_EC2 ],
   active: true
 }
@@ -20,8 +20,8 @@ export const SETUP_CI_CD_PIPELINE_TO_DEPLOY_NODEJS_APP_TO_AWS_EC2: IArticleItem 
     pipelines have become essential tools. These pipelines streamline the development process, automate testing, and expedite 
     application deployment, making it faster, more reliable, and less error-prone.`,
   url: "/aws/ec2/setup-ci-cd-pipeline-to-deploy-nodejs-app-to-aws-ec2",
-  publishDate: "May 24, 2024",
-  modifiedDate: "May 24, 2024",
+  publishDate: "October 07, 2025",
+  modifiedDate: "October 07, 2025",
   topics: [ TOPICS.AWS_EC2 ],
   active: false
 }

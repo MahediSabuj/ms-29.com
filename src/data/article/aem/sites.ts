@@ -19,7 +19,7 @@ export const AEM_COMPONENT_DIALOG_CHEATSHEET: IArticleItem = {
   url: "/aem/sites/component-dialog-cheatsheet",
   publishDate: "February 13, 2024",
   modifiedDate: "February 28, 2024",
-  views: 1232,
+  views: 1604,
   description: `Granite UI provides a large range of the basic components needed to create component 
     dialog on the authoring environment. These components are constructed using Coral UI-based elements.`,
   topics: [ TOPICS.AEM_SITES ],
@@ -42,7 +42,7 @@ export const AEM_DEVELOPER_ROADMAP: IArticleItem = {
   url: "/aem/sites/aem-developer-roadmap",
   publishDate: "September 19, 2025",
   modifiedDate: "September 19, 2025",
-  description: ``,
+  description: `AEM has extensive documentation, but it is scattered across different places.`,
   topics: [ TOPICS.AEM_SITES ],
   active: false
 }
@@ -100,7 +100,7 @@ export const CUSTOM_OSGI_CONFIGURATION: IArticleItem = {
   url: "/aem/sites/custom-osgi-configuration",
   publishDate: "August 30, 2024",
   modifiedDate: "August 30, 2024",
-  views: 184,
+  views: 272,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
@@ -122,7 +122,7 @@ export const DEFAULT_VALUES_IN_AEM_COMPONENT_DIALOG: IArticleItem = {
   url: "/aem/sites/default-value-in-component-dialog",
   publishDate: "February 04, 2024",
   modifiedDate: "February 10, 2024",
-  views: 361,
+  views: 403,
   description: `In AEM components, it&apos;s often necessary to establish default values. 
     This ensures that when components are dragged onto the page, they display predefined initial values.
     This functionality is achievable through the utilization of cq:template and cq:templatePath.`,
@@ -135,6 +135,7 @@ export const DESIGN_DIALOG_SHOW_HIDE_DIALOG_OPTIONS: IArticleItem = {
   url: "/aem/sites/design-dialog-to-show-hide-dialog-fields-based-on-template",
   publishDate: "February 07, 2025",
   modifiedDate: "February 07, 2025",
+  views: 118,
   description: `Design Dialog allows developers and template authors to configure component behavior at the template level. 
     It includes setting default values and controlling the visibility of fields in the component dialog. Acting as a bridge 
     between Template Editor and Component Dialog, it provides a way to customize component behavior dynamically.`,
@@ -147,7 +148,7 @@ export const DYNAMICALLY_POPULATE_SELECT_OPTIONS_IN_AEM_COMPONENT_DIALOG : IArti
   url: "/aem/sites/dynamically-populate-select-options-in-aem-component-dialog",
   publishDate: "October 15, 2024",
   modifiedDate: "October 15, 2024",
-  views: 268,
+  views: 378,
   description: `Creating dynamic and interactive components can significantly enhance the authoring experience. One effective enhancement is dynamically 
     populating the options of a select field within a component dialog. This is especially useful when the options need to be fetched from an external source 
     or depend on other selections made by the author.`,
@@ -170,7 +171,7 @@ export const EXTEND_AEM_PAGE_PROPERTIES : IArticleItem = {
   url: "/aem/sites/extend-aem-page-properties",
   publishDate: "May 18, 2024",
   modifiedDate: "May 18, 2024",
-  views: 240,
+  views: 281,
   description: `Page properties in AEM serve as metadata that provide essential information about a webpage. While AEM 
     provides a standard set of properties to meet basic web project needs, organizations often enhance them with extra 
     functionalities or custom data fields to effectively address more complex or unique requirements in content management.`,
@@ -185,7 +186,7 @@ export const FETCH_MULTIFIELD_SLING_MODEL: IArticleItem = {
   url: "/aem/sites/fetch-multifield-values-using-sling-model",
   publishDate: "March 14, 2024",
   modifiedDate: "March 14, 2024",
-  views: 420,
+  views: 452,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
@@ -209,7 +210,7 @@ export const IMPERSONATE_USERS_AUTHOR_ENVIRONMENT : IArticleItem = {
   url: "/aem/sites/impersonate-users-in-author-environment",
   publishDate: "December 10, 2024",
   modifiedDate: "December 10, 2024",
-  views: 156,
+  views: 208,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
@@ -220,7 +221,7 @@ export const INTEGRATE_ADAPTIVE_FORMS_IN_AEM_SITES: IArticleItem = {
     and another for existing projects. Adobe has developed the aem-core-forms-components which can be used to 
     incorporate forms standard components into AEM Sites.`,
   url: "/aem/sites/integrate-adaptive-forms-in-aem-sites",
-  views: 143,
+  views: 159,
   publishDate: "February 29, 2024",
   modifiedDate: "March 01, 2024",
   topics: [ TOPICS.AEM_SITES ],
@@ -249,7 +250,7 @@ export const PROJECT_LOMBOK_IN_AEM_PROJECTS: IArticleItem = {
   url: "/aem/sites/project-lombok-in-aem-projects",
   publishDate: "March 17, 2024",
   modifiedDate: "March 17, 2024",
-  views: 210,
+  views: 214,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
@@ -262,7 +263,7 @@ export const REUSE_COMMON_DIALOG_PARTS_IN_AEM_COMPONENTS: IArticleItem = {
   url: "/aem/sites/reuse-common-dialog-parts-in-aem-components",
   publishDate: "May 08, 2025",
   modifiedDate: "May 08, 2025",
-  views: 106,
+  views: 164,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
@@ -276,7 +277,7 @@ export const QUERY_BUILDER_CHEATSHEET: IArticleItem = {
   url: "/aem/sites/query-builder-cheatsheet",
   publishDate: "February 21, 2024",
   modifiedDate: "March 17, 2024",
-  views: 152,
+  views: 245,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
@@ -308,7 +309,7 @@ export const SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION : IArticleItem = {
   url: "/aem/sites/show-hide-aem-dialog-fields-on-dropdown-selection",
   publishDate: "April 10, 2024",
   modifiedDate: "March 23, 2025",
-  views: 799,
+  views: 923,
   description: `Enabling Show/Hide functionality for AEM dialog fields improves user experience by allowing content authors to 
     focus on relevant fields, thereby making the authoring process more efficient and less error-prone.`,
   topics: [ TOPICS.AEM_SITES ],
@@ -375,7 +376,7 @@ export const SONARQUBE_SETUP_FOR_AEM_DEVELOPMENT : IArticleItem = {
   url: "/aem/sites/sonarqube-setup-for-aem-development",
   publishDate: "June 21, 2024",
   modifiedDate: "June 21, 2024",
-  views: 107,
+  views: 122,
   description: `In AEM development, prioritizing code quality is essential. Even during deployment via Cloud Manager, it's 
     crucial to meet specific metrics for security, reliability, maintainability, and code coverage. SonarQube enables continuous 
     code inspections, identifying issues early in the development lifecycle that could affect these metrics. Though integration, 

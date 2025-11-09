@@ -51,7 +51,8 @@ export default function CustomRunModes() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <div>
           <section className="pt-6">
             In AEM 6.5, you can define arbitrary run modes to apply OSGi configurations to specific instances. However, in AEMaaCS, the platform supports a fixed

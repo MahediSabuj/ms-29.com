@@ -21,6 +21,7 @@ import { AWS_COGNITO } from "@/data/article/aws/cognito";
 import { AWS_EC2 } from "@/data/article/aws/ec2";
 import { AWS_SES } from "@/data/article/aws/ses";
 import { AWS_ECS } from "@/data/article/aws/ecs";
+import { AWS_S3 } from "@/data/article/aws/s3";
 import { DEEP_LEARNING } from "@/data/article/ai/deep-learning";
 import { CODING_ASSISTANT } from "@/data/article/ai/coding-assistant";
 import { SF_LWC } from "@/data/article/salesforce/lwc";
@@ -60,6 +61,7 @@ const articles: IArticleList = {
     ...AWS_EC2,
     ...AWS_SES,
     ...AWS_ECS,
+    ...AWS_S3,
     ...DEEP_LEARNING,
     ...CODING_ASSISTANT,
     ...SF_LWC,

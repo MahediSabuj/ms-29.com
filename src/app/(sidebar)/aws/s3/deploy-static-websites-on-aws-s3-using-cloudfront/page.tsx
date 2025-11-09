@@ -1,12 +1,15 @@
 import { Metadata } from "next";
+import Link from "next/link";
 
 import Article from "@/components/article/article";
 import { IBreadCrumb } from "@/types/breadcrumb";
 import BreadCrumb from "@/components/breadcrumb/breadcrumb";
-import ArticleReviewList from "@/components/article-review-list/article-review-list";
+import TOPICS from "@/data/article/topics";
+import ArticleReviewList from '@/components/article-review-list/article-review-list';
 import ArticleReviewForm from "@/components/form/article-review/article-review";
+import HighlightCode from "@/components/highlight/highlight";
 
-import { AEM_DEVELOPER_ROADMAP as ARTICLE } from "@/data/article/aem/sites";
+import { DEPLOY_STATIC_WEBSITES_ON_AWS_S3_USING_CLOUDFRONT as ARTICLE } from "@/data/article/aws/s3";
 
 export const metadata: Metadata = {
   title: ARTICLE.title,
@@ -18,13 +21,13 @@ export const metadata: Metadata = {
 
 const breadcrumbs : IBreadCrumb = {
   items: [{
-    title: "AEM Sites",
-    url: "/aem/sites"
+    title: TOPICS.AWS_S3.title,
+    url: TOPICS.AWS_S3.url
   }],
   current: ARTICLE.title
 }
 
-export default function AEMRoadMap() {
+export default function StaticWebSites() {
   return (
     <div>
       <BreadCrumb {...breadcrumbs}/>
@@ -35,9 +38,9 @@ export default function AEMRoadMap() {
           modifiedDate={ARTICLE.modifiedDate}/>
         <div>
           <section className="pt-6">
-            AEM has extensive documentation, but it is scattered across different places.
+
           </section>
-        </div>  
+        </div>
       </article>
       <div className="mt-8 mb-4">
         <ArticleReviewList items={[]}/>
