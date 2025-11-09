@@ -40,7 +40,8 @@ export default function PrivateGithubRepository() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <div>
           <section className="pt-6">
             Integrating Private GitHub repositories into AEM Cloud Manager streamlines development workflow by allowing direct code

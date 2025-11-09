@@ -39,10 +39,8 @@ const featuredTopics = [
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
-      {/* Hero Section */}
       <section className="pt-10 pb-10 px-6 flex items-center relative overflow-hidden">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-6">
               <p className="text-xl text-slate-600 leading-relaxed max-w-2xl">
@@ -51,7 +49,6 @@ export default function Home() {
                 sharing insights through technical writing and community engagement.
               </p>
             </div>
-            
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/blogs" className="inline-flex items-center justify-center px-8 py-4 bg-slate-900 text-white rounded-full hover:bg-slate-800 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
                 Explore Articles
@@ -63,11 +60,9 @@ export default function Home() {
                 About Me
               </Link>
             </div>
-            
-            {/* Quick Stats */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8">
               <div className="text-center">
-                <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">14K+</div>
+                <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">15K+</div>
                 <div className="text-sm text-slate-600">Total Views</div>
               </div>
               <div className="text-center">
@@ -84,11 +79,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-          
-          {/* Right Visual */}
           <div className="relative lg:block hidden">
             <div className="relative w-full h-[600px] rounded-3xl overflow-hidden bg-gradient-to-br from-slate-100 to-blue-100 p-8">
-              {/* Floating Cards */}
               <div className="absolute top-12 left-12 bg-white rounded-2xl p-6 shadow-xl rotate-3 hover:rotate-0 transition-transform duration-500">
                 <div className="w-12 h-12 bg-red-500 rounded-xl flex items-center justify-center mb-4">
                   <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -98,7 +90,6 @@ export default function Home() {
                 <div className="font-semibold text-slate-900">Adobe AEM</div>
                 <div className="text-sm text-slate-600">50+ Articles</div>
               </div>
-              
               <div className="absolute top-32 right-12 bg-white rounded-2xl p-6 shadow-xl -rotate-3 hover:rotate-0 transition-transform duration-500">
                 <div className="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center mb-4">
                   <svg className="w-8 h-8" viewBox="0 0 640 512">
@@ -108,7 +99,6 @@ export default function Home() {
                 <div className="font-semibold text-slate-900">AWS Cloud</div>
                 <div className="text-sm text-slate-600">8+ Articles</div>
               </div>
-              
               <div className="absolute bottom-32 left-24 bg-white rounded-2xl p-6 shadow-xl rotate-2 hover:rotate-0 transition-transform duration-500">
                 <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mb-4">
                   <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -118,7 +108,6 @@ export default function Home() {
                 <div className="font-semibold text-slate-900">Spring Boot</div>
                 <div className="text-sm text-slate-600">5+ Articles</div>
               </div>
-              
               <div className="absolute bottom-12 right-24 bg-white rounded-2xl p-6 shadow-xl -rotate-2 hover:rotate-0 transition-transform duration-500">
                 <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mb-4">
                   <svg className="w-8 h-8" viewBox="0 0 640 512">
@@ -131,16 +120,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
-        {/* Background Decoration */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full opacity-30 blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-indigo-100 to-pink-100 rounded-full opacity-30 blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-gradient-to-r from-yellow-100 to-orange-100 rounded-full opacity-20 blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
         </div>
       </section>
-
-      {/* Featured Topics */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -149,7 +134,6 @@ export default function Home() {
               Deep-dive into the technologies that power modern applications
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {featuredTopics.map((topic, index) => (
               <div key={index} className="feature-card">
@@ -173,8 +157,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* About Section */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50/30">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{color: '#3A2A1D'}}>
@@ -196,8 +178,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Recent Articles Preview */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -206,8 +186,17 @@ export default function Home() {
               Stay updated with the newest technical content and tutorials
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Link href="/ai/coding-assistant/development-using-claude-code" className="blog-card">
+              <div className="blog-title">Development using Claude Code</div>
+              <p className="blog-excerpt">
+                As AI Coding Assistant tools are evolving rapidly, We've been experimenting with different AI-powered development tools like Claude Code, Cursor, GitHub Copilot, and others.
+              </p>
+              <div className="blog-meta">
+                <span>Coding Assistant</span>
+                <span>Sep 14, 2025</span>
+              </div>
+            </Link>
             <Link href="/aws/cognito/setup-cognito-user-pool-for-spa" className="blog-card">
               <div className="blog-title">AWS Cognito User Pool Setup for SPA</div>
               <p className="blog-excerpt">
@@ -218,7 +207,6 @@ export default function Home() {
                 <span>Aug 30, 2025</span>
               </div>
             </Link>
-
             <Link href="/aem/sites/context-aware-configuration" className="blog-card">
               <div className="blog-title">Apache Sling Context Aware Configuration</div>
               <p className="blog-excerpt">
@@ -229,20 +217,7 @@ export default function Home() {
                 <span>Aug 23, 2025</span>
               </div>
             </Link>
-
-            <Link href="/backend/spring-boot/user-registration-and-login-using-spring-security" className="blog-card">
-              <div className="blog-title">Spring Security User Registration & Authentication</div>
-              <p className="blog-excerpt">
-                Complete guide to implementing user registration and login functionality using Spring Security 6.x and Spring Boot 3.4.4.
-              </p>
-              <div className="blog-meta">
-                <span>Spring Boot</span>
-                <span>Aug 11, 2025</span>
-              </div>
-            </Link>
-
           </div>
-
           <div className="text-center mt-12">
             <Link href="/blogs" className="button-primary">
               View All Articles

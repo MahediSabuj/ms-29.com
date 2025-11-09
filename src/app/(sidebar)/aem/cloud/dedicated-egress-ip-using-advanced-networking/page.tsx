@@ -49,7 +49,8 @@ export default function DedicatedEgressIp() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <div>
           <section className="pt-6">
             Due to the organization&apos;s networking policy, certain applications may need to be hosted behind a firewall, accessible only

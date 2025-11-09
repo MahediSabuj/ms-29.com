@@ -43,7 +43,8 @@ export default function LogInvestigation() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <section className="pt-6">
           Tailing logs is a very basic need that every developer performs daily, as logs serve as the frontline for debugging AEM applications.
           While AEM 6.5 allows tailing logs via the System Console or SSH into AEM servers, AEM Cloud Service no longer provides this access.
