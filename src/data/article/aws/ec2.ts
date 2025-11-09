@@ -23,7 +23,7 @@ export const SETUP_CI_CD_PIPELINE_TO_DEPLOY_NODEJS_APP_TO_AWS_EC2: IArticleItem 
   publishDate: "October 07, 2025",
   modifiedDate: "October 07, 2025",
   topics: [ TOPICS.AWS_EC2 ],
-  active: true
+  active: false
 }
 
 export const AWS_EC2: IArticleItem[] = [

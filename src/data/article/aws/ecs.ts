@@ -10,7 +10,7 @@ export const SETUP_CI_CD_PIPELINE_TO_DEPLOY_SPRING_BOOT_APP_TO_AWS_ECS: IArticle
   publishDate: "October 21, 2025",
   modifiedDate: "October 21, 2025",
   topics: [ TOPICS.AWS_ECS ],
-  active: true
+  active: false
 }
 
 export const AWS_ECS: IArticleItem[] = [

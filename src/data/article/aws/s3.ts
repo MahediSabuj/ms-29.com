@@ -8,7 +8,7 @@ export const DEPLOY_STATIC_WEBSITES_ON_AWS_S3_USING_CLOUDFRONT: IArticleItem = {
   publishDate: "October 17, 2025",
   modifiedDate: "October 17, 2025",
   topics: [ TOPICS.AWS_S3 ],
-  active: true
+  active: false
 }
 
 export const AWS_S3: IArticleItem[] = [

@@ -44,7 +44,7 @@ export const AEM_DEVELOPER_ROADMAP: IArticleItem = {
   modifiedDate: "September 19, 2025",
   description: `AEM has extensive documentation, but it is scattered across different places.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const AEM_SERVICE_USERS_USING_REPOINIT_AND_RESOURCE_RESOLVER: IArticleItem = {
@@ -301,7 +301,7 @@ export const SETUP_LOCAL_AEM_DEVELOPMENT_ENVIRONMENT : IArticleItem = {
   modifiedDate: "September 26, 2025",
   description: ``,
   topics: [ TOPICS.AEM_SITES ],
-  active: true
+  active: false
 }
 
 export const SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION : IArticleItem = {
