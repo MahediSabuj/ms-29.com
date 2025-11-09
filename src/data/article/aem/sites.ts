@@ -42,9 +42,10 @@ export const AEM_DEVELOPER_ROADMAP: IArticleItem = {
   url: "/aem/sites/aem-developer-roadmap",
   publishDate: "September 19, 2025",
   modifiedDate: "September 19, 2025",
-  description: `AEM has extensive documentation, but it is scattered across different places.`,
+  description: `AEM has extensive documentation, but it is scattered across different places. When I began AEM development in 2018, and even today when new developers join our team, they face the same 
+    challenge. In this article, I'll provide a comprehensive roadmap for AEM developers, covering from basics to advanced level, including integration with other Adobe services.`,
   topics: [ TOPICS.AEM_SITES ],
-  active: false
+  active: true
 }
 
 export const AEM_SERVICE_USERS_USING_REPOINIT_AND_RESOURCE_RESOLVER: IArticleItem = {
