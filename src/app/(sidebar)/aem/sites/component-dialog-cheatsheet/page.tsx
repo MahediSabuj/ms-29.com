@@ -822,7 +822,7 @@ export default function DialogCheatSheet() {
               </div>
             </div>
             <div className="pt-4">
-              <Highlight code={richText} language="xml" path="Rich Text"/>
+              <Highlight code={richText} language="xml" path="Rich Text Editor"/>
             </div>
             <div className="pt-4">
               <Highlight code={select} language="xml" path="Select"/>
