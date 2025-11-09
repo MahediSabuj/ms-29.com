@@ -23,6 +23,12 @@ const START_CLAUDE_CODE =
 `cd your-project
 claude`;
 
+const CLAUDE_MCP_SERVER = 
+`claude mcp add \\
+  --transport http \\
+  context7 https://mcp.context7.com/mcp \\
+  --header "CONTEXT7_API_KEY: YOUR_API_KEY"`;
+
 const breadcrumbs : IBreadCrumb = {
   items: [{
     title: TOPICS.CODING_ASSISTANT.title,
@@ -120,6 +126,84 @@ export default function ClaudeCode() {
             <div className="pt-4">
               Now Claude has access to all your microservices. With this setup, Claude can understand the complete context and provide accurate responses across your entire distributed system.
             </div>
+          </section>
+          <h2 className="text-xl mt-6">
+            <strong>MCP Server Integration</strong>
+          </h2>
+          <section className="pt-4">
+            Since AI models work based on their training data, you&apos;ll occasionally find that they don&apos;t have the most up-to-date information about libraries and frameworks. 
+            That&apos;s where MCP Servers come in handy!
+          </section>
+          <section className="pt-4">
+            Context7 is one such an MCP Server that provides latest documentation for over 50K libraries. Here&apos;s how to add it to your Claude setup:  
+            <Highlight language="bash" code={CLAUDE_MCP_SERVER} path=""/>
+            <div className="pt-4">
+              The great thing about MCP Servers is that you can add multiple ones for different needs. Follow the same pattern to connect Claude to other specialized MCP Servers based on your use cases.
+            </div>
+          </section>
+          <h2 className="text-xl mt-6">
+            <strong>Switching AI Model in Claude Code</strong>
+          </h2>
+          <section className="pt-4">
+            When using Claude Desktop App or the web interface at claude.ai, you have the flexibility to switch between AI models. For example, you can upgrade from Sonnet 4.5 to the more powerful Opus 4.1 whenever 
+            you need enhanced capabilities.            
+          </section>
+          <section className="pt-4">
+            With the Claude Code Pro plan, you&apos;re limited to Sonnet and Haiku models. You can only switch between these two. To access Opus, you&apos;ll need to upgrade to the Max Plan.
+          </section>
+          <section className="pt-4">  
+            To Change Models in CLI, run this command:
+            <Highlight language="bash" code="/model" path=""/>
+            <div className="pt-2">
+              This will prompt you to select from the available models for your plan.
+              </div>  
+          </section>
+          <h2 className="text-xl mt-6">
+            <strong>Key Lesson Learned</strong>
+          </h2>
+          <section className="pt-4">
+            After using Claude Code extensively, here are the essential lessons that improved my development workflow:
+            <ul className="list-disc ml-6 pt-1 pb-2 pl-2.5">
+              <li>
+                <strong>Provide Clear Context</strong> The better context you provide, the better Claude&apos;s responses. Be specific and detailed in your prompts.
+              </li>
+              <li>
+                <strong>Break Down Complex Tasks</strong> Split big tasks into smaller pieces, makes planning easier and helps get more accurate assistance.
+              </li>  
+              <li>
+                <strong>Verify Everything</strong> Never trust responses blindly. Always test and validate the code before using it.
+              </li> 
+              <li>
+                <strong>Keep Code Clean</strong> Avoid clutter, remove unnecessary code, unused imports, and keep only what&apos;s needed.
+              </li> 
+              <li>
+                <strong>Be Careful with Permissions</strong> Always double check roles, access controls, and security settings before moving forward.
+              </li> 
+              <li>
+                <strong>Commit Only After Verification</strong> Make sure the code works as expected before pushing changes to version control.
+              </li> 
+              <li>
+                <strong>Iterate for Better Results</strong> Don&apos;t expect perfection on the first try. Better results come step by step through iteration.
+              </li> 
+              <li>
+                <strong>Balance Speed with Quality</strong> Quick help is useful, but always review thoroughly to ensure stability and maintainability.
+              </li> 
+              <li>
+                <strong>Collaborate, Don&apos;t Depend Fully</strong> Claude is a powerful tool to enhance your productivity, but remember, human judgment is always key.
+              </li>
+            </ul>
+          </section>
+          <section className="pt-6">
+            I hope this guide helps you leverage AI agentic tools like Claude Code effectively in your development work. These tools can undoubtedly accelerate your workflow, but 
+            let me share an important piece of advice: <em>Wait until you reach at least intermediate level knowledge before depending on AI tools.</em>
+          </section>
+          <section className="pt-4">
+            Here&apos;s why this matters: If you don&apos;t understand what you&apos;re building, you can&apos;t evaluate whether the AI&apos;s suggestions are good or bad. You&apos;ll 
+            end up copying code you don&apos;t understand, which creates technical debt and security risks.
+          </section>
+          <section className="pt-4">
+            AI tools amplify your skills but they don&apos;t create them. Invest in your learning first, and these tools will become incredibly powerful allies. 
+            Keep learning, keep building, and use AI wisely! 
           </section>
         </div>
         </article>
