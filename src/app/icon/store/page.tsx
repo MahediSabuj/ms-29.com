@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 
+import { BACKEND } from "@/data/icon/backend";
 import { CLOUD } from "@/data/icon/cloud";
 import { DATABASE } from "@/data/icon/database";
 import { DEVOPS } from "@/data/icon/devops";
@@ -28,6 +29,7 @@ const ICON_ITEMS: IconItem[] = [
   ...CLOUD,
   ...DEVOPS,
   ...FRONTEND,
+  ...BACKEND,
   ...DATABASE
 ];
 
