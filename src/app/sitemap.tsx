@@ -109,6 +109,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: "2024-04-30",
       changeFrequency: 'monthly',
       priority: 0.8
+    }, {
+      url: withDomain("/aws"),
+      lastModified: "2025-11-14",
+      changeFrequency: "monthly",
+      priority: 0.8
+    }, {
+      url: withDomain("/icon/store"),
+      lastModified: "2025-11-14",
+      changeFrequency: "weekly",
+      priority: 0.8
     }
   ];
 

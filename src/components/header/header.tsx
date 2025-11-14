@@ -7,6 +7,9 @@ const headerConfig: HeaderConfig = {
     url: "/"
   },
   navigationItems: [{
+    name: "Icons",
+    url: "/icon/store"
+  }, {
     name: "Articles",
     url: "/blogs"
   }],
