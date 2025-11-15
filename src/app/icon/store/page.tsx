@@ -3,17 +3,26 @@
 import { useState } from "react";
 import Image from "next/image";
 
+import { AI } from "@/data/icon/ai";
+import { ANALYTICS } from "@/data/icon/analytics";
 import { BACKEND } from "@/data/icon/backend";
 import { CLOUD } from "@/data/icon/cloud";
 import { DATABASE } from "@/data/icon/database";
+import { DATA_WAREHOUSE } from "@/data/icon/data-warehouse";
 import { DEVOPS } from "@/data/icon/devops";
 import { FRONTEND } from "@/data/icon/frontend";
+import { MESSAGING } from "@/data/icon/messaging";
+import { MOBILE } from "@/data/icon/mobile";
+import { MONITORING } from "@/data/icon/monitoring";
+import { PROJECT_MANAGEMENT } from "@/data/icon/project-management";
+import { SECURITY } from "@/data/icon/security";
 import { IconItem } from "@/types/icon";
 
 const ICON_CATEGORIES = [
   "All",
   "Cloud Providers",
   "Databases",
+  "Data Warehouse",
   "Frontend Frameworks",
   "Backend Frameworks",
   "DevOps Tools",
@@ -22,7 +31,8 @@ const ICON_CATEGORIES = [
   "Security",
   "Mobile",
   "AI/ML",
-  "Monitoring"
+  "Monitoring",
+  "Project Management"
 ] as const;
 
 const ICON_ITEMS: IconItem[] = [
@@ -30,7 +40,15 @@ const ICON_ITEMS: IconItem[] = [
   ...DEVOPS,
   ...FRONTEND,
   ...BACKEND,
-  ...DATABASE
+  ...DATABASE,
+  ...DATA_WAREHOUSE,
+  ...MESSAGING,
+  ...MOBILE,
+  ...AI,
+  ...ANALYTICS,
+  ...SECURITY,
+  ...MONITORING,
+  ...PROJECT_MANAGEMENT
 ];
 
 export default function IconStorePage() {
@@ -69,7 +87,7 @@ export default function IconStorePage() {
                 placeholder="Search icons, technologies, or tags..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-4 py-3 pl-10 border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent"/>
+                className="w-full px-4 py-3 pl-10 border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent placeholder:text-slate-400 [&::-webkit-input-placeholder]:text-slate-400"/>
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <svg className="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
