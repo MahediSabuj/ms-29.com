@@ -5,6 +5,7 @@ import Image from "next/image";
 
 import { AI } from "@/data/icon/ai";
 import { ANALYTICS } from "@/data/icon/analytics";
+import { AWS_SERVICES } from "@/data/icon/aws";
 import { BACKEND } from "@/data/icon/backend";
 import { CLOUD } from "@/data/icon/cloud";
 import { DATABASE } from "@/data/icon/database";
@@ -20,6 +21,7 @@ import { IconItem } from "@/types/icon";
 
 const ICON_CATEGORIES = [
   "All",
+  "AWS",
   "Cloud Providers",
   "Databases",
   "Data Warehouse",
@@ -36,6 +38,7 @@ const ICON_CATEGORIES = [
 ] as const;
 
 const ICON_ITEMS: IconItem[] = [
+  ...AWS_SERVICES,
   ...CLOUD,
   ...DEVOPS,
   ...FRONTEND,
