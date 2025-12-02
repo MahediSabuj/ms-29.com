@@ -189,7 +189,7 @@ export default function ClaudeCode() {
                 <strong>Balance Speed with Quality</strong> Quick help is useful, but always review thoroughly to ensure stability and maintainability.
               </li> 
               <li>
-                <strong>Collaborate, Don&apos;t Depend Fully</strong> Claude is a powerful tool to enhance your productivity, but remember, human judgment is always key.
+                <strong>Collaborate, Don&apos;t Depend Fully</strong> Claude is a powerful tool to enhance your productivity, but remember, human judgment is key.
               </li>
             </ul>
           </section>

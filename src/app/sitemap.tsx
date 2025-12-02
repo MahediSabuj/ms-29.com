@@ -24,6 +24,7 @@ import { AWS_SES } from "@/data/article/aws/ses";
 import { AWS_ECS } from "@/data/article/aws/ecs";
 import { AWS_S3 } from "@/data/article/aws/s3";
 import { DEEP_LEARNING } from "@/data/article/ai/deep-learning";
+import { CODING_ASSISTANT } from "@/data/article/ai/coding-assistant";
 import { SF_LWC } from "@/data/article/salesforce/lwc";
 import { SF_IDENTITY } from "@/data/article/salesforce/identity";
 import { DYNAMIC_PROGRAMMING } from "@/data/article/cp/dynamic-programming";
@@ -108,6 +109,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: "2024-04-30",
       changeFrequency: 'monthly',
       priority: 0.8
+    }, {
+      url: withDomain("/aws"),
+      lastModified: "2025-11-14",
+      changeFrequency: "monthly",
+      priority: 0.8
+    }, {
+      url: withDomain("/icon/store"),
+      lastModified: "2025-11-14",
+      changeFrequency: "weekly",
+      priority: 0.8
     }
   ];
 
@@ -131,6 +142,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   loadArticles(TOPICS.AWS_S3.url, AWS_S3);
 
   loadArticles(TOPICS.DEEP_LEARNING.url, DEEP_LEARNING);
+  loadArticles(TOPICS.CODING_ASSISTANT.url, CODING_ASSISTANT);
 
   loadArticles(TOPICS.SF_LWC.url, SF_LWC);
   loadArticles(TOPICS.SF_IDENTITY.url, SF_IDENTITY);
