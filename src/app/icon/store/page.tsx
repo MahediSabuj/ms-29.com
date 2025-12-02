@@ -57,6 +57,47 @@ const ICON_ITEMS: IconItem[] = [
 export default function IconStorePage() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [searchTerm, setSearchTerm] = useState<string>("");
+  const [copyFeedback, setCopyFeedback] = useState<string>("");
+
+  const handleCopyImage = async (icon: IconItem) => {
+    try {
+      if (icon.imageSrc && typeof icon.imageSrc === 'object' && 'src' in icon.imageSrc) {
+        const response = await fetch(icon.imageSrc.src);
+        const blob = await response.blob();
+        
+        await navigator.clipboard.write([
+          new ClipboardItem({
+            [blob.type]: blob
+          })
+        ]);
+        
+        setCopyFeedback(icon.name);
+        setTimeout(() => setCopyFeedback(""), 2000);
+      }
+    } catch (error) {
+      console.error('Copy failed:', error);
+    }
+  };
+
+  const handleDownload = async (icon: IconItem) => {
+    try {
+      if (icon.imageSrc && typeof icon.imageSrc === 'object' && 'src' in icon.imageSrc) {
+        const response = await fetch(icon.imageSrc.src);
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+        
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = icon.filename || `${icon.name.toLowerCase().replace(/\s+/g, '-')}.png`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(url);
+      }
+    } catch (error) {
+      console.error('Download failed:', error);
+    }
+  };
 
   const filteredIcons = ICON_ITEMS.filter(icon => {
     const matchesCategory = selectedCategory === "All" || icon.category === selectedCategory;
@@ -133,9 +174,8 @@ export default function IconStorePage() {
               {filteredIcons.map((icon, index) => (
                 <div
                   key={`${icon.name}-${index}`}
-                  className="modern-card group hover:shadow-lg transition-all duration-300 hover:scale-105"
-                >
-                  <div className="aspect-square bg-white rounded-lg border border-slate-200 flex items-center justify-center p-4 mb-3">
+                  className="modern-card group hover:shadow-lg transition-all duration-300 hover:scale-105 relative">
+                  <div className="aspect-square bg-white rounded-lg border border-slate-200 flex items-center justify-center p-4 mb-3 relative">
                     <div className="w-16 h-16 rounded-lg flex items-center justify-center">
                       {icon.hasImage && icon.imageSrc ? (
                         <Image
@@ -143,8 +183,7 @@ export default function IconStorePage() {
                           alt={icon.name}
                           width={64}
                           height={64}
-                          className="object-contain"
-                        />
+                          className="object-contain"/>
                       ) : (
                         <div className="w-16 h-16 bg-slate-100 rounded-lg flex items-center justify-center">
                           <svg className="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -153,6 +192,35 @@ export default function IconStorePage() {
                         </div>
                       )}
                     </div>
+                    {icon.hasImage && icon.imageSrc && (
+                      <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex gap-1">
+                        <button
+                          onClick={() => handleCopyImage(icon)}
+                          className="p-1.5 bg-white/90 hover:bg-white rounded-md shadow-sm border border-slate-200 hover:border-slate-300 transition-all duration-200 cursor-pointer"
+                          title="Copy image"
+                          aria-label="Copy image">
+                          {copyFeedback === icon.name ? (
+                            <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                            </svg>
+                          ) : (
+                            <svg className="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                            </svg>
+                          )}
+                        </button>
+                        
+                        <button
+                          onClick={() => handleDownload(icon)}
+                          className="p-1.5 bg-white/90 hover:bg-white rounded-md shadow-sm border border-slate-200 hover:border-slate-300 transition-all duration-200 cursor-pointer"
+                          title="Download image"
+                          aria-label="Download image">
+                          <svg className="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                          </svg>
+                        </button>
+                      </div>
+                    )}
                   </div>
                   <div className="p-3">
                     <h3 className="font-semibold text-slate-900 mb-1 text-sm">{icon.name}</h3>
