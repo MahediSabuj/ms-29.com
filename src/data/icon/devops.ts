@@ -2,6 +2,8 @@ import { IconItem } from "@/types/icon";
 
 import dockerIcon from "@/assets/icon/devops/docker.png";
 import kubernetesIcon from "@/assets/icon/devops/kubernetes.png";
+import terraformIcon from "@/assets/icon/devops/terraform.png";
+import githubActionsIcon from "@/assets/icon/devops/github-actions.png";
 
 const DOCKER : IconItem = {
   name: "Docker",
@@ -23,7 +25,29 @@ const KUBERNETES : IconItem = {
   imageSrc: kubernetesIcon
 }
 
+const TERRAFORM : IconItem = {
+  name: "Terraform",
+  category: "DevOps Tools",
+  filename: "terraform.png",
+  description: "Infrastructure as Code tool",
+  tags: ["terraform", "iac", "infrastructure", "devops", "hashicorp"],
+  hasImage: true,
+  imageSrc: terraformIcon
+}
+
+const GITHUB_ACTIONS : IconItem = {
+  name: "GitHub Actions",
+  category: "DevOps Tools",
+  filename: "github-actions.png",
+  description: "CI/CD automation platform",
+  tags: ["github", "actions", "ci", "cd", "automation", "devops", "workflows"],
+  hasImage: true,
+  imageSrc: githubActionsIcon
+}
+
 export const DEVOPS = [
   DOCKER,
-  KUBERNETES
+  KUBERNETES,
+  TERRAFORM,
+  GITHUB_ACTIONS
 ];
