@@ -10,6 +10,7 @@ import rdsIcon from "@/assets/icon/aws/rds.png";
 import s3Icon from "@/assets/icon/aws/s3.png";
 import cloudfrontIcon from "@/assets/icon/aws/cloudfront.png";
 import sesIcon from "@/assets/icon/aws/ses.png";
+import systemsManagerIcon from "@/assets/icon/aws/systems-manager.png";
 
 const ROUTE_53 : IconItem = {
   name: "Route 53",
@@ -111,6 +112,16 @@ const SES : IconItem = {
   imageSrc: sesIcon
 }
 
+const SYSTEMS_MANAGER : IconItem = {
+  name: "Systems Manager",
+  category: "AWS",
+  filename: "systems-manager.png",
+  description: "AWS Systems Manager for secure server access",
+  tags: ["aws", "ssm", "systems", "manager", "automation", "patching", "parameter", "server", "access"],
+  hasImage: true,
+  imageSrc: systemsManagerIcon
+}
+
 export const AWS_SERVICES = [
   AMPLIFY,
   API_GATEWAY,
@@ -121,5 +132,6 @@ export const AWS_SERVICES = [
   RDS,
   ROUTE_53,
   S3,
-  SES
+  SES,
+  SYSTEMS_MANAGER
 ];
