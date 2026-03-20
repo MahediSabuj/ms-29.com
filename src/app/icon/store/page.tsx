@@ -15,6 +15,7 @@ import { FRONTEND } from "@/data/icon/frontend";
 import { MESSAGING } from "@/data/icon/messaging";
 import { MOBILE } from "@/data/icon/mobile";
 import { MONITORING } from "@/data/icon/monitoring";
+import { PROGRAMMING_LANGUAGES } from "@/data/icon/programming-languages";
 import { PROJECT_MANAGEMENT } from "@/data/icon/project-management";
 import { SECURITY } from "@/data/icon/security";
 import { IconItem } from "@/types/icon";
@@ -27,6 +28,7 @@ const ICON_CATEGORIES = [
   "Data Warehouse",
   "Frontend Frameworks",
   "Backend Frameworks",
+  "Programming Languages",
   "DevOps Tools",
   "Messaging",
   "Analytics",
@@ -43,6 +45,7 @@ const ICON_ITEMS: IconItem[] = [
   ...DEVOPS,
   ...FRONTEND,
   ...BACKEND,
+  ...PROGRAMMING_LANGUAGES,
   ...DATABASE,
   ...DATA_WAREHOUSE,
   ...MESSAGING,
@@ -58,6 +61,7 @@ export default function IconStorePage() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [copyFeedback, setCopyFeedback] = useState<string>("");
+  const [filterOpen, setFilterOpen] = useState<boolean>(false);
 
   const handleCopyImage = async (icon: IconItem) => {
     try {
@@ -126,6 +130,25 @@ export default function IconStorePage() {
       <section className="py-8 px-6 bg-slate-50 border-b border-slate-100">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => setFilterOpen(!filterOpen)}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                  filterOpen
+                    ? "bg-sky-500 text-white"
+                    : "bg-white text-slate-700 border border-slate-300 hover:bg-slate-100"
+                }`}>
+                <svg className="w-4 h-4 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+                </svg>
+                {filterOpen ? "Hide Filter" : "Filter"}
+              </button>
+              {selectedCategory !== "All" && (
+                <span className="px-3 py-1 bg-sky-100 text-sky-700 rounded-full text-sm">
+                  {selectedCategory}
+                </span>
+              )}
+            </div>
             <div className="relative w-full md:w-96">
               <input type="text"
                 placeholder="Search icons, technologies, or tags..."
@@ -138,19 +161,6 @@ export default function IconStorePage() {
                 </svg>
               </div>
             </div>
-            <div className="flex flex-wrap gap-2">
-              {ICON_CATEGORIES.map((category) => (
-                <button key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${
-                    selectedCategory === category
-                      ? "bg-sky-500 text-white"
-                      : "bg-white text-slate-600 hover:bg-slate-100 border border-slate-300"
-                  }`}>
-                  {category}
-                </button>
-              ))}
-            </div>
           </div>
           <div className="mt-4 text-sm text-slate-600">
             Showing {filteredIcons.length} of {ICON_ITEMS.length} icons
@@ -159,7 +169,37 @@ export default function IconStorePage() {
       </section>
       <section className="py-12 px-6">
         <div className="max-w-6xl mx-auto">
-          {filteredIcons.length === 0 ? (
+          <div className="flex gap-6 items-start">
+            {/* Filter Sidebar */}
+            {filterOpen && (
+              <div className="w-64 bg-white border border-slate-200 rounded-lg p-4 flex-shrink-0">
+                <h3 className="font-semibold text-slate-900 mb-4">Categories</h3>
+                <div className="space-y-1">
+                  {ICON_CATEGORIES.map((category) => {
+                    const count = category === "All"
+                      ? ICON_ITEMS.length
+                      : ICON_ITEMS.filter(item => item.category === category).length;
+                    return (
+                      <button
+                        key={category}
+                        onClick={() => setSelectedCategory(category)}
+                        className={`w-full text-left px-3 py-2 rounded text-sm transition-colors ${
+                          selectedCategory === category
+                            ? "bg-sky-500 text-white"
+                            : "hover:bg-slate-100 text-slate-700"
+                        }`}>
+                        <span>{category}</span>
+                        <span className="float-right text-xs opacity-75">{count}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            {/* Icons Grid */}
+            <div className="flex-1 min-w-0">
+              {filteredIcons.length === 0 ? (
             <div className="text-center py-12">
               <div className="text-slate-400 mb-4">
                 <svg className="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -168,9 +208,9 @@ export default function IconStorePage() {
               </div>
               <p className="text-lg text-slate-600 mb-2">No icons found</p>
               <p className="text-slate-500">Try adjusting your search terms or category filter</p>
-            </div>
-          ) : (
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6">
+                </div>
+              ) : (
+                <div className="grid gap-6" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))' }}>
               {filteredIcons.map((icon, index) => (
                 <div
                   key={`${icon.name}-${index}`}
@@ -231,8 +271,10 @@ export default function IconStorePage() {
                   </div>
                 </div>
               ))}
+                </div>
+              )}
             </div>
-          )}
+          </div>
         </div>
       </section>
     </div>
