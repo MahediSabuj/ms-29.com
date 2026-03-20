@@ -117,6 +117,10 @@ const TOPICS: Topics = {
     title: "Infrastructure as Code",
     url: "/devops/iac"
   },
+  K8S: {
+    title: "Kubernetes",
+    url: "/devops/k8s"
+  },
   SYSTEM_DESIGN: {
     title: "System Design",
     url: "/system/design"

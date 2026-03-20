@@ -34,6 +34,7 @@ import { POSTGRESQL } from "@/data/article/db/postgresql";
 import { ADOBE_ANALYTICS } from "@/data/article/analytics/adobe";
 import { GOOGLE_ANALYTICS } from "@/data/article/analytics/google";
 import { IAC } from "@/data/article/devops/iac";
+import { K8S } from "@/data/article/devops/k8s";
 
 const domain: string = "https://ms-29.com";
 
@@ -157,6 +158,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   loadArticles(TOPICS.GOOGLE_ANALYTICS.url, GOOGLE_ANALYTICS);
 
   loadArticles(TOPICS.IAC.url, IAC);
+  loadArticles(TOPICS.K8S.url, K8S);
 
   return sitemap;
 }

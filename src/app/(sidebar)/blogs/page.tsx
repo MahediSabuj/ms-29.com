@@ -33,6 +33,7 @@ import { POSTGRESQL } from "@/data/article/db/postgresql";
 import { ADOBE_ANALYTICS } from "@/data/article/analytics/adobe";
 import { GOOGLE_ANALYTICS } from "@/data/article/analytics/google";
 import { IAC } from "@/data/article/devops/iac";
+import { K8S } from "@/data/article/devops/k8s";
 
 export const metadata: Metadata = {
   title: "Technical Articles & Tutorials",
@@ -72,7 +73,8 @@ const articles: IArticleList = {
     ...POSTGRESQL,
     ...ADOBE_ANALYTICS,
     ...GOOGLE_ANALYTICS,
-    ...IAC
+    ...IAC,
+    ...K8S
   ],
   pageType: PAGE_TYPE.HOME_PAGE
 }
