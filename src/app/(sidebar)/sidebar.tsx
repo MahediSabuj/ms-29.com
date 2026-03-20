@@ -34,6 +34,7 @@ import { POSTGRESQL } from "@/data/article/db/postgresql";
 import { ADOBE_ANALYTICS } from "@/data/article/analytics/adobe";
 import { GOOGLE_ANALYTICS } from "@/data/article/analytics/google";
 import { IAC } from "@/data/article/devops/iac";
+import { K8S } from "@/data/article/devops/k8s";
 
 const backend : IListGroup = {
   title: "Backend Development",
@@ -166,6 +167,9 @@ const devOps: IListGroup = {
   listItems: [{
     topic: TOPICS.IAC,
     count: IAC.length
+  }, {
+    topic: TOPICS.K8S,
+    count: K8S.length
   }]
 }
 

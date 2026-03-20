@@ -6,6 +6,7 @@ import hljs from 'highlight.js/lib/core';
 
 import apache from 'highlight.js/lib/languages/apache';
 import bash from 'highlight.js/lib/languages/bash';
+import dockerfile from 'highlight.js/lib/languages/dockerfile';
 import shell from 'highlight.js/lib/languages/shell';
 import java from 'highlight.js/lib/languages/java';
 import javascript from 'highlight.js/lib/languages/javascript';
@@ -29,6 +30,7 @@ import { HeaderConfig } from "@/types/header";
 
 hljs.registerLanguage('apache', apache);
 hljs.registerLanguage('bash', bash);
+hljs.registerLanguage('dockerfile', dockerfile);
 hljs.registerLanguage('ini', ini);
 hljs.registerLanguage('java', java);
 hljs.registerLanguage('javascript', javascript);
