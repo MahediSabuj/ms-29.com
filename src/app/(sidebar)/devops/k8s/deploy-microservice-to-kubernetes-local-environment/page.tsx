@@ -10,7 +10,7 @@ import ArticleReviewList from "@/components/article-review-list/article-review-l
 import HighlightCode from "@/components/highlight/highlight";
 
 import {
-  LOCAL_KUBERNETES_SETUP_WITH_KIND as ARTICLE
+  DEPLOY_MICROSERVICE_TO_KUBERNETES_LOCAL_ENVIRONMENT as ARTICLE
 } from "@/data/article/devops/k8s";
 
 export const metadata: Metadata = {
@@ -325,11 +325,18 @@ export default function KubernetesLocalSetup() {
         <div>
           <section className="pt-6">
             Running microservices locally in a production-like Kubernetes environment helps catch infrastructure issues early,
-            before they ever reach UAT or production. This guide walks through setting up a local Kubernetes cluster using
-            <strong> Kind (Kubernetes in Docker)</strong>, building Docker images for the FreightFlow Nexus services,
-            and deploying them using Kustomize overlays. By the end, all four services (Config Server, API, Tracking,
-            and Gateway) will be running locally and accessible via port-forwarding.
+            before they ever reach UAT or production. This hands-on guide walks you through deploying a complete microservices
+            application to a local Kubernetes cluster using <strong>Kind (Kubernetes in Docker)</strong>.
           </section>
+          <section className="pt-4">
+            You&apos;ll learn how to build Docker images, load them into Kind&apos;s internal registry, configure environment-specific
+            settings with Kustomize, and access your services locally. By the end, all four services (Config Server, API, Tracking,
+            and Gateway) will be running in Kubernetes pods and accessible via port-forwarding.
+          </section>
+          <div className="bg-blue-50 border-l-4 border-blue-600 p-4 my-4">
+            <strong>New to Kubernetes?</strong> Check out our companion article
+            <Link className="text-blue-600" href="/devops/k8s/understanding-kubernetes-fundamentals"><em> Understanding Kubernetes Fundamentals</em></Link> to learn the core concepts before diving into this practical guide.
+          </div>
 
           <h2 className="text-xl mt-6">
             <strong>Prerequisites</strong>
@@ -382,12 +389,18 @@ export default function KubernetesLocalSetup() {
             <strong>Create the Kind Cluster</strong>
           </h2>
           <section>
-            Start by creating a local cluster named <code>nexus</code>:
+            <div className="mb-3">
+              A Kubernetes cluster is where your applications run. Kind creates this cluster using Docker containers instead
+              of virtual machines, making it lightweight and fast to start. We&apos;ll create a cluster named <code>nexus</code>:
+            </div>
             <HighlightCode code={CREATE_CLUSTER} language="bash" path=""/>
-            <div className="pt-4">Verify the cluster is up and running:</div>
+            <div className="pt-4">
+              After a few seconds, your cluster will be ready. Verify it&apos;s up and running:
+            </div>
             <HighlightCode code={CLUSTER_INFO} language="bash" path=""/>
-            <div className="pt-2">
-              This confirms that <code>kubectl</code> is pointing at your local Kind cluster and the API server is reachable.
+            <div className="pt-3">
+              You should see output showing the Kubernetes control plane is running at a local address. This confirms <code>kubectl</code> (the
+              Kubernetes command-line tool) is pointing at your new Kind cluster and can communicate with it. The cluster is now ready to accept deployments.
             </div>
           </section>
 
@@ -395,10 +408,15 @@ export default function KubernetesLocalSetup() {
             <strong>Build the Services</strong>
           </h2>
           <section>
-            From the project root, package all microservices:
+            <div className="mb-3">
+              Before we can run our services in Kubernetes, we need to compile them into executable JAR files.
+              Maven will build all four Spring Boot microservices in one command:
+            </div>
             <HighlightCode code={MVN_PACKAGE} language="bash" path=""/>
-            <div className="pt-2">
-              This produces the <code>.jar</code> artifacts for each service module under their respective <code>target/</code> directories.
+            <div className="pt-3">
+              This command cleans previous builds and creates fresh JAR files in each service&apos;s <code>target/</code> directory.
+              These JARs contain everything needed to run the services, including dependencies. The build also runs all tests
+              to ensure code quality before deployment.
             </div>
           </section>
 
@@ -406,20 +424,36 @@ export default function KubernetesLocalSetup() {
             <strong>Build Docker Images</strong>
           </h2>
           <section>
-            Build Docker images for all four services:
+            <div className="mb-3">
+              Kubernetes runs applications in containers. We need to package each JAR file into a Docker image, which
+              includes the Java runtime, the application code, and all dependencies. This makes the application portable
+              and consistent across environments.
+            </div>
             <HighlightCode code={DOCKER_BUILD} language="bash" path=""/>
+            <div className="pt-3">
+              Each command builds an image tagged with version <code>v0.0.4</code>. The tag helps track different
+              versions of your application. After building, you can verify the images exist by running <code>docker images</code>.
+            </div>
           </section>
 
           <h2 className="text-xl mt-6">
             <strong>Load Images into Kind</strong>
           </h2>
           <section>
-            Kind runs its own internal container registry isolated from the Docker daemon. Images built locally are not
-            automatically visible inside the cluster. They must be loaded explicitly:
+            <div className="mb-3">
+              Here&apos;s a critical step unique to Kind: the cluster runs inside Docker containers with its own isolated
+              image registry. Even though you built images locally with Docker, Kind can&apos;t see them yet. You must
+              explicitly transfer each image into the Kind cluster:
+            </div>
             <HighlightCode code={KIND_LOAD} language="bash" path=""/>
+            <div className="pt-3">
+              This copies each image from your local Docker daemon into Kind&apos;s internal registry. Each load takes a
+              few seconds depending on image size. You&apos;ll see a progress indicator as the image is transferred.
+            </div>
             <div className="bg-blue-50 border-l-4 border-blue-600 p-4 my-4">
-              <strong>Important:</strong> Skipping this step is a common mistake. Without loading images into Kind,
-              Kubernetes will fail to pull them and pods will remain in <code>ErrImagePull</code> or <code>ImagePullBackOff</code> state.
+              <strong>Common Mistake:</strong> Forgetting this step causes Kubernetes pods to fail with <code>ImagePullBackOff</code>
+              errors. The pods try to pull images from Docker Hub or other registries, but the images only exist locally.
+              Loading them into Kind makes them available to the cluster.
             </div>
           </section>
 
@@ -427,13 +461,33 @@ export default function KubernetesLocalSetup() {
             <strong>Apply Kubernetes Manifests</strong>
           </h2>
           <section>
-            The project uses <strong>Kustomize</strong> to manage environment-specific configurations. A single command
-            applies all base manifests with local patches, including <code>imagePullPolicy</code>, environment variables, and secrets:
+            <div className="mb-3">
+              Now we tell Kubernetes what to deploy. Instead of plain YAML files, this project uses <strong>Kustomize</strong>,
+              a built-in Kubernetes tool that lets you customize configurations for different environments (local, UAT, production)
+              without duplicating files.
+            </div>
+            <div className="pt-2">
+              One command applies all resources for the local environment:
+            </div>
             <HighlightCode code={APPLY_MANIFESTS} language="bash" path=""/>
-            <div className="pt-4">To preview the fully rendered manifests without actually deploying:</div>
+            <div className="pt-3">
+              This creates namespaces, service accounts, deployments, services, and secrets. You&apos;ll see output like <code>namespace/nexus created</code>, <code>deployment.apps/api created</code>, etc., as
+              Kubernetes processes each resource.
+            </div>
+            <div className="pt-4">
+              To preview what will be deployed without actually applying it:
+            </div>
             <HighlightCode code={PREVIEW_MANIFESTS} language="bash" path=""/>
+            <div className="pt-3">
+              This shows the fully merged YAML that Kubernetes will receive, helpful for debugging configuration issues.
+            </div>
             <div className="pt-4">The Kustomize directory layout looks like this:</div>
             <HighlightCode code={DIRECTORY_STRUCTURE} language="bash" path=""/>
+            <div className="pt-3">
+              The <code>base/</code> folder contains shared configurations used everywhere. The <code>overlays/local/</code>
+              folder contains local-specific patches like <code>imagePullPolicy: Never</code> (telling Kubernetes not to pull
+              from remote registries) and local database URLs.
+            </div>
           </section>
 
           <h2 className="text-xl mt-6">
@@ -441,8 +495,13 @@ export default function KubernetesLocalSetup() {
           </h2>
           <section>
             <div className="mb-3">
-              Understanding the Kustomize structure helps you customize deployments for different environments.
-              Let&apos;s examine the key configuration files:
+              Let&apos;s look inside the Kustomize configuration to understand how it works. This section shows the actual
+              YAML files that define your deployment. Understanding these helps you customize settings for your own projects
+              or troubleshoot issues.
+            </div>
+            <div className="pt-2">
+              <strong>Why show this?</strong> Most tutorials skip the configuration details, leaving you unable to adapt
+              them to your needs. These examples provide a working template you can modify for your applications.
             </div>
 
             <h3 className="text-lg font-semibold mt-5 mb-2">Base Configuration</h3>
@@ -457,20 +516,41 @@ export default function KubernetesLocalSetup() {
             <HighlightCode code={NAMESPACE_YAML} language="yaml" path="k8s/base/namespace.yml"/>
 
             <div className="pt-4">
-              The <code>rbac.yml</code> sets up permissions for service discovery (required for Spring Cloud Kubernetes):
+              The <code>rbac.yml</code> sets up permissions for service discovery. Spring Cloud Kubernetes needs
+              permission to query the Kubernetes API to find other services:
             </div>
             <HighlightCode code={RBAC_YAML} language="yaml" path="k8s/base/rbac.yml"/>
+            <div className="pt-3">
+              This creates a service account (like a user account for apps), a role defining permissions
+              (can read services/endpoints/pods), and a binding connecting them. Without this, Spring Cloud
+              Kubernetes can&apos;t discover services and will fail to start.
+            </div>
 
             <h3 className="text-lg font-semibold mt-5 mb-2">Sample Deployment &amp; Service</h3>
             <div className="mb-3">
-              Here&apos;s the API service deployment configuration:
+              A Deployment tells Kubernetes how to run your application. Here&apos;s the API service deployment:
             </div>
             <HighlightCode code={API_DEPLOYMENT} language="yaml" path="k8s/base/freightflow-api/deployment.yml"/>
+            <div className="pt-3">
+              <strong>Key parts explained:</strong>
+              <ul className="list-disc ml-6 mt-2 space-y-1">
+                <li><code>replicas: 1</code> - Run one instance (pod) of this service</li>
+                <li><code>image: nexus-api:v0.0.4</code> - Use the Docker image we built and loaded earlier</li>
+                <li><code>ports</code> - Expose port 8080 for HTTP traffic</li>
+                <li><code>env</code> - Environment variables (config server URL, environment name)</li>
+                <li><code>resources</code> - Memory and CPU limits prevent one service from hogging all cluster resources</li>
+              </ul>
+            </div>
 
             <div className="pt-4">
-              And its corresponding service definition:
+              A Service makes your pods accessible on the network. Here&apos;s the API service definition:
             </div>
             <HighlightCode code={API_SERVICE} language="yaml" path="k8s/base/freightflow-api/service.yml"/>
+            <div className="pt-3">
+              This creates a stable network endpoint. Even if pods restart and get new IP addresses, other services
+              can always reach the API at <code>api:8080</code>. The <code>ClusterIP</code> type means it&apos;s only
+              accessible within the cluster (perfect for internal microservice communication).
+            </div>
 
             <h3 className="text-lg font-semibold mt-5 mb-2">Local Overlay Configuration</h3>
             <div className="mb-3">
@@ -484,9 +564,15 @@ export default function KubernetesLocalSetup() {
             <HighlightCode code={LOCAL_SECRETS} language="yaml" path="k8s/overlays/local/secrets.yml"/>
 
             <div className="pt-4">
-              Patch files customize deployments for the local environment. Here&apos;s the API deployment patch:
+              Patches modify the base deployment for specific environments. Here&apos;s the local environment patch:
             </div>
             <HighlightCode code={API_PATCH} language="yaml" path="k8s/overlays/local/patches/api-deployment-patch.yml"/>
+            <div className="pt-3">
+              <strong>What this does:</strong> It merges with the base deployment, adding/overriding specific fields.
+              The critical setting is <code>imagePullPolicy: Never</code>, which tells Kubernetes to only use locally
+              loaded images. The environment variables come from secrets instead of being hardcoded, keeping sensitive
+              data like database passwords secure.
+            </div>
 
             <div className="bg-amber-50 border-l-4 border-amber-500 p-4 my-4">
               <strong>Key Points:</strong>
@@ -503,23 +589,55 @@ export default function KubernetesLocalSetup() {
             <strong>Verify Pods are Running</strong>
           </h2>
           <section>
-            After applying manifests, check the status of all pods in the <code>nexus</code> namespace:
+            <div className="mb-3">
+              After applying the manifests, Kubernetes starts creating pods (containers running your services).
+              This takes a minute as images are loaded, containers start, and health checks pass. Let&apos;s verify everything is working:
+            </div>
             <HighlightCode code={GET_PODS} language="bash" path=""/>
-            <div className="pt-4">Wait until all pods show <code>STATUS: Running</code> and <code>READY: 1/1</code>. To watch them in real-time:</div>
+            <div className="pt-3">
+              You should see four pods (config, api, tracking, gateway) with <code>STATUS: Running</code> and <code>READY: 1/1</code>.
+              The <code>1/1</code> means 1 out of 1 containers in the pod is ready. If you see <code>0/1</code>, the pod is still starting.
+            </div>
+            <div className="pt-4">
+              To watch the status update in real-time (useful during deployment):
+            </div>
             <HighlightCode code={WATCH_PODS} language="bash" path=""/>
-            <div className="pt-4">If a pod is stuck, describe it to inspect events and identify the root cause:</div>
+            <div className="pt-3">
+              Press <code>Ctrl+C</code> to stop watching. If a pod stays in <code>Pending</code>, <code>CrashLoopBackOff</code>,
+              or <code>ImagePullBackOff</code> status for more than a minute, something&apos;s wrong.
+            </div>
+            <div className="pt-4">
+              To troubleshoot a stuck pod, describe it to see detailed events:
+            </div>
             <HighlightCode code={DESCRIBE_POD} language="bash" path=""/>
+            <div className="pt-3">
+              Look at the <code>Events</code> section at the bottom. Common issues include missing images (forgot to load into Kind),
+              insufficient resources, or application crashes (check logs with <code>kubectl logs</code>).
+            </div>
           </section>
 
           <h2 className="text-xl mt-6">
             <strong>Access Services Locally</strong>
           </h2>
           <section>
-            Kind does not support <code>LoadBalancer</code> type services out of the box. Use <code>kubectl port-forward</code>
-            to expose each service on a local port:
+            <div className="mb-3">
+              Your services are now running inside the Kind cluster, but you can&apos;t access them from your browser yet
+              because they&apos;re on an internal network. Kind doesn&apos;t support LoadBalancer services (which would expose
+              them automatically). Instead, use <code>port-forward</code> to create a tunnel from your localhost to a pod:
+            </div>
             <HighlightCode code={PORT_FORWARD} language="bash" path=""/>
-            <div className="pt-4">Test the gateway by hitting these URLs in your browser or via curl:</div>
+            <div className="pt-3">
+              Each command runs in the foreground, so open a separate terminal tab for each one. The format is<code>localPort:podPort</code>. For example, <code>8072:8072</code> makes
+              the gateway available at <code>localhost:8072</code>.
+            </div>
+            <div className="pt-4">
+              Now test the gateway in your browser or with curl:
+            </div>
             <HighlightCode code={TEST_URLS} language="bash" path=""/>
+            <div className="pt-3">
+              The gateway routes requests to other services internally. For example, <code>/api/*</code> routes to the API
+              service,<code>/tracking/*</code> to the tracking service. This is how microservices communicate in Kubernetes.
+            </div>
           </section>
 
           <h2 className="text-xl mt-6">
@@ -575,8 +693,11 @@ export default function KubernetesLocalSetup() {
             <strong>Redeploying After Code Changes</strong>
           </h2>
           <section>
-            When you modify a service and need to redeploy it, the image must be rebuilt and reloaded into Kind&apos;s cache
-            since it does not pull from an external registry. Here is the full cycle for a single service (e.g., gateway):
+            <div className="mb-3">
+              During development, you&apos;ll frequently modify code and need to see changes running in Kubernetes. Because
+              Kind uses locally loaded images, you must rebuild, reload, and restart. Here&apos;s the complete workflow for
+              updating one service (e.g., the gateway after fixing a bug):
+            </div>
             <HighlightCode code={REDEPLOY_SINGLE} language="bash" path=""/>
             <div className="pt-4">To redeploy all four services at once, use this loop:</div>
             <HighlightCode code={REDEPLOY_ALL} language="bash" path=""/>
@@ -593,15 +714,42 @@ export default function KubernetesLocalSetup() {
             <HighlightCode code={LOG_TAILING} language="bash" path=""/>
           </section>
 
-          <section className="pt-4">
-            That covers the complete local development workflow for FreightFlow Nexus microservices on Kind. This setup
-            gives you a reproducible, production-like Kubernetes environment on your machine, ideal for validating
-            deployment manifests, testing service discovery, and catching configuration issues before they reach UAT.
+          <section>
+            <div className="mb-3 mt-6">
+              Congratulations! You&apos;ve successfully deployed a complete microservices application to a local Kubernetes cluster.
+            </div>
+            <ul className="list-disc ml-6 py-2 pl-2.5 space-y-2">
+              <li>
+                <strong>A working Kubernetes environment</strong>, mirrors production architecture without needing
+                cloud resources or expensive infrastructure
+              </li>
+              <li>
+                <strong>Four microservices running in pods</strong> with proper service discovery, networking, and config management through Spring Cloud Config
+              </li>
+              <li>
+                <strong>Experience with Kustomize</strong> for managing environment-specific configurations, a critical skill
+                for production Kubernetes deployments
+              </li>
+              <li>
+                <strong>A repeatable deployment workflow</strong> you can use for any Spring Boot microservices project,
+                not just this example
+              </li>
+            </ul>
           </section>
 
-          <section className="pt-4">
-            In the next article, we will look at deploying the same services to <strong>AKS UAT</strong> using Azure Container
-            Registry (ACR) with managed identity. If you have any questions, feel free to leave a comment below.
+          <section className="pt-6">
+            Running microservices locally in Kubernetes catches issues early. You&apos;ll
+            discover problems with service communication, resource limits, configuration management, and deployment manifests
+            on your laptop, not in UAT or production where they&apos;re expensive to fix. This dramatically shortens the
+            feedback loop during development.
+          </section>
+
+          <section className="pt-6">
+            This local setup is perfect for development, but production needs differ. In the
+            next article, <Link className="text-blue-600" href="/devops/k8s/deploy-microservice-to-azure-kubernetes-service"><em>Deploy Microservices to Azure
+            Kubernetes Service (AKS)</em></Link>, we&apos;ll take these same services and deploy them to a managed Kubernetes cluster
+            in Azure, covering topics like Azure Container Registry integration, managed identities, ingress controllers, and production-grade
+            monitoring. If you have questions or run into issues with this local setup, feel free to leave a comment below.
           </section>
         </div>
       </article>
