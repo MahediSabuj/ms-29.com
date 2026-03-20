@@ -10,7 +10,7 @@ import ArticleReviewList from "@/components/article-review-list/article-review-l
 import HighlightCode from "@/components/highlight/highlight";
 
 import {
-  LOCAL_KUBERNETES_SETUP_WITH_KIND as ARTICLE
+  DEPLOY_MICROSERVICE_TO_KUBERNETES_LOCAL_ENVIRONMENT as ARTICLE
 } from "@/data/article/devops/k8s";
 
 export const metadata: Metadata = {
