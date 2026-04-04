@@ -35,7 +35,8 @@ export default function AEMinDebugMode() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <section className="pt-6">
           Troubleshooting and debugging are crucial aspects of working with AEM, allowing developers to identify, analyze, and fix issues in their code.
           Since AEM projects often involve extensive custom code for Models, Services, Servlets, and Schedulers, debugging allows real-time inspection and provides

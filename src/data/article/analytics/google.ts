@@ -3,8 +3,8 @@ import TOPICS from "@/data/article/topics";
 
 export const SETTING_UP_DATALAYER_GTM_SYNC_WITH_BIGQUERY: IArticleItem = {
     title: "Setting Up Data Layer and Sending Events to GTM with BigQuery",
-    description: `In today's data-driven world, tracking user interactions is essential for optimizing digital experiences. 
-      By implementing data layer and integrating Google Tag Manager (GTM) with BigQuery, businesses can efficiently collect, 
+    description: `In today's data-driven world, tracking user interactions is essential for optimizing digital experiences.
+      By implementing data layer and integrating Google Tag Manager (GTM) with BigQuery, businesses can efficiently collect,
       structure, and analyze granular event data at scale, unlocking actionable insights for advanced analytics.`,
     url: "/analytics/google/setting-up-data-layer-and-sending-events-to-gtm-with-bigquery",
     publishDate: "March 17, 2025",

@@ -21,7 +21,7 @@ export const SETUP_ACS_COMMONS_IN_AEM_PROJECTS : IArticleItem = {
   url: "/aem/acs-commons/setup-acs-commons-in-aem-projects",
   publishDate: "October 12, 2024",
   modifiedDate: "October 12, 2024",
-  views: 221,
+  views: 303,
   topics: [ TOPICS.ACS_COMMONS ],
   active: true
 }

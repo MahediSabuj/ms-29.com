@@ -164,7 +164,8 @@ export default function ContextAwareConfiguration() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <div>
           <section className="pt-6">
             Sling Model Injectors allow developers to retrieve and inject data directly into Sling models. However, sometimes, standard

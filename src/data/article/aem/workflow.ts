@@ -3,8 +3,8 @@ import TOPICS from "@/data/article/topics";
 
 export const CUSTOM_AEM_WORKFLOW_PROCESS: IArticleItem = {
   title: "AEM Workflow Custom Process",
-  description: `AEM provides a set of pre-defined workflow process that cover common scenarios, but sometimes 
-    these built-in features may not fully handle the complexities of specific workflows. In such cases, AEM allows 
+  description: `AEM provides a set of pre-defined workflow process that cover common scenarios, but sometimes
+    these built-in features may not fully handle the complexities of specific workflows. In such cases, AEM allows
     developers to create custom processes, enhancing the functionality of standard workflows to meet unique requirements.`,
   url: "/aem/workflow/aem-workflow-custom-process",
   publishDate: "May 11, 2024",

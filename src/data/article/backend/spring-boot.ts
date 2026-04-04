@@ -3,8 +3,8 @@ import TOPICS from "@/data/article/topics";
 
 export const SPRING_BOOT_APPLICATION_USING_SPRING_INITIALIZR: IArticleItem = {
   title: "Create Spring Boot Application using Spring Initializr",
-  description: `Spring Initializr is a web-based tool that simplifies the setup of Spring Boot projects by generating pre-configured 
-    templates with necessary dependencies. It provides a quick and efficient way to start a new Spring Boot application. Spring Boot 
+  description: `Spring Initializr is a web-based tool that simplifies the setup of Spring Boot projects by generating pre-configured
+    templates with necessary dependencies. It provides a quick and efficient way to start a new Spring Boot application. Spring Boot
     itself is a powerful framework built on the Spring Framework, designed for creating stand-alone, production-ready applications with minimal configuration.`,
   url: `${TOPICS.SPRING_BOOT.url}/spring-boot-application-using-spring-initializr`,
   publishDate: "March 30, 2025",
@@ -26,7 +26,7 @@ export const SPRING_BOOT_APPLICATION_WITH_POSTGRESQL_THYMELEAF: IArticleItem = {
 
 export const USER_REGISTRATION_AND_LOGIN_USING_SPRING_SECURITY: IArticleItem = {
   title: "User Registration and Login using Spring Security",
-  description: `Spring Security is a powerful authentication and authorization framework for Java applications. It provides comprehensive security services 
+  description: `Spring Security is a powerful authentication and authorization framework for Java applications. It provides comprehensive security services
     for Spring based applications, including features like user authentication, password encoding, session management, and protection against common security vulnerabilities.`,
   url: `${TOPICS.SPRING_BOOT.url}/user-registration-and-login-using-spring-security`,
   publishDate: "August 11, 2025",
