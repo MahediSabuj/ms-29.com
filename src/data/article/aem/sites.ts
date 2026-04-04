@@ -19,8 +19,8 @@ export const AEM_COMPONENT_DIALOG_CHEATSHEET: IArticleItem = {
   url: "/aem/sites/component-dialog-cheatsheet",
   publishDate: "February 13, 2024",
   modifiedDate: "February 28, 2024",
-  views: 1604,
-  description: `Granite UI provides a large range of the basic components needed to create component 
+  views: 1868,
+  description: `Granite UI provides a large range of the basic components needed to create component
     dialog on the authoring environment. These components are constructed using Coral UI-based elements.`,
   topics: [ TOPICS.AEM_SITES ],
   active: true
@@ -73,8 +73,8 @@ export const APACHE_SLING_SITEMAP_GENERATOR: IArticleItem = {
   url: "/aem/sites/apache-sling-sitemap-generator",
   publishDate: "May 23, 2025",
   modifiedDate: "May 23, 2025",
-  description: `Sitemap is essential for any website, an XML file that provides the pages of the website, allowing search engines 
-    like Google to efficiently crawl and index web pages. AEM offers Apache Sling Sitemap Generator, dynamically generating XML 
+  description: `Sitemap is essential for any website, an XML file that provides the pages of the website, allowing search engines
+    like Google to efficiently crawl and index web pages. AEM offers Apache Sling Sitemap Generator, dynamically generating XML
     sitemap based on the content structure and updating them with any page creation, deletion, or modification.`,
   topics: [ TOPICS.AEM_SITES ],
   active: false
@@ -85,9 +85,9 @@ export const CONTEXT_AWARE_CONFIGURATION : IArticleItem = {
   url: "/aem/sites/context-aware-configuration",
   publishDate: "August 23, 2025",
   modifiedDate: "August 23, 2025",
-  description: `Context-aware configurations  are related to a content resource, allows different configs for 
-    different content resources. Parameters within nested contexts allow hierarchical based inheritance and 
-    global fallback values when required. Leveraging the Context-Aware Configuration Java API, one can retrieve 
+  description: `Context-aware configurations  are related to a content resource, allows different configs for
+    different content resources. Parameters within nested contexts allow hierarchical based inheritance and
+    global fallback values when required. Leveraging the Context-Aware Configuration Java API, one can retrieve
     the appropriate configuration for each content resource without concerning  where it is stored or how the inheritance works.`,
   topics: [ TOPICS.AEM_SITES ],
   active: true
@@ -96,24 +96,25 @@ export const CONTEXT_AWARE_CONFIGURATION : IArticleItem = {
 export const CUSTOM_OSGI_CONFIGURATION: IArticleItem = {
   title: "Custom OSGi Configuration in AEM",
   description: `OSGi Configuration allow us to configure run-mode specific properties. All the out-of-the-box OSGi configurations
-    are available at /system/console/configMgr while custom configurations can be created as per business requirements. These configurations 
+    are available at /system/console/configMgr while custom configurations can be created as per business requirements. These configurations
     are typically managed within the AEM project's ui.config module in the code repository.`,
   url: "/aem/sites/custom-osgi-configuration",
   publishDate: "August 30, 2024",
   modifiedDate: "August 30, 2024",
-  views: 272,
+  views: 358,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
 
 export const CUSTOM_SLING_MODEL_INJECTOR: IArticleItem = {
   title: "Custom Sling Model Injector using Annotations",
-  description: `Sling Model Injectors allow developers to retrieve and inject data directly into Sling models. However, sometimes, 
-    standard injectors aren't enough when you need to pull custom or complex data, such as tag properties or content fragments. In 
+  description: `Sling Model Injectors allow developers to retrieve and inject data directly into Sling models. However, sometimes,
+    standard injectors aren't enough when you need to pull custom or complex data, such as tag properties or content fragments. In
     such cases, custom Sling Model injectors can be developed to meet specific data requirements.`,
   url: "/aem/sites/custom-sling-model-injector-using-annotations",
   publishDate: "October 28, 2024",
   modifiedDate: "October 28, 2024",
+  views: 100,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
@@ -123,8 +124,8 @@ export const DEFAULT_VALUES_IN_AEM_COMPONENT_DIALOG: IArticleItem = {
   url: "/aem/sites/default-value-in-component-dialog",
   publishDate: "February 04, 2024",
   modifiedDate: "February 10, 2024",
-  views: 403,
-  description: `In AEM components, it&apos;s often necessary to establish default values. 
+  views: 430,
+  description: `In AEM components, it&apos;s often necessary to establish default values.
     This ensures that when components are dragged onto the page, they display predefined initial values.
     This functionality is achievable through the utilization of cq:template and cq:templatePath.`,
   topics: [ TOPICS.AEM_SITES ],
@@ -136,9 +137,9 @@ export const DESIGN_DIALOG_SHOW_HIDE_DIALOG_OPTIONS: IArticleItem = {
   url: "/aem/sites/design-dialog-to-show-hide-dialog-fields-based-on-template",
   publishDate: "February 07, 2025",
   modifiedDate: "February 07, 2025",
-  views: 118,
-  description: `Design Dialog allows developers and template authors to configure component behavior at the template level. 
-    It includes setting default values and controlling the visibility of fields in the component dialog. Acting as a bridge 
+  views: 141,
+  description: `Design Dialog allows developers and template authors to configure component behavior at the template level.
+    It includes setting default values and controlling the visibility of fields in the component dialog. Acting as a bridge
     between Template Editor and Component Dialog, it provides a way to customize component behavior dynamically.`,
   topics: [ TOPICS.AEM_SITES ],
   active: true
@@ -149,9 +150,9 @@ export const DYNAMICALLY_POPULATE_SELECT_OPTIONS_IN_AEM_COMPONENT_DIALOG : IArti
   url: "/aem/sites/dynamically-populate-select-options-in-aem-component-dialog",
   publishDate: "October 15, 2024",
   modifiedDate: "October 15, 2024",
-  views: 378,
-  description: `Creating dynamic and interactive components can significantly enhance the authoring experience. One effective enhancement is dynamically 
-    populating the options of a select field within a component dialog. This is especially useful when the options need to be fetched from an external source 
+  views: 492,
+  description: `Creating dynamic and interactive components can significantly enhance the authoring experience. One effective enhancement is dynamically
+    populating the options of a select field within a component dialog. This is especially useful when the options need to be fetched from an external source
     or depend on other selections made by the author.`,
   topics: [ TOPICS.AEM_SITES ],
   active: true
@@ -172,9 +173,9 @@ export const EXTEND_AEM_PAGE_PROPERTIES : IArticleItem = {
   url: "/aem/sites/extend-aem-page-properties",
   publishDate: "May 18, 2024",
   modifiedDate: "May 18, 2024",
-  views: 281,
-  description: `Page properties in AEM serve as metadata that provide essential information about a webpage. While AEM 
-    provides a standard set of properties to meet basic web project needs, organizations often enhance them with extra 
+  views: 307,
+  description: `Page properties in AEM serve as metadata that provide essential information about a webpage. While AEM
+    provides a standard set of properties to meet basic web project needs, organizations often enhance them with extra
     functionalities or custom data fields to effectively address more complex or unique requirements in content management.`,
   topics: [ TOPICS.AEM_SITES ],
   active: true
@@ -187,7 +188,7 @@ export const FETCH_MULTIFIELD_SLING_MODEL: IArticleItem = {
   url: "/aem/sites/fetch-multifield-values-using-sling-model",
   publishDate: "March 14, 2024",
   modifiedDate: "March 14, 2024",
-  views: 452,
+  views: 473,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
@@ -211,7 +212,7 @@ export const IMPERSONATE_USERS_AUTHOR_ENVIRONMENT : IArticleItem = {
   url: "/aem/sites/impersonate-users-in-author-environment",
   publishDate: "December 10, 2024",
   modifiedDate: "December 10, 2024",
-  views: 208,
+  views: 306,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
@@ -219,10 +220,10 @@ export const IMPERSONATE_USERS_AUTHOR_ENVIRONMENT : IArticleItem = {
 export const INTEGRATE_ADAPTIVE_FORMS_IN_AEM_SITES: IArticleItem = {
   title: "Integrate Adaptive Forms in AEM Sites",
   description: `There are two potential scenarios for integrating Adaptive forms into AEM Sites: one for new projects
-    and another for existing projects. Adobe has developed the aem-core-forms-components which can be used to 
+    and another for existing projects. Adobe has developed the aem-core-forms-components which can be used to
     incorporate forms standard components into AEM Sites.`,
   url: "/aem/sites/integrate-adaptive-forms-in-aem-sites",
-  views: 159,
+  views: 186,
   publishDate: "February 29, 2024",
   modifiedDate: "March 01, 2024",
   topics: [ TOPICS.AEM_SITES ],
@@ -244,27 +245,27 @@ export const MULTI_SITE_MANAGER: IArticleItem = {
 
 export const PROJECT_LOMBOK_IN_AEM_PROJECTS: IArticleItem = {
   title: "Project Lombok in AEM Projects",
-  description: `In AEM backend Java development, Sling Models are utilized to retrieve dialog values using annotations. However, 
-    writing boilerplate code such as getter methods for passing these values to HTL can be tedious. To simplify this 
-    process, Project Lombok can be integrated, automatically generating the necessary boilerplate code 
+  description: `In AEM backend Java development, Sling Models are utilized to retrieve dialog values using annotations. However,
+    writing boilerplate code such as getter methods for passing these values to HTL can be tedious. To simplify this
+    process, Project Lombok can be integrated, automatically generating the necessary boilerplate code
     with annotations like @Getter. This streamlines development tasks by eliminating the need for manual getter method creation.`,
   url: "/aem/sites/project-lombok-in-aem-projects",
   publishDate: "March 17, 2024",
   modifiedDate: "March 17, 2024",
-  views: 214,
+  views: 227,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
 
 export const REUSE_COMMON_DIALOG_PARTS_IN_AEM_COMPONENTS: IArticleItem = {
   title: "Reuse Common Dialog Parts in AEM Components",
-  description: `In AEM development, it's common to encounter scenarios where the same set of dialog fields such as alternative text 
-    for an image, or text and background color options are needed across multiple components. Traditionally, developers might copy-paste 
+  description: `In AEM development, it's common to encounter scenarios where the same set of dialog fields such as alternative text
+    for an image, or text and background color options are needed across multiple components. Traditionally, developers might copy-paste
     these dialog configurations into each component, but this leads to code duplication and maintenance headaches.`,
   url: "/aem/sites/reuse-common-dialog-parts-in-aem-components",
   publishDate: "May 08, 2025",
   modifiedDate: "May 08, 2025",
-  views: 164,
+  views: 227,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
@@ -272,13 +273,13 @@ export const REUSE_COMMON_DIALOG_PARTS_IN_AEM_COMPONENTS: IArticleItem = {
 export const QUERY_BUILDER_CHEATSHEET: IArticleItem = {
   title: "Query Builder CheatSheet",
   description: `Query Builder offers an easy way of querying the content repository of AEM. The API is
-    built using the JCR API. AEM includes a Query Debugger tool that allows you to execute  search queries 
-    on the JCR (Java Content Repository). Utilize this tool to perform a dry run of the AEM queries, optimize 
+    built using the JCR API. AEM includes a Query Debugger tool that allows you to execute  search queries
+    on the JCR (Java Content Repository). Utilize this tool to perform a dry run of the AEM queries, optimize
     them, and then implement them into your code.`,
   url: "/aem/sites/query-builder-cheatsheet",
   publishDate: "February 21, 2024",
   modifiedDate: "March 17, 2024",
-  views: 245,
+  views: 339,
   topics: [ TOPICS.AEM_SITES ],
   active: true
 }
@@ -310,8 +311,8 @@ export const SHOW_HIDE_DIALOG_FIELDS_ON_DROPDOWN_SELECTION : IArticleItem = {
   url: "/aem/sites/show-hide-aem-dialog-fields-on-dropdown-selection",
   publishDate: "April 10, 2024",
   modifiedDate: "March 23, 2025",
-  views: 923,
-  description: `Enabling Show/Hide functionality for AEM dialog fields improves user experience by allowing content authors to 
+  views: 1050,
+  description: `Enabling Show/Hide functionality for AEM dialog fields improves user experience by allowing content authors to
     focus on relevant fields, thereby making the authoring process more efficient and less error-prone.`,
   topics: [ TOPICS.AEM_SITES ],
   active: true
@@ -342,9 +343,9 @@ export const SLING_MODEL_DELEGATION_PATTERN : IArticleItem = {
   url: "/aem/sites/sling-model-delegation-pattern-with-lombok",
   publishDate: "August 06, 2025",
   modifiedDate: "August 06, 2025",
-  description: `AEM Core Components are a standard set components to be used with AEM. Built with Adobe's best practices and 
-    standards, Core Components provide a baseline set of functionality for any Sites implementation. However, it's often necessary 
-    to customize the functionality of core components to address project-specific requirements. The business logic for the core components 
+  description: `AEM Core Components are a standard set components to be used with AEM. Built with Adobe's best practices and
+    standards, Core Components provide a baseline set of functionality for any Sites implementation. However, it's often necessary
+    to customize the functionality of core components to address project-specific requirements. The business logic for the core components
     is implemented in Sling Models, which can be customized using the delegation pattern.`,
   topics: [ TOPICS.AEM_SITES ],
   active: true
@@ -377,10 +378,10 @@ export const SONARQUBE_SETUP_FOR_AEM_DEVELOPMENT : IArticleItem = {
   url: "/aem/sites/sonarqube-setup-for-aem-development",
   publishDate: "June 21, 2024",
   modifiedDate: "June 21, 2024",
-  views: 122,
-  description: `In AEM development, prioritizing code quality is essential. Even during deployment via Cloud Manager, it's 
-    crucial to meet specific metrics for security, reliability, maintainability, and code coverage. SonarQube enables continuous 
-    code inspections, identifying issues early in the development lifecycle that could affect these metrics. Though integration, 
+  views: 131,
+  description: `In AEM development, prioritizing code quality is essential. Even during deployment via Cloud Manager, it's
+    crucial to meet specific metrics for security, reliability, maintainability, and code coverage. SonarQube enables continuous
+    code inspections, identifying issues early in the development lifecycle that could affect these metrics. Though integration,
     developers can ensure the maintenance of clean, efficient, and secure code throughout the AEM development process.`,
   topics: [ TOPICS.AEM_SITES ],
   active: true
@@ -391,8 +392,9 @@ export const START_AEM_IN_DEBUG_MODE : IArticleItem = {
   url: "/aem/sites/start-aem-in-debug-mode",
   publishDate: "August 18, 2024",
   modifiedDate: "August 18, 2024",
-  description: `Troubleshooting and debugging are crucial aspects of working with AEM, allowing developers to identify, analyze, and fix issues 
-    in their code. Since AEM projects often involve extensive custom code for Models, Services, Servlets, and Schedulers, debugging allows real-time 
+  views: 112,
+  description: `Troubleshooting and debugging are crucial aspects of working with AEM, allowing developers to identify, analyze, and fix issues
+    in their code. Since AEM projects often involve extensive custom code for Models, Services, Servlets, and Schedulers, debugging allows real-time
     inspection and provides valuable insights into the root cause, enabling effective fixes. To debug an AEM application, you can use Java Remote Debugging.`,
   topics: [ TOPICS.AEM_SITES ],
   active: true

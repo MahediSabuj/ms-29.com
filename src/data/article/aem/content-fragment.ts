@@ -10,7 +10,7 @@ export const CONTENT_FRAGMENT_PROGRAMMATICALLY: IArticleItem = {
   url: "/aem/content-fragment/create-content-fragment-programmatically",
   publishDate: "February 16, 2024",
   modifiedDate: "February 16, 2024",
-  views: 497,
+  views: 542,
   topics: [ TOPICS.CONTENT_FRAGMENT ],
   active: true
 }
@@ -30,8 +30,8 @@ export const CROSS_CHANNEL_CONTENT_DELIVERY: IArticleItem = {
 
 export const CONTENT_FRAGMENTS_VS_EXPERIENCE_FRAGMENTS : IArticleItem = {
   title: "Content Fragments vs Experience Fragments",
-  description: `Adobe Experience Manager (AEM) provides powerful tools for managing and delivering content efficiently. Two essential 
-    components in AEM are Content Fragments (CF) and Experience Fragments (XF). While both are used to create reusable content, 
+  description: `Adobe Experience Manager (AEM) provides powerful tools for managing and delivering content efficiently. Two essential
+    components in AEM are Content Fragments (CF) and Experience Fragments (XF). While both are used to create reusable content,
     each serves a distinct purpose and offers unique capabilities.`,
   url: "/aem/content-fragment/content-fragments-vs-experience-fragments",
   publishDate: "May 22, 2024",

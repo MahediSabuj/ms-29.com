@@ -40,7 +40,8 @@ export default function CustomSearchFacet() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <div>
           <section className="pt-6">
             Search Facet allow authors to filter assets based on metadata. While AEM provides default search facets out-of-the-box (like file

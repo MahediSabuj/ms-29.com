@@ -39,7 +39,8 @@ export default function UnusedAssetCleanup() {
         <Article
           title={ARTICLE.title}
           publishDate={ARTICLE.publishDate}
-          modifiedDate={ARTICLE.modifiedDate}/>
+          modifiedDate={ARTICLE.modifiedDate}
+          views={ARTICLE.views}/>
         <div>
           <section className="pt-6">
             In asset management, it becomes apparent that certain assets are no longer referenced with any pages. It&apos;s recommended 

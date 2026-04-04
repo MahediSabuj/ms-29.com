@@ -333,10 +333,10 @@ export default function KubernetesLocalSetup() {
             settings with Kustomize, and access your services locally. By the end, all four services (Config Server, API, Tracking,
             and Gateway) will be running in Kubernetes pods and accessible via port-forwarding.
           </section>
-          <div className="bg-blue-50 border-l-4 border-blue-600 p-4 my-4">
-            <strong>New to Kubernetes?</strong> Check out our companion article
-            <Link className="text-blue-600" href="/devops/k8s/understanding-kubernetes-fundamentals"><em> Understanding Kubernetes Fundamentals</em></Link> to learn the core concepts before diving into this practical guide.
-          </div>
+          {/*<div className="bg-blue-50 border-l-4 border-blue-600 p-4 my-4">*/}
+          {/*  <strong>New to Kubernetes?</strong> Check out our companion article*/}
+          {/*  <Link className="text-blue-600" href="/devops/k8s/understanding-kubernetes-fundamentals"><em> Understanding Kubernetes Fundamentals</em></Link> to learn the core concepts before diving into this practical guide.*/}
+          {/*</div>*/}
 
           <h2 className="text-xl mt-6">
             <strong>Prerequisites</strong>
@@ -745,11 +745,10 @@ export default function KubernetesLocalSetup() {
           </section>
 
           <section className="pt-6">
-            This local setup is perfect for development, but production needs differ. In the
-            next article, <Link className="text-blue-600" href="/devops/k8s/deploy-microservice-to-azure-kubernetes-service"><em>Deploy Microservices to Azure
-            Kubernetes Service (AKS)</em></Link>, we&apos;ll take these same services and deploy them to a managed Kubernetes cluster
-            in Azure, covering topics like Azure Container Registry integration, managed identities, ingress controllers, and production-grade
-            monitoring. If you have questions or run into issues with this local setup, feel free to leave a comment below.
+            This local setup is perfect for development, but production needs differ. In the next article, we&apos;ll take
+            these same services and deploy them to a managed Kubernetes cluster in Azure, covering topics like Azure
+            Container Registry integration, managed identities, ingress controllers, and production-grade monitoring. If you
+            have questions or run into issues with this local setup, feel free to leave a comment below.
           </section>
         </div>
       </article>

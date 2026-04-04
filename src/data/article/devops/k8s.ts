@@ -7,8 +7,8 @@ export const UNDERSTANDING_KUBERNETES_FUNDAMENTALS: IArticleItem = {
     for newcomers. This comprehensive guide breaks down Kubernetes architecture, core concepts, and essential patterns to help you
     build a solid foundation. Learn about pods, deployments, services, and how they work together to run scalable applications.`,
   url: `${TOPICS.K8S.url}/understanding-kubernetes-fundamentals`,
-  publishDate: "March 20, 2026",
-  modifiedDate: "March 20, 2026",
+  publishDate: "February 17, 2026",
+  modifiedDate: "February 17, 2026",
   topics: [ TOPICS.K8S ],
   active: false
 }
