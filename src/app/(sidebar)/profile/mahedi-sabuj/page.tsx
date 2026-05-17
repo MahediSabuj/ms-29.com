@@ -42,7 +42,7 @@ const certifications: Certification[] = [{
 }, {
   title: "Adobe Experience Manager Sites Developer Expert",
   issued: "July 2021",
-  expired: "May 2026",
+  expired: "May 2028",
   badge: aem_expert_certification,
   url: "https://certification.adobe.com/credential/verify/c8c94bc5-ea0c-4d52-8e67-750ae04cc9c3"
 }, {
