@@ -186,8 +186,7 @@
   }
 
   .modern-brand {
-    @apply text-3xl font-bold bg-gradient-to-r from-primary-600 to-accent-500 
-      bg-clip-text text-transparent;
+    @apply text-3xl font-bold;
   }
 
   .modern-header {

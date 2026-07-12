@@ -19,8 +19,13 @@ export default function Navigation(config: HeaderConfig) {
     <nav>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between">
-          <Link href={brand.url} className="modern-brand hover:scale-105 transition-transform duration-300">
-            {brand.title}
+          <Link href={brand.url} className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
+            <span className="flex items-center justify-center p-1.5 rounded-lg bg-accent-500">
+              <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 shrink-0">
+                <path d="M2 16V4L7 12L10 7L13 12L18 4V16" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </span>
+            <span className="modern-brand">{brand.title}</span>
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
@@ -57,9 +62,14 @@ export default function Navigation(config: HeaderConfig) {
         <div className="fixed inset-0 z-50 bg-gradient-to-br from-slate-50 via-white to-blue-50 md:hidden h-screen overflow-hidden">
           <div className="flex flex-col h-screen">
             <div className="flex items-center justify-between px-6 py-6 flex-shrink-0">
-              <Link href={brand.url} className="modern-brand hover:scale-105 transition-transform duration-300"
+              <Link href={brand.url} className="flex items-center gap-2 hover:scale-105 transition-transform duration-300"
                   onClick={() => setIsMobileMenuOpen(false)}>
-                {brand.title}
+                <span className="flex items-center justify-center p-1.5 rounded-lg bg-accent-500">
+                  <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 shrink-0">
+                    <path d="M2 16V4L7 12L10 7L13 12L18 4V16" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </span>
+                <span className="modern-brand">{brand.title}</span>
               </Link>
               <button
                 type="button"
